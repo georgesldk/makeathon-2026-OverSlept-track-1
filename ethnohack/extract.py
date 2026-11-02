@@ -24,6 +24,7 @@ from google import genai
 from google.genai import types
 from google.genai.errors import APIError, ClientError, ServerError
 from tenacity import (
+    RetryCallState,
     retry,
     retry_if_exception,
     stop_after_attempt,
@@ -60,8 +61,20 @@ def is_transient(error: BaseException) -> bool:
     return False
 
 
+def announce_retry(state: RetryCallState) -> None:
+    """Silent retries look like a hang. Say what is happening."""
+    error = state.outcome.exception() if state.outcome else None
+    code = getattr(error, "code", "?")
+    wait = state.next_action.sleep if state.next_action else 0
+    print(
+        f"    API {code}, waiting {wait:.0f}s (attempt {state.attempt_number}/10)",
+        flush=True,
+    )
+
+
 @retry(
     retry=retry_if_exception(is_transient),
+    before_sleep=announce_retry,
     wait=wait_exponential(multiplier=2, min=4, max=120),
     stop=stop_after_attempt(10),
     reraise=True,
