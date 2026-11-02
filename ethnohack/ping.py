@@ -68,7 +68,7 @@ def main() -> None:
     except Exception as error:  # noqa: BLE001
         print(f"   {time.monotonic() - start:.1f}s -> FAILED {type(error).__name__}: {error}")
         print(f"\nPlain text works but structured output does not on {model}.")
-        print("Set GEMINI_MODEL=gemini-2.5-flash in .env and run this again.")
+        print("Set GEMINI_MODEL=gemini-3.5-flash in .env and run this again.")
 
 
 if __name__ == "__main__":

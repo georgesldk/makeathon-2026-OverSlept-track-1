@@ -58,7 +58,7 @@ class Settings:
 def load() -> Settings:
     return Settings(
         gemini_api_key=_get("GEMINI_API_KEY"),
-        gemini_model=_get("GEMINI_MODEL") or "gemini-2.5-flash",
+        gemini_model=_get("GEMINI_MODEL") or "gemini-3.5-flash",
         typesafe_api_key=_get("TYPESAFE_API_KEY"),
         jev_model=_get("JEV_MODEL"),
     )
