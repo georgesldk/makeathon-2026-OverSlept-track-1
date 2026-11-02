@@ -33,7 +33,7 @@ from tenacity import (
 )
 
 from ethnohack.config import REPO_ROOT, load
-from ethnohack.prompts import EXTRACTION_SYSTEM, PROMPT_VERSION, build_user_prompt
+from ethnohack.prompts import EXTRACTION_SYSTEM, PROMPT_FINGERPRINT, build_user_prompt
 from ethnohack.schema import CandidateClaim, ExtractionResult, StoredExtraction
 
 PASSAGES_PATH = REPO_ROOT / "data" / "passages" / "culpeper_1653.jsonl"
@@ -48,9 +48,8 @@ def load_passages() -> list[dict]:
 
 
 def cache_path(passage_id: str, model: str) -> Path:
-    """Cache key includes the prompt version: a prompt change must not reuse old results."""
     safe = passage_id.replace(":", "__")
-    return CACHE_DIR / f"{safe}__{model}__{PROMPT_VERSION}.json"
+    return CACHE_DIR / f"{safe}__{model}.json"
 
 
 def is_transient(error: BaseException) -> bool:
@@ -103,7 +102,14 @@ def call_model(client: genai.Client, model: str, passage: dict):
 def extract_one(client: genai.Client, model: str, passage: dict) -> StoredExtraction:
     path = cache_path(passage["passage_id"], model)
     if path.exists():
-        return StoredExtraction.model_validate_json(path.read_text(encoding="utf-8"))
+        cached = StoredExtraction.model_validate_json(path.read_text(encoding="utf-8"))
+        # The filename says nothing about the prompt, so the file itself has to. A
+        # cached result from older prompt wording is not the same measurement, and
+        # serving it silently is how a prompt fix comes out looking like it did
+        # nothing. Re-extract instead.
+        if cached.prompt_fingerprint == PROMPT_FINGERPRINT:
+            return cached
+        print(f"    prompt changed since this was cached, re-extracting {passage['passage_id']}")
 
     response = call_model(client, model, passage)
 
@@ -120,6 +126,7 @@ def extract_one(client: genai.Client, model: str, passage: dict) -> StoredExtrac
         heading=passage["heading"],
         model=model,
         extracted_at=dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
+        prompt_fingerprint=PROMPT_FINGERPRINT,
         claims=claims,
     )
     path.parent.mkdir(parents=True, exist_ok=True)

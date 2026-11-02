@@ -1,8 +1,5 @@
 """The extraction prompt. Keep all prompt text here so changes are reviewable.
 
-PROMPT_VERSION is part of the extraction cache key. Bump it whenever the prompt
-changes, or re-running will quietly serve results produced by the old wording.
-
 Design note: this step is tuned for RECALL, not precision. A claim the model
 misses is gone for good — nothing downstream can recover it. A claim it
 over-generates gets caught by Jev's yes/no check and dropped with a recorded
@@ -10,7 +7,9 @@ probability. So borderline readings are wanted, and the model is told to say so
 rather than to decide.
 """
 
-PROMPT_VERSION = "v2"
+from __future__ import annotations
+
+import hashlib
 
 EXTRACTION_SYSTEM = """\
 You extract therapeutic claims from historical herbals for a research corpus.
@@ -86,3 +85,20 @@ Passage:
 
 def build_user_prompt(heading: str, passage_id: str, text: str) -> str:
     return EXTRACTION_USER.format(heading=heading, passage_id=passage_id, text=text)
+
+
+def _fingerprint() -> str:
+    """Eight hex characters derived from the prompt text above.
+
+    This goes in the extraction cache key, and it replaces a hand-maintained
+    version number. Nobody has to remember to bump anything: edit a single word
+    of the prompt and the fingerprint changes, so results produced by the old
+    wording stop being served from cache and stop being reviewed as if they were
+    new. Reviewing one prompt's output while believing it came from another is
+    the one mistake in this pipeline that silently corrupts the measurements.
+    """
+    material = (EXTRACTION_SYSTEM + EXTRACTION_USER).encode("utf-8")
+    return hashlib.sha256(material).hexdigest()[:8]
+
+
+PROMPT_FINGERPRINT = _fingerprint()

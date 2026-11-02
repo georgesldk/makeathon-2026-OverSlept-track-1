@@ -51,4 +51,8 @@ class StoredExtraction(BaseModel):
     heading: str
     model: str
     extracted_at: str
+    prompt_fingerprint: str | None = Field(
+        default=None,
+        description="Hash of the prompt that produced these claims. Review refuses to score an extraction whose fingerprint does not match the current prompt. None means it predates the field.",
+    )
     claims: list[CandidateClaim]

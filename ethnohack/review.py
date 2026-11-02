@@ -13,8 +13,8 @@ Shows the passage and all its claims, then takes one letter per claim:
 At the end of each passage you say how many real claims it MISSED. That is the
 number nothing else can tell us: a missed claim leaves no trace in the output.
 
-Only the extraction matching GEMINI_MODEL and the current PROMPT_VERSION is
-reviewed. The cache holds one file per (passage, model, prompt), so reviewing
+Only the extraction matching GEMINI_MODEL and the current prompt is reviewed.
+The cache holds one file per (passage, model, prompt fingerprint), so reviewing
 all of them together would score verdicts against whichever model name happened
 to sort first. Use --model to re-score an older extraction on purpose.
 
@@ -30,7 +30,7 @@ import json
 import sys
 
 from ethnohack.config import REPO_ROOT, load
-from ethnohack.prompts import PROMPT_VERSION
+from ethnohack.prompts import PROMPT_FINGERPRINT
 from ethnohack.schema import StoredExtraction
 
 CACHE_DIR = REPO_ROOT / "data" / "cache" / "extractions"
@@ -72,6 +72,14 @@ def passages() -> dict[str, dict]:
         sys.exit(f"No passages at {PASSAGES_PATH}")
     with PASSAGES_PATH.open(encoding="utf-8") as handle:
         return {row["passage_id"]: row for row in (json.loads(line) for line in handle)}
+
+
+def read_fingerprint(path) -> str | None:
+    """Which prompt produced this extraction, read from the file rather than its name."""
+    try:
+        return json.loads(path.read_text(encoding="utf-8")).get("prompt_fingerprint")
+    except (OSError, json.JSONDecodeError):
+        return None
 
 
 def ask(prompt: str, allowed: set[str]) -> str:
@@ -163,6 +171,7 @@ def review_one(stored: StoredExtraction, passage: dict, reviewer: str, one_by_on
         "passage_id": stored.passage_id,
         "heading": stored.heading,
         "model": stored.model,
+        "prompt_fingerprint": stored.prompt_fingerprint,
         "reviewer": reviewer,
         "reviewed_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
         "claims": rows,
@@ -222,24 +231,37 @@ def main() -> None:
     settings = load()
     REVIEW_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Only ever review ONE model and ONE prompt version at a time. The cache holds a
-    # file per (passage, model, prompt), so an unfiltered glob mixes them and scores
-    # verdicts against whichever name sorts first.
+    # Only ever review ONE model at a time: the cache holds a file per (passage,
+    # model), so an unfiltered glob mixes models and scores verdicts against
+    # whichever name sorts first.
     model = args.model or settings.gemini_model
-    files = sorted(CACHE_DIR.glob(f"*__{model}__{PROMPT_VERSION}.json"))
+    files = sorted(CACHE_DIR.glob(f"*__{model}.json"))
     if not files:
-        available = sorted({p.stem.split("__", 1)[1] for p in CACHE_DIR.glob("*__*__*.json")})
-        lines = [f"No extractions for {model} at prompt {PROMPT_VERSION} in {CACHE_DIR}"]
+        available = sorted({p.stem.rsplit("__", 1)[-1] for p in CACHE_DIR.glob("*__*.json")})
+        lines = [f"No extractions for {model} in {CACHE_DIR}"]
         if available:
-            lines.append("\nIn the cache:")
-            lines += [f"  {a.replace('__', '  prompt ')}" for a in available]
+            lines.append("\nIn the cache: " + ", ".join(available))
             lines.append("\nPick one with --model, or extract first:")
         else:
             lines.append("\nRun first:")
         lines.append("  uv run python -m ethnohack.extract --limit 5")
         sys.exit("\n".join(lines))
 
-    print(f"Reviewing {len(files)} extraction(s) from {model}, prompt {PROMPT_VERSION}")
+    # The prompt is not in the filename, so check it inside each file. Scoring claims
+    # produced by different prompt wording as one batch is the mistake that silently
+    # corrupts the precision figure.
+    stale = [p for p in files if read_fingerprint(p) != PROMPT_FINGERPRINT]
+    files = [p for p in files if p not in stale]
+    if not files:
+        sys.exit(
+            f"All {len(stale)} cached extraction(s) for {model} came from different prompt "
+            f"wording than the current one ({PROMPT_FINGERPRINT}).\n"
+            "Re-extract before reviewing:  uv run python -m ethnohack.extract --limit 5"
+        )
+    if stale:
+        print(f"Skipping {len(stale)} extraction(s) from older prompt wording")
+
+    print(f"Reviewing {len(files)} extraction(s) from {model}, prompt {PROMPT_FINGERPRINT}")
 
     corpus = passages()
     done: list[dict] = []
@@ -249,11 +271,8 @@ def main() -> None:
         if reviewed >= args.limit:
             break
         stored = StoredExtraction.model_validate_json(path.read_text(encoding="utf-8"))
-        # The filename records what was reviewed, not just who reviewed it: the same
-        # passage gets reviewed again after every prompt change, and the before/after
-        # comparison only works if the two sets of verdicts sit in separate files.
         safe_id = stored.passage_id.replace(":", "__")
-        out_path = REVIEW_DIR / f"{safe_id}__{model}__{PROMPT_VERSION}__{reviewer}.json"
+        out_path = REVIEW_DIR / f"{safe_id}__{model}__{reviewer}.json"
         if out_path.exists():
             done.append(json.loads(out_path.read_text(encoding="utf-8")))
             continue
@@ -267,7 +286,7 @@ def main() -> None:
 
     summarise(done)
     print(f"\nSaved to {REVIEW_DIR}")
-    print(f"Reviewed: {model}, prompt {PROMPT_VERSION}")
+    print(f"Reviewed: {model}, prompt {PROMPT_FINGERPRINT}")
 
 
 if __name__ == "__main__":
