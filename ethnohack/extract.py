@@ -62,8 +62,8 @@ def is_transient(error: BaseException) -> bool:
 
 @retry(
     retry=retry_if_exception(is_transient),
-    wait=wait_exponential(multiplier=2, min=2, max=60),
-    stop=stop_after_attempt(6),
+    wait=wait_exponential(multiplier=2, min=4, max=120),
+    stop=stop_after_attempt(10),
     reraise=True,
 )
 def call_model(client: genai.Client, model: str, passage: dict):
