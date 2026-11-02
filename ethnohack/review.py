@@ -90,12 +90,21 @@ def review_one(stored: StoredExtraction, passage: dict, reviewer: str) -> dict:
         )
 
     print("\n" + "-" * 92)
+    print("Now re-read the passage above. Claims the model NEVER listed — how many?")
+    print(f"(Usually 0. It already found {len(stored.claims)}. Press Enter for 0.)")
     while True:
-        raw = input("How many real claims did it MISS in this passage? > ").strip()
+        raw = input("Claims MISSED > ").strip()
+        if raw == "":
+            missed = 0
+            break
         if raw.isdigit():
             missed = int(raw)
+            if missed > len(stored.claims):
+                print(f"  {missed} missed but only {len(stored.claims)} found — sure? y to confirm")
+                if input("  > ").strip().lower() != "y":
+                    continue
             break
-        print("  a number, please")
+        print("  a number, or Enter for 0")
 
     return {
         "passage_id": stored.passage_id,
