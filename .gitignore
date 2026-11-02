@@ -218,3 +218,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- EthnoHack: secrets and local data ---
+*.env
+!.env.example
+config/secrets.json
+*.key
+*.pem
+data/cache/
+data/corpora/
