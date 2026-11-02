@@ -31,7 +31,7 @@ from tenacity import (
 )
 
 from ethnohack.config import REPO_ROOT, load
-from ethnohack.prompts import EXTRACTION_SYSTEM, build_user_prompt
+from ethnohack.prompts import EXTRACTION_SYSTEM, PROMPT_VERSION, build_user_prompt
 from ethnohack.schema import CandidateClaim, ExtractionResult, StoredExtraction
 
 PASSAGES_PATH = REPO_ROOT / "data" / "passages" / "culpeper_1653.jsonl"
@@ -46,8 +46,9 @@ def load_passages() -> list[dict]:
 
 
 def cache_path(passage_id: str, model: str) -> Path:
+    """Cache key includes the prompt version: a prompt change must not reuse old results."""
     safe = passage_id.replace(":", "__")
-    return CACHE_DIR / f"{safe}__{model}.json"
+    return CACHE_DIR / f"{safe}__{model}__{PROMPT_VERSION}.json"
 
 
 def is_transient(error: BaseException) -> bool:

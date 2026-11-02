@@ -1,11 +1,16 @@
 """The extraction prompt. Keep all prompt text here so changes are reviewable.
 
+PROMPT_VERSION is part of the extraction cache key. Bump it whenever the prompt
+changes, or re-running will quietly serve results produced by the old wording.
+
 Design note: this step is tuned for RECALL, not precision. A claim the model
 misses is gone for good — nothing downstream can recover it. A claim it
 over-generates gets caught by Jev's yes/no check and dropped with a recorded
 probability. So borderline readings are wanted, and the model is told to say so
 rather than to decide.
 """
+
+PROMPT_VERSION = "v2"
 
 EXTRACTION_SYSTEM = """\
 You extract therapeutic claims from historical herbals for a research corpus.
@@ -29,7 +34,32 @@ Rules:
 3. Every claim carries a quote: the words from the passage that support it,
    copied verbatim. Do not paraphrase the quote.
 
-4. Prefer including a borderline claim to dropping it. If a sentence might be a
+4. THE QUOTE MUST STAND ALONE. It has to include the verb that attributes the
+   claim, so a reader seeing only the quote can tell what is being asserted.
+   When one sentence lists several complaints, quote the whole clause for each
+   one rather than the bare complaint word.
+
+     Passage: "It kills the worms, helps the gout, cramp, and convulsions"
+     WRONG, three bare words: "cramp" / "convulsions" / "the gout"
+     RIGHT, the governing verb kept each time:
+       "It kills the worms, helps the gout, cramp, and convulsions"
+
+   A quote of one or two words with no verb is always wrong.
+
+5. THE CONDITION MUST BE A COMPLAINT, written as a noun phrase.
+
+   - An ACTION is not a complaint. "provokes urine" is the remedy's action;
+     if no complaint is named, there is no claim to extract.
+   - An ORGAN is not a complaint. From "helps the yellow jaundice, spleen, and
+     gravel in the kidneys", the second is "disorders of the spleen", not
+     "spleen".
+   - A FRAGMENT is not a complaint. From "strengthens the back, and eases the
+     pains thereof", the complaint is "pains of the back", not "pains thereof".
+     Resolve "thereof", "the same", "it" against the sentence.
+   - A VAGUE CATCH-ALL is not a complaint. Skip "other distempers", "all sudden
+     diseases whatsoever", "whatsoever griefs".
+
+6. Prefer including a borderline claim to dropping it. If a sentence might be a
    therapeutic claim, extract it.
 
 What is NOT a claim:
