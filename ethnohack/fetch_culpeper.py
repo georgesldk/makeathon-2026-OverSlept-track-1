@@ -11,7 +11,6 @@ from __future__ import annotations
 
 import datetime as dt
 import json
-from pathlib import Path
 
 import httpx
 
@@ -70,12 +69,8 @@ def main() -> None:
             start = i + 1
             break
 
-    shown = 0
-    for line in lines[start:]:
+    for line in lines[start : start + 40]:
         print(f"  {line}")
-        shown += 1
-        if shown >= 40:
-            break
 
     print("\nPaste this output back to Claude so the passage splitter matches the real layout.")
 

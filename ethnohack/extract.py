@@ -102,7 +102,7 @@ def extract_one(client: genai.Client, model: str, passage: dict) -> StoredExtrac
         corpus_id=passage["corpus_id"],
         heading=passage["heading"],
         model=model,
-        extracted_at=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+        extracted_at=dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
         claims=claims,
     )
     path.parent.mkdir(parents=True, exist_ok=True)

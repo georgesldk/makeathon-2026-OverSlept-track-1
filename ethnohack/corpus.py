@@ -17,7 +17,6 @@ import json
 import re
 import unicodedata
 from dataclasses import asdict, dataclass
-from pathlib import Path
 
 from ethnohack.config import REPO_ROOT
 
@@ -27,7 +26,9 @@ CORPUS_ID = "culpeper_1653"
 
 HEADING = re.compile(r"^ {4}([A-Z][A-Z0-9 ,’'()&.-]{2,60})\.$")
 HEADING_CONT = re.compile(r"^ {4}([A-Z][A-Z0-9 ,’'()&-]{2,60})$")
-SECTION = re.compile(r"_([A-Za-z][A-Za-z ]*)\._\]")
+# Two marker styles appear in this edition: the usual _Government and virtues._]
+# and a plain capitals form, GOVERNMENT AND VIRTUES.]
+SECTION = re.compile(r"_([A-Za-z][A-Za-z ]*)\._\]|^([A-Z][A-Z ]{2,40})\.\]", re.MULTILINE)
 VIRTUES = re.compile(r"government and virtues|virtues and use", re.IGNORECASE)
 
 # The herb entries are followed by chapters on preparing medicines and by the
@@ -37,6 +38,9 @@ BACKMATTER = re.compile(
     r"^(?: {4,}CHAP\.|SECTION [IVX]+\.|DIRECTIONS FOR|Page \d+, |\[Transcriber)",
     re.MULTILINE,
 )
+
+# Where the herb entries stop and the manual on preparing medicines begins.
+END_OF_HERBS = re.compile(r"^(?:DIRECTIONS FOR|SECTION [IVX]+\.$)")
 
 
 @dataclass(frozen=True)
@@ -115,7 +119,8 @@ def sections(body: list[str]) -> list[tuple[str, str]]:
         cut = BACKMATTER.search(chunk)
         if cut:
             chunk = chunk[: cut.start()]
-        out.append((mark.group(1).strip(), chunk.strip()))
+        name = (mark.group(1) or mark.group(2) or "").strip()
+        out.append((name, chunk.strip()))
     return out
 
 
@@ -126,17 +131,49 @@ def clean(text: str) -> str:
     return re.sub(r"\s{2,}", " ", text).strip()
 
 
+def trim_to_herbs(lines: list[str]) -> list[str]:
+    """Drop everything from the end of the herb entries onwards.
+
+    Only END_OF_HERBS is used here, not BACKMATTER: the transcriber's note sits
+    at the top of the file, so trimming on it would discard the whole book.
+    """
+    for i, line in enumerate(lines):
+        if END_OF_HERBS.match(line):
+            return lines[:i]
+    return lines
+
+
+def passages_in(heading: str, body: list[str]) -> list[tuple[str, str]]:
+    """The virtues section, or the whole entry when it carries no section markers.
+
+    Roughly one entry in six (Camomile, Elder, Primroses and others) is written
+    as unbroken prose with no _Government and virtues._] marker. Requiring the
+    marker silently dropped them.
+    """
+    found = sections(body)
+    if found:
+        return [(name, chunk) for name, chunk in found if VIRTUES.search(name)]
+
+    text = "\n".join(body)
+    cut = BACKMATTER.search(text)
+    if cut:
+        text = text[: cut.start()]
+    return [("unsectioned", text.strip())]
+
+
 def build() -> list[Passage]:
     raw = RAW_PATH.read_text(encoding="utf-8")
     lines = [line.rstrip("\r") for line in raw.split("\n")]
-    entries = split_entries(strip_gutenberg(lines))
+    entries = split_entries(trim_to_herbs(strip_gutenberg(lines)))
+
+    # Front matter before the first properly sectioned entry is not a herb.
+    first = next((i for i, (_, body) in enumerate(entries) if sections(body)), 0)
+    entries = entries[first:]
 
     passages: list[Passage] = []
     seen: dict[str, int] = {}
     for heading, body in entries:
-        for name, chunk in sections(body):
-            if not VIRTUES.search(name):
-                continue
+        for name, chunk in passages_in(heading, body):
             text = clean(chunk)
             if len(text.split()) < 20:
                 continue

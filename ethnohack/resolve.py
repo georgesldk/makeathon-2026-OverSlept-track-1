@@ -16,7 +16,6 @@ import argparse
 import json
 import sys
 from dataclasses import asdict, dataclass
-from pathlib import Path
 
 import httpx
 
@@ -86,9 +85,7 @@ def lookup(http: httpx.Client, name: str) -> Resolution:
 
     if len(exact) == 1:
         verdict = "one"
-    elif len(exact) > 1 or len(similar) > 1:
-        verdict = "several"
-    elif similar:
+    elif len(exact) > 1 or len(similar) > 1 or similar:
         verdict = "several"
     else:
         verdict = "none"
