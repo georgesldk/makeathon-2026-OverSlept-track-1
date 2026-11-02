@@ -2,18 +2,24 @@
 
     uv run python -m ethnohack.review --limit 5
 
-Shows the passage, then each claim. For every claim you answer:
+Shows the passage and all its claims, then takes one letter per claim:
 
     y  a real therapeutic claim, correctly extracted
-    n  not a claim, or wrong (an action, an organ, a fragment, astrology)
+    w  a real claim, but labelled wrongly (an organ, an action, a fragment)
+    n  not a claim at all (astrology, a catch-all, preparation only)
     q  quote is not word for word from the passage
     ?  unsure
 
 At the end of each passage you say how many real claims it MISSED. That is the
 number nothing else can tell us: a missed claim leaves no trace in the output.
 
+Only the extraction matching GEMINI_MODEL and the current PROMPT_VERSION is
+reviewed. The cache holds one file per (passage, model, prompt), so reviewing
+all of them together would score verdicts against whichever model name happened
+to sort first. Use --model to re-score an older extraction on purpose.
+
 Answers are saved to data/review/ and can be resumed. Running it again skips
-passages already reviewed.
+passages already reviewed for the same model, prompt and reviewer.
 """
 
 from __future__ import annotations
@@ -24,6 +30,7 @@ import json
 import sys
 
 from ethnohack.config import REPO_ROOT, load
+from ethnohack.prompts import PROMPT_VERSION
 from ethnohack.schema import StoredExtraction
 
 CACHE_DIR = REPO_ROOT / "data" / "cache" / "extractions"
@@ -200,6 +207,11 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=5)
     parser.add_argument("--reviewer", default="", help="Your name, for inter-annotator agreement")
     parser.add_argument(
+        "--model",
+        default="",
+        help="Review a model other than GEMINI_MODEL, e.g. to re-score an older extraction",
+    )
+    parser.add_argument(
         "--one-by-one",
         action="store_true",
         help="Answer each claim as it appears, instead of all at once per passage",
@@ -210,9 +222,24 @@ def main() -> None:
     settings = load()
     REVIEW_DIR.mkdir(parents=True, exist_ok=True)
 
-    files = sorted(CACHE_DIR.glob("*.json"))
+    # Only ever review ONE model and ONE prompt version at a time. The cache holds a
+    # file per (passage, model, prompt), so an unfiltered glob mixes them and scores
+    # verdicts against whichever name sorts first.
+    model = args.model or settings.gemini_model
+    files = sorted(CACHE_DIR.glob(f"*__{model}__{PROMPT_VERSION}.json"))
     if not files:
-        sys.exit(f"No extractions in {CACHE_DIR}\nRun: uv run python -m ethnohack.extract --limit 5")
+        available = sorted({p.stem.split("__", 1)[1] for p in CACHE_DIR.glob("*__*__*.json")})
+        lines = [f"No extractions for {model} at prompt {PROMPT_VERSION} in {CACHE_DIR}"]
+        if available:
+            lines.append("\nIn the cache:")
+            lines += [f"  {a.replace('__', '  prompt ')}" for a in available]
+            lines.append("\nPick one with --model, or extract first:")
+        else:
+            lines.append("\nRun first:")
+        lines.append("  uv run python -m ethnohack.extract --limit 5")
+        sys.exit("\n".join(lines))
+
+    print(f"Reviewing {len(files)} extraction(s) from {model}, prompt {PROMPT_VERSION}")
 
     corpus = passages()
     done: list[dict] = []
@@ -222,7 +249,11 @@ def main() -> None:
         if reviewed >= args.limit:
             break
         stored = StoredExtraction.model_validate_json(path.read_text(encoding="utf-8"))
-        out_path = REVIEW_DIR / f"{stored.passage_id.replace(':', '__')}__{reviewer}.json"
+        # The filename records what was reviewed, not just who reviewed it: the same
+        # passage gets reviewed again after every prompt change, and the before/after
+        # comparison only works if the two sets of verdicts sit in separate files.
+        safe_id = stored.passage_id.replace(":", "__")
+        out_path = REVIEW_DIR / f"{safe_id}__{model}__{PROMPT_VERSION}__{reviewer}.json"
         if out_path.exists():
             done.append(json.loads(out_path.read_text(encoding="utf-8")))
             continue
@@ -236,7 +267,7 @@ def main() -> None:
 
     summarise(done)
     print(f"\nSaved to {REVIEW_DIR}")
-    print(f"Model reviewed: {settings.gemini_model}")
+    print(f"Reviewed: {model}, prompt {PROMPT_VERSION}")
 
 
 if __name__ == "__main__":

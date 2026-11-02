@@ -55,7 +55,7 @@ def main() -> None:
         RAW_PATH.write_text(response.text, encoding="utf-8")
         print(f"Saved {RAW_PATH} ({len(response.text):,} characters)")
 
-    record = dict(RIGHTS, retrieved_at=dt.date.today().isoformat())
+    record = dict(RIGHTS, retrieved_at=dt.datetime.now(dt.UTC).date().isoformat())
     RIGHTS_PATH.write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
     print(f"Rights record: {RIGHTS_PATH}")
 
