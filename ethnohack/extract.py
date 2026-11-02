@@ -20,6 +20,7 @@ import json
 import sys
 from pathlib import Path
 
+import httpx
 from google import genai
 from google.genai import types
 from google.genai.errors import APIError, ClientError, ServerError
@@ -53,12 +54,14 @@ def cache_path(passage_id: str, model: str) -> Path:
 
 
 def is_transient(error: BaseException) -> bool:
-    """503 high demand, 504 deadline, 429 rate limit: worth waiting out."""
+    """Worth waiting out: 503 high demand, 504 deadline, 429 rate limit, and
+    network timeouts. A read timeout is not an API error class, so it has to be
+    named separately or the run dies on a slow response."""
     if isinstance(error, ServerError):
         return True
     if isinstance(error, ClientError):
         return error.code == 429
-    return False
+    return isinstance(error, httpx.TimeoutException | httpx.NetworkError)
 
 
 def announce_retry(state: RetryCallState) -> None:
