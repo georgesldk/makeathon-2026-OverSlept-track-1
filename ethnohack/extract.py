@@ -61,6 +61,7 @@ def extract_one(client: genai.Client, model: str, passage: dict) -> StoredExtrac
             response_mime_type="application/json",
             response_schema=ExtractionResult,
             temperature=0.0,
+            http_options=types.HttpOptions(timeout=60_000),
         ),
     )
 
