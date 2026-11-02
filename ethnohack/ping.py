@@ -8,6 +8,7 @@ is the one to fix; each has its own 30 second timeout.
 
 from __future__ import annotations
 
+import argparse
 import sys
 import time
 
@@ -23,12 +24,16 @@ class Answer(BaseModel):
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Check a Gemini model responds.")
+    parser.add_argument("--model", help="Override GEMINI_MODEL for this run")
+    args = parser.parse_args()
+
     settings = load()
     if not settings.gemini_ready:
         sys.exit("GEMINI_API_KEY is not set. Run: uv run python -m ethnohack.config")
 
     client = genai.Client(api_key=settings.gemini_api_key)
-    model = settings.gemini_model
+    model = args.model or settings.gemini_model
     opts = types.HttpOptions(timeout=30_000)
     print(f"Model: {model}\n")
 
