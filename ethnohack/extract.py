@@ -22,7 +22,13 @@ from pathlib import Path
 
 from google import genai
 from google.genai import types
-from google.genai.errors import APIError
+from google.genai.errors import APIError, ClientError, ServerError
+from tenacity import (
+    retry,
+    retry_if_exception,
+    stop_after_attempt,
+    wait_exponential,
+)
 
 from ethnohack.config import REPO_ROOT, load
 from ethnohack.prompts import EXTRACTION_SYSTEM, build_user_prompt
@@ -44,12 +50,23 @@ def cache_path(passage_id: str, model: str) -> Path:
     return CACHE_DIR / f"{safe}__{model}.json"
 
 
-def extract_one(client: genai.Client, model: str, passage: dict) -> StoredExtraction:
-    path = cache_path(passage["passage_id"], model)
-    if path.exists():
-        return StoredExtraction.model_validate_json(path.read_text(encoding="utf-8"))
+def is_transient(error: BaseException) -> bool:
+    """503 high demand, 504 deadline, 429 rate limit: worth waiting out."""
+    if isinstance(error, ServerError):
+        return True
+    if isinstance(error, ClientError):
+        return error.code == 429
+    return False
 
-    response = client.models.generate_content(
+
+@retry(
+    retry=retry_if_exception(is_transient),
+    wait=wait_exponential(multiplier=2, min=2, max=60),
+    stop=stop_after_attempt(6),
+    reraise=True,
+)
+def call_model(client: genai.Client, model: str, passage: dict):
+    return client.models.generate_content(
         model=model,
         contents=build_user_prompt(
             heading=passage["heading"],
@@ -64,6 +81,14 @@ def extract_one(client: genai.Client, model: str, passage: dict) -> StoredExtrac
             http_options=types.HttpOptions(timeout=60_000),
         ),
     )
+
+
+def extract_one(client: genai.Client, model: str, passage: dict) -> StoredExtraction:
+    path = cache_path(passage["passage_id"], model)
+    if path.exists():
+        return StoredExtraction.model_validate_json(path.read_text(encoding="utf-8"))
+
+    response = call_model(client, model, passage)
 
     parsed = response.parsed
     claims: list[CandidateClaim]
