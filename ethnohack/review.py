@@ -32,10 +32,19 @@ REVIEW_DIR = REPO_ROOT / "data" / "review"
 
 VERDICTS = {
     "y": "correct",
+    "w": "wrong_label",
     "n": "not_a_claim",
     "q": "bad_quote",
     "?": "unsure",
 }
+
+# wrong_label is a real claim the model found but named badly: the organ instead
+# of the complaint ("spleen"), the action instead of the condition ("draws forth
+# the dead child"), or an unresolved fragment ("pains thereof"). These are
+# recoverable, because the quote is right — a prompt fix or a normalisation step
+# rescues them. not_a_claim is not recoverable.
+
+KEY_HELP = "y correct · w real claim but wrong label · n not a claim · q bad quote · ? unsure"
 
 
 def wrap(text: str, width: int = 88, indent: str = "  ") -> str:
@@ -66,28 +75,65 @@ def ask(prompt: str, allowed: set[str]) -> str:
         print(f"  please answer one of: {', '.join(sorted(allowed))}")
 
 
-def review_one(stored: StoredExtraction, passage: dict, reviewer: str) -> dict:
+def show_claim(i: int, total: int, claim) -> None:
+    bits = [claim.plant_part, claim.preparation, claim.route]
+    detail = ", ".join(b for b in bits if b) or "unspecified"
+    print(f"\n[{i}/{total}]  {claim.plant_name_verbatim} -> {claim.condition_verbatim}")
+    print(f"       {detail}")
+    print(wrap(f'"{claim.quote}"', indent="       "))
+
+
+def ask_all_at_once(count: int) -> list[str]:
+    """Take every verdict for a passage in one line, e.g. yynwq?y..."""
+    print("\n" + "-" * 92)
+    print(KEY_HELP)
+    print(f"Type {count} letters, one per claim, in order. Spaces and commas are ignored.")
+    while True:
+        raw = input(f"{count} verdicts > ").strip().lower()
+        letters = [c for c in raw if not c.isspace() and c != ","]
+        bad = sorted({c for c in letters if c not in VERDICTS})
+        if bad:
+            print(f"  not a key: {', '.join(bad)}")
+            continue
+        if len(letters) != count:
+            print(f"  got {len(letters)}, need {count}")
+            continue
+        return letters
+
+
+def review_one(stored: StoredExtraction, passage: dict, reviewer: str, one_by_one: bool) -> dict:
+    total = len(stored.claims)
     print("\n" + "=" * 92)
-    print(f"{stored.heading}   ({stored.passage_id})   {len(stored.claims)} claims")
+    print(f"{stored.heading}   ({stored.passage_id})   {total} claims")
     print("=" * 92 + "\n")
     print(wrap(passage["text"]))
     print("\n" + "-" * 92)
 
     rows = []
-    for i, claim in enumerate(stored.claims, 1):
-        bits = [claim.plant_part, claim.preparation, claim.route]
-        detail = ", ".join(b for b in bits if b) or "unspecified"
-        print(f"\n[{i}/{len(stored.claims)}]  {claim.plant_name_verbatim} -> {claim.condition_verbatim}")
-        print(f"       {detail}")
-        print(wrap(f'"{claim.quote}"', indent="       "))
-        answer = ask("       y / n / q / ?  > ", set(VERDICTS))
-        rows.append(
-            {
-                "index": i,
-                "condition": claim.condition_verbatim,
-                "verdict": VERDICTS[answer],
-            }
-        )
+    if one_by_one:
+        for i, claim in enumerate(stored.claims, 1):
+            show_claim(i, total, claim)
+            print(f"       {KEY_HELP}")
+            answer = ask("       > ", set(VERDICTS))
+            rows.append(
+                {"index": i, "condition": claim.condition_verbatim, "verdict": VERDICTS[answer]}
+            )
+    else:
+        for i, claim in enumerate(stored.claims, 1):
+            show_claim(i, total, claim)
+        for i, (claim, answer) in enumerate(
+            zip(stored.claims, ask_all_at_once(total), strict=True), 1
+        ):
+            rows.append(
+                {"index": i, "condition": claim.condition_verbatim, "verdict": VERDICTS[answer]}
+            )
+
+    # A wrong label is recoverable, so capture the right one while the passage is in view.
+    for row in rows:
+        if row["verdict"] == "wrong_label":
+            fixed = input(f"  [{row['index']}] {row['condition']!r} should be > ").strip()
+            if fixed:
+                row["corrected_condition"] = fixed
 
     print("\n" + "-" * 92)
     print("Now re-read the passage above. Claims the model NEVER listed — how many?")
@@ -132,19 +178,32 @@ def summarise(all_rows: list[dict]) -> None:
         print(f"  {name:<14} {count}")
     print(f"  {'missed':<14} {missed}")
 
+    recoverable = correct + counts["wrong_label"]
     precision = correct / total if total else 0.0
     recall = correct / (correct + missed) if (correct + missed) else 0.0
-    print(f"\n  precision  {precision:.0%}   (of extracted claims, how many were right)")
-    print(f"  recall     {recall:.0%}   (of real claims, how many were caught)")
+    print(f"\n  precision   {precision:.0%}   (of extracted claims, how many were right)")
+    print(f"  recall      {recall:.0%}   (of real claims, how many were caught)")
+    if counts["wrong_label"]:
+        print(
+            f"  recoverable {recoverable / total:.0%}   "
+            f"(right quote, fixable label: {recoverable}/{total})"
+        )
 
     print("\nGo / no-go: if precision is below about 70%, fix the prompt before")
     print("the full sweep. If recall is low, the problem is the passage split.")
+    print("A large gap between precision and recoverable means the labels are the")
+    print("problem, not the extraction — a prompt fix, not a redesign.")
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Hand-check extracted claims.")
     parser.add_argument("--limit", type=int, default=5)
     parser.add_argument("--reviewer", default="", help="Your name, for inter-annotator agreement")
+    parser.add_argument(
+        "--one-by-one",
+        action="store_true",
+        help="Answer each claim as it appears, instead of all at once per passage",
+    )
     args = parser.parse_args()
 
     reviewer = args.reviewer or input("Your name (for the record): ").strip() or "anon"
@@ -170,7 +229,7 @@ def main() -> None:
         passage = corpus.get(stored.passage_id)
         if passage is None:
             continue
-        row = review_one(stored, passage, reviewer)
+        row = review_one(stored, passage, reviewer, args.one_by_one)
         out_path.write_text(json.dumps(row, indent=2, ensure_ascii=False), encoding="utf-8")
         done.append(row)
         reviewed += 1
