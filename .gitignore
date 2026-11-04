@@ -227,3 +227,22 @@ config/secrets.json
 *.pem
 data/cache/
 data/corpora/
+
+# Raw API replies, rebuilt by the source scripts
+common_name_sources/gbif/*/cache/
+common_name_sources/wikidata/*/cache/
+common_name_sources/inaturalist/*/cache/
+common_name_sources/checklistbank/*/cache/
+common_name_sources/taxtree/*/cache/
+matching/*/cache/
+scientific_name_sources/*/*/cache/
+scientific_name_sources/*/cache/
+
+# Full datasets downloaded by hand (see DATA_SOURCES.md for where to get them)
+common_name_sources/drduke/data/
+scientific_name_sources/wcvp/data/
+
+# Raw source outputs: large, rebuilt by the source scripts from their caches
+# (shared outside git, see MISSING_FILES.md)
+common_name_sources/*/*/*.json
+scientific_name_sources/*/*/*.json

@@ -1,0 +1,1292 @@
+{
+ "1008": {
+  "family": "checklist:1008",
+  "reason": "independent checklist",
+  "alias": "ReptileDB",
+  "title": "The Reptile Database"
+ },
+ "100954": {
+  "family": "checklist:100954",
+  "reason": "independent checklist",
+  "alias": "DonEWilson2017",
+  "title": "Muridae"
+ },
+ "1010": {
+  "family": "checklist:1010",
+  "reason": "independent checklist",
+  "alias": "WoRMS FishBase",
+  "title": "FishBase"
+ },
+ "1011": {
+  "family": "checklist:1011",
+  "reason": "independent checklist",
+  "alias": "FLOW",
+  "title": "Fulgoromorpha Lists On the Web"
+ },
+ "1015": {
+  "family": "checklist:1015",
+  "reason": "independent checklist",
+  "alias": "ILDIS",
+  "title": "ILDIS World Database of Legumes"
+ },
+ "1021": {
+  "family": "checklist:1021",
+  "reason": "independent checklist",
+  "alias": "SF Orthoptera",
+  "title": "Orthoptera Species File"
+ },
+ "1026": {
+  "family": "checklist:1026",
+  "reason": "independent checklist",
+  "alias": "ScaleNet",
+  "title": "Systematic Database of the Scale Insects of the World"
+ },
+ "102847": {
+  "family": "checklist:102847",
+  "reason": "independent checklist",
+  "alias": "RussellAMittermeier2018",
+  "title": "Soricidae"
+ },
+ "1044": {
+  "family": "checklist:1044",
+  "reason": "independent checklist",
+  "alias": "WoRMS Porifera",
+  "title": "World Porifera Database"
+ },
+ "1045": {
+  "family": "checklist:1045",
+  "reason": "independent checklist",
+  "alias": "Conifer Database",
+  "title": "Conifer Database"
+ },
+ "1046": {
+  "family": "checklist:1046",
+  "reason": "independent checklist",
+  "alias": "GloBIS (GART)",
+  "title": "Global Butterfly Information System"
+ },
+ "1050": {
+  "family": "checklist:1050",
+  "reason": "independent checklist",
+  "alias": "SF Phasmida",
+  "title": "Phasmida Species File"
+ },
+ "1051": {
+  "family": "checklist:1051",
+  "reason": "independent checklist",
+  "alias": "SF Cockroach",
+  "title": "Cockroach Species File"
+ },
+ "1079": {
+  "family": "checklist:1079",
+  "reason": "independent checklist",
+  "alias": "LIAS",
+  "title": "A Global Information System for Lichenized and Non-Lichenized Ascomycetes"
+ },
+ "1081": {
+  "family": "checklist:1081",
+  "reason": "independent checklist",
+  "alias": "WoRMS Bryozoa",
+  "title": "World List of Bryozoa"
+ },
+ "1094": {
+  "family": "checklist:1094",
+  "reason": "independent checklist",
+  "alias": "WoRMS Isopoda",
+  "title": "World Marine, Freshwater and Terrestrial Isopod Crustaceans database"
+ },
+ "1106": {
+  "family": "checklist:1106",
+  "reason": "independent checklist",
+  "alias": "WoRMS Echinoidea",
+  "title": "World Echinoidea Database"
+ },
+ "1112": {
+  "family": "checklist:1112",
+  "reason": "independent checklist",
+  "alias": "WoRMS Hydrozoa",
+  "title": "World Hydrozoa Database"
+ },
+ "1130": {
+  "family": "checklist:1130",
+  "reason": "independent checklist",
+  "alias": "WoRMS Mollusca",
+  "title": "MolluscaBase"
+ },
+ "1131": {
+  "family": "checklist:1131",
+  "reason": "independent checklist",
+  "alias": "WoRMS Octocorallia",
+  "title": "World List of Octocorallia"
+ },
+ "1134": {
+  "family": "checklist:1134",
+  "reason": "independent checklist",
+  "alias": "SF Coreoidea",
+  "title": "Coreoidea Species File"
+ },
+ "1140": {
+  "family": "checklist:1140",
+  "reason": "independent checklist",
+  "alias": "World Ferns",
+  "title": "Checklist of Ferns and Lycophytes of the World"
+ },
+ "1141": {
+  "family": "checklist:1141",
+  "reason": "independent checklist",
+  "alias": "World Plants",
+  "title": "Synonymic Checklists of the Vascular Plants of the World"
+ },
+ "1174": {
+  "family": "checklist:1174",
+  "reason": "independent checklist",
+  "alias": "PBDB",
+  "title": "The Paleobiology Database"
+ },
+ "1188": {
+  "family": "checklist:1188",
+  "reason": "independent checklist",
+  "alias": "WoRMS Scyphozoa",
+  "title": "World List of Scyphozoa"
+ },
+ "1196": {
+  "family": "checklist:1196",
+  "reason": "independent checklist",
+  "alias": "WoRMS Scleractinia",
+  "title": "World List of Scleractinia"
+ },
+ "164210": {
+  "family": "checklist:164210",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Martha's Vineyard species checklist"
+ },
+ "170809": {
+  "family": "checklist:170809",
+  "reason": "independent checklist",
+  "alias": "BirdLife",
+  "title": "Handbook of the Birds of the World and BirdLife International Digital Checklist of the Birds of the World"
+ },
+ "2008": {
+  "family": "checklist:2008",
+  "reason": "independent checklist",
+  "alias": "TAXREF",
+  "title": "TAXREF"
+ },
+ "2011": {
+  "family": "checklist:2011",
+  "reason": "independent checklist",
+  "alias": "WoRMS",
+  "title": "World Register of Marine Species"
+ },
+ "2012": {
+  "family": "checklist:2012",
+  "reason": "independent checklist",
+  "alias": "VASCAN",
+  "title": "Database of Vascular Plants of Canada (VASCAN)"
+ },
+ "2013": {
+  "family": "checklist:2013",
+  "reason": "independent checklist",
+  "alias": "Clements",
+  "title": "The eBird/Clements Checklist of Birds of the World"
+ },
+ "2014": {
+  "family": "checklist:2014",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Checklist Dutch Species Register - Nederlands Soortenregister"
+ },
+ "2018": {
+  "family": "checklist:2018",
+  "reason": "independent checklist",
+  "alias": "GRIN",
+  "title": "Germplasm Resources Information Network (GRIN) Taxonomy"
+ },
+ "2019": {
+  "family": "checklist:2019",
+  "reason": "independent checklist",
+  "alias": "MSW3",
+  "title": "Mammal Species of the World"
+ },
+ "2030": {
+  "family": "checklist:2030",
+  "reason": "independent checklist",
+  "alias": "Artsnavnebasen",
+  "title": "Nortaxa (Artsnavnebasen)"
+ },
+ "2031": {
+  "family": "checklist:2031",
+  "reason": "independent checklist",
+  "alias": "Brazilian Flora",
+  "title": "Flora e Funga do Brasil - Lista Oficial"
+ },
+ "20359": {
+  "family": "checklist:20359",
+  "reason": "independent checklist",
+  "alias": "GRIIS-US-Hawaii",
+  "title": "Global Register of Introduced and Invasive Species - Hawaii, United States (ver.2.0, 2022)"
+ },
+ "2036": {
+  "family": "checklist:2036",
+  "reason": "independent checklist",
+  "alias": "IOC",
+  "title": "IOC World Bird List"
+ },
+ "2041": {
+  "family": "checklist:2041",
+  "reason": "independent checklist",
+  "alias": "Dyntaxa",
+  "title": "Dyntaxa. Svensk taxonomisk databas"
+ },
+ "2042": {
+  "family": "checklist:2042",
+  "reason": "independent checklist",
+  "alias": "ICN",
+  "title": "Cichorieae Systematics Portal"
+ },
+ "2122": {
+  "family": "checklist:2122",
+  "reason": "independent checklist",
+  "alias": "eunis",
+  "title": "EUNIS"
+ },
+ "2144": {
+  "family": "checklist:2144",
+  "reason": "independent checklist",
+  "alias": "ITIS",
+  "title": "The Integrated Taxonomic Information System"
+ },
+ "21559": {
+  "family": "checklist:21559",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Nordic plant uses from Gunnerus and Høeg"
+ },
+ "2160": {
+  "family": "checklist:2160",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Watchdog Data"
+ },
+ "21650": {
+  "family": "checklist:21650",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "National checklists and red lists for European butterflies"
+ },
+ "2169": {
+  "family": "checklist:2169",
+  "reason": "independent checklist",
+  "alias": "NCBI",
+  "title": "NCBI Taxonomy"
+ },
+ "222250": {
+  "family": "checklist:222250",
+  "reason": "independent checklist",
+  "alias": "EU 2019/2117",
+  "title": "Commission Regulation (EU) 2019/2117"
+ },
+ "24580": {
+  "family": "checklist:24580",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Checklist of Vermont Species"
+ },
+ "25428": {
+  "family": "checklist:25428",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "DAISIE - Inventory of alien invasive species in Europe"
+ },
+ "26853": {
+  "family": "checklist:26853",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "World Register of Introduced Marine Species (WRiMS)"
+ },
+ "281817": {
+  "family": "checklist:281817",
+  "reason": "independent checklist",
+  "alias": "Brazilian Fauna",
+  "title": "Catálogo Taxonômico da Fauna do Brasil"
+ },
+ "28488": {
+  "family": "checklist:28488",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "A Checklist of the Butterflies of Arabuko-Sokoke Forest, Kenya"
+ },
+ "28544": {
+  "family": "checklist:28544",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Propuesta actualizada de nombres comunes en castellano para las mariposas de la península ibérica, Baleares, Ceuta, Melilla y Canarias (Lepidoptera: Papilionoidea)"
+ },
+ "285460": {
+  "family": "checklist:285460",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Checklist of the Wild Bees (Apoidea: Anthophila) of Vermont, USA"
+ },
+ "288268": {
+  "family": "checklist:288268",
+  "reason": "independent checklist",
+  "alias": "Hemiptera",
+  "title": "3i World Auchenorrhyncha Database"
+ },
+ "28958": {
+  "family": "checklist:28958",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Catalogue of the Lepidoptera of Belgium"
+ },
+ "291320": {
+  "family": "checklist:291320",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Checklist of Vascular Plants in Korea"
+ },
+ "291541": {
+  "family": "checklist:291541",
+  "reason": "independent checklist",
+  "alias": "KonradLauber2018",
+  "title": "Flora Helvetica - Apiaceae"
+ },
+ "291550": {
+  "family": "checklist:291550",
+  "reason": "independent checklist",
+  "alias": "KonradLauber2018",
+  "title": "Flora Helvetica - Aspleniaceae"
+ },
+ "291551": {
+  "family": "checklist:291551",
+  "reason": "independent checklist",
+  "alias": "KonradLauber2018",
+  "title": "Flora Helvetica - Asteraceae"
+ },
+ "291557": {
+  "family": "checklist:291557",
+  "reason": "independent checklist",
+  "alias": "KonradLauber2018",
+  "title": "Flora Helvetica - Boraginaceae"
+ },
+ "291558": {
+  "family": "checklist:291558",
+  "reason": "independent checklist",
+  "alias": "KonradLauber2018",
+  "title": "Flora Helvetica - Brassicaceae"
+ },
+ "291589": {
+  "family": "checklist:291589",
+  "reason": "independent checklist",
+  "alias": "KonradLauber2018",
+  "title": "Flora Helvetica - Fabaceae"
+ },
+ "292488": {
+  "family": "checklist:292488",
+  "reason": "independent checklist",
+  "alias": "InfoFlora2021",
+  "title": "Info Flora Schweiz - Apiaceae"
+ },
+ "292498": {
+  "family": "checklist:292498",
+  "reason": "independent checklist",
+  "alias": "InfoFlora2021",
+  "title": "Info Flora Schweiz - Aspleniaceae"
+ },
+ "292499": {
+  "family": "checklist:292499",
+  "reason": "independent checklist",
+  "alias": "InfoFlora2021",
+  "title": "Info Flora Schweiz - Asteraceae"
+ },
+ "292507": {
+  "family": "checklist:292507",
+  "reason": "independent checklist",
+  "alias": "InfoFlora2021",
+  "title": "Info Flora Schweiz - Boraginaceae"
+ },
+ "292508": {
+  "family": "checklist:292508",
+  "reason": "independent checklist",
+  "alias": "InfoFlora2021",
+  "title": "Info Flora Schweiz - Brassicaceae"
+ },
+ "292545": {
+  "family": "checklist:292545",
+  "reason": "independent checklist",
+  "alias": "InfoFlora2021",
+  "title": "Info Flora Schweiz - Fabaceae"
+ },
+ "292586": {
+  "family": "checklist:292586",
+  "reason": "independent checklist",
+  "alias": "InfoFlora2021",
+  "title": "Info Flora Schweiz - Orchidaceae"
+ },
+ "297097": {
+  "family": "checklist:297097",
+  "reason": "independent checklist",
+  "alias": "Wilson2005",
+  "title": "Order Rodentia - Family Muridae"
+ },
+ "304879": {
+  "family": "checklist:304879",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Bees of the United States"
+ },
+ "304886": {
+  "family": "checklist:304886",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Checklist of Vermont Fungi"
+ },
+ "307743": {
+  "family": "checklist:307743",
+  "reason": "independent checklist",
+  "alias": "GRIIS-US-Alaska",
+  "title": "Global Register of Introduced and Invasive Species - Alaska, United States (ver.2.0, 2022)"
+ },
+ "307745": {
+  "family": "checklist:307745",
+  "reason": "independent checklist",
+  "alias": "GRIIS-US-United",
+  "title": "Global Register of Introduced and Invasive Species - United States (Contiguous) (ver.2.0, 2022)"
+ },
+ "308125": {
+  "family": "checklist:308125",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Checklist of Vermont Plants from Known Occurrences"
+ },
+ "312898": {
+  "family": "checklist:312605",
+  "reason": "release of a checklist project",
+  "alias": "Banco Taxonômico Integrado da Biodiversidade Brasileira - Flora, Funga e Fauna-2025-10-25",
+  "title": "Banco Taxonômico Integrado da Biodiversidade Brasileira - Flora, Funga e Fauna"
+ },
+ "312904": {
+  "family": "checklist:312605",
+  "reason": "release of a checklist project",
+  "alias": "Banco Taxonômico Integrado da Biodiversidade Brasileira - Flora, Funga e Fauna-2025-10-27",
+  "title": "Banco Taxonômico Integrado da Biodiversidade Brasileira - Flora, Funga e Fauna"
+ },
+ "313479": {
+  "family": "checklist:313479",
+  "reason": "independent checklist",
+  "alias": "Uso sostenible de plantas",
+  "title": "Listado de plantas de uso y aprovechamiento sostenible en Ecuador"
+ },
+ "314570": {
+  "family": "checklist:314570",
+  "reason": "independent checklist",
+  "alias": "Wikispecies",
+  "title": "Wikispecies"
+ },
+ "315055": {
+  "family": "checklist:315055",
+  "reason": "independent checklist",
+  "alias": "USDA PLANTS",
+  "title": "USDA PLANTS Database"
+ },
+ "315070": {
+  "family": "checklist:315070",
+  "reason": "independent checklist",
+  "alias": "dk_red_list_vascular_plants",
+  "title": "Red List Vascular Plants (Denmark) - Rødliste Karplanter (Danmark)"
+ },
+ "315071": {
+  "family": "checklist:315071",
+  "reason": "independent checklist",
+  "alias": "no_red_list_vascular_plants_2021",
+  "title": "Red List Vascular Plants (2021, Norway) - Rødlista Karplanter (2021, Norge)"
+ },
+ "315072": {
+  "family": "checklist:315072",
+  "reason": "independent checklist",
+  "alias": "ch_red_list_vascular_plants_2016",
+  "title": "Red List Vascular Plants (2016, Switzerland) - Rote Liste Gefässpflanzen (2016, Schweiz)"
+ },
+ "315073": {
+  "family": "checklist:315073",
+  "reason": "independent checklist",
+  "alias": "fr_red_list_vascular_plants_2018_subsp",
+  "title": "IUCN Red List Vascular Plants Subspecies (2018, metropolitan France) - IUCN Liste Rouge de la Flore Vasculaire Sous-espèces (2018, métropolitaine France)"
+ },
+ "315074": {
+  "family": "checklist:315074",
+  "reason": "independent checklist",
+  "alias": "fr_red_list_vascular_plants_2018",
+  "title": "IUCN Red List Vascular Plants (2018, metropolitan France) - IUCN Liste Rouge de la Flore Vasculaire (2018, métropolitaine France)"
+ },
+ "315077": {
+  "family": "checklist:315077",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "The Swedish Red List 2025"
+ },
+ "315660": {
+  "family": "checklist:315660",
+  "reason": "independent checklist",
+  "alias": "SF Blattodea",
+  "title": "Blattodea Species File"
+ },
+ "315880": {
+  "family": "checklist:315880",
+  "reason": "independent checklist",
+  "alias": "ScaleNet",
+  "title": "Systematic Database of the Scale Insects of the World"
+ },
+ "316336": {
+  "family": "checklist:316318",
+  "reason": "release of a checklist project",
+  "alias": "Archis-2026-09-14",
+  "title": "Dutch bio-archaeological taxa list"
+ },
+ "316602": {
+  "family": "checklist:316602",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Common names of Chilean Plants"
+ },
+ "316856": {
+  "family": "checklist:316856",
+  "reason": "independent checklist",
+  "alias": "uBio",
+  "title": "uBio NameBank and uBiota"
+ },
+ "37220": {
+  "family": "checklist:37220",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Nordic Crop Wild Relative (CWR) Checklist"
+ },
+ "51696": {
+  "family": "checklist:51696",
+  "reason": "independent checklist",
+  "alias": "SNSB51696",
+  "title": "Taxon list of animals with German names (worldwide) compiled at the SMNS"
+ },
+ "51697": {
+  "family": "checklist:51697",
+  "reason": "independent checklist",
+  "alias": "SNSB51697",
+  "title": "Taxon list of vascular plants from Bavaria, Germany compiled in the context of the BFL project"
+ },
+ "51977": {
+  "family": "checklist:51977",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Bryoquel : Liste des bryophytes présentes au Québec-Labrador"
+ },
+ "53129": {
+  "family": "checklist:53129",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Vernacular names of Iberian fungi in Spain"
+ },
+ "53131": {
+  "family": "checklist:53131",
+  "reason": "independent checklist",
+  "alias": "IUCN",
+  "title": "The IUCN Red List of Threatened Species"
+ },
+ "53133": {
+  "family": "checklist:53133",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Belgian Species List"
+ },
+ "53677": {
+  "family": "checklist:53677",
+  "reason": "independent checklist",
+  "alias": "ArchisBotany",
+  "title": "Archaeobotanical checklist for Archis"
+ },
+ "53684": {
+  "family": "checklist:53684",
+  "reason": "independent checklist",
+  "alias": "ArchisZoology",
+  "title": "Archaeozoological checklist for Archis"
+ },
+ "55785": {
+  "family": "checklist:55785",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "RIPARIAS target species list"
+ },
+ "58406": {
+  "family": "checklist:58406",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "List of Invasive Alien Species of Union concern"
+ },
+ "62922": {
+  "family": "checklist:62922",
+  "reason": "independent checklist",
+  "alias": "DonEWilson2017",
+  "title": "Spalacidae"
+ },
+ "7103": {
+  "family": "checklist:7103",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Checklist Dutch Caribbean Species Register"
+ },
+ "7888": {
+  "family": "checklist:7888",
+  "reason": "independent checklist",
+  "alias": "UKSI",
+  "title": "United Kingdom Species Inventory (UKSI)"
+ },
+ "8179": {
+  "family": "checklist:8179",
+  "reason": "independent checklist",
+  "alias": null,
+  "title": "Checklist of the Butterflies (Papilionoidea) of Vermont, USA"
+ },
+ "88683": {
+  "family": "checklist:88683",
+  "reason": "independent checklist",
+  "alias": "DonEWilson2019",
+  "title": "Pteropodidae"
+ },
+ "9712": {
+  "family": "checklist:9712",
+  "reason": "independent checklist",
+  "alias": "ChecklistDK",
+  "title": "National Checklist of all species occurring in Denmark"
+ },
+ "9802": {
+  "family": "checklist:9802",
+  "reason": "independent checklist",
+  "alias": "MDD",
+  "title": "The Mammal Diversity Database"
+ },
+ "2328": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL21",
+  "title": "Catalogue of Life Checklist"
+ },
+ "2353": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL13",
+  "title": "Catalogue of Life Checklist"
+ },
+ "2354": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL19",
+  "title": "Catalogue of Life Checklist"
+ },
+ "2355": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL18",
+  "title": "Catalogue of Life Checklist"
+ },
+ "2356": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL17",
+  "title": "Catalogue of Life Checklist"
+ },
+ "2357": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL16",
+  "title": "Catalogue of Life Checklist"
+ },
+ "2358": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL15",
+  "title": "Catalogue of Life Checklist"
+ },
+ "2359": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL14",
+  "title": "Catalogue of Life Checklist"
+ },
+ "299029": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL24",
+  "title": "Catalogue of Life"
+ },
+ "3": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL",
+  "title": "Catalogue of Life"
+ },
+ "310463": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL25",
+  "title": "Catalogue of Life"
+ },
+ "312563": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL25.10",
+  "title": "Catalogue of Life"
+ },
+ "312578": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL25.10 XR",
+  "title": "Catalogue of Life"
+ },
+ "313062": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL25.11",
+  "title": "Catalogue of Life"
+ },
+ "313100": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL25.11 XR",
+  "title": "Catalogue of Life"
+ },
+ "313452": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL25.12",
+  "title": "Catalogue of Life"
+ },
+ "313531": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL25.12 XR",
+  "title": "Catalogue of Life"
+ },
+ "313722": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.1",
+  "title": "Catalogue of Life"
+ },
+ "313811": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.1 XR",
+  "title": "Catalogue of Life"
+ },
+ "314216": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.2",
+  "title": "Catalogue of Life"
+ },
+ "314231": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.2 XR",
+  "title": "Catalogue of Life"
+ },
+ "314455": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.3",
+  "title": "Catalogue of Life"
+ },
+ "314774": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.3 XR",
+  "title": "Catalogue of Life"
+ },
+ "314909": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.4",
+  "title": "Catalogue of Life"
+ },
+ "314965": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.4 XR",
+  "title": "Catalogue of Life"
+ },
+ "315149": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.5",
+  "title": "Catalogue of Life"
+ },
+ "315192": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.5 XR",
+  "title": "Catalogue of Life"
+ },
+ "315304": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL11",
+  "title": "Species 2000 & ITIS Catalogue of Life: 2011 Annual Checklist."
+ },
+ "315305": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL05",
+  "title": "Species 2000 & ITIS Catalogue of Life: 2005 Annual Checklist."
+ },
+ "315306": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL06",
+  "title": "Species 2000 & ITIS Catalogue of Life: 2006 Annual Checklist."
+ },
+ "315307": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL07",
+  "title": "Species 2000 & ITIS Catalogue of Life: 2007 Annual Checklist."
+ },
+ "315308": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL08",
+  "title": "Species 2000 & ITIS Catalogue of Life: 2008 Annual Checklist."
+ },
+ "315309": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL09",
+  "title": "Species 2000 & ITIS Catalogue of Life: 2009 Annual Checklist."
+ },
+ "315310": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL10",
+  "title": "Species 2000 & ITIS Catalogue of Life: 2010 Annual Checklist."
+ },
+ "315330": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL00",
+  "title": "Species 2000 Catalogue of Life: Indexing the world's known species. Year 2000 Prototype Annual Checklist."
+ },
+ "315331": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL02",
+  "title": "Species 2000 & ITIS Catalogue of Life: Indexing the world's known species. Year 2002 Annual Checklist."
+ },
+ "315332": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL03",
+  "title": "Species 2000 & ITIS Catalogue of Life: Indexing the world's known species. Year 2003 Annual Checklist."
+ },
+ "315333": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL04",
+  "title": "Species 2000 & ITIS Catalogue of Life, Annual Checklist 2004: Indexing the world's known species."
+ },
+ "315448": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.6",
+  "title": "Catalogue of Life"
+ },
+ "315557": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.6 XR",
+  "title": "Catalogue of Life"
+ },
+ "315777": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.7",
+  "title": "Catalogue of Life"
+ },
+ "315834": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.7 XR",
+  "title": "Catalogue of Life"
+ },
+ "316115": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.8",
+  "title": "Catalogue of Life"
+ },
+ "316165": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.8 XR",
+  "title": "Catalogue of Life"
+ },
+ "316321": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.9",
+  "title": "Catalogue of Life"
+ },
+ "316441": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.9 XR",
+  "title": "Catalogue of Life"
+ },
+ "316595": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.10",
+  "title": "Catalogue of Life"
+ },
+ "316691": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL26.10 XR",
+  "title": "Catalogue of Life"
+ },
+ "9805": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL12",
+  "title": "Catalogue of Life Checklist"
+ },
+ "9837": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL22",
+  "title": "Catalogue of Life Checklist"
+ },
+ "9910": {
+  "family": "col",
+  "reason": "Catalogue of Life release",
+  "alias": "COL23",
+  "title": "Catalogue of Life Checklist"
+ },
+ "53147": {
+  "family": "gbif",
+  "reason": "copy of gbif",
+  "alias": "GBIF",
+  "title": "GBIF Backbone Taxonomy"
+ },
+ "139831": {
+  "family": "inaturalist",
+  "reason": "copy of inaturalist",
+  "alias": "iNat",
+  "title": "iNaturalist Taxonomy"
+ },
+ "100000017": {
+  "family": "private:100000017",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "100000032": {
+  "family": "private:100000032",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "100000048": {
+  "family": "private:100000048",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "100000052": {
+  "family": "private:100000052",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "262777": {
+  "family": "private:262777",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "283160": {
+  "family": "private:283160",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "284898": {
+  "family": "private:284898",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "304754": {
+  "family": "private:304754",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "304760": {
+  "family": "private:304760",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "305202": {
+  "family": "private:305202",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "309850": {
+  "family": "private:309850",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "311222": {
+  "family": "private:311222",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "311602": {
+  "family": "private:311602",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "311784": {
+  "family": "private:311784",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "311877": {
+  "family": "private:311877",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "312086": {
+  "family": "private:312086",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "312605": {
+  "family": "private:312605",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "313292": {
+  "family": "private:313292",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "313776": {
+  "family": "private:313776",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "313814": {
+  "family": "private:313814",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "314512": {
+  "family": "private:314512",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "314531": {
+  "family": "private:314531",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "314611": {
+  "family": "private:314611",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "314614": {
+  "family": "private:314614",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "314659": {
+  "family": "private:314659",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "314754": {
+  "family": "private:314754",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "315662": {
+  "family": "private:315662",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "315823": {
+  "family": "private:315823",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "315824": {
+  "family": "private:315824",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "315995": {
+  "family": "private:315995",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316251": {
+  "family": "private:316251",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316318": {
+  "family": "private:316318",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316319": {
+  "family": "private:316319",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316320": {
+  "family": "private:316320",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316323": {
+  "family": "private:316323",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316446": {
+  "family": "private:316446",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316494": {
+  "family": "private:316494",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316567": {
+  "family": "private:316567",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316578": {
+  "family": "private:316578",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316580": {
+  "family": "private:316580",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316581": {
+  "family": "private:316581",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316582": {
+  "family": "private:316582",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316583": {
+  "family": "private:316583",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316584": {
+  "family": "private:316584",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316597": {
+  "family": "private:316597",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316744": {
+  "family": "private:316744",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316755": {
+  "family": "private:316755",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316791": {
+  "family": "private:316791",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "316804": {
+  "family": "private:316804",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "53834": {
+  "family": "private:53834",
+  "reason": "private checklist, metadata not accessible",
+  "alias": null,
+  "title": null
+ },
+ "314569": {
+  "family": "wikidata",
+  "reason": "copy of wikidata",
+  "alias": "Wikidata",
+  "title": "Wikidata Species"
+ }
+}
