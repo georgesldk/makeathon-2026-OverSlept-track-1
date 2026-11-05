@@ -246,3 +246,18 @@ scientific_name_sources/wcvp/data/
 # (shared outside git, see MISSING_FILES.md)
 common_name_sources/*/*/*.json
 scientific_name_sources/*/*/*.json
+
+# Description sources: raw API replies
+description_sources/*/cache/
+# Description sources: raw outputs per book (rebuilt by the scripts; shared outside git, see MISSING_FILES.md)
+description_sources/*/*/*.json
+# ...except the description check's results, which are a pipeline result like geography.json
+!description_sources/check/*/description_check.json
+# Web-chat prompts and the pasted replies (the replies are the only copy: shared outside git)
+description_sources/check/web/
+# Paper test: the paper's data files (redistribution not checked); RESULTS.md stays tracked
+description_sources/paper_test/data/
+description_sources/paper_test/results.json
+description_sources/paper_test/prompts/
+# macOS
+.DS_Store

@@ -83,6 +83,27 @@ Raw downloads and API caches are not committed to git.
             record we use
 
 
+### Biodiversity Heritage Library (BHL)
+- Folder:   description_sources/bhl/
+- Licence:  most scanned books are public domain; BHL's own data
+            CC0; each book keeps its own rights statement
+- We must:  credit BHL and the book (title, year, page link are
+            kept with every passage)
+
+### Wikipedia (English)
+- Folder:   description_sources/wikipedia/
+- Licence:  CC BY-SA 4.0
+- We must:  credit Wikipedia and link the article; anything we
+            publish that contains its text is CC BY-SA too
+- Used as weak evidence only (ELIGIBILITY_RULES.md, D7)
+
+### Lardos et al. 2024, research data (figshare)
+- Folder:   description_sources/paper_test/data/ (not in git)
+- Licence:  not stated on the share link; the paper is CC BY 4.0
+- We must:  cite the paper; we do not redistribute the data files
+- Used to test the AI description check against the experts' scores
+
+
 ## Notes
 
 - Some GBIF and ChecklistBank common names are non-commercial (CC BY-NC).
@@ -129,3 +150,10 @@ Raw downloads and API caches are not committed to git.
   Gardens, Kew, Harvard University Herbaria & Libraries and
   Australian National Herbarium. https://www.ipni.org
 - Global Names Verifier. https://verifier.globalnames.org
+- Biodiversity Heritage Library. https://www.biodiversitylibrary.org
+- Wikipedia, The Free Encyclopedia. https://en.wikipedia.org
+- Lardos, A., Patmore, K., Allkin, R., Lazarou, R., Nesbitt, M.,
+  Scott, A. C., Zipser, B. (2024). A systematic methodology to assess
+  the identity of plants in historical texts. Journal of
+  Ethnopharmacology 322, 117622. doi:10.1016/j.jep.2023.117622.
+  Data: https://figshare.com/s/2e0f64b5794892ed4679
