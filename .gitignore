@@ -261,3 +261,10 @@ description_sources/paper_test/results.json
 description_sources/paper_test/prompts/
 # macOS
 .DS_Store
+# MeSH download (the index mesh_index.json.gz is built from it and is in git)
+reference_sources/mesh/desc20*
+# Claims: web-chat prompts and pasted replies (the replies are the only copy: shared outside git)
+claims/web/
+claims/cache/
+# Disease Ontology download (doid.obo, release recorded in claims/historical_terms.csv)
+reference_sources/doid/

@@ -11,8 +11,12 @@ says what they are, where they go, and what needs them.
   (candidates, resolved scientific names, geography check, and the
   final eligibility list eligibility.json), the description check
   (description_sources/check/<book>/description_check.json) and the
-  AI test report (description_sources/paper_test/RESULTS.md).
+  AI test report (description_sources/paper_test/RESULTS.md), and the
+  medicinal claims with their links and checks (claims/: claims.json,
+  links.json, graph/, review samples, mesh_crosscheck.json; method in
+  claims/CLAIMS_METHOD.md).
 - Rerun the eligibility rules: python3 matching/eligibility.py --book culpeper
+- Relink the claims: python3 claims/link_claims.py
 - Rerun the Dioscorides extraction, validator and dictionary lookups
   (historical_texts/dioscorides/), and the Culpeper extraction.
 
@@ -41,6 +45,15 @@ needs the files below.
 4. API keys are not in the zip. Copy .env.example to .env and add
    your own keys if you need them: BHL_API_KEY (free) for the BHL
    descriptions, GEMINI_API_KEY for the AI scripts' API route.
+
+
+### Update zips
+
+overslept_missing_files_3.zip (5 Nov, 22 MB) holds only what is new
+since the second zip: the claim prompts and replies (claims/web/), the
+NCBI and Wikidata caches (claims/cache/), the MeSH download and the
+Disease Ontology file. Unzip it the same way, on top of the earlier
+zip (unzip -o). Nothing in it replaces an earlier file.
 
 
 ## What is in the zip, and where it goes
@@ -76,6 +89,18 @@ Description sources (about 125 MB, mostly the BHL cache):
     needed by: description_check.py (bhl.json, wikipedia.json, web/),
                test_models.py (data/, cache/)
 
+Medicinal claims (about 30 MB):
+
+    claims/web/<book>/                     the claim prompts AND the pasted Gemini replies: the only
+                                           copy of the raw answers; --import-web rebuilds claims.json
+    claims/cache/ncbi/                     PubMed's replies for the cross-check (check 6)
+    claims/cache/wikidata/                 Wikidata's replies for the old-term table
+    reference_sources/mesh/desc2026.gz     MeSH 2026 descriptors, NLM (17 MB); mesh_index.json.gz
+                                           (in git) is built from it by build_mesh_index.py
+    reference_sources/doid/doid.obo        Disease Ontology, release 2026-10-29 (7 MB)
+    needed by: extract_claims.py --import-web (web/), check_mesh_ncbi.py (cache/ncbi),
+               map_historical_terms.py (doid.obo, cache/wikidata), build_mesh_index.py (desc2026.gz)
+
 API caches, the raw replies (about 320 MB):
 
     common_name_sources/<source>/<book>/cache/
@@ -85,13 +110,17 @@ API caches, the raw replies (about 320 MB):
     ChecklistBank and TaxTree).
 
 
-## If you would rather download the two datasets yourself
+## If you would rather download the datasets yourself
 
 - WCVP: https://sftp.kew.org/pub/data-repositories/WCVP/
   (wcvp.zip; put wcvp_names.csv and wcvp_distribution.csv in
   scientific_name_sources/wcvp/data/)
 - Dr. Duke's: https://doi.org/10.15482/USDA.ADC/1239279
   (put the CSV files in common_name_sources/drduke/data/)
+- MeSH: https://nlmpubs.nlm.nih.gov/projects/mesh/MESH_FILES/xmlmesh/desc2026.gz
+  (put it in reference_sources/mesh/)
+- Disease Ontology: https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/main/src/ontology/doid.obo
+  (put it in reference_sources/doid/; a newer release may map differently)
 
 
 ## For George: making the zip

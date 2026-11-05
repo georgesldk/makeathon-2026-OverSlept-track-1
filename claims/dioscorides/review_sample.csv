@@ -1,0 +1,21 @@
+claim_id,entry,quote,translation,claim,mesh,match,claim_correct (y/n),mesh_correct (y/n),note
+dioscorides:4.6:c02,πολυγόνατον,αἴρει δὲ καὶ σπίλους τούς ἐν προσώπῳ,it also removes blemishes on the face,removes facial spots and blemishes,D017495 Hyperpigmentation; D008548 Melanosis,broad; broad,y,y,
+dioscorides:1.84:c03,πτελέας,καὶ τραύματα κολλᾷ,and heals wounds,agglutinates and heals wounds,D014947 Wounds and Injuries,exact,y,y,
+dioscorides:1.15:c12,ἄμωμόν,ποθὲν δὲ τὸ ἀφέψημα αὐτοῦ ἁρμόζει ἡπατικοῖς,its decoction drunk is suitable for hepatic patients,treats liver diseases,D008107 Liver Diseases,exact,y,y,
+dioscorides:4.96:c02,ἡριγέρων,καταπλασσόμενα σὺν οἴνῳ γλυκεῖ ὀλίγῳ καὶ καθ᾿ ἑαυτὰ φλεγμονὰς ὄρχεων ... θεραπεύει,"applied as a poultice with a little sweet wine and by themselves, they heal inflammations of the testicles",treats inflammation of the testicles,D009920 Orchitis; D007249 Inflammation,exact; broad,y,y,
+dioscorides:2.126:c05,ἀρνόγλωσσον,καὶ ῥευματικὰ ... ἕλκη,and flux-ridden ulcers,treats flux-ridden ulcers,D014456 Ulcer,exact,y,y,
+dioscorides:2.111:c03,βουνιάς,μείγνυται δὲ καὶ ἀντιδότοις,it is also mixed into antidotes,serves as an ingredient in antidotes,D000931 Antidotes,exact,n,y,
+dioscorides:2.103:c03,λινόσπεπμον,σὺν κονίᾳ δὲ παρωτίδας καὶ σκληρίας διαφορεῖ,with lye it disperses parotid swellings and hard indurations,resolves parotid gland swellings and indurations,D010309 Parotitis,exact,y,y,
+dioscorides:1.99:c41,ῥόδα,τοῦ δὲ σπέρματος μύστρα δύο ποθέντα ὑδατῶδες καθαίρειν,"and two spoonfuls of the seed, drunk, purge watery humors",purges watery humors in dropsy,D002400 Cathartics; D004487 Edema,exact; close,n,n,
+dioscorides:4.87:c02,φακὸς,πάσαις φλεγμοναῖς ... ἁρμόζει καταπλασσόμενος καθʼ ἑαυτόν τε καὶ σὺν ἀλφίτῳ,is suitable for all inflammations applied as a poultice by itself and with barley meal,treats all inflammations,D007249 Inflammation,exact,y,y,
+dioscorides:1.78:c15,δάφνη,πίνονται δὲ σύν οἴνῳ πρὸς σκορπιοπλήκτους,drunk with wine for those stung by a scorpion,treats scorpion stings,D065008 Scorpion Stings; D001733 Bites and Stings,exact; broad,y,y,
+dioscorides:4.42:c02,πεντέφθλλον,σηπεδόνας τάς ἐν στόματι διακλυζόμενον ἵστησι,stops putrefaction in the mouth when used as a mouthwash,treats putrid ulcers and oral necrosis,D013280 Stomatitis; D009059 Mouth Diseases,exact; broad,y,y,
+dioscorides:4.95:c02,γάλιον,οὗ τὸ ἄνθος πρὸς τὰ πυρίκαυτα καταπλάττεται,whose flower is applied as a poultice for burns,treats burns,D002056 Burns,exact,y,y,
+dioscorides:3.90:c03,ἀπαρίνη,ταύτης τὸ σπέρμα καὶ οἱ καυλοὶ καὶ τὰ φύλλα χυλισθέντα ... ἐχιοδήκτοις βοηθεῖ μετ᾿ οἴνου πινόμενα,"its seeds, stems, and leaves juiced and drunk with wine help those bitten by vipers",treats viper bites,D012909 Snake Bites,exact,y,y,
+dioscorides:1.75:c09,ἄρκευθος,καὶ βῆχας [ποιῶν ... πινόμενος],and coughs,relieves coughs,D003371 Cough,exact,y,y,
+dioscorides:3.125:c02,φύλλον,τὸ δὲ θηλυγόνον θηλυτοκεῖν,and the female kind to cause the bearing of female children,promotes the conception of female offspring,D012743 Sex Preselection,exact,y,y,"claim restates the text faithfully; its kind should be magical, not medical (changed n → y after a second opinion)"
+dioscorides:3.22:c04,ἀλόη,αἵματός τε ἀναγωγάς ἐπέχει,it checks the spitting of blood,stops hemoptysis,D006469 Hemoptysis; D006490 Hemostatics,exact; broad,y,y,
+dioscorides:1.17:c16,σχοῖνος,ἡ δὲ ῥίζα στυπτικωτέρα,The root is more astringent.,acts as an astringent,D001252 Astringents,exact,n,y,
+dioscorides:1.17:c08,σχοῖνος,κεφαλῆς καρηβαρικήν,Causes heaviness of the head.,causes heaviness of the head,D006261 Headache,close,y,y,"καρηβαρικός = causing heaviness of the head, a side effect (changed n → y after a second opinion)"
+dioscorides:1.77:c12,κέδρος,καὶ σύν ὄξει δὲ διακλυζομένη ΐὸ αὐτὸ ποιεῖ,and rinsed with vinegar it does the same [stops toothache],relieves toothache when used as a mouthwash with vinegar,D014098 Toothache,exact,y,y,
+dioscorides:2.98:c02,ἔλυμος,ἀτροφωτέρα μέντοι τῆς κέγχρου καθέστηκε,"it is, however, less nourishing than millet",is poorly nourishing,D009753 Nutritive Value,broad,n,y,

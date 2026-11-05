@@ -97,6 +97,23 @@ Raw downloads and API caches are not committed to git.
             publish that contains its text is CC BY-SA too
 - Used as weak evidence only (ELIGIBILITY_RULES.md, D7)
 
+### MeSH, Medical Subject Headings (NLM)
+- Folder:   reference_sources/mesh/ (desc2026.gz not in git; mesh_index.json.gz in git)
+- Licence:  public domain (U.S. government work), NLM terms and conditions
+- We must:  credit "Courtesy of the U.S. National Library of Medicine" and give the MeSH year
+- Used as the shared concept vocabulary for medicinal claims (claims/CLAIMS_METHOD.md)
+
+### Disease Ontology (DOID)
+- Folder:   reference_sources/doid/ (doid.obo not in git)
+- Licence:  CC0
+- We must:  nothing; we cite it and give the release (2026-10-29)
+- Used to map old medical terms to MeSH (claims/map_historical_terms.py)
+
+### NCBI E-utilities / PubMed
+- Folder:   claims/check_mesh_ncbi.py
+- Licence:  free service; NCBI usage guidelines (at most 3 requests a second without a key)
+- We must:  follow the usage guidelines; credit NCBI
+
 ### Lardos et al. 2024, research data (figshare)
 - Folder:   description_sources/paper_test/data/ (not in git)
 - Licence:  not stated on the share link; the paper is CC BY 4.0
@@ -151,6 +168,9 @@ Raw downloads and API caches are not committed to git.
   Australian National Herbarium. https://www.ipni.org
 - Global Names Verifier. https://verifier.globalnames.org
 - Biodiversity Heritage Library. https://www.biodiversitylibrary.org
+- U.S. National Library of Medicine. Medical Subject Headings (MeSH), 2026. https://www.nlm.nih.gov/mesh/
+- NCBI. Entrez Programming Utilities. https://www.ncbi.nlm.nih.gov/books/NBK25499/
+- Schriml, L. M. et al. Human Disease Ontology. https://disease-ontology.org (release 2026-10-29)
 - Wikipedia, The Free Encyclopedia. https://en.wikipedia.org
 - Lardos, A., Patmore, K., Allkin, R., Lazarou, R., Nesbitt, M.,
   Scott, A. C., Zipser, B. (2024). A systematic methodology to assess

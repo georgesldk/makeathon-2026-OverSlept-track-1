@@ -354,9 +354,9 @@ def parse(text: str):
         t = t[t.index("{"): t.rindex("}") + 1]
     except ValueError:
         return None
-    for attempt in (t, re.sub(r",(\s*[\]}])", r"\1", t)):   # web replies sometimes leave a trailing comma
+    for attempt in (t, re.sub(r",(\s*[\]}])", r"\1", t)):   # strict=False: copied replies can wrap lines inside strings   # web replies sometimes leave a trailing comma
         try:
-            return json.loads(attempt)
+            return json.loads(attempt, strict=False)
         except ValueError:
             continue
     return None

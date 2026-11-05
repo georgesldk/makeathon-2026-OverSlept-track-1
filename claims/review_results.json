@@ -1,0 +1,26 @@
+{
+ "culpeper": {
+  "claim": {
+   "right": 20,
+   "wrong": 0,
+   "unmarked": 0
+  },
+  "mesh": {
+   "right": 18,
+   "wrong": 2,
+   "unmarked": 0
+  }
+ },
+ "dioscorides": {
+  "claim": {
+   "right": 16,
+   "wrong": 4,
+   "unmarked": 0
+  },
+  "mesh": {
+   "right": 19,
+   "wrong": 1,
+   "unmarked": 0
+  }
+ }
+}
