@@ -26,13 +26,17 @@ needs the files below.
 2. Put it next to the repo folder and unzip it from inside the repo:
 
        cd makeathon-2026-OverSlept-track-1
-       unzip ../overslept_missing_files.zip
+       git pull
+       unzip -o ../overslept_missing_files.zip
 
    The zip keeps the folder structure, so every file lands in the
-   right place. Nothing tracked by git is overwritten.
-3. Check: this should run and print the summary, not an error:
+   right place. Nothing tracked by git is overwritten. -o replaces
+   files from an earlier zip without asking about each one (if you
+   unzipped an older version before, this updates it).
+3. Check: these should run and print a summary, not an error:
 
        python3 matching/resolve_scientific.py
+       python3 description_sources/check/description_check.py --book culpeper --import-web "Gemini 3.8 Flash, web chat, temp 0"
 
 4. API keys are not in the zip. Copy .env.example to .env and add
    your own keys if you need them: BHL_API_KEY (free) for the BHL
@@ -92,8 +96,10 @@ API caches, the raw replies (about 320 MB):
 
 ## For George: making the zip
 
-From inside the repo:
+From inside the repo (the first line deletes the previous zip; without
+it, zip would add to the old file and keep files that no longer exist):
 
+    rm -f ../overslept_missing_files.zip
     git ls-files --others --ignored --exclude-standard \
       | grep -v -e '^\.env$' -e '__pycache__' -e '\.DS_Store' \
       | zip -@ ../overslept_missing_files.zip
