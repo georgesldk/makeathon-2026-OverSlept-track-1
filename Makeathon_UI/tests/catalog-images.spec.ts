@@ -1,0 +1,32 @@
+import { test, expect } from '@playwright/test'
+
+test('catalogue image matches the preferred candidate and preserves attribution', async ({ page }) => {
+  await page.goto('http://127.0.0.1:8443/')
+  await page.getByRole('textbox', { name: 'Search historical or scientific names' }).fill('Agrimony')
+  const card = page.locator('.plant-card-shell').filter({ has: page.getByRole('button', { name: /^Culpeper.*Agrimony\s+Agrimonia eupatoria L\./ }) }).first()
+  await expect(card).toBeVisible({ timeout: 15000 })
+  await expect(card.locator('img')).toHaveAttribute('src', /^https:\/\//)
+  await expect.poll(() => card.locator('img').evaluate((image: HTMLImageElement) => image.naturalWidth), { timeout: 15000 }).toBeGreaterThan(0)
+  await expect(card.getByText('Proposed candidate photo', { exact: false })).toBeVisible()
+  await expect(card.getByRole('link', { name: 'Licence' })).toHaveAttribute('href', /^https:\/\/creativecommons\.org\//)
+  await expect(card.getByRole('link', { name: 'Image source' })).toHaveAttribute('href', /^https:\/\//)
+  await expect(card.getByText(/candidate available|other candidates/)).toHaveCount(0)
+  const imageUrl = await card.locator('img').getAttribute('src')
+  await card.getByRole('button').click()
+  const detailImage = page.getByRole('img', { name: 'Photograph of proposed candidate Agrimonia eupatoria L.' })
+  await expect(detailImage).toHaveAttribute('src', imageUrl!)
+  const credit = page.locator('.record-image-credit')
+  await expect(credit).toContainText('Proposed candidate')
+  await expect(credit.getByRole('link', { name: 'Licence' })).toHaveAttribute('href', /^https:\/\/creativecommons\.org\//)
+})
+
+test('failed external photographs fall back to the placeholder', async ({ page }) => {
+  await page.route('https://inaturalist-open-data.s3.amazonaws.com/**', route => route.abort())
+  await page.goto('http://127.0.0.1:8443/')
+  await page.getByRole('textbox', { name: 'Search historical or scientific names' }).fill('Agrimony')
+  const card = page.locator('.plant-card-shell').filter({ has: page.getByRole('button', { name: /^Culpeper.*Agrimony\s+Agrimonia eupatoria L\./ }) }).first()
+  await expect(card).toBeVisible({ timeout: 15000 })
+  await expect(card.locator('.live-plate-placeholder')).toBeVisible()
+  await expect(card.locator('img')).toHaveCount(0)
+  await expect(card.getByText('Proposed candidate photo', { exact: false })).toHaveCount(0)
+})

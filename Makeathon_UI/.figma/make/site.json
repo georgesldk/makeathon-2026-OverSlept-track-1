@@ -1,0 +1,10 @@
+{
+  "description": "Explore historical medicinal plant records alongside modern botanical identifications and research evidence for scholarly discovery and study.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

@@ -31,7 +31,7 @@ needs the files below.
 
        cd makeathon-2026-OverSlept-track-1
        git pull
-       unzip -o ../overslept_missing_files.zip
+       unzip -o ../overslept_missing_files_3.zip
 
    The zip keeps the folder structure, so every file lands in the
    right place. Nothing tracked by git is overwritten. -o replaces
