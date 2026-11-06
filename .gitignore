@@ -284,3 +284,6 @@ stage3/paper_test/web/
 
 # Local working copies of Claude chat outputs (plans, audits, drafts): not part of the project
 Claude outputs/
+
+# ctext.org replies: kept out of git until its reuse terms are checked
+historical_texts/shennong/source/

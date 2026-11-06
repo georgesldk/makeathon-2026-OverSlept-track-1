@@ -11,8 +11,8 @@
   },
   "dioscorides": {
    "claims": 3832,
-   "linked_to_a_plant": 3788,
-   "linked_to_an_A_plant": 804
+   "linked_to_a_plant": 3739,
+   "linked_to_an_A_plant": 746
   }
  },
  "shared_claims": [
@@ -2212,24 +2212,6 @@
      "claim": "promotes urination",
      "quote": "οὐρητική",
      "translation": "diuretic"
-    },
-    {
-     "claim_id": "dioscorides:2.152:c08",
-     "book": "dioscorides",
-     "entry": "σκόρδου",
-     "tier": "B",
-     "claim": "promotes urination",
-     "quote": "καὶ οὖρα ἄγει",
-     "translation": "and promotes urine"
-    },
-    {
-     "claim_id": "dioscorides:2.152:c31",
-     "book": "dioscorides",
-     "entry": "σκόρδου",
-     "tier": "B",
-     "claim": "promotes urination",
-     "quote": "τὸ δὲ ἐξ αὐτοῦ καὶ τῆς μελαίνης ἐλαίας γινόμενον τρίμμα, καλούμενον δὲ μυττωτόν, βιβρωσκόμενον οὔρησιν κινεῖ",
-     "translation": "the paste made of it and black olives, called myttoton, eaten promotes urination"
     }
    ]
   },
@@ -2251,24 +2233,6 @@
      "claim": "Treats snake bites",
      "quote": "resists and helps the bitings of serpents",
      "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.152:c09",
-     "book": "dioscorides",
-     "entry": "σκόρδου",
-     "tier": "B",
-     "claim": "treats viper bites",
-     "quote": "ἐχεοδήκτοις... ἁρμόζει, ὡς οὐδὲν ἔτερον, λαμβανομένου οἴνου συνεχῶς ἢ σὺν τῷ οἴνῳ λεανθὲν καὶ ποθέν",
-     "translation": "it is exceptionally good for viper bites, taken with wine continuously or pounded and drunk with wine"
-    },
-    {
-     "claim_id": "dioscorides:2.152:c11",
-     "book": "dioscorides",
-     "entry": "σκόρδου",
-     "tier": "B",
-     "claim": "treats viper bites and hemorrhoids when applied as a poultice",
-     "quote": "καταπλάσσεται δὲ καὶ πρός τε ταὐτὰ",
-     "translation": "it is also applied as a poultice for the same things"
     },
     {
      "claim_id": "dioscorides:3.69:c01",
@@ -3140,900 +3104,6 @@
    ]
   },
   {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D000871",
-   "mesh": "Anthelmintics",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c12",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "eradicates and expels intestinal worms",
-     "quote": "kills and drives forth the worms of the belly, if it be drank after it is boiled in wine to the half, with a little honey",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c20",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "expels intestinal worms",
-     "quote": "ἀποζεσθὲν δὲ σὺν ἐλαίῳ καὶ ποθὲν ἕλμινθας ἐκτινάσσει",
-     "translation": "Boiled down with oil and drunk, it expels intestinal worms."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D000931",
-   "mesh": "Antidotes",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c03",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "acts as an antidote against lethal poisons and dangerous medications",
-     "quote": "The seed thereof taken in wine, is an antidote against all dangerous medicines or deadly poisons",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c05",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "acts as an antidote against destructive and poisonous substances",
-     "quote": "τῶν φθαρτικῶν φαρμάκων ἐστὶν ἀντίδοτος ὅσον ὀξύβαφον τοῦ σπέρματος ποθέντος μετʼ οἴνου",
-     "translation": "About an oxybaphon of its seed drunk with wine is an antidote to destructive drugs."
-    },
-    {
-     "claim_id": "dioscorides:3.45:c06",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "renders lethal poisons ineffective when consumed beforehand",
-     "quote": "καὶ προβρωθέντα δὲ τὰ φύλλα καθʼ ἑαυτὰ καὶ μετὰ καρύων βασιλικῶν καὶ σύκων ξηρῶν ἄπρακτα καθίστησι τὰ θανάσιμα",
-     "translation": "And its leaves, eaten beforehand by themselves or with walnuts and dried figs, render deadly poisons harmless."
-    },
-    {
-     "claim_id": "dioscorides:3.45:c45",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "useful as an ingredient in antidote preparations",
-     "quote": "καὶ ἀντιδότοις μείγνυται χρησίμως",
-     "translation": "And it is useful when mixed in antidotes."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D018771",
-   "mesh": "Arthralgia",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c08",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "relieves sciatica and arthralgia",
-     "quote": "tormenting pains of the sciatica and the joints",
-     "translation": null
-    },
-    {
-     "claim_id": "culpeper:garden-rue:c13",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "alleviates gout and arthritic pain in the extremities",
-     "quote": "helps the gout or pains in the joints, hands, feet or knees",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c16",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "relieves joint pain (arthralgia)",
-     "quote": "ἄρθρων [ἀλγήματα]",
-     "translation": "Joint pains."
-    },
-    {
-     "claim_id": "dioscorides:3.45:c21",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "relieves joint pain",
-     "quote": "καταπλάσσεται δὲ καὶ πρὸς ἄρθρων ἀλγήματα σύν μέλιτι",
-     "translation": "It is also poulticed with honey for joint pains."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D002637",
-   "mesh": "Chest Pain",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c07",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "relieves chest and side pain, coughs, dyspnea, and lung inflammation",
-     "quote": "helps the pains both of the chest and sides, as also coughs and hardness of breathing, the inflammations of the lungs",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c10",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "relieves pleuritic and side pain",
-     "quote": "ποιεῖ δὲ καὶ πρὸς πλευρᾶς πόνον",
-     "translation": "It also works against pain of the side."
-    },
-    {
-     "claim_id": "dioscorides:3.45:c11",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "relieves chest pain",
-     "quote": "καὶ θώρακος [πόνον]",
-     "translation": "And chest pain."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D003085",
-   "mesh": "Colic",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c10",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "relieves flatulent colic",
-     "quote": "good to help the wind cholic",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c09",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "stops colic and griping",
-     "quote": "ἑψηθὲν δὲ σύν ἀνήθῳ ξηρῷ καὶ ποθὲν στρόφους παύει",
-     "translation": "Boiled with dry dill and drunk, it stops colic."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D003371",
-   "mesh": "Cough",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c07",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "relieves chest and side pain, coughs, dyspnea, and lung inflammation",
-     "quote": "helps the pains both of the chest and sides, as also coughs and hardness of breathing, the inflammations of the lungs",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c13",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "relieves coughs",
-     "quote": "βῆχας",
-     "translation": "Coughs."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D004231",
-   "mesh": "Diuresis",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c02",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "promotes diuresis and stimulates menstruation",
-     "quote": "It provokes urine and women’s courses",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c02",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "promotes urination",
-     "quote": "οὐρητικά",
-     "translation": "Diuretic."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D004433",
-   "mesh": "Earache",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c18",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "relieves earache",
-     "quote": "juice thereof warmed in a pomegranate shell or rind, and dropped into the ears, helps the pains of them",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c34",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "relieves earache",
-     "quote": "ὁ δὲ χυλὸς ποιεῖ πρὸς ὠταλγίαν ἐν σιδίῳ θερμαινόμενος καὶ ἐγχεόμενος",
-     "translation": "Its juice warmed in a pomegranate rind and poured in is good for earache."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D004487",
-   "mesh": "Edema",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c14",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "relieves edema (dropsy)",
-     "quote": "with figs it helps the dropsy, being bathed therewith",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c22",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "treats anasarca and subcutaneous dropsy",
-     "quote": "σύν δὲ σύκῳ πρὸς ὕδρωπας ὑποσαρκιδίους [καταπλάσσεται]",
-     "translation": "And poulticed with fig for anasarca."
-    },
-    {
-     "claim_id": "dioscorides:3.45:c23",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "treats dropsy and anasarca when drunk boiled down in wine",
-     "quote": "καὶ πινόμενον δὲ βοηθεῖ τούτοις καθεψηθὲν ἐν οἴνῳ ἄχρις ἡμίσους",
-     "translation": "And drunk after being boiled down to half in wine, it helps these dropsical conditions."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D004844",
-   "mesh": "Epistaxis",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c15",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "arrests epistaxis (nosebleeds)",
-     "quote": "bruised and put into the nostrils, it stays the bleeding thereof",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c27",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "stops nosebleeds (epistaxis)",
-     "quote": "καὶ αἱμορραγίας τάς ἐκ μυκτήρων λεῖον ἐντεθὲν ἵστησι",
-     "translation": "Ground fine and inserted into the nostrils, it stops hemorrhages from the nose."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D004886",
-   "mesh": "Erysipelas",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c20",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "cures erysipelas, scalp ulcers, and ozena (foul nasal ulcers)",
-     "quote": "cures St. Anthony’s fire, and all running sores in the head: and the stinking ulcers of the nose",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c36",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "treats erysipelas",
-     "quote": "ἐρυσιπέλατά τε ... σὺν ἴξει καὶ ψιμυθίῳ καὶ ῥοδίνῳ καταχριόμενος [ἰᾶται]",
-     "translation": "Smeared on with vinegar, white lead, and rose oil, it heals erysipelas."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D005414",
-   "mesh": "Flatulence",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c10",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "relieves flatulent colic",
-     "quote": "good to help the wind cholic",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c18",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "relieves flatulent distension of the colon, uterus, and rectum when administered as an enema",
-     "quote": "καὶ πρὸς ἐμπνευματώσεις δὲ κόλου καὶ ὑστέρας καὶ ἀπευθυσμένου σύν ἐλαίῳ ἑψηθὲν καὶ ἐνεθὲν",
-     "translation": "And boiled with oil and injected as an enema, it helps flatulent distensions of the colon, uterus, and rectum."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D007046",
-   "mesh": "Hysteria",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c11",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "relieves uterine distension and hysterical suffocation (globus hystericus)",
-     "quote": "hardness and windiness of the mother, and frees women from the strangling or suffocation thereof",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c19",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "relieves hysterical suffocation (globus hystericus)",
-     "quote": "πνίγας τε ὑστερικὰς λεῖον μετὰ μέλιτος κατὰ τοῦ αἰδοίου ἄχρι δακτυλίου ἐπιτεθὲν παραιτεῖται",
-     "translation": "Smoothed with honey and applied from the pudenda to the anus, it averts hysterical suffocation."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D007989",
-   "mesh": "Libido",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c05",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "reduces sexual desire (anaphrodisiac)",
-     "quote": "being often taken in meat and drink, it abates venery",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c08",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "diminishes semen production and suppresses sexual desire",
-     "quote": "γονήν τε σβέννυσιν ἐσθιόμενον καὶ πινόμενον",
-     "translation": "Eaten and drunk, it extinguishes semen."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D008288",
-   "mesh": "Malaria",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c09",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "prevents or mitigates chills and paroxysms of ague (fever/malaria)",
-     "quote": "shaking fits of agues, to take a draught before the fit comes",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c17",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "relieves periodic chills and malarial shivering fits",
-     "quote": "ῥίγη περιοδικὰ πινόμενον ὡς προείρηται",
-     "translation": "Drunk as aforesaid, it helps periodic chills."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D008598",
-   "mesh": "Menstruation",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c02",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "promotes diuresis and stimulates menstruation",
-     "quote": "It provokes urine and women’s courses",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c03",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "promotes menstruation",
-     "quote": "ἐμμήνων ἀγωγὰ",
-     "translation": "Promoting menstruation."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D011014",
-   "mesh": "Pneumonia",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c07",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "relieves chest and side pain, coughs, dyspnea, and lung inflammation",
-     "quote": "helps the pains both of the chest and sides, as also coughs and hardness of breathing, the inflammations of the lungs",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c14",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "treats pneumonia",
-     "quote": "περιπνευμονίαν",
-     "translation": "Pneumonia."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D011041",
-   "mesh": "Poisoning",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c03",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "acts as an antidote against lethal poisons and dangerous medications",
-     "quote": "The seed thereof taken in wine, is an antidote against all dangerous medicines or deadly poisons",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c05",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "acts as an antidote against destructive and poisonous substances",
-     "quote": "τῶν φθαρτικῶν φαρμάκων ἐστὶν ἀντίδοτος ὅσον ὀξύβαφον τοῦ σπέρματος ποθέντος μετʼ οἴνου",
-     "translation": "About an oxybaphon of its seed drunk with wine is an antidote to destructive drugs."
-    },
-    {
-     "claim_id": "dioscorides:3.45:c06",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "renders lethal poisons ineffective when consumed beforehand",
-     "quote": "καὶ προβρωθέντα δὲ τὰ φύλλα καθʼ ἑαυτὰ καὶ μετὰ καρύων βασιλικῶν καὶ σύκων ξηρῶν ἄπρακτα καθίστησι τὰ θανάσιμα",
-     "translation": "And its leaves, eaten beforehand by themselves or with walnuts and dried figs, render deadly poisons harmless."
-    },
-    {
-     "claim_id": "dioscorides:3.45:c40",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "wild rue is fatal and causes death when ingested in large quantities",
-     "quote": "τὸ δὲ ἄγριον πολὺ βρωθὲν κτείνει",
-     "translation": "The wild rue eaten in large quantities kills."
-    },
-    {
-     "claim_id": "dioscorides:3.45:c43",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "the Macedonian variety is fatal and kills when ingested",
-     "quote": "τὸ δʼ ἐν Μακεδονίᾳ φυόμενον παρὰ τὸν Ἁλιάκμονα ποταμὸν ἀναιρεῖν φασι βρωθέν",
-     "translation": "They say that that which grows in Macedonia by the river Haliacmon kills when eaten."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D012585",
-   "mesh": "Sciatica",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c08",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "relieves sciatica and arthralgia",
-     "quote": "tormenting pains of the sciatica and the joints",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c15",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "relieves sciatica and hip pain",
-     "quote": "ἀλγήματα ἰσχίων",
-     "translation": "Pains of the hips."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D012871",
-   "mesh": "Skin Diseases",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c17",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "treats scabs, tetters, and ringworm (tinea)",
-     "quote": "with almond and honey helps the dry scabs, or any tetter or ringworm",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c33",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "treats lichenous skin eruptions",
-     "quote": "ὠφελεῖ καὶ λειχῆνας σὺν μέλιτι καὶ στυπτηρίᾳ ἐπιτιθέμενον",
-     "translation": "Applied with honey and alum, it also helps lichens."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D014456",
-   "mesh": "Ulcer",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:meadow-rue:c01",
-     "book": "culpeper",
-     "entry": "Meadow-Rue",
-     "tier": "B",
-     "claim": "heals chronic ulcers and old sores",
-     "quote": "herb bruised and applied, perfectly heals old sores",
-     "translation": null
-    },
-    {
-     "claim_id": "culpeper:meadow-rue:c02",
-     "book": "culpeper",
-     "entry": "Meadow-Rue",
-     "tier": "B",
-     "claim": "heals chronic sores and ulcers",
-     "quote": "the distilled water of the herb and flowers doth the like",
-     "translation": null
-    },
-    {
-     "claim_id": "culpeper:garden-rue:c20",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "cures erysipelas, scalp ulcers, and ozena (foul nasal ulcers)",
-     "quote": "cures St. Anthony’s fire, and all running sores in the head: and the stinking ulcers of the nose",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c01",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "acts caustically and causes blistering and ulceration on the skin",
-     "quote": "ἀμφότερα δὲ θερμαντικά, καυστικά, ἑλκωτικά",
-     "translation": "Both are warming, caustic, and ulcerating."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D014786",
-   "mesh": "Vision Disorders",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c19",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "clears blurred and dim eyesight",
-     "quote": "juice of it and fennel... helps the dimness of the eye-sight",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c24",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "sharpens visual acuity",
-     "quote": "ἐστι δὲ καὶ ἀξυωπὲς ἐσθιόμενον ὠμὸν καὶ ταριχευτὸν",
-     "translation": "Eaten raw and pickled, it also sharpens the eyesight."
-    },
-    {
-     "claim_id": "dioscorides:3.45:c35",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "relieves dull vision and amblyopia",
-     "quote": "καὶ ἀμβλυωπίαις βοηθεῖ μετά μαράθου χυλοῦ καὶ μέλιτος ἐγχριόμενος",
-     "translation": "And smeared on with fennel juice and honey, it helps dullness of vision."
-    }
-   ]
-  },
-  {
-   "species": "Ruta graveolens L.",
-   "mesh_ui": "D014860",
-   "mesh": "Warts",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:garden-rue:c16",
-     "book": "culpeper",
-     "entry": "Garden-Rue",
-     "tier": "A",
-     "claim": "removes cutaneous warts",
-     "quote": "takes away all sorts of warts, if boiled in wine with some pepper and nitre",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.45:c31",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "removes thymion warts",
-     "quote": "καταπλασθὲν δὲ μετὰ τῶν αὐτῶν θύμους ... αἴρει",
-     "translation": "Applied as a plaster with the same, it removes thymion warts."
-    },
-    {
-     "claim_id": "dioscorides:3.45:c32",
-     "book": "dioscorides",
-     "entry": "πήγανον",
-     "tier": "A",
-     "claim": "removes myrmecia warts",
-     "quote": "καὶ μυρμηκίας αἴρει",
-     "translation": "And it removes myrmecia warts."
-    }
-   ]
-  },
-  {
-   "species": "Salvia rosmarinus Spenn.",
-   "mesh_ui": "D004827",
-   "mesh": "Epilepsy",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:rosemary:c08",
-     "book": "culpeper",
-     "entry": "Rosemary",
-     "tier": "A",
-     "claim": "treats epilepsy",
-     "quote": "and fallen-sickness",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.74:c13",
-     "book": "dioscorides",
-     "entry": "λιβανωτίς",
-     "tier": "B",
-     "claim": "treats epilepsy",
-     "quote": "βοηθεῖ καὶ ἐπιληψίαις",
-     "translation": "it also helps epilepsy"
-    },
-    {
-     "claim_id": "dioscorides:3.121:c12",
-     "book": "dioscorides",
-     "entry": "κόνυζα",
-     "tier": "A",
-     "claim": "treats epilepsy",
-     "quote": "μετʼ ὄξους δὲ ἐπιληπτικοὺς πινόμενα ὠφελεῖ",
-     "translation": "drunk with vinegar, it benefits epileptics"
-    }
-   ]
-  },
-  {
-   "species": "Salvia rosmarinus Spenn.",
-   "mesh_ui": "D007565",
-   "mesh": "Jaundice",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": true,
-   "claims": [
-    {
-     "claim_id": "culpeper:rosemary:c16",
-     "book": "culpeper",
-     "entry": "Rosemary",
-     "tier": "A",
-     "claim": "cures jaundice when taken before exercise",
-     "quote": "they that have the yellow jaundice exercise their bodies directly after the taking thereof, it will certainly cure them",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.74:c15",
-     "book": "dioscorides",
-     "entry": "λιβανωτίς",
-     "tier": "B",
-     "claim": "treats jaundice",
-     "quote": "ἰκτερικοῖς τε μετὰ πεπέρεως καὶ οἴνου διδόμενος",
-     "translation": "given with pepper and wine to jaundiced patients"
-    },
-    {
-     "claim_id": "dioscorides:3.75:c02",
-     "book": "dioscorides",
-     "entry": "λιβανωτίς",
-     "tier": "B",
-     "claim": "treats jaundice",
-     "quote": "ἰκτέρου ἰατικήν, ἐάν τις αὐτὴν ἑψήσας ἐν ὕδατι δῷ πρὸ τῶν γυμνασίων πιεῖν, εἶτα γυμνάζων λούῃ καὶ οἴνῳ ποτίζῃ",
-     "translation": "curative of jaundice, if boiled in water and given to drink before exercises, then followed by exercising, bathing, and giving wine to drink"
-    },
-    {
-     "claim_id": "dioscorides:3.121:c11",
-     "book": "dioscorides",
-     "entry": "κόνυζα",
-     "tier": "A",
-     "claim": "treats jaundice",
-     "quote": "καὶ ἴκτερον",
-     "translation": "and [drunk with wine] for jaundice"
-    }
-   ]
-  },
-  {
    "species": "Senecio vulgaris L.",
    "mesh_ui": "D001004",
    "mesh": "Anus Diseases",
@@ -4419,7 +3489,7 @@
      "claim_id": "dioscorides:3.17:c03",
      "book": "dioscorides",
      "entry": "ἄκανθος",
-     "tier": "A",
+     "tier": "B",
      "claim": "promotes urination",
      "quote": "πινόμεναι δὲ οὖρα ἄγουσι",
      "translation": "taken as a drink, they provoke urine"
@@ -4884,15 +3954,6 @@
      "translation": null
     },
     {
-     "claim_id": "dioscorides:3.105:c08",
-     "book": "dioscorides",
-     "entry": "πράσιον",
-     "tier": "B",
-     "claim": "treats bites of venomous animals",
-     "quote": "καὶ θηριοδήκτοις",
-     "translation": "and to those bitten by venomous beasts"
-    },
-    {
      "claim_id": "dioscorides:4.41:c04",
      "book": "dioscorides",
      "entry": "Εὐπατόριος",
@@ -4900,36 +3961,6 @@
      "claim": "treats snakebites and reptile bites",
      "quote": "ἑρπετοδήκτους ὠφελεῖ",
      "translation": "helps those bitten by serpents"
-    }
-   ]
-  },
-  {
-   "species": "Agrimonia eupatoria L.",
-   "mesh_ui": "D003371",
-   "mesh": "Cough",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:agrimony:c11",
-     "book": "culpeper",
-     "entry": "Agrimony",
-     "tier": "A",
-     "claim": "relieves cough",
-     "quote": "and rids away the cough",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.105:c03",
-     "book": "dioscorides",
-     "entry": "πράσιον",
-     "tier": "B",
-     "claim": "relieves cough",
-     "quote": "δίδοται μετὰ μέλιτος ... βήσσουσιν",
-     "translation": "given with honey to those who cough"
     }
    ]
   },
@@ -4960,66 +3991,6 @@
      "claim": "relieves dysentery",
      "quote": "τὸ δὲ σπέρμα καὶ ἡ πόα σὺν οἴνῳ πινομένη δυσεντερικούς ... ὠφελεῖ",
      "translation": "the seed and the herb drunk with wine help dysenteric patients"
-    }
-   ]
-  },
-  {
-   "species": "Agrimonia eupatoria L.",
-   "mesh_ui": "D005100",
-   "mesh": "Expectorants",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:agrimony:c10",
-     "book": "culpeper",
-     "entry": "Agrimony",
-     "tier": "A",
-     "claim": "clears congestion from the chest",
-     "quote": "cleanses the breast",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.105:c04",
-     "book": "dioscorides",
-     "entry": "πράσιον",
-     "tier": "B",
-     "claim": "promotes expectoration of thick matter from the chest",
-     "quote": "ἀνάγει καὶ πάχος ἐκ θώρακος ἴριδος ξηρᾶς μιγείσης",
-     "translation": "it also brings up thick matter from the chest when dried iris is mixed in"
-    }
-   ]
-  },
-  {
-   "species": "Agrimonia eupatoria L.",
-   "mesh_ui": "D007565",
-   "mesh": "Jaundice",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:agrimony:c04",
-     "book": "culpeper",
-     "entry": "Agrimony",
-     "tier": "A",
-     "claim": "treats jaundice",
-     "quote": "helps the jaundice",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.105:c16",
-     "book": "dioscorides",
-     "entry": "πράσιον",
-     "tier": "B",
-     "claim": "cleanses jaundice through nasal instillation",
-     "quote": "καὶ ἴκτερον ἀποκαθαίρει διὰ τῶν ῥινῶν",
-     "translation": "and it clears jaundice through the nostrils"
     }
    ]
   },
@@ -5140,24 +4111,6 @@
      "claim": "treats persistent ulcers",
      "quote": "and inveterate ulcers",
      "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.105:c11",
-     "book": "dioscorides",
-     "entry": "πράσιον",
-     "tier": "B",
-     "claim": "cleanses foul ulcers",
-     "quote": "τὰ δὲ φύλλα καταπλασσόμενα σὺν μέλιτι ῥυπαρὰ ἕλκη ἀνακαθαίρει",
-     "translation": "the leaves applied as a poultice with honey cleanse foul ulcers"
-    },
-    {
-     "claim_id": "dioscorides:3.105:c13",
-     "book": "dioscorides",
-     "entry": "πράσιον",
-     "tier": "B",
-     "claim": "stops spreading and phagedenic ulcers",
-     "quote": "καὶ νομὰς ἀφίστησι",
-     "translation": "and stops spreading ulcers"
     },
     {
      "claim_id": "dioscorides:4.41:c01",
@@ -6909,7 +5862,7 @@
      "claim_id": "dioscorides:3.24:c06",
      "book": "dioscorides",
      "entry": "ἁβρότονον",
-     "tier": "A",
+     "tier": "B",
      "claim": "promotes menstruation during suppression",
      "quote": "βοηθεῖ... ἐμμήνων ἐπισχέσει",
      "translation": "it helps retention of menses"
@@ -6975,7 +5928,7 @@
      "claim_id": "dioscorides:3.24:c04",
      "book": "dioscorides",
      "entry": "ἁβρότονον",
-     "tier": "A",
+     "tier": "B",
      "claim": "relieves sciatica",
      "quote": "βοηθεῖ... ἰσχιάσι",
      "translation": "it helps sciatica"
@@ -10182,36 +9135,6 @@
   },
   {
    "species": "Galium aparine L.",
-   "mesh_ui": "D012883",
-   "mesh": "Skin Ulcer",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:cleavers:c09",
-     "book": "culpeper",
-     "entry": "Cleavers",
-     "tier": "A",
-     "claim": "treats chronic ulcers",
-     "quote": "likewise helps old ulcers",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:4.106:c04",
-     "book": "dioscorides",
-     "entry": "ἄρκιον",
-     "tier": "B",
-     "claim": "treats chronic ulcers",
-     "quote": "καὶ τὰ φύλλα δὲ ὠφελίμως ἐπὶ τῶν παλαιῶν ἑλκῶν καταπλάττεται",
-     "translation": "and the leaves are beneficially applied as a poultice on chronic ulcers"
-    }
-   ]
-  },
-  {
-   "species": "Galium aparine L.",
    "mesh_ui": "D012909",
    "mesh": "Snake Bites",
    "books": [
@@ -10237,36 +9160,6 @@
      "claim": "treats viper bites",
      "quote": "ταύτης τὸ σπέρμα καὶ οἱ καυλοὶ καὶ τὰ φύλλα χυλισθέντα ... ἐχιοδήκτοις βοηθεῖ μετ᾿ οἴνου πινόμενα",
      "translation": "its seeds, stems, and leaves juiced and drunk with wine help those bitten by vipers"
-    }
-   ]
-  },
-  {
-   "species": "Galium aparine L.",
-   "mesh_ui": "D014456",
-   "mesh": "Ulcer",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:cleavers:c09",
-     "book": "culpeper",
-     "entry": "Cleavers",
-     "tier": "A",
-     "claim": "treats chronic ulcers",
-     "quote": "likewise helps old ulcers",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:4.106:c04",
-     "book": "dioscorides",
-     "entry": "ἄρκιον",
-     "tier": "B",
-     "claim": "treats chronic ulcers",
-     "quote": "καὶ τὰ φύλλα δὲ ὠφελίμως ἐπὶ τῶν παλαιῶν ἑλκῶν καταπλάττεται",
-     "translation": "and the leaves are beneficially applied as a poultice on chronic ulcers"
     }
    ]
   },
@@ -11149,105 +10042,6 @@
      "claim": "treats sciatica",
      "quote": "ποιεῖ δὲ καὶ ὁ τούτου καρπὸς πρὸς ἰσχιάδας πινόμενος μεθʼ ὑδρομέλιτος κοτυλῶν δυεῖν",
      "translation": "Its fruit drunk with two kotylai of hydromel is effective for sciatica."
-    }
-   ]
-  },
-  {
-   "species": "Inula helenium L.",
-   "mesh_ui": "D006469",
-   "mesh": "Hemoptysis",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:elecampane:c20",
-     "book": "culpeper",
-     "entry": "Elecampane",
-     "tier": "A",
-     "claim": "Treats hemoptysis and spitting of blood",
-     "quote": "good for those that spit blood",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:4.9:c03",
-     "book": "dioscorides",
-     "entry": "σύμφυτον",
-     "tier": "B",
-     "claim": "treats hemoptysis",
-     "quote": "καὶ τοῖς αἷμα ἀνάγουσι [...] σὺν ὕδατι δίδοται",
-     "translation": "and is given with water to those who bring up blood"
-    }
-   ]
-  },
-  {
-   "species": "Inula helenium L.",
-   "mesh_ui": "D006547",
-   "mesh": "Hernia",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:elecampane:c25",
-     "book": "culpeper",
-     "entry": "Elecampane",
-     "tier": "A",
-     "claim": "Treats ruptures or hernias",
-     "quote": "good for those that are bursten",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:4.9:c08",
-     "book": "dioscorides",
-     "entry": "σύμφυτον",
-     "tier": "B",
-     "claim": "treats ruptures or hernias",
-     "quote": "σύν ὀξυμέλιτι δὲ πρὸς [...] ῥήγματα",
-     "translation": "and with oxymel for ruptures"
-    },
-    {
-     "claim_id": "dioscorides:4.9:c12",
-     "book": "dioscorides",
-     "entry": "σύμφυτον",
-     "tier": "B",
-     "claim": "restrains enterocele / intestinal hernias",
-     "quote": "ἐντεροκήλας ἀποκρατεῖ καταπλασσόμενον",
-     "translation": "applied as a poultice it restrains intestinal hernias"
-    }
-   ]
-  },
-  {
-   "species": "Inula helenium L.",
-   "mesh_ui": "D009120",
-   "mesh": "Muscle Cramp",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:elecampane:c21",
-     "book": "culpeper",
-     "entry": "Elecampane",
-     "tier": "A",
-     "claim": "Relieves muscle cramps and convulsions",
-     "quote": "remove cramps or convulsions",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:4.9:c07",
-     "book": "dioscorides",
-     "entry": "σύμφυτον",
-     "tier": "B",
-     "claim": "treats sprains and convulsions",
-     "quote": "σύν ὀξυμέλιτι δὲ πρὸς σπάσματα",
-     "translation": "and with oxymel for spasms/strains"
     }
    ]
   },
@@ -16200,15 +14994,6 @@
      "translation": null
     },
     {
-     "claim_id": "dioscorides:3.96:c02",
-     "book": "dioscorides",
-     "entry": "λεοντοπέταλον",
-     "tier": "B",
-     "claim": "quickly relieves pain",
-     "quote": "ταχέως ἀπόνους ποιοῦσα",
-     "translation": "quickly rendering them free of pain"
-    },
-    {
      "claim_id": "dioscorides:4.64:c06",
      "book": "dioscorides",
      "entry": "μήκων",
@@ -16880,75 +15665,6 @@
    ]
   },
   {
-   "species": "Pastinaca sativa L.",
-   "mesh_ui": "D003967",
-   "mesh": "Diarrhea",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:parsnips:c04",
-     "book": "culpeper",
-     "entry": "Parsnips",
-     "tier": "A",
-     "claim": "Binds the bowels and stops loose stools",
-     "quote": "fastens the body much, if much need",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.152:c03",
-     "book": "dioscorides",
-     "entry": "σκόρδου",
-     "tier": "B",
-     "claim": "disturbs the bowels",
-     "quote": "κοιλίας ταρακτικήν",
-     "translation": "disturbing the bowels"
-    }
-   ]
-  },
-  {
-   "species": "Pastinaca sativa L.",
-   "mesh_ui": "D005414",
-   "mesh": "Flatulence",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:parsnips:c03",
-     "book": "culpeper",
-     "entry": "Parsnips",
-     "tier": "A",
-     "claim": "Causes mild wind and stimulates sexual desire",
-     "quote": "a little windy, whereby it is thought to procure bodily lust",
-     "translation": null
-    },
-    {
-     "claim_id": "culpeper:parsnips:c10",
-     "book": "culpeper",
-     "entry": "Parsnips",
-     "tier": "A",
-     "claim": "Dispels gastrointestinal gas and treats flatulent colic",
-     "quote": "dissolves wind both in the stomach and bowels, which is the cholic",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.152:c02",
-     "book": "dioscorides",
-     "entry": "σκόρδου",
-     "tier": "B",
-     "claim": "expels flatulence",
-     "quote": "ἐκκριτικὴν φυσῶν",
-     "translation": "expelling of flatulence"
-    }
-   ]
-  },
-  {
    "species": "Petasites hybridus (L.) G.Gaertn., B.Mey. & Scherb.",
    "mesh_ui": "D014456",
    "mesh": "Ulcer",
@@ -17088,66 +15804,6 @@
   },
   {
    "species": "Polygonatum multiflorum (L.) All.",
-   "mesh_ui": "D003967",
-   "mesh": "Diarrhea",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:solomons-seal:c06",
-     "book": "culpeper",
-     "entry": "Solomon’s Seal",
-     "tier": "A",
-     "claim": "stops all bodily fluxes and discharges",
-     "quote": "as also all fluxes in man or woman",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:4.4:c03",
-     "book": "dioscorides",
-     "entry": "πολύγονον",
-     "tier": "B",
-     "claim": "relieves diarrhea and bowel fluxes",
-     "quote": "καὶ τοῖς κατὰ κοιλίαν ῥεύμασι",
-     "translation": "and for fluxes of the belly"
-    }
-   ]
-  },
-  {
-   "species": "Polygonatum multiflorum (L.) All.",
-   "mesh_ui": "D006547",
-   "mesh": "Hernia",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:solomons-seal:c10",
-     "book": "culpeper",
-     "entry": "Solomon’s Seal",
-     "tier": "A",
-     "claim": "treats ruptures and hernias",
-     "quote": "It is no less effectual to help ruptures and burstings, the decoction in wine, or the powder in broth or drink, being inwardly taken, and outwardly applied to the place.",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.94:c03",
-     "book": "dioscorides",
-     "entry": "πολύκνημον",
-     "tier": "B",
-     "claim": "treats internal ruptures",
-     "quote": "πίνεται καὶ πρὸς ... ῥήγματα σὺν οἴνῳ",
-     "translation": "it is also drunk with wine for ruptures"
-    }
-   ]
-  },
-  {
-   "species": "Polygonatum multiflorum (L.) All.",
    "mesh_ui": "D008548",
    "mesh": "Melanosis",
    "books": [
@@ -17178,36 +15834,6 @@
   },
   {
    "species": "Polygonatum multiflorum (L.) All.",
-   "mesh_ui": "D014456",
-   "mesh": "Ulcer",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:solomons-seal:c03",
-     "book": "culpeper",
-     "entry": "Solomon’s Seal",
-     "tier": "A",
-     "claim": "dries up and curbs discharge from chronic sores",
-     "quote": "and to dry up and restrain the flux of humours to those that are old",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:4.4:c12",
-     "book": "dioscorides",
-     "entry": "πολύγονον",
-     "tier": "B",
-     "claim": "treats ulcers on the genitals",
-     "quote": "συνεψηθείς δὲ οἴνῳ καὶ μέλι προσλαβών ἄκρως ποιεῖ πρὸς τὰ ἐν αἰδοίοις ?ελκη",
-     "translation": "boiled together with wine and combined with honey, it is exceedingly effective for ulcers on the genitals"
-    }
-   ]
-  },
-  {
-   "species": "Polygonatum multiflorum (L.) All.",
    "mesh_ui": "D014947",
    "mesh": "Wounds and Injuries",
    "books": [
@@ -17224,33 +15850,6 @@
      "claim": "closes and heals fresh wounds, hurts, and sores",
      "quote": "The root of Solomon’s Seal is found by experience to be available in wounds, hurts, and outward sores, to heal and close up the lips of those that are green",
      "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.94:c01",
-     "book": "dioscorides",
-     "entry": "πολύκνημον",
-     "tier": "B",
-     "claim": "heals and binds wounds",
-     "quote": "ποιεῖ δὲ καταπλασσόμενον χλωρὸν ἢ ξηρὸν μεθ᾿ ὕδατος πρὸς τραύματα κολλῶν",
-     "translation": "applied as a poultice fresh or dry with water, it acts by gluing wounds"
-    },
-    {
-     "claim_id": "dioscorides:3.94:c03",
-     "book": "dioscorides",
-     "entry": "πολύκνημον",
-     "tier": "B",
-     "claim": "treats internal ruptures",
-     "quote": "πίνεται καὶ πρὸς ... ῥήγματα σὺν οἴνῳ",
-     "translation": "it is also drunk with wine for ruptures"
-    },
-    {
-     "claim_id": "dioscorides:4.4:c19",
-     "book": "dioscorides",
-     "entry": "πολύγονον",
-     "tier": "B",
-     "claim": "heals fresh wounds",
-     "quote": "καὶ τραύματα πρόσφατα",
-     "translation": "and fresh wounds"
     },
     {
      "claim_id": "dioscorides:4.6:c01",
@@ -18088,15 +16687,6 @@
      "claim": "stops diarrhea",
      "quote": "τὸ δὲ ἀφέψημα αὐτῶν ξηρανθεισῶν καὶ αὐταὶ δὲ λαμβανόμεναι ὠμαὶ κοιλίαν ἱστᾶσι",
      "translation": "a decoction of them dried and the raw pears themselves stop the bowels"
-    },
-    {
-     "claim_id": "dioscorides:4.61:c01",
-     "book": "dioscorides",
-     "entry": "ἀστράγαλος",
-     "tier": "B",
-     "claim": "stops diarrhea",
-     "quote": "ἵστησι δὲ κοιλίαν ῥευματιζομένην ἐν οἴνῳ ποθεῖσα ἡ ῥίζα",
-     "translation": "the root drunk in wine arrests loose bowels"
     }
    ]
   },
@@ -18127,36 +16717,6 @@
      "claim": "upsets the stomach when eaten fasting",
      "quote": "βλάπτουσι δὲ ἐσθιόμεναι τοὺς νήστεις",
      "translation": "eaten on an empty stomach they cause harm"
-    }
-   ]
-  },
-  {
-   "species": "Pyrus communis L.",
-   "mesh_ui": "D006490",
-   "mesh": "Hemostatics",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:pear-tree:c07",
-     "book": "culpeper",
-     "entry": "Pear Tree",
-     "tier": "A",
-     "claim": "Stanches bleeding, cools inflammation, and heals fresh wounds",
-     "quote": "serving well to be bound to green wounds, to cool and stay the blood, and heal up the green wound",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:4.61:c04",
-     "book": "dioscorides",
-     "entry": "ἀστράγαλος",
-     "tier": "B",
-     "claim": "stops hemorrhage",
-     "quote": "καὶ αἶμα ἴσχει",
-     "translation": "and stanches bleeding"
     }
    ]
   },
@@ -19448,6 +18008,813 @@
    ]
   },
   {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D000871",
+   "mesh": "Anthelmintics",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c12",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "eradicates and expels intestinal worms",
+     "quote": "kills and drives forth the worms of the belly, if it be drank after it is boiled in wine to the half, with a little honey",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c20",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "expels intestinal worms",
+     "quote": "ἀποζεσθὲν δὲ σὺν ἐλαίῳ καὶ ποθὲν ἕλμινθας ἐκτινάσσει",
+     "translation": "Boiled down with oil and drunk, it expels intestinal worms."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D000931",
+   "mesh": "Antidotes",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c03",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "acts as an antidote against lethal poisons and dangerous medications",
+     "quote": "The seed thereof taken in wine, is an antidote against all dangerous medicines or deadly poisons",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c05",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "acts as an antidote against destructive and poisonous substances",
+     "quote": "τῶν φθαρτικῶν φαρμάκων ἐστὶν ἀντίδοτος ὅσον ὀξύβαφον τοῦ σπέρματος ποθέντος μετʼ οἴνου",
+     "translation": "About an oxybaphon of its seed drunk with wine is an antidote to destructive drugs."
+    },
+    {
+     "claim_id": "dioscorides:3.45:c06",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "renders lethal poisons ineffective when consumed beforehand",
+     "quote": "καὶ προβρωθέντα δὲ τὰ φύλλα καθʼ ἑαυτὰ καὶ μετὰ καρύων βασιλικῶν καὶ σύκων ξηρῶν ἄπρακτα καθίστησι τὰ θανάσιμα",
+     "translation": "And its leaves, eaten beforehand by themselves or with walnuts and dried figs, render deadly poisons harmless."
+    },
+    {
+     "claim_id": "dioscorides:3.45:c45",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "useful as an ingredient in antidote preparations",
+     "quote": "καὶ ἀντιδότοις μείγνυται χρησίμως",
+     "translation": "And it is useful when mixed in antidotes."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D018771",
+   "mesh": "Arthralgia",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c08",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "relieves sciatica and arthralgia",
+     "quote": "tormenting pains of the sciatica and the joints",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:garden-rue:c13",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "alleviates gout and arthritic pain in the extremities",
+     "quote": "helps the gout or pains in the joints, hands, feet or knees",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c16",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "relieves joint pain (arthralgia)",
+     "quote": "ἄρθρων [ἀλγήματα]",
+     "translation": "Joint pains."
+    },
+    {
+     "claim_id": "dioscorides:3.45:c21",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "relieves joint pain",
+     "quote": "καταπλάσσεται δὲ καὶ πρὸς ἄρθρων ἀλγήματα σύν μέλιτι",
+     "translation": "It is also poulticed with honey for joint pains."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D002637",
+   "mesh": "Chest Pain",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c07",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "relieves chest and side pain, coughs, dyspnea, and lung inflammation",
+     "quote": "helps the pains both of the chest and sides, as also coughs and hardness of breathing, the inflammations of the lungs",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c10",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "relieves pleuritic and side pain",
+     "quote": "ποιεῖ δὲ καὶ πρὸς πλευρᾶς πόνον",
+     "translation": "It also works against pain of the side."
+    },
+    {
+     "claim_id": "dioscorides:3.45:c11",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "relieves chest pain",
+     "quote": "καὶ θώρακος [πόνον]",
+     "translation": "And chest pain."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D003085",
+   "mesh": "Colic",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c10",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "relieves flatulent colic",
+     "quote": "good to help the wind cholic",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c09",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "stops colic and griping",
+     "quote": "ἑψηθὲν δὲ σύν ἀνήθῳ ξηρῷ καὶ ποθὲν στρόφους παύει",
+     "translation": "Boiled with dry dill and drunk, it stops colic."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D003371",
+   "mesh": "Cough",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c07",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "relieves chest and side pain, coughs, dyspnea, and lung inflammation",
+     "quote": "helps the pains both of the chest and sides, as also coughs and hardness of breathing, the inflammations of the lungs",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c13",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "relieves coughs",
+     "quote": "βῆχας",
+     "translation": "Coughs."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D004231",
+   "mesh": "Diuresis",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c02",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "promotes diuresis and stimulates menstruation",
+     "quote": "It provokes urine and women’s courses",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c02",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "promotes urination",
+     "quote": "οὐρητικά",
+     "translation": "Diuretic."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D004433",
+   "mesh": "Earache",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c18",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "relieves earache",
+     "quote": "juice thereof warmed in a pomegranate shell or rind, and dropped into the ears, helps the pains of them",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c34",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "relieves earache",
+     "quote": "ὁ δὲ χυλὸς ποιεῖ πρὸς ὠταλγίαν ἐν σιδίῳ θερμαινόμενος καὶ ἐγχεόμενος",
+     "translation": "Its juice warmed in a pomegranate rind and poured in is good for earache."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D004487",
+   "mesh": "Edema",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c14",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "relieves edema (dropsy)",
+     "quote": "with figs it helps the dropsy, being bathed therewith",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c22",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "treats anasarca and subcutaneous dropsy",
+     "quote": "σύν δὲ σύκῳ πρὸς ὕδρωπας ὑποσαρκιδίους [καταπλάσσεται]",
+     "translation": "And poulticed with fig for anasarca."
+    },
+    {
+     "claim_id": "dioscorides:3.45:c23",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "treats dropsy and anasarca when drunk boiled down in wine",
+     "quote": "καὶ πινόμενον δὲ βοηθεῖ τούτοις καθεψηθὲν ἐν οἴνῳ ἄχρις ἡμίσους",
+     "translation": "And drunk after being boiled down to half in wine, it helps these dropsical conditions."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D004844",
+   "mesh": "Epistaxis",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c15",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "arrests epistaxis (nosebleeds)",
+     "quote": "bruised and put into the nostrils, it stays the bleeding thereof",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c27",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "stops nosebleeds (epistaxis)",
+     "quote": "καὶ αἱμορραγίας τάς ἐκ μυκτήρων λεῖον ἐντεθὲν ἵστησι",
+     "translation": "Ground fine and inserted into the nostrils, it stops hemorrhages from the nose."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D004886",
+   "mesh": "Erysipelas",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c20",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "cures erysipelas, scalp ulcers, and ozena (foul nasal ulcers)",
+     "quote": "cures St. Anthony’s fire, and all running sores in the head: and the stinking ulcers of the nose",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c36",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "treats erysipelas",
+     "quote": "ἐρυσιπέλατά τε ... σὺν ἴξει καὶ ψιμυθίῳ καὶ ῥοδίνῳ καταχριόμενος [ἰᾶται]",
+     "translation": "Smeared on with vinegar, white lead, and rose oil, it heals erysipelas."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D005414",
+   "mesh": "Flatulence",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c10",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "relieves flatulent colic",
+     "quote": "good to help the wind cholic",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c18",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "relieves flatulent distension of the colon, uterus, and rectum when administered as an enema",
+     "quote": "καὶ πρὸς ἐμπνευματώσεις δὲ κόλου καὶ ὑστέρας καὶ ἀπευθυσμένου σύν ἐλαίῳ ἑψηθὲν καὶ ἐνεθὲν",
+     "translation": "And boiled with oil and injected as an enema, it helps flatulent distensions of the colon, uterus, and rectum."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D007046",
+   "mesh": "Hysteria",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c11",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "relieves uterine distension and hysterical suffocation (globus hystericus)",
+     "quote": "hardness and windiness of the mother, and frees women from the strangling or suffocation thereof",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c19",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "relieves hysterical suffocation (globus hystericus)",
+     "quote": "πνίγας τε ὑστερικὰς λεῖον μετὰ μέλιτος κατὰ τοῦ αἰδοίου ἄχρι δακτυλίου ἐπιτεθὲν παραιτεῖται",
+     "translation": "Smoothed with honey and applied from the pudenda to the anus, it averts hysterical suffocation."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D007989",
+   "mesh": "Libido",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c05",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "reduces sexual desire (anaphrodisiac)",
+     "quote": "being often taken in meat and drink, it abates venery",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c08",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "diminishes semen production and suppresses sexual desire",
+     "quote": "γονήν τε σβέννυσιν ἐσθιόμενον καὶ πινόμενον",
+     "translation": "Eaten and drunk, it extinguishes semen."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D008288",
+   "mesh": "Malaria",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c09",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "prevents or mitigates chills and paroxysms of ague (fever/malaria)",
+     "quote": "shaking fits of agues, to take a draught before the fit comes",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c17",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "relieves periodic chills and malarial shivering fits",
+     "quote": "ῥίγη περιοδικὰ πινόμενον ὡς προείρηται",
+     "translation": "Drunk as aforesaid, it helps periodic chills."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D008598",
+   "mesh": "Menstruation",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c02",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "promotes diuresis and stimulates menstruation",
+     "quote": "It provokes urine and women’s courses",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c03",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "promotes menstruation",
+     "quote": "ἐμμήνων ἀγωγὰ",
+     "translation": "Promoting menstruation."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D011014",
+   "mesh": "Pneumonia",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c07",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "relieves chest and side pain, coughs, dyspnea, and lung inflammation",
+     "quote": "helps the pains both of the chest and sides, as also coughs and hardness of breathing, the inflammations of the lungs",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c14",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "treats pneumonia",
+     "quote": "περιπνευμονίαν",
+     "translation": "Pneumonia."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D011041",
+   "mesh": "Poisoning",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c03",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "acts as an antidote against lethal poisons and dangerous medications",
+     "quote": "The seed thereof taken in wine, is an antidote against all dangerous medicines or deadly poisons",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c05",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "acts as an antidote against destructive and poisonous substances",
+     "quote": "τῶν φθαρτικῶν φαρμάκων ἐστὶν ἀντίδοτος ὅσον ὀξύβαφον τοῦ σπέρματος ποθέντος μετʼ οἴνου",
+     "translation": "About an oxybaphon of its seed drunk with wine is an antidote to destructive drugs."
+    },
+    {
+     "claim_id": "dioscorides:3.45:c06",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "renders lethal poisons ineffective when consumed beforehand",
+     "quote": "καὶ προβρωθέντα δὲ τὰ φύλλα καθʼ ἑαυτὰ καὶ μετὰ καρύων βασιλικῶν καὶ σύκων ξηρῶν ἄπρακτα καθίστησι τὰ θανάσιμα",
+     "translation": "And its leaves, eaten beforehand by themselves or with walnuts and dried figs, render deadly poisons harmless."
+    },
+    {
+     "claim_id": "dioscorides:3.45:c40",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "wild rue is fatal and causes death when ingested in large quantities",
+     "quote": "τὸ δὲ ἄγριον πολὺ βρωθὲν κτείνει",
+     "translation": "The wild rue eaten in large quantities kills."
+    },
+    {
+     "claim_id": "dioscorides:3.45:c43",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "the Macedonian variety is fatal and kills when ingested",
+     "quote": "τὸ δʼ ἐν Μακεδονίᾳ φυόμενον παρὰ τὸν Ἁλιάκμονα ποταμὸν ἀναιρεῖν φασι βρωθέν",
+     "translation": "They say that that which grows in Macedonia by the river Haliacmon kills when eaten."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D012585",
+   "mesh": "Sciatica",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c08",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "relieves sciatica and arthralgia",
+     "quote": "tormenting pains of the sciatica and the joints",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c15",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "relieves sciatica and hip pain",
+     "quote": "ἀλγήματα ἰσχίων",
+     "translation": "Pains of the hips."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D012871",
+   "mesh": "Skin Diseases",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c17",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "treats scabs, tetters, and ringworm (tinea)",
+     "quote": "with almond and honey helps the dry scabs, or any tetter or ringworm",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c33",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "treats lichenous skin eruptions",
+     "quote": "ὠφελεῖ καὶ λειχῆνας σὺν μέλιτι καὶ στυπτηρίᾳ ἐπιτιθέμενον",
+     "translation": "Applied with honey and alum, it also helps lichens."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D014456",
+   "mesh": "Ulcer",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:meadow-rue:c01",
+     "book": "culpeper",
+     "entry": "Meadow-Rue",
+     "tier": "B",
+     "claim": "heals chronic ulcers and old sores",
+     "quote": "herb bruised and applied, perfectly heals old sores",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:meadow-rue:c02",
+     "book": "culpeper",
+     "entry": "Meadow-Rue",
+     "tier": "B",
+     "claim": "heals chronic sores and ulcers",
+     "quote": "the distilled water of the herb and flowers doth the like",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:garden-rue:c20",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "cures erysipelas, scalp ulcers, and ozena (foul nasal ulcers)",
+     "quote": "cures St. Anthony’s fire, and all running sores in the head: and the stinking ulcers of the nose",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c01",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "acts caustically and causes blistering and ulceration on the skin",
+     "quote": "ἀμφότερα δὲ θερμαντικά, καυστικά, ἑλκωτικά",
+     "translation": "Both are warming, caustic, and ulcerating."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D014786",
+   "mesh": "Vision Disorders",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c19",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "clears blurred and dim eyesight",
+     "quote": "juice of it and fennel... helps the dimness of the eye-sight",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c24",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "sharpens visual acuity",
+     "quote": "ἐστι δὲ καὶ ἀξυωπὲς ἐσθιόμενον ὠμὸν καὶ ταριχευτὸν",
+     "translation": "Eaten raw and pickled, it also sharpens the eyesight."
+    },
+    {
+     "claim_id": "dioscorides:3.45:c35",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "relieves dull vision and amblyopia",
+     "quote": "καὶ ἀμβλυωπίαις βοηθεῖ μετά μαράθου χυλοῦ καὶ μέλιτος ἐγχριόμενος",
+     "translation": "And smeared on with fennel juice and honey, it helps dullness of vision."
+    }
+   ]
+  },
+  {
+   "species": "Ruta graveolens L.",
+   "mesh_ui": "D014860",
+   "mesh": "Warts",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:garden-rue:c16",
+     "book": "culpeper",
+     "entry": "Garden-Rue",
+     "tier": "A",
+     "claim": "removes cutaneous warts",
+     "quote": "takes away all sorts of warts, if boiled in wine with some pepper and nitre",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.45:c31",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "removes thymion warts",
+     "quote": "καταπλασθὲν δὲ μετὰ τῶν αὐτῶν θύμους ... αἴρει",
+     "translation": "Applied as a plaster with the same, it removes thymion warts."
+    },
+    {
+     "claim_id": "dioscorides:3.45:c32",
+     "book": "dioscorides",
+     "entry": "πήγανον",
+     "tier": "B",
+     "claim": "removes myrmecia warts",
+     "quote": "καὶ μυρμηκίας αἴρει",
+     "translation": "And it removes myrmecia warts."
+    }
+   ]
+  },
+  {
    "species": "Salix alba L.",
    "mesh_ui": "D002145",
    "mesh": "Callosities",
@@ -19582,6 +18949,75 @@
      "claim": "treats hemoptysis",
      "quote": "καὶ ὁ φλοιὸς δὲ τὰ αὐτὰ δρᾷ",
      "translation": "and the bark does the same"
+    }
+   ]
+  },
+  {
+   "species": "Salvia rosmarinus Spenn.",
+   "mesh_ui": "D004827",
+   "mesh": "Epilepsy",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:rosemary:c08",
+     "book": "culpeper",
+     "entry": "Rosemary",
+     "tier": "A",
+     "claim": "treats epilepsy",
+     "quote": "and fallen-sickness",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.74:c13",
+     "book": "dioscorides",
+     "entry": "λιβανωτίς",
+     "tier": "B",
+     "claim": "treats epilepsy",
+     "quote": "βοηθεῖ καὶ ἐπιληψίαις",
+     "translation": "it also helps epilepsy"
+    }
+   ]
+  },
+  {
+   "species": "Salvia rosmarinus Spenn.",
+   "mesh_ui": "D007565",
+   "mesh": "Jaundice",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:rosemary:c16",
+     "book": "culpeper",
+     "entry": "Rosemary",
+     "tier": "A",
+     "claim": "cures jaundice when taken before exercise",
+     "quote": "they that have the yellow jaundice exercise their bodies directly after the taking thereof, it will certainly cure them",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.74:c15",
+     "book": "dioscorides",
+     "entry": "λιβανωτίς",
+     "tier": "B",
+     "claim": "treats jaundice",
+     "quote": "ἰκτερικοῖς τε μετὰ πεπέρεως καὶ οἴνου διδόμενος",
+     "translation": "given with pepper and wine to jaundiced patients"
+    },
+    {
+     "claim_id": "dioscorides:3.75:c02",
+     "book": "dioscorides",
+     "entry": "λιβανωτίς",
+     "tier": "B",
+     "claim": "treats jaundice",
+     "quote": "ἰκτέρου ἰατικήν, ἐάν τις αὐτὴν ἑψήσας ἐν ὕδατι δῷ πρὸ τῶν γυμνασίων πιεῖν, εἶτα γυμνάζων λούῃ καὶ οἴνῳ ποτίζῃ",
+     "translation": "curative of jaundice, if boiled in water and given to drink before exercises, then followed by exercising, bathing, and giving wine to drink"
     }
    ]
   },

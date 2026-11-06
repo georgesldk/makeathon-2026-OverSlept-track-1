@@ -6719,9 +6719,9 @@ dioscorides:1.7,Entry,νάρδου,dioscorides,,,,,,,
 dioscorides:1.7:c01,Claim,warms the body,dioscorides,humoral,promotes,root,,unknown,δύναμιν δὲ ἔχουσι θερμαντικήν,they have a warming power
 taxon:Cymbopogon iwarancusa (Jones ex Roxb.) Schult.,Species,Cymbopogon iwarancusa (Jones ex Roxb.) Schult.,,,,,,,,
 taxon:Nardostachys jatamansi (D.Don) DC.,Species,Nardostachys jatamansi (D.Don) DC.,,,,,,,,
-taxon:Valeriana italica Lam.,Species,Valeriana italica Lam.,,,,,,,,
 taxon:Cymbopogon schoenanthus (L.) Spreng.,Species,Cymbopogon schoenanthus (L.) Spreng.,,,,,,,,
 taxon:Valeriana celtica L.,Species,Valeriana celtica L.,,,,,,,,
+taxon:Valeriana italica Lam.,Species,Valeriana italica Lam.,,,,,,,,
 dioscorides:1.7:c02,Claim,dries bodily humors,dioscorides,humoral,promotes,root,,unknown,ξηραντικήν,[they have a] drying power
 dioscorides:1.7:c03,Claim,promotes urination,dioscorides,medical,promotes,root,,internal,οὐρητικήν,[they have a] diuretic power
 dioscorides:1.7:c04,Claim,stops diarrhea,dioscorides,medical,treats,root,drink,internal,κοιλίαν τε ἱστᾶσι πινόμεναι,"drunk, they stop looseness of the bowels"
@@ -6978,9 +6978,9 @@ dioscorides:1.68:c34,Claim,fills hollow ulcers and cavity wounds,dioscorides,med
 dioscorides:1.68:c35,Claim,checks the spread of cancerous ulcers,dioscorides,medical,relieves,soot,soot,external,σταλτικὴν καρκινωμάτων,[power] checking carcinomatous sores
 dioscorides:1.69,Entry,πίτυς,dioscorides,,,,,,,
 dioscorides:1.69:c01,Claim,acts as an astringent,dioscorides,humoral,promotes,bark,,unknown,ἀμφοτέρων δὲ ὁ φλοιὸς στυπτικός,the bark of both is astringent
-taxon:Pinus halepensis Mill.,Species,Pinus halepensis Mill.,,,,,,,,
 taxon:Pinus pinea L.,Species,Pinus pinea L.,,,,,,,,
 taxon:Pinus brutia Ten.,Species,Pinus brutia Ten.,,,,,,,,
+taxon:Pinus halepensis Mill.,Species,Pinus halepensis Mill.,,,,,,,,
 dioscorides:1.69:c02,Claim,relieves chafing and excoriations,dioscorides,medical,relieves,bark,poultice,external,ἁρμόζων πρός τε παρατρίμματα λεῖος καταπλασσόμενος,suitable for chafing when applied smooth as a poultice
 mesh:D007402,MeSH,Intertrigo,,,,,,,,
 dioscorides:1.69:c03,Claim,heals superficial ulcers,dioscorides,medical,treats,bark,ointment with litharge and manna,external,πρὸς τὰ ἐπιπόλαια τῶν ἑλκῶν ... σὺν λιθαργύρῳ καὶ μάννῃ,[suitable] for superficial ulcers with litharge and manna
@@ -7637,9 +7637,9 @@ dioscorides:1.117:c01,Claim,binds the belly / checks diarrhea,dioscorides,medica
 taxon:Celtis australis L.,Species,Celtis australis L.,,,,,,,,
 taxon:Nymphaea lotus L.,Species,Nymphaea lotus L.,,,,,,,,
 taxon:Medicago arborea L.,Species,Medicago arborea L.,,,,,,,,
+taxon:Melilotus siculus (Turra) Steud.,Species,Melilotus siculus (Turra) Steud.,,,,,,,,
 taxon:Nelumbo nucifera Gaertn.,Species,Nelumbo nucifera Gaertn.,,,,,,,,
 taxon:Nymphaea nouchali var. nouchali ,Species,Nymphaea nouchali var. nouchali ,,,,,,,,
-taxon:Melilotus siculus (Turra) Steud.,Species,Melilotus siculus (Turra) Steud.,,,,,,,,
 taxon:Trifolium fragiferum L.,Species,Trifolium fragiferum L.,,,,,,,,
 taxon:Trigonella foenum-graecum L.,Species,Trigonella foenum-graecum L.,,,,,,,,
 taxon:Trigonella gladiata Steven ex M.Bieb.,Species,Trigonella gladiata Steven ex M.Bieb.,,,,,,,,
@@ -7954,8 +7954,8 @@ dioscorides:2.111:c02,Claim,prevents toxicity from deadly poisons when drunk bef
 dioscorides:2.111:c03,Claim,serves as an ingredient in antidotes,dioscorides,medical,treats,seed,,internal,μείγνυται δὲ καὶ ἀντιδότοις,it is also mixed into antidotes
 dioscorides:2.112,Entry,ῥαφανὶς,dioscorides,,,,,,,
 dioscorides:2.112:c01,Claim,causes flatulence,dioscorides,medical,causes,root,,internal,πνευμάτων γεννητική,generates gas/flatulence
-taxon:Raphanus raphanistrum L.,Species,Raphanus raphanistrum L.,,,,,,,,
 taxon:Raphanus sativus L.,Species,Raphanus sativus L.,,,,,,,,
+taxon:Raphanus raphanistrum L.,Species,Raphanus raphanistrum L.,,,,,,,,
 dioscorides:2.112:c02,Claim,upsets the stomach,dioscorides,medical,causes,root,,internal,οὐκ εὐστόμαχος,bad for the stomach
 dioscorides:2.112:c03,Claim,causes belching,dioscorides,medical,causes,root,,internal,ἐρευκτική,causes eructation
 dioscorides:2.112:c04,Claim,promotes urine flow,dioscorides,medical,promotes,root,,internal,οὐρητικὴ δέ ἐστι,it is diuretic
@@ -8838,9 +8838,9 @@ dioscorides:3.12,Entry,ἄκανθα,dioscorides,,,,,,,
 dioscorides:3.12:c01,Claim,relieves hemoptysis,dioscorides,medical,relieves,root,,internal,ταύτης ἡ ῥίζα πινομένη ποιεῖ πρὸς αἱμοπτυῖκούς,its root taken as a drink helps those spitting blood
 taxon:Notobasis syriaca (L.) Cass.,Species,Notobasis syriaca (L.) Cass.,,,,,,,,
 taxon:Acacia albida Rojas Acosta,Species,Acacia albida Rojas Acosta,,,,,,,,
-taxon:Picnomon acarna (L.) Cass.,Species,Picnomon acarna (L.) Cass.,,,,,,,,
 taxon:Cirsium arvense (L.) Scop.,Species,Cirsium arvense (L.) Scop.,,,,,,,,
 taxon:Euphorbia antiquorum L.,Species,Euphorbia antiquorum L.,,,,,,,,
+taxon:Picnomon acarna (L.) Cass.,Species,Picnomon acarna (L.) Cass.,,,,,,,,
 taxon:Spartium junceum L.,Species,Spartium junceum L.,,,,,,,,
 taxon:Vachellia tortilis (Forssk.) Galasso & Banfi,Species,Vachellia tortilis (Forssk.) Galasso & Banfi,,,,,,,,
 dioscorides:3.12:c02,Claim,treats stomach disorders,dioscorides,medical,treats,root,,internal,[ταύτης ἡ ῥίζα πινομένη ποιεῖ πρὸς] στομαχικούς,the root drunk helps those with stomach ailments
@@ -9013,8 +9013,8 @@ dioscorides:3.32:c05,Claim,shares the therapeutic applications of dittany with m
 dioscorides:3.32:c06,Claim,serves as an ingredient in theriac plasters,dioscorides,medical,treats,whole herb,plaster,external,μείγνυται δὲ καὶ ἐμπλάστροις θηριακαῖς,it is also mixed into theriac plasters
 dioscorides:3.34,Entry,ἡδύοσμον,dioscorides,,,,,,,
 dioscorides:3.34:c01,Claim,stops internal bleeding and hemorrhage,dioscorides,medical,treats,juice,in vinegar,internal,αἷμα ἵστησι πινόμενος ὁ χυλὸς αὐτοῦ μετʼ ὄξους,its juice drunk with vinegar stops bleeding
-taxon:Mentha spicata subsp. spicata ,Species,Mentha spicata subsp. spicata ,,,,,,,,
 taxon:Mentha longifolia (L.) Huds.,Species,Mentha longifolia (L.) Huds.,,,,,,,,
+taxon:Mentha spicata subsp. spicata ,Species,Mentha spicata subsp. spicata ,,,,,,,,
 taxon:Clinopodium nepeta,Species,Clinopodium nepeta,,,,,,,,
 dioscorides:3.34:c02,Claim,kills and expels roundworms,dioscorides,medical,treats,juice,in vinegar,internal,καὶ ἕλμινθας κτείνει στρογγύλας,and kills roundworms
 dioscorides:3.34:c03,Claim,stimulates sexual desire,dioscorides,medical,promotes,whole herb,,internal,ἀφροδίσιά τε ἐρεθίζει,and stimulates sexual desire
@@ -9204,9 +9204,9 @@ dioscorides:3.52:c10,Claim,expels the fetus,dioscorides,medical,promotes,root,pe
 dioscorides:3.52:c11,Claim,cleanses phagedenic ulcers,dioscorides,medical,treats,leaf,"ground with honey, poultice",external,τὰ δὲ φύλλα λεῖα μετὰ μέλιτος ἐπιτιθέμενα τὰ φαγεδαινικὰ ἕλκη ἀνακαθαίρει,The leaves ground with honey and applied cleanse phagedenic ulcers.
 dioscorides:3.53,Entry,σέσελι,dioscorides,,,,,,,
 dioscorides:3.53:c01,Claim,has a warming property,dioscorides,humoral,promotes,fruit,,unknown,δύναμιν δὲ ἔχει ὁ καρπὸς καὶ ἡ ῥίζα θερμαντικήν,The fruit and the root have a warming property.
+taxon:Seseli tortuosum L.,Species,Seseli tortuosum L.,,,,,,,,
 taxon:Bupleurum fruticosum L.,Species,Bupleurum fruticosum L.,,,,,,,,
 taxon:Leiotulus aureus (Sm.) Pimenov & Ostr.,Species,Leiotulus aureus (Sm.) Pimenov & Ostr.,,,,,,,,
-taxon:Seseli tortuosum L.,Species,Seseli tortuosum L.,,,,,,,,
 taxon:Tordylium officinale L.,Species,Tordylium officinale L.,,,,,,,,
 dioscorides:3.53:c02,Claim,treats strangury,dioscorides,medical,treats,fruit,drink,internal,πινόμενα δὲ στραγγουρίαν ἰᾶται,"Drunk, they heal strangury."
 dioscorides:3.53:c03,Claim,treats orthopnea,dioscorides,medical,treats,fruit,drink,internal,καὶ ὀρθόπνοιαν,And orthopnea.
@@ -9346,7 +9346,6 @@ dioscorides:3.72:c08,Claim,disperses swellings,dioscorides,medical,relieves,seed
 dioscorides:3.72:c09,Claim,treats bites of venomous animals,dioscorides,medical,treats,root,in wine,internal,"τοῦ δὲ Κρητικοῦ καὶ τῆς ῥίζης, ἧτις μάλιστα πρὸς θηρία πίνεται μετ᾿ οἴνου","and of the Cretan kind the root is used, which is drunk especially with wine against venomous beasts"
 dioscorides:3.73b,Entry,πύρεθρος,dioscorides,,,,,,,
 dioscorides:3.73b:c01,Claim,draws out phlegm,dioscorides,humoral,promotes,root,,unknown,ῥίζα δὲ ... φλέγματος ἐπισπαστική,the root draws out phlegm
-taxon:Convolvulus oleifolius Desr.,Species,Convolvulus oleifolius Desr.,,,,,,,,
 dioscorides:3.73b:c02,Claim,relieves toothache,dioscorides,medical,relieves,root,boiled with vinegar as a mouthwash,external,ὀδονταλγίαις βοηθεῖ μετ᾿ ὄξους ἑψηθεῖσα καὶ διακλυζομένη,boiled with vinegar and used as a mouthwash it relieves toothaches
 dioscorides:3.73b:c03,Claim,stimulates salivation and evacuates phlegm when chewed,dioscorides,medical,promotes,root,chewed,other,ἄγει δὲ καὶ φλέγμα διαμασηθεῖσα,and chewed it draws out phlegm
 dioscorides:3.73b:c04,Claim,promotes sweating,dioscorides,medical,promotes,root,rubbed with oil,external,συγχριομένη δὲ μετ᾿ ἐλαίου ἱδρῶτας κινεῖ,and rubbed on with oil it excites sweating
@@ -9593,13 +9592,11 @@ dioscorides:3.95:c08,Claim,stops diarrhea,dioscorides,medical,treats,whole herb,
 dioscorides:3.96,Entry,λεοντοπέταλον,dioscorides,,,,,,,
 dioscorides:3.96:c01,Claim,treats reptile and snake bites,dioscorides,medical,treats,root,in wine,internal,ταύτης ἡ ῥίζα σὺν οἴνῳ πινομένη βοηθεῖ ἑρπετοδήκτοις,"its root, drunk with wine, helps those bitten by reptiles"
 taxon:Glaucium flavum Crantz,Species,Glaucium flavum Crantz,,,,,,,,
-taxon:Silene vulgaris (Moench) Garcke,Species,Silene vulgaris (Moench) Garcke,,,,,,,,
 taxon:Leontice leontopetalum L.,Species,Leontice leontopetalum L.,,,,,,,,
 dioscorides:3.96:c02,Claim,quickly relieves pain,dioscorides,medical,relieves,root,in wine,internal,ταχέως ἀπόνους ποιοῦσα,quickly rendering them free of pain
 dioscorides:3.96:c03,Claim,treats sciatica,dioscorides,medical,treats,root,enema,internal,μίσγεται δὲ καὶ εἰς τοὺς ἰσχιαδικοὺς κλυσμούς,it is also mixed into enemas for sciatica
 dioscorides:3.98,Entry,χαμαίρωψ,dioscorides,,,,,,,
 dioscorides:3.98:c01,Claim,treats spasms and convulsions,dioscorides,medical,treats,whole herb,decoction in water,internal,δύναμιν δὲ ἔχει χλωρά τε καὶ ξηρὰ ἀφεψηθεῖσα σὺν ὕδατι καὶ ποτιζομένη βοηθεῖν σπάσμασι,"both fresh and dry, boiled with water and given as a drink, it has the property to help convulsions"
-taxon:Teucrium flavum L.,Species,Teucrium flavum L.,,,,,,,,
 dioscorides:3.98:c02,Claim,relieves cough,dioscorides,medical,relieves,whole herb,decoction in water,internal,βοηθεῖν ... βηχί,helps cough
 dioscorides:3.98:c03,Claim,treats indurated spleen,dioscorides,medical,treats,whole herb,decoction in water,internal,βοηθεῖν ... σπληνὶ ἐσκιρρωμένῳ,helps an indurated spleen
 dioscorides:3.98:c04,Claim,treats dysuria,dioscorides,medical,treats,whole herb,decoction in water,internal,βοηθεῖν ... δυσουροῦσιν,helps those suffering from dysuria
@@ -9879,7 +9876,6 @@ dioscorides:3.132:c12,Claim,checks female flux / uterine discharge,dioscorides,m
 dioscorides:3.132:c13,Claim,seed checks female flux / uterine discharge,dioscorides,medical,treats,seed,in dark wine,internal,τὸ σπέρμα πρὸς ῥοῦν γυναικεῖον ἐν οἴνῳ μέλανι πινόμενα,the seed drunk in dark wine is good for the female flux
 dioscorides:3.134,Entry,ἄσπληνος,dioscorides,,,,,,,
 dioscorides:3.134:c01,Claim,shrinks an enlarged spleen when decocted with vinegar and drunk for forty days,dioscorides,medical,treats,leaf,decoction with vinegar,internal,τὰ φύλλα ἀπολζεσθέντα σύν ὄξει καὶ πινόμενα ἐπὶ ἡμέρας τεσσαράκοντα σπλῆνα τήκειν,the leaves decocted with vinegar and drunk for forty days waste the spleen
-taxon:Asplenium ceterach L.,Species,Asplenium ceterach L.,,,,,,,,
 taxon:Polystichum lonchitis (L.) Roth,Species,Polystichum lonchitis (L.) Roth,,,,,,,,
 dioscorides:3.134:c02,Claim,reduces enlarged spleen when pounded leaves are poulticed with wine,dioscorides,medical,treats,leaf,poultice with wine,external,καταπλάσσειν τὸν σπλῆνα τοῖς φύλλοις λείοις σύν οἴνῳ,one must also poultice the spleen with the pounded leaves with wine
 dioscorides:3.134:c03,Claim,relieves strangury,dioscorides,medical,relieves,leaf,,internal,βοηθεῖ καὶ στραγγουρίᾳ,it also helps strangury
@@ -10219,7 +10215,6 @@ mesh:D006552,MeSH,"Hernia, Inguinal",,,,,,,,
 mesh:D046449,MeSH,"Hernia, Abdominal",,,,,,,,
 dioscorides:4.22,Entry,ξυρίς,dioscorides,,,,,,,
 dioscorides:4.22:c01,Claim,treats head wounds,dioscorides,medical,treats,root,,external,ποιοῦσα πρὸς τὰ ἐν κεφαλῇ τραύματα καὶ κατάγματα,effective for wounds on the head
-taxon:Xanthium strumarium L.,Species,Xanthium strumarium L.,,,,,,,,
 dioscorides:4.22:c02,Claim,treats fractures,dioscorides,medical,treats,root,,external,ποιοῦσα πρὸς τὰ ἐν κεφαλῇ τραύματα καὶ κατάγματα,effective for head fractures
 mesh:D012887,MeSH,Skull Fractures,,,,,,,,
 dioscorides:4.22:c03,Claim,extracts bone fragments from wounds,dioscorides,medical,treats,root,"mixed with copper flakes, centaury root, and honey",external,ἀνάγει δὲ καὶ ὀστᾶ,it also brings up bone fragments
@@ -10263,7 +10258,6 @@ dioscorides:4.27:c03,Claim,relieves lower back pain,dioscorides,medical,relieves
 dioscorides:4.27:c04,Claim,promotes lactation,dioscorides,medical,promotes,root,with wine or gruel,internal,καὶ γάλα κατασπᾷ μετ᾿ οἴνου ἢ ῥοφήματος ληφθεῖσα,and promotes milk flow when taken with wine or gruel
 dioscorides:4.28,Entry,ὠκιμοειδές,dioscorides,,,,,,,
 dioscorides:4.28:c01,Claim,treats viper bites,dioscorides,medical,treats,seed,in wine,internal,δύναμιν δὲ ἔχει τὸ σπέρμα πινόμενον ἐν οἴνῳ ἐχιοδήκτους καὶ τὰ ἄλλα τῶν ἑρπετῶν δήγματα θεραπεύειν,the seed drunk in wine has the power to cure those bitten by vipers
-taxon:Althaea officinalis L.,Species,Althaea officinalis L.,,,,,,,,
 dioscorides:4.28:c02,Claim,treats reptile bites,dioscorides,medical,treats,seed,in wine,internal,δύναμιν δὲ ἔχει τὸ σπέρμα πινόμενον ἐν οἴνῳ ἐχιοδήκτους καὶ τὰ ἄλλα τῶν ἑρπετῶν δήγματα θεραπεύειν,and to cure other bites of reptiles
 dioscorides:4.28:c03,Claim,treats sciatica,dioscorides,medical,treats,seed,with myrrh and pepper,internal,δίδοται δὲ καὶ ἰσχιαδικοῖς μετὰ σμύρνης καὶ πεπέρεως,it is also given to sciatic patients with myrrh and pepper
 dioscorides:4.29,Entry,ἄγρωστις,dioscorides,,,,,,,
@@ -10408,13 +10402,11 @@ dioscorides:4.55:c05,Claim,cleanses the uterus,dioscorides,medical,promotes,root
 dioscorides:4.56,Entry,χρυσόγονον,dioscorides,,,,,,,
 dioscorides:4.56:c01,Claim,treats shrew-mouse bites,dioscorides,medical,treats,root,ground smooth with vinegar and applied,external,ἥτις βοηθεῖ σύν ὄξει λεανθεῖσα καὶ ἐπιτεθεῖσα μυγαλῆς δήγμασιν,which helps when ground smooth with vinegar and applied to shrew-mouse bites
 taxon:Bongardia chrysogonum (L.) Spach,Species,Bongardia chrysogonum (L.) Spach,,,,,,,,
-taxon:Linum usitatissimum L.,Species,Linum usitatissimum L.,,,,,,,,
 dioscorides:4.58,Entry,ἀγήρατον,dioscorides,,,,,,,
 dioscorides:4.58:c01,Claim,promotes urination,dioscorides,medical,promotes,whole herb,decoction as vapor fomentation or herb as fumigant,external,"δύναμιν δὲ ἔχει τὸ ἀφέψημα αὐτῆς πυριωμένην, καὶ αὐτὴ ἡ πόα ὑποθυμιωμένη οὖρα ἄγειν",its decoction used as a vapor fomentation and the herb itself fumigated underneath have the power to promote urine
 dioscorides:4.58:c02,Claim,softens and relaxes the parts around the uterus,dioscorides,medical,relieves,whole herb,decoction as vapor fomentation or herb as fumigant,external,καὶ τὰ περὶ ὑστέραν μαλάττειν,and to soften the parts around the womb
 dioscorides:4.59,Entry,περιστέριον,dioscorides,,,,,,,
 dioscorides:4.59:c01,Claim,relieves uterine pain,dioscorides,medical,relieves,leaf,applied with rose oil or fresh pork fat,external,δοκεῖ δὲ τὰ φύλλα σὺν ῥοδίνῳ ἢ στέατι χοιρείῳ νεαρῷ προστιθέμενα ἀνωδυνίαν ὑστέρας ποιεῖν,the leaves applied with rose oil or fresh pork fat are thought to produce relief of pain in the womb
-taxon:Bunium ferulaceum Sm.,Species,Bunium ferulaceum Sm.,,,,,,,,
 dioscorides:4.59:c02,Claim,treats erysipelas,dioscorides,medical,treats,whole herb,poultice with vinegar,external,στέλλει δὲ καὶ ἐρυσιπέλατα σὺν ὄξει καταπλασθεῖσα,"applied as a poultice with vinegar, it also suppresses erysipelas"
 dioscorides:4.59:c03,Claim,checks gangrene and putrefying sores,dioscorides,medical,treats,whole herb,poultice with vinegar,external,καὶ σηπεδόνας ἐπέχει,and arrests gangrenous ulcers
 dioscorides:4.59:c04,Claim,closes and heals wounds,dioscorides,medical,treats,whole herb,,external,καὶ τραύματα κολλᾷ,and unites wounds
@@ -10438,6 +10430,7 @@ dioscorides:4.62:c06,Claim,treats jaundice,dioscorides,medical,treats,fruit,drun
 dioscorides:4.63,Entry,μήκων,dioscorides,,,,,,,
 dioscorides:4.63:c01,Claim,induces sleep,dioscorides,medical,promotes,head,decoction in wine,internal,"ταύτης κεφαλάς πέντε ἢ ἓξ ἐν οἴνου κυάθοις τρισὶν ἐψήσας, ὥστε εἰς δύο ἀγαγεῖν, πότιζε οὓς ἂν βούλῃ ὑπνῶσαι","boiling five or six of its heads in three cyathi of wine until reduced to two, give it to drink to whomever you wish to put to sleep"
 taxon:Roemeria hispida (Lam.) Stace,Species,Roemeria hispida (Lam.) Stace,,,,,,,,
+taxon:Silene vulgaris (Moench) Garcke,Species,Silene vulgaris (Moench) Garcke,,,,,,,,
 dioscorides:4.63:c02,Claim,gently loosens the bowels,dioscorides,medical,promotes,seed,drunk with hydromel,internal,τοῦ δὲ σπέρματος ὅσον ὀξύβαφον ποθὲν σὺν μελικράτῳ κοιλίαν ἠπίως μαλάσσει,about an oxybaphon of the seed drunk with hydromel gently softens the bowels
 dioscorides:4.63:c03,Claim,treats inflammation,dioscorides,medical,treats,"leaf, capsule",poultice,external,τὰ δὲ φύλλα σὺν ταῖς κωδύαις καταπλασθέντα φλεγμονὰς ἰᾶται,the leaves applied as a poultice along with the capsules heal inflammations
 dioscorides:4.63:c04,Claim,induces sleep,dioscorides,medical,promotes,"leaf, capsule",decoction as affusion,external,καὶ τὸ ἀπόζεμα δὲ αὐτῶν προσαντληθὲν ὑπνοποιόν ἐστιν,and their decoction applied as an affusion induces sleep
@@ -10557,6 +10550,7 @@ dioscorides:4.73:c02,Claim,causes delirium or temporary madness,dioscorides,medi
 dioscorides:4.73:c03,Claim,causes death,dioscorides,medical,causes,root,in wine,internal,τέσσαρες δὲ ποθεῖσαι καὶ ἀναιροῦσιν,four [drachms] drunk kill
 dioscorides:4.74,Entry,δορύκνιον,dioscorides,,,,,,,
 dioscorides:4.74:c01,Claim,induces sleep,dioscorides,medical,promotes,whole herb,,internal,δοκεῖ δὲ καὶ τοῦτο ὑπνωτικὸν εἶναι,this also is considered to be sleep-inducing
+taxon:Convolvulus oleifolius Desr.,Species,Convolvulus oleifolius Desr.,,,,,,,,
 dioscorides:4.74:c02,Claim,causes death in excess,dioscorides,medical,causes,whole herb,,internal,πλεονασθὲν δὲ ἀναιρεῖν,and taken in excess it kills
 dioscorides:4.74:c03,Claim,used in love philtres,dioscorides,magical,other,seed,,internal,φασὶ δέ τινες καὶ τὸ σπέρμα αὐτοῦ εἰς φίλτρα λαμβάνεσθαι,and some say its seed is taken for love philtres
 dioscorides:4.75,Entry,μανδραγόρας,dioscorides,,,,,,,
@@ -10830,6 +10824,7 @@ dioscorides:4.122:c03,Claim,prevents facial wrinkles and keeps the face smooth,d
 mesh:D015595,MeSH,Skin Aging,,,,,,,,
 dioscorides:4.123,Entry,βούνιον,dioscorides,,,,,,,
 dioscorides:4.123:c01,Claim,promotes urination,dioscorides,medical,promotes,whole herb,"fresh, dry, or juiced with roots, stems, and leaves in hydromel",internal,ἔστι δὲ οὐρητικόν,"It is diuretic,"
+taxon:Bunium ferulaceum Sm.,Species,Bunium ferulaceum Sm.,,,,,,,,
 taxon:Bassia scoparia (L.) A.J.Scott,Species,Bassia scoparia (L.) A.J.Scott,,,,,,,,
 dioscorides:4.123:c02,Claim,has a warming effect,dioscorides,humoral,other,whole herb,"fresh, dry, or juiced with roots, stems, and leaves in hydromel",internal,θερμαντικόν,"warming,"
 dioscorides:4.123:c03,Claim,promotes expulsion of the placenta,dioscorides,medical,promotes,whole herb,"fresh, dry, or juiced with roots, stems, and leaves in hydromel",internal,καὶ δευτέρων ἀγωγόν,"and expels the afterbirth,"
@@ -10898,6 +10893,7 @@ dioscorides:4.135,Entry,τριχομανές,dioscorides,,,,,,,
 dioscorides:4.135:c01,Claim,possesses the same medicinal properties as adianton,dioscorides,medical,other,whole herb,,unknown,δοκεῖ δὲ τὰ αὐτὰ δύνασθαι τῷ προειρημένῳ,it is thought to have the same powers as the aforementioned (adianton)
 dioscorides:4.136,Entry,ξάνθιον,dioscorides,,,,,,,
 dioscorides:4.136:c01,Claim,dyes hair blonde or yellow,dioscorides,cosmetic,promotes,fruit,"pounded and steeped in warm water as a poultice, or pounded with wine",external,δύναται δὲ ὁ καρπός ... τρίχας ξανθὰς ποιεῖν,the fruit can make hair yellow/blonde
+taxon:Xanthium strumarium L.,Species,Xanthium strumarium L.,,,,,,,,
 dioscorides:4.136:c02,Claim,treats swellings and edema,dioscorides,medical,treats,fruit,poultice,external,καταπλάσσεται δὲ καὶ πρὸς οἰδήματα ὁ καρπὸς ἐπιτηδείως,the fruit is also suitably applied as a poultice for swellings
 dioscorides:4.137,Entry,αἰγίλωψ,dioscorides,,,,,,,
 dioscorides:4.137:c01,Claim,treats aegilops (lacrimal fistula),dioscorides,medical,treats,whole herb,poultice,external,θεραπεύει δὲ ἡ πόα μετὰ ἀλεύρου καταπλασθεῖσα αἰγιλώπια,the herb applied as a poultice with meal cures aegilops
@@ -11059,7 +11055,6 @@ dioscorides:4.158:c09,Claim,ruptures indurated abscesses,dioscorides,medical,tre
 dioscorides:4.158:c10,Claim,draws out thorns and splinters,dioscorides,medical,treats,root,poultice with darnel meal and honey,external,ἀνάγει καὶ σκόλοπας σὺν αἰρίνῳ ἀλεύρῳ καὶ μέλιτι καταπλασσομένη,"applied as a poultice with darnel meal and honey, it also draws out thorns"
 dioscorides:4.159,Entry,ἱπποφαές,dioscorides,,,,,,,
 dioscorides:4.159:c01,Claim,fulls garments,dioscorides,household,other,whole herb,,other,γνάπτουσι τὰ ἱμάτια,they full garments with it
-taxon:Coronilla securidaca L.,Species,Coronilla securidaca L.,,,,,,,,
 taxon:Euphorbia spinosa L.,Species,Euphorbia spinosa L.,,,,,,,,
 dioscorides:4.159:c02,Claim,purges bilious humor downwards,dioscorides,humoral,promotes,sap,"sap alone or with vetch meal, taken with hydromel",internal,καθαίρει δὲ χολῶδες ... κάτω,it purges bilious matter downwards
 dioscorides:4.159:c03,Claim,purges phlegmatic humor downwards,dioscorides,humoral,promotes,sap,"sap alone or with vetch meal, taken with hydromel",internal,καθαίρει δὲ ... φλεγματῶδες ... κάτω,it purges phlegmatic matter downwards
@@ -11376,7 +11371,6 @@ dioscorides:2.147:c02,Claim,cools conditions that require cooling,dioscorides,me
 dioscorides:2.147:c03,Claim,used as livestock feed in place of grass,dioscorides,veterinary,other,whole herb,,other,ὅλῃ δὲ τῇ πόᾳ χρῶνται οἱ κτηνοτρόφοι ἀντὶ ἀγρώστεως,livestock farmers use the whole herb instead of dog's tooth grass
 dioscorides:3.51,Entry,λιγυστικόν,dioscorides,,,,,,,
 dioscorides:3.51:c01,Claim,has a warming quality,dioscorides,humoral,promotes,seed and root,,unknown,δύναμις δὲ τοῦ σπέρματος καὶ τῆς ῥίζης θερμαντική,The property of the seed and the root is warming
-taxon:Opopanax hispidus (Friv.) Griseb.,Species,Opopanax hispidus (Friv.) Griseb.,,,,,,,,
 dioscorides:3.51:c02,Claim,promotes digestion,dioscorides,medical,promotes,seed and root,,internal,δύναμις δὲ τοῦ σπέρματος καὶ τῆς ῥίζης ... πεπτική,The property of the seed and the root is ... digestive
 dioscorides:3.51:c03,Claim,relieves internal pain,dioscorides,medical,relieves,seed and root,,internal,ἁρμόζουσα πρὸς τὰ ἐντὸς ἀλγήματα,suitable for internal pains
 dioscorides:3.51:c04,Claim,relieves internal swellings,dioscorides,medical,relieves,seed and root,,internal,ἁρμόζουσα πρὸς ... οἰδήματα,suitable for internal swellings

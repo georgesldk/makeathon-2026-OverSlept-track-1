@@ -63,7 +63,6 @@ class LexiconContract(unittest.TestCase):
         self.assertEqual(match["dsc"], [])
         self.assertFalse(match["cites_this_chapter"])
 
-    @known_defect
     def test_chapter_specific_flags_do_not_leak_between_chapters(self):
         chapters = self.run_lexicon("Ulva lactuca , Dsc. 1.1 .", labels=("1.1", "1.2"))
         first = self.identification(chapters[0], "Ulva lactuca")
@@ -71,7 +70,6 @@ class LexiconContract(unittest.TestCase):
         self.assertTrue(first["cites_this_chapter"])
         self.assertFalse(second["cites_this_chapter"])
 
-    @known_defect
     def test_ib_referring_to_another_author_is_not_dioscorides(self):
         # Fixture mirrors the audited LSJ bru/on entry: ib. follows Nicander.
         text = "Ulva lactuca , Dsc. 4.98 : Nic. Th. 792 ; also a marsh-plant , ib. 415 ."

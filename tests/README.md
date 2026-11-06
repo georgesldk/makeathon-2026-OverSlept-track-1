@@ -18,7 +18,7 @@ To treat all known defects as ordinary failures, run:
 python3.10 -B tests/run_tests.py --strict
 ```
 
-Strict mode currently exits nonzero. This is intentional until the defects are fixed. Both modes exit nonzero for new failures or errors.
+Strict mode exited nonzero until the defects were fixed. Since 2026-11-06 (Stage 2 fixes, round 2) the known-defect tests pass and are ordinary tests again; `test_neo4j_model` still needs `neo4j/prepare.py`, which is not in the repository yet. Both modes exit nonzero for new failures or errors.
 
 ## Testing another implementation
 

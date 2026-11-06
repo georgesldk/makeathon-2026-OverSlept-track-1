@@ -89,7 +89,24 @@ A6  Where the book describes the plant, the description check
     evidence (A4) only proposes the candidate. Where the book gives no
     description (crops and well-known herbs often are not described,
     D6), A4 alone is enough; missing data never counts against a
-    candidate (D2).
+    candidate (D2). In eligibility.json the rule is then listed as
+    "A6 n/a" (no description to check), not "A6" (described, and the
+    description fits). (Changed 2026-11-06, Marselo's second audit.)
+
+    The description states, as stored in eligibility.json:
+      no description record   the entry was not in the description check
+      too few details         the book describes too little (fewer than
+                              3 feature groups): nothing to check (D4)
+      not compared            described, but this candidate was not
+                              among those compared (B7)
+      no comparable data      compared, but every score is "absent":
+                              no feature could be matched (B7)
+      fits / fits, Wikipedia only   at least moderate (D3)
+      weak                    compared, below moderate, no group
+                              negative (B6)
+      poor                    an explicit mismatch: at least one feature
+                              group scored negative (B6)
+    Only weak and poor lower a candidate.
 
 When an entry has more than one A candidate, all are shown; the one
 with the most lineages, then the best description check, is listed
@@ -116,13 +133,21 @@ B5  A1, A2, A5 hold, backed only by a scholarly identification (one
 B6  A1-A5 hold, but the description check is "weak" (D3, D4).
     Caveat: "the book's description fits poorly". A candidate with no
     usable scores was not compared: B7, not B6. (Changed 2026-11-06,
-    Marselo's audit: Typha domingensis in 3.118.)
+    Marselo's audit: Typha domingensis in 3.118.) Scores that are all
+    "absent" are no comparison either: B7 (round 2: Asparagus
+    aphyllus, Prickly Asparagus; 29 candidates).
 B7  A1-A5 hold and the book describes the plant, but this candidate
     was never compared with the description (no modern description
     found, or not among the candidates checked). Caveat: "not compared
     with the book's description". (Added 2026-11-05: without it, an
     unchecked candidate could pass A6 in an entry whose checked
     candidates all fit poorly.)
+
+B9  Geography not checked: there is no geography record for the
+    candidate, or it was not checked. Kept apart from B3 (checked, but
+    no distribution data or introduced only). Missing data never hides
+    a candidate (X2 needs a checked distribution far away). (Added
+    2026-11-06, Marselo's second audit.)
 
 B candidates are shown to the end user, marked with their caveat, in a
 section of their own (separate from the A identifications).
@@ -136,11 +161,20 @@ X2  It does not fit the author's world: native only far away (G2), or
 X3  Not tied to an accepted name in any database.
 X4  Not a plant (animal, fungus, mineral, virus). Kept apart for a
     later "other materia medica" list (beaver, murex, ...). In code: a
-    source says "non-plant" and none says "plant", or the kingdom is
-    unconfirmed ("unknown", "mixed") and no plant list (WFO, WCVP)
-    knows the name. (Changed 2026-11-06, Marselo's audit: "unknown"
+    source says "non-plant" and none says "plant". Until 2026-11-06
+    (round 2) X4 also covered X7. (Changed 2026-11-06, Marselo's audit: "unknown"
     alone used to hide plants such as Berberis × ottawensis; Global
     Names alone also covers animals, such as the shrew Sorex araneus.)
+X7  Plant status not established: the kingdom is unconfirmed
+    ("unknown", "mixed") and no plant list (WFO, WCVP) knows the name.
+    Hidden, because A1 needs WFO or WCVP, but not called "not a plant":
+    mostly animals and seaweeds resolved only by Global Names (the
+    shrew, Sorex araneus; Castor; Cyprinus). (Added 2026-11-06,
+    Marselo's second audit.)
+X8  Rank not established: the plant lists give no rank and the name
+    has two or more words, so it may not be a species (A2 cannot be
+    confirmed). Hidden, like X6, but kept with its evidence. (Added
+    2026-11-06, Marselo's second audit and his contract test.)
 X5  Reached only through a name the book does not use for this entry
     (for example a word from the description, not a name).
 X6  Genus or family level only (Mosses -> Bryophyta, Chick-Pease ->

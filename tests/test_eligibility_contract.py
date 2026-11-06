@@ -153,7 +153,6 @@ class EligibilityContract(unittest.TestCase):
         self.assertEqual(section, "possible")
         self.assertIn("B7", row["rules"])
 
-    @known_defect
     def test_infraspecific_evidence_reaches_normalized_candidate(self):
         # Adapted from the real Horsetail record; the original name must survive.
         row = evidence(candidate="Testus plantus subsp. minor", node="Testus plantus")
@@ -161,35 +160,29 @@ class EligibilityContract(unittest.TestCase):
         self.assertNotEqual(section, "hidden")
         self.assertNotIn("X1", result["rules"])
 
-    @known_defect
     def test_unknown_kingdom_is_not_called_non_plant(self):
         _, row = self.run_case(c=candidate(kingdom_flags=["unknown"]))
         self.assertNotIn("X4", row["rules"])
 
-    @known_defect
     def test_mixed_kingdom_is_not_called_non_plant(self):
         _, row = self.run_case(c=candidate(kingdom_flags=["mixed"]))
         self.assertNotIn("X4", row["rules"])
 
-    @known_defect
     def test_unknown_rank_is_not_presented_as_species(self):
         section, row = self.run_case(c=candidate(rank=None))
         self.assertEqual(section, "hidden", "Unknown rank must not be presented as species-level identification")
         self.assertNotIn("A2", row["rules"])
 
-    @known_defect
     def test_empty_comparison_is_not_poor_fit(self):
         _, row = self.run_case(desc=description(scores=[], congruence=0))
         self.assertNotIn("B6", row["rules"])
         self.assertNotEqual(row["description"], "weak")
 
-    @known_defect
     def test_disagreement_preserves_both_backbone_names(self):
         alt = "Otherus plantus L."
         _, row = self.run_case(c=candidate(agreements={"disagree": 1}, wcvp_opinions=[alt]))
         self.assertIn(alt, json.dumps(row, ensure_ascii=False))
 
-    @known_defect
     def test_absent_geography_is_not_silently_passed_as_a5(self):
         section, row = self.run_case(include_geo=False)
         self.assertNotEqual(section, "shown")

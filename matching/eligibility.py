@@ -89,23 +89,34 @@ def geography(book: str, g: dict):
 
 # ---------- D: description check ----------
 def description(entry: dict, accepted: str):
-    """'fits', 'fits, Wikipedia only', 'poor' (explicit mismatch), 'weak', 'not assessable', None (not checked)."""
+    """The description check for one candidate, as (state, congruence). States (round 2, Marselo's audit 2):
+      'no description record'  the book's entry was not in the description check (no description)
+      'too few details'        the book describes too little (< 3 feature groups): nothing to check (D4, D6)
+      'not compared'           described, but this candidate was not among those compared
+      'no comparable data'     compared, but every score is "absent": no feature could be matched (D4)
+      'fits', 'fits, Wikipedia only'   at least moderate (D3)
+      'poor'                   an explicit mismatch: at least one feature group negative (D4)
+      'weak'                   compared, positive or zero, but below moderate
+    Missing data never downgrades a candidate: only 'poor' and 'weak' give B6."""
     if not entry:
-        return None, None
-    c = next((c for c in entry["candidates"] if c["accepted_name"] == accepted), None)
-    if not c:
-        return None, None
+        return "no description record", None
     details = entry["details"]
     if len({d["feature"] for d in details.values()}) < 3:
-        return "not assessable", c["congruence"]          # D4: too few details, missing data is not weak
+        return "too few details", None
+    c = next((c for c in entry["candidates"] if c["accepted_name"] == accepted), None)
+    if not c:
+        return "not compared", None
+    groups = defaultdict(list)
+    usable = False
+    for s in c["scores"]:
+        lab = str(s.get("label")).lower()
+        if s.get("id") in details and lab in POINTS:
+            groups[details[s["id"]]["feature"]].append(POINTS[lab])
+            usable = usable or lab != "absent"
+    if not usable:                       # no scores, or only "absent" ones: nothing compared (bug 6; round 2)
+        return "no comparable data", c["congruence"]
     if c["congruence"] >= 3:
         return ("fits, Wikipedia only" if c["wikipedia_only"] else "fits"), c["congruence"]
-    groups = defaultdict(list)
-    for s in c["scores"]:
-        if s.get("id") in details and str(s.get("label")).lower() in POINTS:
-            groups[details[s["id"]]["feature"]].append(POINTS[str(s["label"]).lower()])
-    if not any(groups.values()):                          # no usable scores: never compared, not "poor" (bug 6)
-        return None, None
     negative = any(sum(v) / len(v) < 0 for v in groups.values() if v)
     return ("poor" if negative else "weak"), c["congruence"]
 
@@ -123,13 +134,19 @@ def judge(book: str, cand: dict, ev: list, geo, desc, described: bool) -> dict:
     # X4 (bug 4): an explicit "non-plant", or a kingdom not confirmed as plant ("unknown", "mixed") with no
     # plant list (WFO, WCVP) behind the name. Global Names alone also covers animals (the shrew, Sorex araneus)
     plant_list = cand.get("decided_by") in ("WFO", "WCVP")
-    if ("non-plant" in flags and "plant" not in flags) or ("plant" not in flags and not plant_list):
+    # round 2: X4 only for a confirmed non-plant; an unconfirmed kingdom is X7 "plant status not established"
+    if "non-plant" in flags and "plant" not in flags:
         x.append("X4")
+    elif "plant" not in flags and not plant_list:
+        x.append("X7")
+    rank_unknown = not rank
     if not rank:                                           # rank unknown: a one-word name is a genus or family
         bare = (cand.get("accepted_name_without_authors") or "").split()          # (bug 5)
         rank = ("family" if bare and bare[0].endswith("aceae") else "genus") if len(bare) == 1 else rank
     if rank in ("genus", "family", "order", "class", "phylum", "tribe"):
         x.append("X6")
+    elif rank_unknown:
+        x.append("X8")                                     # round 2: two-word name, rank not established
     if geo in ("far", "impossible"):
         x.append("X2")
     if ev and all(r["layer"] == "text" for r in ev):
@@ -148,22 +165,29 @@ def judge(book: str, cand: dict, ev: list, geo, desc, described: bool) -> dict:
         caveats.append("B2")
     if geo in ("introduced", "unknown"):
         caveats.append("B3")
+    elif geo is None:
+        caveats.append("B9")                               # round 2: no geography record, or not checked
     if not (a4a or a4b):
         caveats.append("B5" if passage or medium <= {"LSJ", "Lewis & Short"} else "B1")
     if desc[0] in ("poor", "weak"):
         caveats.append("B6")                               # A6: where described, the description decides
-    elif described and desc[0] is None:
-        caveats.append("B7")                               # A6: described, but this candidate was never compared
-    rules = ["A1", "A2", "A3", "A4a" if a4a else "A4b", "A5", "A6"] if not caveats else caveats
+    elif described and desc[0] in ("not compared", "no comparable data"):
+        caveats.append("B7")                               # A6: described, but no comparison could be made
+    a6 = "A6" if desc[0] in ("fits", "fits, Wikipedia only") else "A6 n/a"   # n/a: no description to check
+    rules = ["A1", "A2", "A3", "A4a" if a4a else "A4b", "A5", a6] if not caveats else caveats
     return {"tier": "A" if not caveats else "B", "rules": rules}
 
 
 CAVEATS = {"B1": "one source", "B2": "botanists disagree on the name", "B3": "may not have grown there in the author's time",
            "B4": "name not in the main plant lists", "B5": "identified by a dictionary only",
            "B6": "the book's description fits poorly",
-           "B7": "not compared with the book's description"}
+           "B7": "not compared with the book's description",
+           "B9": "geography not checked"}
+B7_NO_DATA = "compared, but no feature could be matched with the book's description"
 REASONS = {"X1": "weak evidence only", "X2": "grows far from the author's world", "X3": "no accepted name",
-           "X4": "not a plant", "X5": "only a word in the text, not a name of this entry", "X6": "genus or family only"}
+           "X4": "not a plant", "X5": "only a word in the text, not a name of this entry", "X6": "genus or family only",
+           "X7": "plant status not established (kingdom unknown, and no plant list knows the name)",
+           "X8": "rank not established (may not be a species)"}
 
 
 def main() -> None:
@@ -194,7 +218,8 @@ def main() -> None:
                          # WFO and WCVP disagree (B2): show WCVP's name too, not only one (bug 7)
                          "other_accepted_names": sorted({o for o in (c.get("wcvp_opinions") or [])
                                                          if o and o != c.get("accepted_name")}),
-                         "caveats": [CAVEATS[r] for r in j["rules"] if r in CAVEATS],
+                         "caveats": [B7_NO_DATA if r == "B7" and d[0] == "no comparable data" else CAVEATS[r]
+                                     for r in j["rules"] if r in CAVEATS],
                          "reasons": [REASONS[r] for r in j["rules"] if r in REASONS],
                          "lineages_strong": sorted({r["lineage"] for r in e if r["grade"] == "strong" and r["lineage"]}),
                          "lineages_medium": sorted({r["lineage"] for r in e if r["grade"] == "medium" and r["lineage"]}),

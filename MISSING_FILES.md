@@ -63,6 +63,13 @@ claims batch for the 4 Dioscorides chapters that gained a plant after
 the Stage 2 fixes, and the paper's data file 7. Unzip it the same way,
 on top of the earlier zips (unzip -o).
 
+overslept_missing_files_5.zip (6 Nov, small) holds only what changed since
+the fourth zip: the full Stage 3 unit files (stage3/units/culpeper.jsonl,
+dioscorides.jsonl), rebuilt after the second round of Stage 2 fixes, and
+the Shennong Bencao Jing pages from Chinese Wikisource
+(historical_texts/shennong/source/wikisource/, CC BY-SA; a paused third
+source). Unzip it the same way, on top of the earlier zips (unzip -o).
+
 
 ## What is in the zip, and where it goes
 

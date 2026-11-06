@@ -201,9 +201,16 @@ def main() -> None:
                         if g:
                             shared_units.append({**unit, "shared_group": g})
         print(f"{book}: {n:,} units")
-    with open(out_dir / "pilot.jsonl", "w", encoding="utf-8") as f:
-        for u in pilot:
-            f.write(json.dumps(u, ensure_ascii=False) + "\n")
+    # the pilot is frozen (its replies and review use prompt 0.3): an existing pilot.jsonl is never rewritten,
+    # even when Stage 2 changes (round 2: rue in Dioscorides 3.45 went from A to B, which would drop 4 units)
+    if (out_dir / "pilot.jsonl").exists():
+        kept = sum(1 for _ in open(out_dir / "pilot.jsonl", encoding="utf-8"))
+        print(f"Pilot: frozen, kept as it is ({kept} units; rebuilt today it would have {len(pilot)})")
+        pilot = None
+    if pilot is not None:
+        with open(out_dir / "pilot.jsonl", "w", encoding="utf-8") as f:
+            for u in pilot:
+                f.write(json.dumps(u, ensure_ascii=False) + "\n")
     shared_units.sort(key=lambda u: (u["shared_group"]["order"], u["book"]))
     with open(out_dir / "shared.jsonl", "w", encoding="utf-8") as f:
         for u in shared_units:
@@ -220,6 +227,8 @@ def main() -> None:
     multi = sum(1 for g, _ in used.values() if len(g) > 1)
     print(f"MeSH -> use groups: {len(used)} terms · {resid} residual (XY) only · {multi} in more than one group "
           f"→ stage3/mesh_use_groups.csv")
+    if pilot is None:
+        return
     sp = defaultdict(int)
     for u in pilot:
         sp[u["taxon"]["accepted_name"]] += 1

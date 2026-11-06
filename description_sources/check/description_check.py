@@ -383,6 +383,9 @@ def congruence(details: dict, scores: list) -> tuple:
     means = [sum(v) / len(v) for v in groups.values() if v]
     if not means:                                          # no scores at all: not compared, not "weak" (bug 6)
         return 0, "not compared"
+    if not any(str(s.get("label", "")).lower() in ("good", "partial", "no")
+               for s in scores if details.get(s.get("id"))):
+        return 0, "no comparable data"                     # every score "absent": nothing matched (D4; round 2)
     c = sum(m > 0 for m in means) - sum(m < 0 for m in means)
     return c, "strong" if c >= 5 else "moderate" if c >= 3 else "weak"
 

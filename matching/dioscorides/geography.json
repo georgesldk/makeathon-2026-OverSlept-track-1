@@ -243,23 +243,6 @@
      "wcvp_range": "Himalaya to W. & C. China and N. Myanmar"
     },
     {
-     "accepted_name": "Valeriana italica Lam.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "νάρδου"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Southeastern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "SE. Europe to E. Medit."
-    },
-    {
      "accepted_name": "Cymbopogon schoenanthus (L.) Spreng.",
      "rank": "species",
      "strong_rows": 0,
@@ -298,6 +281,23 @@
       "Southwestern Europe"
      ],
      "wcvp_range": "Alps"
+    },
+    {
+     "accepted_name": "Valeriana italica Lam.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "νάρδου"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Southeastern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "SE. Europe to E. Medit."
     }
    ]
   },
@@ -1204,27 +1204,8 @@
   "dioscorides-1-69": {
    "name": "πίτυς",
    "label": "1.69",
-   "first_candidate_that_fits": "Pinus halepensis Mill.",
+   "first_candidate_that_fits": "Pinus pinea L.",
    "candidates": [
-    {
-     "accepted_name": "Pinus halepensis Mill.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "πίτυς"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Medit."
-    },
     {
      "accepted_name": "Pinus pinea L.",
      "rank": "species",
@@ -1274,6 +1255,25 @@
       "Western Asia"
      ],
      "wcvp_range": "S. Balkan Pen. to NW. Iran and Lebanon"
+    },
+    {
+     "accepted_name": "Pinus halepensis Mill.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "πίτυς"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Northern Africa",
+      "Southeastern Europe",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "Medit."
     }
    ]
   },
@@ -1484,30 +1484,8 @@
   "dioscorides-1-76": {
    "name": "βράθυ",
    "label": "1.76",
-   "first_candidate_that_fits": "Juniperus foetidissima Willd.",
+   "first_candidate_that_fits": "Juniperus sabina L.",
    "candidates": [
-    {
-     "accepted_name": "Juniperus foetidissima Willd.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "βράθυ",
-      "βόρατον"
-     ],
-     "sources": [
-      "lexicon_headword",
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Central Asia",
-      "Eastern Europe",
-      "Southeastern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Albania to NW. Iran and Lebanon"
-    },
     {
      "accepted_name": "Juniperus sabina L.",
      "rank": "species",
@@ -1533,6 +1511,26 @@
       "Western Asia"
      ],
      "wcvp_range": "C. & S. Europe to SW. Siberia and N. China"
+    },
+    {
+     "accepted_name": "Juniperus foetidissima Willd.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "βράθυ"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Caucasus",
+      "Central Asia",
+      "Eastern Europe",
+      "Southeastern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "Albania to NW. Iran and Lebanon"
     }
    ]
   },
@@ -1559,24 +1557,6 @@
       "Western Asia"
      ],
      "wcvp_range": "N. Balkan Pen. to Israel and Caucasus"
-    },
-    {
-     "accepted_name": "Juniperus oxycedrus L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "κέδρος"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe"
-     ],
-     "wcvp_range": "W. & WC. Medit."
     },
     {
      "accepted_name": "Juniperus communis L.",
@@ -1616,6 +1596,24 @@
       "Western Canada"
      ],
      "wcvp_range": "Subarctic & Temp. Northern Hemisphere"
+    },
+    {
+     "accepted_name": "Juniperus oxycedrus L.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "κέδρος"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Northern Africa",
+      "Southeastern Europe",
+      "Southwestern Europe"
+     ],
+     "wcvp_range": "W. & WC. Medit."
     },
     {
      "accepted_name": "Juniperus phoenicea L.",
@@ -2825,18 +2823,34 @@
   "dioscorides-1-115": {
    "name": "μηλέας",
    "label": "1.115",
-   "first_candidate_that_fits": "Malus × domestica (Suckow) Borkh.",
+   "first_candidate_that_fits": "Citrus medica L.",
    "candidates": [
     {
-     "accepted_name": "Malus × domestica (Suckow) Borkh.",
+     "accepted_name": "Citrus medica L.",
      "rank": "species",
-     "strong_rows": 1,
+     "strong_rows": 0,
      "book_names": [
       "μηλέας"
      ],
      "sources": [
-      "lexicon_headword",
-      "lexicon_this_chapter"
+      "lexicon_headword"
+     ],
+     "geography": "trade",
+     "native_regions": [
+      "Indian Subcontinent",
+      "Indo-China"
+     ],
+     "wcvp_range": "WC. Himalaya to Myanmar"
+    },
+    {
+     "accepted_name": "Malus × domestica (Suckow) Borkh.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "μηλέας"
+     ],
+     "sources": [
+      "lexicon_headword"
      ],
      "geography": "local",
      "native_regions": [
@@ -2848,31 +2862,14 @@
      "wcvp_range": "Afghanistan to C. Asia and Xinjiang"
     },
     {
-     "accepted_name": "Citrus medica L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "μηλέας"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "trade",
-     "native_regions": [
-      "Indian Subcontinent",
-      "Indo-China"
-     ],
-     "wcvp_range": "WC. Himalaya to Myanmar"
-    },
-    {
      "accepted_name": "Prunus armeniaca L.",
      "rank": "species",
-     "strong_rows": 1,
+     "strong_rows": 0,
      "book_names": [
       "μηλέας"
      ],
      "sources": [
-      "lexicon_this_chapter"
+      "lexicon_headword"
      ],
      "geography": "local",
      "native_regions": [
@@ -2885,12 +2882,12 @@
     {
      "accepted_name": "Prunus persica (L.) Batsch",
      "rank": "species",
-     "strong_rows": 1,
+     "strong_rows": 0,
      "book_names": [
       "μηλέας"
      ],
      "sources": [
-      "lexicon_this_chapter"
+      "lexicon_headword"
      ],
      "geography": "trade",
      "native_regions": [
@@ -2948,32 +2945,8 @@
   "dioscorides-1-117": {
    "name": "λωτὸς",
    "label": "1.117",
-   "first_candidate_that_fits": "Nymphaea lotus L.",
+   "first_candidate_that_fits": "Celtis australis L.",
    "candidates": [
-    {
-     "accepted_name": "Nymphaea lotus L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "λωτὸς"
-     ],
-     "sources": [
-      "lexicon_this_chapter",
-      "wikidata_grc"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "East Tropical Africa",
-      "Northeast Tropical Africa",
-      "Northern Africa",
-      "South Tropical Africa",
-      "Southern Africa",
-      "West Tropical Africa",
-      "West-Central Tropical Africa",
-      "Western Indian Ocean"
-     ],
-     "wcvp_range": "Africa"
-    },
     {
      "accepted_name": "Celtis australis L.",
      "rank": "species",
@@ -2995,71 +2968,28 @@
      "wcvp_range": "Medit. to N. Iran"
     },
     {
-     "accepted_name": "Medicago arborea L.",
+     "accepted_name": "Nymphaea lotus L.",
      "rank": "species",
-     "strong_rows": 1,
+     "strong_rows": 0,
      "book_names": [
       "λωτὸς"
      ],
      "sources": [
-      "lexicon_this_chapter"
+      "lexicon_headword",
+      "wikidata_grc"
      ],
      "geography": "local",
      "native_regions": [
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
+      "East Tropical Africa",
+      "Northeast Tropical Africa",
+      "Northern Africa",
+      "South Tropical Africa",
+      "Southern Africa",
+      "West Tropical Africa",
+      "West-Central Tropical Africa",
+      "Western Indian Ocean"
      ],
-     "wcvp_range": "S. Europe to Türkiye"
-    },
-    {
-     "accepted_name": "Nelumbo nucifera Gaertn.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "λωτὸς"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Australia",
-      "Caucasus",
-      "China",
-      "Eastern Asia",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Indo-China",
-      "Malesia",
-      "Papuasia",
-      "Russian Far East",
-      "Western Asia"
-     ],
-     "wcvp_range": "Ukraine to N. Iran, Russian Far East to Trop. Asia and N. & NE. Australia"
-    },
-    {
-     "accepted_name": "Nymphaea nouchali var. nouchali ",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "λωτὸς"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Australia",
-      "China",
-      "Eastern Asia",
-      "Indian Subcontinent",
-      "Indo-China",
-      "Malesia",
-      "Papuasia",
-      "Western Asia"
-     ],
-     "wcvp_range": "Trop. & Subtrop. Asia to N. Australia"
+     "wcvp_range": "Africa"
     },
     {
      "accepted_name": "Lotus corniculatus L.",
@@ -3093,6 +3023,24 @@
      "wcvp_range": "Temp. Eurasia, Macaronesia to NE. & E. Trop. Africa, SW. Arabian Pen."
     },
     {
+     "accepted_name": "Medicago arborea L.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "λωτὸς"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Southeastern Europe",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "S. Europe to Türkiye"
+    },
+    {
      "accepted_name": "Melilotus siculus (Turra) Steud.",
      "rank": "species",
      "strong_rows": 0,
@@ -3111,6 +3059,55 @@
       "Western Asia"
      ],
      "wcvp_range": "Medit. to W. Eritrea"
+    },
+    {
+     "accepted_name": "Nelumbo nucifera Gaertn.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "λωτὸς"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Australia",
+      "Caucasus",
+      "China",
+      "Eastern Asia",
+      "Eastern Europe",
+      "Indian Subcontinent",
+      "Indo-China",
+      "Malesia",
+      "Papuasia",
+      "Russian Far East",
+      "Western Asia"
+     ],
+     "wcvp_range": "Ukraine to N. Iran, Russian Far East to Trop. Asia and N. & NE. Australia"
+    },
+    {
+     "accepted_name": "Nymphaea nouchali var. nouchali ",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "λωτὸς"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Australia",
+      "China",
+      "Eastern Asia",
+      "Indian Subcontinent",
+      "Indo-China",
+      "Malesia",
+      "Papuasia",
+      "Western Asia"
+     ],
+     "wcvp_range": "Trop. & Subtrop. Asia to N. Australia"
     },
     {
      "accepted_name": "Trifolium fragiferum L.",
@@ -4365,37 +4362,6 @@
       "Western Asia"
      ],
      "wcvp_range": "Iraq to N. Pakistan"
-    },
-    {
-     "accepted_name": "Lotus corniculatus L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "λωτόν"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Arabian Peninsula",
-      "Caucasus",
-      "Central Asia",
-      "East Tropical Africa",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Indo-China",
-      "Macaronesia",
-      "Middle Europe",
-      "Northeast Tropical Africa",
-      "Northern Africa",
-      "Northern Europe",
-      "Siberia",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Temp. Eurasia, Macaronesia to NE. & E. Trop. Africa, SW. Arabian Pen."
     }
    ]
   },
@@ -4800,12 +4766,12 @@
     {
      "accepted_name": "Rumex patientia L.",
      "rank": "species",
-     "strong_rows": 1,
+     "strong_rows": 0,
      "book_names": [
       "λάπαθον"
      ],
      "sources": [
-      "lexicon_this_chapter"
+      "lexicon_headword"
      ],
      "geography": "local",
      "native_regions": [
@@ -5353,19 +5319,6 @@
    "first_candidate_that_fits": "Sonchus oleraceus L.",
    "candidates": [
     {
-     "accepted_name": "Sonchus asper",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "σόγχου"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "no distribution data",
-     "native_regions": []
-    },
-    {
      "accepted_name": "Sonchus oleraceus L.",
      "rank": "species",
      "strong_rows": 1,
@@ -5391,6 +5344,19 @@
       "Western Asia"
      ],
      "wcvp_range": "Macaronesia, Europe to Medit., Sahara to Arabian Pen."
+    },
+    {
+     "accepted_name": "Sonchus asper",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "σόγχου"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "no distribution data",
+     "native_regions": []
     }
    ]
   },
@@ -5907,32 +5873,8 @@
   "dioscorides-2-152": {
    "name": "σκόρδου",
    "label": "2.152",
-   "first_candidate_that_fits": "Pastinaca sativa L.",
+   "first_candidate_that_fits": "Allium ampeloprasum L.",
    "candidates": [
-    {
-     "accepted_name": "Pastinaca sativa L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἐλαφοβόσκον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Middle Europe",
-      "Mongolia",
-      "Northern Europe",
-      "Siberia",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Europe to C. Siberia and Lebanon"
-    },
     {
      "accepted_name": "Allium ampeloprasum L.",
      "rank": "species",
@@ -6233,12 +6175,12 @@
     {
      "accepted_name": "Cyclamen graecum Link",
      "rank": "species",
-     "strong_rows": 0,
+     "strong_rows": 1,
      "book_names": [
       "κυκλάμινος"
      ],
      "sources": [
-      "lexicon_headword",
+      "lexicon_this_chapter",
       "wikidata_grc"
      ],
      "geography": "local",
@@ -6285,25 +6227,8 @@
   "dioscorides-2-165": {
    "name": "κυκλάμινος",
    "label": "2.165",
-   "first_candidate_that_fits": "Cyclamen graecum Link",
+   "first_candidate_that_fits": "Lonicera periclymenum L.",
    "candidates": [
-    {
-     "accepted_name": "Cyclamen graecum Link",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "κυκλάμινος"
-     ],
-     "sources": [
-      "lexicon_this_chapter",
-      "wikidata_grc"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Southeastern Europe"
-     ],
-     "wcvp_range": "Greece, Kriti"
-    },
     {
      "accepted_name": "Lonicera periclymenum L.",
      "rank": "species",
@@ -6323,6 +6248,23 @@
       "Southwestern Europe"
      ],
      "wcvp_range": "Europe, Morocco"
+    },
+    {
+     "accepted_name": "Cyclamen graecum Link",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "κυκλάμινος"
+     ],
+     "sources": [
+      "lexicon_headword",
+      "wikidata_grc"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Southeastern Europe"
+     ],
+     "wcvp_range": "Greece, Kriti"
     },
     {
      "accepted_name": "Cyclamen L.",
@@ -7492,28 +7434,8 @@
   "dioscorides-3-7": {
    "name": "κενταύρειον",
    "label": "3.7",
-   "first_candidate_that_fits": "Centaurea salonitana Vis.",
+   "first_candidate_that_fits": "Centaurium erythraea Rafn",
    "candidates": [
-    {
-     "accepted_name": "Centaurea salonitana Vis.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "κενταύρειον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Middle Europe",
-      "Southeastern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Hungary to Caucasus and W. Türkiye"
-    },
     {
      "accepted_name": "Centaurium erythraea Rafn",
      "rank": "species",
@@ -7541,6 +7463,26 @@
       "Western Asia"
      ],
      "wcvp_range": "Azores, Morocco, Europe to SW. Siberia and Iran, Yemen"
+    },
+    {
+     "accepted_name": "Centaurea salonitana Vis.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "κενταύρειον"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Caucasus",
+      "Eastern Europe",
+      "Middle Europe",
+      "Southeastern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "Hungary to Caucasus and W. Türkiye"
     }
    ]
   },
@@ -7696,65 +7638,20 @@
   "dioscorides-3-12": {
    "name": "ἄκανθα",
    "label": "3.12",
-   "first_candidate_that_fits": "Notobasis syriaca (L.) Cass.",
+   "first_candidate_that_fits": "Alhagi maurorum Medik.",
    "candidates": [
     {
      "accepted_name": "Acacia albida Rojas Acosta",
      "rank": "species",
-     "strong_rows": 1,
+     "strong_rows": 0,
      "book_names": [
       "ἄκανθα"
      ],
      "sources": [
-      "lexicon_this_chapter"
+      "lexicon_headword"
      ],
      "geography": "no distribution data",
      "native_regions": []
-    },
-    {
-     "accepted_name": "Notobasis syriaca (L.) Cass.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἄκανθα"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Arabian Peninsula",
-      "Caucasus",
-      "Macaronesia",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Macaronesia, Medit. to Iran, N. Oman"
-    },
-    {
-     "accepted_name": "Picnomon acarna (L.) Cass.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἄκανθα"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Central Asia",
-      "Eastern Europe",
-      "Macaronesia",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Canary Is. (Gran Canaria), Europe to Medit. and Afghanistan"
     },
     {
      "accepted_name": "Alhagi maurorum Medik.",
@@ -7848,6 +7745,51 @@
       "Malesia"
      ],
      "wcvp_range": "Pakistan to Indo-China and Jawa"
+    },
+    {
+     "accepted_name": "Notobasis syriaca (L.) Cass.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "ἄκανθα"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Arabian Peninsula",
+      "Caucasus",
+      "Macaronesia",
+      "Northern Africa",
+      "Southeastern Europe",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "Macaronesia, Medit. to Iran, N. Oman"
+    },
+    {
+     "accepted_name": "Picnomon acarna (L.) Cass.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "ἄκανθα"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Caucasus",
+      "Central Asia",
+      "Eastern Europe",
+      "Macaronesia",
+      "Northern Africa",
+      "Southeastern Europe",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "Canary Is. (Gran Canaria), Europe to Medit. and Afghanistan"
     },
     {
      "accepted_name": "Spartium junceum L.",
@@ -8177,29 +8119,8 @@
   "dioscorides-3-17": {
    "name": "ἄκανθος",
    "label": "3.17",
-   "first_candidate_that_fits": "Acanthus mollis L.",
+   "first_candidate_that_fits": "Acanthus spinosus L.",
    "candidates": [
-    {
-     "accepted_name": "Acanthus mollis L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἄκανθος",
-      "ἄκανθους τοπιάρια"
-     ],
-     "sources": [
-      "lexicon_latin",
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "NW. Africa, Sardegna to E. Medit."
-    },
     {
      "accepted_name": "Acanthus spinosus L.",
      "rank": "species",
@@ -8216,6 +8137,27 @@
       "Western Asia"
      ],
      "wcvp_range": "SE. Europe to S. Türkiye"
+    },
+    {
+     "accepted_name": "Acanthus mollis L.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "ἄκανθος",
+      "ἄκανθους τοπιάρια"
+     ],
+     "sources": [
+      "lexicon_headword",
+      "lexicon_latin"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Northern Africa",
+      "Southeastern Europe",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "NW. Africa, Sardegna to E. Medit."
     }
    ]
   },
@@ -8466,45 +8408,8 @@
   "dioscorides-3-24": {
    "name": "ἁβρότονον",
    "label": "3.24",
-   "first_candidate_that_fits": "Artemisia arborescens L.",
+   "first_candidate_that_fits": "Santolina chamaecyparissus L.",
    "candidates": [
-    {
-     "accepted_name": "Artemisia arborescens L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἁβρότονον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Arabian Peninsula",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "C. & E. Medit., SW. Yemen"
-    },
-    {
-     "accepted_name": "Artemisia fragrans Willd.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἁβρότονον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Western Asia"
-     ],
-     "wcvp_range": "Türkiye to Caucasus"
-    },
     {
      "accepted_name": "Santolina chamaecyparissus L.",
      "rank": "species",
@@ -8520,6 +8425,43 @@
       "Southeastern Europe"
      ],
      "wcvp_range": "Italy to NW. Balkan Pen."
+    },
+    {
+     "accepted_name": "Artemisia arborescens L.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "ἁβρότονον"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Arabian Peninsula",
+      "Northern Africa",
+      "Southeastern Europe",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "C. & E. Medit., SW. Yemen"
+    },
+    {
+     "accepted_name": "Artemisia fragrans Willd.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "ἁβρότονον"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Caucasus",
+      "Western Asia"
+     ],
+     "wcvp_range": "Türkiye to Caucasus"
     }
    ]
   },
@@ -8552,27 +8494,6 @@
       "Western Asia"
      ],
      "wcvp_range": "Medit."
-    },
-    {
-     "accepted_name": "Pancratium maritimum L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "παγκράτιον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Macaronesia",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Canary Is. (Fuerteventura), Medit. to Black Sea coast"
     },
     {
      "accepted_name": "Squilla maritima (L.) Steinh.",
@@ -8725,33 +8646,8 @@
   "dioscorides-3-33": {
    "name": "ἐλελίσφακον",
    "label": "3.33",
-   "first_candidate_that_fits": "Pastinaca sativa L.",
-   "candidates": [
-    {
-     "accepted_name": "Pastinaca sativa L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἐλαφοβόσκον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Middle Europe",
-      "Mongolia",
-      "Northern Europe",
-      "Siberia",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Europe to C. Siberia and Lebanon"
-    }
-   ]
+   "first_candidate_that_fits": null,
+   "candidates": []
   },
   "dioscorides-3-34": {
    "name": "ἡδύοσμον",
@@ -8790,31 +8686,6 @@
       "Western Asia"
      ],
      "wcvp_range": "Macaronesia, Temp. Eurasia to S. Africa"
-    },
-    {
-     "accepted_name": "Mentha spicata subsp. spicata ",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἡδύοσμον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Central Asia",
-      "China",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Middle Europe",
-      "Northern Europe",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Europe to China"
     },
     {
      "accepted_name": "Clinopodium nepeta",
@@ -8873,6 +8744,31 @@
      ],
      "geography": "not checked (genus or family level)",
      "native_regions": []
+    },
+    {
+     "accepted_name": "Mentha spicata subsp. spicata ",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "ἡδύοσμον"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Caucasus",
+      "Central Asia",
+      "China",
+      "Eastern Europe",
+      "Indian Subcontinent",
+      "Middle Europe",
+      "Northern Europe",
+      "Southeastern Europe",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "Europe to China"
     }
    ]
   },
@@ -8936,11 +8832,12 @@
     {
      "accepted_name": "Thymbra capitata (L.) Cav.",
      "rank": "species",
-     "strong_rows": 0,
+     "strong_rows": 1,
      "book_names": [
       "θύμον"
      ],
      "sources": [
+      "lexicon_this_chapter",
       "wikidata_grc"
      ],
      "geography": "local",
@@ -8957,25 +8854,8 @@
   "dioscorides-3-37": {
    "name": "θύμβρα",
    "label": "3.37",
-   "first_candidate_that_fits": "Origanum onites L.",
+   "first_candidate_that_fits": "Satureja thymbra L.",
    "candidates": [
-    {
-     "accepted_name": "Origanum onites L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἀγήρατον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Southeastern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Sicilia to Türkiye"
-    },
     {
      "accepted_name": "Satureja thymbra L.",
      "rank": "species",
@@ -9216,12 +9096,12 @@
     {
      "accepted_name": "Ruta graveolens L.",
      "rank": "species",
-     "strong_rows": 1,
+     "strong_rows": 0,
      "book_names": [
       "πήγανον"
      ],
      "sources": [
-      "lexicon_this_chapter"
+      "lexicon_headword"
      ],
      "geography": "local",
      "native_regions": [
@@ -9265,26 +9145,8 @@
   "dioscorides-3-51": {
    "name": "λιγυστικόν",
    "label": "3.51",
-   "first_candidate_that_fits": "Opopanax hispidus (Friv.) Griseb.",
+   "first_candidate_that_fits": null,
    "candidates": [
-    {
-     "accepted_name": "Opopanax hispidus (Friv.) Griseb.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "πανάκειαν"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Southeastern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "SE. Europe to W. Iran"
-    },
     {
      "accepted_name": "Laserpitium L.",
      "rank": "genus",
@@ -9357,8 +9219,29 @@
   "dioscorides-3-53": {
    "name": "σέσελι",
    "label": "3.53",
-   "first_candidate_that_fits": "Bupleurum fruticosum L.",
+   "first_candidate_that_fits": "Seseli tortuosum L.",
    "candidates": [
+    {
+     "accepted_name": "Seseli tortuosum L.",
+     "rank": "species",
+     "strong_rows": 1,
+     "book_names": [
+      "σέσελι"
+     ],
+     "sources": [
+      "lexicon_this_chapter"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Caucasus",
+      "Eastern Europe",
+      "Northern Africa",
+      "Southeastern Europe",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "Medit. to Iran"
+    },
     {
      "accepted_name": "Bupleurum fruticosum L.",
      "rank": "species",
@@ -9393,27 +9276,6 @@
       "Western Asia"
      ],
      "wcvp_range": "SE. Europe to NW. Türkiye"
-    },
-    {
-     "accepted_name": "Seseli tortuosum L.",
-     "rank": "species",
-     "strong_rows": 0,
-     "book_names": [
-      "σέσελι"
-     ],
-     "sources": [
-      "lexicon_headword"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Medit. to Iran"
     },
     {
      "accepted_name": "Tordylium officinale L.",
@@ -9572,22 +9434,6 @@
    "first_candidate_that_fits": "Cuminum cyminum L.",
    "candidates": [
     {
-     "accepted_name": "Cuminum cyminum L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "κύμινον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Western Asia"
-     ],
-     "wcvp_range": "Iraq to Afghanistan"
-    },
-    {
      "accepted_name": "Lagoecia cuminoides L.",
      "rank": "species",
      "strong_rows": 1,
@@ -9599,6 +9445,22 @@
      ],
      "geography": "no distribution data",
      "native_regions": []
+    },
+    {
+     "accepted_name": "Cuminum cyminum L.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "κύμινον"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Western Asia"
+     ],
+     "wcvp_range": "Iraq to Afghanistan"
     },
     {
      "accepted_name": "Nigella arvensis L.",
@@ -9982,21 +9844,7 @@
    "name": "πύρεθρος",
    "label": "3.73b",
    "first_candidate_that_fits": null,
-   "candidates": [
-    {
-     "accepted_name": "Convolvulus oleifolius Desr.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "δορύκνιον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "no distribution data",
-     "native_regions": []
-    }
-   ]
+   "candidates": []
   },
   "dioscorides-3-74": {
    "name": "λιβανωτίς",
@@ -10621,30 +10469,8 @@
   "dioscorides-3-94": {
    "name": "πολύκνημον",
    "label": "3.94",
-   "first_candidate_that_fits": "Polygonatum multiflorum (L.) All.",
+   "first_candidate_that_fits": "Polygonatum verticillatum (L.) All.",
    "candidates": [
-    {
-     "accepted_name": "Polygonatum multiflorum (L.) All.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "πολυγόνατον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Middle Europe",
-      "Northern Europe",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Europe to N. Iran"
-    },
     {
      "accepted_name": "Polygonatum verticillatum (L.) All.",
      "rank": "species",
@@ -10759,56 +10585,6 @@
      "wcvp_range": "Canary Is., Europe to Medit. and Iran"
     },
     {
-     "accepted_name": "Papaver somniferum L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "μήκων κερατῖτις"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Macaronesia",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe"
-     ],
-     "wcvp_range": "Macaronesia, W. & C. Medit."
-    },
-    {
-     "accepted_name": "Silene vulgaris (Moench) Garcke",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "μήκων κερατῖτις"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Arabian Peninsula",
-      "Caucasus",
-      "Central Asia",
-      "China",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Macaronesia",
-      "Middle Europe",
-      "Mongolia",
-      "Northern Africa",
-      "Northern Europe",
-      "Russian Far East",
-      "Siberia",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Temp. Eurasia, Macaronesia, N. Africa"
-    },
-    {
      "accepted_name": "Anemone L.",
      "rank": "genus",
      "strong_rows": 0,
@@ -10863,28 +10639,8 @@
   "dioscorides-3-98": {
    "name": "χαμαίρωψ",
    "label": "3.98",
-   "first_candidate_that_fits": "Teucrium flavum L.",
+   "first_candidate_that_fits": "Chamaerops humilis L.",
    "candidates": [
-    {
-     "accepted_name": "Teucrium flavum L.",
-     "rank": "species",
-     "strong_rows": 2,
-     "book_names": [
-      "Τεύκριον",
-      "ταύτην Τεύκριον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Medit."
-    },
     {
      "accepted_name": "Chamaerops L.",
      "rank": "genus",
@@ -11152,19 +10908,6 @@
    "label": "3.105",
    "first_candidate_that_fits": "Marrubium vulgare L.",
    "candidates": [
-    {
-     "accepted_name": "Agrimonia eupatoria L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "εὐπατόριον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "no distribution data",
-     "native_regions": []
-    },
     {
      "accepted_name": "Marrubium vulgare L.",
      "rank": "species",
@@ -11605,41 +11348,8 @@
   "dioscorides-3-114": {
    "name": "ἀμβροσία",
    "label": "3.114",
-   "first_candidate_that_fits": "Artemisia scoparia Waldst. & Kit.",
+   "first_candidate_that_fits": "Ambrosia maritima L.",
    "candidates": [
-    {
-     "accepted_name": "Artemisia scoparia Waldst. & Kit.",
-     "rank": "species",
-     "strong_rows": 2,
-     "book_names": [
-      "ἀρτεμισία",
-      "ἀρτεμισίαν"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Arabian Peninsula",
-      "Caucasus",
-      "Central Asia",
-      "China",
-      "Eastern Asia",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Indo-China",
-      "Middle Europe",
-      "Mongolia",
-      "Northern Africa",
-      "Northern Europe",
-      "Russian Far East",
-      "Siberia",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Eurasia"
-    },
     {
      "accepted_name": "Ambrosia maritima L.",
      "rank": "species",
@@ -11675,12 +11385,12 @@
     {
      "accepted_name": "Dysphania botrys (L.) Mosyakin & Clemants",
      "rank": "species",
-     "strong_rows": 0,
+     "strong_rows": 1,
      "book_names": [
       "βότρυς"
      ],
      "sources": [
-      "lexicon_headword"
+      "lexicon_this_chapter"
      ],
      "geography": "local",
      "native_regions": [
@@ -11901,12 +11611,12 @@
     {
      "accepted_name": "Vitis vinifera L.",
      "rank": "species",
-     "strong_rows": 1,
+     "strong_rows": 0,
      "book_names": [
       "οἰνάνθη"
      ],
      "sources": [
-      "lexicon_this_chapter"
+      "lexicon_headword"
      ],
      "geography": "local",
      "native_regions": [
@@ -11925,27 +11635,8 @@
   "dioscorides-3-121": {
    "name": "κόνυζα",
    "label": "3.121",
-   "first_candidate_that_fits": "Salvia rosmarinus Spenn.",
+   "first_candidate_that_fits": "Dittrichia graveolens (L.) Greuter",
    "candidates": [
-    {
-     "accepted_name": "Salvia rosmarinus Spenn.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "λιβανωτίς"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Medit."
-    },
     {
      "accepted_name": "Dittrichia graveolens (L.) Greuter",
      "rank": "species",
@@ -12478,36 +12169,8 @@
   "dioscorides-3-134": {
    "name": "ἄσπληνος",
    "label": "3.134",
-   "first_candidate_that_fits": "Asplenium ceterach L.",
+   "first_candidate_that_fits": "Polystichum lonchitis (L.) Roth",
    "candidates": [
-    {
-     "accepted_name": "Asplenium ceterach L.",
-     "rank": "species",
-     "strong_rows": 2,
-     "book_names": [
-      "ἡμιόνιον",
-      "ἡμιόνιον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Central Asia",
-      "China",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Middle Europe",
-      "Northeast Tropical Africa",
-      "Northern Africa",
-      "Northern Europe",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Europe to Tibet, NW. Africa"
-    },
     {
      "accepted_name": "Asplenium L.",
      "rank": "genus",
@@ -13131,55 +12794,14 @@
   "dioscorides-3-154": {
    "name": "ὑπερικόν",
    "label": "3.154",
-   "first_candidate_that_fits": "Hypericum perfoliatum L.",
-   "candidates": [
-    {
-     "accepted_name": "Hypericum perfoliatum L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἀνδρόσαιμον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Macaronesia",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Macaronesia, Medit."
-    }
-   ]
+   "first_candidate_that_fits": null,
+   "candidates": []
   },
   "dioscorides-3-155": {
    "name": "ἄσκυρον",
    "label": "3.155",
-   "first_candidate_that_fits": "Hypericum perfoliatum L.",
+   "first_candidate_that_fits": "Hypericum perforatum L.",
    "candidates": [
-    {
-     "accepted_name": "Hypericum perfoliatum L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἀνδρόσαιμον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Macaronesia",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Macaronesia, Medit."
-    },
     {
      "accepted_name": "Hypericum perforatum L.",
      "rank": "species",
@@ -13401,52 +13023,8 @@
   "dioscorides-4-4": {
    "name": "πολύγονον",
    "label": "4.4",
-   "first_candidate_that_fits": "Bituminaria bituminosa (L.) C.H.Stirt.",
+   "first_candidate_that_fits": "Hippuris vulgaris L.",
    "candidates": [
-    {
-     "accepted_name": "Bituminaria bituminosa (L.) C.H.Stirt.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἀσφάλτιον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Macaronesia",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Macaronesia, Medit. to Caucasus"
-    },
-    {
-     "accepted_name": "Polygonatum multiflorum (L.) All.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "πολυγόνατον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Middle Europe",
-      "Northern Europe",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Europe to N. Iran"
-    },
     {
      "accepted_name": "Hippuris vulgaris L.",
      "rank": "species",
@@ -13859,28 +13437,6 @@
       "Southwestern Europe"
      ],
      "wcvp_range": "W. & C. Medit."
-    },
-    {
-     "accepted_name": "Inula helenium L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "Ἐλένιον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Central Asia",
-      "China",
-      "Eastern Europe",
-      "Siberia",
-      "Southeastern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "SE. Europe to W. Siberia and Iran"
     },
     {
      "accepted_name": "Symphytum bulbosum K.F.Schimp.",
@@ -14521,34 +14077,6 @@
       "Southwestern Europe"
      ],
      "wcvp_range": "Azores, W. Europe to W. & C. Medit."
-    },
-    {
-     "accepted_name": "Xanthium strumarium L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ξάνθιον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Central Asia",
-      "China",
-      "Eastern Asia",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Indo-China",
-      "Middle Europe",
-      "Mongolia",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "SC. & S. Europe to China and Indo-China, Taiwan, NW. Africa"
     }
    ]
   },
@@ -14709,35 +14237,8 @@
   "dioscorides-4-28": {
    "name": "ὠκιμοειδές",
    "label": "4.28",
-   "first_candidate_that_fits": "Althaea officinalis L.",
+   "first_candidate_that_fits": "Echium plantagineum L.",
    "candidates": [
-    {
-     "accepted_name": "Althaea officinalis L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἀλθαία"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Central Asia",
-      "China",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Middle Europe",
-      "Northern Africa",
-      "Northern Europe",
-      "Siberia",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Europe to C. Siberia and W. Pakistan, NW. Africa"
-    },
     {
      "accepted_name": "Echium plantagineum L.",
      "rank": "species",
@@ -15266,31 +14767,8 @@
   "dioscorides-4-42": {
    "name": "πεντέφθλλον",
    "label": "4.42",
-   "first_candidate_that_fits": "Bituminaria bituminosa (L.) C.H.Stirt.",
-   "candidates": [
-    {
-     "accepted_name": "Bituminaria bituminosa (L.) C.H.Stirt.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἀσφάλτιον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Macaronesia",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Macaronesia, Medit. to Caucasus"
-    }
-   ]
+   "first_candidate_that_fits": null,
+   "candidates": []
   },
   "dioscorides-4-43": {
    "name": "φοῖνιξ",
@@ -15663,50 +15141,14 @@
       "Western Asia"
      ],
      "wcvp_range": "Aegean Is. to W. & SW. Türkiye, NW. Egypt"
-    },
-    {
-     "accepted_name": "Ranunculus asiaticus L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "χρυσάνθεμον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Northern Africa",
-      "Southeastern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "S. Aegean Is. to W. & SW. Iran"
     }
    ]
   },
   "dioscorides-4-56": {
    "name": "χρυσόγονον",
    "label": "4.56",
-   "first_candidate_that_fits": "Linum usitatissimum L.",
+   "first_candidate_that_fits": "Bongardia chrysogonum (L.) Spach",
    "candidates": [
-    {
-     "accepted_name": "Linum usitatissimum L.",
-     "rank": "species",
-     "strong_rows": 2,
-     "book_names": [
-      "λίνον",
-      "λίνον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Western Asia"
-     ],
-     "wcvp_range": "Türkiye to Iran"
-    },
     {
      "accepted_name": "Bongardia chrysogonum (L.) Spach",
      "rank": "species",
@@ -15778,27 +15220,8 @@
   "dioscorides-4-59": {
    "name": "περιστέριον",
    "label": "4.59",
-   "first_candidate_that_fits": "Bunium ferulaceum Sm.",
+   "first_candidate_that_fits": "Verbena officinalis L.",
    "candidates": [
-    {
-     "accepted_name": "Bunium ferulaceum Sm.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "βούνιον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Southeastern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "E. Medit. to Transcaucasus"
-    },
     {
      "accepted_name": "Verbena officinalis L.",
      "rank": "species",
@@ -15948,25 +15371,8 @@
   "dioscorides-4-61": {
    "name": "ἀστράγαλος",
    "label": "4.61",
-   "first_candidate_that_fits": "Euphorbia apios L.",
+   "first_candidate_that_fits": "Lathyrus niger (L.) Bernh.",
    "candidates": [
-    {
-     "accepted_name": "Euphorbia apios L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἄπιος"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Southeastern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "SE. Europe to Syria"
-    },
     {
      "accepted_name": "Lathyrus niger (L.) Bernh.",
      "rank": "species",
@@ -15989,27 +15395,6 @@
       "Western Asia"
      ],
      "wcvp_range": "Europe to Caucasus, NW. Africa"
-    },
-    {
-     "accepted_name": "Pyrus communis L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἄπιος"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Middle Europe",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Europe to N. Iraq"
     },
     {
      "accepted_name": "Pyrus L.",
@@ -16247,33 +15632,8 @@
   "dioscorides-4-64": {
    "name": "μήκων",
    "label": "4.64",
-   "first_candidate_that_fits": "Glaucium flavum Crantz",
+   "first_candidate_that_fits": "Papaver rhoeas L.",
    "candidates": [
-    {
-     "accepted_name": "Glaucium flavum Crantz",
-     "rank": "species",
-     "strong_rows": 2,
-     "book_names": [
-      "μήκων",
-      "μήκων δοιάς"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Macaronesia",
-      "Middle Europe",
-      "Northern Africa",
-      "Northern Europe",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Canary Is., Europe to Medit. and Iran"
-    },
     {
      "accepted_name": "Papaver rhoeas L.",
      "rank": "species",
@@ -16322,50 +15682,28 @@
      "wcvp_range": "Macaronesia, W. & C. Medit."
     },
     {
-     "accepted_name": "Roemeria hispida (Lam.) Stace",
+     "accepted_name": "Glaucium flavum Crantz",
      "rank": "species",
-     "strong_rows": 2,
+     "strong_rows": 0,
      "book_names": [
-      "μήκων",
-      "μήκων δοιάς"
+      "μήκων"
      ],
      "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "no distribution data",
-     "native_regions": []
-    },
-    {
-     "accepted_name": "Silene vulgaris (Moench) Garcke",
-     "rank": "species",
-     "strong_rows": 2,
-     "book_names": [
-      "μήκων",
-      "μήκων δοιάς"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
+      "lexicon_headword"
      ],
      "geography": "local",
      "native_regions": [
-      "Arabian Peninsula",
       "Caucasus",
-      "Central Asia",
-      "China",
       "Eastern Europe",
-      "Indian Subcontinent",
       "Macaronesia",
       "Middle Europe",
-      "Mongolia",
       "Northern Africa",
       "Northern Europe",
-      "Russian Far East",
-      "Siberia",
       "Southeastern Europe",
       "Southwestern Europe",
       "Western Asia"
      ],
-     "wcvp_range": "Temp. Eurasia, Macaronesia, N. Africa"
+     "wcvp_range": "Canary Is., Europe to Medit. and Iran"
     },
     {
      "accepted_name": "Roemeria argemone (L.) C.Morales, R.Mend. & Romero García",
@@ -16389,6 +15727,50 @@
       "Western Asia"
      ],
      "wcvp_range": "Canary Is., Europe to Medit."
+    },
+    {
+     "accepted_name": "Roemeria hispida (Lam.) Stace",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "μήκων"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "no distribution data",
+     "native_regions": []
+    },
+    {
+     "accepted_name": "Silene vulgaris (Moench) Garcke",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "μήκων"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Arabian Peninsula",
+      "Caucasus",
+      "Central Asia",
+      "China",
+      "Eastern Europe",
+      "Indian Subcontinent",
+      "Macaronesia",
+      "Middle Europe",
+      "Mongolia",
+      "Northern Africa",
+      "Northern Europe",
+      "Russian Far East",
+      "Siberia",
+      "Southeastern Europe",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "Temp. Eurasia, Macaronesia, N. Africa"
     }
    ]
   },
@@ -16422,56 +15804,6 @@
      "wcvp_range": "Canary Is., Europe to Medit. and Iran"
     },
     {
-     "accepted_name": "Papaver somniferum L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "μήκων"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Macaronesia",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe"
-     ],
-     "wcvp_range": "Macaronesia, W. & C. Medit."
-    },
-    {
-     "accepted_name": "Silene vulgaris (Moench) Garcke",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "μήκων"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Arabian Peninsula",
-      "Caucasus",
-      "Central Asia",
-      "China",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Macaronesia",
-      "Middle Europe",
-      "Mongolia",
-      "Northern Africa",
-      "Northern Europe",
-      "Russian Far East",
-      "Siberia",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Temp. Eurasia, Macaronesia, N. Africa"
-    },
-    {
      "accepted_name": "Papaver rhoeas L.",
      "rank": "species",
      "strong_rows": 0,
@@ -16496,6 +15828,25 @@
       "Western Asia"
      ],
      "wcvp_range": "Macaronesia, Europe to Medit. and W. Himalaya"
+    },
+    {
+     "accepted_name": "Papaver somniferum L.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "μήκων"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Macaronesia",
+      "Northern Africa",
+      "Southeastern Europe",
+      "Southwestern Europe"
+     ],
+     "wcvp_range": "Macaronesia, W. & C. Medit."
     },
     {
      "accepted_name": "Roemeria argemone (L.) C.Morales, R.Mend. & Romero García",
@@ -16532,33 +15883,45 @@
      ],
      "geography": "no distribution data",
      "native_regions": []
+    },
+    {
+     "accepted_name": "Silene vulgaris (Moench) Garcke",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "μήκων"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Arabian Peninsula",
+      "Caucasus",
+      "Central Asia",
+      "China",
+      "Eastern Europe",
+      "Indian Subcontinent",
+      "Macaronesia",
+      "Middle Europe",
+      "Mongolia",
+      "Northern Africa",
+      "Northern Europe",
+      "Russian Far East",
+      "Siberia",
+      "Southeastern Europe",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "Temp. Eurasia, Macaronesia, N. Africa"
     }
    ]
   },
   "dioscorides-4-66": {
    "name": "μήκων",
    "label": "4.66",
-   "first_candidate_that_fits": "Papaver somniferum L.",
+   "first_candidate_that_fits": "Silene vulgaris (Moench) Garcke",
    "candidates": [
-    {
-     "accepted_name": "Papaver somniferum L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "μήκων"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Macaronesia",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe"
-     ],
-     "wcvp_range": "Macaronesia, W. & C. Medit."
-    },
     {
      "accepted_name": "Silene vulgaris (Moench) Garcke",
      "rank": "species",
@@ -16639,6 +16002,25 @@
       "Western Asia"
      ],
      "wcvp_range": "Macaronesia, Europe to Medit. and W. Himalaya"
+    },
+    {
+     "accepted_name": "Papaver somniferum L.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "μήκων"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Macaronesia",
+      "Northern Africa",
+      "Southeastern Europe",
+      "Southwestern Europe"
+     ],
+     "wcvp_range": "Macaronesia, W. & C. Medit."
     },
     {
      "accepted_name": "Roemeria argemone (L.) C.Morales, R.Mend. & Romero García",
@@ -17393,28 +16775,8 @@
   "dioscorides-4-79": {
    "name": "σμῖλαξ",
    "label": "4.79",
-   "first_candidate_that_fits": "Quercus ilex L.",
+   "first_candidate_that_fits": "Taxus baccata L.",
    "candidates": [
-    {
-     "accepted_name": "Quercus ilex L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "σμῖλαξ"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Middle Europe",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "SC. Europe to Medit."
-    },
     {
      "accepted_name": "Taxus baccata L.",
      "rank": "species",
@@ -17502,6 +16864,26 @@
       "Western South America"
      ],
      "wcvp_range": "Mexico to NW. Venezuela and N. Argentina"
+    },
+    {
+     "accepted_name": "Quercus ilex L.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "σμῖλαξ"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Middle Europe",
+      "Northern Africa",
+      "Southeastern Europe",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "SC. Europe to Medit."
     },
     {
      "accepted_name": "Smilax L.",
@@ -17623,28 +17005,8 @@
   "dioscorides-4-83": {
    "name": "Κολχικόν",
    "label": "4.83",
-   "first_candidate_that_fits": "Colchicum autumnale L.",
+   "first_candidate_that_fits": "Colchicum speciosum Steven",
    "candidates": [
-    {
-     "accepted_name": "Colchicum autumnale L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἐφήμερον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Eastern Europe",
-      "Middle Europe",
-      "Northern Europe",
-      "Southeastern Europe",
-      "Southwestern Europe"
-     ],
-     "wcvp_range": "Europe"
-    },
     {
      "accepted_name": "Colchicum speciosum Steven",
      "rank": "species",
@@ -17667,28 +17029,8 @@
   "dioscorides-4-84": {
    "name": "ἐφήμερον",
    "label": "4.84",
-   "first_candidate_that_fits": "Colchicum autumnale L.",
+   "first_candidate_that_fits": "Polygonatum multiflorum (L.) All.",
    "candidates": [
-    {
-     "accepted_name": "Colchicum autumnale L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἐφήμερον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Eastern Europe",
-      "Middle Europe",
-      "Northern Europe",
-      "Southeastern Europe",
-      "Southwestern Europe"
-     ],
-     "wcvp_range": "Europe"
-    },
     {
      "accepted_name": "Polygonatum multiflorum (L.) All.",
      "rank": "species",
@@ -17710,6 +17052,26 @@
       "Western Asia"
      ],
      "wcvp_range": "Europe to N. Iran"
+    },
+    {
+     "accepted_name": "Colchicum autumnale L.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "ἐφήμερον"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Eastern Europe",
+      "Middle Europe",
+      "Northern Europe",
+      "Southeastern Europe",
+      "Southwestern Europe"
+     ],
+     "wcvp_range": "Europe"
     }
    ]
   },
@@ -17741,52 +17103,6 @@
       "Western Asia"
      ],
      "wcvp_range": "EC. & S. Europe to N. Iran and Turkmenistan"
-    },
-    {
-     "accepted_name": "Polygonum maritimum L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "περδίκιον"
-     ],
-     "sources": [
-      "lexicon_this_chapter",
-      "wikidata_grc"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Macaronesia",
-      "Middle Europe",
-      "Northern Africa",
-      "Northern Europe",
-      "Southeastern Europe",
-      "Southern Africa",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Macaronesia, Europe to Medit. and W. Caucasus, Cape Prov."
-    },
-    {
-     "accepted_name": "Tanacetum parthenium (L.) Sch.Bip.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "παρθένιον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Southeastern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "SE. Europe to W. Himalaya"
     },
     {
      "accepted_name": "Convolvulus arvensis L.",
@@ -17821,6 +17137,31 @@
       "Western Asia"
      ],
      "wcvp_range": "Temp. & Subtrop. Old World"
+    },
+    {
+     "accepted_name": "Polygonum maritimum L.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "περδίκιον"
+     ],
+     "sources": [
+      "wikidata_grc"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Caucasus",
+      "Eastern Europe",
+      "Macaronesia",
+      "Middle Europe",
+      "Northern Africa",
+      "Northern Europe",
+      "Southeastern Europe",
+      "Southern Africa",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "Macaronesia, Europe to Medit. and W. Caucasus, Cape Prov."
     }
    ]
   },
@@ -17949,28 +17290,8 @@
   "dioscorides-4-88": {
    "name": "ἀείζῳον",
    "label": "4.88",
-   "first_candidate_that_fits": "Porophyllum ruderale subsp. macrocephalum (DC.) R.R.Johnson",
+   "first_candidate_that_fits": "Aeonium arboreum (L.) Webb & Berthel.",
    "candidates": [
-    {
-     "accepted_name": "Porophyllum ruderale subsp. macrocephalum (DC.) R.R.Johnson",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "βούφθαλμον"
-     ],
-     "sources": [
-      "lexicon_this_chapter",
-      "wikidata_grc"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Macaronesia",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe"
-     ],
-     "wcvp_range": "Macaronesia, W. & C. Medit."
-    },
     {
      "accepted_name": "Aeonium arboreum (L.) Webb & Berthel.",
      "rank": "species",
@@ -17987,6 +17308,25 @@
       "Northern Africa"
      ],
      "wcvp_range": "Canary Is., SW. Morocco"
+    },
+    {
+     "accepted_name": "Porophyllum ruderale subsp. macrocephalum (DC.) R.R.Johnson",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "βούφθαλμον"
+     ],
+     "sources": [
+      "wikidata_grc"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Macaronesia",
+      "Northern Africa",
+      "Southeastern Europe",
+      "Southwestern Europe"
+     ],
+     "wcvp_range": "Macaronesia, W. & C. Medit."
     },
     {
      "accepted_name": "Sempervivum tectorum L.",
@@ -18016,12 +17356,12 @@
     {
      "accepted_name": "Aeonium arboreum (L.) Webb & Berthel.",
      "rank": "species",
-     "strong_rows": 0,
+     "strong_rows": 1,
      "book_names": [
       "ἀείζῳον"
      ],
      "sources": [
-      "lexicon_headword"
+      "lexicon_this_chapter"
      ],
      "geography": "local",
      "native_regions": [
@@ -18033,12 +17373,12 @@
     {
      "accepted_name": "Sempervivum tectorum L.",
      "rank": "species",
-     "strong_rows": 0,
+     "strong_rows": 1,
      "book_names": [
       "ἀείζῳον"
      ],
      "sources": [
-      "lexicon_headword"
+      "lexicon_this_chapter"
      ],
      "geography": "local",
      "native_regions": [
@@ -18438,12 +17778,12 @@
     {
      "accepted_name": "Pistia stratiotes L.",
      "rank": "species",
-     "strong_rows": 1,
+     "strong_rows": 0,
      "book_names": [
       "στρατιώτης"
      ],
      "sources": [
-      "lexicon_this_chapter"
+      "lexicon_headword"
      ],
      "geography": "local",
      "native_regions": [
@@ -18589,78 +17929,6 @@
       "Western Asia"
      ],
      "wcvp_range": "Temp. Eurasia"
-    },
-    {
-     "accepted_name": "Galium aparine L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἀπαρίνην"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Arabian Peninsula",
-      "Central Asia",
-      "China",
-      "Eastern Asia",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Indo-China",
-      "Macaronesia",
-      "Middle Europe",
-      "Mongolia",
-      "Northern Africa",
-      "Northern Europe",
-      "Siberia",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Macaronesia to Temp. Eurasia"
-    },
-    {
-     "accepted_name": "Potamogeton natans L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ποταμογείτων"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Arabian Peninsula",
-      "Caucasus",
-      "Central Asia",
-      "China",
-      "Eastern Asia",
-      "Eastern Canada",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Indo-China",
-      "Mexico",
-      "Middle Europe",
-      "Mongolia",
-      "North-Central U.S.A.",
-      "Northeastern U.S.A.",
-      "Northern Africa",
-      "Northern Europe",
-      "Northwestern U.S.A.",
-      "Russian Far East",
-      "Siberia",
-      "South-Central U.S.A.",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Southwestern U.S.A.",
-      "Subarctic America",
-      "Western Asia",
-      "Western Canada"
-     ],
-     "wcvp_range": "Temp. & Subtrop. Northern Hemisphere"
     }
    ]
   },
@@ -18824,22 +18092,6 @@
       "Western Asia"
      ],
      "wcvp_range": "Medit. to W. Eritrea"
-    },
-    {
-     "accepted_name": "Trigonella graeca (Boiss. & Spruner) Boiss.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "λωτὸς"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Southeastern Europe"
-     ],
-     "wcvp_range": "S. Albania to W. & S. Greece and Kriti"
     },
     {
      "accepted_name": "Nymphaea lotus L.",
@@ -19064,6 +18316,22 @@
       "Western Asia"
      ],
      "wcvp_range": "Medit. to Caucasus"
+    },
+    {
+     "accepted_name": "Trigonella graeca (Boiss. & Spruner) Boiss.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "λωτὸς"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Southeastern Europe"
+     ],
+     "wcvp_range": "S. Albania to W. & S. Greece and Kriti"
     }
    ]
   },
@@ -19422,24 +18690,6 @@
      "wcvp_range": "Africa"
     },
     {
-     "accepted_name": "Medicago arborea L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "λωτὸς"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "S. Europe to Türkiye"
-    },
-    {
      "accepted_name": "Celtis australis L.",
      "rank": "species",
      "strong_rows": 0,
@@ -19489,6 +18739,24 @@
       "Western Asia"
      ],
      "wcvp_range": "Temp. Eurasia, Macaronesia to NE. & E. Trop. Africa, SW. Arabian Pen."
+    },
+    {
+     "accepted_name": "Medicago arborea L.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "λωτὸς"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Southeastern Europe",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "S. Europe to Türkiye"
     },
     {
      "accepted_name": "Melilotus siculus (Turra) Steud.",
@@ -19915,12 +19183,12 @@
     {
      "accepted_name": "Mercurialis tomentosa L.",
      "rank": "species",
-     "strong_rows": 0,
+     "strong_rows": 1,
      "book_names": [
       "κακκαλία"
      ],
      "sources": [
-      "lexicon_headword"
+      "lexicon_this_chapter"
      ],
      "geography": "local",
      "native_regions": [
@@ -20236,32 +19504,6 @@
      "wcvp_range": "Macaronesia, Medit. to NE. Sudan"
     },
     {
-     "accepted_name": "Rosa canina L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "κυνόροδον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Central Asia",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Macaronesia",
-      "Middle Europe",
-      "Northern Africa",
-      "Northern Europe",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Madeira, NW. Africa, Europe to C. Asia and Pakistan"
-    },
-    {
      "accepted_name": "Antirrhinum L.",
      "rank": "genus",
      "strong_rows": 0,
@@ -20523,126 +19765,14 @@
       "Western Canada"
      ],
      "wcvp_range": "Temp. & Subtrop. Northern Hemisphere, Hawaiian Is."
-    },
-    {
-     "accepted_name": "Adiantum capillus-veneris L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "τοῦτο ἀδίαντον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Arabian Peninsula",
-      "Australia",
-      "Brazil",
-      "Caribbean",
-      "Caucasus",
-      "Central America",
-      "Central Asia",
-      "China",
-      "East Tropical Africa",
-      "Eastern Asia",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Indo-China",
-      "Macaronesia",
-      "Malesia",
-      "Mexico",
-      "Middle Europe",
-      "North-Central Pacific",
-      "North-Central U.S.A.",
-      "Northeast Tropical Africa",
-      "Northeastern U.S.A.",
-      "Northern Africa",
-      "Northern Europe",
-      "Northern South America",
-      "Northwestern U.S.A.",
-      "South Tropical Africa",
-      "South-Central Pacific",
-      "South-Central U.S.A.",
-      "Southeastern Europe",
-      "Southeastern U.S.A.",
-      "Southern Africa",
-      "Southern South America",
-      "Southwestern Europe",
-      "Southwestern Pacific",
-      "Southwestern U.S.A.",
-      "West Tropical Africa",
-      "West-Central Tropical Africa",
-      "Western Asia",
-      "Western Canada",
-      "Western Indian Ocean",
-      "Western South America"
-     ],
-     "wcvp_range": "Cosmopolitan"
     }
    ]
   },
   "dioscorides-4-136": {
    "name": "ξάνθιον",
    "label": "4.136",
-   "first_candidate_that_fits": "Galium aparine L.",
+   "first_candidate_that_fits": "Xanthium strumarium L.",
    "candidates": [
-    {
-     "accepted_name": "Galium aparine L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ταύτην ἀπαρίνην"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Arabian Peninsula",
-      "Central Asia",
-      "China",
-      "Eastern Asia",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Indo-China",
-      "Macaronesia",
-      "Middle Europe",
-      "Mongolia",
-      "Northern Africa",
-      "Northern Europe",
-      "Siberia",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Macaronesia to Temp. Eurasia"
-    },
-    {
-     "accepted_name": "Gladiolus italicus Mill.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "φάσγανον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Arabian Peninsula",
-      "Caucasus",
-      "Central Asia",
-      "Eastern Europe",
-      "Macaronesia",
-      "Middle Europe",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Macaronesia, Medit. to C. Asia"
-    },
     {
      "accepted_name": "Xanthium strumarium L.",
      "rank": "species",
@@ -20910,42 +20040,8 @@
   "dioscorides-4-142": {
    "name": "μῖλαξ",
    "label": "4.142",
-   "first_candidate_that_fits": "Convolvulus arvensis L.",
+   "first_candidate_that_fits": "Lonicera periclymenum L.",
    "candidates": [
-    {
-     "accepted_name": "Convolvulus arvensis L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἑλξίνη"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Arabian Peninsula",
-      "Caucasus",
-      "Central Asia",
-      "China",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Indo-China",
-      "Macaronesia",
-      "Middle Europe",
-      "Mongolia",
-      "Northeast Tropical Africa",
-      "Northern Africa",
-      "Northern Europe",
-      "Russian Far East",
-      "Siberia",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "West Tropical Africa",
-      "Western Asia"
-     ],
-     "wcvp_range": "Temp. & Subtrop. Old World"
-    },
     {
      "accepted_name": "Lonicera periclymenum L.",
      "rank": "species",
@@ -21123,29 +20219,8 @@
   "dioscorides-4-146": {
    "name": "δαφνοειδές",
    "label": "4.146",
-   "first_candidate_that_fits": "Vinca herbacea Waldst. & Kit.",
-   "candidates": [
-    {
-     "accepted_name": "Vinca herbacea Waldst. & Kit.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "χαμαιδάφνην"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Middle Europe",
-      "Southeastern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "C. & SE. Europe to W. Asia"
-    }
-   ]
+   "first_candidate_that_fits": null,
+   "candidates": []
   },
   "dioscorides-4-147": {
    "name": "χαμαιδάφνη",
@@ -21155,12 +20230,12 @@
     {
      "accepted_name": "Vinca herbacea Waldst. & Kit.",
      "rank": "species",
-     "strong_rows": 1,
+     "strong_rows": 0,
      "book_names": [
       "χαμαιδάφνη"
      ],
      "sources": [
-      "lexicon_this_chapter"
+      "lexicon_headword"
      ],
      "geography": "local",
      "native_regions": [
@@ -21202,31 +20277,6 @@
       "Western Asia"
      ],
      "wcvp_range": "Europe to N. Russian Far East"
-    },
-    {
-     "accepted_name": "Vincetoxicum hirundinaria Medik.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "Ἀσκληπιάδα"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Central Asia",
-      "Eastern Europe",
-      "Middle Europe",
-      "Northern Africa",
-      "Northern Europe",
-      "Siberia",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Europe to W. Siberia and N. Türkiye, NW. Africa"
     },
     {
      "accepted_name": "Helleborus orientalis Lam.",
@@ -21409,30 +20459,8 @@
   "dioscorides-4-156": {
    "name": "βολβὸς",
    "label": "4.156",
-   "first_candidate_that_fits": "Muscari comosum (L.) Mill.",
+   "first_candidate_that_fits": "Narcissus tazetta L.",
    "candidates": [
-    {
-     "accepted_name": "Muscari comosum (L.) Mill.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "βολβὸς"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Eastern Europe",
-      "Macaronesia",
-      "Middle Europe",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Canary Is. to C. Europe and Iran"
-    },
     {
      "accepted_name": "Narcissus tazetta L.",
      "rank": "species",
@@ -21456,6 +20484,28 @@
       "Western Asia"
      ],
      "wcvp_range": "Canary Is., Medit. to Pakistan, SE. China to Japan"
+    },
+    {
+     "accepted_name": "Muscari comosum (L.) Mill.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "βολβὸς"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Eastern Europe",
+      "Macaronesia",
+      "Middle Europe",
+      "Northern Africa",
+      "Southeastern Europe",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "Canary Is. to C. Europe and Iran"
     },
     {
      "accepted_name": "Scilla hyacinthoides L.",
@@ -21529,9 +20579,8 @@
     {
      "accepted_name": "Narcissus tazetta L.",
      "rank": "species",
-     "strong_rows": 2,
+     "strong_rows": 1,
      "book_names": [
-      "βολβὸς ὁ ἐμετικός",
       "λείριον",
       "νάρκισσος"
      ],
@@ -21574,46 +20623,6 @@
      "wcvp_range": "EC. & S. Europe to Ukraine"
     },
     {
-     "accepted_name": "Muscari comosum (L.) Mill.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "βολβὸς ὁ ἐμετικός"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Eastern Europe",
-      "Macaronesia",
-      "Middle Europe",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Canary Is. to C. Europe and Iran"
-    },
-    {
-     "accepted_name": "Scilla hyacinthoides L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "βολβὸς ὁ ἐμετικός"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "S. Europe to N. Iraq"
-    },
-    {
      "accepted_name": "Narcissus serotinus L.",
      "rank": "species",
      "strong_rows": 0,
@@ -21635,29 +20644,8 @@
   "dioscorides-4-159": {
    "name": "ἱπποφαές",
    "label": "4.159",
-   "first_candidate_that_fits": "Coronilla securidaca L.",
+   "first_candidate_that_fits": "Euphorbia spinosa L.",
    "candidates": [
-    {
-     "accepted_name": "Coronilla securidaca L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "πελεκῖνος"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Northern Africa",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Medit. to Iran"
-    },
     {
      "accepted_name": "Euphorbia spinosa L.",
      "rank": "species",
@@ -21751,12 +20739,12 @@
     {
      "accepted_name": "Veratrum album L.",
      "rank": "species",
-     "strong_rows": 1,
+     "strong_rows": 0,
      "book_names": [
       "ἐλλέβορος"
      ],
      "sources": [
-      "lexicon_this_chapter"
+      "lexicon_headword"
      ],
      "geography": "local",
      "native_regions": [
@@ -21926,23 +20914,6 @@
       "Western Asia"
      ],
      "wcvp_range": "Macaronesia, Europe, Medit. to Iran"
-    },
-    {
-     "accepted_name": "Polygala venulosa Sm.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "πολύγαλον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Southeastern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "S. Greece to SW. Türkiye, Cyprus"
     }
    ]
   },
@@ -22078,27 +21049,6 @@
      "wcvp_range": "SE. Europe to Syria"
     },
     {
-     "accepted_name": "Pyrus communis L.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "ἄπιος"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Middle Europe",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Europe to N. Iraq"
-    },
-    {
      "accepted_name": "Pyrus L.",
      "rank": "genus",
      "strong_rows": 0,
@@ -22110,6 +21060,27 @@
      ],
      "geography": "not checked (genus or family level)",
      "native_regions": []
+    },
+    {
+     "accepted_name": "Pyrus communis L.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "ἄπιος"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Caucasus",
+      "Eastern Europe",
+      "Middle Europe",
+      "Southeastern Europe",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "Europe to N. Iraq"
     }
    ]
   },
@@ -22507,31 +21478,8 @@
   "dioscorides-4-183": {
    "name": "ἄμπελος",
    "label": "4.183",
-   "first_candidate_that_fits": "Bryonia cretica L.",
+   "first_candidate_that_fits": "Dioscorea communis (L.) Caddick & Wilkin",
    "candidates": [
-    {
-     "accepted_name": "Bryonia cretica L.",
-     "rank": "species",
-     "strong_rows": 3,
-     "book_names": [
-      "Χειρώνιον ἄμπελον",
-      "ἄμπελος",
-      "ἄμπελος μέλαινα"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Middle Europe",
-      "Northern Africa",
-      "Northern Europe",
-      "Southeastern Europe",
-      "Southwestern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "Europe to Medit."
-    },
     {
      "accepted_name": "Dioscorea communis (L.) Caddick & Wilkin",
      "rank": "species",
@@ -22557,6 +21505,27 @@
       "Western Asia"
      ],
      "wcvp_range": "Azores, W. Europe to Medit. and N. Iran"
+    },
+    {
+     "accepted_name": "Bryonia cretica L.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "ἄμπελος"
+     ],
+     "sources": [
+      "lexicon_headword"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "Middle Europe",
+      "Northern Africa",
+      "Northern Europe",
+      "Southeastern Europe",
+      "Southwestern Europe",
+      "Western Asia"
+     ],
+     "wcvp_range": "Europe to Medit."
     },
     {
      "accepted_name": "Osmundaria volubilis",
@@ -22875,28 +21844,8 @@
   "dioscorides-4-189": {
    "name": "λινόζωστις",
    "label": "4.189",
-   "first_candidate_that_fits": "Tanacetum parthenium (L.) Sch.Bip.",
+   "first_candidate_that_fits": "Mercurialis annua L.",
    "candidates": [
-    {
-     "accepted_name": "Tanacetum parthenium (L.) Sch.Bip.",
-     "rank": "species",
-     "strong_rows": 1,
-     "book_names": [
-      "παρθένιον"
-     ],
-     "sources": [
-      "lexicon_this_chapter"
-     ],
-     "geography": "local",
-     "native_regions": [
-      "Caucasus",
-      "Eastern Europe",
-      "Indian Subcontinent",
-      "Southeastern Europe",
-      "Western Asia"
-     ],
-     "wcvp_range": "SE. Europe to W. Himalaya"
-    },
     {
      "accepted_name": "Mercurialis annua L.",
      "rank": "species",

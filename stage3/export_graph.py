@@ -105,10 +105,15 @@ def main() -> None:
 
     claims = []
     summaries = {c["claim_id"]: c for c in load(A_DIR / "claim_summaries.jsonl")}
+    qfile = P["studies"] / "queries.jsonl"           # no query log (the pilot's first retrieval): all searched
+    searched = {u for q in load(qfile) for u in q.get("unit_ids", [])} if qfile.exists() else set(U)
     for cid in sorted({u["claim_id"] for u in U.values()}):
         sp = next(u["taxon"]["accepted_name"] for u in U.values() if u["claim_id"] == cid)
+        # a unit that was never searched (new after a Stage 2 change) is "not yet searched", not "nothing found"
+        was_searched = any(k in searched for k, u in U.items() if u["claim_id"] == cid)
         c = summaries.get(cid) or {"claim_id": cid, "species": sp, "studies": 0, "lanes": {},
-                                   "search": "no source found by our searches (not the same as not studied)"}
+                                   "search": "no source found by our searches (not the same as not studied)"
+                                   if was_searched else "not yet searched"}
         lanes = c.get("lanes", {})
         dk = duke.get(c["claim_id"], [])
         folk = sorted({f"{r['activity']} ({r['country'] or 'n/a'}; {r['reference']})" for d in dk if d["ethnobotany"]

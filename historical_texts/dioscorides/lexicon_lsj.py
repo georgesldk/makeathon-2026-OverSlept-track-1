@@ -71,8 +71,20 @@ def candidates(word: str) -> list[str]:
 
 # --- 2. LSJ entries ------------------------------------------------------------------
 BINOMIAL = re.compile(r"\b([A-Z][a-z]{2,}|[A-Z]\.)\s+([A-Za-z][a-z\-]{2,})\b")
-DSC = re.compile(r"(Ps\.-\s*)?Dsc\.\s*(?:Eup\.\s*)?(\d)\.\s*(\d+)|\bib\.\s*(\d+)\b")
-BOUNDARY = re.compile(r"\s(?:[IVX]+\.|\d\.)\s|:—|(?<=[a-z]{2})\.\s+(?=[a-z])|(?<=\d)\s\.\s+(?=[a-z])")
+DSC = re.compile(r"(Ps\.-\s*)?Dsc\.\s*(?:Eup\.\s*)?(\d)\.\s*(\d+)|\bib\.\s*(?:(\d)\.\s*)?(\d+)\b")
+# "ib. 4.109" names its book; "ib. 28" keeps the last one (round 2: "ib. 4.109" was read as "ib. 4")
+LOCIS_CITATIS = re.compile(r"\b[Il]l\.\s?cc\.")    # "ll. cc." (OCR: "Il.cc."): "in the passages cited"
+SUBSENSE = re.compile(r";\s+(?=[a-z][)(]?\.[\s,])")   # "; b. ἄγριος": the headword abbreviated
+ALSO = re.compile(r";\s")     # "; also k. ἑτέρα, honeysuckle, Lonicera ...", "; stone pine, P. pinea": a new sense
+AFTER_AUTHOR = re.compile(r"[A-Z][A-Za-z]*\.\s?$")   # "Hp. ll.cc." points to Hippocrates, not to Dioscorides
+# other citations that OTHER_AUTHOR cannot see ("IG 2.61", "PCair.Zen. 223", "SIG 1170"): an "ib." after one
+# of them may not be Dioscorides, so it is kept apart for review instead of guessed
+OTHER_CITATION = re.compile(r"\b(?:[A-Z]{2,}[A-Za-z.]*|P[A-Z][A-Za-z.]+)\s?\d")
+BOUNDARY = re.compile(r"\s(?:[IVX]+\.|\d\.)\s|:—|(?<=[a-z]{2})\.\s+(?=[a-z])|(?<=\d)\s\.\s+(?=[a-z])"
+                      r"|(?<=\d)\s?[.;]\s+(?==\s)|(?<=[\w)])\s\.\s+(?=[^\d\s=])|(?<=\s)\)\.\s+(?=[^\d\s=])")
+# round 2: a citation closed by " . " ends its sense ("Ath. 3.73a . of trees ...", "Ps.- Dsc. 4.112 . Nile water-lily")
+
+# round 2: ". = ἀμβροσία" / "; = βάτος" after a citation starts another equivalence (a new sense)
 OTHER_AUTHOR = re.compile(r"\b(?!Dsc\.|Ps\.)[A-Z][a-z]{1,12}\.\s")    # "Nic. ", "Plu. ", "Theoc. " (not "M. ")
 ENGLISH = {"The", "This", "Name", "Cf", "Also", "Used", "See", "Prob", "Perh", "Lat", "Ion", "Att", "Dor",
            "Hom", "Hdt", "Ar", "Pl", "Arist", "Thphr", "Gal", "Hp", "Plin", "Nic", "Theoc", "Gr", "Eng",
@@ -81,7 +93,19 @@ ENGLISH = {"The", "This", "Name", "Cf", "Also", "Used", "See", "Prob", "Perh", "
 
 
 def read_entry(text: str, genera: set[str] | None) -> dict:
-    """Binomials with the English gloss before them and the Dioscorides passages after them."""
+    """Binomials with the English gloss before them and the Dioscorides passages after them.
+
+    Round 2 (Marselo's second audit):
+      * "ll. cc." after a binomial ("Dsc. 2.164 ... :— Cyclamen graecum, etc., ll. cc.") gives it the Dioscorides
+        passages cited before it in the same sense that no binomial took (kept also in "via_locis_citatis")
+      * ";" followed by a new binomial (before any Dioscorides citation) starts a new sense, so later passages
+        are not given to the earlier binomial (κυκλάμινος: "; also ... Lonicera", 2.165 is the honeysuckle's;
+        πίτυς: "; stone pine, P. pinea, ... Dsc. 1.69" is not the Aleppo pine's)
+      * ". = X" / "; = X" after a citation, "; b. ἄγριος" (the headword abbreviated) and a citation closed by
+        " . " also end a sense
+      * "ib." keeps the kind of the citation it repeats: after "Ps.-Dsc. 3.113", "ib. 114" is Ps.-Dsc. 3.114
+      * an "ib." with an unrecognised citation in between goes to "uncertain_ib" (not evidence), for review
+    """
     events = []
     for m in BINOMIAL.finditer(text):
         g, sp = m.group(1), m.group(2)
@@ -91,16 +115,38 @@ def read_entry(text: str, genera: set[str] | None) -> dict:
     for m in DSC.finditer(text):
         events.append((m.start(), "dsc", m))
     for m in BOUNDARY.finditer(text):
-        events.append((m.start(), "cut", None))
+        major = bool(re.match(r"\s(?:[IVX]+\.|\d\.)\s", m.group()))      # a numbered sense, not ":—"
+        events.append((m.start(), "cut", major))
+    for m in LOCIS_CITATIS.finditer(text):
+        if not AFTER_AUTHOR.search(text[max(0, m.start() - 10):m.start()]):
+            events.append((m.start(), "llcc", None))
+    bins = [e[0] for e in events if e[1] == "bin"]
+    for m in ALSO.finditer(text):
+        nxt = next((p for p in bins if p > m.start()), None)
+        dsc_first = re.search(r"Dsc\.", text[m.end():nxt]) if nxt else None
+        if nxt is not None and nxt - m.end() <= 100 and not dsc_first:
+            events.append((m.start(), "cut", False))
+    for m in SUBSENSE.finditer(text):
+        # "; b. ἄγριος, = κολχικόν, ib. 4.83": a sub-sense equated with another plant ends the sense; but
+        # "; n. Ἰνδική Dsc. 1.7" (a kind of the same plant, spikenard, no gloss of its own) does not
+        nxt = DSC.search(text, m.end())
+        seg = text[m.end():nxt.start() if nxt else len(text)]
+        # ... or a sub-sense with an English gloss of its own ("; m. κυδωνία quince, malus Punica, Dsc. 1.115")
+        # (the equals sign stands alone: in Beta Code "=" is also the circumflex, mei=zon = μεῖζον)
+        if re.search(r"(?:^|[\s,])=\s", seg) or re.search(r"(?<![\w*)(/\\=|])[a-z]{4,}(?![\w)(/\\=|])", seg):
+            events.append((m.start(), "cut", False))
     if genera is not None:                            # a bare genus ("the purple Iris, I. germanica")
         for m in re.finditer(r"\b([A-Z][a-z]{2,})\b", text):
             if m.group(1) in genera:
                 events.append((m.start(), "genus", m.group(1)))
     events.sort(key=lambda e: e[0])
-    ids, open_, last_full, last_book, last_dsc_end = [], [], {}, None, None
+    ids, open_, last_full, last_book, last_kind, last_dsc_end = [], [], {}, None, None, None
+    orphans = []                                      # passages cited in this sense that no binomial took
     for pos, kind, val in events:
         if kind == "cut":
             open_ = []
+            if val:
+                orphans = []
         elif kind == "genus":
             last_full[val[0]] = val
         elif kind == "bin":
@@ -119,24 +165,42 @@ def read_entry(text: str, genera: set[str] | None) -> dict:
             gloss = last if last and re.fullmatch(r"[A-Za-z' \-]+", last) and last[:1].islower() else None
             current = next((x for x in ids if x["binomial"] == f"{g} {sp}"), None)
             if current is None:
-                current = {"binomial": f"{g} {sp}", "gloss": gloss, "dsc": [], "pseudo_dsc": []}
+                current = {"binomial": f"{g} {sp}", "gloss": gloss, "dsc": [], "pseudo_dsc": [],
+                           "via_locis_citatis": [], "uncertain_ib": []}
                 ids.append(current)
             open_.append(current)
-        elif kind == "dsc" and open_:
-            # a citation belongs to every binomial named since the last sense break
-            # ("m. arrhen = Mandragora officinalis, m. thelys = M. autumnalis, Dsc. 4.75")
+        elif kind == "llcc":
+            for cur in open_:
+                for key, ref in orphans:
+                    if ref not in cur[key]:
+                        cur[key].append(ref)
+                        cur["via_locis_citatis"].append(ref if key == "dsc" else f"Ps.-Dsc. {ref}")
+            orphans = []
+        elif kind == "dsc":
             m = val
             if m.group(2):
                 last_book, last_dsc_end = m.group(2), m.end()
-                ref, key = f"{m.group(2)}.{m.group(3)}", "pseudo_dsc" if m.group(1) else "dsc"
+                last_kind = "pseudo_dsc" if m.group(1) else "dsc"
+                ref, key = f"{m.group(2)}.{m.group(3)}", last_kind
             elif last_book and not OTHER_AUTHOR.search(text[last_dsc_end:pos]):
-                # "ib. 28" is Dioscorides only when no other author is cited in between: in
-                # "Dsc. 4.98 ... Nic. Th. 792; also, a marsh-plant, ib. 415" the ib. is Nicander (bug 2)
-                ref, key = f"{last_book}.{m.group(4)}", "dsc"
+                # "ib. 28" repeats the last Dioscorides citation only when no other author is cited in between
+                # ("Dsc. 4.98 ... Nic. Th. 792; also, a marsh-plant, ib. 415" is Nicander: bug 2), and it keeps
+                # that citation's kind (Ps.-Dsc. or Dsc.)
+                ref, key = f"{m.group(4) or last_book}.{m.group(5)}", last_kind
+                last_book = m.group(4) or last_book
+                if OTHER_CITATION.search(text[last_dsc_end:pos]):
+                    for cur in open_:
+                        cur["uncertain_ib"].append({"ref": ref, "kind": key, "context": text[max(0, pos - 60):pos + 12]})
+                    last_dsc_end = m.end()
+                    continue
                 last_dsc_end = m.end()
             else:
                 continue
+            if not open_:
+                orphans.append((key, ref))
             for cur in open_:
+                # a citation belongs to every binomial named since the last sense break
+                # ("m. arrhen = Mandragora officinalis, m. thelys = M. autumnalis, Dsc. 4.75")
                 if ref not in cur[key]:
                     cur[key].append(ref)
     first_gloss = re.split(r"\s(?:Hom|Hdt|Thphr|Dsc|Hp|Arist|Pl|Ar|Gal)\.", text, maxsplit=1)[0]

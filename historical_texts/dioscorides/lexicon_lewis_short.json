@@ -233,7 +233,9 @@
          "binomial": "Inula helenium",
          "gloss": "a plant",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -245,7 +247,9 @@
          "binomial": "Inula helenium",
          "gloss": "a plant",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -1642,7 +1646,9 @@
          "binomial": "Cicer arietinum",
          "gloss": "the chickpea",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -1654,7 +1660,9 @@
          "binomial": "Cicer arietinum",
          "gloss": "the chickpea",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -2149,7 +2157,9 @@
          "binomial": "Lactuca marina",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -2161,7 +2171,9 @@
          "binomial": "Lactuca marina",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -2275,7 +2287,9 @@
          "binomial": "Brassica eruca",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -2287,7 +2301,9 @@
          "binomial": "Brassica eruca",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -2762,7 +2778,9 @@
          "binomial": "Apium graveolens",
          "gloss": "the",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -2774,7 +2792,9 @@
          "binomial": "Apium graveolens",
          "gloss": "the",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -2875,13 +2895,17 @@
          "binomial": "Sassia mater",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         },
         {
          "binomial": "Vesta mater",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -2893,13 +2917,17 @@
          "binomial": "Sassia mater",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         },
         {
          "binomial": "Vesta mater",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -3314,7 +3342,9 @@
          "binomial": "Acanthus mollis",
          "gloss": "or brankursine",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -3484,7 +3514,9 @@
          "binomial": "Scilla maritima",
          "gloss": "squill",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -3496,7 +3528,9 @@
          "binomial": "Scilla maritima",
          "gloss": "squill",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -3966,7 +4000,9 @@
          "binomial": "Anethum graveolens",
          "gloss": "anise",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -3978,7 +4014,9 @@
          "binomial": "Anethum graveolens",
          "gloss": "anise",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -4082,7 +4120,9 @@
          "binomial": "Apium graveolens",
          "gloss": "the",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -4094,7 +4134,9 @@
          "binomial": "Apium graveolens",
          "gloss": "the",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -4124,7 +4166,9 @@
          "binomial": "Apium graveolens",
          "gloss": "the",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -4136,7 +4180,9 @@
          "binomial": "Apium graveolens",
          "gloss": "the",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -4159,7 +4205,9 @@
          "binomial": "Apium graveolens",
          "gloss": "the",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -4171,7 +4219,9 @@
          "binomial": "Apium graveolens",
          "gloss": "the",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -4656,7 +4706,9 @@
          "binomial": "Teucrium chamaedrys",
          "gloss": "germander",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -4668,7 +4720,9 @@
          "binomial": "Teucrium chamaedrys",
          "gloss": "germander",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -4753,7 +4807,9 @@
          "binomial": "Selinum palustre",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -4765,7 +4821,9 @@
          "binomial": "Selinum palustre",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -4795,7 +4853,9 @@
          "binomial": "Selinum palustre",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -4807,7 +4867,9 @@
          "binomial": "Selinum palustre",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -4921,7 +4983,9 @@
          "binomial": "Teucrium chamaedrys",
          "gloss": "germander",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -4933,7 +4997,9 @@
          "binomial": "Teucrium chamaedrys",
          "gloss": "germander",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -4996,7 +5062,9 @@
          "binomial": "Vibo valentia",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -5013,7 +5081,9 @@
          "binomial": "Vibo valentia",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -6874,13 +6944,17 @@
          "binomial": "Cicuta virosa",
          "gloss": "either",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         },
         {
          "binomial": "Conium maculatum",
          "gloss": "either Cicuta virosa or",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -6897,13 +6971,17 @@
          "binomial": "Cicuta virosa",
          "gloss": "either",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         },
         {
          "binomial": "Conium maculatum",
          "gloss": "either Cicuta virosa or",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -7396,7 +7474,9 @@
          "binomial": "Apium graveolens",
          "gloss": "the",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -7408,7 +7488,9 @@
          "binomial": "Apium graveolens",
          "gloss": "the",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -7651,7 +7733,9 @@
          "binomial": "Chenopodium scoparia",
          "gloss": "a species of the goosefoot",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -7668,7 +7752,9 @@
          "binomial": "Chenopodium scoparia",
          "gloss": "a species of the goosefoot",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -7709,7 +7795,9 @@
          "binomial": "Hedera helix",
          "gloss": "ivy",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -7721,7 +7809,9 @@
          "binomial": "Hedera helix",
          "gloss": "ivy",
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
@@ -7984,13 +8074,17 @@
          "binomial": "Avena sativa",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         },
         {
          "binomial": "Avena fatua",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       },
@@ -8002,13 +8096,17 @@
          "binomial": "Avena sativa",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         },
         {
          "binomial": "Avena fatua",
          "gloss": null,
          "dsc": [],
-         "pseudo_dsc": []
+         "pseudo_dsc": [],
+         "via_locis_citatis": [],
+         "uncertain_ib": []
         }
        ]
       }
