@@ -1,0 +1,25 @@
+{
+ "rows": 209,
+ "with_pmid": 111,
+ "pmid_from_title_search": 19,
+ "with_abstract": 106,
+ "recall": {
+  "another species / plant not named": {
+   "n": 58,
+   "cap": 0,
+   "deep": 0
+  },
+  "names the plant": {
+   "n": 52,
+   "cap": 41,
+   "deep": 44
+  }
+ },
+ "use_groups_by_code": {
+  "studies": 110,
+  "experts_gave_only_XY": 12,
+  "code_found_none": 18,
+  "comparable": 83,
+  "overlap": 74
+ }
+}

@@ -1,0 +1,651 @@
+mesh_ui,mesh_name,groups,group_names,rule,trees
+D034841,Abdominal Cavity,XY,Residual category,residual,A01.923.047.025
+D015746,Abdominal Pain,GI,Gastrointestinal tract,name: Abdominal Pain,C23.888.592.612.054 C23.888.821.030 F02.830.816.444.001 G11.561.790.444.001
+D000019,Abortifacient Agents,MA,Maternity,name: Abortifacient Agents,D27.505.696.875.131 D27.505.954.705.131
+D000026,"Abortion, Habitual",MA,Maternity,name: Pregnancy Complications,C12.050.703.039.089
+D000028,"Abortion, Induced",XY,Residual category,residual,E04.520.050
+D000022,"Abortion, Spontaneous",MA,Maternity,name: Pregnancy Complications,C12.050.703.039 G08.686.784.769.496.125
+D000033,"Abortion, Threatened",MA,Maternity,name: Pregnancy Complications,C12.050.703.090
+D000038,Abscess,ID,Infectious diseases,tree: C01,C01.830.025 C23.550.470.756.100
+D000058,Accidental Falls,XY,Residual category,residual,N06.850.135.122
+D000152,Acne Vulgaris,DE,Dermatology,tree: C17,C17.800.030.150 C17.800.794.111
+D031841,Aconitum,XY,Residual category,residual,B01.875.800.575.912.250.836.750.022
+D000339,Affect,MC,Mental conditions,tree: F01,F01.470.047
+D000363,Agaricales,XY,Residual category,residual,B01.300.179.100
+D000397,Air Pollution,XY,Residual category,residual,N06.850.460.100
+D000402,Airway Obstruction,RE,Respiratory tract,tree: C08,C08.618.846.185
+D000428,Alcohol Drinking,MC,Mental conditions,tree: F01,F01.145.317.269
+D019973,Alcohol-Related Disorders,MC,Mental conditions,tree: F03,C25.775.100 F03.900.100
+D000435,Alcoholic Intoxication,MC,Mental conditions,tree: F03,C25.775.100.175 F03.900.100.300
+D000505,Alopecia,DE,Dermatology,tree: C17,C17.800.329.937.122 C23.300.035
+D000550,Amblyopia,NC OP,Neurological conditions; Ophthalmology,tree: C10 | name: Eye Diseases,C10.228.140.055 C10.597.751.941.073 C11.966.073 C23.888.592.763.941.073
+D000568,Amenorrhea,XY,Residual category,residual,C23.550.568.500
+D000700,Analgesics,XY,Residual category,residual,D27.505.696.663.850.014 D27.505.954.427.040
+D000740,Anemia,BS,"Blood, spleen",tree: C15,C15.378.050
+D000758,Anesthesia,XY,Residual category,residual,E03.155
+D000777,Anesthetics,XY,Residual category,residual,D27.505.696.277.100 D27.505.954.427.210.100
+D000783,Aneurysm,CV,Cardiovascular disorders,tree: C14,C14.907.055
+D000821,Animal Feed,XY,Residual category,residual,G07.203.300.300.100 J02.500.300.100
+D000824,Animal Nutritional Physiological Phenomena,XY,Residual category,residual,G07.203.650.161
+D016512,Ankle Injuries,DE,Dermatology,tree: C26,C26.558.100
+D000855,Anorexia,GI,Gastrointestinal tract,"name: Signs and Symptoms, Digestive",C23.888.821.108
+D000086582,Anosmia,NC,Neurological conditions,tree: C10,C10.597.751.600.500 C23.888.592.763.550.500
+D000871,Anthelmintics,GI,Gastrointestinal tract,name: Anthelmintics,D27.505.954.122.250.075
+D000890,Anti-Infective Agents,ID,Infectious diseases,name: Anti-Infective Agents,D27.505.954.122
+D000893,Anti-Inflammatory Agents,XY,Residual category,residual,D27.505.954.158
+D019440,Anti-Obesity Agents,MN,Metabolic & nutritional disorders,name: Anti-Obesity Agents,D27.505.954.203
+D000927,Anticonvulsants,NC,Neurological conditions,name: Anticonvulsants,D27.505.954.427.080
+D000928,Antidepressive Agents,MC,Mental conditions,name: Antidepressive Agents,D27.505.954.427.700.122
+D000930,Antidiarrheals,GI,Gastrointestinal tract,name: Antidiarrheals,D27.505.954.483.161
+D000931,Antidotes,XY,Residual category,residual,D27.505.696.706.037 D27.720.799.037
+D000932,Antiemetics,GI,Gastrointestinal tract,name: Antiemetics,D27.505.696.663.050.030 D27.505.954.427.095 D27.505.954.483.200
+D058633,Antipyretics,FV,Fever,name: Antipyretics,D27.505.696.068
+D000996,Antitussive Agents,RE,Respiratory tract,name: Antitussive Agents,D27.505.954.427.153 D27.505.954.796.090
+D000997,Antivenins,XY,Residual category,residual,D12.776.124.486.485.114.573.601.138 D12.776.124.790.651.114.573.601.138 D12.776.377.715.548.114.573.601.138 D20.215.401.601.163
+D001004,Anus Diseases,GI,Gastrointestinal tract,tree: C06,C06.405.469.860.101
+D001007,Anxiety,MC,Mental conditions,tree: F01,F01.470.132
+D001037,Aphasia,NC,Neurological conditions,tree: C10,C10.597.606.150.500.800.100 C23.888.592.604.150.500.800.100
+D001044,Aphonia,RL NC,Rhino-Laryngology; Neurological conditions,name: Laryngeal Diseases | tree: C10,C08.360.940.160 C09.400.940.160 C10.597.975.100 C23.888.592.979.100
+D001046,Aphrodisiacs,AN,Andrology,name: Aphrodisiacs,D27.505.696.282.045 D27.505.954.427.220.045
+D001050,Apocrine Glands,XY,Residual category,residual,A10.336.899.206 A17.815.830.206
+D001066,Appetite,MC,Mental conditions,tree: F02,F02.830.071 G07.203.650.390.070 G10.261.390.070
+D019167,Appetite Stimulants,MN,Metabolic & nutritional disorders,name: Appetite Stimulants,D27.505.696.282.050 D27.505.954.427.220.050
+D001145,"Arrhythmias, Cardiac",CV,Cardiovascular disorders,tree: C14,C14.280.067 C23.550.073
+D018771,Arthralgia,MS,Musculoskeletal,name: Arthralgia,C05.550.091 C23.888.592.612.094 F02.830.816.444.350 G11.561.790.444.350
+D001168,Arthritis,MS,Musculoskeletal,tree: C05,C05.550.114
+D001196,Ascariasis,ID,Infectious diseases,tree: C01,C01.610.335.508.700.100.070
+D001198,Ascaridiasis,ID,Infectious diseases,tree: C01,C01.610.335.508.700.100.080
+D001200,Ascaris,GI,Gastrointestinal tract,name: Ascaris,B01.050.500.500.294.400.500.100.108
+D001201,Ascites,XY,Residual category,residual,C23.550.081
+D001237,Asphyxia,DE,Dermatology,tree: C26,C23.550.260.095 C26.103
+D001247,Asthenia,XY,Residual category,residual,C23.888.089
+D001249,Asthma,RE,Respiratory tract,tree: C08,C08.127.108 C08.381.495.108 C08.674.095 C20.543.480.680.095
+D001252,Astringents,XY,Residual category,residual,D27.505.696.207 D27.505.954.444.100
+D001284,Atrophy,XY,Residual category,residual,C23.300.070
+D001365,Axilla,XY,Residual category,residual,A01.378.800.090
+D001416,Back Pain,MC,Mental conditions,tree: F02,C23.888.592.612.107 F02.830.816.444.372 G11.561.790.444.372
+D001458,Bandages,XY,Residual category,residual,E07.101
+D001516,Bees,XY,Residual category,residual,B01.050.500.131.617.720.500.500.875.387
+D001646,Bile,XY,Residual category,residual,A12.200.087
+D001660,Biliary Tract Diseases,LG,Liver and gall bladder,name: Biliary Tract Diseases,C06.130
+D001714,Bipolar Disorder,MC,Mental conditions,tree: F03,F03.600.150.500
+D001733,Bites and Stings,DE,Dermatology,name: Bites and Stings,C25.723.127 C26.176
+D001762,Blepharitis,OP,Ophthalmology,name: Eye Diseases,C11.338.133
+D001766,Blindness,NC OP,Neurological conditions; Ophthalmology,tree: C10 | name: Eye Diseases,C10.597.751.941.162 C11.966.075 C23.888.592.763.941.162
+D001768,Blister,DE,Dermatology,tree: C17,C17.800.865.187 C23.300.122
+D001769,Blood,XY,Residual category,residual,A12.207.152 A15.145
+D000089083,Body Odor,XY,Residual category,residual,C23.888.104
+D001847,Bone Diseases,MS,Musculoskeletal,tree: C05,C05.116
+D002146,Bony Callus,XY,Residual category,residual,A10.165.265.200
+D001921,Brain,NC,Neurological conditions,name: Brain,A08.186.211
+D001927,Brain Diseases,NC,Neurological conditions,tree: C10,C10.228.140
+D001939,Bread,XY,Residual category,residual,G07.203.300.100 J02.500.100
+D001940,Breast,MA,Maternity,name: Breast,A01.236
+D001941,Breast Diseases,DE,Dermatology,tree: C17,C17.800.090
+D001982,Bronchial Diseases,RE,Respiratory tract,tree: C08,C08.127
+D001991,Bronchitis,ID RE,Infectious diseases; Respiratory tract,tree: C01 | tree: C08,C01.748.099 C08.127.446 C08.381.495.146 C08.730.099
+D002056,Burns,DE,Dermatology,tree: C26,C26.200
+D002100,Cachexia,XY,Residual category,residual,C23.888.144.243.963.250 C23.888.144.828.250
+D002145,Callosities,DE,Dermatology,tree: C17,C17.800.428.200
+D002193,Cantharidin,XY,Residual category,residual,D03.633.100.127.125
+D002270,Carbuncle,ID DE,Infectious diseases; Dermatology,tree: C01 | tree: C17,C01.150.252.410.868.951.270.200 C01.150.252.819.770.270.200 C01.800.720.770.270.200 C17.800.838.765.770.270.200
+D002316,Cardiotonic Agents,CV,Cardiovascular disorders,name: Cardiotonic Agents,D27.505.954.411.222 D27.720.799.080
+D002320,Cardiovascular Physiological Phenomena,XY,Residual category,residual,G09.330
+D002386,Cataract,OP,Ophthalmology,name: Eye Diseases,C11.510.245
+D002400,Cathartics,GI,Gastrointestinal tract,name: Cathartics,D27.505.954.483.396
+D002417,Cattle,XY,Residual category,residual,B01.050.150.900.649.313.500.380.271
+D002424,Caustics,DE,Dermatology,name: Caustics,D27.720.185 D27.888.569.185
+D002446,Celiac Disease,GI MN,Gastrointestinal tract; Metabolic & nutritional disorders,tree: C06 | tree: C18,C06.405.469.637.250 C18.452.603.250
+D002584,Cervix Uteri,GY,Gynaecology,name: Cervix Uteri,A05.360.319.679.256
+D002590,Cestode Infections,ID,Infectious diseases,tree: C01,C01.610.335.190
+D002613,Cheilitis,OC,Oral cavity,name: Mouth Diseases,C07.465.409.215
+D056486,Chemical and Drug Induced Liver Injury,LG,Liver and gall bladder,name: Liver Diseases,C06.552.100 C25.100.562 C25.723.260
+D002637,Chest Pain,MC,Mental conditions,tree: F02,C23.888.592.612.233 F02.830.816.444.427 G11.561.790.444.451
+D002647,Chilblains,DE,Dermatology,tree: C26,C26.212.500.217 C26.417.217
+D023341,Chills,XY,Residual category,residual,C23.888.208
+D002771,Cholera,ID,Infectious diseases,tree: C01,C01.150.252.400.959.347
+D002779,Cholestasis,LG,Liver and gall bladder,name: Biliary Tract Diseases,C06.130.120.135
+D002908,Chronic Disease,XY,Residual category,residual,C23.550.291.500
+D059350,Chronic Pain,MC,Mental conditions,tree: F02,C23.888.592.612.274 F02.830.816.444.433 G11.561.790.444.461
+D002921,Cicatrix,DE,Dermatology,name: Granulation Tissue,A10.165.450.300 C23.550.355.274 G16.762.891.249
+D003058,Cockroaches,XY,Residual category,residual,B01.050.500.131.617.140
+D003071,Cognition,MC,Mental conditions,tree: F02,F02.463.188
+D003072,Cognition Disorders,MC,Mental conditions,tree: F03,F03.615.250
+D003085,Colic,XY,Residual category,residual,C16.614.166
+D004396,Coloring Agents,XY,Residual category,residual,D27.720.233
+D003128,Coma,NC,Neurological conditions,tree: C10,C10.597.606.358.800.200 C23.888.592.604.359.800.200
+D003139,Common Cold,ID RE,Infectious diseases; Respiratory tract,tree: C01 | tree: C08,C01.748.162 C01.925.782.687.207 C08.730.162
+D003141,Communicable Diseases,ID,Infectious diseases,tree: C01,C01.221 C23.550.291.531
+D003212,Condiments,XY,Residual category,residual,G07.203.300.250 J02.500.250
+D003218,Condylomata Acuminata,ID UR DE,Infectious diseases; Urology; Dermatology,tree: C01 | tree: C12 | tree: C17,C01.221.812.640.700.500 C01.925.256.650.405 C01.925.813.220 C01.925.813.700.500 C01.925.825.810.110 C01.925.928.725.500 C01.925.928.914.217 C12.100.937.640.700.500 C17.800.838.790.810.110 C23.550.291.531.937.640.500.500
+D029982,Conium,XY,Residual category,residual,B01.875.800.575.912.250.075.205
+D003231,Conjunctivitis,OP,Ophthalmology,name: Eye Diseases,C11.187.183
+D003248,Constipation,GI,Gastrointestinal tract,"name: Signs and Symptoms, Digestive",C23.888.821.150
+D003267,Contraception,XY,Residual category,residual,E02.875.194
+D003270,Contraceptive Agents,GY,Gynaecology,name: Contraceptive Agents,D27.505.696.875.360 D27.505.954.705.360
+D003286,Contracture,MS,Musculoskeletal,tree: C05,C05.550.323 C05.651.197
+D003288,Contusions,DE,Dermatology,tree: C26,C26.974.250
+D003289,Convalescence,XY,Residual category,residual,C23.550.291.562
+D003318,Corneal Opacity,OP,Ophthalmology,name: Eye Diseases,C11.204.299
+D003320,Corneal Ulcer,ID OP,Infectious diseases; Ophthalmology,tree: C01 | name: Eye Diseases,C01.375.177 C11.204.564.225 C11.294.177
+D003358,Cosmetics,DE,Dermatology,name: Cosmetics,D27.720.269 D27.720.693.001 J01.516.213
+D003371,Cough,RE,Respiratory tract,name: Cough,C08.618.248 C23.888.852.293
+D006259,Craniocerebral Trauma,NC DE,Neurological conditions; Dermatology,tree: C10 | tree: C26,C10.900.300 C26.915.300
+D009033,Culicidae,XY,Residual category,residual,B01.050.500.131.617.720.500.500.750.712.500.875
+D017577,Cutaneous Fistula,DE,Dermatology,tree: C17,C17.800.135 C23.300.575.150
+D003556,Cystitis,UR,Urology,name: Urologic Diseases,C12.050.351.968.829.495 C12.200.777.829.495 C12.950.829.495
+D003560,Cysts,XY,Residual category,residual,C04.182 C23.300.306
+D003607,Dacryocystitis,OP,Ophthalmology,name: Eye Diseases,C11.496.221
+D063807,Dandruff,DE,Dermatology,tree: C17,C17.800.174.146 C17.800.738.353
+D003638,Deafness,OT NC,Otology; Neurological conditions,name: Ear Diseases | tree: C10,C09.218.458.341.186 C10.597.751.418.341.186 C23.888.592.763.393.341.186
+D003643,Death,XY,Residual category,residual,C23.550.260
+D003646,Debridement,XY,Residual category,residual,E04.176
+D003672,Defecation,GI,Gastrointestinal tract,name: Defecation,G10.261.165
+D003693,Delirium,NC MC,Neurological conditions; Mental conditions,tree: C10 | tree: F01,C10.597.606.337.500 C23.888.592.604.339.500 F01.700.250.500 F03.615.350
+D036861,"Delivery, Obstetric",XY,Residual category,residual,E04.520.252
+D003731,Dental Caries,OC,Oral cavity,name: Tooth Diseases,C07.793.720.210
+D003802,Dentifrices,OC,Oral cavity,name: Dentifrices,D25.376 D27.720.269.380 J01.637.051.376
+D003863,Depression,MC,Mental conditions,tree: F01,F01.145.126.350 F01.470.282
+D003866,Depressive Disorder,MC,Mental conditions,tree: F03,F03.600.300
+D003872,Dermatitis,DE,Dermatology,tree: C17,C17.800.174
+D003877,"Dermatitis, Contact",DE,Dermatology,tree: C17,C17.800.174.255 C17.800.815.255
+D012628,"Dermatitis, Seborrheic",DE,Dermatology,tree: C17,C17.800.174.580 C17.800.794.230 C17.800.815.580 C17.800.859.350
+D003967,Diarrhea,GI,Gastrointestinal tract,"name: Signs and Symptoms, Digestive",C23.888.821.214
+D004063,Digestion,GI,Gastrointestinal tract,name: Digestion,G07.203.650.250 G10.261.190
+D004203,Disinfection,XY,Residual category,residual,N06.850.780.200.450.850.375
+D006970,Disorders of Excessive Somnolence,NC MC,Neurological conditions; Mental conditions,tree: C10 | tree: F03,C10.886.425.800.200 F03.870.400.800.200
+D004231,Diuresis,UR,Urology,name: Diuresis,G08.852.179
+D004232,Diuretics,UR,Urology,name: Diuretics,D27.505.696.560.500
+D004244,Dizziness,XY,Residual category,residual,C23.888.592.763.237
+D004285,Dogs,XY,Residual category,residual,B01.050.150.900.649.313.750.250.216.200
+D004325,Dreams,MC,Mental conditions,tree: F02,F02.463.188.634.309 F02.830.855.268
+D060766,Drinking Water,XY,Residual category,residual,D01.045.250.875.300 D01.248.497.158.459.650.300 D01.650.550.925.199 G07.203.100.418 J02.200.418
+D062787,Drug Overdose,MC,Mental conditions,tree: F03,C25.775.342.500.500 F03.900.384.500.500
+D004403,Dysentery,GI,Gastrointestinal tract,tree: C06,C06.405.205.331 C06.405.469.300
+D004412,Dysmenorrhea,XY,Residual category,residual,C23.550.568.750 C23.888.592.612.944.500
+D004415,Dyspepsia,GI,Gastrointestinal tract,"name: Signs and Symptoms, Digestive",C23.888.821.236
+D055154,Dysphonia,RL NC,Rhino-Laryngology; Neurological conditions,name: Laryngeal Diseases | tree: C10,C08.360.940.325 C09.400.940.325 C10.597.975.325 C23.888.592.979.325
+D004417,Dyspnea,RE,Respiratory tract,tree: C08,C08.618.326 C23.888.852.371
+D004420,Dystocia,MA,Maternity,name: Pregnancy Complications,C12.050.703.420.288
+D053159,Dysuria,XY,Residual category,residual,C23.888.942.343.274
+D004423,Ear,XY,Residual category,residual,A01.456.313 A09.246
+D004427,Ear Diseases,OT,Otology,name: Ear Diseases,C09.218
+D004433,Earache,OT MC,Otology; Mental conditions,name: Ear Diseases | tree: F02,C09.218.350 C23.888.592.612.302 F02.830.816.444.435 G11.561.790.444.464
+D004438,Ecchymosis,BS,"Blood, spleen",tree: C15,C15.378.100.452 C23.550.414.625 C23.888.885.312
+D004485,Eczema,DE,Dermatology,tree: C17,C17.800.174.620 C17.800.815.620
+D004487,Edema,CV,Cardiovascular disorders,name: Edema,C23.888.277
+D004542,Ejaculation,AN,Andrology,name: Ejaculation,G08.686.784.084
+D004604,Elephantiasis,BS,"Blood, spleen",tree: C15,C15.604.496.320
+D004615,Embalming,XY,Residual category,residual,I01.076.201.450.550.250
+D004639,Emetics,GI,Gastrointestinal tract,name: Emetics,D27.505.696.329 D27.505.696.663.050.225 D27.505.954.427.270 D27.505.954.483.560
+D004643,Emollients,DE,Dermatology,name: Emollients,D27.505.954.444.200
+D004653,Empyema,ID,Infectious diseases,tree: C01,C01.830.305 C23.550.470.756.305
+D016724,"Empyema, Pleural",ID RE,Infectious diseases; Respiratory tract,tree: C01 | tree: C08,C01.748.265 C01.830.305.310 C08.528.240 C08.730.265 C23.550.470.756.305.250
+D004660,Encephalitis,NC,Neurological conditions,tree: C10,C10.228.140.430 C10.586.250
+D004716,Endometritis,GY,Gynaecology,"name: Genital Diseases, Female",C12.050.351.500.056.750.249 C12.050.351.500.852.299 C12.100.250.056.750.249 C12.100.250.852.299
+D009877,Endophthalmitis,ID OP,Infectious diseases; Ophthalmology,tree: C01 | name: Eye Diseases,C01.375.265 C11.294.265
+D004733,Enema,XY,Residual category,residual,E02.319.347
+D004751,Enteritis,GI,Gastrointestinal tract,tree: C06,C06.405.205.462 C06.405.469.326
+D017229,Enterobiasis,ID,Infectious diseases,tree: C01,C01.610.335.508.700.550.550.375
+D004757,Enterobius,XY,Residual category,residual,B01.050.500.500.294.400.750.500.308
+D004775,Enuresis,UR MC,Urology; Mental conditions,name: Urologic Diseases | tree: F01,C12.050.351.968.934.252 C12.200.777.934.284 C12.950.934.252 F01.145.126.856 F03.388.400
+D058872,Epidemics,XY,Residual category,residual,N06.850.290.200
+D004814,Epidermal Cyst,XY,Residual category,residual,C04.182.254
+D004827,Epilepsy,NC,Neurological conditions,tree: C10,C10.228.140.490
+D004844,Epistaxis,RL RE,Rhino-Laryngology; Respiratory tract,"name: Nose Diseases | name: Signs and Symptoms, Respiratory",C08.460.261 C09.603.261 C23.550.414.712 C23.888.852.040
+D007172,Erectile Dysfunction,AN UR MC,Andrology; Urology; Mental conditions,"name: Genital Diseases, Male | tree: C12 | tree: F03",C12.100.500.214 C12.100.875.486 C12.200.294.214 F03.835.400
+D004884,Eructation,GI,Gastrointestinal tract,"name: Signs and Symptoms, Digestive",C23.888.821.297
+D004886,Erysipelas,ID DE,Infectious diseases; Dermatology,tree: C01 | tree: C17,C01.150.252.410.890.503 C01.150.252.819.260 C01.800.720.260 C17.800.838.765.260
+D004890,Erythema,DE,Dermatology,tree: C17,C17.800.229 C23.888.885.328
+D005059,Euphoria,MC,Mental conditions,tree: F01,F01.470.323
+D005076,Exanthema,DE,Dermatology,tree: C17,C17.800.257
+D005094,Exophthalmos,OP,Ophthalmology,name: Eye Diseases,C11.675.349
+D005100,Expectorants,RE,Respiratory tract,name: Expectorants,D27.505.954.796.250
+D005121,Extremities,XY,Residual category,residual,A01.378
+D005122,Exudates and Transudates,XY,Residual category,residual,A12.383
+D005128,Eye Diseases,OP,Ophthalmology,name: Eye Diseases,C11
+D005129,Eye Foreign Bodies,NC DE,Neurological conditions; Dermatology,tree: C10 | tree: C26,C10.900.300.284.250.260 C26.392.421 C26.915.300.425.250.260
+D005130,Eye Hemorrhage,OP,Ophthalmology,name: Eye Diseases,C11.290 C23.550.414.756 C23.888.307.500
+D005131,Eye Injuries,NC OP DE,Neurological conditions; Ophthalmology; Dermatology,tree: C10 | name: Eye Diseases | tree: C26,C10.900.300.284.250 C11.297 C26.915.300.425.250
+D058447,Eye Pain,OP MC,Ophthalmology; Mental conditions,name: Eye Diseases | tree: F02,C11.300.500 C23.888.307.625 C23.888.592.612.316 F02.830.816.444.436 G11.561.790.444.466
+D005140,Eyelashes,OP,Ophthalmology,name: Eyelashes,A01.456.505.420.504.421 A09.371.337.338 A17.360.421
+D005141,Eyelid Diseases,OP,Ophthalmology,name: Eye Diseases,C11.338
+D005148,Facial Dermatoses,DE,Dermatology,tree: C17,C17.800.271
+D005221,Fatigue,XY,Residual category,residual,C23.888.369
+D005298,Fertility,XY,Residual category,residual,G08.686.210
+D005306,Fertilization,XY,Residual category,residual,G08.686.784.277
+D005313,Fetal Death,MA,Maternity,name: Pregnancy Complications,C12.050.703.223 C23.550.260.585
+D005334,Fever,FV,Fever,name: Fever,C23.888.119.344
+D005350,Fibroma,XY,Residual category,residual,C04.557.450.565.590.340
+D005401,Fissure in Ano,GI,Gastrointestinal tract,tree: C06,C06.405.469.860.101.430
+D005402,Fistula,XY,Residual category,residual,C23.300.575
+D021501,Flank Pain,MC,Mental conditions,tree: F02,C23.888.592.612.386 F02.830.816.444.439 G11.561.790.444.469
+D005414,Flatulence,GI,Gastrointestinal tract,"name: Signs and Symptoms, Digestive",C23.888.821.360
+D005483,Flushing,XY,Residual category,residual,C23.888.885.344
+D005502,Food,XY,Residual category,residual,G07.203.300 J02.500
+D005520,Food Preservatives,XY,Residual category,residual,D27.720.372.300.385 G07.203.300.514.500.700 J02.500.514.500.700
+D005533,Foot Dermatoses,DE,Dermatology,tree: C17,C17.800.321.125
+D005534,Foot Diseases,MS DE,Musculoskeletal; Dermatology,tree: C05 | tree: C17,C05.360 C17.800.321
+D018409,Foot Injuries,DE,Dermatology,tree: C26,C26.558.300
+D005547,Foreign Bodies,DE,Dermatology,tree: C26,C26.392
+D052816,Foreskin,XY,Residual category,residual,A05.360.444.492.362
+D050723,"Fractures, Bone",MS,Musculoskeletal,"name: Fractures, Bone",C26.404
+D005599,"Fractures, Ununited",MS,Musculoskeletal,"name: Fractures, Bone",C26.404.468
+D005667,Furunculosis,ID DE,Infectious diseases; Dermatology,tree: C01 | tree: C17,C01.150.252.410.868.951.270 C01.150.252.819.770.270 C01.800.720.770.270 C17.800.838.765.770.270 C22.362.224
+D056669,Galactogogues,MA,Maternity,name: Galactogogues,D27.505.696.365
+D005705,Gallbladder Diseases,LG,Liver and gall bladder,name: Biliary Tract Diseases,C06.130.564
+D005734,Gangrene,XY,Residual category,residual,C23.550.717.427
+D013271,Gastric Dilatation,GI,Gastrointestinal tract,tree: C06,C06.405.748.300
+D005756,Gastritis,GI,Gastrointestinal tract,tree: C06,C06.405.205.697 C06.405.748.398
+D005764,Gastroesophageal Reflux,GI,Gastrointestinal tract,tree: C06,C06.405.117.119.500.484
+D005767,Gastrointestinal Diseases,GI,Gastrointestinal tract,tree: C06,C06.405
+D006471,Gastrointestinal Hemorrhage,GI,Gastrointestinal tract,tree: C06,C06.405.227 C23.550.414.788
+D005772,Gastrointestinal Transit,XY,Residual category,residual,E01.370.372.310 G10.261.360.525
+D000091662,Genital Diseases,UR,Urology,tree: C12,C12.100
+D005831,"Genital Diseases, Female",GY,Gynaecology,"name: Genital Diseases, Female",C12.050.351.500 C12.100.250
+D005832,"Genital Diseases, Male",AN,Andrology,"name: Genital Diseases, Male",C12.100.500 C12.200.294
+D005835,Genitalia,XY,Residual category,residual,A05.360
+D005882,Gingival Diseases,OC,Oral cavity,name: Mouth Diseases,C07.465.714.258
+D005884,Gingival Hemorrhage,OC,Oral cavity,name: Mouth Diseases,C07.465.625.446 C07.465.714.258.250 C23.550.414.922.500
+D005891,Gingivitis,ID OC,Infectious diseases; Oral cavity,tree: C01 | name: Mouth Diseases,C01.408 C07.465.714.258.480
+D005928,Glossitis,OC,Oral cavity,name: Mouth Diseases,C07.465.910.363
+D006042,Goiter,MN,Metabolic & nutritional disorders,tree: C19,C19.874.283
+D006069,Gonorrhea,ID UR,Infectious diseases; Urology,tree: C01 | tree: C12,C01.150.252.400.625.275 C01.150.252.734.401 C01.221.812.281.401 C01.778.281.401 C12.100.937.281.401
+D006073,Gout,MS,Musculoskeletal,name: Gout,C05.550.114.423 C05.550.354.500 C05.799.414 C16.320.565.798.368 C18.452.648.798.368
+D006097,Granulation Tissue,DE,Dermatology,name: Granulation Tissue,A10.165.450
+D006119,Groin,XY,Residual category,residual,A01.923.047.365
+D006197,Hair,DE,Dermatology,name: Hair,A17.360
+D006200,Hair Color,XY,Residual category,residual,G13.500 G16.690.490
+D006202,Hair Dyes,DE,Dermatology,name: Hair Dyes,D27.720.233.837 D27.720.269.430.430
+D006204,Hair Removal,XY,Residual category,residual,E02.218.372
+D006209,Halitosis,GI,Gastrointestinal tract,"name: Signs and Symptoms, Digestive",C23.888.821.475
+D006212,Hallucinations,NC MC,Neurological conditions; Mental conditions,tree: C10 | tree: F01,C10.597.606.762.300 C23.888.592.604.764.300 F01.700.750.300
+D006229,Hand Dermatoses,DE,Dermatology,tree: C17,C17.800.338
+D006261,Headache,NC,Neurological conditions,name: Headache,C23.888.592.612.441 F02.830.816.444.441 G11.561.790.444.473
+D006304,Health Status,XY,Residual category,residual,I01.240.425 N01.224.425 N06.850.505.400.425
+D034381,Hearing Loss,OT NC,Otology; Neurological conditions,name: Ear Diseases | tree: C10,C09.218.458.341 C10.597.751.418.341 C23.888.592.763.393.341
+D006321,Heart,CV,Cardiovascular disorders,name: Heart,A07.541
+D006331,Heart Diseases,CV,Cardiovascular disorders,tree: C14,C14.280
+D006356,Heartburn,GI,Gastrointestinal tract,"name: Signs and Symptoms, Digestive",C23.888.821.525
+D018883,Heat Stroke,DE,Dermatology,tree: C26,C26.522.500
+D006373,Helminthiasis,ID,Infectious diseases,tree: C01,C01.610.335
+D006396,Hematemesis,GI,Gastrointestinal tract,tree: C06,C06.405.227.400 C23.550.414.788.400 C23.888.821.937.019
+D006406,Hematoma,XY,Residual category,residual,C23.550.414.838
+D006410,Hematopoiesis,XY,Residual category,residual,G04.152.825 G09.188.343
+D006417,Hematuria,UR,Urology,name: Urologic Diseases,C12.050.351.968.934.442 C12.200.777.934.442 C12.950.934.442 C23.550.414.849
+D006469,Hemoptysis,RE,Respiratory tract,tree: C08,C08.381.348 C23.550.414.896 C23.888.852.430
+D006470,Hemorrhage,XY,Residual category,residual,C23.550.414
+D006484,Hemorrhoids,CV,Cardiovascular disorders,name: Hemorrhoids,C06.405.469.860.401 C14.907.449
+D006490,Hemostatics,BS,"Blood, spleen",name: Hemostatics,D27.505.954.502.270.463
+D006505,Hepatitis,LG,Liver and gall bladder,name: Liver Diseases,C06.552.380
+D006529,Hepatomegaly,LG,Liver and gall bladder,name: Liver Diseases,C06.552.416 C23.300.775.525
+D006547,Hernia,XY,Residual category,residual,C23.300.707
+D046449,"Hernia, Abdominal",XY,Residual category,residual,C23.300.707.374
+D006552,"Hernia, Inguinal",XY,Residual category,residual,C23.300.707.374.875
+D006554,"Hernia, Umbilical",XY,Residual category,residual,C16.614.378 C23.300.707.374.937.500
+D006561,Herpes Simplex,ID DE,Infectious diseases; Dermatology,tree: C01 | tree: C17,C01.925.256.466.382 C01.925.825.320 C17.800.838.790.320
+D006562,Herpes Zoster,ID,Infectious diseases,tree: C01,C01.925.256.466.930.750
+D006566,Herpesviridae Infections,ID,Infectious diseases,tree: C01,C01.925.256.466
+D006606,Hiccup,GI,Gastrointestinal tract,"name: Signs and Symptoms, Digestive",C23.888.821.578
+D006685,Hoarseness,RL RE NC,Rhino-Laryngology; Respiratory tract; Neurological conditions,name: Laryngeal Diseases | tree: C08 | tree: C10,C08.360.940.490 C08.618.490 C09.400.940.490 C10.597.975.550 C23.888.592.979.550 C23.888.852.490
+D006734,Horse Diseases,XY,Residual category,residual,C22.488
+D006736,Horses,XY,Residual category,residual,B01.050.150.900.649.313.984.235.472
+D006833,Hydrarthrosis,MS,Musculoskeletal,tree: C05,C05.550.509
+D006940,Hyperemia,CV,Cardiovascular disorders,tree: C14,C14.907.474
+D006945,Hyperhidrosis,DE,Dermatology,tree: C17,C17.800.946.350
+D017495,Hyperpigmentation,DE,Dermatology,tree: C17,C17.800.621.430
+D006984,Hypertrophy,XY,Residual category,residual,C23.300.775
+D006987,Hypesthesia,NC,Neurological conditions,tree: C10,C10.597.751.791.500 C23.888.592.763.770.500
+D006993,Hypnotics and Sedatives,MC,Mental conditions,name: Hypnotics and Sedatives,D27.505.696.277.350 D27.505.954.427.210.350
+D006998,Hypochondriasis,MC,Mental conditions,tree: F03,F03.875.450
+D017496,Hypopigmentation,DE,Dermatology,tree: C17,C17.800.621.440
+D007035,Hypothermia,XY,Residual category,residual,C23.888.119.565
+D007039,Hypotrichosis,DE,Dermatology,tree: C17,C17.800.329.937
+D007046,Hysteria,MC,Mental conditions,tree: F03,F03.675.400.500
+D045823,Ileus,GI,Gastrointestinal tract,tree: C06,C06.405.469.531.492
+D007239,Infections,ID,Infectious diseases,tree: C01,C01
+D007246,Infertility,UR,Urology,tree: C12,C12.100.750
+D007247,"Infertility, Female",GY UR,Gynaecology; Urology,"name: Genital Diseases, Female | tree: C12",C12.050.351.500.498 C12.100.250.498 C12.100.750.350
+D007249,Inflammation,XY,Residual category,residual,C23.550.470
+D015212,Inflammatory Bowel Diseases,GI,Gastrointestinal tract,tree: C06,C06.405.205.731 C06.405.469.432
+D007281,Ink,XY,Residual category,residual,J01.637.500
+D007299,Insect Bites and Stings,DE,Dermatology,name: Bites and Stings,C25.723.127.071 C26.176.143
+D007300,Insect Control,XY,Residual category,residual,N06.850.780.200.650.425
+D007302,Insect Repellents,XY,Residual category,residual,D27.505.696.706.434 D27.720.031.700.441 D27.888.723.441
+D007306,Insecticides,XY,Residual category,residual,D27.720.031.700.491 D27.888.723.491
+D007402,Intertrigo,DE,Dermatology,tree: C17,C17.800.174.640 C17.800.815.650
+D007410,Intestinal Diseases,GI,Gastrointestinal tract,tree: C06,C06.405.469
+D007411,"Intestinal Diseases, Parasitic",ID GI,Infectious diseases; Gastrointestinal tract,tree: C01 | tree: C06,C01.610.432 C06.405.469.452
+D007416,Intestinal Perforation,GI,Gastrointestinal tract,tree: C06,C06.405.469.557
+D020300,Intracranial Hemorrhages,NC CV,Neurological conditions; Cardiovascular disorders,tree: C10 | tree: C14,C10.228.140.300.535 C14.907.253.573 C23.550.414.913
+D007509,Irritants,XY,Residual category,residual,D27.720.400 D27.888.569.300
+D007565,Jaundice,LG,Liver and gall bladder,name: Jaundice,C23.550.429.500 C23.888.885.375
+D007571,Jaw Diseases,MS OC,Musculoskeletal; Oral cavity,tree: C05 | tree: C07,C05.500 C07.320
+D007592,Joint Diseases,MS,Musculoskeletal,tree: C05,C05.550
+D004204,Joint Dislocations,MS DE,Musculoskeletal; Dermatology,tree: C05 | tree: C26,C05.550.518 C26.289
+D007593,Joint Instability,MS,Musculoskeletal,tree: C05,C05.550.521
+D007668,Kidney,UR,Urology,name: Kidney,A05.810.453
+D007669,Kidney Calculi,UR,Urology,name: Urologic Diseases,C12.050.351.968.419.600.500 C12.050.351.968.967.249.500 C12.050.351.968.967.500.503 C12.200.777.419.600.500 C12.200.777.967.249.500 C12.200.777.967.500.503 C12.950.419.600.500 C12.950.967.249.500 C12.950.967.500.503 C23.300.175.850.550
+D007674,Kidney Diseases,UR,Urology,name: Urologic Diseases,C12.050.351.968.419 C12.200.777.419 C12.950.419
+D048949,Labor Pain,MC,Mental conditions,tree: F02,C23.888.592.612.451 F02.830.816.444.442 G11.561.790.444.474
+D007749,"Labor Stage, Third",MA,Maternity,"name: Labor, Obstetric",G08.686.784.769.326.500.110
+D007751,"Labor, Induced",XY,Residual category,residual,E04.520.252.968
+D007743,"Labor, Obstetric",MA,Maternity,"name: Labor, Obstetric",G08.686.784.769.326
+D022125,Lacerations,DE,Dermatology,tree: C26,C26.540
+D007766,Lacrimal Apparatus Diseases,OP,Ophthalmology,name: Eye Diseases,C11.496
+D007774,Lactation,MA,Maternity,name: Lactation,G08.686.523 G08.686.702.500
+D007775,Lactation Disorders,MA DE,Maternity; Dermatology,name: Puerperal Disorders | tree: C17,C12.050.703.844.506 C17.800.090.937
+D007827,Laryngitis,ID RL RE,Infectious diseases; Rhino-Laryngology; Respiratory tract,tree: C01 | name: Laryngeal Diseases | tree: C08,C01.748.368 C08.360.535 C08.730.368 C09.400.535
+D054368,Laxatives,GI,Gastrointestinal tract,name: Laxatives,D27.505.954.483.620
+D007855,Lead Poisoning,XY,Residual category,residual,C25.723.522.750
+D007865,Leeches,XY,Residual category,residual,B01.050.500.091.426
+D024763,Leeching,XY,Residual category,residual,E02.596
+D007871,Leg Ulcer,DE,Dermatology,tree: C17,C17.800.893.592
+D007911,Lentigo,DE,Dermatology,tree: C17,C17.800.621.430.530.550
+D007918,Leprosy,ID,Infectious diseases,tree: C01,C01.150.252.410.040.552.475.371
+D053609,Lethargy,NC MC,Neurological conditions; Mental conditions,tree: C10 | tree: F01,C10.597.606.441 C23.888.592.604.444 F01.700.470
+D007973,Leukorrhea,GY,Gynaecology,"name: Genital Diseases, Female",C12.050.351.500.894.700.500 C12.100.250.894.700.500
+D007989,Libido,MC,Mental conditions,tree: F02,F02.739.794.511
+D010373,Lice Infestations,ID DE,Infectious diseases; Dermatology,tree: C01 | tree: C17,C01.610.858.211.465 C17.800.838.775.580
+D008010,Lichen Planus,DE,Dermatology,tree: C17,C17.800.859.475.560
+D008067,Lipoma,XY,Residual category,residual,C04.557.450.550.400
+D008099,Liver,LG,Liver and gall bladder,name: Liver,A03.620
+D008103,Liver Cirrhosis,LG,Liver and gall bladder,name: Liver Diseases,C06.552.630 C23.550.355.412
+D008107,Liver Diseases,LG,Liver and gall bladder,name: Liver Diseases,C06.552
+D017116,Low Back Pain,XY,Residual category,residual,C23.888.592.612.107.400
+D008168,Lung,XY,Residual category,residual,A04.411
+D008169,Lung Abscess,ID RE,Infectious diseases; Respiratory tract,tree: C01 | tree: C08,C01.748.407 C01.830.025.490 C08.381.450 C08.730.407
+D008171,Lung Diseases,RE,Respiratory tract,tree: C08,C08.381
+D008199,Lymphadenitis,BS,"Blood, spleen",tree: C15,C15.604.315
+D000072281,Lymphadenopathy,BS,"Blood, spleen",tree: C15,C15.604.338
+D008288,Malaria,FV,Fever,name: Malaria,C01.610.752.530 C01.920.852.750
+D016780,"Malaria, Vivax",FV,Fever,name: Malaria,C01.610.752.530.700 C01.920.852.750.700
+D044342,Malnutrition,MN,Metabolic & nutritional disorders,tree: C18,C18.654.521
+D008413,Mastitis,MA DE,Maternity; Dermatology,name: Puerperal Disorders | tree: C17,C12.050.703.844.603 C17.800.090.968
+D008457,Measles,ID,Infectious diseases,tree: C01,C01.925.782.580.600.500.500
+D008548,Melanosis,DE,Dermatology,tree: C17,C17.800.621.430.530
+D008551,Melena,GI,Gastrointestinal tract,tree: C06,A12.459.764 C06.405.227.600 C23.550.414.788.600
+D008568,Memory,MC,Mental conditions,tree: F02,F02.463.425.540
+D008569,Memory Disorders,NC MC,Neurological conditions; Mental conditions,tree: C10 | tree: F01,C10.597.606.525 C23.888.592.604.529 F01.700.625
+D008595,Menorrhagia,GY,Gynaecology,"name: Genital Diseases, Female",C12.050.351.500.852.691.449 C12.100.250.852.691.449 C23.550.414.993.350 C23.550.568.875
+D008598,Menstruation,GY,Gynaecology,name: Menstruation,G08.686.605.428
+D008599,Menstruation Disturbances,XY,Residual category,residual,C23.550.568
+D008600,Menstruation-Inducing Agents,GY,Gynaecology,name: Menstruation-Inducing Agents,D27.505.696.875.360.276.500 D27.505.696.875.360.360.937 D27.505.954.705.360.276.500 D27.505.954.705.360.360.937 D27.505.954.705.650
+D001523,Mental Disorders,MC,Mental conditions,tree: F03,F03
+D008881,Migraine Disorders,NC,Neurological conditions,tree: C10,C10.228.140.546.399.750
+D008895,"Milk, Human",XY,Residual category,residual,A12.200.467 A12.790.500 G07.203.100.700.500 G07.203.300.350.525.500 J02.200.700.500 J02.500.350.525.500
+D009059,Mouth Diseases,OC,Oral cavity,name: Mouth Diseases,C07.465
+D009067,Mouthwashes,OC,Oral cavity,name: Mouthwashes,D25.583 D27.720.102.583 D27.720.269.583 J01.637.051.583
+D009093,Mucus,RE,Respiratory tract,name: Mucus,A12.200.503
+D009107,Mumps,ID OC,Infectious diseases; Oral cavity,tree: C01 | name: Mouth Diseases,C01.925.782.580.600.680.500 C07.465.815.470.800.630
+D009120,Muscle Cramp,MS NC,Musculoskeletal; Neurological conditions,tree: C05 | tree: C10,C05.651.475 C10.597.613.500 C23.888.592.608.500
+D009122,Muscle Hypertonia,NC,Neurological conditions,tree: C10,C10.597.613.550 C23.888.592.608.550
+D009128,Muscle Spasticity,MS NC,Musculoskeletal; Neurological conditions,tree: C05 | tree: C10,C05.651.512 C10.597.613.550.550 C23.888.592.608.550.550
+D018908,Muscle Weakness,MS NC,Musculoskeletal; Neurological conditions,tree: C05 | tree: C10,C05.651.515 C10.597.613.593 C23.550.695 C23.888.592.608.593
+D009140,Musculoskeletal Diseases,MS,Musculoskeletal,tree: C05,C05
+D059352,Musculoskeletal Pain,MS MC,Musculoskeletal; Mental conditions,tree: C05 | tree: F02,C05.651.538 C23.888.592.612.547 F02.830.816.444.482 G11.561.790.444.509
+D009141,Musculoskeletal System,XY,Residual category,residual,A02
+D009145,Mushroom Poisoning,XY,Residual category,residual,C25.723.415.551 C25.723.680.551
+D063806,Myalgia,MS NC MC,Musculoskeletal; Neurological conditions; Mental conditions,tree: C05 | tree: C10 | tree: F02,C05.651.542 C10.668.491.525 C23.888.592.612.547.249 F02.830.816.444.482.001 G11.561.790.444.509.001
+D009198,Myiasis,ID,Infectious diseases,tree: C01,C01.610.858.211.503
+D009205,Myocarditis,CV,Cardiovascular disorders,tree: C14,C14.280.238.625
+D009220,Myositis,MS NC,Musculoskeletal; Neurological conditions,tree: C05 | tree: C10,C05.651.594 C10.668.491.562
+D009260,Nail Diseases,DE,Dermatology,tree: C17,C17.800.529
+D009263,"Nails, Ingrown",DE,Dermatology,tree: C17,C17.800.529.406
+D009264,"Nails, Malformed",XY,Residual category,residual,C23.300.820
+D009298,Nasal Polyps,RL,Rhino-Laryngology,name: Nose Diseases,C08.460.572 C09.603.557 C23.300.825.557
+D009325,Nausea,GI,Gastrointestinal tract,"name: Signs and Symptoms, Digestive",C23.888.821.712
+D019547,Neck Pain,MC,Mental conditions,tree: F02,C23.888.592.612.553 F02.830.816.444.504 G11.561.790.444.528
+D009336,Necrosis,XY,Residual category,residual,C23.550.717
+D009349,Nematode Infections,ID,Infectious diseases,tree: C01,C01.610.335.508
+D009369,Neoplasms,XY,Residual category,residual,C04
+D009393,Nephritis,UR,Urology,name: Urologic Diseases,C12.050.351.968.419.570 C12.200.777.419.570 C12.950.419.570
+D053040,Nephrolithiasis,UR,Urology,name: Urologic Diseases,C12.050.351.968.419.600 C12.050.351.968.967.249 C12.200.777.419.600 C12.200.777.967.249 C12.950.419.600 C12.950.967.249
+D009422,Nervous System Diseases,NC,Neurological conditions,tree: C10,C10
+D009437,Neuralgia,NC MC,Neurological conditions; Mental conditions,tree: C10 | tree: F02,C10.668.829.600 C23.888.592.612.664 F02.830.816.444.515 G11.561.790.444.538
+D020184,Night Terrors,NC MC,Neurological conditions; Mental conditions,tree: C10 | tree: F03,C10.886.659.635.600 F03.870.664.635.600
+D009558,Nipples,MA,Maternity,name: Breast,A01.236.500
+D009625,Noma,OC,Oral cavity,name: Mouth Diseases,C07.465.604
+D009668,Nose Diseases,RL,Rhino-Laryngology,name: Nose Diseases,C08.460 C09.603
+D009753,Nutritive Value,XY,Residual category,residual,G07.203.650.660 J01.576.423.850.730.750 N06.850.601.750
+D009765,Obesity,MN,Metabolic & nutritional disorders,tree: C18,C18.654.726.750.500 C23.888.144.699.500
+D007744,Obstetric Labor Complications,MA,Maternity,name: Pregnancy Complications,C12.050.703.420
+D007752,"Obstetric Labor, Premature",MA,Maternity,name: Pregnancy Complications,C12.050.703.420.491
+D009812,Odorants,XY,Residual category,residual,G16.500.275.640 N06.230.480
+D014009,Onychomycosis,ID DE,Infectious diseases; Dermatology,tree: C01 | tree: C17,C01.150.703.302.720.550 C01.800.200.720.550 C17.800.529.550 C17.800.838.208.883.458
+D009883,Ophthalmic Solutions,XY,Residual category,residual,D26.776.708.645 D27.505.954.578.645 D27.720.752.608
+D009293,Opioid-Related Disorders,MC,Mental conditions,tree: F03,C25.775.643.500 F03.900.647.500
+D009892,Opium,XY,Residual category,residual,D20.215.784.500.534
+D009900,Optic Nerve,XY,Residual category,residual,A08.800.800.120.680
+D006472,Oral Hemorrhage,OC,Oral cavity,name: Mouth Diseases,C07.465.625 C23.550.414.922 C23.888.619.500
+D009910,Oral Hygiene,XY,Residual category,residual,E02.547.600 E06.761.726
+D019226,Oral Ulcer,OC,Oral cavity,name: Mouth Diseases,C07.465.672
+D009920,Orchitis,AN MN,Andrology; Metabolic & nutritional disorders,"name: Genital Diseases, Male | tree: C19",C12.100.500.829.493 C12.200.294.829.493 C19.391.829.493
+D010000,Osteitis,MS,Musculoskeletal,tree: C05,C05.116.680
+D010031,Otitis,OT,Otology,name: Ear Diseases,C09.218.705
+D010033,Otitis Media,OT,Otology,name: Ear Diseases,C09.218.705.663
+D010035,"Otitis Media, Suppurative",ID OT,Infectious diseases; Otology,tree: C01 | name: Ear Diseases,C01.830.694 C09.218.705.663.680
+D010120,Oxytocics,MA,Maternity,name: Oxytocics,D27.505.696.875.737 D27.505.954.705.737
+D010146,Pain,MC,Mental conditions,tree: F02,C23.888.592.612 F02.830.816.444 G11.561.790.444
+D010167,Pallor,XY,Residual category,residual,C23.888.885.500
+D010243,Paralysis,MS,Musculoskeletal,name: Paralysis,C10.597.622 C23.888.592.636
+D020447,Parasomnias,NC MC,Neurological conditions; Mental conditions,tree: C10 | tree: F03,C10.886.659 F03.870.664
+D010292,Paresthesia,NC,Neurological conditions,tree: C10,C10.597.751.791.875 C23.888.592.763.770.875
+D010304,Paronychia,ID DE,Infectious diseases; Dermatology,tree: C01 | tree: C17,C01.800.460 C17.800.529.639 C17.800.838.486
+D010305,Parotid Diseases,OC,Oral cavity,name: Mouth Diseases,C07.465.815.470
+D010309,Parotitis,OC,Oral cavity,name: Mouth Diseases,C07.465.815.470.800 C07.465.815.793.500
+D036801,Parturition,MA,Maternity,name: Pregnancy,G08.686.784.769.490
+D000292,Pelvic Inflammatory Disease,ID GY,Infectious diseases; Gynaecology,"tree: C01 | name: Genital Diseases, Female",C01.635.500 C12.050.351.500.056.750 C12.100.250.056.750
+D017699,Pelvic Pain,MC,Mental conditions,tree: F02,C23.888.592.612.944 F02.830.816.444.841 G11.561.790.444.841
+D010409,Penile Diseases,AN,Andrology,"name: Genital Diseases, Male",C12.100.500.494 C12.200.294.494
+D010410,Penile Erection,XY,Residual category,residual,G08.686.784.717
+D010437,Peptic Ulcer,GI,Gastrointestinal tract,tree: C06,C06.405.469.275.800 C06.405.748.586
+D010493,Pericarditis,CV,Cardiovascular disorders,tree: C14,C14.280.720
+D010510,Periodontal Diseases,OC,Oral cavity,name: Mouth Diseases,C07.465.714
+D059348,Peripheral Nerve Injuries,NC DE,Neurological conditions; Dermatology,tree: C10 | tree: C26,C10.668.829.712 C10.900.575 C26.915.650
+D000039,Peritonsillar Abscess,ID RL RE,Infectious diseases; Rhino-Laryngology; Respiratory tract,tree: C01 | name: Pharyngeal Diseases | tree: C08,C01.748.561.750.500 C01.830.025.675 C07.550.781.750.500 C08.730.561.750.500 C09.775.649.750.500
+D010570,Pessaries,XY,Residual category,residual,E07.858.499
+D010571,Pest Control,XY,Residual category,residual,N06.850.780.200.650
+D010608,Pharyngeal Diseases,RL,Rhino-Laryngology,name: Pharyngeal Diseases,C07.550 C09.775
+D010612,Pharyngitis,ID RL RE,Infectious diseases; Rhino-Laryngology; Respiratory tract,tree: C01 | name: Pharyngeal Diseases | tree: C08,C01.748.561 C07.550.781 C08.730.561 C09.775.649
+D010689,Phlebitis,CV,Cardiovascular disorders,tree: C14,C14.907.617.718 C14.907.940.740
+D010842,Pica,GI MC,Gastrointestinal tract; Mental conditions,"name: Signs and Symptoms, Digestive | tree: F03",C23.888.821.825 F03.400.875
+D010859,Pigmentation Disorders,DE,Dermatology,tree: C17,C17.800.621 C23.550.755
+D010915,Pityriasis,DE,Dermatology,tree: C17,C17.800.859.600
+D010920,Placenta,MA,Maternity,name: Placenta,A16.710
+D018457,"Placenta, Retained",MA,Maternity,name: Pregnancy Complications,C12.050.703.590.767
+D010930,Plague,ID,Infectious diseases,tree: C01,C01.150.252.400.310.980.390 C01.920.906
+D010939,Plant Poisoning,XY,Residual category,residual,C25.723.756
+D010998,Pleurisy,ID RE,Infectious diseases; Respiratory tract,tree: C01 | tree: C08,C01.748.582 C08.528.735 C08.730.582
+D011014,Pneumonia,ID RE,Infectious diseases; Respiratory tract,tree: C01 | tree: C08,C01.748.610 C08.381.677 C08.730.610
+D011041,Poisoning,XY,Residual category,residual,C25.723
+D011042,Poisons,XY,Residual category,residual,D27.720.777 D27.888.569.612
+D011127,Polyps,XY,Residual category,residual,C23.300.825
+D011141,Polyuria,UR,Urology,name: Urologic Diseases,C12.050.351.968.934.616 C12.200.777.934.616 C12.950.934.616 C23.888.942.600
+D049590,Postpartum Period,MA,Maternity,name: Postpartum Period,G08.686.702
+D011201,Poultry Diseases,XY,Residual category,residual,C22.131.728
+D011208,Powders,XY,Residual category,residual,D26.255.779
+D011247,Pregnancy,MA,Maternity,name: Pregnancy,G08.686.784.769
+D011248,Pregnancy Complications,MA,Maternity,name: Pregnancy Complications,C12.050.703
+D011305,Presbyopia,OP,Ophthalmology,name: Eye Diseases,C11.744.786
+D011317,Priapism,AN,Andrology,"name: Genital Diseases, Male",C12.100.500.494.786 C12.200.294.494.786
+D011349,Proctitis,GI,Gastrointestinal tract,tree: C06,C06.405.205.865 C06.405.469.860.622
+D011537,Pruritus,DE,Dermatology,tree: C17,C17.800.685 C23.888.885.625
+D011538,Pruritus Ani,GI DE,Gastrointestinal tract; Dermatology,tree: C06 | tree: C17,C06.405.469.860.101.752 C17.800.685.544
+D011539,Pruritus Vulvae,GY DE,Gynaecology; Dermatology,"name: Genital Diseases, Female | tree: C17",C12.050.351.500.944.626 C12.100.250.944.626 C17.800.685.710
+D011565,Psoriasis,DE,Dermatology,tree: C17,C17.800.859.675
+D011595,Psychomotor Agitation,NC MC,Neurological conditions; Mental conditions,tree: C10 | tree: F01,C10.597.350.600 C10.597.606.881.700 C23.888.592.350.600 C23.888.592.604.882.700 F01.145.126.050.625 F01.700.875.700
+D011605,"Psychoses, Substance-Induced",MC,Mental conditions,tree: F03,C25.723.809 C25.775.746 F03.700.675.600 F03.900.746
+D011618,Psychotic Disorders,MC,Mental conditions,tree: F03,F03.700.675
+D011625,Pterygium,OP,Ophthalmology,name: Eye Diseases,C11.187.781
+D011627,Puberty,XY,Residual category,residual,G08.686.760 G08.686.841.374
+D011628,"Puberty, Delayed",MN,Metabolic & nutritional disorders,tree: C19,C19.391.690
+D011644,Puerperal Disorders,MA,Maternity,name: Puerperal Disorders,C12.050.703.844
+D011677,Punctures,XY,Residual category,residual,E02.800 E04.665
+D011680,Pupil,XY,Residual category,residual,A09.371.060.450.780 A09.371.894.513.780
+D011693,Purpura,BS,"Blood, spleen",tree: C15,C15.378.100.802 C23.550.414.950 C23.888.885.687
+D011818,Rabies,ID,Infectious diseases,tree: C01,C01.925.782.580.830.750
+D012002,Rectal Diseases,GI,Gastrointestinal tract,tree: C06,C06.405.469.860
+D012003,Rectal Fistula,GI,Gastrointestinal tract,tree: C06,C06.267.550.600 C06.405.469.471.600 C06.405.469.860.752 C23.300.575.185.550.600
+D012005,Rectal Prolapse,GI,Gastrointestinal tract,tree: C06,C06.405.469.860.800 C23.300.842.624.500
+D056844,Renal Colic,MC,Mental conditions,tree: F02,C23.888.592.612.972 C23.888.721 F02.830.816.444.850 G11.561.790.444.850
+D012120,Respiration Disorders,RE,Respiratory tract,tree: C08,C08.618
+D012135,Respiratory Sounds,RE,Respiratory tract,"name: Signs and Symptoms, Respiratory",C23.888.852.779 E01.370.386.720 G09.772.775
+D012140,Respiratory Tract Diseases,RE,Respiratory tract,tree: C08,C08
+D012141,Respiratory Tract Infections,ID RE,Infectious diseases; Respiratory tract,tree: C01 | tree: C08,C01.748 C08.730
+D012216,Rheumatic Diseases,MS DE,Musculoskeletal; Dermatology,tree: C05 | tree: C17,C05.799 C17.300.775
+D012220,Rhinitis,ID RL RE,Infectious diseases; Rhino-Laryngology; Respiratory tract,tree: C01 | name: Nose Diseases | tree: C08,C01.748.674 C08.460.799 C08.730.674 C09.603.799
+D012222,"Rhinitis, Atrophic",RL,Rhino-Laryngology,name: Nose Diseases,C08.460.799.649 C09.603.799.649
+D012279,Rickets,MS MN,Musculoskeletal; Metabolic & nutritional disorders,tree: C05 | tree: C18,C05.116.198.816 C18.452.104.816 C18.452.174.845 C18.654.521.500.133.770.734
+D012375,Rodent Control,XY,Residual category,residual,N06.850.780.200.650.700
+D012378,Rodenticides,XY,Residual category,residual,D27.720.031.700.853 D27.888.723.853
+D012393,Rosacea,DE,Dermatology,tree: C17,C17.800.716
+D012421,Rupture,DE,Dermatology,tree: C26,C26.761
+D012472,Salivation,OC,Oral cavity,name: Salivation,G07.203.650.250.800 G10.261.190.800
+D012532,Scabies,ID DE,Infectious diseases; Dermatology,tree: C01 | tree: C17,C01.610.858.211.480.708 C17.800.838.775.800
+D012536,Scalp Dermatoses,DE,Dermatology,tree: C17,C17.800.738
+D012585,Sciatica,MS,Musculoskeletal,name: Sciatica,C10.668.829.500.675.800 C10.668.829.600.800 C23.888.592.612.664.800
+D065008,Scorpion Stings,DE,Dermatology,name: Bites and Stings,C25.723.127.142 C26.176.443
+D012614,Scurvy,CV BS MN,"Cardiovascular disorders; Blood, spleen; Metabolic & nutritional disorders",tree: C14 | tree: C15 | tree: C18,C14.907.454.800 C15.378.463.515.800 C18.654.521.500.133.115.661
+D012640,Seizures,NC,Neurological conditions,tree: C10,C10.597.742 C23.888.592.742
+D012661,Semen,AN,Andrology,name: Semen,A12.200.732
+D012677,Sensation,MC,Mental conditions,tree: F02,F02.830.816 G11.561.790
+D012743,Sex Preselection,XY,Residual category,residual,E05.393.420.890
+D020018,"Sexual Dysfunctions, Psychological",MC,Mental conditions,tree: F03,F03.835
+D012749,Sexually Transmitted Diseases,ID UR,Infectious diseases; Urology,tree: C01 | tree: C12,C01.221.812 C01.778 C12.100.937 C23.550.291.531.937
+D012756,Sheep,XY,Residual category,residual,B01.050.150.900.649.313.500.380.791
+D012768,Shivering,FV,Fever,name: Shivering,G07.110.232.778.500 G07.410.421.778.500 G16.012.500.535.778.500
+D012771,"Shock, Hemorrhagic",XY,Residual category,residual,C23.550.414.980 C23.550.835.650
+D012817,"Signs and Symptoms, Digestive",GI,Gastrointestinal tract,"name: Signs and Symptoms, Digestive",C23.888.821
+D005423,Siphonaptera,XY,Residual category,residual,B01.050.500.131.617.720.500.500.968
+D012868,Skin Abnormalities,DE,Dermatology,tree: C17,C16.131.831 C17.800.804
+D015595,Skin Aging,XY,Residual category,residual,G13.750.804
+D017592,Skin Care,XY,Residual category,residual,E02.547.800
+D012871,Skin Diseases,DE,Dermatology,tree: C17,C17.800
+D012874,"Skin Diseases, Infectious",ID DE,Infectious diseases; Dermatology,tree: C01 | tree: C17,C01.800 C17.800.838
+D017444,"Skin Diseases, Papulosquamous",DE,Dermatology,tree: C17,C17.800.859
+D012872,"Skin Diseases, Vesiculobullous",DE,Dermatology,tree: C17,C17.800.865
+D012878,Skin Neoplasms,DE,Dermatology,tree: C17,C04.588.805 C17.800.882
+D012880,Skin Pigmentation,XY,Residual category,residual,E01.370.600.115.450.500 E01.370.600.620.750 G07.100.175.500 G13.750.837 G16.690.890
+D012883,Skin Ulcer,DE,Dermatology,tree: C17,C17.800.893
+D012887,Skull Fractures,NC MS DE,Neurological conditions; Musculoskeletal; Dermatology,"tree: C10 | name: Fractures, Bone | tree: C26",C10.900.300.918 C26.404.750 C26.915.300.745
+D012890,Sleep,MC,Mental conditions,name: Sleep,F02.830.855 G11.561.803
+D012892,Sleep Deprivation,NC MC,Neurological conditions; Mental conditions,tree: C10 | name: Sleep,C10.886.425.175 C23.888.592.796.772 F02.830.855.671 F03.870.400.099
+D007319,Sleep Initiation and Maintenance Disorders,NC MC,Neurological conditions; Mental conditions,tree: C10 | tree: F03,C10.886.425.800.800 F03.870.400.800.800
+D020188,Sleep Paralysis,NC MC,Neurological conditions; Mental conditions,tree: C10 | tree: F03,C10.886.659.633.800 F03.870.664.633.800
+D012894,Sleep Stages,MC,Mental conditions,name: Sleep,F02.830.855.796 G11.561.803.754
+D012893,Sleep Wake Disorders,NC MC,Neurological conditions; Mental conditions,tree: C10 | tree: F03,C10.886 C23.888.592.796 F03.870
+D000077260,Sleepiness,MC,Mental conditions,name: Sleep,C23.888.900 G11.561.803.754.917
+D012899,Smallpox,ID,Infectious diseases,tree: C01,C01.925.256.743.826
+D012909,Snake Bites,DE,Dermatology,name: Bites and Stings,C25.723.127.442 C26.176.724
+D012912,Sneezing,RE,Respiratory tract,"name: Signs and Symptoms, Respiratory",C23.888.852.889 G09.772.832
+D013035,Spasm,MS,Musculoskeletal,name: Spasm,C10.597.613.750 C23.888.592.608.750
+D013036,"Spasms, Infantile",NC,Neurological conditions,tree: C10,C10.228.140.490.375.760 C10.228.140.490.493.875
+D013064,Speech Disorders,NC,Neurological conditions,tree: C10,C10.597.606.150.500.800 C23.888.592.604.150.500.800
+D013091,Spermatogenesis,AN,Andrology,name: Spermatogenesis,G04.152.650.624 G08.686.784.310.760
+D013094,Spermatozoa,XY,Residual category,residual,A05.360.490.890 A11.497.760
+D001098,Spider Bites,DE,Dermatology,name: Bites and Stings,C25.723.127.723 C26.176.790
+D013158,Splenic Diseases,BS,"Blood, spleen",name: Splenic Diseases,C15.604.744
+D013163,Splenomegaly,XY,Residual category,residual,C23.300.775.750
+D013180,Sprains and Strains,MS,Musculoskeletal,name: Sprains and Strains,C26.844
+D013183,Sputum,XY,Residual category,residual,A12.200.808
+D050497,Stillbirth,MA,Maternity,name: Pregnancy Complications,C12.050.703.223.650 C23.550.260.585.630 G08.686.784.769.496.500
+D013272,Stomach Diseases,GI,Gastrointestinal tract,tree: C06,C06.405.748
+D013276,Stomach Ulcer,GI,Gastrointestinal tract,tree: C06,C06.405.469.275.800.849 C06.405.748.586.849
+D013280,Stomatitis,OC,Oral cavity,name: Mouth Diseases,C07.465.864
+D013281,"Stomatitis, Aphthous",OC,Oral cavity,name: Mouth Diseases,C07.465.864.750
+D020521,Stroke,NC CV,Neurological conditions; Cardiovascular disorders,tree: C10 | tree: C14,C10.228.140.300.775 C14.907.253.855
+D053608,Stupor,NC,Neurological conditions,tree: C10,C10.597.606.358.800.500 C23.888.592.604.359.800.500
+D013471,Sunburn,DE,Dermatology,tree: C17,C17.800.600.725 C26.200.855
+D013474,Sunstroke,DE,Dermatology,tree: C26,C26.522.500.500
+D013492,Suppuration,ID,Infectious diseases,tree: C01,C01.830 C23.550.470.756
+D013546,Sweating,XY,Residual category,residual,G07.110.232.693 G07.410.421.693 G13.750.860 G16.012.500.535.693
+D013553,Swine Diseases,XY,Residual category,residual,C22.905
+D013575,Syncope,NC,Neurological conditions,tree: C10,C10.597.606.358.800.600 C23.888.592.604.359.800.600
+D013587,Syphilis,ID UR,Infectious diseases; Urology,tree: C01 | tree: C12,C01.150.252.400.794.840.500 C01.150.252.400.840.500 C01.150.252.734.859 C01.221.812.281.859 C01.778.281.859 C12.100.937.281.859
+D013610,Tachycardia,CV,Cardiovascular disorders,tree: C14,C14.280.067.845 C14.280.123.875 C23.550.073.845
+D013622,Taeniasis,ID,Infectious diseases,tree: C01,C01.610.335.190.902
+D013653,Tattooing,XY,Residual category,residual,E02.218.085.840 E04.085.840
+D013666,Tears,OP,Ophthalmology,name: Tears,A12.200.882
+D052256,Tendinopathy,MS DE,Musculoskeletal; Dermatology,tree: C05 | tree: C26,C05.651.869 C26.874.800
+D013708,Tendon Injuries,DE,Dermatology,tree: C26,C26.874
+D013710,Tendons,XY,Residual category,residual,A02.880
+D013733,Testicular Diseases,AN MN,Andrology; Metabolic & nutritional disorders,"name: Genital Diseases, Male | tree: C19",C12.100.500.829 C12.200.294.829 C19.391.829
+D006848,Testicular Hydrocele,AN MN,Andrology; Metabolic & nutritional disorders,"name: Genital Diseases, Male | tree: C19",C12.100.500.829.495 C12.200.294.829.494 C19.391.829.638
+D013737,Testis,XY,Residual category,residual,A05.360.444.849 A05.360.576.782 A06.300.312.782
+D013742,Tetanus,ID,Infectious diseases,tree: C01,C01.150.252.410.222.864
+D013894,Thirst,MC,Mental conditions,tree: F01,F01.658.293.787
+D013896,Thoracic Diseases,RE,Respiratory tract,tree: C08,C08.846
+D013898,Thoracic Injuries,DE,Dermatology,tree: C26,C26.891
+D013927,Thrombosis,CV,Cardiovascular disorders,tree: C14,C14.907.355.830
+D013984,Tick Infestations,ID,Infectious diseases,tree: C01,C01.610.858.211.857
+D014005,Tinea,ID DE,Infectious diseases; Dermatology,tree: C01 | tree: C17,C01.150.703.302.720 C01.800.200.720 C17.800.838.208.883
+D014006,Tinea Capitis,ID DE,Infectious diseases; Dermatology,tree: C01 | tree: C17,C01.150.703.302.720.730 C01.800.200.720.730 C17.800.738.708 C17.800.838.208.883.558
+D014007,Tinea Favosa,ID DE,Infectious diseases; Dermatology,tree: C01 | tree: C17,C01.150.703.302.720.730.740 C01.800.200.720.730.740 C17.800.738.708.708 C17.800.838.208.883.558.708
+D014012,Tinnitus,OT NC,Otology; Neurological conditions,name: Ear Diseases | tree: C10,C09.218.458.670 C10.597.751.418.670 C23.888.592.763.393.670
+D014060,Tongue Diseases,OC,Oral cavity,name: Mouth Diseases,C07.465.910
+D014069,Tonsillitis,ID RL RE,Infectious diseases; Rhino-Laryngology; Respiratory tract,tree: C01 | name: Pharyngeal Diseases | tree: C08,C01.748.561.750 C07.550.781.750 C08.730.561.750 C09.775.649.750
+D014073,Tooth Bleaching,XY,Residual category,residual,E06.420.750
+D014076,Tooth Diseases,OC,Oral cavity,name: Tooth Diseases,C07.793
+D014081,Tooth Extraction,XY,Residual category,residual,E04.545.700 E06.645.700
+D014082,Tooth Fractures,OC DE,Oral cavity; Dermatology,name: Tooth Diseases | tree: C26,C07.793.850.750 C26.900.750
+D014086,Tooth Mobility,OC,Oral cavity,name: Mouth Diseases,C07.465.714.898 G10.549.840
+D014098,Toothache,OC,Oral cavity,name: Toothache,C07.793.929 C23.888.592.612.330.500
+D014103,Torticollis,XY,Residual category,residual,C23.888.592.350.300.800
+D014132,Trachea,XY,Residual category,residual,A04.889
+D014133,Tracheal Diseases,RE,Respiratory tract,tree: C08,C08.907
+D014136,Tracheitis,ID RE,Infectious diseases; Respiratory tract,tree: C01 | tree: C08,C01.748.848 C08.730.848 C08.907.763
+D020196,"Trauma, Nervous System",NC DE,Neurological conditions; Dermatology,tree: C10 | tree: C26,C10.900 C26.915
+D014202,Tremor,NC,Neurological conditions,tree: C10,C10.597.350.850 C23.888.592.350.850
+D058457,Trichiasis,OP,Ophthalmology,name: Eye Diseases,C11.338.912
+D014376,Tuberculosis,ID,Infectious diseases,name: Tuberculosis,C01.150.252.410.040.552.846
+D014388,"Tuberculosis, Lymph Node",ID,Infectious diseases,name: Tuberculosis,C01.150.252.410.040.552.846.617.475
+D014397,"Tuberculosis, Pulmonary",ID RE,Infectious diseases; Respiratory tract,name: Tuberculosis | tree: C08,C01.150.252.410.040.552.846.899 C01.748.939 C08.381.922 C08.730.939
+D014456,Ulcer,DE,Dermatology,name: Ulcer,C23.550.891
+D014474,Unconsciousness,NC,Neurological conditions,tree: C10,C10.597.606.358.800 C23.888.592.604.359.800
+D014526,Urethritis,UR,Urology,name: Urologic Diseases,C12.050.351.968.767.851 C12.200.777.767.851 C12.950.767.851
+D001743,Urinary Bladder,UR,Urology,name: Urinary Bladder,A05.810.890
+D001744,Urinary Bladder Calculi,UR,Urology,name: Urologic Diseases,C12.050.351.968.829.521 C12.050.351.968.967.500.925 C12.200.777.829.720 C12.200.777.967.500.925 C12.950.829.521 C12.950.967.500.925 C23.300.175.850.875
+D001745,Urinary Bladder Diseases,UR,Urology,name: Urologic Diseases,C12.050.351.968.829 C12.200.777.829 C12.950.829
+D014545,Urinary Calculi,UR,Urology,name: Urinary Calculi,C12.050.351.968.967.500 C12.200.777.967.500 C12.950.967.500 C23.300.175.850
+D014549,Urinary Incontinence,UR,Urology,name: Urologic Diseases,C12.050.351.968.934.814 C12.200.777.934.852 C12.950.934.814 C23.888.942.343.800
+D016055,Urinary Retention,UR,Urology,name: Urologic Diseases,C12.050.351.968.934.880 C12.200.777.934.880 C12.950.934.880
+D014551,Urinary Tract,UR,Urology,name: Urinary Tract,A05.810
+D014552,Urinary Tract Infections,ID UR,Infectious diseases; Urology,tree: C01 | name: Urologic Diseases,C01.915 C12.050.351.968.892 C12.200.777.892 C12.950.892
+D014554,Urination,UR,Urology,name: Urination,G08.852.880
+D014555,Urination Disorders,UR,Urology,name: Urologic Diseases,C12.050.351.968.934 C12.200.777.934 C12.950.934
+D014556,Urine,XY,Residual category,residual,A12.207.927
+D014570,Urologic Diseases,UR,Urology,name: Urologic Diseases,C12.050.351.968 C12.200.777 C12.950
+D014581,Urticaria,DE,Dermatology,tree: C17,C17.800.862.945 C20.543.480.904
+D014591,Uterine Diseases,GY,Gynaecology,"name: Genital Diseases, Female",C12.050.351.500.852 C12.100.250.852
+D014592,Uterine Hemorrhage,GY,Gynaecology,"name: Genital Diseases, Female",C12.050.351.500.852.691 C12.100.250.852.691 C23.550.414.993
+D014594,Uterine Neoplasms,GY UR,Gynaecology; Urology,"name: Genital Diseases, Female | tree: C12",C04.588.945.418.948 C12.050.351.500.852.762 C12.050.351.937.418.875 C12.100.250.852.762 C12.900.418.875
+D014596,Uterine Prolapse,GY,Gynaecology,"name: Genital Diseases, Female",C12.050.351.500.852.833 C12.100.250.852.833 C23.300.842.624.750
+D014599,Uterus,GY,Gynaecology,name: Uterus,A05.360.319.679
+D014609,Uvula,RL,Rhino-Laryngology,name: Uvula,A14.549.617.780.729
+D014648,Varicose Veins,CV,Cardiovascular disorders,tree: C14,C14.907.927
+D014652,Vascular Diseases,CV,Cardiovascular disorders,tree: C14,C14.907
+D057772,Vascular System Injuries,CV DE,Cardiovascular disorders; Dermatology,tree: C14 | tree: C26,C14.907.937 C26.940
+D014675,Vegetables,XY,Residual category,residual,B01.650.160.956 B01.650.510.956 G07.203.300.850 J02.500.850
+D014688,Venoms,XY,Residual category,residual,A12.200.935 D20.888 D23.946.833
+D014717,Vertigo,OT NC,Otology; Neurological conditions,name: Ear Diseases | tree: C10,C09.218.568.900.883 C10.597.951 C23.888.592.958
+D014757,Viper Venoms,XY,Residual category,residual,D20.888.850.960 D23.946.833.850.960
+D017819,Viperidae,XY,Residual category,residual,B01.050.050.286.875.875 B01.050.150.900.833.672.125.937 B01.050.150.900.833.672.562.875
+D014781,Viscera,XY,Residual category,residual,A01.960
+D059265,Visceral Pain,XY,Residual category,residual,C23.888.592.612.720.500
+D014786,Vision Disorders,NC OP,Neurological conditions; Ophthalmology,tree: C10 | name: Eye Diseases,C10.597.751.941 C11.966 C23.888.592.763.941
+D014785,"Vision, Ocular",MC,Mental conditions,tree: F02,F02.830.816.964 G02.111.820.480.900 G04.835.480.900 G11.561.790.964 G14.935
+D014792,Visual Acuity,MC,Mental conditions,tree: F02,E01.370.380.850.950 F02.463.593.932.901 G14.940
+D014820,Vitiligo,DE,Dermatology,tree: C17,C17.800.621.440.895
+D014832,Voice Disorders,RL NC,Rhino-Laryngology; Neurological conditions,name: Laryngeal Diseases | tree: C10,C08.360.940 C09.400.940 C10.597.975 C23.888.592.979
+D014839,Vomiting,GI,Gastrointestinal tract,"name: Signs and Symptoms, Digestive",C23.888.821.937
+D014860,Warts,ID DE,Infectious diseases; Dermatology,tree: C01 | tree: C17,C01.925.256.650.810 C01.925.825.810 C01.925.928.914 C17.800.838.790.810
+D019282,Wasting Syndrome,MN,Metabolic & nutritional disorders,tree: C18,C18.452.915 C18.654.940
+D000069578,Waterborne Diseases,ID,Infectious diseases,tree: C01,C01.936
+D015430,Weight Gain,XY,Residual category,residual,C23.888.144.243.926 G07.345.249.314.120.200.926
+D015431,Weight Loss,XY,Residual category,residual,C23.888.144.243.963 G07.345.249.314.120.200.963
+D014917,Whooping Cough,ID RE,Infectious diseases; Respiratory tract,tree: C01 | tree: C08,C01.150.252.400.143.500 C01.748.969 C08.730.969
+D014945,Wound Healing,DE,Dermatology,name: Wound Healing,G16.762.891
+D014947,Wounds and Injuries,DE,Dermatology,tree: C26,C26
+D014950,"Wounds, Penetrating",DE,Dermatology,tree: C26,C26.986
+D014987,Xerostomia,OC,Oral cavity,name: Mouth Diseases,C07.465.815.929

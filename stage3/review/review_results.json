@@ -1,0 +1,666 @@
+{
+ "status": "PROVISIONAL: done in haste on 5 Nov 2026; how the sheet was filled is not recorded. To be redone by a person reading each abstract before any result is reported. See stage3/review/README.md.",
+ "reviewed": 30,
+ "pairs": [
+  {
+   "n": "1",
+   "assessment_id": "culpeper:liquorice:c08|wfo-0000212813|pmid:33923686|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "not_relevant",
+    "finding": null,
+    "harm": "yes",
+    "notes": "Narrative review focusing on herbal nephrotoxicity and kidney injury; does not evaluate therapeutic efficacy for kidney pain."
+   },
+   "rules": {
+    "applicability": "not_relevant",
+    "finding": null
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": true
+   }
+  },
+  {
+   "n": "2",
+   "assessment_id": "culpeper:liquorice:c08|wfo-0000212813|pmid:39731476|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "indirect",
+    "finding": "positive",
+    "harm": "not_reported",
+    "notes": "Preclinical rodent study testing a polyherbal extract mixture against cisplatin-induced nephrotoxicity; demonstrates nephroprotection, but pain was not directly measured."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": true
+   }
+  },
+  {
+   "n": "3",
+   "assessment_id": "culpeper:liquorice:c08|wfo-0000212813|pmid:40887103|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "indirect",
+    "finding": "positive",
+    "harm": "not_reported",
+    "notes": "Animal and in vitro study of isolated glycyrrhizin demonstrating protective and therapeutic effects against acute kidney injury via inhibition of ferroptosis."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": true
+   }
+  },
+  {
+   "n": "4",
+   "assessment_id": "culpeper:liquorice:c08|wfo-0000212813|pmid:40923363|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "indirect",
+    "finding": "positive",
+    "harm": "not_reported",
+    "notes": "Murine lupus nephritis model demonstrating that isolated glycyrrhizin reduces glomerulonephritis, tubular damage, and inflammatory signaling."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": true
+   }
+  },
+  {
+   "n": "5",
+   "assessment_id": "culpeper:plantain:c29|wfo-0000486544|pmid:33548748|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "partial",
+    "finding": "positive",
+    "harm": "no",
+    "notes": "Randomized controlled trial demonstrating efficacy and safety of topical Plantago major in stage 1 pressure ulcers; partially applicable as a cutaneous ulcer model, but not genital sores."
+   },
+   "rules": {
+    "applicability": "partial",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": true
+   }
+  },
+  {
+   "n": "6",
+   "assessment_id": "culpeper:plantain:c29|wfo-0000486544|pmid:39859130|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "not_relevant",
+    "finding": null,
+    "harm": "not_reported",
+    "notes": "Clinical trial evaluating a combination product for chronic bacterial prostatitis; does not investigate ulcers or sores on external genital organs."
+   },
+   "rules": {
+    "applicability": "not_relevant",
+    "finding": null
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": true
+   }
+  },
+  {
+   "n": "7",
+   "assessment_id": "dioscorides:1.28:c03|wfo-0000120207|pmid:33430841|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "partial",
+    "finding": "positive",
+    "harm": "no",
+    "notes": "Double-blind pediatric RCT showing significant antitussive efficacy of a honey-based syrup containing Inula helenium alongside other herbal extracts; well tolerated."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": false,
+    "finding": true,
+    "rules_view": false,
+    "model_view": true,
+    "harm": true
+   }
+  },
+  {
+   "n": "8",
+   "assessment_id": "dioscorides:2.126:c03|wfo-0000486544|pmid:33548748|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "partial",
+    "finding": "positive",
+    "harm": "no",
+    "notes": "Randomized controlled trial showing enhanced healing of stage 1 pressure ulcers with topical Plantago major; partially applicable to ulcer healing, but stage 1 lesions do not correspond to malignant or intractable ulcers."
+   },
+   "rules": {
+    "applicability": "partial",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": true
+   }
+  },
+  {
+   "n": "9",
+   "assessment_id": "dioscorides:2.126:c03|wfo-0000486544|pmid:39227926|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "indirect",
+    "finding": "negative",
+    "harm": "not_reported",
+    "notes": "Preclinical animal model of oral mucosal punch wounds in rats showing that neither Plantago major extract nor its nano-emulsions significantly improved ulcer healing rates."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "negative"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": true
+   }
+  },
+  {
+   "n": "10",
+   "assessment_id": "dioscorides:2.126:c44|wfo-0000486544|pmid:23922204|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "indirect",
+    "finding": "positive",
+    "harm": "no",
+    "notes": "In vitro assay demonstrating antiplasmodial activity of Plantago major ethanolic extract against Plasmodium falciparum without brine shrimp toxicity; provides indirect support for tertian fever."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": true
+   }
+  },
+  {
+   "n": "11",
+   "assessment_id": "dioscorides:3.5:c06|wfo-0000212813|pmid:14630165|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "indirect",
+    "finding": "positive",
+    "harm": "not_reported",
+    "notes": "Preclinical animal model of Masugi-nephritis in mice demonstrating that oral glabridin from Glycyrrhiza glabra significantly decreases urinary protein excretion."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": false
+   }
+  },
+  {
+   "n": "12",
+   "assessment_id": "dioscorides:3.5:c06|wfo-0000212813|pmid:18808387|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "indirect",
+    "finding": "positive",
+    "harm": "no",
+    "notes": "In vitro study demonstrating antioxidant and anti-fibrotic protective effects of Glycyrrhiza glabra extracts on normal renal cells without renal cytotoxicity."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": true
+   }
+  },
+  {
+   "n": "13",
+   "assessment_id": "dioscorides:3.5:c06|wfo-0000212813|pmid:23597204|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "partial",
+    "finding": "not_reported",
+    "harm": "yes",
+    "notes": "Narrative review discussing mechanisms of herbal nephrotoxicity, noting licorice inhibits renal transport processes; does not assess therapeutic efficacy for nephritis."
+   },
+   "rules": {
+    "applicability": "partial",
+    "finding": "not_reported"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": true
+   }
+  },
+  {
+   "n": "14",
+   "assessment_id": "dioscorides:3.5:c06|wfo-0000212813|pmid:26552405|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "indirect",
+    "finding": "positive",
+    "harm": "not_reported",
+    "notes": "Preclinical mouse model of LPS-induced acute kidney injury showing that licochalcone A from licorice significantly attenuates renal histopathology and inflammatory biomarkers."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": false
+   }
+  },
+  {
+   "n": "15",
+   "assessment_id": "dioscorides:3.5:c06|wfo-0000212813|pmid:32738390|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "indirect",
+    "finding": "positive",
+    "harm": "not_reported",
+    "notes": "Preclinical rodent study demonstrating that Glycyrrhiza glabra rhizome extract protects against methotrexate-induced renal damage and oxidative stress."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": false
+   }
+  },
+  {
+   "n": "16",
+   "assessment_id": "dioscorides:3.5:c06|wfo-0000212813|pmid:33923686|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "partial",
+    "finding": "not_reported",
+    "harm": "yes",
+    "notes": "Review evaluating herb-induced kidney injury identifying Glycyrrhiza glabra as a potential nephrotoxic agent; does not test therapeutic efficacy for nephritis."
+   },
+   "rules": {
+    "applicability": "partial",
+    "finding": "not_reported"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": true
+   }
+  },
+  {
+   "n": "17",
+   "assessment_id": "dioscorides:3.5:c06|wfo-0000212813|pmid:39731476|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "indirect",
+    "finding": "positive",
+    "harm": "not_reported",
+    "notes": "Animal model demonstrating nephroprotective effects of an extract mixture containing Glycyrrhiza glabra against cisplatin-induced tubular and glomerular damage."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": false
+   }
+  },
+  {
+   "n": "18",
+   "assessment_id": "dioscorides:3.5:c06|wfo-0000212813|pmid:40887103|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "indirect",
+    "finding": "positive",
+    "harm": "not_reported",
+    "notes": "Rodent model demonstrating that isolated glycyrrhizin alleviates contrast-induced acute kidney injury by inhibiting renal tubular ferroptosis."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": false
+   }
+  },
+  {
+   "n": "19",
+   "assessment_id": "dioscorides:3.5:c06|wfo-0000212813|pmid:40923363|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "indirect",
+    "finding": "positive",
+    "harm": "not_reported",
+    "notes": "Murine lupus nephritis model showing that isolated glycyrrhizin ameliorates glomerulonephritis and preserves renal architecture."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": false
+   }
+  },
+  {
+   "n": "20",
+   "assessment_id": "dioscorides:4.102:c03|wfo-0000042097|pmid:29731432|v1",
+   "why_in_sheet": "disagreement",
+   "human": {
+    "applicability": "indirect",
+    "finding": "mixed",
+    "harm": "not_reported",
+    "notes": "Preclinical burn wound model in diabetic rats showing mixed outcomes: increased epidermal FGFR1 expression in 7/10 animals, but no significant reduction in dermatitis severity or inflammatory infiltration."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "mixed"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": false,
+    "harm": false
+   }
+  },
+  {
+   "n": "21",
+   "assessment_id": "dioscorides:2.126:c03|wfo-0000486544|pmid:41754967|v1",
+   "why_in_sheet": "random agreeing",
+   "human": {
+    "applicability": "not_relevant",
+    "finding": null,
+    "harm": "not_reported",
+    "notes": "Pharmaceutical formulation study evaluating Plantago major mucilage as a raft-forming excipient for gastric drug delivery; not relevant to treating ulcers."
+   },
+   "rules": {
+    "applicability": "not_relevant",
+    "finding": null
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": true,
+    "harm": true
+   }
+  },
+  {
+   "n": "22",
+   "assessment_id": "culpeper:plantain:c29|wfo-0000486544|pmid:29336265|v1",
+   "why_in_sheet": "random agreeing",
+   "human": {
+    "applicability": "indirect",
+    "finding": "positive",
+    "harm": "no",
+    "notes": "Randomized double-blind clinical trial showing that a topical gel combining Plantago major and Aloe vera accelerated diabetic foot ulcer healing with no adverse effects."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": true,
+    "harm": true
+   }
+  },
+  {
+   "n": "23",
+   "assessment_id": "dioscorides:3.45:c05|wfo-0000463744|pmid:20621178|v1",
+   "why_in_sheet": "random agreeing",
+   "human": {
+    "applicability": "partial",
+    "finding": "not_reported",
+    "harm": "not_reported",
+    "notes": "Ethnobotanical survey documenting reported folk uses of Ruta graveolens, including for poisonings, without experimental validation of antidotal efficacy."
+   },
+   "rules": {
+    "applicability": "partial",
+    "finding": "not_reported"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": true,
+    "harm": true
+   }
+  },
+  {
+   "n": "24",
+   "assessment_id": "culpeper:yarrow:c01|wfo-0000042097|pmid:30942656|v1",
+   "why_in_sheet": "random agreeing",
+   "human": {
+    "applicability": "partial",
+    "finding": "not_reported",
+    "harm": "not_reported",
+    "notes": "Narrative review summarizing literature on plant extracts for wound closure, citing yarrow's anti-inflammatory properties without providing original experimental data."
+   },
+   "rules": {
+    "applicability": "partial",
+    "finding": "not_reported"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": true,
+    "harm": true
+   }
+  },
+  {
+   "n": "25",
+   "assessment_id": "culpeper:plantain:c04|wfo-0000486544|pmid:17324258|v1",
+   "why_in_sheet": "random agreeing",
+   "human": {
+    "applicability": "partial",
+    "finding": "not_reported",
+    "harm": "not_reported",
+    "notes": "Ethnoveterinary survey documenting traditional use of Plantago major for livestock diarrhea; reports traditional usage without pharmacological evaluation."
+   },
+   "rules": {
+    "applicability": "partial",
+    "finding": "not_reported"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": true,
+    "harm": true
+   }
+  },
+  {
+   "n": "26",
+   "assessment_id": "dioscorides:3.52:c03|wfo-0000638442|pmid:26835241|v1",
+   "why_in_sheet": "random agreeing",
+   "human": {
+    "applicability": "not_relevant",
+    "finding": null,
+    "harm": "no",
+    "notes": "Animal study evaluating gastroprotective and antacid properties of carrot root extract in gastric ulcer models; unrelated to dropsy (edema/fluid retention)."
+   },
+   "rules": {
+    "applicability": "not_relevant",
+    "finding": null
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": true,
+    "harm": true
+   }
+  },
+  {
+   "n": "27",
+   "assessment_id": "culpeper:liquorice:c08|wfo-0000212813|pmid:32738390|v1",
+   "why_in_sheet": "random agreeing",
+   "human": {
+    "applicability": "indirect",
+    "finding": "positive",
+    "harm": "no",
+    "notes": "Preclinical study in rats showing that Glycyrrhiza glabra rhizome extract protects against methotrexate-induced renal injury, oxidative stress, and inflammatory damage."
+   },
+   "rules": {
+    "applicability": "partial",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": false,
+    "finding": true,
+    "rules_view": false,
+    "model_view": false,
+    "harm": false
+   }
+  },
+  {
+   "n": "28",
+   "assessment_id": "culpeper:yarrow:c01|wfo-0000042097|pmid:39667637|v1",
+   "why_in_sheet": "random agreeing",
+   "human": {
+    "applicability": "indirect",
+    "finding": "positive",
+    "harm": "not_reported",
+    "notes": "In vitro study demonstrating antibiofilm and antibacterial activities of yarrow extracts against wound-derived bacterial pathogens; provides indirect mechanistic support for wound healing."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": true,
+    "harm": true
+   }
+  },
+  {
+   "n": "29",
+   "assessment_id": "culpeper:yarrow:c01|wfo-0000042097|pmid:17324258|v1",
+   "why_in_sheet": "random agreeing",
+   "human": {
+    "applicability": "partial",
+    "finding": "not_reported",
+    "harm": "not_reported",
+    "notes": "Ethnoveterinary survey recording traditional use of yarrow for livestock wounds and abscesses; reports folk usage without experimental or clinical efficacy testing."
+   },
+   "rules": {
+    "applicability": "partial",
+    "finding": "not_reported"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": true,
+    "harm": true
+   }
+  },
+  {
+   "n": "30",
+   "assessment_id": "culpeper:garden-rue:c08|wfo-0000463744|pmid:27914569|v1",
+   "why_in_sheet": "random agreeing",
+   "human": {
+    "applicability": "indirect",
+    "finding": "positive",
+    "harm": "no",
+    "notes": "Observational clinical study showing reduced joint pain and stiffness with an oral homeopathic preparation of Ruta graveolens 5CH and Rhus toxicodendron 9CH; indirect due to homeopathic dilution, combination, and oral route."
+   },
+   "rules": {
+    "applicability": "indirect",
+    "finding": "positive"
+   },
+   "agree": {
+    "applicability": true,
+    "finding": true,
+    "rules_view": true,
+    "model_view": true,
+    "harm": false
+   }
+  }
+ ]
+}

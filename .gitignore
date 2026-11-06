@@ -268,3 +268,18 @@ claims/web/
 claims/cache/
 # Disease Ontology download (doid.obo, release recorded in claims/historical_terms.csv)
 reference_sources/doid/
+# Stage 3: full unit files are rebuilt by stage3/build_units.py (pilot.jsonl stays in git)
+stage3/units/culpeper.jsonl
+stage3/units/dioscorides.jsonl
+# Stage 3: NCBI cache and PubMed abstracts (publisher copyright): outside git, shared in the zip
+stage3/cache/
+stage3/texts/
+# Stage 3: web-chat prompts and pasted replies (only copy: shared outside git)
+stage3/web/
+
+# Stage 3 paper test: rows from Lardos et al. data file 7 (not redistributed) and the pasted prompts
+stage3/paper_test/expert_studies.jsonl
+stage3/paper_test/web/
+
+# Local working copies of Claude chat outputs (plans, audits, drafts): not part of the project
+Claude outputs/

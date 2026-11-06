@@ -55,6 +55,14 @@ NCBI and Wikidata caches (claims/cache/), the MeSH download and the
 Disease Ontology file. Unzip it the same way, on top of the earlier
 zip (unzip -o). Nothing in it replaces an earlier file.
 
+overslept_missing_files_4.zip (6 Nov, 166 MB) holds only what is new or changed
+since the third zip: Stage 3 (the abstracts in stage3/texts/, the search
+caches in stage3/cache/, every Stage 3 prompt and pasted reply in
+stage3/web/ and stage3/paper_test/web/, the full unit files), the
+claims batch for the 4 Dioscorides chapters that gained a plant after
+the Stage 2 fixes, and the paper's data file 7. Unzip it the same way,
+on top of the earlier zips (unzip -o).
+
 
 ## What is in the zip, and where it goes
 
@@ -100,6 +108,25 @@ Medicinal claims (about 30 MB):
     reference_sources/doid/doid.obo        Disease Ontology, release 2026-10-29 (7 MB)
     needed by: extract_claims.py --import-web (web/), check_mesh_ncbi.py (cache/ncbi),
                map_historical_terms.py (doid.obo, cache/wikidata), build_mesh_index.py (desc2026.gz)
+
+Stage 3, modern evidence (about 650 MB unzipped, mostly the PubMed cache; zip 4):
+
+    stage3/texts/                          the stored text of every source (abstract, Results
+                                           section, trial record, EMA monograph sections): what the
+                                           excerpt check reads. Publisher text, so not in git
+    stage3/cache/ncbi, epmc, ctgov, ema/   the raw replies of every search: a rerun of retrieve.py
+                                           asks nothing again
+    stage3/web/                            the Stage 3 prompts AND the pasted Gemini replies (pilot,
+                                           shared, the superseded prompt-0.2 run): the only copy of
+                                           the raw answers; --import-web rebuilds every result
+    stage3/paper_test/web/, expert_studies.jsonl
+                                           the paper test's prompts, replies and the rows read from
+                                           the paper's data file 7 (not redistributed)
+    stage3/units/culpeper.jsonl, dioscorides.jsonl
+                                           every claim × plant unit (build_units.py rebuilds them)
+    description_sources/paper_test/data/Data file 7 - Clinical trial data PubMed .xlsx
+    needed by: extract_assessments.py and paper_test.py --import-web (web/, texts/),
+               retrieve.py (cache/), show.py and export_graph.py (texts/ only for the excerpts)
 
 API caches, the raw replies (about 320 MB):
 

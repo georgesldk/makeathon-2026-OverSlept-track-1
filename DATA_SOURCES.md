@@ -114,11 +114,27 @@ Raw downloads and API caches are not committed to git.
 - Licence:  free service; NCBI usage guidelines (at most 3 requests a second without a key)
 - We must:  follow the usage guidelines; credit NCBI
 
+### Europe PMC (EMBL-EBI)
+- Folder:   stage3/retrieve.py (cache in stage3/cache/epmc/, not in git)
+- Licence:  free REST API; article text keeps its own licence (we use open-access full text only)
+- We must:  credit Europe PMC; keep stored texts outside git
+
+### ClinicalTrials.gov (API v2, NLM)
+- Folder:   stage3/retrieve.py (cache in stage3/cache/ctgov/, not in git)
+- Licence:  public domain (US government); NLM terms of use
+- We must:  credit ClinicalTrials.gov and give the retrieval date
+
+### EMA herbal monographs (HMPC)
+- Folder:   stage3/retrieve.py (table and PDFs cached in stage3/cache/ema/, not in git)
+- Licence:  EMA content may be reproduced with the source acknowledged
+- We must:  acknowledge EMA as the source; say which monograph and version
+
 ### Lardos et al. 2024, research data (figshare)
 - Folder:   description_sources/paper_test/data/ (not in git)
 - Licence:  not stated on the share link; the paper is CC BY 4.0
 - We must:  cite the paper; we do not redistribute the data files
-- Used to test the AI description check against the experts' scores
+- Used to test the AI description check against the experts' scores, and (data file 7) Stage 3
+  retrieval and extraction against the experts' clinical studies
 
 
 ## Notes
@@ -172,6 +188,10 @@ Raw downloads and API caches are not committed to git.
 - NCBI. Entrez Programming Utilities. https://www.ncbi.nlm.nih.gov/books/NBK25499/
 - Schriml, L. M. et al. Human Disease Ontology. https://disease-ontology.org (release 2026-10-29)
 - Wikipedia, The Free Encyclopedia. https://en.wikipedia.org
+- Europe PMC Consortium. Europe PMC. https://europepmc.org
+- U.S. National Library of Medicine. ClinicalTrials.gov, API v2. https://clinicaltrials.gov/data-api/api
+- European Medicines Agency, Committee on Herbal Medicinal Products. EU herbal monographs.
+  https://www.ema.europa.eu/en/medicines/download-medicine-data (herbal medicines table)
 - Lardos, A., Patmore, K., Allkin, R., Lazarou, R., Nesbitt, M.,
   Scott, A. C., Zipser, B. (2024). A systematic methodology to assess
   the identity of plants in historical texts. Journal of
