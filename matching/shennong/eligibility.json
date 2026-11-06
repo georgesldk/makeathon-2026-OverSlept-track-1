@@ -2062,6 +2062,29 @@
    "shown": [],
    "possible": [
     {
+     "accepted_name": "Angelica decursiva (Miq.) Franch. & Sav.",
+     "family": "Apiaceae",
+     "rank": "species",
+     "tier": "B",
+     "rules": [
+      "B1"
+     ],
+     "other_accepted_names": [],
+     "caveats": [
+      "one source"
+     ],
+     "reasons": [],
+     "lineages_strong": [],
+     "lineages_medium": [
+      "Henry",
+      "Wikidata"
+     ],
+     "passage_specific": false,
+     "geography": "local",
+     "description": "no description record",
+     "description_congruence": null
+    },
+    {
      "accepted_name": "Angelica biserrata (R.H.Shan & Yuan) C.Q.Yuan & R.H.Shan",
      "family": "Apiaceae",
      "rank": "species",
@@ -2086,7 +2109,7 @@
      "description_congruence": null
     },
     {
-     "accepted_name": "Angelica decursiva (Miq.) Franch. & Sav.",
+     "accepted_name": "Angelica inaequalis Maxim.",
      "family": "Apiaceae",
      "rank": "species",
      "tier": "B",
@@ -2100,10 +2123,10 @@
      "reasons": [],
      "lineages_strong": [],
      "lineages_medium": [
-      "Wikidata"
+      "Cust. Med."
      ],
      "passage_specific": false,
-     "geography": "local",
+     "geography": "trade",
      "description": "no description record",
      "description_congruence": null
     },
@@ -2348,9 +2371,58 @@
      "geography": "local",
      "description": "no description record",
      "description_congruence": null
+    },
+    {
+     "accepted_name": "Ostericum grossiserratum (Maxim.) Kitag.",
+     "family": "Apiaceae",
+     "rank": "species",
+     "tier": "B",
+     "rules": [
+      "B2",
+      "B5"
+     ],
+     "other_accepted_names": [
+      "Ostericum grosseserratum (Maxim.) Kitag."
+     ],
+     "caveats": [
+      "botanists disagree on the name",
+      "identified by one scholar only (Bretschneider)"
+     ],
+     "reasons": [],
+     "lineages_strong": [],
+     "lineages_medium": [
+      "Bretschneider"
+     ],
+     "passage_specific": false,
+     "geography": "local",
+     "description": "no description record",
+     "description_congruence": null
     }
    ],
    "hidden": [
+    {
+     "accepted_name": "Angelica L.",
+     "family": "Apiaceae",
+     "rank": "genus",
+     "tier": "X",
+     "rules": [
+      "X6"
+     ],
+     "other_accepted_names": [],
+     "caveats": [],
+     "reasons": [
+      "genus or family only"
+     ],
+     "lineages_strong": [],
+     "lineages_medium": [
+      "D’Incarvin.e",
+      "Smith"
+     ],
+     "passage_specific": false,
+     "geography": "not checked (genus or family level)",
+     "description": "no description record",
+     "description_congruence": null
+    },
     {
      "accepted_name": "Angelica sinensis var. wilsonii (H.Wolff) Z.H.Pan & M.F.Watson",
      "family": "Apiaceae",
@@ -4407,6 +4479,28 @@
     }
    ],
    "hidden": [
+    {
+     "accepted_name": "Artemisia L.",
+     "family": "Asteraceae",
+     "rank": "genus",
+     "tier": "X",
+     "rules": [
+      "X6"
+     ],
+     "other_accepted_names": [],
+     "caveats": [],
+     "reasons": [
+      "genus or family only"
+     ],
+     "lineages_strong": [],
+     "lineages_medium": [
+      "Bretschneider"
+     ],
+     "passage_specific": false,
+     "geography": "not checked (genus or family level)",
+     "description": "no description record",
+     "description_congruence": null
+    },
     {
      "accepted_name": "Artemisia alba Turra",
      "family": "Asteraceae",
@@ -12489,8 +12583,55 @@
    "name": "蠡實",
    "label": "2.24",
    "shown": [],
-   "possible": [],
-   "hidden": []
+   "possible": [
+    {
+     "accepted_name": "Iris oxypetala Bunge",
+     "family": "Iridaceae",
+     "rank": "species",
+     "tier": "B",
+     "rules": [
+      "B1"
+     ],
+     "other_accepted_names": [],
+     "caveats": [
+      "one source"
+     ],
+     "reasons": [],
+     "lineages_strong": [],
+     "lineages_medium": [
+      "Bretschneider",
+      "Tatar."
+     ],
+     "passage_specific": false,
+     "geography": "local",
+     "description": "no description record",
+     "description_congruence": null
+    }
+   ],
+   "hidden": [
+    {
+     "accepted_name": "Iris Tourn. ex L.",
+     "family": "Iridaceae",
+     "rank": "genus",
+     "tier": "X",
+     "rules": [
+      "X6"
+     ],
+     "other_accepted_names": [],
+     "caveats": [],
+     "reasons": [
+      "genus or family only"
+     ],
+     "lineages_strong": [],
+     "lineages_medium": [
+      "Bretschneider"
+     ],
+     "passage_specific": false,
+     "geography": "not checked (genus or family level)",
+     "description": "no description record",
+     "description_congruence": null
+    }
+   ]
   },
   "shennong-2-25": {
    "name": "瞿麥",
@@ -13531,6 +13672,33 @@
      "rank": "species",
      "tier": "B",
      "rules": [
+      "B2",
+      "B1"
+     ],
+     "other_accepted_names": [
+      "Angelica dahurica var. dahurica"
+     ],
+     "caveats": [
+      "botanists disagree on the name",
+      "one source"
+     ],
+     "reasons": [],
+     "lineages_strong": [],
+     "lineages_medium": [
+      "Loureiro",
+      "Wikidata"
+     ],
+     "passage_specific": false,
+     "geography": "local",
+     "description": "no description record",
+     "description_congruence": null
+    },
+    {
+     "accepted_name": "Angelica anomala Avé-Lall.",
+     "family": "Apiaceae",
+     "rank": "species",
+     "tier": "B",
+     "rules": [
       "B1"
      ],
      "other_accepted_names": [],
@@ -13540,7 +13708,7 @@
      "reasons": [],
      "lineages_strong": [],
      "lineages_medium": [
-      "Wikidata"
+      "Cust. Med."
      ],
      "passage_specific": false,
      "geography": "local",
@@ -13595,6 +13763,28 @@
     }
    ],
    "hidden": [
+    {
+     "accepted_name": "Angelica L.",
+     "family": "Apiaceae",
+     "rank": "genus",
+     "tier": "X",
+     "rules": [
+      "X6",
+      "X1"
+     ],
+     "other_accepted_names": [],
+     "caveats": [],
+     "reasons": [
+      "genus or family only",
+      "weak evidence only"
+     ],
+     "lineages_strong": [],
+     "lineages_medium": [],
+     "passage_specific": false,
+     "geography": null,
+     "description": "no description record",
+     "description_congruence": null
+    },
     {
      "accepted_name": "Schoenoplectus tabernaemontani (C.C.Gmel.) Palla",
      "family": "Cyperaceae",
@@ -14073,6 +14263,7 @@
      "reasons": [],
      "lineages_strong": [],
      "lineages_medium": [
+      "Loureiro",
       "Wikidata"
      ],
      "passage_specific": false,
@@ -14103,7 +14294,54 @@
      "description_congruence": null
     }
    ],
-   "hidden": []
+   "hidden": [
+    {
+     "accepted_name": "Cibotium glaucum (Sm.) Hook. & Arn.",
+     "family": "Cibotiaceae",
+     "rank": "species",
+     "tier": "X",
+     "rules": [
+      "X2"
+     ],
+     "other_accepted_names": [],
+     "caveats": [],
+     "reasons": [
+      "grows far from the author's world"
+     ],
+     "lineages_strong": [],
+     "lineages_medium": [
+      "Bretschneider"
+     ],
+     "passage_specific": false,
+     "geography": "impossible (native only in the Americas/Australasia/Pacific)",
+     "description": "no description record",
+     "description_congruence": null
+    },
+    {
+     "accepted_name": "(unresolved: Onoclea germanica)",
+     "family": null,
+     "rank": null,
+     "tier": "X",
+     "rules": [
+      "X3",
+      "X8",
+      "X1"
+     ],
+     "other_accepted_names": [],
+     "caveats": [],
+     "reasons": [
+      "no accepted name",
+      "rank not established (may not be a species)",
+      "weak evidence only"
+     ],
+     "lineages_strong": [],
+     "lineages_medium": [],
+     "passage_specific": false,
+     "geography": null,
+     "description": "no description record",
+     "description_congruence": null
+    }
+   ]
   },
   "shennong-2-35": {
    "name": "石龍芮",
@@ -17109,6 +17347,7 @@
      "reasons": [],
      "lineages_strong": [],
      "lineages_medium": [
+      "Bretschneider",
       "Wikidata"
      ],
      "passage_specific": false,
@@ -17118,6 +17357,28 @@
     }
    ],
    "hidden": [
+    {
+     "accepted_name": "Paliurus Mill.",
+     "family": "Rhamnaceae",
+     "rank": "genus",
+     "tier": "X",
+     "rules": [
+      "X6"
+     ],
+     "other_accepted_names": [],
+     "caveats": [],
+     "reasons": [
+      "genus or family only"
+     ],
+     "lineages_strong": [],
+     "lineages_medium": [
+      "Bretschneider"
+     ],
+     "passage_specific": false,
+     "geography": "not checked (genus or family level)",
+     "description": "no description record",
+     "description_congruence": null
+    },
     {
      "accepted_name": "Ziziphus jujuba Mill.",
      "family": "Rhamnaceae",
@@ -20229,6 +20490,8 @@
      "reasons": [],
      "lineages_strong": [],
      "lineages_medium": [
+      "Bretschneider",
+      "Henry",
       "Wikidata"
      ],
      "passage_specific": false,
@@ -23343,6 +23606,28 @@
      "lineages_strong": [],
      "lineages_medium": [
       "Wikidata"
+     ],
+     "passage_specific": false,
+     "geography": "local",
+     "description": "no description record",
+     "description_congruence": null
+    },
+    {
+     "accepted_name": "Weigela japonica Thunb.",
+     "family": "Caprifoliaceae",
+     "rank": "species",
+     "tier": "B",
+     "rules": [
+      "B1"
+     ],
+     "other_accepted_names": [],
+     "caveats": [
+      "one source"
+     ],
+     "reasons": [],
+     "lineages_strong": [],
+     "lineages_medium": [
+      "Sieb. & Zucc."
      ],
      "passage_specific": false,
      "geography": "local",

@@ -43,3 +43,8 @@ entry,drug,plant,his_sentence,claude_says,why,your_check
 3.73,欒花,"Kelreuteria paniculata, Laxm.","This is the Kelreuteria paniculata, Laxm.",yes,his verdict after the Chinese descriptions,ok
 3.100,苦瓠,Lagenaria,The hu or p‘ao is the Lagenaria or Bottle gourd.,yes,his verdict: 'the hu is the Lagenaria or bottle gourd',ok
 3.101,水靳,"Gnanthe stolonifera, DC.","The shui kin is an umbelliferous plant, the Gnanthe stolonifera, DC.",yes,his verdict: 'the shui kin is Oenanthe stolonifera',ok
+1.32,獨活,"A. grosseserrata, Max.","He thinks it was an Angelica (probably A. grosseserrata, Max.].—",no,"'He thinks … probably': another author's guess, not Bretschneider's verdict",claude only
+1.44,白蒿,Artemisia,The pai hao as well as the low hao are species of Artemisia.,no,a genus only (Artemisia),claude only
+2.34,狗脊,Cibotium glaucum,"This is the Cibotium glaucum in Flora hongk, [466], a fern.",no,"he cites the Flora Hongkongensis plant: a quoted source, not his verdict on the Han drug",claude only
+2.75,白棘,Paliurus,"The white ki of the ancient Chinese authors is perhaps 8 Paliurus, belonging to the same order of ERhamnacew as Zizyphus",no,"'perhaps a Paliurus': a hedge, not a verdict",claude only
+2.75,白棘,"Paliurus Aubletia, Roem & Schult.","The white ki of the ancient Chinese authors is perhaps 8 Paliurus, belonging to the same order of ERhamnacew as Zizyphus, Paliurus Aubletia, Roem & Schult.",no,"'perhaps a Paliurus': a hedge, not a verdict",claude only

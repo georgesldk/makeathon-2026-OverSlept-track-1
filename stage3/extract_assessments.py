@@ -392,8 +392,53 @@ def export_missing(name_: str) -> None:
     (WEB / "batches.json").write_text(json.dumps(manifest, indent=1), encoding="utf-8")
 
 
+CORRECTIONS = HERE / "review" / "corrections.csv"
+FLAGGED = HERE / "review" / "flagged_pairs.csv"
+
+
+def load_corrections() -> dict:
+    """stage3/review/corrections.csv: a person corrects a fact the model filled in (never the verdict); the
+    rules then recompute the result. Only rows with confirmed = yes are applied."""
+    out = defaultdict(list)
+    if CORRECTIONS.exists():
+        import csv
+        for r in csv.DictReader(open(CORRECTIONS, encoding="utf-8")):
+            if r.get("confirmed", "").strip().lower() == "yes":
+                out[(r["unit_id"], r["study_id"])].append(r)
+    if FLAGGED.exists():    # flagged pairs: Claude proposes a fact correction, a person marks your_check = ok
+        import csv
+        for r in csv.DictReader(open(FLAGGED, encoding="utf-8")):
+            chk = r.get("your_check", "").strip().lower()
+            if r["claude_says"] == "correct a fact" and chk in ("ok", "yes", "claude only"):
+                by = ("Claude only (not checked by a person)" if chk == "claude only"
+                      else "Claude (proposed), George (checked)")
+                out[(r["unit_id"], r["study_id"])].append({**r, "by": by})
+    return out
+
+
+def apply_corrections(f: dict, uid: str, sid: str, corrections: dict) -> list:
+    done = []
+    for r in corrections.get((uid, sid), []):
+        field = r["field"]
+        if field in ("species", "condition", "therapeutic_action", "plant_part", "preparation", "route"):
+            slot = f.setdefault("compatibility", {}).setdefault(field, {})
+            old = slot.get("value")
+            slot["value"] = r["corrected"]
+        elif field in ("relevance", "evidence_type"):
+            old = f.get(field)
+            f[field] = r["corrected"]
+            voided = (f.get("validation") or {}).get("fields_voided", [])
+            if field in voided:                      # a person's correction replaces a voided answer
+                voided.remove(field)
+        else:
+            continue
+        done.append({"field": field, "model": old, "corrected": r["corrected"], "why": r["why"], "by": r["by"]})
+    return done
+
+
 def import_web(name_: str, label: str) -> None:
     P = paths(name_)
+    corrections = load_corrections()
     WEB, OUT = P["web"], P["assessments"]
     version = PROMPT_VERSION.get(name_, DEFAULT_PROMPT_VERSION)
     ps = {(u["unit_id"], s["study_id"]): (u, s, t) for u, s, t in pairs(P)}
@@ -425,6 +470,7 @@ def import_web(name_: str, label: str) -> None:
             f["validation"] = {"schema_ok": all(k in f for k in ("relevance", "evidence_type", "compatibility", "outcome")),
                                "excerpts_checked": nok + len(bad), "excerpts_failed": bad, "fields_voided": voided}
             f["ema_use"] = ema_use(f)
+            fixes = apply_corrections(f, uid, sid, corrections)    # a person's corrections of facts, if any
             r = assess(f, u["identification"]["tier"])
             mv = model_view(f, text)
             cv = code_view(r)
@@ -442,7 +488,8 @@ def import_web(name_: str, label: str) -> None:
                                        "input_hashes": {"study_text": hashlib.sha256(text.encode()).hexdigest()},
                                        "raw_response_file": str(ans.relative_to(ROOT)),
                                        "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds")},
-                        "review": {"status": "unreviewed"}})
+                        "review": ({"status": "facts corrected by a person", "corrections": fixes}
+                                   if fixes else {"status": "unreviewed"})})
     done = {(a["unit_id"], a["study_id"]) for a in out}
     missing = [m for m in missing if (m[1], m[2]) not in done]
     latest = {(a["unit_id"], a["study_id"]): a for a in out}   # a pair answered twice: the later reply wins

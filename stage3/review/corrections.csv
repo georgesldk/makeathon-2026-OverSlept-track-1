@@ -1,0 +1,6 @@
+set,unit_id,study_id,field,model,corrected,why,by,confirmed
+shennong,shennong:1.135:c03|wfo-0000421791,pmid:33183673,preparation,same,unknown,"the Shennong gives no preparation, so it cannot be the same","Claude (proposed), George (checked)",
+shennong,shennong:1.135:c03|wfo-0000421791,pmid:33183673,condition,same,related,strength in general vs muscle power of trained athletes after exercise,"Claude (proposed), George (checked)",
+shennong,shennong:2.23:c01|wfo-0000480479,pmid:18559232,plant_part,same,unknown,the Shennong names no plant part,"Claude (proposed), George (checked)",
+shennong,shennong:2.23:c01|wfo-0000480479,pmid:18559232,preparation,same,unknown,the Shennong gives no preparation,"Claude (proposed), George (checked)",
+shennong,shennong:2.23:c01|wfo-0000480479,pmid:18559232,condition,same,related,abdominal pain in general vs abdominal tenderness in severe acute pancreatitis,"Claude (proposed), George (checked)",

@@ -1355,6 +1355,22 @@
   "herbs": 1,
   "kingdom_flag": "plant"
  },
+ "Angelica": {
+  "name": "Angelica",
+  "level": "genus",
+  "original_forms": [
+   "Angelica"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
+  ],
+  "herbs": 2,
+  "kingdom_flag": "plant"
+ },
  "Angelica acutiloba": {
   "name": "Angelica acutiloba",
   "level": "species",
@@ -1367,6 +1383,22 @@
   ],
   "sources": [
    "wikidata"
+  ],
+  "herbs": 1,
+  "kingdom_flag": "plant"
+ },
+ "Angelica anomala": {
+  "name": "Angelica anomala",
+  "level": "species",
+  "original_forms": [
+   "Angelica anomala"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
   ],
   "herbs": 1,
   "kingdom_flag": "plant"
@@ -1415,6 +1447,38 @@
   ],
   "sources": [
    "wikidata"
+  ],
+  "herbs": 1,
+  "kingdom_flag": "plant"
+ },
+ "Angelica grosseserrata": {
+  "name": "Angelica grosseserrata",
+  "level": "species",
+  "original_forms": [
+   "Angelica grosseserrata"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
+  ],
+  "herbs": 1,
+  "kingdom_flag": "plant"
+ },
+ "Angelica inaequalis": {
+  "name": "Angelica inaequalis",
+  "level": "species",
+  "original_forms": [
+   "Angelica inaequalis"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
   ],
   "herbs": 1,
   "kingdom_flag": "plant"
@@ -1930,7 +1994,7 @@
   "sources": [
    "bretschneider"
   ],
-  "herbs": 1,
+  "herbs": 2,
   "kingdom_flag": "plant"
  },
  "Artemisia abrotanum": {
@@ -3069,6 +3133,22 @@
   ],
   "sources": [
    "wikidata"
+  ],
+  "herbs": 1,
+  "kingdom_flag": "plant"
+ },
+ "Bletia hyacinthina": {
+  "name": "Bletia hyacinthina",
+  "level": "species",
+  "original_forms": [
+   "Bletia hyacinthina"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
   ],
   "herbs": 1,
   "kingdom_flag": "plant"
@@ -4212,6 +4292,22 @@
   ],
   "sources": [
    "wikidata"
+  ],
+  "herbs": 1,
+  "kingdom_flag": "plant"
+ },
+ "Cibotium glaucum": {
+  "name": "Cibotium glaucum",
+  "level": "species",
+  "original_forms": [
+   "Cibotium glaucum"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
   ],
   "herbs": 1,
   "kingdom_flag": "plant"
@@ -5555,6 +5651,22 @@
   "herbs": 1,
   "kingdom_flag": "plant"
  },
+ "Diervilla versicolor": {
+  "name": "Diervilla versicolor",
+  "level": "species",
+  "original_forms": [
+   "Diervilla versicolor"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
+  ],
+  "herbs": 1,
+  "kingdom_flag": "plant"
+ },
  "Dimocarpus longan": {
   "name": "Dimocarpus longan",
   "level": "species",
@@ -5807,6 +5919,22 @@
   ],
   "sources": [
    "wikidata"
+  ],
+  "herbs": 1,
+  "kingdom_flag": "plant"
+ },
+ "Dorstenia chinensis": {
+  "name": "Dorstenia chinensis",
+  "level": "species",
+  "original_forms": [
+   "Dorstenia chinensis"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
   ],
   "herbs": 1,
   "kingdom_flag": "plant"
@@ -7833,6 +7961,22 @@
   "herbs": 1,
   "kingdom_flag": "plant"
  },
+ "Iris": {
+  "name": "Iris",
+  "level": "genus",
+  "original_forms": [
+   "Iris"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
+  ],
+  "herbs": 1,
+  "kingdom_flag": "plant"
+ },
  "Iris collettii": {
   "name": "Iris collettii",
   "level": "species",
@@ -7861,6 +8005,22 @@
   ],
   "sources": [
    "wikidata"
+  ],
+  "herbs": 1,
+  "kingdom_flag": "plant"
+ },
+ "Iris oxypetala": {
+  "name": "Iris oxypetala",
+  "level": "species",
+  "original_forms": [
+   "Iris oxypetala"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
   ],
   "herbs": 1,
   "kingdom_flag": "plant"
@@ -9479,6 +9639,22 @@
   "herbs": 1,
   "kingdom_flag": "plant"
  },
+ "Onoclea germanica": {
+  "name": "Onoclea germanica",
+  "level": "species",
+  "original_forms": [
+   "Onoclea germanica"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
+  ],
+  "herbs": 1,
+  "kingdom_flag": "plant"
+ },
  "Onoclea orientalis": {
   "name": "Onoclea orientalis",
   "level": "species",
@@ -9760,6 +9936,38 @@
   ],
   "sources": [
    "wikidata"
+  ],
+  "herbs": 1,
+  "kingdom_flag": "plant"
+ },
+ "Paliurus": {
+  "name": "Paliurus",
+  "level": "genus",
+  "original_forms": [
+   "Paliurus"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
+  ],
+  "herbs": 1,
+  "kingdom_flag": "plant"
+ },
+ "Paliurus aubletia": {
+  "name": "Paliurus aubletia",
+  "level": "species",
+  "original_forms": [
+   "Paliurus aubletia"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
   ],
   "herbs": 1,
   "kingdom_flag": "plant"
@@ -10192,6 +10400,22 @@
   ],
   "sources": [
    "wikidata"
+  ],
+  "herbs": 1,
+  "kingdom_flag": "plant"
+ },
+ "Peucedanum decursivum": {
+  "name": "Peucedanum decursivum",
+  "level": "species",
+  "original_forms": [
+   "Peucedanum decursivum"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
   ],
   "herbs": 1,
   "kingdom_flag": "plant"
@@ -10917,6 +11141,22 @@
   ],
   "sources": [
    "wikidata"
+  ],
+  "herbs": 1,
+  "kingdom_flag": "plant"
+ },
+ "Polypodium barometz": {
+  "name": "Polypodium barometz",
+  "level": "species",
+  "original_forms": [
+   "Polypodium barometz"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
   ],
   "herbs": 1,
   "kingdom_flag": "plant"
@@ -14536,6 +14776,22 @@
   "sources": [
    "bretschneider",
    "wikidata"
+  ],
+  "herbs": 1,
+  "kingdom_flag": "plant"
+ },
+ "Weigela japonica": {
+  "name": "Weigela japonica",
+  "level": "species",
+  "original_forms": [
+   "Weigela japonica"
+  ],
+  "varieties": [],
+  "kingdoms": [
+   "Plantae"
+  ],
+  "sources": [
+   "bretschneider"
   ],
   "herbs": 1,
   "kingdom_flag": "plant"

@@ -8,7 +8,7 @@
 ## Open issues
 - **Shennong: 2 "direct" Stage 3 results need a person.** Grape juice for strength (an athletes' trial, result
   inconclusive) and red peony root for abdominal pain (a pancreatitis trial: a related condition, not the
-  same). Bretschneider's strong verdicts were proposed by Claude and checked by a person.
+  same). Left as the model answered.
 - **Stage 3 pilot review is provisional.** It was done in haste and must be redone by a person
   before any Stage 3 result is reported. See `stage3/review/README.md`.
 - **Stage 3 batch size and repeat runs.** Later sets use 32 pairs per prompt; this was not tested against

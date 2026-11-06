@@ -4752,19 +4752,6 @@
    "heading": "H6F jak fu pi.",
    "pen_king_name": "Fu pi"
   },
-  "3.77": {
-   "number": 289,
-   "slot": 0,
-   "score": 1.0,
-   "our_romanisation": "shu",
-   "runner_up": {
-    "number": 107,
-    "score": 1.0
-   },
-   "ambiguous": true,
-   "heading": "25 #Y Shu tsiao. Pi, Rem, FP OCs",
-   "pen_king_name": "Shu"
-  },
   "3.73": {
    "number": 326,
    "slot": 0,
@@ -4838,10 +4825,11 @@
   "3.56": {
    "number": 161,
    "slot": 0,
-   "score": 1.0,
-   "our_romanisation": "niu pien",
+   "score": null,
+   "our_romanisation": null,
    "runner_up": null,
-   "ambiguous": true,
+   "ambiguous": false,
+   "resolved_by": "tie resolved by a person (Claude (proposed), George (checked)): his Pen king quote 'Niu pien'",
    "heading": "7G G8 A shi lung jui.",
    "pen_king_name": "Niu pien"
   },
@@ -4992,17 +4980,15 @@
    "pen_king_name": "Ta ki"
   },
   "3.32": {
-   "number": 337,
+   "number": 32,
    "slot": 0,
-   "score": 1.0,
-   "our_romanisation": "pai ki",
-   "runner_up": {
-    "number": 32,
-    "score": 1.0
-   },
-   "ambiguous": true,
-   "heading": "E] Wii pai ki.",
-   "pen_king_name": "Pai"
+   "score": null,
+   "our_romanisation": null,
+   "runner_up": null,
+   "ambiguous": false,
+   "resolved_by": "tie resolved by a person (Claude (proposed), George (checked)): his entry: root, bitter, uniform, also lien ki ts'ao and kan ken (sweet root): our 一名甘根，一名連及草, 味苦平",
+   "heading": "FA I pai ki.",
+   "pen_king_name": "Pai ki"
   },
   "3.30": {
    "number": 82,
@@ -5174,19 +5160,6 @@
    "heading": "HB HB sung lo.",
    "pen_king_name": "Sung lo"
   },
-  "2.75": {
-   "number": 32,
-   "slot": 0,
-   "score": 1.0,
-   "our_romanisation": "pai ki",
-   "runner_up": {
-    "number": 337,
-    "score": 1.0
-   },
-   "ambiguous": true,
-   "heading": "FA I pai ki.",
-   "pen_king_name": "Pai ki"
-  },
   "2.74": {
    "number": 352,
    "slot": 0,
@@ -5196,19 +5169,6 @@
    "ambiguous": false,
    "heading": "$¥ 3E chu ling.",
    "pen_king_name": "Chu ling"
-  },
-  "2.71": {
-   "number": 32,
-   "slot": 3,
-   "score": 1.0,
-   "our_romanisation": "k'in shu",
-   "runner_up": {
-    "number": 128,
-    "score": 0.94
-   },
-   "ambiguous": true,
-   "heading": "FA I pai ki.",
-   "pen_king_name": "Ts‘in kiao"
   },
   "2.69": {
    "number": 317,
@@ -5356,10 +5316,11 @@
   "2.34": {
    "number": 13,
    "slot": 0,
-   "score": 1.0,
-   "our_romanisation": "kou ki",
+   "score": null,
+   "our_romanisation": null,
    "runner_up": null,
-   "ambiguous": true,
+   "ambiguous": false,
+   "resolved_by": "tie resolved by a person (Claude (proposed), George (checked)): his entry: kou tsi, dog's backbone: our 狗脊",
    "heading": "f] FH hou tsi.",
    "pen_king_name": "Kou tsi"
   },
@@ -5376,10 +5337,11 @@
   "2.31": {
    "number": 54,
    "slot": 0,
-   "score": 1.0,
-   "our_romanisation": "pai chi",
+   "score": null,
+   "our_romanisation": null,
    "runner_up": null,
-   "ambiguous": true,
+   "ambiguous": false,
+   "resolved_by": "tie resolved by a person (Claude (proposed), George (checked)): his entry: pai chi, also fang hiang (fragrance), pungent, warm: our 一名芳香, 味辛溫",
    "heading": "FA HE pai chi.",
    "pen_king_name": "Pai chi"
   },
@@ -5404,17 +5366,15 @@
    "pen_king_name": "Chi mu"
   },
   "2.24": {
-   "number": 189,
+   "number": 90,
    "slot": 0,
-   "score": 1.0,
-   "our_romanisation": "li shi",
-   "runner_up": {
-    "number": 90,
-    "score": 1.0
-   },
-   "ambiguous": true,
-   "heading": "§ F lo shi.",
-   "pen_king_name": "Lo shi"
+   "score": null,
+   "our_romanisation": null,
+   "runner_up": null,
+   "ambiguous": false,
+   "resolved_by": "tie resolved by a person (Claude (proposed), George (checked)): his entry: li shi, fruit, sweet, uniform: our 味甘平",
+   "heading": "#& FE li shi.",
+   "pen_king_name": "Li shi"
   },
   "2.22": {
    "number": 184,
@@ -5485,16 +5445,6 @@
    "ambiguous": false,
    "heading": "8% 3 han hiang.",
    "pen_king_name": "Kan kiang"
-  },
-  "2.12": {
-   "number": 90,
-   "slot": 0,
-   "score": 1.0,
-   "our_romanisation": "li shi",
-   "runner_up": null,
-   "ambiguous": true,
-   "heading": "#& FE li shi.",
-   "pen_king_name": "Li shi"
   },
   "2.103": {
    "number": 87,
@@ -5755,13 +5705,11 @@
   "1.44": {
    "number": 74,
    "slot": 1,
-   "score": 1.0,
-   "our_romanisation": "pai hao",
-   "runner_up": {
-    "number": 263,
-    "score": 0.9
-   },
-   "ambiguous": true,
+   "score": null,
+   "our_romanisation": null,
+   "runner_up": null,
+   "ambiguous": false,
+   "resolved_by": "tie resolved by a person (Claude (proposed), George (checked)): his Pen king quote 'Pai hao' inside the ts'ing hao entry: the white Artemisia",
    "heading": "35 EE ts‘ing hao.",
    "pen_king_name": "Pai hao"
   },
@@ -5861,13 +5809,11 @@
   "1.32": {
    "number": 37,
    "slot": 0,
-   "score": 1.0,
-   "our_romanisation": "tu huo",
-   "runner_up": {
-    "number": 186,
-    "score": 1.0
-   },
-   "ambiguous": true,
+   "score": null,
+   "our_romanisation": null,
+   "runner_up": null,
+   "ambiguous": false,
+   "resolved_by": "tie resolved by a person (Claude (proposed), George (checked)): his entry: tu huo, also kiang huo: our 一名羌活",
    "heading": "7H tu huo.",
    "pen_king_name": "Tu huo"
   },
@@ -5903,19 +5849,6 @@
    "ambiguous": false,
    "heading": "4F JE niu si. P., ANVI2I. Tbe",
    "pen_king_name": "Niu si"
-  },
-  "1.24": {
-   "number": 107,
-   "slot": 0,
-   "score": 1.0,
-   "our_romanisation": "shu",
-   "runner_up": {
-    "number": 289,
-    "score": 1.0
-   },
-   "ambiguous": true,
-   "heading": "3 SE FR Shu yang ts‘uan.",
-   "pen_king_name": "Shu"
   },
   "1.22": {
    "number": 1,
@@ -6099,10 +6032,11 @@
   "3.70": {
    "number": 346,
    "slot": 0,
-   "score": 0.93,
-   "our_romanisation": "sou shu",
+   "score": null,
+   "our_romanisation": null,
    "runner_up": null,
-   "ambiguous": true,
+   "ambiguous": false,
+   "resolved_by": "tie resolved by a person (Claude (proposed), George (checked)): his entry: shou shu, bark, pungent, cold: our 味辛寒",
    "heading": "¥8 Bit show shu.",
    "pen_king_name": "Shou shu"
   },
@@ -6176,19 +6110,6 @@
    "heading": "F BE mou hao.",
    "pen_king_name": "Cl'ung wei"
   },
-  "1.19": {
-   "number": 265,
-   "slot": 0,
-   "score": 0.9,
-   "our_romanisation": "kü hua",
-   "runner_up": {
-    "number": 264,
-    "score": 0.9
-   },
-   "ambiguous": true,
-   "heading": "2& JI tung kua.",
-   "pen_king_name": "Tung kua"
-  },
   "1.120": {
    "number": 263,
    "slot": 0,
@@ -6201,6 +6122,17 @@
    "ambiguous": true,
    "heading": "& po ho.",
    "pen_king_name": "Po ho"
+  },
+  "2.75": {
+   "number": 337,
+   "slot": 0,
+   "score": null,
+   "our_romanisation": null,
+   "runner_up": null,
+   "ambiguous": false,
+   "resolved_by": "tie resolved by a person (Claude (proposed), George (checked)): his entry: spines of a tree, pungent, cold: our 味辛寒, 一名棘針 (thorn)",
+   "heading": "E] Wii pai ki.",
+   "pen_king_name": "Pai"
   }
  }
 }

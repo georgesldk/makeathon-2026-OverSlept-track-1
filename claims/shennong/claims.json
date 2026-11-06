@@ -34572,6 +34572,180 @@
      "flags": []
     }
    ]
+  },
+  "2.24": {
+   "name": "蠡實",
+   "batch": "batch_11",
+   "claims": [
+    {
+     "claim_id": "shennong:2.24:c01",
+     "quote": "主皮膚寒熱",
+     "translation": "Mainly treats chills and fever in the skin.",
+     "part": "seed",
+     "preparation": "",
+     "route": "internal",
+     "claim": "treats chills and fever of the skin",
+     "relation": "treats",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D005334",
+       "name": "Fever",
+       "match": "close",
+       "proposed": "Fever",
+       "branches": [
+        "C"
+       ]
+      },
+      {
+       "ui": "D023341",
+       "name": "Chills",
+       "match": "close",
+       "proposed": "Chills",
+       "branches": [
+        "C"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "shennong:2.24:c02",
+     "quote": "胃中熱氣",
+     "translation": "[Treats] heat-qi in the stomach.",
+     "part": "seed",
+     "preparation": "",
+     "route": "internal",
+     "claim": "clears heat in the stomach",
+     "relation": "relieves",
+     "kind": "humoral",
+     "mesh": [],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "shennong:2.24:c03",
+     "quote": "寒濕痹",
+     "translation": "[Treats] cold-damp painful obstruction.",
+     "part": "seed",
+     "preparation": "",
+     "route": "internal",
+     "claim": "treats cold-damp painful obstruction syndrome",
+     "relation": "treats",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D012216",
+       "name": "Rheumatic Diseases",
+       "match": "close",
+       "proposed": "Rheumatic Diseases",
+       "branches": [
+        "C"
+       ]
+      },
+      {
+       "ui": "D018771",
+       "name": "Arthralgia",
+       "match": "close",
+       "proposed": "Arthralgia",
+       "branches": [
+        "C",
+        "F",
+        "G"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "shennong:2.24:c04",
+     "quote": "堅筋骨",
+     "translation": "Strengthens sinews and bones.",
+     "part": "seed",
+     "preparation": "",
+     "route": "internal",
+     "claim": "strengthens the sinews and bones",
+     "relation": "promotes",
+     "kind": "medical",
+     "mesh": [],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "shennong:2.24:c05",
+     "quote": "令人嗜食",
+     "translation": "Causes people to enjoy eating [promotes appetite].",
+     "part": "seed",
+     "preparation": "",
+     "route": "internal",
+     "claim": "stimulates appetite",
+     "relation": "promotes",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D001066",
+       "name": "Appetite",
+       "match": "exact",
+       "proposed": "Appetite",
+       "branches": [
+        "F",
+        "G"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "shennong:2.24:c06",
+     "quote": "久服，輕身",
+     "translation": "Taken over a long time, it lightens the body.",
+     "part": "seed",
+     "preparation": "",
+     "route": "internal",
+     "claim": "lightens the body with prolonged consumption",
+     "relation": "promotes",
+     "kind": "magical",
+     "mesh": [],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "shennong:2.24:c07",
+     "quote": "花、葉：去白虫",
+     "translation": "Flowers and leaves: eliminate white worms [tapeworms].",
+     "part": "flower, leaf",
+     "preparation": "",
+     "route": "internal",
+     "claim": "expels tapeworms and intestinal parasites",
+     "relation": "treats",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D000871",
+       "name": "Anthelmintics",
+       "match": "broad",
+       "proposed": "Anthelmintics",
+       "branches": [
+        "D27"
+       ]
+      },
+      {
+       "ui": "D002590",
+       "name": "Cestode Infections",
+       "match": "close",
+       "proposed": "Cestode Infections",
+       "branches": [
+        "C"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    }
+   ]
   }
  }
 }

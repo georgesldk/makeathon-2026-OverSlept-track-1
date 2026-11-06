@@ -1287,8 +1287,41 @@
   "shennong-1-32": {
    "name": "獨活",
    "label": "1.32",
-   "first_candidate_that_fits": "Angelica biserrata (R.H.Shan & Yuan) C.Q.Yuan & R.H.Shan",
+   "first_candidate_that_fits": "Angelica decursiva (Miq.) Franch. & Sav.",
    "candidates": [
+    {
+     "accepted_name": "Angelica decursiva (Miq.) Franch. & Sav.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "獨活"
+     ],
+     "sources": [
+      "bretschneider_quoted",
+      "wikidata_label"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "China",
+      "Eastern Asia",
+      "Indo-China",
+      "Russian Far East"
+     ],
+     "wcvp_range": "Vietnam to S. Russian Far East and Temp. E. Asia"
+    },
+    {
+     "accepted_name": "Angelica L.",
+     "rank": "genus",
+     "strong_rows": 0,
+     "book_names": [
+      "獨活"
+     ],
+     "sources": [
+      "bretschneider_quoted"
+     ],
+     "geography": "not checked (genus or family level)",
+     "native_regions": []
+    },
     {
      "accepted_name": "Angelica biserrata (R.H.Shan & Yuan) C.Q.Yuan & R.H.Shan",
      "rank": "species",
@@ -1307,23 +1340,20 @@
      "wcvp_range": "S. China to Vietnam"
     },
     {
-     "accepted_name": "Angelica decursiva (Miq.) Franch. & Sav.",
+     "accepted_name": "Angelica inaequalis Maxim.",
      "rank": "species",
      "strong_rows": 0,
      "book_names": [
       "獨活"
      ],
      "sources": [
-      "wikidata_label"
+      "bretschneider_quoted"
      ],
-     "geography": "local",
+     "geography": "trade",
      "native_regions": [
-      "China",
-      "Eastern Asia",
-      "Indo-China",
-      "Russian Far East"
+      "Eastern Asia"
      ],
-     "wcvp_range": "Vietnam to S. Russian Far East and Temp. E. Asia"
+     "wcvp_range": "C. & S. Japan"
     },
     {
      "accepted_name": "Angelica nitida H.Wolff",
@@ -1504,6 +1534,25 @@
       "China"
      ],
      "wcvp_range": "China (W. Sichuan, NW. Yunnan)"
+    },
+    {
+     "accepted_name": "Ostericum grossiserratum (Maxim.) Kitag.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "獨活"
+     ],
+     "sources": [
+      "bretschneider_reading"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "China",
+      "Eastern Asia",
+      "Mongolia",
+      "Russian Far East"
+     ],
+     "wcvp_range": "Mongolia to Korea and China"
     }
    ]
   },
@@ -2668,6 +2717,19 @@
    "label": "1.44",
    "first_candidate_that_fits": "Artemisia argyi H.Lév. & Vaniot",
    "candidates": [
+    {
+     "accepted_name": "Artemisia L.",
+     "rank": "genus",
+     "strong_rows": 0,
+     "book_names": [
+      "白蒿"
+     ],
+     "sources": [
+      "bretschneider_reading"
+     ],
+     "geography": "not checked (genus or family level)",
+     "native_regions": []
+    },
     {
      "accepted_name": "Artemisia alba Turra",
      "rank": "species",
@@ -8572,8 +8634,42 @@
   "shennong-2-24": {
    "name": "蠡實",
    "label": "2.24",
-   "first_candidate_that_fits": null,
-   "candidates": []
+   "first_candidate_that_fits": "Iris oxypetala Bunge",
+   "candidates": [
+    {
+     "accepted_name": "Iris oxypetala Bunge",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "蠡實"
+     ],
+     "sources": [
+      "bretschneider_quoted",
+      "bretschneider_reading"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "China",
+      "Eastern Asia",
+      "Indian Subcontinent",
+      "Russian Far East"
+     ],
+     "wcvp_range": "W. Himalaya, S. Russian Far East to N. China, Japan"
+    },
+    {
+     "accepted_name": "Iris Tourn. ex L.",
+     "rank": "genus",
+     "strong_rows": 0,
+     "book_names": [
+      "蠡實"
+     ],
+     "sources": [
+      "bretschneider_reading"
+     ],
+     "geography": "not checked (genus or family level)",
+     "native_regions": []
+    }
+   ]
   },
   "shennong-2-25": {
    "name": "瞿麥",
@@ -9097,6 +9193,7 @@
       "白芷"
      ],
      "sources": [
+      "bretschneider_quoted",
       "wikidata_crude_drug",
       "wikidata_label"
      ],
@@ -9109,6 +9206,26 @@
       "Siberia"
      ],
      "wcvp_range": "S. Siberia to N. China and Japan"
+    },
+    {
+     "accepted_name": "Angelica anomala Avé-Lall.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "白芷"
+     ],
+     "sources": [
+      "bretschneider_quoted"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "China",
+      "Eastern Asia",
+      "Mongolia",
+      "Russian Far East",
+      "Siberia"
+     ],
+     "wcvp_range": "SE. Siberia to N. China and Korea, N. & C. Japan"
     },
     {
      "accepted_name": "Angelica nitida H.Wolff",
@@ -9486,6 +9603,7 @@
       "狗脊"
      ],
      "sources": [
+      "bretschneider_quoted",
       "wikidata_label"
      ],
      "geography": "local",
@@ -9498,6 +9616,22 @@
       "Papuasia"
      ],
      "wcvp_range": "Trop. & Subtrop. Asia"
+    },
+    {
+     "accepted_name": "Cibotium glaucum (Sm.) Hook. & Arn.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "狗脊"
+     ],
+     "sources": [
+      "bretschneider_reading"
+     ],
+     "geography": "impossible (native only in the Americas/Australasia/Pacific)",
+     "native_regions": [
+      "North-Central Pacific"
+     ],
+     "wcvp_range": "Hawaiian Is."
     },
     {
      "accepted_name": "Woodwardia japonica (L.f.) Sm.",
@@ -11713,6 +11847,7 @@
       "白棘"
      ],
      "sources": [
+      "bretschneider_reading",
       "wikidata_label"
      ],
      "geography": "local",
@@ -11722,6 +11857,19 @@
       "Indo-China"
      ],
      "wcvp_range": "S. China to Temp. E. Asia"
+    },
+    {
+     "accepted_name": "Paliurus Mill.",
+     "rank": "genus",
+     "strong_rows": 0,
+     "book_names": [
+      "白棘"
+     ],
+     "sources": [
+      "bretschneider_reading"
+     ],
+     "geography": "not checked (genus or family level)",
+     "native_regions": []
     }
    ]
   },
@@ -13675,6 +13823,8 @@
       "白芨"
      ],
      "sources": [
+      "bretschneider_quoted",
+      "bretschneider_reading",
       "wikidata_label"
      ],
      "geography": "local",
@@ -15931,6 +16081,23 @@
       "China"
      ],
      "wcvp_range": "S. China"
+    },
+    {
+     "accepted_name": "Weigela japonica Thunb.",
+     "rank": "species",
+     "strong_rows": 0,
+     "book_names": [
+      "溲疏"
+     ],
+     "sources": [
+      "bretschneider_quoted"
+     ],
+     "geography": "local",
+     "native_regions": [
+      "China",
+      "Eastern Asia"
+     ],
+     "wcvp_range": "S. China, S. Japan"
     }
    ]
   },

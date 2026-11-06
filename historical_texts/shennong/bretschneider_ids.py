@@ -177,6 +177,27 @@ def genus_in(genus: str, quote: str) -> bool:
     return any(SequenceMatcher(None, g, w).ratio() >= 0.8 for w in re.findall(r"[a-z(]{4,}", quote.lower()))
 
 
+def export_new() -> None:
+    """A batch for the drugs no answer file covers yet (e.g. ties a person resolved)."""
+    answered = set()
+    for ans in WEB.glob("batch_*.answer.txt"):
+        d = parse(ans.read_text(encoding="utf-8")) if ans.read_text(encoding="utf-8").strip() else None
+        answered |= {x.get("id") for x in (d or {}).get("drugs", [])}
+    todo = [it for it in items() if it["id"] not in answered]
+    if not todo:
+        print("Every drug has an answer.")
+        return
+    n = max([int(re.search(r"batch_(\d+)", p.name).group(1)) for p in WEB.glob("batch_*.txt")] or [0])
+    for k in range(0, len(todo), BATCH):
+        n += 1
+        name = f"batch_{n:02d}"
+        (WEB / f"{name}.txt").write_text(PROMPT + "\n\n".join(
+            f"=== DRUG {it['id']} · {it['name']} · Bretschneider's spelling: {it['romanised']} · his entry {it['number']}\n"
+            f"{it['text']}" for it in todo[k:k + BATCH]), encoding="utf-8")
+        (WEB / f"{name}.answer.txt").write_text("", encoding="utf-8")
+        print(f"{name}: {len(todo[k:k + BATCH])} drugs: " + ", ".join(it["name"] for it in todo[k:k + BATCH]))
+
+
 def parse(raw: str):
     raw = re.sub(r"^```(?:json)?|```$", "", raw.strip(), flags=re.M).strip()
     try:
@@ -262,7 +283,8 @@ def import_web(model: str) -> None:
         final = says if check == "ok" else check if check in ("yes", "no") else ""
         r["grade"] = "strong" if final == "yes" else "medium"
         r["review"] = {"claude_says": says or "not proposed yet", "why": why, "person": check or "not checked",
-                       "basis": "AI-proposed, checked by a person" if check else "AI-proposed, not yet checked"}
+                       "basis": ("AI only, not checked by a person" if check == "claude only" else
+                                 "AI-proposed, checked by a person" if check else "AI-proposed, not yet checked")}
         out_rows.append([r["entry"], r["name"], re.sub(r"\s+", " ", r["scientific_name"]), re.sub(r"\s+", " ", r["quote"]),
                          says, why, prev.get("your_check", "")])
     review.parent.mkdir(exist_ok=True)
@@ -287,8 +309,11 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--export-web", action="store_true")
     ap.add_argument("--import-web", metavar="MODEL")
+    ap.add_argument("--export-new", action="store_true")
     a = ap.parse_args()
-    if a.export_web:
+    if a.export_new:
+        export_new()
+    elif a.export_web:
         export_web()
     elif a.import_web:
         import_web(a.import_web)

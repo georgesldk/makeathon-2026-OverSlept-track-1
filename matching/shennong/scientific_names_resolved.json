@@ -271,7 +271,21 @@
     ]
    },
    "agreement": "only WCVP",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "90439-1",
+     "name": "Eleutherococcus spinosus (L.f.) S.Y.Hu",
+     "year": 1980,
+     "page": 110,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Araliaceae",
+     "publication_issued": "Vol. 1-71, 1920-1990",
+     "publication_remarks": "Incorporated in: Harvard Papers in Botany [BHL_title_id:480]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Acanthopanax trifoliatus": {
    "scientific_name": "Acanthopanax trifoliatus",
@@ -326,7 +340,21 @@
     ]
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "90440-1",
+     "name": "Eleutherococcus trifoliatus (L.) S.Y.Hu",
+     "year": 1980,
+     "page": 110,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Araliaceae",
+     "publication_issued": "Vol. 1-71, 1920-1990",
+     "publication_remarks": "Incorporated in: Harvard Papers in Botany [BHL_title_id:480]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Aceranthus sagittatus": {
    "scientific_name": "Aceranthus sagittatus",
@@ -1641,7 +1669,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77131644-1",
+     "name": "Gymnaconitum gymnandrum (Maxim.) Wei Wang & Z.D.Chen",
+     "year": 2013,
+     "page": 719,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Ranunculaceae",
+     "publication_issued": "Vol. 1+, 1951+",
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Aconitum japonicum": {
    "scientific_name": "Aconitum japonicum",
@@ -2194,7 +2236,21 @@
     "spelling_suggestion": null
    },
    "agreement": "disagree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77188885-1",
+     "name": "Acorus calamus var. angustatus Besser",
+     "year": 1834,
+     "page": 30,
+     "status": "tax. nov.",
+     "rank": "var.",
+     "family": "Acoraceae",
+     "publication_issued": "Vols. 1–155, 1818–1965; Ed. 2, vol. 1, 1818 [c. 1828]",
+     "publication_remarks": "The number given on title pages is not the volume number - i.e. 'Flora No. 32' is 'Flora 28(32), 28 Aug 1845'. Vols. 1–13, 1818–30, include 'Beilage'; vols. 8, 1825; 11–13, 1828–30, include 'Ergänzungsblatt'; vols. 14–25, 1831–42, include 'Intelligenzblatt'; vols. 15–25, 1832–42, include 'Beiblatt'. [BHL_title_id:64]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Actaea cimicifuga": {
    "scientific_name": "Actaea cimicifuga",
@@ -4401,7 +4457,21 @@
     "spelling_suggestion": null
    },
    "agreement": "only WFO",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "429565-1",
+     "name": "Aletris spicata Franch.",
+     "year": 1896,
+     "page": 199,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Melanthiaceae",
+     "publication_issued": "Vols. 1-20, 1887-1906; ser. 2, vols. 1-3, 1907-1913 [1925]",
+     "publication_remarks": "M.L. Green (in Bull. Misc. Inform. Kew 1928(4): 155. 1928) mentioned that the effective publication date of the last issue of the Journal de botanique (“1910-1913,” sér. 2, 3: 1-104) as 1925 [BHL_title_id:2178]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Alisma canaliculatum": {
    "scientific_name": "Alisma canaliculatum",
@@ -4535,7 +4605,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "60444562-2",
+     "name": "Alisma plantago-aquatica subsp. orientale (Sam.) Sam.",
+     "year": 1932,
+     "page": null,
+     "status": "stat. nov.",
+     "rank": "subsp.",
+     "family": "Alismataceae",
+     "publication_issued": "Vols. 1–33, (1903/04–46/48), 1904–51; n.s., vols. 1–7(2/3), (1949/52–74), 1952–74",
+     "publication_remarks": "[BHL_title_id:40761]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Alisma plantaginis": {
    "scientific_name": "Alisma plantaginis",
@@ -5311,7 +5395,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "558713-1",
+     "name": "Alcea rosea L.",
+     "year": 1753,
+     "page": 687,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Malvaceae",
+     "publication_issued": "1 May 1753",
+     "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Amaranthus tricolor": {
    "scientific_name": "Amaranthus tricolor",
@@ -5438,7 +5536,21 @@
     "spelling_suggestion": null
    },
    "agreement": "only WFO",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "84377-1",
+     "name": "Amorphophallus konjac K.Koch",
+     "year": 1858,
+     "page": 166,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Araceae",
+     "publication_issued": "1857-1858",
+     "publication_remarks": "2 volumes [BHL_title_id:101653]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Ampelopsis japonica": {
    "scientific_name": "Ampelopsis japonica",
@@ -5609,7 +5721,47 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "1212858-2",
+     "name": "Prunus persica (L.) Batsch",
+     "year": 1801,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Rosaceae",
+     "publication_issued": "19 Apr 1801",
+     "publication_remarks": "[BHL_page_id:33265105]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "161086-3",
+     "name": "Prunus persica (L.) Batsch",
+     "year": 1801,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Rosaceae",
+     "publication_issued": null,
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "730100-1",
+     "name": "Prunus persica (L.) Batsch",
+     "year": null,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Rosaceae",
+     "publication_issued": null,
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Amygdalus triloba": {
    "scientific_name": "Amygdalus triloba",
@@ -5662,7 +5814,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "730372-1",
+     "name": "Prunus triloba Lindl.",
+     "year": 1857,
+     "page": 268,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Rosaceae",
+     "publication_issued": "(Ser. 1) vols. 1-30, 1841-1873; n.s. vols. 1-26,¹1874-1886; ser. 3, vol. 1+, 1887+",
+     "publication_remarks": "Founded in 1841 by Paxton & Lindley (1841-1843 available online at: https://www.biodiversitylibrary.org/bibliography/40365); During 1841-65, Lindley served as the Co-Editor and was in charge of the horticultural department (see TL-2); The 1844-1873 issues titled Gardeners' Chronicle and Agricultural Gazette (available online at: https://www.biodiversitylibrary.org/bibliography/40100). Absorbed Gardening Illustrated and the Greenhouse; in 1956 titled Gardeners'¹Chronicle and Gardening Illustrated. Superseded by: GC&HTJ. The editor for Gardeners' Chronicle: for 1865-1887: Thomas Moore & Maxwell Tylden Masters; for 1887-1907: Maxwell Tylden Masters (see J. Bot. 45: 257-258. 1907); for 1908-1918: Robert Hooper Pearson 1866-1918) (vide Gard. Chron. 63: 246. 1918; Bot. Abstr. 8: 238. 1921); for 1918-1950: Charles Henry Curtis (vide Elizabeth Gilbert, RHS Lindley Library). [BHL_title_id:48390]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Aneilema": {
    "scientific_name": "Aneilema",
@@ -5871,6 +6037,81 @@
     }
    ]
   },
+  "Angelica": {
+   "scientific_name": "Angelica",
+   "wfo": {
+    "accepted_id": "wfo-4000002087",
+    "accepted_name": "Angelica L.",
+    "accepted_name_without_authors": "Angelica",
+    "family": "Apiaceae",
+    "rank": "genus",
+    "rule": "accepted",
+    "reason": null,
+    "via": {
+     "id": "wfo-4000002087",
+     "name": "Angelica L.",
+     "role": "accepted"
+    }
+   },
+   "wcvp": {
+    "accepted_id": "2638971",
+    "accepted_name": "Angelica L.",
+    "accepted_name_without_authors": "Angelica",
+    "family": "Apiaceae",
+    "rank": "genus",
+    "rule": "accepted",
+    "reason": null,
+    "via": {
+     "id": "2638971",
+     "name": "Angelica L.",
+     "status": "Accepted"
+    }
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": "Angelica",
+    "accepted_name_without_authors": "Angelica",
+    "family": null,
+    "rank": null,
+    "rule": "global names",
+    "reason": null,
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 36,
+    "curated_current_names": {
+     "Catalogue of Life": "Angelica",
+     "ITIS": "Angelica",
+     "WoRMS": "Angelica",
+     "IUCN": "Angelica",
+     "PaleoBioDB": "Angelica",
+     "iNaturalist": "Angelica",
+     "IRMNG": "Angelica",
+     "World Flora Online": "Angelica",
+     "TAXREF": "Angelica",
+     "Flora of Brazil": "Angelica",
+     "Fauna of Brazil": "Angelica"
+    },
+    "spelling_suggestion": null
+   },
+   "agreement": "agree",
+   "ipni_publication": [
+    {
+     "ipni_id": "39657-1",
+     "name": "Angelica L.",
+     "year": 1753,
+     "page": 250,
+     "status": "tax. nov.",
+     "rank": "gen.",
+     "family": "Apiaceae",
+     "publication_issued": "1 May 1753",
+     "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
+  },
   "Angelica acutiloba": {
    "scientific_name": "Angelica acutiloba",
    "wfo": {
@@ -5936,6 +6177,74 @@
      "family": "Apiaceae",
      "publication_issued": "Vol. 1-105, 1887-1992",
      "publication_remarks": "Internet Link: https://www.jstage.jst.go.jp/browse/jplantres1887/6/0/_contents [BHL_title_id:63894]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
+  },
+  "Angelica anomala": {
+   "scientific_name": "Angelica anomala",
+   "wfo": {
+    "accepted_id": "wfo-0000536091",
+    "accepted_name": "Angelica anomala Avé-Lall.",
+    "accepted_name_without_authors": "Angelica anomala",
+    "family": "Apiaceae",
+    "rank": "species",
+    "rule": "accepted",
+    "reason": null,
+    "via": {
+     "id": "wfo-0000536091",
+     "name": "Angelica anomala Avé-Lall.",
+     "role": "accepted"
+    }
+   },
+   "wcvp": {
+    "accepted_id": "2638987",
+    "accepted_name": "Angelica anomala Avé-Lall.",
+    "accepted_name_without_authors": "Angelica anomala",
+    "family": "Apiaceae",
+    "rank": "species",
+    "rule": "accepted",
+    "reason": null,
+    "via": {
+     "id": "2638987",
+     "name": "Angelica anomala Avé-Lall.",
+     "status": "Accepted"
+    }
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": "Angelica anomala",
+    "accepted_name_without_authors": "Angelica anomala",
+    "family": null,
+    "rank": "species",
+    "rule": "global names",
+    "reason": null,
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 18,
+    "curated_current_names": {
+     "Catalogue of Life": "Angelica anomala",
+     "GRIN Plant Taxonomy": "Angelica anomala",
+     "iNaturalist": "Angelica anomala",
+     "World Flora Online": "Angelica anomala"
+    },
+    "spelling_suggestion": null
+   },
+   "agreement": "agree",
+   "ipni_publication": [
+    {
+     "ipni_id": "837557-1",
+     "name": "Angelica anomala Avé-Lall.",
+     "year": null,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Apiaceae",
+     "publication_issued": "1, 1835 (“1834)”; 2 Index Secundus, Jan 1836 (“1835”); 3 Animadversiones Botanicae, Mar 1837 (“1836”); 4 Index¹Quartus, Jan 1838 (“1837”); 5 Animadversiones Botanicae,¹Jan 1839 (“1838”); 6 Animadversiones Botanicae Jan-Feb 1840 (“1839”); 7 Jan 1841 (“1840”); 8 Index Octavus, Jan 1842 (“1841”); 9 Index Nonus, Feb 1843 (“1842”); 9 suppl. (1843); 10 Index Decimus, Jan 1845 (“1844”); 11 Index Unidecimus, Jan 1845; Supplementum ad Indicem Unidecimum, quae..., Dec 1846, 1851-1853, 1855-1858, 1860-1864, 1864 (suppl.), 1865-1866, 1866 (suppl.), 1868, 1868 (suppl. 1869), 1876, 1880-1881.",
+     "publication_remarks": "Title abbreviation follows BPH-2 (1: 557. 2004; pers. comm. from BPH). For additional info on the seed lists, see: Guide to the plant species descriptions published in seed lists from Botanic Gardens for the period 1800 - 1900 (http://seedlists.naturalis.nl). IDC: E-7808; DEJ*8670 [BHL_title_id:87728] [BHL_page_id:33120967]",
      "type_specimens": [],
      "author_matches_accepted_name": true
     }
@@ -6160,6 +6469,126 @@
     }
    ]
   },
+  "Angelica grosseserrata": {
+   "scientific_name": "Angelica grosseserrata",
+   "wfo": {
+    "accepted_id": "wfo-0001069251",
+    "accepted_name": "Ostericum grossiserratum (Maxim.) Kitag.",
+    "accepted_name_without_authors": "Ostericum grossiserratum",
+    "family": "Apiaceae",
+    "rank": "species",
+    "rule": "synonym",
+    "reason": null,
+    "via": {
+     "id": "wfo-0000536211",
+     "name": "Angelica grosseserrata Maxim.",
+     "role": "synonym"
+    }
+   },
+   "wcvp": {
+    "accepted_id": "2390176",
+    "accepted_name": "Ostericum grosseserratum (Maxim.) Kitag.",
+    "accepted_name_without_authors": "Ostericum grosseserratum",
+    "family": "Apiaceae",
+    "rank": "species",
+    "rule": "synonym",
+    "reason": null,
+    "via": {
+     "id": "2639096",
+     "name": "Angelica grosseserrata Maxim.",
+     "status": "Synonym"
+    }
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": null,
+    "accepted_name_without_authors": null,
+    "family": null,
+    "rank": null,
+    "rule": null,
+    "reason": "curated databases disagree",
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 15,
+    "curated_current_names": {
+     "Catalogue of Life": "Ostericum grosseserratum",
+     "GRIN Plant Taxonomy": "Ostericum grosseserratum",
+     "World Flora Online": "Ostericum grossiserratum"
+    },
+    "spelling_suggestion": null
+   },
+   "agreement": "disagree",
+   "ipni_publication": []
+  },
+  "Angelica inaequalis": {
+   "scientific_name": "Angelica inaequalis",
+   "wfo": {
+    "accepted_id": "wfo-0000536230",
+    "accepted_name": "Angelica inaequalis Maxim.",
+    "accepted_name_without_authors": "Angelica inaequalis",
+    "family": "Apiaceae",
+    "rank": "species",
+    "rule": "accepted",
+    "reason": null,
+    "via": {
+     "id": "wfo-0000536230",
+     "name": "Angelica inaequalis Maxim.",
+     "role": "accepted"
+    }
+   },
+   "wcvp": {
+    "accepted_id": "2639112",
+    "accepted_name": "Angelica inaequalis Maxim.",
+    "accepted_name_without_authors": "Angelica inaequalis",
+    "family": "Apiaceae",
+    "rank": "species",
+    "rule": "accepted",
+    "reason": null,
+    "via": {
+     "id": "2639112",
+     "name": "Angelica inaequalis Maxim.",
+     "status": "Accepted"
+    }
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": "Angelica inaequalis",
+    "accepted_name_without_authors": "Angelica inaequalis",
+    "family": null,
+    "rank": "species",
+    "rule": "global names",
+    "reason": null,
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 18,
+    "curated_current_names": {
+     "Catalogue of Life": "Angelica inaequalis",
+     "iNaturalist": "Angelica inaequalis",
+     "World Flora Online": "Angelica inaequalis"
+    },
+    "spelling_suggestion": null
+   },
+   "agreement": "agree",
+   "ipni_publication": [
+    {
+     "ipni_id": "837653-1",
+     "name": "Angelica inaequalis Maxim.",
+     "year": null,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Apiaceae",
+     "publication_issued": "(Sér. 3) vols. 1-32, 1859-1888; n.s.(= sér. 4) vols. 1-4 (also numbered vols. 33-36), (1889/92/93), 1890–94.",
+     "publication_remarks": "[BHL_title_id:49351]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
+  },
   "Angelica nitida": {
    "scientific_name": "Angelica nitida",
    "wfo": {
@@ -6277,7 +6706,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77065779-1",
+     "name": "Angelica sinensis var. wilsonii (H.Wolff) Z.H.Pan & M.F.Watson",
+     "year": 2004,
+     "page": 562,
+     "status": "comb. nov.",
+     "rank": "var.",
+     "family": "Apiaceae",
+     "publication_issued": "Vols. 2–11(3), 1952–66; vols. 11(4)-45, 1973-2007",
+     "publication_remarks": "Internet Link: https://www.jse.ac.cn/EN/article/showOldVolumn.do",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Angelica polymorpha": {
    "scientific_name": "Angelica polymorpha",
@@ -8031,7 +8474,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "92883-1",
+     "name": "Aristolochia debilis Siebold & Zucc.",
+     "year": 1846,
+     "page": 197,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Aristolochiaceae",
+     "publication_issued": "Vols. 1-24, 1829/1830 [t-p imprint date, 1832]-1910",
+     "publication_remarks": "Superseded by: Abhandlungen der Königlich Bayerischen Akademie der¹Wissenschaften. Mathematisch-physikalische Klasse. Munich [BHL_title_id:10920]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Arnebia euchroma": {
    "scientific_name": "Arnebia euchroma",
@@ -10120,7 +10577,34 @@
     "spelling_suggestion": null
    },
    "agreement": "only WFO",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "140771-3",
+     "name": "Artemisia verlotiorum Lamotte",
+     "year": 1877,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Asteraceae",
+     "publication_issued": null,
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "180264-1",
+     "name": "Artemisia verlotiorum Lamotte",
+     "year": 1876,
+     "page": 513,
+     "status": "tax. nov.",
+     "rank": "spec.",
+     "family": "Asteraceae",
+     "publication_issued": "1872+",
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Artemisia vestita": {
    "scientific_name": "Artemisia vestita",
@@ -10525,7 +11009,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77182353-1",
+     "name": "Selliguea lehmannii (Mett.) Christenh.",
+     "year": 2018,
+     "page": 51,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Polypodiaceae",
+     "publication_issued": "Vol. 1+, Jan 2018+, vol. 4 9 Feb 2018",
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Artocarpus nigrifolius": {
    "scientific_name": "Artocarpus nigrifolius",
@@ -10690,7 +11188,21 @@
     "spelling_suggestion": null
    },
    "agreement": "only WFO",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "89359-1",
+     "name": "Xanthosoma pentaphyllum Engl.",
+     "year": null,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Araceae",
+     "publication_issued": "Nos. 1-107, 1900-1953",
+     "publication_remarks": "TL2 recommends citing as 'IV, 141(Heft 91): 246' where IV=series, 141=family number, 91=Heft (fascicle) number, 246=page number. [BHL_page_id:33120916] [BHL_title_id:250] Years 1900-1937 (incomplete) available via BHL at: https://www.biodiversitylibrary.org/bibliography/250; Years 1900-1968 available online at Biblioteca Digital: https://bibdigital.rjb.csic.es/idurl/1/9845",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Arum triphyllum": {
    "scientific_name": "Arum triphyllum",
@@ -11339,7 +11851,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "93461-1",
+     "name": "Asarum asaroides Makino",
+     "year": 1910,
+     "page": 297,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Aristolochiaceae",
+     "publication_issued": "Vol. 1-105, 1887-1992",
+     "publication_remarks": "Internet Link: https://www.jstage.jst.go.jp/browse/jplantres1887/6/0/_contents [BHL_title_id:63894]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Asparagus cochinchinensis": {
    "scientific_name": "Asparagus cochinchinensis",
@@ -11733,7 +12259,47 @@
     "spelling_suggestion": null
    },
    "agreement": "only WCVP",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "137204-3",
+     "name": "Cyrtomium falcatum (L.f.) C.Presl",
+     "year": 1836,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Dryopteridaceae",
+     "publication_issued": "shortly before 2 Dec 1836",
+     "publication_remarks": "Later reprinted with same pagination as Abh. K. Boehm. Ges. Wiss ser. 4.¹5: 1-290. 1837. (TL2) [BHL_title_id:47011] [BHL_page_id:33189865]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "17075970-1",
+     "name": "Cyrtomium falcatum C.Presl",
+     "year": 1836,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Dryopteridaceae",
+     "publication_issued": "shortly before 2 Dec 1836",
+     "publication_remarks": "Later reprinted with same pagination as Abh. K. Boehm. Ges. Wiss ser. 4.¹5: 1-290. 1837. (TL2) [BHL_title_id:47011] [BHL_page_id:33189865]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "17268360-1",
+     "name": "Cyrtomium falcatum (L.f.) C.Presl",
+     "year": 1836,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Dryopteridaceae",
+     "publication_issued": "shortly before 2 Dec 1836",
+     "publication_remarks": "Later reprinted with same pagination as Abh. K. Boehm. Ges. Wiss ser. 4.¹5: 1-290. 1837. (TL2) [BHL_title_id:47011] [BHL_page_id:33189865]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Aster novi-belgii": {
    "scientific_name": "Aster novi-belgii",
@@ -11790,7 +12356,34 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "1086366-2",
+     "name": "Symphyotrichum novi-belgii (L.) G.L.Nesom",
+     "year": 1995,
+     "page": 287,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Asteraceae",
+     "publication_issued": "Vol. 1+, 1933+",
+     "publication_remarks": "From volume 95(1) publ. in 2013 online only at http://www.phytologia.org [BHL_title_id:12678]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "981864-1",
+     "name": "Symphyotrichum novi-belgii (L.) G.L.Nesom",
+     "year": 1995,
+     "page": 287,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Asteraceae",
+     "publication_issued": "Vol. 1+, 1933+",
+     "publication_remarks": "From volume 95(1) publ. in 2013 online only at http://www.phytologia.org [BHL_title_id:12678]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Aster tataricus": {
    "scientific_name": "Aster tataricus",
@@ -13351,6 +13944,73 @@
     }
    ]
   },
+  "Bletia hyacinthina": {
+   "scientific_name": "Bletia hyacinthina",
+   "wfo": {
+    "accepted_id": "wfo-0000346630",
+    "accepted_name": "Bletilla striata (Thunb.) Rchb.f.",
+    "accepted_name_without_authors": "Bletilla striata",
+    "family": "Orchidaceae",
+    "rank": "species",
+    "rule": "synonym",
+    "reason": null,
+    "via": {
+     "id": "wfo-0000345288",
+     "name": "Bletia hyacinthina (Sm.) Aiton",
+     "role": "synonym"
+    }
+   },
+   "wcvp": {
+    "accepted_id": "22655",
+    "accepted_name": "Bletilla striata (Thunb.) Rchb.f.",
+    "accepted_name_without_authors": "Bletilla striata",
+    "family": "Orchidaceae",
+    "rank": "species",
+    "rule": "synonym",
+    "reason": null,
+    "via": {
+     "id": "22530",
+     "name": "Bletia hyacinthina (Sm.) W.T.Aiton",
+     "status": "Synonym"
+    }
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": null,
+    "accepted_name_without_authors": null,
+    "family": null,
+    "rank": null,
+    "rule": null,
+    "reason": "curated databases disagree",
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 17,
+    "curated_current_names": {
+     "Catalogue of Life": "Bletilla striata",
+     "GRIN Plant Taxonomy": "Bletilla hyacinthina",
+     "World Flora Online": "Bletilla striata"
+    },
+    "spelling_suggestion": null
+   },
+   "agreement": "agree",
+   "ipni_publication": [
+    {
+     "ipni_id": "617803-1",
+     "name": "Bletilla striata Rchb.f.",
+     "year": 1878,
+     "page": 75,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Orchidaceae",
+     "publication_issued": "Vols. 1-50, 1843-1892",
+     "publication_remarks": "Superseded by Bot. Zeitung, 2. Abt. (see ID: 1277)¹Later vols. published in Leipzig and therfore sometimes cited as Bot.¹Zeitung (Leipzig) [BHL_title_id:4948]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
+  },
   "Bletilla striata": {
    "scientific_name": "Bletilla striata",
    "wfo": {
@@ -13576,7 +14236,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "662991-1",
+     "name": "Xylanche himalaica Beck",
+     "year": null,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Scrophulariaceae",
+     "publication_issued": "1887-1915; Teil I. abt. 1, 1897; abt. 1*, 1907; abt. 1**, 1900; abt, 1a, 1900; abt. 1b, 1896; abt. 2, 1897; abt. 3, 1909; abt. 4 1902; Teil II, abt. 1, 1889; abt. 2, 1887; abt. 3, 1889; abt. 4, 1888; abt. 5, 1888; abt. 6, 1889; Teil III. 1. hälfte, 1894; abt. 1, 1889; abt. 1a, 1893; abt. 1b, 1889; abt. 2, 1891; abt. 2a, 1891; abt. 3. 1894. [2. hälfte, 1898-: abt. 4, 1896; abt. 5, 1896; abt. 6, 1895; abt. 6a, 1894; abt. 7, 1893; abt. 8, 1898; Teil IV, abt. 1, 1891; abt. 2, 1895; abt. 3a, 1897; abt. 3b, 1895; abt. 4, 1891; abt. 5, 1894.",
+     "publication_remarks": "[BHL_page_id:33120895] The work is divided into 4 sections (Teile) which are subdivided into Abteilungen. In the table of contents the families are arranged under 4 main divisions (4 [Haupt]abteilungen): I. Myxothallophyta (Myxomycetes); II. Euthallophyta; III. Embryophyta asiphonogama; IV.Embroyophyta siphonogama. [BHL_title_id:4635]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Boymia ruticarpa": {
    "scientific_name": "Boymia ruticarpa",
@@ -13991,7 +14665,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "112674-1",
+     "name": "Aegonychon purpurocaeruleum (L.) Holub",
+     "year": 1973,
+     "page": 165,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Boraginaceae",
+     "publication_issued": "Vol. 2–32, 1967–97",
+     "publication_remarks": "Available online at: https://www.jstor.org/journal/foligeobphyt",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Bupleurum boissieuanum": {
    "scientific_name": "Bupleurum boissieuanum",
@@ -14803,7 +15491,21 @@
     "spelling_suggestion": null
    },
    "agreement": "only WFO",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "839244-1",
+     "name": "Bupleurum longeradiatum Turcz.",
+     "year": 1844,
+     "page": 719,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Apiaceae",
+     "publication_issued": "Vols. 1-62, 1829-1886 [-1887]; n.s. vols. 1-30, 1887-1917",
+     "publication_remarks": "Note: Traditionally cited by part number (the parts are continuously paginated) rather than by issue. For example, '41(II): 285' rather than '41(4): 285'. [BHL_title_id:4951]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Bupleurum malconense": {
    "scientific_name": "Bupleurum malconense",
@@ -15119,7 +15821,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77077927-1",
+     "name": "Bupleurum bicaule subsp. pusillum (Krylov) Czubarov",
+     "year": 2004,
+     "page": 66,
+     "status": "comb. et stat. nov.",
+     "rank": "subsp.",
+     "family": "Apiaceae",
+     "publication_issued": "vol. 1+; 1998-",
+     "publication_remarks": "Four times a year; Issued by: Altaiskii gosudarstvennyi universitet,¹Iuzhno- sibirskii botanicheskii sad; also available online. Language¹note: Summaries and tables of contents also in English",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Bupleurum rockii": {
    "scientific_name": "Bupleurum rockii",
@@ -16731,7 +17447,47 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "167830-3",
+     "name": "Chamaecrista mimosoides (L.) Greene",
+     "year": 1899,
+     "page": 27,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Caesalpiniaceae",
+     "publication_issued": "Vols. 1-5, 1887-1905",
+     "publication_remarks": "Internet Link: http://fig.lib.harvard.edu/fig/?bib=003825878 [BHL_title_id:15369] [BHL_page_id:33121127]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "485860-1",
+     "name": "Chamaecrista mimosoides (L.) Greene",
+     "year": 1899,
+     "page": 27,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Leguminosae",
+     "publication_issued": "Vols. 1-5, 1887-1905",
+     "publication_remarks": "Internet Link: http://fig.lib.harvard.edu/fig/?bib=003825878 [BHL_title_id:15369] [BHL_page_id:33121127]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "54606-2",
+     "name": "Chamaecrista mimosoides (L.) Greene",
+     "year": 1899,
+     "page": 27,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Caesalpiniaceae",
+     "publication_issued": "Vols. 1-5, 1887-1905",
+     "publication_remarks": "Internet Link: http://fig.lib.harvard.edu/fig/?bib=003825878 [BHL_title_id:15369] [BHL_page_id:33121127]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Cassia obtusifolia": {
    "scientific_name": "Cassia obtusifolia",
@@ -16885,7 +17641,34 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "1156959-2",
+     "name": "Senna sophera (L.) Roxb.",
+     "year": 1832,
+     "page": 347,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Caesalpiniaceae",
+     "publication_issued": "3 vols., 1832: 1, 14 Jan 1832; 2, 1832; 3, Oct-Dec¹1832",
+     "publication_remarks": "Editor: William Carey. Volume 4, Cryptogams, was reprinted with¹independent pagination from Calcutta Journal of Natural History 4:¹463-520, Jan 1844 [BHL_title_id:590] [BHL_page_id:33190428]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "518364-1",
+     "name": "Senna sophera (L.) Roxb.",
+     "year": 1832,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Leguminosae",
+     "publication_issued": "3 vols., 1832: 1, 14 Jan 1832; 2, 1832; 3, Oct-Dec¹1832",
+     "publication_remarks": "Editor: William Carey. Volume 4, Cryptogams, was reprinted with¹independent pagination from Calcutta Journal of Natural History 4:¹463-520, Jan 1844 [BHL_title_id:590] [BHL_page_id:33190428]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Cassia tora": {
    "scientific_name": "Cassia tora",
@@ -17540,7 +18323,34 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "108733-3",
+     "name": "Dendrobium crumenatum Sw.",
+     "year": 1799,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Orchidaceae",
+     "publication_issued": null,
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "627202-1",
+     "name": "Dendrobium crumenatum Sw.",
+     "year": null,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Orchidaceae",
+     "publication_issued": "Vols. 1-5: 1799-1803; title pages do not bear vol.¹no., but show the year as Band; B. 1799 for vols.¹1-2; B. 1800 for vols. 3-4; B. 1801 for vol. 5.¹vol. 1(1): 1-272. Feb 1799; 1(2): 273-526. Aug 1799;¹2(1): 1-200. Sep 1799; 2(2): 201-500. Apr 1800;¹3(1): 1-220. Jun 1800; 3(2): 221-446. Apr 1801;¹4(1&2): 1-483. Oct-Dec 1801; 5(1): 1-272. Apr 1803;¹5(2): 273-504. Dec 1803-Apr 1804",
+     "publication_remarks": "[BHL_page_id:33333456]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Cerasus humilis": {
    "scientific_name": "Cerasus humilis",
@@ -17720,7 +18530,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "729953-1",
+     "name": "Prunus maximowiczii Rupr.",
+     "year": 1856,
+     "page": 131,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Rosaceae",
+     "publication_issued": "(Ser. 2) Vols. 1-17, 1843-1859. Complete series is as follows (by ID #): 879, (6254), 191, 4730, 6010, 4733, 192, 4732, 1923, 193, 4557",
+     "publication_remarks": "Preceded by: Bull. Sci. Acad. Imp. Sci. Saint-Pétersbourg (ID: 879). Superseded by: Bull. Acad. Imp. Sci. Saint-Pétersbourg (ID: 191) [BHL_title_id:95237]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Ceratophyllum demersum": {
    "scientific_name": "Ceratophyllum demersum",
@@ -18189,7 +19013,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "167822-1",
+     "name": "Chloranthus serratus (Thunb.) Roem. & Schult.",
+     "year": 1818,
+     "page": 461,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Chloranthaceae",
+     "publication_issued": "7 vols. - 1817-1830; 1: Jan-Jun 1817; 2: Nov 1817; 3: Jul 1818; 4: Jan-Jun 1819; 5: late 1819 or early 1820; 6: Aug-Dec 1820; 7(1): 1829; 7(2): late 1830",
+     "publication_remarks": "Vols. 5-6 by J. A. Schultes; Apiaceae by C. Sprengel; Vol. 7 by J. A. & J. H. Schultes; TL2 (4: 847.1983) suggests that Roemer & Schultes's edition may be treated as 'ed. 16' [BHL_title_id:825] [BHL_page_id:33190318]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Chlorophytum comosum": {
    "scientific_name": "Chlorophytum comosum",
@@ -18510,6 +19348,75 @@
     }
    ]
   },
+  "Cibotium glaucum": {
+   "scientific_name": "Cibotium glaucum",
+   "wfo": {
+    "accepted_id": "wfo-0001108900",
+    "accepted_name": "Cibotium glaucum (Sm.) Hook. & Arn.",
+    "accepted_name_without_authors": "Cibotium glaucum",
+    "family": "Cibotiaceae",
+    "rank": "species",
+    "rule": "accepted",
+    "reason": null,
+    "via": {
+     "id": "wfo-0001108900",
+     "name": "Cibotium glaucum (Sm.) Hook. & Arn.",
+     "role": "accepted"
+    }
+   },
+   "wcvp": {
+    "accepted_id": "3145526",
+    "accepted_name": "Cibotium glaucum (Sm.) Hook. & Arn.",
+    "accepted_name_without_authors": "Cibotium glaucum",
+    "family": "Cyatheaceae",
+    "rank": "species",
+    "rule": "accepted",
+    "reason": null,
+    "via": {
+     "id": "3145526",
+     "name": "Cibotium glaucum (Sm.) Hook. & Arn.",
+     "status": "Accepted"
+    }
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": "Cibotium glaucum",
+    "accepted_name_without_authors": "Cibotium glaucum",
+    "family": null,
+    "rank": "species",
+    "rule": "global names",
+    "reason": null,
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 24,
+    "curated_current_names": {
+     "Catalogue of Life": "Cibotium glaucum",
+     "ITIS": "Cibotium glaucum",
+     "GRIN Plant Taxonomy": "Cibotium glaucum",
+     "iNaturalist": "Cibotium glaucum",
+     "World Flora Online": "Cibotium glaucum"
+    },
+    "spelling_suggestion": null
+   },
+   "agreement": "agree",
+   "ipni_publication": [
+    {
+     "ipni_id": "17069480-1",
+     "name": "Cibotium glaucum (Sm.) Hook. & Arn.",
+     "year": 1832,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Dicksoniaceae",
+     "publication_issued": "10 parts: 1, pp. 1-48 (Dec 1830); 2, pp. 49-96¹(Jan-Feb 1832); 3, pp. 97-144 (Oct-Nov 1832); 4, pp.¹145-192 (Oct 1833); 5, pp. 193-240 (Jul-Aug 1837);¹6, pp. 241-288 (Jul 1838); 7, pp. 289-336 (Dec¹1838); 8, pp. 337-384 (Jan-May 1839); 9, pp. 385-432¹(Feb-Mar 1840); 10, pp. 433-485 (Jan-Jun 1841)",
+     "publication_remarks": "[BHL_title_id:246] [BHL_page_id:33068533]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
+  },
   "Cichorium endivia": {
    "scientific_name": "Cichorium endivia",
    "wfo": {
@@ -18637,7 +19544,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "33043-1",
+     "name": "Actaea L.",
+     "year": 1753,
+     "page": 504,
+     "status": "tax. nov.",
+     "rank": "gen.",
+     "family": "Ranunculaceae",
+     "publication_issued": "1 May 1753",
+     "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Cimicifuga dahurica": {
    "scientific_name": "Cimicifuga dahurica",
@@ -18690,7 +19611,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "707998-1",
+     "name": "Actaea dahurica Turcz. ex Fisch. & C.A.Mey.",
+     "year": null,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Ranunculaceae",
+     "publication_issued": "1, 1835 (“1834)”; 2 Index Secundus, Jan 1836 (“1835”); 3 Animadversiones Botanicae, Mar 1837 (“1836”); 4 Index¹Quartus, Jan 1838 (“1837”); 5 Animadversiones Botanicae,¹Jan 1839 (“1838”); 6 Animadversiones Botanicae Jan-Feb 1840 (“1839”); 7 Jan 1841 (“1840”); 8 Index Octavus, Jan 1842 (“1841”); 9 Index Nonus, Feb 1843 (“1842”); 9 suppl. (1843); 10 Index Decimus, Jan 1845 (“1844”); 11 Index Unidecimus, Jan 1845; Supplementum ad Indicem Unidecimum, quae..., Dec 1846, 1851-1853, 1855-1858, 1860-1864, 1864 (suppl.), 1865-1866, 1866 (suppl.), 1868, 1868 (suppl. 1869), 1876, 1880-1881.",
+     "publication_remarks": "Title abbreviation follows BPH-2 (1: 557. 2004; pers. comm. from BPH). For additional info on the seed lists, see: Guide to the plant species descriptions published in seed lists from Botanic Gardens for the period 1800 - 1900 (http://seedlists.naturalis.nl). IDC: E-7808; DEJ*8670 [BHL_title_id:87728] [BHL_page_id:33120967]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Cimicifuga foetida": {
    "scientific_name": "Cimicifuga foetida",
@@ -18815,7 +19750,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "1002904-1",
+     "name": "Actaea heracleifolia (Kom.) J.Compton",
+     "year": 1998,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Ranunculaceae",
+     "publication_issued": "Vol. 1+, 1951+",
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Cimicifuga racemosa": {
    "scientific_name": "Cimicifuga racemosa",
@@ -18869,7 +19818,41 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "316204-2",
+     "name": "Actaea racemosa L.",
+     "year": 1753,
+     "page": 504,
+     "status": "tax. nov.",
+     "rank": "spec.",
+     "family": "Ranunculaceae",
+     "publication_issued": "1 May 1753",
+     "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [
+      {
+       "status": "lectotype",
+       "institution_code": "LINN",
+       "catalog_number": "(HERB. LINN NO. 665.3) (HERB. LINN NO. 665.3)",
+       "collector": null
+      }
+     ],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "708024-1",
+     "name": "Actaea racemosa L.",
+     "year": 1753,
+     "page": 504,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Ranunculaceae",
+     "publication_issued": "1 May 1753",
+     "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Cimicifuga yunnanensis": {
    "scientific_name": "Cimicifuga yunnanensis",
@@ -18921,7 +19904,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "1002882-1",
+     "name": "Actaea yunnanensis (P.K.Hsiao) J.Compton",
+     "year": 1998,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Ranunculaceae",
+     "publication_issued": "Vol. 1+, 1951+",
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Cinnamomum cassia": {
    "scientific_name": "Cinnamomum cassia",
@@ -19549,7 +20546,21 @@
     "spelling_suggestion": null
    },
    "agreement": "disagree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "709583-1",
+     "name": "Clematis chinensis Osbeck",
+     "year": null,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Ranunculaceae",
+     "publication_issued": null,
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Clinopodium megalanthum": {
    "scientific_name": "Clinopodium megalanthum",
@@ -20183,7 +21194,47 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "1170772-2",
+     "name": "Colocasia esculenta (L.) Schott",
+     "year": 1832,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Araceae",
+     "publication_issued": "1832",
+     "publication_remarks": "Folio [BHL_page_id:33333445] [BHL_title_id:40101]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "86083-3",
+     "name": "Colocasia esculenta (L.) Schott",
+     "year": 1832,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Araceae",
+     "publication_issued": null,
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "86587-1",
+     "name": "Colocasia esculenta Schott",
+     "year": 1832,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Araceae",
+     "publication_issued": "1832",
+     "publication_remarks": "Folio [BHL_page_id:33333445] [BHL_title_id:40101]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Colocasia konishii": {
    "scientific_name": "Colocasia konishii",
@@ -20236,7 +21287,47 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "1170772-2",
+     "name": "Colocasia esculenta (L.) Schott",
+     "year": 1832,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Araceae",
+     "publication_issued": "1832",
+     "publication_remarks": "Folio [BHL_page_id:33333445] [BHL_title_id:40101]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "86083-3",
+     "name": "Colocasia esculenta (L.) Schott",
+     "year": 1832,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Araceae",
+     "publication_issued": null,
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "86587-1",
+     "name": "Colocasia esculenta Schott",
+     "year": 1832,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Araceae",
+     "publication_issued": "1832",
+     "publication_remarks": "Folio [BHL_page_id:33333445] [BHL_title_id:40101]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Commelina medica": {
    "scientific_name": "Commelina medica",
@@ -20288,7 +21379,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "172871-1",
+     "name": "Murdannia medica (Lour.) D.Y.Hong",
+     "year": 1974,
+     "page": 470,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Commelinaceae",
+     "publication_issued": "Vols. 2–11(3), 1952–66; vols. 11(4)-45, 1973-2007",
+     "publication_remarks": "Internet Link: https://www.jse.ac.cn/EN/article/showOldVolumn.do",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Coprinopsis atramentaria": {
    "scientific_name": "Coprinopsis atramentaria",
@@ -20807,7 +21912,54 @@
     "spelling_suggestion": null
    },
    "agreement": "only WFO",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "185149-1",
+     "name": "Bidens pilosa L.",
+     "year": 1753,
+     "page": 832,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Asteraceae",
+     "publication_issued": "1 May 1753",
+     "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "32564-2",
+     "name": "Bidens pilosa L.",
+     "year": 1753,
+     "page": 832,
+     "status": "tax. nov.",
+     "rank": "spec.",
+     "family": "Asteraceae",
+     "publication_issued": "1 May 1753",
+     "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [
+      {
+       "status": "lectotype",
+       "institution_code": "LINN",
+       "catalog_number": "(975.8) (975.8)",
+       "collector": null
+      }
+     ],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "50219-3",
+     "name": "Bidens pilosa L.",
+     "year": 1753,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Asteraceae",
+     "publication_issued": "1 May 1753",
+     "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Cornus officinalis": {
    "scientific_name": "Cornus officinalis",
@@ -21864,7 +23016,34 @@
     "spelling_suggestion": null
    },
    "agreement": "disagree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "121914-3",
+     "name": "Cyathula prostrata (L.) Blume",
+     "year": 1827,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Amaranthaceae",
+     "publication_issued": null,
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "60185-1",
+     "name": "Cyathula prostrata (L.) Blume",
+     "year": 1826,
+     "page": 549,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Amaranthaceae",
+     "publication_issued": "17 parts (1825-1827); 1: 1-42. 15 Mar-31 May 1825;¹2-9: 43-484. 12 Jun-7 Dec 1825; 10-13: 485-730. 7¹Dec-24 Jan 1826; 14-15: 731-942. Jul-Dec 1826;¹16-17: 943-1169. Oct 1826-Nov 1827",
+     "publication_remarks": "[BHL_page_id:33120366] [BHL_title_id:395]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Cyclobalanopsis bambusaefolia": {
    "scientific_name": "Cyclobalanopsis bambusaefolia",
@@ -22299,7 +23478,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77176914-1",
+     "name": "Vincetoxicum ascyrifolium Franch. & Sav.",
+     "year": 1877,
+     "page": 441,
+     "status": "tax. nov.",
+     "rank": "spec.",
+     "family": "Asclepiadaceae",
+     "publication_issued": "Vol. 1, pt. 1 (p. 1-192), 1873; Vol. 1, pt. 2 (p. 193-485), 1875; Vol. 2, pt. 1 (p. 1-256), 1877; Vol. 2, pt. 2 (p. 257-624), 1878; Vol. 2, pt. 3 (p. 625-789), 1879",
+     "publication_remarks": "Vol. 1: http://books.google.co.in/books?id=WYFIAAAAYAAJ&printsec=frontcover#v=onepage&q&f=false ; Vol. 2: http://books.google.com/books?id=0QMYAAAAYAAJ&printsec=frontcover#v=onepage&q&f=false [BHL_title_id:75] [BHL_page_id:33121000]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Cynanchum atratum": {
    "scientific_name": "Cynanchum atratum",
@@ -22486,7 +23679,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "946558-1",
+     "name": "Vincetoxicum forrestii (Schltr.) C.Y.Wu & D.Z.Li",
+     "year": 1989,
+     "page": 46,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Asclepiadaceae",
+     "publication_issued": "Vol. 1-32, 1979-2010",
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Cynanchum officinale": {
    "scientific_name": "Cynanchum officinale",
@@ -22674,7 +23881,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77348235-1",
+     "name": "Vincetoxicum bungei (G.Don) Cai F.Zhang & G.W.Hu",
+     "year": 2024,
+     "page": 225,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Asclepiadaceae",
+     "publication_issued": "1+, 2009+",
+     "publication_remarks": "http://www.mapress.com/phytotaxa/index.htm",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Cynanchum purpureum": {
    "scientific_name": "Cynanchum purpureum",
@@ -22862,7 +24083,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "103034-1",
+     "name": "Vincetoxicum versicolor Decne.",
+     "year": 1844,
+     "page": 524,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Asclepiadaceae",
+     "publication_issued": "Vols. 1-17: 1824-1873; 1: 1-748. mid-Jan 1824; 2:1-644. mid-Nov 1825; 3: 1-494. mid-Mar 1828; 4:1-683. late Sep 1830; 5: 1-706. 1-10 Oct 1836; 6:1-687. early Jan 1838; 7(1): 1-330. late Apr 1838; 7(2): 331-801. late Dec 1839; 8: 1-684. mid-Mar 1844; 9: 1-573. 1 Jan 1845; 10: 1-679. 8 Apr 1846; 11: 1-736. 25 Nov 1847; 12: 1-707. 5 Nov 1848; 13(1): 1-741. 10 May 1852; 13(2): 1-468. 5 May 1849; 14(1): 1-492. mid-Oct 1856; 14(2): 493-706. late Nov 1857; 15(1): 1-522. early May 1864; 15(2.1): 1-188. late Jan 1862; 15(2.2): 189-1286. late Aug 1866; 16(1): 1-491. mid-Nov 1869; 16(2.1): 1-160. late Dec 1864; 16(2.2): 161-691. mid-Jul 1868; 17: 1-493. 16 Oct 1873",
+     "publication_remarks": "Vols. 8-17: ...Editore et pro parte auctore Alphonso de Candolle; the work is made up of contributions from several authors. For the 'A.Rich. ex DC.' authorship in vol. 4, see Wiersema, J.H. and Kirkbride, J.H. (2022). 'Authorship and typification of Rubiaceae names published by A.P. de Candolle and A. Richard revisited' in Taxon 71(6): 1305-1307 https://doi.org/10.1002/tax.12724 [BHL_page_id:33120576] [BHL_title_id:286]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Cyrtomium fortunei": {
    "scientific_name": "Cyrtomium fortunei",
@@ -23067,7 +24302,54 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "100599-3",
+     "name": "Datura metel L.",
+     "year": 1753,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Solanaceae",
+     "publication_issued": "1 May 1753",
+     "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "314739-2",
+     "name": "Datura metel L.",
+     "year": 1753,
+     "page": 179,
+     "status": "tax. nov.",
+     "rank": "spec.",
+     "family": "Solanaceae",
+     "publication_issued": "1 May 1753",
+     "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [
+      {
+       "status": "lectotype",
+       "institution_code": "BM",
+       "catalog_number": "(Herb. Clifford: 55, Datura 2 [gamma]",
+       "collector": null
+      }
+     ],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "815581-1",
+     "name": "Datura metel L.",
+     "year": 1753,
+     "page": 179,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Solanaceae",
+     "publication_issued": "1 May 1753",
+     "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Dendrobium ceraia": {
    "scientific_name": "Dendrobium ceraia",
@@ -23119,7 +24401,34 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "108733-3",
+     "name": "Dendrobium crumenatum Sw.",
+     "year": 1799,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Orchidaceae",
+     "publication_issued": null,
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "627202-1",
+     "name": "Dendrobium crumenatum Sw.",
+     "year": null,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Orchidaceae",
+     "publication_issued": "Vols. 1-5: 1799-1803; title pages do not bear vol.¹no., but show the year as Band; B. 1799 for vols.¹1-2; B. 1800 for vols. 3-4; B. 1801 for vol. 5.¹vol. 1(1): 1-272. Feb 1799; 1(2): 273-526. Aug 1799;¹2(1): 1-200. Sep 1799; 2(2): 201-500. Apr 1800;¹3(1): 1-220. Jun 1800; 3(2): 221-446. Apr 1801;¹4(1&2): 1-483. Oct-Dec 1801; 5(1): 1-272. Apr 1803;¹5(2): 273-504. Dec 1803-Apr 1804",
+     "publication_remarks": "[BHL_page_id:33333456]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Dendrobium chrysanthum": {
    "scientific_name": "Dendrobium chrysanthum",
@@ -23864,7 +25173,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77152127-1",
+     "name": "Hydrangea febrifuga (Lour.) Y.De Smet & C.Granados",
+     "year": 2015,
+     "page": 750,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Hydrangeaceae",
+     "publication_issued": "Vol. 1+, 1951+",
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": false
+    }
+   ]
   },
   "Dictamnus albus": {
    "scientific_name": "Dictamnus albus",
@@ -23932,6 +25255,86 @@
      "family": "Rutaceae",
      "publication_issued": "1 May 1753",
      "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
+  },
+  "Diervilla versicolor": {
+   "scientific_name": "Diervilla versicolor",
+   "wfo": {
+    "accepted_id": "wfo-0001291165",
+    "accepted_name": "Weigela japonica Thunb.",
+    "accepted_name_without_authors": "Weigela japonica",
+    "family": "Caprifoliaceae",
+    "rank": "species",
+    "rule": "synonym",
+    "reason": null,
+    "via": {
+     "id": "wfo-0000647203",
+     "name": "Diervilla versicolor Siebold & Zucc.",
+     "role": "synonym"
+    }
+   },
+   "wcvp": {
+    "accepted_id": "2466639",
+    "accepted_name": "Weigela japonica Thunb.",
+    "accepted_name_without_authors": "Weigela japonica",
+    "family": "Caprifoliaceae",
+    "rank": "species",
+    "rule": "synonym",
+    "reason": null,
+    "via": {
+     "id": "2767904",
+     "name": "Diervilla versicolor Siebold & Zucc.",
+     "status": "Illegitimate"
+    }
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": "Weigela japonica",
+    "accepted_name_without_authors": "Weigela japonica",
+    "family": null,
+    "rank": "species",
+    "rule": "global names",
+    "reason": null,
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 12,
+    "curated_current_names": {
+     "Catalogue of Life": "Weigela japonica",
+     "GRIN Plant Taxonomy": "Weigela japonica",
+     "World Flora Online": "Weigela japonica"
+    },
+    "spelling_suggestion": null
+   },
+   "agreement": "agree",
+   "ipni_publication": [
+    {
+     "ipni_id": "150042-1",
+     "name": "Weigela japonica Thunb.",
+     "year": 1784,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Caprifoliaceae",
+     "publication_issued": "Aug 1784",
+     "publication_remarks": "Some of the new names in this work were validated in J. A. Murray's¹Syst. Veg. (ed. 14); for such names Thunberg is the author [BHL_title_id:118608] [BHL_page_id:33212359]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "150043-1",
+     "name": "Weigela japonica Thunb.",
+     "year": null,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Caprifoliaceae",
+     "publication_issued": "[Ser. 2], vols. 1-14, 1773-1850; ser. 3, vols. 1-20,¹1851-94; ser. 4, vol. 1+, 1905+",
+     "publication_remarks": "[BHL_title_id:14640]",
      "type_specimens": [],
      "author_matches_accepted_name": true
     }
@@ -24137,7 +25540,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "318443-1",
+     "name": "Dioscorea polystachya Turcz.",
+     "year": 1837,
+     "page": 158,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Dioscoreaceae",
+     "publication_issued": "Vols. 1-62, 1829-1886 [-1887]; n.s. vols. 1-30, 1887-1917",
+     "publication_remarks": "Note: Traditionally cited by part number (the parts are continuously paginated) rather than by issue. For example, '41(II): 285' rather than '41(4): 285'. [BHL_title_id:4951]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Dioscorea bulbifera": {
    "scientific_name": "Dioscorea bulbifera",
@@ -24454,7 +25871,34 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "327186-2",
+     "name": "Podophyllum L.",
+     "year": 1753,
+     "page": 505,
+     "status": "tax. nov.",
+     "rank": "gen.",
+     "family": "Berberidaceae",
+     "publication_issued": "1 May 1753",
+     "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "3966-1",
+     "name": "Podophyllum L.",
+     "year": 1753,
+     "page": 505,
+     "status": "unknown",
+     "rank": "gen.",
+     "family": "Berberidaceae",
+     "publication_issued": "1 May 1753",
+     "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Dipsacus asper": {
    "scientific_name": "Dipsacus asper",
@@ -24508,7 +25952,34 @@
     "spelling_suggestion": null
    },
    "agreement": "disagree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "319266-1",
+     "name": "Dipsacus inermis Wall.",
+     "year": 1820,
+     "page": 367,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Dipsacaceae",
+     "publication_issued": "2 vols., 1820-1824: vol. 1, 1820, vol. 2, 1824",
+     "publication_remarks": "INTERNET LINK: Vol. 1: http://books.google.com/books?id=LFw-AAAAcAAJ&printsec=frontcover#v=onepage&q&f=false; vol. 2: http://books.google.com/books?id=V1w-AAAAcAAJ&pg=PR5&lpg=PR5&dq=Flora+Indica;+or+Descriptions+of+Indian+Plants+1824&source=bl&ots=AEykOIX5sA&sig=xUx1yVt-09u235dwIdVvRA6gtbc&hl=en&ei=K41yTobJEujZ0QHUz72GCg&sa=X&oi=book_result&ct=result&resnum=6&ved=0CEMQ6AEwBQ#v=onepage&q&f=false [BHL_title_id:589] [BHL_page_id:33190428]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "319267-1",
+     "name": "Dipsacus inermis Wall.",
+     "year": 1820,
+     "page": 367,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Dipsacaceae",
+     "publication_issued": "2 vols., 1820-1824: vol. 1, 1820, vol. 2, 1824",
+     "publication_remarks": "INTERNET LINK: Vol. 1: http://books.google.com/books?id=LFw-AAAAcAAJ&printsec=frontcover#v=onepage&q&f=false; vol. 2: http://books.google.com/books?id=V1w-AAAAcAAJ&pg=PR5&lpg=PR5&dq=Flora+Indica;+or+Descriptions+of+Indian+Plants+1824&source=bl&ots=AEykOIX5sA&sig=xUx1yVt-09u235dwIdVvRA6gtbc&hl=en&ei=K41yTobJEujZ0QHUz72GCg&sa=X&oi=book_result&ct=result&resnum=6&ved=0CEMQ6AEwBQ#v=onepage&q&f=false [BHL_title_id:589] [BHL_page_id:33190428]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Dipsacus asperoides": {
    "scientific_name": "Dipsacus asperoides",
@@ -24627,7 +26098,34 @@
     "spelling_suggestion": null
    },
    "agreement": "disagree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "319266-1",
+     "name": "Dipsacus inermis Wall.",
+     "year": 1820,
+     "page": 367,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Dipsacaceae",
+     "publication_issued": "2 vols., 1820-1824: vol. 1, 1820, vol. 2, 1824",
+     "publication_remarks": "INTERNET LINK: Vol. 1: http://books.google.com/books?id=LFw-AAAAcAAJ&printsec=frontcover#v=onepage&q&f=false; vol. 2: http://books.google.com/books?id=V1w-AAAAcAAJ&pg=PR5&lpg=PR5&dq=Flora+Indica;+or+Descriptions+of+Indian+Plants+1824&source=bl&ots=AEykOIX5sA&sig=xUx1yVt-09u235dwIdVvRA6gtbc&hl=en&ei=K41yTobJEujZ0QHUz72GCg&sa=X&oi=book_result&ct=result&resnum=6&ved=0CEMQ6AEwBQ#v=onepage&q&f=false [BHL_title_id:589] [BHL_page_id:33190428]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "319267-1",
+     "name": "Dipsacus inermis Wall.",
+     "year": 1820,
+     "page": 367,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Dipsacaceae",
+     "publication_issued": "2 vols., 1820-1824: vol. 1, 1820, vol. 2, 1824",
+     "publication_remarks": "INTERNET LINK: Vol. 1: http://books.google.com/books?id=LFw-AAAAcAAJ&printsec=frontcover#v=onepage&q&f=false; vol. 2: http://books.google.com/books?id=V1w-AAAAcAAJ&pg=PR5&lpg=PR5&dq=Flora+Indica;+or+Descriptions+of+Indian+Plants+1824&source=bl&ots=AEykOIX5sA&sig=xUx1yVt-09u235dwIdVvRA6gtbc&hl=en&ei=K41yTobJEujZ0QHUz72GCg&sa=X&oi=book_result&ct=result&resnum=6&ved=0CEMQ6AEwBQ#v=onepage&q&f=false [BHL_title_id:589] [BHL_page_id:33190428]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Dipsacus chinensis": {
    "scientific_name": "Dipsacus chinensis",
@@ -25031,6 +26529,84 @@
      "family": "Asteraceae",
      "publication_issued": "Vols. 2–11(3), 1952–66; vols. 11(4)-45, 1973-2007",
      "publication_remarks": "Internet Link: https://www.jse.ac.cn/EN/article/showOldVolumn.do",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
+  },
+  "Dorstenia chinensis": {
+   "scientific_name": "Dorstenia chinensis",
+   "wfo": {
+    "accepted_id": "wfo-0000536154",
+    "accepted_name": "Angelica dahurica (Hoffm.) Benth. & Hook.f. ex Franch. & Sav.",
+    "accepted_name_without_authors": "Angelica dahurica",
+    "family": "Apiaceae",
+    "rank": "species",
+    "rule": "synonym",
+    "reason": null,
+    "via": {
+     "id": "wfo-0000654346",
+     "name": "Dorstenia chinensis Lour.",
+     "role": "synonym"
+    }
+   },
+   "wcvp": {
+    "accepted_id": "3261897",
+    "accepted_name": "Angelica dahurica var. dahurica",
+    "accepted_name_without_authors": "Angelica dahurica var. dahurica",
+    "family": "Apiaceae",
+    "rank": "variety",
+    "rule": "synonym",
+    "reason": null,
+    "via": {
+     "id": "2775600",
+     "name": "Dorstenia chinensis Lour.",
+     "status": "Synonym"
+    }
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": null,
+    "accepted_name_without_authors": null,
+    "family": null,
+    "rank": null,
+    "rule": null,
+    "reason": "fewer than two curated databases",
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 10,
+    "curated_current_names": {
+     "World Flora Online": "Angelica dahurica"
+    },
+    "spelling_suggestion": null
+   },
+   "agreement": "disagree",
+   "ipni_publication": [
+    {
+     "ipni_id": "60451989-2",
+     "name": "Angelica dahurica (Hoffm.) Benth. & Hook.f. ex Franch. & Sav.",
+     "year": 1873,
+     "page": 187,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Apiaceae",
+     "publication_issued": "Vol. 1, pt. 1 (p. 1-192), 1873; Vol. 1, pt. 2 (p. 193-485), 1875; Vol. 2, pt. 1 (p. 1-256), 1877; Vol. 2, pt. 2 (p. 257-624), 1878; Vol. 2, pt. 3 (p. 625-789), 1879",
+     "publication_remarks": "Vol. 1: http://books.google.co.in/books?id=WYFIAAAAYAAJ&printsec=frontcover#v=onepage&q&f=false ; Vol. 2: http://books.google.com/books?id=0QMYAAAAYAAJ&printsec=frontcover#v=onepage&q&f=false [BHL_title_id:75] [BHL_page_id:33121000]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "60451990-2",
+     "name": "Angelica dahurica Benth. & Hook.f.",
+     "year": 1867,
+     "page": 916,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Apiaceae",
+     "publication_issued": "See TL2 for volumes, parts, pagination, author and¹dates of publication",
+     "publication_remarks": "[BHL_page_id:33120310] [BHL_title_id:747]",
      "type_specimens": [],
      "author_matches_accepted_name": true
     }
@@ -27748,7 +29324,21 @@
     "spelling_suggestion": null
    },
    "agreement": "disagree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "205624-1",
+     "name": "Eupatorium chinense L.",
+     "year": 1753,
+     "page": 837,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Asteraceae",
+     "publication_issued": "1 May 1753",
+     "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Eupatorium kirilowii": {
    "scientific_name": "Eupatorium kirilowii",
@@ -27801,7 +29391,34 @@
     "spelling_suggestion": null
    },
    "agreement": "disagree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "206259-1",
+     "name": "Eupatorium lindleyanum DC.",
+     "year": 1836,
+     "page": 180,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Asteraceae",
+     "publication_issued": "Vols. 1-17: 1824-1873; 1: 1-748. mid-Jan 1824; 2:1-644. mid-Nov 1825; 3: 1-494. mid-Mar 1828; 4:1-683. late Sep 1830; 5: 1-706. 1-10 Oct 1836; 6:1-687. early Jan 1838; 7(1): 1-330. late Apr 1838; 7(2): 331-801. late Dec 1839; 8: 1-684. mid-Mar 1844; 9: 1-573. 1 Jan 1845; 10: 1-679. 8 Apr 1846; 11: 1-736. 25 Nov 1847; 12: 1-707. 5 Nov 1848; 13(1): 1-741. 10 May 1852; 13(2): 1-468. 5 May 1849; 14(1): 1-492. mid-Oct 1856; 14(2): 493-706. late Nov 1857; 15(1): 1-522. early May 1864; 15(2.1): 1-188. late Jan 1862; 15(2.2): 189-1286. late Aug 1866; 16(1): 1-491. mid-Nov 1869; 16(2.1): 1-160. late Dec 1864; 16(2.2): 161-691. mid-Jul 1868; 17: 1-493. 16 Oct 1873",
+     "publication_remarks": "Vols. 8-17: ...Editore et pro parte auctore Alphonso de Candolle; the work is made up of contributions from several authors. For the 'A.Rich. ex DC.' authorship in vol. 4, see Wiersema, J.H. and Kirkbride, J.H. (2022). 'Authorship and typification of Rubiaceae names published by A.P. de Candolle and A. Richard revisited' in Taxon 71(6): 1305-1307 https://doi.org/10.1002/tax.12724 [BHL_page_id:33120576] [BHL_title_id:286]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "89526-3",
+     "name": "Eupatorium lindleyanum DC.",
+     "year": 1836,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Asteraceae",
+     "publication_issued": "Vols. 1-17: 1824-1873; 1: 1-748. mid-Jan 1824; 2:1-644. mid-Nov 1825; 3: 1-494. mid-Mar 1828; 4:1-683. late Sep 1830; 5: 1-706. 1-10 Oct 1836; 6:1-687. early Jan 1838; 7(1): 1-330. late Apr 1838; 7(2): 331-801. late Dec 1839; 8: 1-684. mid-Mar 1844; 9: 1-573. 1 Jan 1845; 10: 1-679. 8 Apr 1846; 11: 1-736. 25 Nov 1847; 12: 1-707. 5 Nov 1848; 13(1): 1-741. 10 May 1852; 13(2): 1-468. 5 May 1849; 14(1): 1-492. mid-Oct 1856; 14(2): 493-706. late Nov 1857; 15(1): 1-522. early May 1864; 15(2.1): 1-188. late Jan 1862; 15(2.2): 189-1286. late Aug 1866; 16(1): 1-491. mid-Nov 1869; 16(2.1): 1-160. late Dec 1864; 16(2.2): 161-691. mid-Jul 1868; 17: 1-493. 16 Oct 1873",
+     "publication_remarks": "Vols. 8-17: ...Editore et pro parte auctore Alphonso de Candolle; the work is made up of contributions from several authors. For the 'A.Rich. ex DC.' authorship in vol. 4, see Wiersema, J.H. and Kirkbride, J.H. (2022). 'Authorship and typification of Rubiaceae names published by A.P. de Candolle and A. Richard revisited' in Taxon 71(6): 1305-1307 https://doi.org/10.1002/tax.12724 [BHL_page_id:33120576] [BHL_title_id:286]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Euphorbia": {
    "scientific_name": "Euphorbia",
@@ -30030,7 +31647,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "369371-1",
+     "name": "Gentianopsis barbata (Froel.) Ma",
+     "year": 1951,
+     "page": 8,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Gentianaceae",
+     "publication_issued": "Vols. 2–11(3), 1952–66; vols. 11(4)-45, 1973-2007",
+     "publication_remarks": "Internet Link: https://www.jse.ac.cn/EN/article/showOldVolumn.do",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Gentiana cephalantha": {
    "scientific_name": "Gentiana cephalantha",
@@ -30492,7 +32123,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "1000549-1",
+     "name": "Gentiana crassa subsp. rigescens (Franch. ex Hemsl.) Halda",
+     "year": 1995,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "subsp.",
+     "family": "Gentianaceae",
+     "publication_issued": "vol. 3; 1995",
+     "publication_remarks": "fide: Bradleya 18: 63. 2000",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Gentiana scabra": {
    "scientific_name": "Gentiana scabra",
@@ -30611,7 +32256,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "368930-1",
+     "name": "Gentiana sino-ornata Balf.f.",
+     "year": 1918,
+     "page": 253,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Gentianaceae",
+     "publication_issued": "Vols. 12-15, 1876-1884; vol. 19+, 1893+",
+     "publication_remarks": "For vols. 1-11, 1844-1873, and vols. 16-18, 1886-1891, see Trans. Bot.¹Soc. Edinburgh (ID: 1900) [BHL_title_id:5593]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Gentiana straminea": {
    "scientific_name": "Gentiana straminea",
@@ -31816,7 +33475,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "757892-1",
+     "name": "Oldenlandia herbacea (L.) Roxb.",
+     "year": 1814,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Rubiaceae",
+     "publication_issued": "Jun-Dec 1814",
+     "publication_remarks": "Description: pp. vi, xii, 105 With an introduction by W. Carey, and a Catalogue of plants described by Dr. Roxburgh in his MSS. Flora indica, but not yet introduced into the botanical garden. Although most new names are invalid (nomina nuda), several names are validly published because of references to other publications. Many of the nomina nuda were validated in Roxburgh's Flora Indica (1820, 1824, 1832), de Candolle's Prodromus (vols. 1-4, 1824-1830), and G. Don's Gen. Hist. (vol. 1, 1831). For a list, see: C. B. Robinson (Philipp. J. Sci., C. 7: 411-419. 1912); T. A. Sprague (Bull. Misc. Inform. Kew 1925: 312-314). INTERNET LINK: http://books.google.com/books?id=qVsUAAAAQAAJ&printsec=frontcover#v=onepage&q&f=false [BHL_title_id:95337] [BHL_page_id:33190427]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Hemiboea omeiensis": {
    "scientific_name": "Hemiboea omeiensis",
@@ -32274,7 +33947,34 @@
     ]
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "1072674-2",
+     "name": "Bacopa monnieri (L.) Wettst.",
+     "year": 1891,
+     "page": 77,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Scrophulariaceae",
+     "publication_issued": "1887-1915; Teil I. abt. 1, 1897; abt. 1*, 1907; abt. 1**, 1900; abt, 1a, 1900; abt. 1b, 1896; abt. 2, 1897; abt. 3, 1909; abt. 4 1902; Teil II, abt. 1, 1889; abt. 2, 1887; abt. 3, 1889; abt. 4, 1888; abt. 5, 1888; abt. 6, 1889; Teil III. 1. hälfte, 1894; abt. 1, 1889; abt. 1a, 1893; abt. 1b, 1889; abt. 2, 1891; abt. 2a, 1891; abt. 3. 1894. [2. hälfte, 1898-: abt. 4, 1896; abt. 5, 1896; abt. 6, 1895; abt. 6a, 1894; abt. 7, 1893; abt. 8, 1898; Teil IV, abt. 1, 1891; abt. 2, 1895; abt. 3a, 1897; abt. 3b, 1895; abt. 4, 1891; abt. 5, 1894.",
+     "publication_remarks": "[BHL_page_id:33120895] The work is divided into 4 sections (Teile) which are subdivided into Abteilungen. In the table of contents the families are arranged under 4 main divisions (4 [Haupt]abteilungen): I. Myxothallophyta (Myxomycetes); II. Euthallophyta; III. Embryophyta asiphonogama; IV.Embroyophyta siphonogama. [BHL_title_id:4635]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "799534-1",
+     "name": "Bacopa monnieri (L.) Wettst.",
+     "year": null,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Scrophulariaceae",
+     "publication_issued": "1887-1915; Teil I. abt. 1, 1897; abt. 1*, 1907; abt. 1**, 1900; abt, 1a, 1900; abt. 1b, 1896; abt. 2, 1897; abt. 3, 1909; abt. 4 1902; Teil II, abt. 1, 1889; abt. 2, 1887; abt. 3, 1889; abt. 4, 1888; abt. 5, 1888; abt. 6, 1889; Teil III. 1. hälfte, 1894; abt. 1, 1889; abt. 1a, 1893; abt. 1b, 1889; abt. 2, 1891; abt. 2a, 1891; abt. 3. 1894. [2. hälfte, 1898-: abt. 4, 1896; abt. 5, 1896; abt. 6, 1895; abt. 6a, 1894; abt. 7, 1893; abt. 8, 1898; Teil IV, abt. 1, 1891; abt. 2, 1895; abt. 3a, 1897; abt. 3b, 1895; abt. 4, 1891; abt. 5, 1894.",
+     "publication_remarks": "[BHL_page_id:33120895] The work is divided into 4 sections (Teile) which are subdivided into Abteilungen. In the table of contents the families are arranged under 4 main divisions (4 [Haupt]abteilungen): I. Myxothallophyta (Myxomycetes); II. Euthallophyta; III. Embryophyta asiphonogama; IV.Embroyophyta siphonogama. [BHL_title_id:4635]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Heteropogon contortus": {
    "scientific_name": "Heteropogon contortus",
@@ -32411,7 +34111,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "93461-1",
+     "name": "Asarum asaroides Makino",
+     "year": 1910,
+     "page": 297,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Aristolochiaceae",
+     "publication_issued": "Vol. 1-105, 1887-1992",
+     "publication_remarks": "Internet Link: https://www.jstage.jst.go.jp/browse/jplantres1887/6/0/_contents [BHL_title_id:63894]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Houpoea officinalis": {
    "scientific_name": "Houpoea officinalis",
@@ -32753,7 +34467,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "817642-1",
+     "name": "Physochlaina physaloides G.Don",
+     "year": null,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Solanaceae",
+     "publication_issued": "1831-1838. vol. 1: early Aug 1831; vol. 2: Oct 1832; vol. 3: 8-15 Nov 1834;¹vol. 4(1): 1837; vol. 4(2): 8 Mar-8 Apr 1838",
+     "publication_remarks": "Often cited as A General System of Gardening and Botany, from the¹original title. Volume 4 has 908 pages, and the page break between vol. 4(1) and 4(2) is not known. Sprague (Bull. Misc. Inform. Kew 1925: 312. 1925) mentioned: Vol. iv. (1837). Reviewed in Loud. Gard. Mag., Aug. 1838, xiv. 380. The original title-page is dated 1837, while the one issued along with the publisher's Advertisement (which is dated February, 1838) bears the date 1838. As the volume was apparently published in parts (vide Loud. Gard. Mag., April 1835, xi. 194), it is probable that the greater portion of it appeared in 1837, and perhaps only the last part in the beginning of 1838. [BHL_page_id:33120800] [BHL_title_id:502]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Hypericum ascyron": {
    "scientific_name": "Hypericum ascyron",
@@ -33235,7 +34963,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "60462577-2",
+     "name": "Imperata cylindrica (L.) Raeusch.",
+     "year": 1797,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Poaceae",
+     "publication_issued": "1797",
+     "publication_remarks": "[BHL_title_id:127509] [BHL_page_id:33190019]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Incarvillea sinensis": {
    "scientific_name": "Incarvillea sinensis",
@@ -33706,6 +35448,80 @@
     }
    ]
   },
+  "Iris": {
+   "scientific_name": "Iris",
+   "wfo": {
+    "accepted_id": "wfo-4000019189",
+    "accepted_name": "Iris Tourn. ex L.",
+    "accepted_name_without_authors": "Iris",
+    "family": "Iridaceae",
+    "rank": "genus",
+    "rule": "accepted",
+    "reason": null,
+    "via": {
+     "id": "wfo-4000019189",
+     "name": "Iris Tourn. ex L.",
+     "role": "accepted"
+    }
+   },
+   "wcvp": {
+    "accepted_id": "321523",
+    "accepted_name": "Iris Tourn. ex L.",
+    "accepted_name_without_authors": "Iris",
+    "family": "Iridaceae",
+    "rank": "genus",
+    "rule": "accepted",
+    "reason": null,
+    "via": {
+     "id": "321523",
+     "name": "Iris Tourn. ex L.",
+     "status": "Accepted"
+    }
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": "Iris",
+    "accepted_name_without_authors": "Iris",
+    "family": null,
+    "rank": null,
+    "rule": "global names",
+    "reason": null,
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 37,
+    "curated_current_names": {
+     "Catalogue of Life": "Iris",
+     "ITIS": "Iris",
+     "WoRMS": "Iris",
+     "IUCN": "Iris",
+     "PaleoBioDB": "Iris",
+     "iNaturalist": "Iris",
+     "IRMNG": "Iris",
+     "World Flora Online": "Iris",
+     "TAXREF": "Iris",
+     "Flora of Brazil": "Iris"
+    },
+    "spelling_suggestion": null
+   },
+   "agreement": "agree",
+   "ipni_publication": [
+    {
+     "ipni_id": "326330-2",
+     "name": "Iris L.",
+     "year": 1753,
+     "page": 38,
+     "status": "tax. nov.",
+     "rank": "gen.",
+     "family": "Iridaceae",
+     "publication_issued": "1 May 1753",
+     "publication_remarks": "For 2 volumes, the date of publication established as 1 May, 1753 [BHL_title_id:669] [BHL_page_id:33355180]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
+  },
   "Iris collettii": {
    "scientific_name": "Iris collettii",
    "wfo": {
@@ -33840,6 +35656,75 @@
      "family": "Iridaceae",
      "publication_issued": "Vol. 1+, 1991+",
      "publication_remarks": "[BHL_title_id:744]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
+  },
+  "Iris oxypetala": {
+   "scientific_name": "Iris oxypetala",
+   "wfo": {
+    "accepted_id": "wfo-0000790813",
+    "accepted_name": "Iris oxypetala Bunge",
+    "accepted_name_without_authors": "Iris oxypetala",
+    "family": "Iridaceae",
+    "rank": "species",
+    "rule": "only accepted",
+    "reason": null,
+    "via": {
+     "id": "wfo-0000790813",
+     "name": "Iris oxypetala Bunge",
+     "role": "accepted"
+    }
+   },
+   "wcvp": {
+    "accepted_id": "329378",
+    "accepted_name": "Iris oxypetala Bunge",
+    "accepted_name_without_authors": "Iris oxypetala",
+    "family": "Iridaceae",
+    "rank": "species",
+    "rule": "only accepted",
+    "reason": null,
+    "via": {
+     "id": "329378",
+     "name": "Iris oxypetala Bunge",
+     "status": "Accepted"
+    }
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": null,
+    "accepted_name_without_authors": null,
+    "family": null,
+    "rank": null,
+    "rule": null,
+    "reason": "curated databases disagree",
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 20,
+    "curated_current_names": {
+     "Catalogue of Life": "Iris oxypetala",
+     "iNaturalist": "Iris oxypetala",
+     "World Flora Online": "Iris oxypetala",
+     "GRIN Plant Taxonomy": "Iris lactea",
+     "TAXREF": "Iris lactea"
+    },
+    "spelling_suggestion": null
+   },
+   "agreement": "agree",
+   "ipni_publication": [
+    {
+     "ipni_id": "77080011-1",
+     "name": "Iris oxypetala Bunge",
+     "year": 1833,
+     "page": null,
+     "status": "tax. nov.",
+     "rank": "spec.",
+     "family": "Iridaceae",
+     "publication_issued": "Mar 1833",
+     "publication_remarks": "Preprint from: Mém. Acad. Imp. Sci. St.-Pétersbourg Divers Savans 2: 75-148. 1835 [BHL_page_id:33120539] [BHL_title_id:41483]",
      "type_specimens": [],
      "author_matches_accepted_name": true
     }
@@ -34477,7 +36362,34 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "155624-3",
+     "name": "Bassia L.",
+     "year": 1771,
+     "page": null,
+     "status": "tax. nov.",
+     "rank": "gen.",
+     "family": "Sapotaceae",
+     "publication_issued": null,
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "30025657-2",
+     "name": "Bassia All.",
+     "year": 1766,
+     "page": 177,
+     "status": "tax. nov.",
+     "rank": "gen.",
+     "family": "Chenopodiaceae",
+     "publication_issued": "Vols. 2-5, 1760-1773. [Volumation on half-titles only]",
+     "publication_remarks": "Half-titles read: Miscellanea Taurinensia. [BHL_title_id:7920]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Kochia prostrata": {
    "scientific_name": "Kochia prostrata",
@@ -34532,7 +36444,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "60447623-2",
+     "name": "Bassia prostrata (L.) Beck",
+     "year": 1909,
+     "page": 155,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Chenopodiaceae",
+     "publication_issued": "25 volumes - see TL 2 for details of publication and authors",
+     "publication_remarks": "[BHL_title_id:6353] [BHL_page_id:33190145]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Kochia scoparia": {
    "scientific_name": "Kochia scoparia",
@@ -36355,7 +38281,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77146159-1",
+     "name": "Conioselinum anthriscoides (H.Boissieu) Pimenov & Kljuykov",
+     "year": 2015,
+     "page": 33,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Apiaceae",
+     "publication_issued": "Vol. 1+, 2013+",
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Ligusticum striatum": {
    "scientific_name": "Ligusticum striatum",
@@ -36408,7 +38348,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "20000760-1",
+     "name": "Oreocome striata (DC.) Pimenov & Kljuykov",
+     "year": 2001,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Apiaceae",
+     "publication_issued": "Vol. 1(2)+, 1953+; Beiheft 1+, 1963+",
+     "publication_remarks": "Available online (1996+) at: https://bioone.org/journals/willdenowia/issues",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Ligustrum lucidum": {
    "scientific_name": "Ligustrum lucidum",
@@ -37546,7 +39500,21 @@
     "spelling_suggestion": null
    },
    "agreement": "disagree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "17358330-1",
+     "name": "Spicantopsis niponica (Kunze) Nakai",
+     "year": 1933,
+     "page": 181,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Blechnaceae",
+     "publication_issued": "Vol. 1-105, 1887-1992",
+     "publication_remarks": "Internet Link: https://www.jstage.jst.go.jp/browse/jplantres1887/6/0/_contents [BHL_title_id:63894]",
+     "type_specimens": [],
+     "author_matches_accepted_name": false
+    }
+   ]
   },
   "Lonicera japonica": {
    "scientific_name": "Lonicera japonica",
@@ -38777,7 +40745,21 @@
     "spelling_suggestion": null
    },
    "agreement": "only WFO",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "554759-1",
+     "name": "Magnolia liliiflora Desr.",
+     "year": 1792,
+     "page": 675,
+     "status": "tax. nov.",
+     "rank": "spec.",
+     "family": "Magnoliaceae",
+     "publication_issued": "vols. 1-8, 1783-1808; suppls. 1-5, 1810-1817",
+     "publication_remarks": "Volumes 5-8 and the Supplements are by J.L.M.Poiret who should be cited as the author [BHL_title_id:824] [BHL_page_id:33068974]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Magnolia obovata": {
    "scientific_name": "Magnolia obovata",
@@ -39319,7 +41301,34 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "131078-1",
+     "name": "Cochemiea pondii Walton",
+     "year": null,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Cactaceae",
+     "publication_issued": null,
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "62440-2",
+     "name": "Cochemiea pondii Walton",
+     "year": 1899,
+     "page": 51,
+     "status": "tax. nov.",
+     "rank": "spec.",
+     "family": "Cactaceae",
+     "publication_issued": "Vol. 1-2, 1898-1900",
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Melanthium cochinchinense": {
    "scientific_name": "Melanthium cochinchinense",
@@ -39534,7 +41543,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77148068-1",
+     "name": "Merremia martini (H.Lév.) Staples & A.R.Simões",
+     "year": 2015,
+     "page": 222,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Convolvulaceae",
+     "publication_issued": "Vol. 1+, 1933+",
+     "publication_remarks": "From volume 95(1) publ. in 2013 online only at http://www.phytologia.org [BHL_title_id:12678]",
+     "type_specimens": [],
+     "author_matches_accepted_name": false
+    }
+   ]
   },
   "Merremia sibirica": {
    "scientific_name": "Merremia sibirica",
@@ -39655,7 +41678,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "496584-1",
+     "name": "Gleditsia fera Merr.",
+     "year": 1918,
+     "page": 141,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Leguminosae",
+     "publication_issued": "Vols. 2-13, 1907-1918",
+     "publication_remarks": "Preceded and superseded by: Philipp. J. Sci. (ID: 772) [BHL_title_id:69]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Morinda officinalis": {
    "scientific_name": "Morinda officinalis",
@@ -39709,7 +41746,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77117592-1",
+     "name": "Gynochthodes officinalis (F.C.How) Razafim. & B.Bremer",
+     "year": 2011,
+     "page": 293,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Rubiaceae",
+     "publication_issued": "Vols. 2-12, (1861/62-1876/79) 1862-79; n.s./ser. 2, vols. 1-20, 1961-1981; ser. 3, vol. 19(1)+, 1997+",
+     "publication_remarks": "For vols. 1-12, see TL2 for for detail on volumes, pagination and dates of publication. Vols. for 1961-1969 called nouv. sér. in continuation of: Notulae systematicae; vols. for 1970-1981 called also: sér. 2. n.s/ser. 2 & Ser. 3 issued by: Muséum national d’histoire naturelle. [BHL_page_id:33120228] [BHL_title_id:600] New series available at: https://www.biodiversitylibrary.org/bibliography/169110",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Morinda umbellata": {
    "scientific_name": "Morinda umbellata",
@@ -39765,7 +41816,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77117618-1",
+     "name": "Gynochthodes umbellata (L.) Razafim. & B.Bremer",
+     "year": 2011,
+     "page": 296,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Rubiaceae",
+     "publication_issued": "Vols. 2-12, (1861/62-1876/79) 1862-79; n.s./ser. 2, vols. 1-20, 1961-1981; ser. 3, vol. 19(1)+, 1997+",
+     "publication_remarks": "For vols. 1-12, see TL2 for for detail on volumes, pagination and dates of publication. Vols. for 1961-1969 called nouv. sér. in continuation of: Notulae systematicae; vols. for 1970-1981 called also: sér. 2. n.s/ser. 2 & Ser. 3 issued by: Muséum national d’histoire naturelle. [BHL_page_id:33120228] [BHL_title_id:600] New series available at: https://www.biodiversitylibrary.org/bibliography/169110",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Mosla dianthera": {
    "scientific_name": "Mosla dianthera",
@@ -40318,7 +42383,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77091718-1",
+     "name": "Hansenia forbesii (H.Boissieu) Pimenov & Kljuykov",
+     "year": 2008,
+     "page": 163,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Apiaceae",
+     "publication_issued": "Vol. 1(2)+, 1953+; Beiheft 1+, 1963+",
+     "publication_remarks": "Available online (1996+) at: https://bioone.org/journals/willdenowia/issues",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Notopterygium franchetii": {
    "scientific_name": "Notopterygium franchetii",
@@ -40371,7 +42450,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77091718-1",
+     "name": "Hansenia forbesii (H.Boissieu) Pimenov & Kljuykov",
+     "year": 2008,
+     "page": 163,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Apiaceae",
+     "publication_issued": "Vol. 1(2)+, 1953+; Beiheft 1+, 1963+",
+     "publication_remarks": "Available online (1996+) at: https://bioone.org/journals/willdenowia/issues",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Notopterygium incisum": {
    "scientific_name": "Notopterygium incisum",
@@ -40749,6 +42842,61 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
+   "ipni_publication": [
+    {
+     "ipni_id": "77188571-1",
+     "name": "Osmanthus fragrans var. aurantiacus Makino",
+     "year": 1902,
+     "page": 32,
+     "status": "tax. nov.",
+     "rank": "var.",
+     "family": "Oleaceae",
+     "publication_issued": "Vol. 1-105, 1887-1992",
+     "publication_remarks": "Internet Link: https://www.jstage.jst.go.jp/browse/jplantres1887/6/0/_contents [BHL_title_id:63894]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
+  },
+  "Onoclea germanica": {
+   "scientific_name": "Onoclea germanica",
+   "wfo": {
+    "accepted_id": null,
+    "accepted_name": null,
+    "accepted_name_without_authors": null,
+    "family": null,
+    "rank": null,
+    "rule": null,
+    "reason": "not in WFO",
+    "via": null
+   },
+   "wcvp": {
+    "accepted_id": null,
+    "accepted_name": null,
+    "accepted_name_without_authors": null,
+    "family": null,
+    "rank": null,
+    "rule": null,
+    "reason": "not in WCVP",
+    "via": null
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": null,
+    "accepted_name_without_authors": null,
+    "family": null,
+    "rank": null,
+    "rule": null,
+    "reason": "fewer than two curated databases",
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 3,
+    "curated_current_names": {},
+    "spelling_suggestion": null
+   },
+   "agreement": "neither",
    "ipni_publication": []
   },
   "Onoclea orientalis": {
@@ -40801,7 +42949,34 @@
     "spelling_suggestion": null
    },
    "agreement": "disagree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "17344450-1",
+     "name": "Pentarhizidium orientale (Hook.) Hayata",
+     "year": 1928,
+     "page": 345,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Woodsiaceae",
+     "publication_issued": "Vol. 1-105, 1887-1992",
+     "publication_remarks": "Internet Link: https://www.jstage.jst.go.jp/browse/jplantres1887/6/0/_contents [BHL_title_id:63894]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "60473292-2",
+     "name": "Pentarhizidium orientale Hayata",
+     "year": 1927,
+     "page": null,
+     "status": "tax. nov.",
+     "rank": "spec.",
+     "family": "Woodsiaceae",
+     "publication_issued": "Vol. 1-105, 1887-1992",
+     "publication_remarks": "Internet Link: https://www.jstage.jst.go.jp/browse/jplantres1887/6/0/_contents [BHL_title_id:63894]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Onychostoma barbatulum": {
    "scientific_name": "Onychostoma barbatulum",
@@ -41257,7 +43432,28 @@
     "spelling_suggestion": null
    },
    "agreement": "disagree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "758395-1",
+     "name": "Ophiorrhiza cantoniensis Hance",
+     "year": 1862,
+     "page": 222,
+     "status": "tax. nov.",
+     "rank": "spec.",
+     "family": "Rubiaceae",
+     "publication_issued": "Sér. 2, vols. 1–20, 1834–43; sér. 3, vols. 1–20, 1844–53; sér. 4, vols. 1–20, 1854–63 (see 'Remarks' below) ; sér. 5, vols. 1–20, 1864–74; sér. 6, vols. 1–20, 1875–84; sér. 7, vols. 1–20, 1885–94; sér. 8, vols. 1–20, 1895–1904; sér. 9, vols. 1–20, 1905–17; sér. 10, vols. 1–?, 1919–?; sér. 11, vols. 1–20, ?–1959.",
+     "publication_remarks": "Note: the publication date of sér. 4, 18 (Cahier 4): 217-238, was published from 1863 onwards (see D.J.N.Hind et al. in Bot. Mag. 41: 111-129. 2024 (doi:10.1111/curt.12567) et a. . Series 2-9 in BHL [BHL_title_id:5010]",
+     "type_specimens": [
+      {
+       "status": null,
+       "institution_code": null,
+       "catalog_number": null,
+       "collector": "G. T. Sampson"
+      }
+     ],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Orbea variegata": {
    "scientific_name": "Orbea variegata",
@@ -41951,6 +44147,145 @@
     }
    ]
   },
+  "Paliurus": {
+   "scientific_name": "Paliurus",
+   "wfo": {
+    "accepted_id": "wfo-4000027794",
+    "accepted_name": "Paliurus Mill.",
+    "accepted_name_without_authors": "Paliurus",
+    "family": "Rhamnaceae",
+    "rank": "genus",
+    "rule": "accepted",
+    "reason": null,
+    "via": {
+     "id": "wfo-4000027794",
+     "name": "Paliurus Mill.",
+     "role": "accepted"
+    }
+   },
+   "wcvp": {
+    "accepted_id": "2544126",
+    "accepted_name": "Paliurus Mill.",
+    "accepted_name_without_authors": "Paliurus",
+    "family": "Rhamnaceae",
+    "rank": "genus",
+    "rule": "accepted",
+    "reason": null,
+    "via": {
+     "id": "2544126",
+     "name": "Paliurus Mill.",
+     "status": "Accepted"
+    }
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": "Paliurus",
+    "accepted_name_without_authors": "Paliurus",
+    "family": null,
+    "rank": null,
+    "rule": "global names",
+    "reason": null,
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 29,
+    "curated_current_names": {
+     "Catalogue of Life": "Paliurus",
+     "ITIS": "Paliurus",
+     "WoRMS": "Paliurus",
+     "IUCN": "Paliurus",
+     "PaleoBioDB": "Paliurus",
+     "iNaturalist": "Paliurus",
+     "IRMNG": "Paliurus",
+     "World Flora Online": "Paliurus",
+     "TAXREF": "Paliurus"
+    },
+    "spelling_suggestion": null
+   },
+   "agreement": "agree",
+   "ipni_publication": [
+    {
+     "ipni_id": "33494-1",
+     "name": "Paliurus Mill.",
+     "year": 1754,
+     "page": null,
+     "status": "tax. nov.",
+     "rank": "gen.",
+     "family": "Rhamnaceae",
+     "publication_issued": "3 volumes, 28 Jan 1754",
+     "publication_remarks": "Available online at: http://books.google.com/books?id=4QE2AAAAMAAJ&printsec=frontcover#v=onepage&q&f=false (vol. 1); http://books.google.com/books?id=C1wZAAAAYAAJ&printsec=frontcover#v=onepage&q&f=false (vol. 2); http://books.google.com/books?id=8AQ2AAAAMAAJ&printsec=frontcover#v=onepage&q&f=false (vol. 3) [BHL_title_id:79061] [BHL_page_id:33355585] Note: See Art. 23.7 ICN (2025) Ex. 19 re. phrase names (not validly published).",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
+  },
+  "Paliurus aubletia": {
+   "scientific_name": "Paliurus aubletia",
+   "wfo": {
+    "accepted_id": "wfo-0001131369",
+    "accepted_name": "Paliurus ramosissimus Poir.",
+    "accepted_name_without_authors": "Paliurus ramosissimus",
+    "family": "Rhamnaceae",
+    "rank": "species",
+    "rule": "synonym",
+    "reason": null,
+    "via": {
+     "id": "wfo-0001131370",
+     "name": "Paliurus aubletia Roem. & Schult.",
+     "role": "synonym"
+    }
+   },
+   "wcvp": {
+    "accepted_id": "2544151",
+    "accepted_name": "Paliurus ramosissimus (Lour.) Poir.",
+    "accepted_name_without_authors": "Paliurus ramosissimus",
+    "family": "Rhamnaceae",
+    "rank": "species",
+    "rule": "synonym",
+    "reason": null,
+    "via": {
+     "id": "2544129",
+     "name": "Paliurus aubletia Schult.",
+     "status": "Illegitimate"
+    }
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": "Paliurus ramosissimus",
+    "accepted_name_without_authors": "Paliurus ramosissimus",
+    "family": null,
+    "rank": "species",
+    "rule": "global names",
+    "reason": null,
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 14,
+    "curated_current_names": {
+     "Catalogue of Life": "Paliurus ramosissimus",
+     "World Flora Online": "Paliurus ramosissimus"
+    },
+    "spelling_suggestion": null
+   },
+   "agreement": "agree",
+   "ipni_publication": [
+    {
+     "ipni_id": "717703-1",
+     "name": "Paliurus ramosissimus Poir.",
+     "year": 1816,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Rhamnaceae",
+     "publication_issued": "Pages 1-368, 29 Jun 1816; 369-731, 14 Dec 1816",
+     "publication_remarks": "[BHL_title_id:826] [BHL_page_id:33068974]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
+  },
   "Paliurus ramosissimus": {
    "scientific_name": "Paliurus ramosissimus",
    "wfo": {
@@ -42159,7 +44494,21 @@
     ]
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "90417-1",
+     "name": "Eleutherococcus divaricatus (Siebold & Zucc.) S.Y.Hu",
+     "year": 1980,
+     "page": 109,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Araliaceae",
+     "publication_issued": "Vol. 1-71, 1920-1990",
+     "publication_remarks": "Incorporated in: Harvard Papers in Botany [BHL_title_id:480]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Panax ginseng": {
    "scientific_name": "Panax ginseng",
@@ -42450,7 +44799,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "977795-1",
+     "name": "Urceola huaitingii (Chun & Tsiang) D.J.Middleton",
+     "year": 1994,
+     "page": 151,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Apocynaceae",
+     "publication_issued": "Vol. 1+, 1991+",
+     "publication_remarks": "[BHL_title_id:744]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Paris": {
    "scientific_name": "Paris",
@@ -43857,6 +46220,73 @@
     }
    ]
   },
+  "Peucedanum decursivum": {
+   "scientific_name": "Peucedanum decursivum",
+   "wfo": {
+    "accepted_id": "wfo-0000536162",
+    "accepted_name": "Angelica decursiva (Miq.) Franch. & Sav.",
+    "accepted_name_without_authors": "Angelica decursiva",
+    "family": "Apiaceae",
+    "rank": "species",
+    "rule": "synonym",
+    "reason": null,
+    "via": {
+     "id": "wfo-0000391348",
+     "name": "Peucedanum decursivum (Miq.) Maxim.",
+     "role": "synonym"
+    }
+   },
+   "wcvp": {
+    "accepted_id": "2639051",
+    "accepted_name": "Angelica decursiva (Miq.) Franch. & Sav.",
+    "accepted_name_without_authors": "Angelica decursiva",
+    "family": "Apiaceae",
+    "rank": "species",
+    "rule": "synonym",
+    "reason": null,
+    "via": {
+     "id": "2403064",
+     "name": "Peucedanum decursivum (Miq.) Maxim.",
+     "status": "Synonym"
+    }
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": "Angelica decursiva",
+    "accepted_name_without_authors": "Angelica decursiva",
+    "family": null,
+    "rank": "species",
+    "rule": "global names",
+    "reason": null,
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 17,
+    "curated_current_names": {
+     "Catalogue of Life": "Angelica decursiva",
+     "GRIN Plant Taxonomy": "Angelica decursiva",
+     "World Flora Online": "Angelica decursiva"
+    },
+    "spelling_suggestion": null
+   },
+   "agreement": "agree",
+   "ipni_publication": [
+    {
+     "ipni_id": "837599-1",
+     "name": "Angelica decursiva Franch. & Sav.",
+     "year": 1873,
+     "page": 187,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Apiaceae",
+     "publication_issued": "Vol. 1, pt. 1 (p. 1-192), 1873; Vol. 1, pt. 2 (p. 193-485), 1875; Vol. 2, pt. 1 (p. 1-256), 1877; Vol. 2, pt. 2 (p. 257-624), 1878; Vol. 2, pt. 3 (p. 625-789), 1879",
+     "publication_remarks": "Vol. 1: http://books.google.co.in/books?id=WYFIAAAAYAAJ&printsec=frontcover#v=onepage&q&f=false ; Vol. 2: http://books.google.com/books?id=0QMYAAAAYAAJ&printsec=frontcover#v=onepage&q&f=false [BHL_title_id:75] [BHL_page_id:33121000]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
+  },
   "Peucedanum japonicum": {
    "scientific_name": "Peucedanum japonicum",
    "wfo": {
@@ -44069,7 +46499,21 @@
     ]
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "942884-1",
+     "name": "Kitagawia terebinthacea (Fisch. ex Trevir.) Pimenov",
+     "year": 1986,
+     "page": 944,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Apiaceae",
+     "publication_issued": "Vol. 33+, 1948+",
+     "publication_remarks": "Preceded by: Bot. Zhurn. SSSR (ID: 1560)",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Peucedanum wawrae": {
    "scientific_name": "Peucedanum wawrae",
@@ -44439,7 +46883,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "947678-1",
+     "name": "Phlomoides umbrosa (Turcz.) Kamelin & Makhm.",
+     "year": 1990,
+     "page": 242,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Lamiaceae",
+     "publication_issued": "Vol. 33+, 1948+",
+     "publication_remarks": "Preceded by: Bot. Zhurn. SSSR (ID: 1560)",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Phlomoides betonicoides": {
    "scientific_name": "Phlomoides betonicoides",
@@ -44758,7 +47216,21 @@
     ]
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "814247-1",
+     "name": "Alkekengi officinarum Moench",
+     "year": 1802,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Solanaceae",
+     "publication_issued": "2 May 1802",
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Phytolacca": {
    "scientific_name": "Phytolacca",
@@ -46362,7 +48834,21 @@
     "spelling_suggestion": null
    },
    "agreement": "disagree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "691270-1",
+     "name": "Polygala comosa Schkuhr",
+     "year": 1796,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Polygalaceae",
+     "publication_issued": "3 volumes: 1, 1787-1791; 2, 1796; 3, Jan-May 1802 --¹see TL2 for further details of dates of publication",
+     "publication_remarks": "[BHL_page_id:33333323]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Polygala sibirica": {
    "scientific_name": "Polygala sibirica",
@@ -46633,7 +49119,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77188929-1",
+     "name": "Polygonatum odoratum var. thunbergii (C.Morren & Decne.) H.Hara",
+     "year": 1943,
+     "page": 98,
+     "status": "comb. nov.",
+     "rank": "var.",
+     "family": "Convallariaceae",
+     "publication_issued": "Vol. 1+, 1916+",
+     "publication_remarks": "Internet Link: http://www.jjbotany.com/",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Polygonatum macropodum": {
    "scientific_name": "Polygonatum macropodum",
@@ -47055,7 +49555,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77069479-1",
+     "name": "Persicaria hydropiper (L.) Delarbre",
+     "year": 1800,
+     "page": 518,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Polygonaceae",
+     "publication_issued": null,
+     "publication_remarks": "[BHL_page_id:33120743] [BHL_title_id:124973]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Polygonum tinctorium": {
    "scientific_name": "Polygonum tinctorium",
@@ -47109,7 +49623,129 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "60455323-2",
+     "name": "Persicaria tinctoria H.Gross",
+     "year": 1913,
+     "page": 321,
+     "status": "nom. nov.",
+     "rank": "spec.",
+     "family": "Polygonaceae",
+     "publication_issued": "Vol. 1-127, 1881-2009",
+     "publication_remarks": "Date of publication of volumes 1-25 published in vol. 26(3-4, Beibl. 61): 5-8 (1899). Vols 1-58 (1881-1923) available via BHL. Vols 124-127 (2002-2009) available online at: https://www.schweizerbart.de/papers/pde/volumes [BHL_title_id:60]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "695176-1",
+     "name": "Persicaria tinctoria (Ait.) H.Gross",
+     "year": 1919,
+     "page": 114,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Polygonaceae",
+     "publication_issued": "Vols. 18–62, 1905–44",
+     "publication_remarks": "[BHL_title_id:4893]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
+  },
+  "Polypodium barometz": {
+   "scientific_name": "Polypodium barometz",
+   "wfo": {
+    "accepted_id": "wfo-0000748037",
+    "accepted_name": "Cibotium barometz (L.) J.Sm.",
+    "accepted_name_without_authors": "Cibotium barometz",
+    "family": "Cibotiaceae",
+    "rank": "species",
+    "rule": "synonym",
+    "reason": null,
+    "via": {
+     "id": "wfo-0000748034",
+     "name": "Polypodium barometz L.",
+     "role": "synonym"
+    }
+   },
+   "wcvp": {
+    "accepted_id": "2902160",
+    "accepted_name": "Cibotium barometz (L.) J.Sm.",
+    "accepted_name_without_authors": "Cibotium barometz",
+    "family": "Cyatheaceae",
+    "rank": "species",
+    "rule": "synonym",
+    "reason": null,
+    "via": {
+     "id": "2902153",
+     "name": "Polypodium barometz L.",
+     "status": "Synonym"
+    }
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": null,
+    "accepted_name_without_authors": null,
+    "family": null,
+    "rank": null,
+    "rule": null,
+    "reason": "curated databases disagree",
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 18,
+    "curated_current_names": {
+     "Catalogue of Life": "Cibotium barometz",
+     "PaleoBioDB": "Polypodium barometz",
+     "GRIN Plant Taxonomy": "Cibotium barometz",
+     "IUCN": "Cibotium barometz",
+     "World Flora Online": "Cibotium barometz"
+    },
+    "spelling_suggestion": null
+   },
+   "agreement": "agree",
+   "ipni_publication": [
+    {
+     "ipni_id": "1160435-2",
+     "name": "Cibotium barometz (L.) J.Sm.",
+     "year": 1842,
+     "page": 437,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Dicksoniaceae",
+     "publication_issued": "Vols. 1-7, 1842-1848",
+     "publication_remarks": "New series of J. Bot. (Hooker); INTERNET LINK: http://nrs.harvard.edu/urn-3:HUL.FIG:003800430 [BHL_title_id:235]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "17069410-1",
+     "name": "Cibotium barometz (L.) J.Sm.",
+     "year": 1842,
+     "page": 437,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Dicksoniaceae",
+     "publication_issued": "Vols. 1-7, 1842-1848",
+     "publication_remarks": "New series of J. Bot. (Hooker); INTERNET LINK: http://nrs.harvard.edu/urn-3:HUL.FIG:003800430 [BHL_title_id:235]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "17267950-1",
+     "name": "Cibotium barometz (L.) J.Sm.",
+     "year": null,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Dicksoniaceae",
+     "publication_issued": null,
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Polypodium lingua": {
    "scientific_name": "Polypodium lingua",
@@ -47262,7 +49898,21 @@
     ]
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "772087-1",
+     "name": "Citrus trifoliata L.",
+     "year": 1763,
+     "page": 1101,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Rutaceae",
+     "publication_issued": "September 1762; August 1763",
+     "publication_remarks": "[BHL_title_id:11179] [BHL_page_id:33355180]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Portulaca oleracea": {
    "scientific_name": "Portulaca oleracea",
@@ -47721,7 +50371,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "884102-1",
+     "name": "Prunella vulgaris subsp. hispida (Benth.) Hultén",
+     "year": 1971,
+     "page": 366,
+     "status": "unknown",
+     "rank": "subsp.",
+     "family": "Lamiaceae",
+     "publication_issued": "Ny fjöld (new ser.) vols. 39-63(13) publ. 1905-1924; tredje ser. (Ser. 3), vols 1-25(5) publ. 1924-1948; fjärde ser. (Ser. 4), 1-?13(1) publ. 1949-?1971",
+     "publication_remarks": "Not a BPH abbreviation but this variation occurs between the dates above. [BHL_title_id:50688]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Prunella vulgaris": {
    "scientific_name": "Prunella vulgaris",
@@ -48205,7 +50869,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "967441-1",
+     "name": "Pueraria montana var. lobata (Willd.) Maesen & S.M.Almeida ex Sanjappa & Predeep",
+     "year": 1992,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "var.",
+     "family": "Leguminosae",
+     "publication_issued": null,
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Pueraria montana": {
    "scientific_name": "Pueraria montana",
@@ -48333,7 +51011,21 @@
     ]
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "20008484-1",
+     "name": "Pueraria montana var. thomsonii (Benth.) M.R.Almeida",
+     "year": 1998,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "var.",
+     "family": "Leguminosae",
+     "publication_issued": "1996 - 2014 (6 vols.)",
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Pulsatilla": {
    "scientific_name": "Pulsatilla",
@@ -49785,7 +52477,21 @@
     "spelling_suggestion": null
    },
    "agreement": "disagree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "230317-1",
+     "name": "Leuzea uniflora (L.) Holub",
+     "year": 1973,
+     "page": 392,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Asteraceae",
+     "publication_issued": "Vol. 2–32, 1967–97",
+     "publication_remarks": "Available online at: https://www.jstor.org/journal/foligeobphyt",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Rheum acuminatum": {
    "scientific_name": "Rheum acuminatum",
@@ -51966,7 +54672,21 @@
     ]
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "676859-1",
+     "name": "Juniperus saltuaria Rehder & E.H.Wilson",
+     "year": 1914,
+     "page": 61,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Cupressaceae",
+     "publication_issued": "Vol. 1(1), p. 1-144, 31 Jul 1911; 1(2), p. 145-312, 30 Apr 1912; 1(3), p. [i]-x, 313-611, 15 May 1913. Vol. 2(1), p. 1-262, 24 Mar 1914; 2(2), p. 263-422, 28 Dec 1915; 2(3), p. [i]-vi, 423-661, 30 Mar 1916. Vol. 3(1), p;. 1-188, 8 May 1916; 3(2), p. 189-420, 31 Aug 1916; 3(3), p. [i]-x, 421-666, 31 Jan 1917",
+     "publication_remarks": "[BHL_title_id:191] [BHL_page_id:33333157]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Salix babylonica": {
    "scientific_name": "Salix babylonica",
@@ -53075,7 +55795,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77138745-1",
+     "name": "Sambucus javanica subsp. chinensis (Lindl.) Fukuoka",
+     "year": 1987,
+     "page": 308,
+     "status": "comb. nov.",
+     "rank": "subsp.",
+     "family": "Caprifoliaceae",
+     "publication_issued": "Vol. 1+, 1932+",
+     "publication_remarks": "Available online: https://www.jstage.jst.go.jp/browse/apg/74/0/_contents/-char/en",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Sambucus javanica": {
    "scientific_name": "Sambucus javanica",
@@ -53682,7 +56416,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "452775-1",
+     "name": "Nepeta tenuifolia Benth.",
+     "year": 1834,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Lamiaceae",
+     "publication_issued": "Fasc. 1, p. [i]-60, Aug 1832; fasc. 2, p. 61-188, Jun 1833; fasc. 3, p. 189-323, Jul 1833; fasc. 4, p. 323bis-446, May 1834; fasc. 5, p. 447-556, Jul 1834; fasc. 6, p. 567-645, Aug 1834; fasc. 7, p. 645bis-783, Apr 1835; fasc. 8, p. [i]-lxviii, table, 1836 [Feb]",
+     "publication_remarks": "[BHL_page_id:33120305] [BHL_title_id:73979]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Schizophyllum commune": {
    "scientific_name": "Schizophyllum commune",
@@ -54882,7 +57630,34 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "1072674-2",
+     "name": "Bacopa monnieri (L.) Wettst.",
+     "year": 1891,
+     "page": 77,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Scrophulariaceae",
+     "publication_issued": "1887-1915; Teil I. abt. 1, 1897; abt. 1*, 1907; abt. 1**, 1900; abt, 1a, 1900; abt. 1b, 1896; abt. 2, 1897; abt. 3, 1909; abt. 4 1902; Teil II, abt. 1, 1889; abt. 2, 1887; abt. 3, 1889; abt. 4, 1888; abt. 5, 1888; abt. 6, 1889; Teil III. 1. hälfte, 1894; abt. 1, 1889; abt. 1a, 1893; abt. 1b, 1889; abt. 2, 1891; abt. 2a, 1891; abt. 3. 1894. [2. hälfte, 1898-: abt. 4, 1896; abt. 5, 1896; abt. 6, 1895; abt. 6a, 1894; abt. 7, 1893; abt. 8, 1898; Teil IV, abt. 1, 1891; abt. 2, 1895; abt. 3a, 1897; abt. 3b, 1895; abt. 4, 1891; abt. 5, 1894.",
+     "publication_remarks": "[BHL_page_id:33120895] The work is divided into 4 sections (Teile) which are subdivided into Abteilungen. In the table of contents the families are arranged under 4 main divisions (4 [Haupt]abteilungen): I. Myxothallophyta (Myxomycetes); II. Euthallophyta; III. Embryophyta asiphonogama; IV.Embroyophyta siphonogama. [BHL_title_id:4635]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "799534-1",
+     "name": "Bacopa monnieri (L.) Wettst.",
+     "year": null,
+     "page": null,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Scrophulariaceae",
+     "publication_issued": "1887-1915; Teil I. abt. 1, 1897; abt. 1*, 1907; abt. 1**, 1900; abt, 1a, 1900; abt. 1b, 1896; abt. 2, 1897; abt. 3, 1909; abt. 4 1902; Teil II, abt. 1, 1889; abt. 2, 1887; abt. 3, 1889; abt. 4, 1888; abt. 5, 1888; abt. 6, 1889; Teil III. 1. hälfte, 1894; abt. 1, 1889; abt. 1a, 1893; abt. 1b, 1889; abt. 2, 1891; abt. 2a, 1891; abt. 3. 1894. [2. hälfte, 1898-: abt. 4, 1896; abt. 5, 1896; abt. 6, 1895; abt. 6a, 1894; abt. 7, 1893; abt. 8, 1898; Teil IV, abt. 1, 1891; abt. 2, 1895; abt. 3a, 1897; abt. 3b, 1895; abt. 4, 1891; abt. 5, 1894.",
+     "publication_remarks": "[BHL_page_id:33120895] The work is divided into 4 sections (Teile) which are subdivided into Abteilungen. In the table of contents the families are arranged under 4 main divisions (4 [Haupt]abteilungen): I. Myxothallophyta (Myxomycetes); II. Euthallophyta; III. Embryophyta asiphonogama; IV.Embroyophyta siphonogama. [BHL_title_id:4635]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Seriphidium terrae-albae": {
    "scientific_name": "Seriphidium terrae-albae",
@@ -55799,7 +58574,34 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "107591-1",
+     "name": "Podophyllum hexandrum Royle",
+     "year": 1834,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Berberidaceae",
+     "publication_issued": "1833-1840: parts 1-11",
+     "publication_remarks": "Bentham authored the legume treatment. [BHL_title_id:449] [BHL_page_id:33190433]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "327192-2",
+     "name": "Podophyllum hexandrum Royle",
+     "year": 1834,
+     "page": null,
+     "status": "tax. nov.",
+     "rank": "spec.",
+     "family": "Berberidaceae",
+     "publication_issued": "1833-1840: parts 1-11",
+     "publication_remarks": "Bentham authored the legume treatment. [BHL_title_id:449] [BHL_page_id:33190433]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Sisymbrium": {
    "scientific_name": "Sisymbrium",
@@ -57240,7 +60042,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77188412-1",
+     "name": "Stachys riederi var. japonica (Miq.) H.Hara",
+     "year": 1937,
+     "page": 144,
+     "status": "comb. nov.",
+     "rank": "var.",
+     "family": "Lamiaceae",
+     "publication_issued": "Vol. 1-105, 1887-1992",
+     "publication_remarks": "Internet Link: https://www.jstage.jst.go.jp/browse/jplantres1887/6/0/_contents [BHL_title_id:63894]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Stachys oblongifolia": {
    "scientific_name": "Stachys oblongifolia",
@@ -57502,7 +60318,21 @@
     ]
    },
    "agreement": "disagree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "230317-1",
+     "name": "Leuzea uniflora (L.) Holub",
+     "year": 1973,
+     "page": 392,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Asteraceae",
+     "publication_issued": "Vol. 2–32, 1967–97",
+     "publication_remarks": "Available online at: https://www.jstor.org/journal/foligeobphyt",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Stenoloma chusanum": {
    "scientific_name": "Stenoloma chusanum",
@@ -57829,7 +60659,21 @@
     "spelling_suggestion": null
    },
    "agreement": "only WFO",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77110313-1",
+     "name": "Spirobassia hirsuta (L.) Freitag & G.Kadereit",
+     "year": 2011,
+     "page": 71,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Chenopodiaceae",
+     "publication_issued": "Vol. 1+, 1951+",
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Syzygium jambos": {
    "scientific_name": "Syzygium jambos",
@@ -59506,7 +62350,34 @@
     "spelling_suggestion": null
    },
    "agreement": "only WFO",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "291904-1",
+     "name": "Ceratosanthes palmata Urb.",
+     "year": 1918,
+     "page": 323,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Cucurbitaceae",
+     "publication_issued": "Vols. 1-51, 1905-1942",
+     "publication_remarks": "Vols. 1-7, 1905-1909, titled Repertorium Novarum Specierum Regni¹Vegetabilis; in vols. 27-31, 1930-1933, and vols. 33 and 37, 1934,¹Centralblatt as Zentralblatt. [BHL_title_id:276]. Post-1922 vols available online at: https://bibdigital.rjb.csic.es/records/item/14772-repertorium-specierum-novarum-regni-vegetabilis-fasciculus-xxxii-1933",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "52543-2",
+     "name": "Ceratosanthes palmata Urb.",
+     "year": 1918,
+     "page": 323,
+     "status": "tax. nov.",
+     "rank": "spec.",
+     "family": "Cucurbitaceae",
+     "publication_issued": "Vols. 1-51, 1905-1942",
+     "publication_remarks": "Vols. 1-7, 1905-1909, titled Repertorium Novarum Specierum Regni¹Vegetabilis; in vols. 27-31, 1930-1933, and vols. 33 and 37, 1934,¹Centralblatt as Zentralblatt. [BHL_title_id:276]. Post-1922 vols available online at: https://bibdigital.rjb.csic.es/records/item/14772-repertorium-specierum-novarum-regni-vegetabilis-fasciculus-xxxii-1933",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Trillidium": {
    "scientific_name": "Trillidium",
@@ -59858,7 +62729,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "530059-1",
+     "name": "Amana edulis (Miq.) Honda",
+     "year": null,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Liliaceae",
+     "publication_issued": null,
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Turczaninovia fastigiata": {
    "scientific_name": "Turczaninovia fastigiata",
@@ -59914,7 +62799,21 @@
     ]
    },
    "agreement": "disagree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "181198-1",
+     "name": "Aster fastigiatus Fisch.",
+     "year": 1812,
+     "page": 74,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Asteraceae",
+     "publication_issued": "Vols. 2-6, 1809-1823; ed. 2, vol. 1, 1811; vols.¹2-4, 1830; ed. 3, vol. 1, 1830",
+     "publication_remarks": "Preceded by: Zapiski Obshchestva Ispytatelei Prirody, Osnovannogo pri¹Imperatorskom Moskovskom Universitete. Superseded by: Nouveaux Mémoires¹de la Société Impériale des Naturalistes de Moscou [BHL_title_id:9525]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Turczaninowia fastigiata": {
    "scientific_name": "Turczaninowia fastigiata",
@@ -59961,7 +62860,21 @@
     "spelling_suggestion": null
    },
    "agreement": "only WFO",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "181198-1",
+     "name": "Aster fastigiatus Fisch.",
+     "year": 1812,
+     "page": 74,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Asteraceae",
+     "publication_issued": "Vols. 2-6, 1809-1823; ed. 2, vol. 1, 1811; vols.¹2-4, 1830; ed. 3, vol. 1, 1830",
+     "publication_remarks": "Preceded by: Zapiski Obshchestva Ispytatelei Prirody, Osnovannogo pri¹Imperatorskom Moskovskom Universitete. Superseded by: Nouveaux Mémoires¹de la Société Impériale des Naturalistes de Moscou [BHL_title_id:9525]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Tussilago": {
    "scientific_name": "Tussilago",
@@ -60372,7 +63285,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "836872-1",
+     "name": "Typha laxmannii Lepech.",
+     "year": 1801,
+     "page": 84,
+     "status": "tax. nov.",
+     "rank": "spec.",
+     "family": "Typhaceae",
+     "publication_issued": "Vols. 1-15, 1787-1806",
+     "publication_remarks": "[BHL_title_id:9519]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Typha davidiana": {
    "scientific_name": "Typha davidiana",
@@ -60977,7 +63904,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77104737-1",
+     "name": "Sauromatum diversifolium (Wall. ex Schott) Cusimano & Hett.",
+     "year": 2010,
+     "page": 445,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Araceae",
+     "publication_issued": "Vol. 1+, 1951+",
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Typhonium blumei": {
    "scientific_name": "Typhonium blumei",
@@ -61112,7 +64053,34 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "167679-3",
+     "name": "Typhonium roxburghii Schott",
+     "year": 1855,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Araceae",
+     "publication_issued": null,
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "89262-1",
+     "name": "Typhonium roxburghii Schott",
+     "year": 1855,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Araceae",
+     "publication_issued": "In six fascicles: 1, 1853; 2, Jan-Jul 1855; 3,¹1855; 4, 1856-1857; 5, 1856-1857; 6, before 15 Aug¹1857",
+     "publication_remarks": "[BHL_page_id:33333446]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Typhonium flagelliforme": {
    "scientific_name": "Typhonium flagelliforme",
@@ -61246,7 +64214,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77104738-1",
+     "name": "Sauromatum giganteum (Engl.) Cusimano & Hett.",
+     "year": 2010,
+     "page": 445,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Araceae",
+     "publication_issued": "Vol. 1+, 1951+",
+     "publication_remarks": null,
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Typhonium omeiense": {
    "scientific_name": "Typhonium omeiense",
@@ -61298,7 +64280,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "88683-1",
+     "name": "Sauromatum horsfieldii Miq.",
+     "year": 1856,
+     "page": 196,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Araceae",
+     "publication_issued": "3 vols., 1855-1859¹vol. 1[1(6 parts)]: 1855-58¹vol. 1[2 (4 parts)]: 1858-1859¹vol. 2(7 parts): 1856-1859¹vol. 3(4 parts): 1855-1859",
+     "publication_remarks": "Alt. title: Flora Indiae Batavae [BHL_title_id:93] [BHL_page_id:33355602]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Ulmus": {
    "scientific_name": "Ulmus",
@@ -62246,7 +65242,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "543531-1",
+     "name": "Veratrum shanense W.W.Sm.",
+     "year": 1911,
+     "page": 75,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Melanthiaceae",
+     "publication_issued": "Vols. 1-30, 1905-1934",
+     "publication_remarks": "From 1935, Proceedings incorporated in: Yearbook of the Royal Asiatic Society of Bengal [BHL_title_id:47024]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Vicia": {
    "scientific_name": "Vicia",
@@ -62441,7 +65451,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77348235-1",
+     "name": "Vincetoxicum bungei (G.Don) Cai F.Zhang & G.W.Hu",
+     "year": 2024,
+     "page": 225,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Asclepiadaceae",
+     "publication_issued": "1+, 2009+",
+     "publication_remarks": "http://www.mapress.com/phytotaxa/index.htm",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Vincetoxicum pycnostelma": {
    "scientific_name": "Vincetoxicum pycnostelma",
@@ -62494,7 +65518,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "77348235-1",
+     "name": "Vincetoxicum bungei (G.Don) Cai F.Zhang & G.W.Hu",
+     "year": 2024,
+     "page": 225,
+     "status": "comb. nov.",
+     "rank": "spec.",
+     "family": "Asclepiadaceae",
+     "publication_issued": "1+, 2009+",
+     "publication_remarks": "http://www.mapress.com/phytotaxa/index.htm",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Viscum": {
    "scientific_name": "Viscum",
@@ -62995,6 +66033,88 @@
     }
    ]
   },
+  "Weigela japonica": {
+   "scientific_name": "Weigela japonica",
+   "wfo": {
+    "accepted_id": "wfo-0001291165",
+    "accepted_name": "Weigela japonica Thunb.",
+    "accepted_name_without_authors": "Weigela japonica",
+    "family": "Caprifoliaceae",
+    "rank": "species",
+    "rule": "accepted",
+    "reason": null,
+    "via": {
+     "id": "wfo-0001291165",
+     "name": "Weigela japonica Thunb.",
+     "role": "accepted"
+    }
+   },
+   "wcvp": {
+    "accepted_id": "2466639",
+    "accepted_name": "Weigela japonica Thunb.",
+    "accepted_name_without_authors": "Weigela japonica",
+    "family": "Caprifoliaceae",
+    "rank": "species",
+    "rule": "accepted",
+    "reason": null,
+    "via": {
+     "id": "2466639",
+     "name": "Weigela japonica Thunb.",
+     "status": "Accepted"
+    }
+   },
+   "global_names": {
+    "accepted_id": null,
+    "accepted_name": "Weigela japonica",
+    "accepted_name_without_authors": "Weigela japonica",
+    "family": null,
+    "rank": "species",
+    "rule": "global names",
+    "reason": null,
+    "via": null
+   },
+   "global_names_view": {
+    "match_type": "Exact",
+    "databases": 23,
+    "curated_current_names": {
+     "Catalogue of Life": "Weigela japonica",
+     "ITIS": "Weigela japonica",
+     "GRIN Plant Taxonomy": "Weigela japonica",
+     "iNaturalist": "Weigela japonica",
+     "World Flora Online": "Weigela japonica"
+    },
+    "spelling_suggestion": null
+   },
+   "agreement": "agree",
+   "ipni_publication": [
+    {
+     "ipni_id": "150042-1",
+     "name": "Weigela japonica Thunb.",
+     "year": 1784,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Caprifoliaceae",
+     "publication_issued": "Aug 1784",
+     "publication_remarks": "Some of the new names in this work were validated in J. A. Murray's¹Syst. Veg. (ed. 14); for such names Thunberg is the author [BHL_title_id:118608] [BHL_page_id:33212359]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    },
+    {
+     "ipni_id": "150043-1",
+     "name": "Weigela japonica Thunb.",
+     "year": null,
+     "page": null,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Caprifoliaceae",
+     "publication_issued": "[Ser. 2], vols. 1-14, 1773-1850; ser. 3, vols. 1-20,¹1851-94; ser. 4, vol. 1+, 1905+",
+     "publication_remarks": "[BHL_title_id:14640]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
+  },
   "Wikstroemia": {
    "scientific_name": "Wikstroemia",
    "wfo": {
@@ -63326,7 +66446,21 @@
     "spelling_suggestion": null
    },
    "agreement": "disagree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "1042290-2",
+     "name": "Wedelia montana (Blume) Boerl.",
+     "year": 1891,
+     "page": 242,
+     "status": "unknown",
+     "rank": "spec.",
+     "family": "Asteraceae",
+     "publication_issued": "Vol. 1, part 1, 2 Jan 1890; part 2, 2 Aug 1890; vol.¹2, part 1, 1 Oct 1891, part 2, Jan 1899; vol. 3,¹part 1, 1 Sep 1900",
+     "publication_remarks": "[BHL_page_id:33120382] [BHL_title_id:289]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Woodwardia japonica": {
    "scientific_name": "Woodwardia japonica",
@@ -63760,7 +66894,21 @@
     "spelling_suggestion": null
    },
    "agreement": "agree",
-   "ipni_publication": []
+   "ipni_publication": [
+    {
+     "ipni_id": "554759-1",
+     "name": "Magnolia liliiflora Desr.",
+     "year": 1792,
+     "page": 675,
+     "status": "tax. nov.",
+     "rank": "spec.",
+     "family": "Magnoliaceae",
+     "publication_issued": "vols. 1-8, 1783-1808; suppls. 1-5, 1810-1817",
+     "publication_remarks": "Volumes 5-8 and the Supplements are by J.L.M.Poiret who should be cited as the author [BHL_title_id:824] [BHL_page_id:33068974]",
+     "type_specimens": [],
+     "author_matches_accepted_name": true
+    }
+   ]
   },
   "Yulania sprengeri": {
    "scientific_name": "Yulania sprengeri",

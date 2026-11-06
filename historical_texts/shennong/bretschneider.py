@@ -241,6 +241,21 @@ def main() -> None:
                           p[2] == slot and p[1] != lab and p[0] >= s - 0.02
                           and len(p[3].split()) >= len(form.split()) for p in pairs)}   # a shorter name inside
                           # his ("ku ts'ao" in "hia ku ts'ao") is no rival
+    # ties a person resolved (review/bretschneider_ties.csv): "match" fixes the entry and slot, "none" removes it
+    ties = HERE / "review" / "bretschneider_ties.csv"
+    if ties.exists():
+        import csv
+        for r in csv.DictReader(open(ties, encoding="utf-8")):
+            lab = r["entry"]
+            if r["decision"] == "none":
+                match.pop(lab, None)
+            elif r["decision"] == "match":
+                slot = (int(r["bretschneider_entry"]), int(r["slot"]))
+                for other in [k for k, m in match.items() if (m["number"], m.get("slot")) == slot and k != lab]:
+                    match.pop(other)                    # the slot belongs to the drug the person chose
+                match[lab] = {"number": slot[0], "slot": slot[1], "score": None, "our_romanisation": None,
+                              "runner_up": None, "ambiguous": False,
+                              "resolved_by": f"tie resolved by a person ({r['by']}): {r['why']}"}
     by_num = {b["number"]: b for b in bret}
     for e in ours:
         m = match.get(e["label"])
@@ -255,7 +270,7 @@ def main() -> None:
         "entries": bret, "matches": match}, ensure_ascii=False, indent=1), encoding="utf-8")
 
     plants = [e for e in ours if e["kind"] not in ("animal", "mineral")]
-    good = [m for m in match.values() if m["score"] >= 0.85]
+    good = [m for m in match.values() if (m["score"] or 1) >= 0.85]
     close = [m for m in match.values() if m["ambiguous"]]
     print(f"Bretschneider: {len(bret)} entries (numbers {bret[0]['number']}-{bret[-1]['number']}), "
           f"{len(pen)} quote the Pen king")

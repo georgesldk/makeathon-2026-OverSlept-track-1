@@ -11577,8 +11577,9 @@ shennong:1.31:c08,Claim,prevents ageing,shennong,magical,prevents,,,internal,不
 shennong:1.31:c09,Claim,wards off hunger,shennong,magical,prevents,,,internal,不飢,Prevents hunger.
 shennong:1.32,Entry,獨活,shennong,,,,,,,
 shennong:1.32:c01,Claim,treats affliction caused by wind-cold attack,shennong,medical,treats,,,internal,主風寒所擊,Mainly treats strike by wind and cold.
-taxon:Angelica biserrata (R.H.Shan & Yuan) C.Q.Yuan & R.H.Shan,Species,Angelica biserrata (R.H.Shan & Yuan) C.Q.Yuan & R.H.Shan,,,,,,,,
 taxon:Angelica decursiva (Miq.) Franch. & Sav.,Species,Angelica decursiva (Miq.) Franch. & Sav.,,,,,,,,
+taxon:Angelica biserrata (R.H.Shan & Yuan) C.Q.Yuan & R.H.Shan,Species,Angelica biserrata (R.H.Shan & Yuan) C.Q.Yuan & R.H.Shan,,,,,,,,
+taxon:Angelica inaequalis Maxim.,Species,Angelica inaequalis Maxim.,,,,,,,,
 taxon:Angelica nitida H.Wolff,Species,Angelica nitida H.Wolff,,,,,,,,
 taxon:Angelica polymorpha Maxim.,Species,Angelica polymorpha Maxim.,,,,,,,,
 taxon:Aralia atropurpurea Franch.,Species,Aralia atropurpurea Franch.,,,,,,,,
@@ -11590,6 +11591,7 @@ taxon:Heracleum hemsleyanum Diels,Species,Heracleum hemsleyanum Diels,,,,,,,,
 taxon:Heracleum stenopterum Diels,Species,Heracleum stenopterum Diels,,,,,,,,
 taxon:Heracleum tiliifolium H.Wolff,Species,Heracleum tiliifolium H.Wolff,,,,,,,,
 taxon:Heracleum yungningense Hand.-Mazz.,Species,Heracleum yungningense Hand.-Mazz.,,,,,,,,
+taxon:Ostericum grossiserratum (Maxim.) Kitag.,Species,Ostericum grossiserratum (Maxim.) Kitag.,,,,,,,,
 shennong:1.32:c02,Claim,treats incised wounds,shennong,medical,treats,,,internal,金瘡,Treats metal wounds.
 shennong:1.32:c03,Claim,relieves pain,shennong,medical,relieves,,,internal,止痛,Stops pain.
 shennong:1.32:c04,Claim,treats running piglet syndrome (surging qi sensations),shennong,medical,treats,,,internal,賁豚,Treats running piglet syndrome.
@@ -12646,6 +12648,7 @@ shennong:2.30:c08,Claim,treats convulsions and spasms due to wind,shennong,medic
 shennong:2.31,Entry,白芷,shennong,,,,,,,
 shennong:2.31:c01,Claim,treats abnormal uterine bleeding and leukorrhea in women,shennong,medical,treats,,,internal,女人漏下赤白,women's red and white vaginal discharge
 taxon:Angelica dahurica (Hoffm.) Benth. & Hook.f. ex Franch. & Sav.,Species,Angelica dahurica (Hoffm.) Benth. & Hook.f. ex Franch. & Sav.,,,,,,,,
+taxon:Angelica anomala Avé-Lall.,Species,Angelica anomala Avé-Lall.,,,,,,,,
 taxon:Ferula olivacea (Diels) H.Wolff ex Hand.-Mazz.,Species,Ferula olivacea (Diels) H.Wolff ex Hand.-Mazz.,,,,,,,,
 shennong:2.31:c02,Claim,treats amenorrhea due to blood blockage,shennong,medical,treats,,,internal,血閉,amenorrhea (blood blockage)
 shennong:2.31:c03,Claim,treats swelling of the female genitalia,shennong,medical,treats,,,internal,陰腫,pudendal swelling
@@ -13631,6 +13634,7 @@ shennong:3.70,Entry,溲疏,shennong,,,,,,,
 shennong:3.70:c01,Claim,clears feverish sensation of heat within the skin,shennong,humoral,treats,,bath,external,主身皮膚中熱,governs heat within the body's skin
 taxon:Deutzia scabra Thunb.,Species,Deutzia scabra Thunb.,,,,,,,,
 taxon:Deutzia setchuenensis Franch.,Species,Deutzia setchuenensis Franch.,,,,,,,,
+taxon:Weigela japonica Thunb.,Species,Weigela japonica Thunb.,,,,,,,,
 shennong:3.70:c02,Claim,dispels pathogenic qi,shennong,humoral,relieves,,,internal,除邪氣,eliminates pathogenic qi
 shennong:3.70:c03,Claim,stops enuresis and involuntary urination,shennong,medical,relieves,,,internal,止遺溺,stops enuresis
 shennong:3.71,Entry,鼠李,shennong,,,,,,,
@@ -13664,3 +13668,12 @@ shennong:3.101:c04,Claim,preserves and protects the blood vessels and circulatio
 shennong:3.101:c05,Claim,replenishes and tonifies qi,shennong,humoral,promotes,,,internal,益氣,boosts qi
 shennong:3.101:c06,Claim,promotes healthy weight gain and vigor,shennong,medical,promotes,,,internal,令人肥健,makes people robust and stout
 shennong:3.101:c07,Claim,increases appetite,shennong,medical,promotes,,,internal,嗜食,stimulates appetite
+shennong:2.24,Entry,蠡實,shennong,,,,,,,
+shennong:2.24:c01,Claim,treats chills and fever of the skin,shennong,medical,treats,seed,,internal,主皮膚寒熱,Mainly treats chills and fever in the skin.
+taxon:Iris oxypetala Bunge,Species,Iris oxypetala Bunge,,,,,,,,
+shennong:2.24:c02,Claim,clears heat in the stomach,shennong,humoral,relieves,seed,,internal,胃中熱氣,[Treats] heat-qi in the stomach.
+shennong:2.24:c03,Claim,treats cold-damp painful obstruction syndrome,shennong,medical,treats,seed,,internal,寒濕痹,[Treats] cold-damp painful obstruction.
+shennong:2.24:c04,Claim,strengthens the sinews and bones,shennong,medical,promotes,seed,,internal,堅筋骨,Strengthens sinews and bones.
+shennong:2.24:c05,Claim,stimulates appetite,shennong,medical,promotes,seed,,internal,令人嗜食,Causes people to enjoy eating [promotes appetite].
+shennong:2.24:c06,Claim,lightens the body with prolonged consumption,shennong,magical,promotes,seed,,internal,久服，輕身,"Taken over a long time, it lightens the body."
+shennong:2.24:c07,Claim,expels tapeworms and intestinal parasites,shennong,medical,treats,"flower, leaf",,internal,花、葉：去白虫,Flowers and leaves: eliminate white worms [tapeworms].
