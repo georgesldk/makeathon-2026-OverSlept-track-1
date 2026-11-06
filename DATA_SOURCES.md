@@ -19,6 +19,31 @@ Raw downloads and API caches are not committed to git.
             CC BY-SA 4.0 too
 - Read it:  https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1:1.preface.1-1.preface.5/
 
+### Shennong Bencao Jing (Sun Xingyan's edition, Chinese Wikisource)
+- Folder:   historical_texts/shennong/
+- What:     the Han materia medica (1st-2nd c. AD), lost and reconstructed;
+            Sun Xingyan and Sun Fengyi's edition (1799), Wikisource revision
+            11135696. The plain one-page version (no edition named) is used
+            only to cross-check entries and their kind
+- Licence:  text public domain; Wikisource transcription CC BY-SA 4.0
+- We must:  credit Sun Xingyan and Chinese Wikisource; share what is built
+            from the transcription under CC BY-SA 4.0
+- Read it:  https://zh.wikisource.org/wiki/神農本草經_(孫星衍)
+
+### Bretschneider, Botanicon Sinicum, Part III (1895)
+- Folder:   reference_sources/bretschneider/ (BHL OCR), historical_texts/shennong/
+- What:     "Botanical investigations into the materia medica of the ancient
+            Chinese": the Shennong drugs one by one, with identifications
+- Licence:  public domain; through the Biodiversity Heritage Library (item 23159)
+- Note:     the OCR lost the Chinese characters; entries are matched by
+            romanisation, and identifications read with checked quotes
+
+### Wikidata, Chinese labels (Shennong)
+- Folder:   common_name_sources/wikidata/shennong/
+- What:     taxa with a Chinese label or alias equal to a drug's name, and
+            crude-drug items naming their source taxon (P1582); SPARQL
+- Licence:  CC0
+
 ### LSJ Greek-English Lexicon (Perseus)
 - Folder:   reference_sources/lsj/
 - Licence:  CC BY-SA (Perseus Digital Library)
@@ -155,6 +180,9 @@ Raw downloads and API caches are not committed to git.
 - Kew MPNS: licensed access only.
 - Plants For A Future: copyrighted.
 - Native American Ethnobotany Database: community rights.
+- Chinese Text Project (ctext.org), the dataset list's Chinese source: its API
+  gives this book only to institutional subscribers, and its site forbids
+  scraping (and says it corrupts what scrapers get). Chinese Wikisource is used.
 
 
 ## Citations

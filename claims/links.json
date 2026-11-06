@@ -1,7 +1,8 @@
 {
  "books": [
   "culpeper",
-  "dioscorides"
+  "dioscorides",
+  "shennong"
  ],
  "stats": {
   "culpeper": {
@@ -13,6 +14,11 @@
    "claims": 3832,
    "linked_to_a_plant": 3739,
    "linked_to_an_A_plant": 746
+  },
+  "shennong": {
+   "claims": 1412,
+   "linked_to_a_plant": 1412,
+   "linked_to_an_A_plant": 53
   }
  },
  "shared_claims": [
@@ -22297,6 +22303,1569 @@
      "claim": "relieves quinsy",
      "quote": "φασὶ δὲ τὸ πορφυρίζον τοῦ ἄνθους μετὰ ὕδατος ποθὲν συναγχικοῖς βοηθεῖν",
      "translation": "They say that the purple part of the flower drunk with water helps those with quinsy"
+    }
+   ]
+  }
+ ],
+ "shennong_shared_claims": [
+  {
+   "species": "Tussilago farfara L.",
+   "mesh_ui": "D003371",
+   "mesh": "Cough",
+   "books": [
+    "culpeper",
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": true,
+   "claims": [
+    {
+     "claim_id": "culpeper:coltsfoot:c02",
+     "book": "culpeper",
+     "entry": "Coltsfoot",
+     "tier": "A",
+     "claim": "Relieves hot dry cough",
+     "quote": "the fresh leaves or juice, or a syrup thereof is good for a hot dry cough",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:coltsfoot:c05",
+     "book": "culpeper",
+     "entry": "Coltsfoot",
+     "tier": "A",
+     "claim": "Relieves pulmonary catarrh and cough caused by distillations upon the lungs",
+     "quote": "The dry leaves are best for those that have thin rheums and distillations upon their lungs, causing a cough",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:coltsfoot:c06",
+     "book": "culpeper",
+     "entry": "Coltsfoot",
+     "tier": "A",
+     "claim": "Smoked dried leaves relieve lung distillations and cough",
+     "quote": "the dried leaves taken as tobacco, or the root is very good",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:coltsfoot:c07",
+     "book": "culpeper",
+     "entry": "Coltsfoot",
+     "tier": "A",
+     "claim": "Relieves lung distillations and cough",
+     "quote": "the root is very good",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.112:c03",
+     "book": "dioscorides",
+     "entry": "βήχιον",
+     "tier": "B",
+     "claim": "treats dry cough",
+     "quote": "ὑποθυμιώμενα δὲ ξηρὰ εἰς ὑποκαπνισμὸν τοὺς ὑπὸ ξηρᾶς βηχὸς ... ἐνοχλουμένους θεραπεύει",
+     "translation": "Smoked dry as a fumigation, they heal those troubled by dry cough."
+    },
+    {
+     "claim_id": "dioscorides:3.112:c06",
+     "book": "dioscorides",
+     "entry": "βήχιον",
+     "tier": "B",
+     "claim": "relieves dry cough, orthopnea, and chest abscesses when smoked",
+     "quote": "τὸ δ᾿ αὐτὸ ποιεῖ καὶ ἡ ῥίζα ὑποθυμιωμένη",
+     "translation": "The root, when smoked, produces the same effect."
+    },
+    {
+     "claim_id": "shennong:2.53:c01",
+     "book": "shennong",
+     "entry": "款冬花",
+     "tier": "A",
+     "claim": "treats cough accompanied by upward rushing of qi",
+     "quote": "主咳逆上氣",
+     "translation": "Mainly treats cough with counterflow and ascending qi."
+    }
+   ]
+  },
+  {
+   "species": "Tussilago farfara L.",
+   "mesh_ui": "D004417",
+   "mesh": "Dyspnea",
+   "books": [
+    "culpeper",
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": true,
+   "claims": [
+    {
+     "claim_id": "culpeper:coltsfoot:c04",
+     "book": "culpeper",
+     "entry": "Coltsfoot",
+     "tier": "A",
+     "claim": "Relieves shortness of breath",
+     "quote": "the fresh leaves or juice, or a syrup thereof is good for ... shortness of breath",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.112:c04",
+     "book": "dioscorides",
+     "entry": "βήχιον",
+     "tier": "B",
+     "claim": "treats orthopnea",
+     "quote": "καὶ ὀρθοπνοίας ἐνοχλουμένους θεραπεύει",
+     "translation": "and heal those troubled by orthopnea."
+    },
+    {
+     "claim_id": "dioscorides:3.112:c06",
+     "book": "dioscorides",
+     "entry": "βήχιον",
+     "tier": "B",
+     "claim": "relieves dry cough, orthopnea, and chest abscesses when smoked",
+     "quote": "τὸ δ᾿ αὐτὸ ποιεῖ καὶ ἡ ῥίζα ὑποθυμιωμένη",
+     "translation": "The root, when smoked, produces the same effect."
+    },
+    {
+     "claim_id": "shennong:2.53:c01",
+     "book": "shennong",
+     "entry": "款冬花",
+     "tier": "A",
+     "claim": "treats cough accompanied by upward rushing of qi",
+     "quote": "主咳逆上氣",
+     "translation": "Mainly treats cough with counterflow and ascending qi."
+    },
+    {
+     "claim_id": "shennong:2.53:c02",
+     "book": "shennong",
+     "entry": "款冬花",
+     "tier": "A",
+     "claim": "relieves severe wheezing and dyspnea",
+     "quote": "善喘",
+     "translation": "Frequent panting/dyspnea."
+    }
+   ]
+  },
+  {
+   "species": "Alkekengi officinarum Moench",
+   "mesh_ui": "D004231",
+   "mesh": "Diuresis",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": true,
+   "shennong_A": true,
+   "claims": [
+    {
+     "claim_id": "culpeper:winter-cherries:c03",
+     "book": "culpeper",
+     "entry": "Winter-Cherries",
+     "tier": "A",
+     "claim": "Relieves urinary retention and stimulates abundant urination",
+     "quote": "drawing down the urine provoke it to be voided plentifully when it is stopped",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:winter-cherries:c11",
+     "book": "culpeper",
+     "entry": "Winter-Cherries",
+     "tier": "A",
+     "claim": "Promotes urination and expels stones",
+     "quote": "expel urine and the stone",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:2.41:c04",
+     "book": "shennong",
+     "entry": "酸醬",
+     "tier": "A",
+     "claim": "promotes diuresis and fluid drainage",
+     "quote": "利水道",
+     "translation": "Unblocks the water pathways."
+    }
+   ]
+  },
+  {
+   "species": "Tribulus terrestris L.",
+   "mesh_ui": "D010612",
+   "mesh": "Pharyngitis",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": true,
+   "claims": [
+    {
+     "claim_id": "culpeper:water-caltrops:c05",
+     "book": "culpeper",
+     "entry": "Water-Caltrops",
+     "tier": "B",
+     "claim": "relieves sore throats",
+     "quote": "sore mouths and throats, being washed with the decoction",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:1.60:c03",
+     "book": "shennong",
+     "entry": "蒺藜子",
+     "tier": "A",
+     "claim": "treats sore throat and painful obstruction of the throat",
+     "quote": "喉痹",
+     "translation": "throat painful obstruction"
+    }
+   ]
+  },
+  {
+   "species": "Tussilago farfara L.",
+   "mesh_ui": "D001249",
+   "mesh": "Asthma",
+   "books": [
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": true,
+   "claims": [
+    {
+     "claim_id": "dioscorides:3.112:c04",
+     "book": "dioscorides",
+     "entry": "βήχιον",
+     "tier": "B",
+     "claim": "treats orthopnea",
+     "quote": "καὶ ὀρθοπνοίας ἐνοχλουμένους θεραπεύει",
+     "translation": "and heal those troubled by orthopnea."
+    },
+    {
+     "claim_id": "shennong:2.53:c02",
+     "book": "shennong",
+     "entry": "款冬花",
+     "tier": "A",
+     "claim": "relieves severe wheezing and dyspnea",
+     "quote": "善喘",
+     "translation": "Frequent panting/dyspnea."
+    }
+   ]
+  },
+  {
+   "species": "Tussilago farfara L.",
+   "mesh_ui": "D005334",
+   "mesh": "Fever",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": true,
+   "shennong_A": true,
+   "claims": [
+    {
+     "claim_id": "culpeper:coltsfoot:c08",
+     "book": "culpeper",
+     "entry": "Coltsfoot",
+     "tier": "A",
+     "claim": "Treats hot fevers and agues",
+     "quote": "The distilled water hereof simply, or with Elder flowers and Nightshade, is a singularly good remedy against all hot agues, to drink two ounces at a time, and apply cloths wet therein to the head and stomach",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:2.53:c05",
+     "book": "shennong",
+     "entry": "款冬花",
+     "tier": "A",
+     "claim": "treats pathogenic fever with chills",
+     "quote": "寒熱邪氣",
+     "translation": "Chills and fever from pathogenic qi."
+    }
+   ]
+  },
+  {
+   "species": "Chelidonium majus L.",
+   "mesh_ui": "D005128",
+   "mesh": "Eye Diseases",
+   "books": [
+    "culpeper",
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:celandine:c02",
+     "book": "culpeper",
+     "entry": "Celandine",
+     "tier": "A",
+     "claim": "Treats eye ailments and sore eyes",
+     "quote": "one of the best cures for the eyes",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:2.182:c01",
+     "book": "dioscorides",
+     "entry": "ὀθόννα",
+     "tier": "B",
+     "claim": "cleanses the eyes in ophthalmic conditions",
+     "quote": "χυλίζεται δὲ καὶ εἰς τὰ ὀφθαλμικά, ὅπου δεῖ ἀποκαθαίρειν",
+     "translation": "its juice is extracted for eye medicines where there is need of cleansing"
+    },
+    {
+     "claim_id": "dioscorides:2.182:c03",
+     "book": "dioscorides",
+     "entry": "ὀθόννα",
+     "tier": "B",
+     "claim": "cleanses the eyes and clears vision when prepared as troches",
+     "quote": "ἣν πλύναντες καὶ χωρίσαντες τῶν λίθων ἀναπλάσσουσι τροχίσκους πρὸς τὰ αὐτά",
+     "translation": "washing it and separating it from the stones they make troches for the same purposes"
+    },
+    {
+     "claim_id": "shennong:1.58:c02",
+     "book": "shennong",
+     "entry": "黃連",
+     "tier": "B",
+     "claim": "treats canthal damage accompanied by excessive tearing",
+     "quote": "傷泣出",
+     "translation": "damage to the eye canthus with tearing"
+    }
+   ]
+  },
+  {
+   "species": "Hyoscyamus niger L.",
+   "mesh_ui": "D014098",
+   "mesh": "Toothache",
+   "books": [
+    "culpeper",
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:henbane:c19",
+     "book": "culpeper",
+     "entry": "Henbane",
+     "tier": "A",
+     "claim": "Relieves toothache when applied externally to the affected side",
+     "quote": "to stop the toothache, being applied to the aching side",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:4.68:c25",
+     "book": "dioscorides",
+     "entry": "ὑοσκύαμος",
+     "tier": "B",
+     "claim": "relieves toothache",
+     "quote": "ἡ δὲ ῥίζα μετʼ ὄξους ἑψηθεῖσα ὀδονταλγίας ἐστὶ διάκλυσμα",
+     "translation": "the root boiled with vinegar is a mouthwash for toothache"
+    },
+    {
+     "claim_id": "shennong:3.19:c01",
+     "book": "shennong",
+     "entry": "莨蕩子",
+     "tier": "B",
+     "claim": "treats toothache",
+     "quote": "齒痛",
+     "translation": "toothache"
+    }
+   ]
+  },
+  {
+   "species": "Polygonum aviculare L.",
+   "mesh_ui": "D014456",
+   "mesh": "Ulcer",
+   "books": [
+    "culpeper",
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:knotgrass:c20",
+     "book": "culpeper",
+     "entry": "Knotgrass",
+     "tier": "A",
+     "claim": "Cleanses and treats fistulas and malignant ulcers",
+     "quote": "fistulous cankers, or foul filthy ulcers, being applied or put into them",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:knotgrass:c21",
+     "book": "culpeper",
+     "entry": "Knotgrass",
+     "tier": "A",
+     "claim": "Heals genital ulcers and sores in males and females",
+     "quote": "especially for all sorts of ulcers and sores happening in the privy parts of men and women.",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:4.4:c12",
+     "book": "dioscorides",
+     "entry": "πολύγονον",
+     "tier": "B",
+     "claim": "treats ulcers on the genitals",
+     "quote": "συνεψηθείς δὲ οἴνῳ καὶ μέλι προσλαβών ἄκρως ποιεῖ πρὸς τὰ ἐν αἰδοίοις ?ελκη",
+     "translation": "boiled together with wine and combined with honey, it is exceedingly effective for ulcers on the genitals"
+    },
+    {
+     "claim_id": "shennong:3.42:c03",
+     "book": "shennong",
+     "entry": "蓄",
+     "tier": "B",
+     "claim": "treats necrotic sores and hemorrhoids",
+     "quote": "疽痔",
+     "translation": "necrotic ulcers and hemorrhoids"
+    }
+   ]
+  },
+  {
+   "species": "Sonchus oleraceus L.",
+   "mesh_ui": "D013272",
+   "mesh": "Stomach Diseases",
+   "books": [
+    "culpeper",
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:avens:c10",
+     "book": "culpeper",
+     "entry": "Avens",
+     "tier": "B",
+     "claim": "Strengthens the stomach",
+     "quote": "strengthens the stomach",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:thistles:c06",
+     "book": "culpeper",
+     "entry": "Thistles",
+     "tier": "B",
+     "claim": "strengthens the stomach",
+     "quote": "to strengthen the stomach.",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:2.131:c03",
+     "book": "dioscorides",
+     "entry": "σόγχου",
+     "tier": "A",
+     "claim": "relieves a burning stomach / gastritis",
+     "quote": "στομάχῳ καυσουμένῳ ... καταπλασσόμενα ἁρμόζουσιν",
+     "translation": "applied as a poultice they are suitable for an inflamed stomach"
+    },
+    {
+     "claim_id": "dioscorides:2.131:c05",
+     "book": "dioscorides",
+     "entry": "σόγχου",
+     "tier": "A",
+     "claim": "stops heartburn and stomach gnawing",
+     "quote": "ὁ δὲ χυλὸς καταρροφούμενος δηγμοὺς στομάχου παύει",
+     "translation": "the juice swallowed checks gnawing pains in the stomach"
+    },
+    {
+     "claim_id": "shennong:1.144:c03",
+     "book": "shennong",
+     "entry": "苦菜",
+     "tier": "B",
+     "claim": "treats stomach painful obstruction (epigastric distress and fullness)",
+     "quote": "胃痹",
+     "translation": "Stomach painful obstruction (wei bi)."
+    }
+   ]
+  },
+  {
+   "species": "Acorus calamus L.",
+   "mesh_ui": "D003371",
+   "mesh": "Cough",
+   "books": [
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "dioscorides:1.18:c09",
+     "book": "dioscorides",
+     "entry": "κάλαμος",
+     "tier": "B",
+     "claim": "relieves coughs",
+     "quote": "βῆχάς τε ἰᾶται ὑποθυμιώμενος καθ᾿ ἑαυτὸν καὶ σὺν ῥητίνῃ τερεβινθίνῃ τοῦ καπνοῦ διὰ σύριγγος ἑλκομένου τῷ στόματι",
+     "translation": "It cures coughs when fumigated by itself or with turpentine resin, the smoke being drawn in by mouth through a reed."
+    },
+    {
+     "claim_id": "shennong:1.18:c02",
+     "book": "shennong",
+     "entry": "菖蒲",
+     "tier": "B",
+     "claim": "treats cough and dyspnea",
+     "quote": "咳逆上氣",
+     "translation": "Treats coughing, counterflow, and ascending qi."
+    }
+   ]
+  },
+  {
+   "species": "Alisma plantago",
+   "mesh_ui": "D004487",
+   "mesh": "Edema",
+   "books": [
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "dioscorides:3.152:c10",
+     "book": "dioscorides",
+     "entry": "ἄλισμα",
+     "tier": "B",
+     "claim": "reduces swellings",
+     "quote": "καὶ οἰδήματα καταπλασθεῖσα πραΰνει",
+     "translation": "Applied as a poultice, it soothes swellings."
+    },
+    {
+     "claim_id": "shennong:1.37:c03",
+     "book": "shennong",
+     "entry": "澤瀉",
+     "tier": "B",
+     "claim": "resolves edema and expels excess fluid",
+     "quote": "消水",
+     "translation": "Dispels water."
+    }
+   ]
+  },
+  {
+   "species": "Artemisia abrotanum L.",
+   "mesh_ui": "D005334",
+   "mesh": "Fever",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:southern-wood:c10",
+     "book": "culpeper",
+     "entry": "Southern Wood",
+     "tier": "B",
+     "claim": "Prevents fever paroxysms when rubbed on the spine",
+     "quote": "The oil thereof anointed on the back-bone before the fits of agues come, takes them away",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:1.80:c01",
+     "book": "shennong",
+     "entry": "茵陳",
+     "tier": "B",
+     "claim": "treats wind-damp painful obstruction with alternating chills and fever",
+     "quote": "主風濕寒熱邪氣",
+     "translation": "Mainly treats wind-dampness, cold, and heat pathogenic qi."
+    }
+   ]
+  },
+  {
+   "species": "Bassia scoparia (L.) A.J.Scott",
+   "mesh_ui": "D004231",
+   "mesh": "Diuresis",
+   "books": [
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "dioscorides:4.123:c01",
+     "book": "dioscorides",
+     "entry": "βούνιον",
+     "tier": "B",
+     "claim": "promotes urination",
+     "quote": "ἔστι δὲ οὐρητικόν",
+     "translation": "It is diuretic,"
+    },
+    {
+     "claim_id": "shennong:1.78:c02",
+     "book": "shennong",
+     "entry": "地膚子",
+     "tier": "B",
+     "claim": "promotes urination",
+     "quote": "利小便",
+     "translation": "Promotes urination."
+    }
+   ]
+  },
+  {
+   "species": "Bassia scoparia (L.) A.J.Scott",
+   "mesh_ui": "D004232",
+   "mesh": "Diuretics",
+   "books": [
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "dioscorides:4.123:c01",
+     "book": "dioscorides",
+     "entry": "βούνιον",
+     "tier": "B",
+     "claim": "promotes urination",
+     "quote": "ἔστι δὲ οὐρητικόν",
+     "translation": "It is diuretic,"
+    },
+    {
+     "claim_id": "shennong:1.78:c02",
+     "book": "shennong",
+     "entry": "地膚子",
+     "tier": "B",
+     "claim": "promotes urination",
+     "quote": "利小便",
+     "translation": "Promotes urination."
+    }
+   ]
+  },
+  {
+   "species": "Brassica juncea (L.) Czern.",
+   "mesh_ui": "D000855",
+   "mesh": "Anorexia",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:mustard:c09",
+     "book": "culpeper",
+     "entry": "Mustard",
+     "tier": "B",
+     "claim": "treats indigestion and loss of appetite",
+     "quote": "whose stomachs are so weak they cannot digest their meat, or appetite it, take of Mustard-seed a dram, Cinnamon as much... make it up into troches",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:1.144:c02",
+     "book": "shennong",
+     "entry": "苦菜",
+     "tier": "B",
+     "claim": "treats loss of appetite and aversion to food",
+     "quote": "厭谷",
+     "translation": "Aversion to food/grain."
+    }
+   ]
+  },
+  {
+   "species": "Brassica juncea (L.) Czern.",
+   "mesh_ui": "D004415",
+   "mesh": "Dyspepsia",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:mustard:c02",
+     "book": "culpeper",
+     "entry": "Mustard",
+     "tier": "B",
+     "claim": "strengthens weak stomachs",
+     "quote": "and for weak stomachs",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:mustard:c09",
+     "book": "culpeper",
+     "entry": "Mustard",
+     "tier": "B",
+     "claim": "treats indigestion and loss of appetite",
+     "quote": "whose stomachs are so weak they cannot digest their meat, or appetite it, take of Mustard-seed a dram, Cinnamon as much... make it up into troches",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:1.144:c03",
+     "book": "shennong",
+     "entry": "苦菜",
+     "tier": "B",
+     "claim": "treats stomach painful obstruction (epigastric distress and fullness)",
+     "quote": "胃痹",
+     "translation": "Stomach painful obstruction (wei bi)."
+    }
+   ]
+  },
+  {
+   "species": "Chelidonium majus L.",
+   "mesh_ui": "D015746",
+   "mesh": "Abdominal Pain",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:celandine:c18",
+     "book": "culpeper",
+     "entry": "Celandine",
+     "tier": "A",
+     "claim": "Relieves griping abdominal and bowel pains",
+     "quote": "applied to the navel, takes away the griping pains of the belly and bowels",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:1.58:c05",
+     "book": "shennong",
+     "entry": "黃連",
+     "tier": "B",
+     "claim": "relieves abdominal pain",
+     "quote": "腹痛",
+     "translation": "abdominal pain"
+    }
+   ]
+  },
+  {
+   "species": "Chelidonium majus L.",
+   "mesh_ui": "D017699",
+   "mesh": "Pelvic Pain",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:celandine:c19",
+     "book": "culpeper",
+     "entry": "Celandine",
+     "tier": "A",
+     "claim": "Relieves uterine pains",
+     "quote": "and all the pains of the mother",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:1.58:c07",
+     "book": "shennong",
+     "entry": "黃連",
+     "tier": "B",
+     "claim": "treats swelling and pain in the female genitalia",
+     "quote": "婦人陰中腫痛",
+     "translation": "swelling and pain in women's genitalia"
+    }
+   ]
+  },
+  {
+   "species": "Cichorium endivia L.",
+   "mesh_ui": "D013272",
+   "mesh": "Stomach Diseases",
+   "books": [
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "dioscorides:2.132:c03",
+     "book": "dioscorides",
+     "entry": "σέρις",
+     "tier": "B",
+     "claim": "benefits the stomach",
+     "quote": "καὶ εὐστόμαχοι",
+     "translation": "and good for the stomach"
+    },
+    {
+     "claim_id": "dioscorides:2.132:c05",
+     "book": "dioscorides",
+     "entry": "σέρις",
+     "tier": "B",
+     "claim": "soothes an atonic stomach",
+     "quote": "βρωθεῖσαι γὰρ ἀτονοῦντα στόμαχον παρηγοροῦσι",
+     "translation": "eaten they soothe a weakened stomach"
+    },
+    {
+     "claim_id": "dioscorides:2.132:c06",
+     "book": "dioscorides",
+     "entry": "σέρις",
+     "tier": "B",
+     "claim": "soothes a burning stomach / gastritis",
+     "quote": "καὶ καυσούμενον καὶ καταπλασσόμεναι σὺν ἀλφίτῳ καὶ καθʼ ἑαυτάς",
+     "translation": "and [soothe] a burning stomach when eaten and when applied as a poultice with barley meal or alone"
+    },
+    {
+     "claim_id": "dioscorides:2.132:c07",
+     "book": "dioscorides",
+     "entry": "σέρις",
+     "tier": "B",
+     "claim": "benefits cardiac/epigastric distress",
+     "quote": "καὶ καρδιακοῖς εἰσι κατάπλασμα",
+     "translation": "and they are a useful poultice for cardiac patients"
+    },
+    {
+     "claim_id": "shennong:1.144:c03",
+     "book": "shennong",
+     "entry": "苦菜",
+     "tier": "B",
+     "claim": "treats stomach painful obstruction (epigastric distress and fullness)",
+     "quote": "胃痹",
+     "translation": "Stomach painful obstruction (wei bi)."
+    }
+   ]
+  },
+  {
+   "species": "Equisetum arvense L.",
+   "mesh_ui": "D003371",
+   "mesh": "Cough",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:horsetail:c14",
+     "book": "culpeper",
+     "entry": "Horsetail",
+     "tier": "B",
+     "claim": "Relieves coughs resulting from postnasal catarrh",
+     "quote": "and is effectual against a cough that comes by distillations from the head.",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:2.21:c06",
+     "book": "shennong",
+     "entry": "麻黃",
+     "tier": "B",
+     "claim": "relieves cough and wheezing with ascending qi",
+     "quote": "止咳逆上氣",
+     "translation": "stops cough with counterflow ascent of qi"
+    }
+   ]
+  },
+  {
+   "species": "Glycyrrhiza glabra L.",
+   "mesh_ui": "D014947",
+   "mesh": "Wounds and Injuries",
+   "books": [
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "dioscorides:3.5:c08",
+     "book": "dioscorides",
+     "entry": "γλυκύρριζα",
+     "tier": "A",
+     "claim": "heals wounds",
+     "quote": "καὶ τραυματικὸν περιχριόμενον",
+     "translation": "and it heals wounds when smeared around"
+    },
+    {
+     "claim_id": "shennong:1.22:c05",
+     "book": "shennong",
+     "entry": "甘草",
+     "tier": "B",
+     "claim": "treats incised metal wounds",
+     "quote": "金創",
+     "translation": "Treats metal and weapon wounds."
+    }
+   ]
+  },
+  {
+   "species": "Hyoscyamus niger L.",
+   "mesh_ui": "D018771",
+   "mesh": "Arthralgia",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:henbane:c08",
+     "book": "culpeper",
+     "entry": "Henbane",
+     "tier": "A",
+     "claim": "Relieves hot inflammatory joint pains",
+     "quote": "and other pains in the joints which arise from a hot cause",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:3.39:c04",
+     "book": "shennong",
+     "entry": "羊躑躅",
+     "tier": "B",
+     "claim": "treats various forms of painful obstruction syndrome",
+     "quote": "諸痹",
+     "translation": "all kinds of painful obstruction"
+    }
+   ]
+  },
+  {
+   "species": "Hyoscyamus niger L.",
+   "mesh_ui": "D003693",
+   "mesh": "Delirium",
+   "books": [
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "dioscorides:4.68:c01",
+     "book": "dioscorides",
+     "entry": "ὑοσκύαμος",
+     "tier": "B",
+     "claim": "causes mania or delirium",
+     "quote": "ἀμφότεροι δὲ οὗτοι μανιώδεις ὑπάρχουσι",
+     "translation": "both of these are madness-inducing"
+    },
+    {
+     "claim_id": "dioscorides:4.68:c24",
+     "book": "dioscorides",
+     "entry": "ὑοσκύαμος",
+     "tier": "B",
+     "claim": "causes delirium when administered as an enema in cases of colonic ulceration",
+     "quote": "ἐὰν ἕλκος ἔχοντά τις ἐν κόλῳ ἐγκλύσῃ, τὸ αὐτὸ ἀπεργάζεται",
+     "translation": "if someone gives it as an enema to a patient with an ulcer in the colon, it produces the same delirium"
+    },
+    {
+     "claim_id": "shennong:3.19:c06",
+     "book": "shennong",
+     "entry": "莨蕩子",
+     "tier": "B",
+     "claim": "causes frenzy, psychomotor agitation, and delirium when ingested in excess",
+     "quote": "多食，令人狂走",
+     "translation": "eaten in excess, makes one run about madly"
+    }
+   ]
+  },
+  {
+   "species": "Hyoscyamus niger L.",
+   "mesh_ui": "D010146",
+   "mesh": "Pain",
+   "books": [
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "dioscorides:4.68:c14",
+     "book": "dioscorides",
+     "entry": "ὑοσκύαμος",
+     "tier": "B",
+     "claim": "relieves severe pain",
+     "quote": "καὶ περιωδυνίαν",
+     "translation": "and severe pain"
+    },
+    {
+     "claim_id": "dioscorides:4.68:c20",
+     "book": "dioscorides",
+     "entry": "ὑοσκύαμος",
+     "tier": "B",
+     "claim": "relieves pain in poultices",
+     "quote": "καὶ τὰ ἀναπεπλασμένα φύλλα δὲ εἰς πάντα τὰ ἀνώδυνα καταπλάσματα εὔχρηστα",
+     "translation": "and the kneaded leaves are useful for all anodyne poultices"
+    },
+    {
+     "claim_id": "dioscorides:4.68:c21",
+     "book": "dioscorides",
+     "entry": "ὑοσκύαμος",
+     "tier": "B",
+     "claim": "relieves all bodily pain",
+     "quote": "τὰ δὲ πρόσφατα φύλλα καταπλασθέντα ἀνωδυνώτατα πρὸς πάντα πόνον",
+     "translation": "and the fresh leaves applied as a poultice are most anodyne for all pain"
+    },
+    {
+     "claim_id": "shennong:3.39:c01",
+     "book": "shennong",
+     "entry": "羊躑躅",
+     "tier": "B",
+     "claim": "treats creeping cutaneous pain caused by insidious wind",
+     "quote": "賊風在皮膚中，淫淫痛",
+     "translation": "insidious wind in the skin with persistent creeping pain"
+    }
+   ]
+  },
+  {
+   "species": "Lemna gibba L.",
+   "mesh_ui": "D004487",
+   "mesh": "Edema",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:ducks-meat:c08",
+     "book": "culpeper",
+     "entry": "Duck’s Meat",
+     "tier": "A",
+     "claim": "Reduces swelling of the genitals",
+     "quote": "swellings of privities",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:ducks-meat:c09",
+     "book": "culpeper",
+     "entry": "Duck’s Meat",
+     "tier": "A",
+     "claim": "Reduces early-stage swelling of the breasts",
+     "quote": "swellings... of the breasts before they be grown too much",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:2.47:c03",
+     "book": "shennong",
+     "entry": "水萍",
+     "tier": "B",
+     "claim": "relieves edema by eliminating water qi",
+     "quote": "下水氣",
+     "translation": "Drives down water qi."
+    }
+   ]
+  },
+  {
+   "species": "Lemna gibba L.",
+   "mesh_ui": "D005334",
+   "mesh": "Fever",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:ducks-meat:c06",
+     "book": "culpeper",
+     "entry": "Duck’s Meat",
+     "tier": "A",
+     "claim": "Treats pestilential fevers",
+     "quote": "pestilent fevers",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:2.47:c01",
+     "book": "shennong",
+     "entry": "水萍",
+     "tier": "B",
+     "claim": "treats sudden high fever",
+     "quote": "主暴熱",
+     "translation": "Mainly treats sudden severe heat."
+    }
+   ]
+  },
+  {
+   "species": "Persicaria hydropiper (L.) Delarbre",
+   "mesh_ui": "D004487",
+   "mesh": "Edema",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:arssmart:c06",
+     "book": "culpeper",
+     "entry": "Arssmart",
+     "tier": "A",
+     "claim": "Reduces cold swellings",
+     "quote": "The juice thereof dropped in, or otherwise applied, consumes all colds, swellings",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:2.110:c04",
+     "book": "shennong",
+     "entry": "蓼實",
+     "tier": "B",
+     "claim": "promotes excretion of retained fluid",
+     "quote": "下水氣",
+     "translation": "drives down water qi"
+    },
+    {
+     "claim_id": "shennong:2.110:c05",
+     "book": "shennong",
+     "entry": "蓼實",
+     "tier": "B",
+     "claim": "treats puffiness and edema of the face and eyes",
+     "quote": "面目浮腫",
+     "translation": "edema of the face and eyes"
+    }
+   ]
+  },
+  {
+   "species": "Persicaria hydropiper (L.) Delarbre",
+   "mesh_ui": "D014456",
+   "mesh": "Ulcer",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:arssmart:c04",
+     "book": "culpeper",
+     "entry": "Arssmart",
+     "tier": "A",
+     "claim": "Treats gangrenous and putrefied ulcers in humans or animals",
+     "quote": "very effectual for putrified ulcers in man or beast",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:2.110:c06",
+     "book": "shennong",
+     "entry": "蓼實",
+     "tier": "B",
+     "claim": "treats carbuncles and ulcerous sores",
+     "quote": "癰瘍",
+     "translation": "carbuncles and sores"
+    },
+    {
+     "claim_id": "shennong:3.42:c03",
+     "book": "shennong",
+     "entry": "蓄",
+     "tier": "B",
+     "claim": "treats necrotic sores and hemorrhoids",
+     "quote": "疽痔",
+     "translation": "necrotic ulcers and hemorrhoids"
+    }
+   ]
+  },
+  {
+   "species": "Pistia stratiotes L.",
+   "mesh_ui": "D004487",
+   "mesh": "Edema",
+   "books": [
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "dioscorides:4.101:c05",
+     "book": "dioscorides",
+     "entry": "στρατιώτης",
+     "tier": "B",
+     "claim": "treats edemas and swellings",
+     "quote": "καὶ οἰδήματα σὺν ὄξει καταπλασσόμενον ἰᾶται",
+     "translation": "and applied as a poultice with vinegar it heals swellings"
+    },
+    {
+     "claim_id": "shennong:2.47:c03",
+     "book": "shennong",
+     "entry": "水萍",
+     "tier": "B",
+     "claim": "relieves edema by eliminating water qi",
+     "quote": "下水氣",
+     "translation": "Drives down water qi."
+    }
+   ]
+  },
+  {
+   "species": "Polygonum aviculare L.",
+   "mesh_ui": "D000871",
+   "mesh": "Anthelmintics",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:knotgrass:c15",
+     "book": "culpeper",
+     "entry": "Knotgrass",
+     "tier": "A",
+     "claim": "Kills gastrointestinal worms",
+     "quote": "kills worms in the belly or stomach",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:3.42:c04",
+     "book": "shennong",
+     "entry": "蓄",
+     "tier": "B",
+     "claim": "kills parasitic worms",
+     "quote": "殺三虫",
+     "translation": "kills the three worms"
+    }
+   ]
+  },
+  {
+   "species": "Prunella vulgaris L.",
+   "mesh_ui": "D004487",
+   "mesh": "Edema",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:self-heal:c07",
+     "book": "culpeper",
+     "entry": "Self-Heal",
+     "tier": "A",
+     "claim": "Soothes inflammation and swelling around sores",
+     "quote": "repress the heat and sharpness of humours flowing to any sore, ulcers, inflammations, swellings",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:3.57:c08",
+     "book": "shennong",
+     "entry": "夏枯草",
+     "tier": "B",
+     "claim": "treats edema of the feet",
+     "quote": "腳腫",
+     "translation": "swelling of the feet"
+    }
+   ]
+  },
+  {
+   "species": "Prunella vulgaris L.",
+   "mesh_ui": "D014947",
+   "mesh": "Wounds and Injuries",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:bugle:c02",
+     "book": "culpeper",
+     "entry": "Bugle",
+     "tier": "B",
+     "claim": "treats internal penetrating wounds, thrusts, and stab wounds in the body or intestines",
+     "quote": "effectual for any inward wounds, thrusts, or stabs in the body or bowels",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:bugle:c12",
+     "book": "culpeper",
+     "entry": "Bugle",
+     "tier": "B",
+     "claim": "treats all bodily hurts, injuries, and wounds",
+     "quote": "An ointment made with the leaves of Bugle, Scabions and Sanicle, bruised and boiled in hog’s grease... is so singularly good for all sorts of hurts in the body",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:self-heal:c02",
+     "book": "culpeper",
+     "entry": "Self-Heal",
+     "tier": "A",
+     "claim": "Heals internal wounds",
+     "quote": "It is a special herb for inward and outward wounds",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:self-heal:c03",
+     "book": "culpeper",
+     "entry": "Self-Heal",
+     "tier": "A",
+     "claim": "Heals external wounds",
+     "quote": "outwardly in unguents, and plaisters for outward",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:self-heal:c05",
+     "book": "culpeper",
+     "entry": "Self-Heal",
+     "tier": "A",
+     "claim": "Treats bruises and trauma from falls",
+     "quote": "bruises or falls, and such like hurts",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:self-heal:c10",
+     "book": "culpeper",
+     "entry": "Self-Heal",
+     "tier": "A",
+     "claim": "Unites and heals the margins of fresh wounds",
+     "quote": "all green wounds, to solder the lips of them",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:3.57:c04",
+     "book": "shennong",
+     "entry": "夏枯草",
+     "tier": "B",
+     "claim": "treats sores on the head",
+     "quote": "頭創",
+     "translation": "head sores"
+    }
+   ]
+  },
+  {
+   "species": "Rheum officinale Baill.",
+   "mesh_ui": "D005334",
+   "mesh": "Fever",
+   "books": [
+    "dioscorides",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "dioscorides:3.2:c20",
+     "book": "dioscorides",
+     "entry": "ῥᾶ",
+     "tier": "B",
+     "claim": "treats periodic fevers",
+     "quote": "περιόδους",
+     "translation": "periodic fevers"
+    },
+    {
+     "claim_id": "shennong:3.16:c03",
+     "book": "shennong",
+     "entry": "大黃",
+     "tier": "B",
+     "claim": "treats alternating chills and fever",
+     "quote": "寒熱",
+     "translation": "chills and fever"
+    }
+   ]
+  },
+  {
+   "species": "Rumex crispus L.",
+   "mesh_ui": "D011537",
+   "mesh": "Pruritus",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:dock:c10",
+     "book": "culpeper",
+     "entry": "Dock",
+     "tier": "B",
+     "claim": "relieves the itch (scabies or pruritus)",
+     "quote": "The roots boiled in vinegar help the itch",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:3.41:c02",
+     "book": "shennong",
+     "entry": "羊蹄",
+     "tier": "B",
+     "claim": "treats scabies and pruritus",
+     "quote": "疥瘙",
+     "translation": "scabies and itching"
+    }
+   ]
+  },
+  {
+   "species": "Rumex crispus L.",
+   "mesh_ui": "D012532",
+   "mesh": "Scabies",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:dock:c10",
+     "book": "culpeper",
+     "entry": "Dock",
+     "tier": "B",
+     "claim": "relieves the itch (scabies or pruritus)",
+     "quote": "The roots boiled in vinegar help the itch",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:3.41:c02",
+     "book": "shennong",
+     "entry": "羊蹄",
+     "tier": "B",
+     "claim": "treats scabies and pruritus",
+     "quote": "疥瘙",
+     "translation": "scabies and itching"
+    }
+   ]
+  },
+  {
+   "species": "Sanguisorba officinalis L.",
+   "mesh_ui": "D010146",
+   "mesh": "Pain",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:pimpernel:c15",
+     "book": "culpeper",
+     "entry": "Pimpernel",
+     "tier": "B",
+     "claim": "Relieves internal pain",
+     "quote": "helps much in all inward pains",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:2.49:c04",
+     "book": "shennong",
+     "entry": "地榆",
+     "tier": "B",
+     "claim": "alleviates pain",
+     "quote": "止痛",
+     "translation": "Stops pain."
+    }
+   ]
+  },
+  {
+   "species": "Sanguisorba officinalis L.",
+   "mesh_ui": "D014947",
+   "mesh": "Wounds and Injuries",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:pimpernel:c04",
+     "book": "culpeper",
+     "entry": "Pimpernel",
+     "tier": "B",
+     "claim": "Closes and heals the edges of wounds",
+     "quote": "they are good to solder the lips of wounds",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:pimpernel:c17",
+     "book": "culpeper",
+     "entry": "Pimpernel",
+     "tier": "B",
+     "claim": "Heals fresh wounds",
+     "quote": "The decoction, or distilled water, is no less effectual to be applied to all wounds that are fresh and green",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:2.49:c07",
+     "book": "shennong",
+     "entry": "地榆",
+     "tier": "B",
+     "claim": "heals incised and bleeding weapon wounds",
+     "quote": "療金創",
+     "translation": "Heals incised wounds from metal weapons."
+    }
+   ]
+  },
+  {
+   "species": "Sonchus oleraceus L.",
+   "mesh_ui": "D004415",
+   "mesh": "Dyspepsia",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:avens:c19",
+     "book": "culpeper",
+     "entry": "Avens",
+     "tier": "B",
+     "claim": "Treats indigestion",
+     "quote": "It helps indigestion",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:sow-thistle:c03",
+     "book": "culpeper",
+     "entry": "Sow Thistle",
+     "tier": "A",
+     "claim": "Cools heat in the stomach",
+     "quote": "are very fit to cool a hot stomach",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:thistles:c06",
+     "book": "culpeper",
+     "entry": "Thistles",
+     "tier": "B",
+     "claim": "strengthens the stomach",
+     "quote": "to strengthen the stomach.",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:1.144:c03",
+     "book": "shennong",
+     "entry": "苦菜",
+     "tier": "B",
+     "claim": "treats stomach painful obstruction (epigastric distress and fullness)",
+     "quote": "胃痹",
+     "translation": "Stomach painful obstruction (wei bi)."
+    }
+   ]
+  },
+  {
+   "species": "Veratrum nigrum L.",
+   "mesh_ui": "D003371",
+   "mesh": "Cough",
+   "books": [
+    "culpeper",
+    "shennong"
+   ],
+   "A_in_every_book": false,
+   "shennong_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:black-hellebore:c16",
+     "book": "culpeper",
+     "entry": "Black Hellebore",
+     "tier": "B",
+     "claim": "Treats coughs in cattle",
+     "quote": "If a beast be troubled with a cough... they bore a hole through the ear, and put a piece of the root in it, this will help him in 24 hours time.",
+     "translation": null
+    },
+    {
+     "claim_id": "shennong:3.22:c02",
+     "book": "shennong",
+     "entry": "藜蘆",
+     "tier": "B",
+     "claim": "treats cough with counterflow",
+     "quote": "咳逆",
+     "translation": "cough with counterflow"
     }
    ]
   }

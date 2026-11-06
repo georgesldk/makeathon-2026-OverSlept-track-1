@@ -37,7 +37,9 @@ def lineage(book: str, e: dict):
             return "private checklists"
         return {"wikidata": "Wikidata", "inaturalist": "iNaturalist", "ncbi": "NCBI", "drduke": "Dr. Duke's"}.get(
             f, f.replace("checklist:", "ChecklistBank project "))
-    b = e.get("bridge", "")
+    if book == "shennong":
+        return e.get("lineage")                    # set by matching/shennong/aggregate.py (Bretschneider, an author
+    b = e.get("bridge", "")                        # he quotes, Japanese works, Wikidata)
     if b.startswith("lexicon"):
         return (e.get("detail") or {}).get("lexicon") or "LSJ"
     if b.startswith("wikidata"):
@@ -55,7 +57,8 @@ def evidence(book: str) -> dict:
         # "candidate" ("Equisetum ramosissimum ramosissimum") would never be found (bug 3, Marselo's audit)
         out[(entry, e.get("node") or e.get("candidate"))].append({
             "grade": e.get("grade"), "lineage": lineage(book, e),
-            "passage": e.get("bridge") == "lexicon_this_chapter",
+            # passage-specific: LSJ for this very chapter (Dioscorides), Bretschneider's checked verdict (Shennong)
+            "passage": e.get("bridge") in ("lexicon_this_chapter", "bretschneider_verdict"),
             "layer": e.get("layer"), "book_name": e.get("culpeper_name") or e.get("book_name")})
     return out
 
@@ -168,7 +171,7 @@ def judge(book: str, cand: dict, ev: list, geo, desc, described: bool) -> dict:
     elif geo is None:
         caveats.append("B9")                               # round 2: no geography record, or not checked
     if not (a4a or a4b):
-        caveats.append("B5" if passage or medium <= {"LSJ", "Lewis & Short"} else "B1")
+        caveats.append("B5" if passage or medium <= {"LSJ", "Lewis & Short", "Bretschneider"} else "B1")
     if desc[0] in ("poor", "weak"):
         caveats.append("B6")                               # A6: where described, the description decides
     elif described and desc[0] in ("not compared", "no comparable data"):
@@ -192,7 +195,7 @@ REASONS = {"X1": "weak evidence only", "X2": "grows far from the author's world"
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--book", default="culpeper", choices=["culpeper", "dioscorides"])
+    ap.add_argument("--book", default="culpeper", choices=["culpeper", "dioscorides", "shennong"])
     ap.add_argument("--show", help="print one herb or chapter")
     a = ap.parse_args()
     book = a.book
@@ -218,8 +221,9 @@ def main() -> None:
                          # WFO and WCVP disagree (B2): show WCVP's name too, not only one (bug 7)
                          "other_accepted_names": sorted({o for o in (c.get("wcvp_opinions") or [])
                                                          if o and o != c.get("accepted_name")}),
-                         "caveats": [B7_NO_DATA if r == "B7" and d[0] == "no comparable data" else CAVEATS[r]
-                                     for r in j["rules"] if r in CAVEATS],
+                         "caveats": [B7_NO_DATA if r == "B7" and d[0] == "no comparable data" else
+                                     "identified by one scholar only (Bretschneider)" if r == "B5" and book == "shennong"
+                                     else CAVEATS[r] for r in j["rules"] if r in CAVEATS],
                          "reasons": [REASONS[r] for r in j["rules"] if r in REASONS],
                          "lineages_strong": sorted({r["lineage"] for r in e if r["grade"] == "strong" and r["lineage"]}),
                          "lineages_medium": sorted({r["lineage"] for r in e if r["grade"] == "medium" and r["lineage"]}),

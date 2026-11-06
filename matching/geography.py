@@ -22,7 +22,12 @@ introduced) is compared with the author's world:
     introduced only introduced in those lands: possibly after his time
     impossible native only in the Americas, Australia or the Pacific: unknown to anyone
                in the Old World before 1492
-  Both: "no distribution data" (WCVP has none) and "not checked" (genus or family level).
+  Shennong Bencao Jing (Han China, 1st-2nd century)
+    local      native in China
+    trade      native in the lands the Han knew (Mongolia, Korea and Japan, Siberia and the Russian
+               Far East, Central and Western Asia, Indo-China, India, Malesia)
+    introduced only, impossible: as for Dioscorides
+  All: "no distribution data" (WCVP has none) and "not checked" (genus or family level).
 
 Nothing is removed or re-ordered: each candidate gets a geography label, and each herb or
 chapter says which of its candidates is the first one that fits the author's world.
@@ -44,7 +49,13 @@ MED = {"Southeastern Europe", "Southwestern Europe", "Northern Africa", "Western
 TRADE = {"Arabian Peninsula", "Northeast Tropical Africa", "Indian Subcontinent", "Caucasus", "Central Asia",
          "China", "Indo-China", "Malesia"}
 NEW_WORLD = {"NORTHERN AMERICA", "SOUTHERN AMERICA", "AUSTRALASIA", "PACIFIC", "ANTARCTIC"}
-FITS = {"culpeper": ("local", "european"), "dioscorides": ("local", "trade")}
+# Shennong Bencao Jing (Han China, 1st-2nd c.): local = native in China; trade = the lands the Han knew through
+# tribute, the steppe and the Silk Road (Mongolia, Korea and Japan, Siberia and the Russian Far East, Central
+# and Western Asia, Indo-China, India, Malesia)
+CHINA = {"China"}
+CHINA_TRADE = {"Mongolia", "Eastern Asia", "Russian Far East", "Siberia", "Central Asia", "Western Asia",
+               "Indo-China", "Indian Subcontinent", "Malesia"}
+FITS = {"culpeper": ("local", "european"), "dioscorides": ("local", "trade"), "shennong": ("local", "trade")}
 
 
 def squash(s: str | None) -> str:
@@ -62,11 +73,12 @@ def label(dist: list[dict]) -> tuple[str, list[str]]:
         if any(d["continent"] == "EUROPE" for d in native):
             return "european", where
         return "far", where
-    if any(d["region"] in MED for d in native):
+    home, trade = (CHINA, CHINA_TRADE) if BOOK == "shennong" else (MED, TRADE)
+    if any(d["region"] in home for d in native):
         return "local", where
-    if any(d["region"] in TRADE for d in native):
+    if any(d["region"] in trade for d in native):
         return "trade", where
-    if any(d["region"] in MED | TRADE for d in intro):
+    if any(d["region"] in home | trade for d in intro):
         return "introduced only", where
     if native and all(d["continent"] in NEW_WORLD for d in native):
         return "impossible (native only in the Americas/Australasia/Pacific)", where

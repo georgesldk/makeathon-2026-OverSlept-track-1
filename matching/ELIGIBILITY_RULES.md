@@ -261,6 +261,10 @@ G1  Fits: native or introduced in the book's home area, or native in
       Dioscorides (eastern Mediterranean, 1st century): home the
         Mediterranean and Near East; wider: his trade world (Arabia,
         NE Africa, India, Caucasus, Central Asia, China, SE Asia)
+      Shennong Bencao Jing (Han China, 1st-2nd century): home China;
+        wider: the lands the Han knew (Mongolia, Korea and Japan,
+        Siberia and the Russian Far East, Central and Western Asia,
+        Indo-China, India, Malesia). (Added 2026-11-06.)
 G2  Far: native only outside home and wider world.
 G3  Impossible for the period: for books before 1492, a plant native
     only to the Americas, Australasia or the Pacific.
@@ -269,6 +273,26 @@ G4  Distribution from WCVP (where plants grow today); it carries no
 G5  Like [1], we assume the flora of a region has changed little in
     which species are present since the author's time; abundance may
     have changed, and humans have moved plants.
+
+
+## The Shennong Bencao Jing (added 2026-11-06)
+
+Its evidence (matching/shennong/aggregate.py) plays the same roles:
+  strong (passage-specific, like LSJ): Bretschneider's own verdict on
+    what the drug is (Botanicon Sinicum III, 1895), proposed by Claude
+    and checked by a person (historical_texts/shennong/review/)
+  medium: his reading of a Chinese illustration, the name's 19th-century
+    usage in China, a drug sample he examined; an author he quotes
+    (Loureiro, Tatarinov, Henry ...: each its own lineage); Wikidata
+    crude drugs (P1582) and Chinese labels on the headword
+  weak: Wikidata labels on other names (一名, Wu Pu, Famous Physicians);
+    anything Bretschneider calls doubtful
+  left out: Japanese usage and Japanese works he quotes (the same
+    characters can name another plant in Japan)
+There is no description check: the classic describes no plants, so A6
+is "n/a". Animals and minerals (kind from the plain Wikisource version)
+are not identified. B5 reads "identified by one scholar only
+(Bretschneider)".
 
 
 ## Known limits

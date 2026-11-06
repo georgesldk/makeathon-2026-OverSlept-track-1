@@ -70,6 +70,15 @@ the Shennong Bencao Jing pages from Chinese Wikisource
 (historical_texts/shennong/source/wikisource/, CC BY-SA; a paused third
 source). Unzip it the same way, on top of the earlier zips (unzip -o).
 
+overslept_missing_files_6.zip (6 Nov) holds only what is new or changed since the
+fifth zip: the third book's downloads and replies (the Bretschneider scan in
+reference_sources/bretschneider/, the Wikidata, WFO, WCVP, Global Names and IPNI
+outputs and caches for shennong, the paste folders historical_texts/shennong/web/,
+claims/web/shennong/ and stage3/web/shennong/), the Shennong Stage 3 abstracts and
+search caches (stage3/texts/, stage3/cache/), and the rebuilt unit files
+(stage3/units/culpeper.jsonl, dioscorides.jsonl, shennong.jsonl). Unzip it the
+same way, on top of the earlier zips (unzip -o).
+
 
 ## What is in the zip, and where it goes
 

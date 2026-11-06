@@ -57,7 +57,7 @@ def main() -> None:
     safety = next((s for s in load(P["assessments"] / "safety_flags.jsonl") if s["species"] == sp), None)
 
     print(f"\n{sp} · {us[0]['taxon'].get('family') or ''} · set {SET}")
-    for book in ("culpeper", "dioscorides"):
+    for book in ("culpeper", "dioscorides", "shennong"):
         names = sorted({(u["entry_label"], u["identification"]["tier"]) for u in us if u["book"] == book})
         if names:
             print(f"  {book.capitalize()}: " + ", ".join(f"{n} (tier {t})" for n, t in names))

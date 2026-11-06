@@ -38,6 +38,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 WEB = HERE / "web"
 BATCH_SIZE = 10
+BATCH = {"shennong": 20}                  # Shennong entries are short (about 60 characters)
 MESH = ROOT / "reference_sources/mesh/mesh_index.json.gz"
 HISTORICAL = HERE / "historical_terms.csv"   # old term -> MeSH, built by map_historical_terms.py
 RELATIONS = ["treats", "relieves", "prevents", "promotes", "causes", "other"]
@@ -130,6 +131,12 @@ def entries(book: str, every: bool = False) -> list:
             if v:
                 out.append((h["id"], h["name"], v))
         return out
+    if book == "shennong":                      # the classic's own text only, not the later layers (Wu Pu, Famous
+        elig = load_json(ROOT / "matching/shennong/eligibility.json")["herbs"]    # Physicians, Sun's notes)
+        keep = {v["label"] for v in elig.values() if v["shown"] or v["possible"]}
+        return [(e["label"], e["name"], e["classic"]["text"])
+                for e in load_json(ROOT / "historical_texts/shennong/entries.json")["entries"]
+                if (every or e["label"] in keep) and e["classic"]["text"]]
     elig = load_json(ROOT / "matching/dioscorides/eligibility.json")["herbs"]
     keep = {v["label"] for v in elig.values() if v["shown"] or v["possible"]}
     return [(c["label"], c["headword"] or c["label"], c["text"])
@@ -137,16 +144,36 @@ def entries(book: str, every: bool = False) -> list:
             if (every or c["label"] in keep) and c.get("text")]
 
 
+CHINESE_NOTE = """
+These entries are from the Shennong Bencao Jing (classical Chinese). Each opens with taste and nature
+(味甘，微寒): these are qualities, not claims. Then 主 ... lists what it treats; 久服 ... the effects of
+long use. Notes for classical Chinese medicine:
+- 輕身 "lightens the body", 不老 / 延年 "not ageing, prolongs life", 神仙 / 通神明 "becoming immortal,
+  communicating with the spirits": kind "magical" (immortality practice), no MeSH
+- 補中益氣 "tonifies the centre, boosts qi", 安五臟 "calms the five viscera", 養精神 "nourishes the essence and
+  spirit", yin/yang: kind "humoral" (a theory of the body like the humours), no MeSH unless a concrete
+  condition is named
+- 殺鬼精物 / 邪惡鬼 / 蠱毒 "kills demons, ghosts, gu poison": kind "magical", no MeSH
+- concrete conditions get MeSH as usual: 咳逆 cough, 下利 / 泄利 diarrhoea, 金創 wounds, 癰腫 abscess,
+  黃疸 jaundice, 消渴 diabetes-like wasting thirst (Diabetes Mellitus, close), 瘧 malaria-like fever, 癃 urinary
+  retention, 墮胎 abortion (Abortifacient Agents), 下乳 lactation, 明目 eyesight, 痹 painful obstruction
+  (Arthralgia or Rheumatic Diseases, close)
+"""
+
+
 def prompt(book: str, group: list) -> str:
-    greek = book == "dioscorides"
-    author = "Culpeper, The Complete Herbal (1653), section 'Government and Virtues'" if not greek else \
-        "Dioscorides, De materia medica (1st century), Greek, Wellmann's edition"
+    foreign = book in ("dioscorides", "shennong")
+    lang = {"dioscorides": "Greek", "shennong": "classical Chinese (traditional characters)"}.get(book)
+    author = {"culpeper": "Culpeper, The Complete Herbal (1653), section 'Government and Virtues'",
+              "dioscorides": "Dioscorides, De materia medica (1st century), Greek, Wellmann's edition",
+              "shennong": "Shennong Bencao Jing (1st-2nd century AD), classical Chinese, Sun Xingyan's edition (1799)"}[book]
     blocks = [f"=== ENTRY {eid}: {name} ({author}) ===\n{text}" for eid, (key, name, text) in group]
     return PROMPT.format(
         n=len(group), blocks="\n\n".join(blocks), relations=", ".join(RELATIONS), kinds=", ".join(KINDS),
-        quote_note=" (in Greek, exactly as written)" if greek else "",
-        translation_field="- translation: an English translation of the quote\n" if greek else "",
-        translation_json=' "translation": "...",' if greek else "")
+        quote_note=f" (in {lang}, exactly as written)" if foreign else "",
+        translation_field="- translation: an English translation of the quote\n" if foreign else "",
+        translation_json=' "translation": "...",' if foreign else "").replace(
+        "Answer with JSON only:", (CHINESE_NOTE + "\n" if book == "shennong" else "") + "Answer with JSON only:")
 
 
 def branches(trees: list) -> list:
@@ -194,13 +221,14 @@ def write_review_sample(book: str, out: dict) -> Path:
 
 
 def export_web(book: str) -> None:
+    size = BATCH.get(book, BATCH_SIZE)
     es = entries(book)
     folder = WEB / book
     folder.mkdir(parents=True, exist_ok=True)
     manifest = {}
-    for b in range(0, len(es), BATCH_SIZE):
-        name = f"batch_{b // BATCH_SIZE + 1:02d}"
-        group = [(f"e{i:02d}", e) for i, e in enumerate(es[b:b + BATCH_SIZE], 1)]
+    for b in range(0, len(es), size):
+        name = f"batch_{b // size + 1:02d}"
+        group = [(f"e{i:02d}", e) for i, e in enumerate(es[b:b + size], 1)]
         manifest[name] = {eid: e[0] for eid, e in group}
         (folder / f"{name}.txt").write_text(prompt(book, group), encoding="utf-8")
         ans = folder / f"{name}.answer.txt"
@@ -208,11 +236,12 @@ def export_web(book: str) -> None:
             ans.write_text("", encoding="utf-8")
     (folder / "batches.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
     sizes = [len((folder / f"{n}.txt").read_text(encoding="utf-8")) for n in manifest]
-    print(f"{book}: {len(es)} entries in {len(manifest)} prompts of up to {BATCH_SIZE} "
+    print(f"{book}: {len(es)} entries in {len(manifest)} prompts of up to {size} "
           f"(largest {max(sizes):,} characters). Folder: claims/web/{book}/")
 
 
 def export_new(book: str) -> None:
+    size = BATCH.get(book, BATCH_SIZE)
     """Only entries with no claims yet (e.g. a chapter that newly has a plant after a Stage 2 fix):
     new batches after the existing ones; batches already pasted are left untouched."""
     folder = WEB / book
@@ -223,10 +252,10 @@ def export_new(book: str) -> None:
         print(f"{book}: every entry already has a batch; nothing to export.")
         return
     n = len(manifest)
-    for b in range(0, len(es), BATCH_SIZE):
+    for b in range(0, len(es), size):
         n += 1
         name = f"batch_{n:02d}"
-        group = [(f"e{i:02d}", e) for i, e in enumerate(es[b:b + BATCH_SIZE], 1)]
+        group = [(f"e{i:02d}", e) for i, e in enumerate(es[b:b + size], 1)]
         manifest[name] = {eid: e[0] for eid, e in group}
         (folder / f"{name}.txt").write_text(prompt(book, group), encoding="utf-8")
         (folder / f"{name}.answer.txt").write_text("", encoding="utf-8")
@@ -331,7 +360,7 @@ def import_web(book: str, label: str) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--book", default="culpeper", choices=["culpeper", "dioscorides"])
+    ap.add_argument("--book", default="culpeper", choices=["culpeper", "dioscorides", "shennong"])
     ap.add_argument("--export-web", action="store_true")
     ap.add_argument("--export-new", action="store_true", help="batches only for entries with no claims yet")
     ap.add_argument("--import-web", metavar="MODEL")

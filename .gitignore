@@ -287,3 +287,8 @@ Claude outputs/
 
 # ctext.org replies: kept out of git until its reuse terms are checked
 historical_texts/shennong/source/
+
+# Shennong: BHL replies (Bretschneider OCR); the Wikidata outputs are covered by common_name_sources/*/*/*.json
+reference_sources/bretschneider/
+historical_texts/shennong/web/
+stage3/units/shennong.jsonl

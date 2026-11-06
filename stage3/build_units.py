@@ -24,9 +24,10 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-BOOKS = ("culpeper", "dioscorides")
+BOOKS = ("culpeper", "dioscorides", "shennong")
 SCHEMA = "0.1"
-EDITIONS = {"culpeper": "Project Gutenberg #49513", "dioscorides": "Wellmann 1906-14, First1KGreek TEI"}
+EDITIONS = {"culpeper": "Project Gutenberg #49513", "dioscorides": "Wellmann 1906-14, First1KGreek TEI",
+            "shennong": "Sun Xingyan 1799, Chinese Wikisource"}
 PILOT_GROUPS_PER_PLANT = 3                       # shared plant + MeSH groups per pilot plant
 PILOT = ["Ruta graveolens L.", "Plantago major L.", "Marrubium vulgare L.", "Inula helenium L.",
          "Daucus carota L.", "Glycyrrhiza glabra L.", "Tanacetum parthenium (L.) Sch.Bip.",
@@ -123,7 +124,15 @@ def main() -> None:
     mesh = json.load(gzip.open(ROOT / "reference_sources/mesh/mesh_index.json.gz", "rt", encoding="utf-8"))
     D = mesh["descriptors"]
     tree_name = {t: d["name"] for d in D.values() for t in d["trees"]}
-    links = json.load(open(ROOT / "claims/links.json", encoding="utf-8"))["shared_claims"]
+    L = json.load(open(ROOT / "claims/links.json", encoding="utf-8"))
+    links = L["shared_claims"]
+    # the Shennong set: its claims about its A plants, and its claims in groups another book shares (by plant)
+    shen_pick = {}
+    for gi, g in enumerate(L.get("shennong_shared_claims", [])):
+        for c in g["claims"]:
+            if c["book"] == "shennong":
+                shen_pick.setdefault((c["claim_id"], g["species"]), {"why": "shared", "order": gi,
+                                     "mesh": g["mesh"], "books": g["books"]})
     shared = defaultdict(set)                       # claim_id -> the other books' claim_ids (same plant + term)
     pilot_claims, per_plant = set(), defaultdict(int)
     shared_pick = {}                                # (claim_id, species) -> the group, for shared.jsonl
@@ -150,14 +159,14 @@ def main() -> None:
     head, now = git_head(), datetime.now(timezone.utc).isoformat(timespec="seconds")
     used, out_dir = {}, HERE / "units"
     out_dir.mkdir(exist_ok=True)
-    pilot, shared_units = [], []
+    pilot, shared_units, shen_units = [], [], []
     for book in BOOKS:
         claims = json.load(open(ROOT / "claims" / book / "claims.json", encoding="utf-8"))["entries"]
         elig = json.load(open(ROOT / "matching" / book / "eligibility.json", encoding="utf-8"))["herbs"]
         res = json.load(open(ROOT / "matching" / book / "herb_candidates_resolved.json", encoding="utf-8"))["herbs"]
         plants = {}                                  # claims' entry key -> [(row, taxon)]
         for key, h in elig.items():
-            k = h["label"] if book == "dioscorides" else key
+            k = h["label"] if book in ("dioscorides", "shennong") else key
             taxa = {c.get("accepted_name"): c for c in res[key]["candidates"]}
             plants[k] = [(r, taxa.get(r["accepted_name"], {})) for r in h["shown"] + h["possible"]]
         n = 0
@@ -179,7 +188,7 @@ def main() -> None:
                             "unit_id": f"{c['claim_id']}|{wfo}", "claim_id": c["claim_id"],
                             "identification_id": f"{book}:{entry}:{wfo}",
                             "book": book, "edition": EDITIONS[book], "entry": entry, "entry_label": e["name"],
-                            "quote": c["quote"], "quote_language": "grc" if book == "dioscorides" else "en",
+                            "quote": c["quote"], "quote_language": {"dioscorides": "grc", "shennong": "lzh"}.get(book, "en"),
                             "translation": c.get("translation"), "claim_text": c["claim"],
                             "relation": c["relation"], "kind": c["kind"],
                             "condition_concepts": cond, "action_concepts": act, "other_concepts": other,
@@ -197,6 +206,10 @@ def main() -> None:
                         n += 1
                         if c["claim_id"] in pilot_claims and row["accepted_name"] in PILOT:
                             pilot.append(unit)
+                        if book == "shennong" and c["mesh"] and (
+                                row["tier"] == "A" or (c["claim_id"], row["accepted_name"]) in shen_pick):
+                            shen_units.append({**unit, "shennong_set": shen_pick.get(
+                                (c["claim_id"], row["accepted_name"])) or {"why": "A plant", "order": 10**6}})
                         g = shared_pick.get((c["claim_id"], row["accepted_name"]))
                         if g:
                             shared_units.append({**unit, "shared_group": g})
@@ -211,6 +224,13 @@ def main() -> None:
         with open(out_dir / "pilot.jsonl", "w", encoding="utf-8") as f:
             for u in pilot:
                 f.write(json.dumps(u, ensure_ascii=False) + "\n")
+    shen_units.sort(key=lambda u: (u["shennong_set"]["order"], u["claim_id"]))
+    with open(out_dir / "shennong_set.jsonl", "w", encoding="utf-8") as f:
+        for u in shen_units:
+            f.write(json.dumps(u, ensure_ascii=False) + "\n")
+    print(f"Shennong set: {len(shen_units)} units ({sum(u['shennong_set']['why'] == 'shared' for u in shen_units)} "
+          f"in groups another book shares, {sum(u['shennong_set']['why'] == 'A plant' for u in shen_units)} more "
+          f"on its A plants) → stage3/units/shennong_set.jsonl")
     shared_units.sort(key=lambda u: (u["shared_group"]["order"], u["book"]))
     with open(out_dir / "shared.jsonl", "w", encoding="utf-8") as f:
         for u in shared_units:

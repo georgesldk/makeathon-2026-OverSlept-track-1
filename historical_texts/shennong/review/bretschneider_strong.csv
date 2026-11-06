@@ -1,0 +1,45 @@
+entry,drug,plant,his_sentence,claude_says,why,your_check
+1.31,麥門冬,"jopogon spicatus, Ker.","At Pekin jopogon spicatus, Ker., is cultivated Under the i men tung.",no,19th-century usage: grown in Peking under this name,ok
+1.31,麥門冬,O. spicatus,"Both these species—the larger, O. spicatus, and the smaller, O. japonicus—are recorded from China by our botanists,",no,"about which species botanists recorded in China, not what the drug is",ok
+1.31,麥門冬,O. japonicus,"Both these species—the larger, O. spicatus, and the smaller, O. japonicus—are recorded from China by our botanists,",no,as row above,ok
+1.35,署豫,Dioscorea,"By the shu yit of the ancient authors we have to understand various species of Dioscorea, as D. japonica and D. Batatas and others",yes,his verdict: 'by the shu yü of the ancient authors we have to understand Dioscorea',ok
+1.35,署豫,D. japonica,"By the shu yit of the ancient authors we have to understand various species of Dioscorea, as D. japonica and D. Batatas and others",yes,named as an example in that verdict,ok
+1.35,署豫,D. Batatas,"By the shu yit of the ancient authors we have to understand various species of Dioscorea, as D. japonica and D. Batatas and others",yes,named as an example in that verdict,ok
+1.40,細辛,Asarum,The si sin and the tu heng are both species of Asarum.,yes,his verdict: si sin is a species of Asarum,ok
+1.40,細辛,"Asarum Thunbergii, Al. Br.","Tarar., Cat., 44:—Si sin. Folia Heterotrope asaroides (= Asarum Thunbergii, Al. Br.).",no,"Tatarinov's catalogue, which he quotes",ok
+1.42,巴戟天,Septas repens,"This is perhaps the pea tsi hien in Lounr., Fl. cochin., 471, the Chinese name for Septas repens, now called Herpestis : Monnieria, Benth.",no,"a guess via another name in Loureiro, not about this drug",ok
+1.42,巴戟天,"Herpestis Monnieria, Benth.","This is perhaps the pea tsi hien in Lounr., Fl. cochin., 471, the Chinese name for Septas repens, now called Herpestis : Monnieria, Benth.",no,as row above,ok
+1.60,蒺藜子,"Tribulus terrestris, L.","The common tsi li is the Tribulus terrestris, L.",yes,"his verdict, after Kou Tsung-shi's description of the two kinds",ok
+1.77,蛇床子,Cnidium Monnierit,The she ch‘uany is Cnidium Monnierit.,yes,his verdict: 'the she ch'uang is Cnidium monnieri',ok
+1.79,景天,Euphorbia,"Phon 20, XXXVI, 6, 7:—it Xe HI. The plant repre- sented under this Chinese name looks like an Euphorbia.",no,a drawing in a Japanese work (Phon zo),ok
+1.95,牡桂,"Cinnamomum Loureiri, Nees","But Louretro’s plant is a new species—Cinnamomum Loureiri, Nees, in DC. Prodr., XV, 1, 16.",no,"about Loureiro's plant, not this drug",ok
+1.103,酸棗,"Zizyphus vulgaris, var- spinosa.","336 -—~PB FE swan tsao. Zizyphus vulgaris, var- spinosa.",yes,his heading for the entry names the plant,ok
+1.104,木,Evodia glauca,"Thus, it seems, the Chinese names po mu and huang po, in China as well as in J apan, are applied to both the Evodia glauca and the Phellodendron amurense.",no,"name usage in China and Japan, not a verdict",ok
+1.104,木,Phellodendron amurense,"Thus, it seems, the Chinese names po mu and huang po, in China as well as in J apan, are applied to both the Evodia glauca and the Phellodendron amurense.",no,as row above,ok
+1.135,葡萄,Vitis vinifera,293.—il 4ij p‘u tao. The Vine. Vitis vinifera. Grapes.,yes,his heading for the entry names the plant,ok
+2.22,通草,Akebia quinata,and was examined at Kew. It proved to belong to Akebia quinata. The description in the P. agrees.,no,"a drug sample from a Peking shop, identified at Kew",ok
+2.23,芍藥,"Pwonia albiflora, Pall.","The shao yo is Pwonia albiflora, Pall.",yes,his verdict: 'the shao yo is Paeonia albiflora',ok
+2.41,酸醬,"Physalis Alkekengi, L.","The plant thus described by the Chinese authors is the Physalis Alkekengi, L., our common winter cherry, which is also very common in China.",yes,his verdict on the plant the Chinese authors describe,ok
+2.47,水萍,"Lemna minor, L.","The Peking Duck- weed is Lemna minor, L., is very common there and known ~ under the Chinese name fou ping tsz‘.",no,19th-century usage: the duckweed of Peking,ok
+2.53,款冬花,"Tussilago Farfara, L.","The above Chinese descriptions of the k‘wan tung hua agree in a general way with Tussilago Farfara, L.",yes,his verdict: the Chinese descriptions agree with Tussilago (probably),ok
+2.54,牡丹,"Peonia Moutan, Sims.","The mou tan is the China Tree Peony, Peonia Moutan, Sims., a favorite garden-flower of the Chinese,",yes,his verdict: 'the mou tan is the China tree peony',ok
+2.55,馬先蒿,"Jncarvillea sinensis, Juss.","This is the Jncarvillea sinensis, Juss. For farther particulars see Bot. sin., II, 432.",yes,his verdict after the Chinese descriptions,ok
+2.65,吳茱萸,Boymia (Evodia) rutecarpa,"The Wu chu wit is the Boymia (Evodia) rutecarpa. Bee Henry, Chin. pl., 96,212.",yes,his verdict: 'the wu chu yü is Evodia rutaecarpa',ok
+2.77,松羅,Viscum,The sung lo or sung shang ki sheng of the Chinese authors seems to be a species of Viscum or Loranthus.,yes,"his verdict, undecided between Viscum and Loranthus (probably)",ok
+2.77,松羅,Loranthus,The sung lo or sung shang ki sheng of the Chinese authors seems to be a species of Viscum or Loranthus.,yes,as row above,ok
+3.11,烏頭,Aconitum,The Chinese drugs noticed from 143 to 146 are the roots of several species of Aconitum,yes,his verdict: the roots of several species of Aconitum,ok
+3.16,大黃,Rheum palmatum,"The plants raised in the Botanic Gardens, St. Petersburg, from the seeds he had brought home, proved to be the well-known Rheum palmatum.",no,plants raised in St Petersburg from seeds: modern rhubarb trade,ok
+3.16,大黃,Rheum officinale,"Another species from Sz ch‘uan and §.E. Tibet, from which a great part of the best Chinese Rhubarb is derived, was obtained in 1867 by the French missionaries, and sent to Paris, where it was cultivated and described by — BaILion as Rheum officinale.",no,history of the name Rheum officinale,ok
+3.17,亭歷,Sisymbrium,"For the identification of the t‘ing li, see Bot. sin., 78, Sisymbrium, Draba, ete.",yes,"his own identification, given in his earlier volume",ok
+3.17,亭歷,Draba,"For the identification of the t‘ing li, see Bot. sin., 78, Sisymbrium, Draba, ete.",yes,as row above,ok
+3.19,莨蕩子,Hyoscyamus niger,"The lang tang of the Chinese authors may perhaps be Hyoscyamus niger ® or H. physaloides, both common plants in North China.",yes,"his verdict, undecided between two Hyoscyamus (probably)",ok
+3.19,莨蕩子,H. physaloides,"The lang tang of the Chinese authors may perhaps be Hyoscyamus niger ® or H. physaloides, both common plants in North China.",yes,as row above,ok
+3.42,蓄,Polygonum,This is probably a small Polygonum.,yes,his verdict after the Chinese description (probably),ok
+3.44,白頭翁,Pulsatilla (Anemone),The plant intended by Su Kun@ may perhaps be a Pulsatilla (Anemone),no,"about the plant of Su Kung (7th c.), a later author",ok
+3.52,蚤休,Paris,The descriptions in the P. seem also to refer to one or several Species of Paris,yes,his verdict on the descriptions in the Pen ts'ao kang mu (probably),ok
+3.52,蚤休,Trillium,The descriptions in the P. seem also to refer to one or several Species of Paris or the allied genera Trillium and Trillidium.,yes,named as an alternative in that verdict,ok
+3.52,蚤休,Trillidium,The descriptions in the P. seem also to refer to one or several Species of Paris or the allied genera Trillium and Trillidium.,yes,named as an alternative in that verdict,ok
+3.55,藎草,Phalaris,"For the identification of this plant see Bot. sin., 11, 461 (Phalaris).",yes,"his own identification, given in his earlier volume",ok
+3.73,欒花,"Kelreuteria paniculata, Laxm.","This is the Kelreuteria paniculata, Laxm.",yes,his verdict after the Chinese descriptions,ok
+3.100,苦瓠,Lagenaria,The hu or p‘ao is the Lagenaria or Bottle gourd.,yes,his verdict: 'the hu is the Lagenaria or bottle gourd',ok
+3.101,水靳,"Gnanthe stolonifera, DC.","The shui kin is an umbelliferous plant, the Gnanthe stolonifera, DC.",yes,his verdict: 'the shui kin is Oenanthe stolonifera',ok

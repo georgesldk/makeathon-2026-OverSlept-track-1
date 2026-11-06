@@ -16,7 +16,9 @@ Edges:
 A claim belongs to its entry, so it is linked to every A/B species of that entry (an entry can be
 several plants: "Mallows and Marshmallows", a plant complex). Entries with no A/B species keep
 their claims, unlinked to a plant.
-Shared claims: the same species and the same MeSH concept in two or more books.
+Shared claims: the same species and the same MeSH concept in Culpeper and Dioscorides ("shared_claims",
+the set Stage 3 was run on, unchanged by a third book); and the Shennong claims another book shares
+("shennong_shared_claims").
 """
 import argparse
 import csv
@@ -26,7 +28,8 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-BOOKS = ["culpeper", "dioscorides"]
+BOOKS = ["culpeper", "dioscorides", "shennong"]
+PAIR = {"culpeper", "dioscorides"}          # "shared_claims" stays the Culpeper-Dioscorides set Stage 3 was run on
 
 
 def load(p):
@@ -38,7 +41,7 @@ def plants(book: str) -> dict:
     elig = load(ROOT / "matching" / book / "eligibility.json")["herbs"]
     out = {}
     for key, h in elig.items():
-        k = h["label"] if book == "dioscorides" else key
+        k = h["label"] if book in ("dioscorides", "shennong") else key
         out[k] = [(r["accepted_name"], "A", r["rules"], []) for r in h["shown"]] + \
                  [(r["accepted_name"], "B", r["rules"], r["caveats"]) for r in h["possible"]]
     return out
@@ -86,15 +89,25 @@ def main() -> None:
                     for m in c["mesh"]:
                         by_pair[(name, m["ui"], m["name"])].append(rec)
         stats[book] = {"claims": n_claims, "linked_to_a_plant": n_linked, "linked_to_an_A_plant": n_a}
-    shared = []
+    shared, shennong_shared = [], []
     for (sp, ui, mname), recs in by_pair.items():
-        bks = sorted({r["book"] for r in recs})
-        if len(bks) > 1:
+        cd = [r for r in recs if r["book"] in PAIR]
+        bks = sorted({r["book"] for r in cd})
+        if len(bks) > 1:                      # unchanged definition: Culpeper and Dioscorides
             shared.append({"species": sp, "mesh_ui": ui, "mesh": mname, "books": bks,
-                           "both_A": all(any(r["tier"] == "A" and r["book"] == b for r in recs) for b in bks),
-                           "claims": recs})
+                           "both_A": all(any(r["tier"] == "A" and r["book"] == b for r in cd) for b in bks),
+                           "claims": cd})
+        all_b = sorted({r["book"] for r in recs})
+        if "shennong" in all_b and len(all_b) > 1:   # the Shennong claims another book shares
+            shennong_shared.append({"species": sp, "mesh_ui": ui, "mesh": mname, "books": all_b,
+                                    "A_in_every_book": all(any(r["tier"] == "A" and r["book"] == b for r in recs)
+                                                           for b in all_b),
+                                    "shennong_A": any(r["tier"] == "A" and r["book"] == "shennong" for r in recs),
+                                    "claims": recs})
     shared.sort(key=lambda s: (not s["both_A"], s["species"], s["mesh"]))
-    (HERE / "links.json").write_text(json.dumps({"books": books, "stats": stats, "shared_claims": shared},
+    shennong_shared.sort(key=lambda s: (not s["shennong_A"], -len(s["books"]), s["species"], s["mesh"]))
+    (HERE / "links.json").write_text(json.dumps({"books": books, "stats": stats, "shared_claims": shared,
+                                                 "shennong_shared_claims": shennong_shared},
                                                 ensure_ascii=False, indent=1), encoding="utf-8")
     g = HERE / "graph"
     g.mkdir(exist_ok=True)
@@ -120,8 +133,11 @@ def main() -> None:
     for b, s in stats.items():
         print(f"{b}: {s['claims']} claims · {s['linked_to_a_plant']} linked to a plant "
               f"({s['linked_to_an_A_plant']} to an identification, tier A)")
-    print(f"Shared claims (same species + same MeSH concept in {' and '.join(books)}): {len(shared)} "
+    print(f"Shared claims (same species + same MeSH concept in culpeper and dioscorides): {len(shared)} "
           f"({sum(s['both_A'] for s in shared)} with tier A in every book)")
+    print(f"Shennong claims shared with another book: {len(shennong_shared)} groups "
+          f"({sum(len(s['books']) == 3 for s in shennong_shared)} in all three books, "
+          f"{sum(s['shennong_A'] for s in shennong_shared)} with the Shennong plant tier A)")
     for s in shared[:15]:
         print(f"  {s['species']} · {s['mesh']} · {', '.join(s['books'])}{'' if s['both_A'] else ' (B)'}")
     print(f"Graph: {len(nodes):,} nodes, {len(edges):,} edges → claims/graph/nodes.csv, edges.csv · details: claims/links.json")
