@@ -51,7 +51,9 @@ def evidence(book: str) -> dict:
     for line in open(HERE / book / "evidence.jsonl", encoding="utf-8"):
         e = json.loads(line)
         entry = e.get("herb") or e.get("chapter")
-        out[(entry, e.get("candidate"))].append({
+        # keyed by the grouped name ("node"), the name candidates are grouped and looked up by; the raw
+        # "candidate" ("Equisetum ramosissimum ramosissimum") would never be found (bug 3, Marselo's audit)
+        out[(entry, e.get("node") or e.get("candidate"))].append({
             "grade": e.get("grade"), "lineage": lineage(book, e),
             "passage": e.get("bridge") == "lexicon_this_chapter",
             "layer": e.get("layer"), "book_name": e.get("culpeper_name") or e.get("book_name")})
@@ -102,6 +104,8 @@ def description(entry: dict, accepted: str):
     for s in c["scores"]:
         if s.get("id") in details and str(s.get("label")).lower() in POINTS:
             groups[details[s["id"]]["feature"]].append(POINTS[str(s["label"]).lower()])
+    if not any(groups.values()):                          # no usable scores: never compared, not "poor" (bug 6)
+        return None, None
     negative = any(sum(v) / len(v) < 0 for v in groups.values() if v)
     return ("poor" if negative else "weak"), c["congruence"]
 
@@ -116,8 +120,14 @@ def judge(book: str, cand: dict, ev: list, geo, desc, described: bool) -> dict:
     x = []
     if not cand.get("resolved") or not cand.get("decided_by"):
         x.append("X3")
-    if flags and "plant" not in flags:
+    # X4 (bug 4): an explicit "non-plant", or a kingdom not confirmed as plant ("unknown", "mixed") with no
+    # plant list (WFO, WCVP) behind the name. Global Names alone also covers animals (the shrew, Sorex araneus)
+    plant_list = cand.get("decided_by") in ("WFO", "WCVP")
+    if ("non-plant" in flags and "plant" not in flags) or ("plant" not in flags and not plant_list):
         x.append("X4")
+    if not rank:                                           # rank unknown: a one-word name is a genus or family
+        bare = (cand.get("accepted_name_without_authors") or "").split()          # (bug 5)
+        rank = ("family" if bare and bare[0].endswith("aceae") else "genus") if len(bare) == 1 else rank
     if rank in ("genus", "family", "order", "class", "phylum", "tribe"):
         x.append("X6")
     if geo in ("far", "impossible"):
@@ -181,6 +191,9 @@ def main() -> None:
             j = judge(book, c, e, g, d, described)
             rows.append({"accepted_name": c.get("accepted_name") or "(unresolved: " + ", ".join(sorted(names)) + ")",
                          "family": c.get("family"), "rank": c.get("rank"), **j,
+                         # WFO and WCVP disagree (B2): show WCVP's name too, not only one (bug 7)
+                         "other_accepted_names": sorted({o for o in (c.get("wcvp_opinions") or [])
+                                                         if o and o != c.get("accepted_name")}),
                          "caveats": [CAVEATS[r] for r in j["rules"] if r in CAVEATS],
                          "reasons": [REASONS[r] for r in j["rules"] if r in REASONS],
                          "lineages_strong": sorted({r["lineage"] for r in e if r["grade"] == "strong" and r["lineage"]}),

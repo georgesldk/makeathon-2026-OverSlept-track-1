@@ -381,6 +381,8 @@ def congruence(details: dict, scores: list) -> tuple:
         if d and lab in POINTS:
             groups[d["feature"]].append(POINTS[lab])
     means = [sum(v) / len(v) for v in groups.values() if v]
+    if not means:                                          # no scores at all: not compared, not "weak" (bug 6)
+        return 0, "not compared"
     c = sum(m > 0 for m in means) - sum(m < 0 for m in means)
     return c, "strong" if c >= 5 else "moderate" if c >= 3 else "weak"
 
@@ -410,6 +412,25 @@ def judge(h: dict, js: dict) -> dict:
     return {"details": details, "quotes_not_in_text": bad, "candidates": out}
 
 
+def refresh_verdicts(book: str) -> None:
+    """Recompute every verdict from the scores already saved (no rebuild, no model): used after a change
+    to the verdict rule, e.g. "no scores" = "not compared" instead of "weak" (bug 6, Marselo's audit)."""
+    out = HERE / book / "description_check.json"
+    data = json.load(open(out, encoding="utf-8"))
+    changed = Counter()
+    for h in data["herbs"].values():
+        for c in h.get("candidates", []):
+            cong, verdict = congruence(h["details"], c.get("scores", []))
+            if c.get("wikipedia_only") and verdict == "strong":
+                verdict = "moderate (Wikipedia only, D7)"
+            if (cong, verdict) != (c.get("congruence"), c.get("verdict")):
+                changed[f"{c.get('verdict')} -> {verdict}"] += 1
+            c["congruence"], c["verdict"] = cong, verdict
+    out.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"{book}: verdicts recomputed from the saved scores · changed: " +
+          (", ".join(f"{k} {v}" for k, v in changed.items()) or "none"))
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--book", default="culpeper", choices=["culpeper", "dioscorides"])
@@ -418,7 +439,10 @@ def main() -> None:
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--export-web", action="store_true", help="write prompts of 15 herbs for a web chat")
     ap.add_argument("--import-web", metavar="MODEL", help="read the pasted replies; MODEL labels them")
+    ap.add_argument("--refresh-verdicts", action="store_true", help="recompute verdicts from the saved scores")
     a = ap.parse_args()
+    if a.refresh_verdicts:
+        return refresh_verdicts(a.book)
     if a.export_web:
         return export_web(a.book)
     if a.import_web:

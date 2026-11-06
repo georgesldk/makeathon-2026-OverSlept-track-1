@@ -27,6 +27,7 @@ every record says so, and nothing here is merged into the text layers.
 """
 import csv
 import gzip
+import copy
 import json
 import re
 import sys
@@ -72,6 +73,7 @@ def candidates(word: str) -> list[str]:
 BINOMIAL = re.compile(r"\b([A-Z][a-z]{2,}|[A-Z]\.)\s+([A-Za-z][a-z\-]{2,})\b")
 DSC = re.compile(r"(Ps\.-\s*)?Dsc\.\s*(?:Eup\.\s*)?(\d)\.\s*(\d+)|\bib\.\s*(\d+)\b")
 BOUNDARY = re.compile(r"\s(?:[IVX]+\.|\d\.)\s|:—|(?<=[a-z]{2})\.\s+(?=[a-z])|(?<=\d)\s\.\s+(?=[a-z])")
+OTHER_AUTHOR = re.compile(r"\b(?!Dsc\.|Ps\.)[A-Z][a-z]{1,12}\.\s")    # "Nic. ", "Plu. ", "Theoc. " (not "M. ")
 ENGLISH = {"The", "This", "Name", "Cf", "Also", "Used", "See", "Prob", "Perh", "Lat", "Ion", "Att", "Dor",
            "Hom", "Hdt", "Ar", "Pl", "Arist", "Thphr", "Gal", "Hp", "Plin", "Nic", "Theoc", "Gr", "Eng",
            "Fr", "Sch", "Phot", "Hsch", "Suid", "Gp", "Orib", "Aret", "Paul", "Aet", "Alex", "Gloss",
@@ -95,7 +97,7 @@ def read_entry(text: str, genera: set[str] | None) -> dict:
             if m.group(1) in genera:
                 events.append((m.start(), "genus", m.group(1)))
     events.sort(key=lambda e: e[0])
-    ids, open_, last_full, last_book = [], [], {}, None
+    ids, open_, last_full, last_book, last_dsc_end = [], [], {}, None, None
     for pos, kind, val in events:
         if kind == "cut":
             open_ = []
@@ -125,10 +127,13 @@ def read_entry(text: str, genera: set[str] | None) -> dict:
             # ("m. arrhen = Mandragora officinalis, m. thelys = M. autumnalis, Dsc. 4.75")
             m = val
             if m.group(2):
-                last_book = m.group(2)
+                last_book, last_dsc_end = m.group(2), m.end()
                 ref, key = f"{m.group(2)}.{m.group(3)}", "pseudo_dsc" if m.group(1) else "dsc"
-            elif last_book:                               # "ib. 28" after a Dsc. citation
+            elif last_book and not OTHER_AUTHOR.search(text[last_dsc_end:pos]):
+                # "ib. 28" is Dioscorides only when no other author is cited in between: in
+                # "Dsc. 4.98 ... Nic. Th. 792; also, a marsh-plant, ib. 415" the ib. is Nicander (bug 2)
                 ref, key = f"{last_book}.{m.group(4)}", "dsc"
+                last_dsc_end = m.end()
             else:
                 continue
             for cur in open_:
@@ -200,7 +205,9 @@ def main() -> None:
                     for e in by_lemma[cand]:
                         if e["key"] not in parsed:
                             parsed[e["key"]] = read_entry(e["text"], genera)
-                        entries.append({"lsj_key": e["key"], **parsed[e["key"]]})
+                        # a copy per chapter: "cites this chapter" is set per chapter below, and a shared
+                        # parsed entry would carry one chapter's answer into another (bug 1, Marselo's audit)
+                        entries.append({"lsj_key": e["key"], **copy.deepcopy(parsed[e["key"]])})
                     return {"dictionary_form": cand, "matched_word": word, "word_position": i + 1,
                             "entries": entries}
         return {"dictionary_form": None, "entries": []}

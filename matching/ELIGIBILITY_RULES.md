@@ -103,7 +103,8 @@ like "Mallows and Marshmallows") or a plant complex (P1).
 B1  A1, A2 and A5 hold, but the evidence is one lineage only (strong
     or medium). Caveat: "one source".
 B2  A1, A2, A4 hold, but WFO and WCVP disagree on the accepted name.
-    Both names are shown. Caveat: "botanists disagree on the name".
+    Both names are shown (other_accepted_names in eligibility.json,
+    since 2026-11-06). Caveat: "botanists disagree on the name".
 B3  A1, A2, A4 hold, but where it grows is unknown (no distribution
     data) or it is only introduced there with no date. Caveat: "may
     not have grown there in the author's time".
@@ -113,7 +114,9 @@ B5  A1, A2, A5 hold, backed only by a scholarly identification (one
     lineage) without confirmation (A4b). Caveat: "identified by a
     dictionary only".
 B6  A1-A5 hold, but the description check is "weak" (D3, D4).
-    Caveat: "the book's description fits poorly".
+    Caveat: "the book's description fits poorly". A candidate with no
+    usable scores was not compared: B7, not B6. (Changed 2026-11-06,
+    Marselo's audit: Typha domingensis in 3.118.)
 B7  A1-A5 hold and the book describes the plant, but this candidate
     was never compared with the description (no modern description
     found, or not among the candidates checked). Caveat: "not compared
@@ -132,11 +135,19 @@ X2  It does not fit the author's world: native only far away (G2), or
     impossible for the period (G3).
 X3  Not tied to an accepted name in any database.
 X4  Not a plant (animal, fungus, mineral, virus). Kept apart for a
-    later "other materia medica" list (beaver, murex, ...).
+    later "other materia medica" list (beaver, murex, ...). In code: a
+    source says "non-plant" and none says "plant", or the kingdom is
+    unconfirmed ("unknown", "mixed") and no plant list (WFO, WCVP)
+    knows the name. (Changed 2026-11-06, Marselo's audit: "unknown"
+    alone used to hide plants such as Berberis × ottawensis; Global
+    Names alone also covers animals, such as the shrew Sorex araneus.)
 X5  Reached only through a name the book does not use for this entry
     (for example a word from the description, not a name).
 X6  Genus or family level only (Mosses -> Bryophyta, Chick-Pease ->
     Cicer): too vague to present as a plant, even with strong evidence.
+    When the rank is missing, a one-word name counts as a genus (or a
+    family if it ends in -aceae). (Added 2026-11-06, Marselo's audit:
+    Plantago was shown for Buck's-Horn Plantain.)
 
 
 ## D. Description check (after Lardos et al. 2024 [1])

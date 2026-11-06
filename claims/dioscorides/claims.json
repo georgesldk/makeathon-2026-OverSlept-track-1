@@ -101125,6 +101125,462 @@
      "flags": []
     }
    ]
+  },
+  "2.68": {
+   "name": "μυογαλῆ",
+   "batch": "batch_42",
+   "claims": [
+    {
+     "claim_id": "dioscorides:2.68:c01",
+     "quote": "μυογαλῆ ἀνασχισθεῖσα καὶ ἐπιτεθεῖσα ἄκος ἐστὶ τοῦ ἰδίου δήγματος",
+     "translation": "A shrew-mouse split open and applied is a cure for its own bite.",
+     "part": "whole animal",
+     "preparation": "split open and applied",
+     "route": "external",
+     "claim": "treats shrew bites",
+     "relation": "treats",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D001733",
+       "name": "Bites and Stings",
+       "match": "exact",
+       "proposed": "Bites and Stings",
+       "branches": [
+        "C"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    }
+   ]
+  },
+  "2.147": {
+   "name": "Μηδικὴ",
+   "batch": "batch_42",
+   "claims": [
+    {
+     "claim_id": "dioscorides:2.147:c01",
+     "quote": "ὅπερ ξηρανθὲν μείγνυται ἡδύσματος χάριν τοῖς ἀρτυτοῖς ἁλσί",
+     "translation": "which [the seed], when dried, is mixed into seasoned salts for flavoring",
+     "part": "seed",
+     "preparation": "dried",
+     "route": "internal",
+     "claim": "used as a flavoring in seasoned salts",
+     "relation": "other",
+     "kind": "household",
+     "mesh": [
+      {
+       "ui": "D003212",
+       "name": "Condiments",
+       "match": "broad",
+       "proposed": "Condiments",
+       "branches": [
+        "G",
+        "J"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "dioscorides:2.147:c02",
+     "quote": "χλωρὸν δὲ καταπλασθὲν ὠφελεῖ τὰ ψύξεως δεόμενα",
+     "translation": "when fresh and applied as a poultice, it benefits conditions requiring cooling",
+     "part": "seed",
+     "preparation": "poultice",
+     "route": "external",
+     "claim": "cools conditions that require cooling",
+     "relation": "relieves",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D007249",
+       "name": "Inflammation",
+       "match": "broad",
+       "proposed": "Inflammation",
+       "branches": [
+        "C"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "dioscorides:2.147:c03",
+     "quote": "ὅλῃ δὲ τῇ πόᾳ χρῶνται οἱ κτηνοτρόφοι ἀντὶ ἀγρώστεως",
+     "translation": "livestock farmers use the whole herb instead of dog's tooth grass",
+     "part": "whole herb",
+     "preparation": "",
+     "route": "other",
+     "claim": "used as livestock feed in place of grass",
+     "relation": "other",
+     "kind": "veterinary",
+     "mesh": [
+      {
+       "ui": "D000821",
+       "name": "Animal Feed",
+       "match": "exact",
+       "proposed": "Animal Feed",
+       "branches": [
+        "G",
+        "J"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    }
+   ]
+  },
+  "3.51": {
+   "name": "λιγυστικόν",
+   "batch": "batch_42",
+   "claims": [
+    {
+     "claim_id": "dioscorides:3.51:c01",
+     "quote": "δύναμις δὲ τοῦ σπέρματος καὶ τῆς ῥίζης θερμαντική",
+     "translation": "The property of the seed and the root is warming",
+     "part": "seed and root",
+     "preparation": "",
+     "route": "unknown",
+     "claim": "has a warming quality",
+     "relation": "promotes",
+     "kind": "humoral",
+     "mesh": [],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "dioscorides:3.51:c02",
+     "quote": "δύναμις δὲ τοῦ σπέρματος καὶ τῆς ῥίζης ... πεπτική",
+     "translation": "The property of the seed and the root is ... digestive",
+     "part": "seed and root",
+     "preparation": "",
+     "route": "internal",
+     "claim": "promotes digestion",
+     "relation": "promotes",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D004063",
+       "name": "Digestion",
+       "match": "exact",
+       "proposed": "Digestion",
+       "branches": [
+        "G"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "dioscorides:3.51:c03",
+     "quote": "ἁρμόζουσα πρὸς τὰ ἐντὸς ἀλγήματα",
+     "translation": "suitable for internal pains",
+     "part": "seed and root",
+     "preparation": "",
+     "route": "internal",
+     "claim": "relieves internal pain",
+     "relation": "relieves",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D010146",
+       "name": "Pain",
+       "match": "broad",
+       "proposed": "Pain",
+       "branches": [
+        "C",
+        "F",
+        "G"
+       ]
+      },
+      {
+       "ui": "D000700",
+       "name": "Analgesics",
+       "match": "broad",
+       "proposed": "Analgesics",
+       "branches": [
+        "D27"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "dioscorides:3.51:c04",
+     "quote": "ἁρμόζουσα πρὸς ... οἰδήματα",
+     "translation": "suitable for internal swellings",
+     "part": "seed and root",
+     "preparation": "",
+     "route": "internal",
+     "claim": "relieves internal swellings",
+     "relation": "relieves",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D004487",
+       "name": "Edema",
+       "match": "broad",
+       "proposed": "Edema",
+       "branches": [
+        "C"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "dioscorides:3.51:c05",
+     "quote": "ἁρμόζουσα πρὸς ... ἐμπνευματώσεις καὶ μάλιστα τὰς περὶ στόμαχον",
+     "translation": "suitable for flatulence, especially that around the stomach",
+     "part": "seed and root",
+     "preparation": "",
+     "route": "internal",
+     "claim": "relieves flatulence, especially around the stomach",
+     "relation": "relieves",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D005414",
+       "name": "Flatulence",
+       "match": "exact",
+       "proposed": "Flatulence",
+       "branches": [
+        "C"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "dioscorides:3.51:c06",
+     "quote": "ἁρμόζουσα πρὸς ... θηρίων πληγάς",
+     "translation": "suitable for bites of venomous beasts",
+     "part": "seed and root",
+     "preparation": "",
+     "route": "internal",
+     "claim": "treats bites and stings of venomous beasts",
+     "relation": "treats",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D001733",
+       "name": "Bites and Stings",
+       "match": "exact",
+       "proposed": "Bites and Stings",
+       "branches": [
+        "C"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "dioscorides:3.51:c07",
+     "quote": "ἄγει δὲ καὶ οὖρα ... πινομένη",
+     "translation": "taken as a drink, it also promotes urine",
+     "part": "seed and root",
+     "preparation": "drink",
+     "route": "internal",
+     "claim": "promotes urination",
+     "relation": "promotes",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D004232",
+       "name": "Diuretics",
+       "match": "exact",
+       "proposed": "Diuretics",
+       "branches": [
+        "D27"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "dioscorides:3.51:c08",
+     "quote": "ἄγει δὲ καὶ ... ἔμμηνα πινομένη",
+     "translation": "taken as a drink, it also promotes menstruation",
+     "part": "seed and root",
+     "preparation": "drink",
+     "route": "internal",
+     "claim": "promotes menstruation",
+     "relation": "promotes",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D008600",
+       "name": "Menstruation-Inducing Agents",
+       "match": "exact",
+       "proposed": "Menstruation-Inducing Agents",
+       "branches": [
+        "D27"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "dioscorides:3.51:c09",
+     "quote": "καὶ ἡ ῥίζα δὲ προστιθεμένη τὸ αὐτὸ ποιεῖ",
+     "translation": "and the root applied as a pessary does the same",
+     "part": "root",
+     "preparation": "pessary",
+     "route": "other",
+     "claim": "promotes menstruation when inserted as a pessary",
+     "relation": "promotes",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D008600",
+       "name": "Menstruation-Inducing Agents",
+       "match": "exact",
+       "proposed": "Menstruation-Inducing Agents",
+       "branches": [
+        "D27"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "dioscorides:3.51:c10",
+     "quote": "ἱκανῶς δέ ἐστιν εὔστομον",
+     "translation": "it is quite good for the stomach",
+     "part": "seed and root",
+     "preparation": "",
+     "route": "internal",
+     "claim": "strengthens and benefits the stomach",
+     "relation": "promotes",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D013272",
+       "name": "Stomach Diseases",
+       "match": "broad",
+       "proposed": "Stomach Diseases",
+       "branches": [
+        "C"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": [
+      "promotes, but every concept is a disease"
+     ]
+    },
+    {
+     "claim_id": "dioscorides:3.51:c11",
+     "quote": "ἀντὶ πεπέρεως αὐτῷ χρῶνται οἱ ἐπιχώριοι μίσγοντες τοῖς προσοψήμασι",
+     "translation": "the locals use it instead of pepper, mixing it with side dishes",
+     "part": "seed and root",
+     "preparation": "",
+     "route": "internal",
+     "claim": "used as a condiment instead of pepper",
+     "relation": "other",
+     "kind": "household",
+     "mesh": [
+      {
+       "ui": "D003212",
+       "name": "Condiments",
+       "match": "broad",
+       "proposed": "Condiments",
+       "branches": [
+        "G",
+        "J"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    }
+   ]
+  },
+  "3.142": {
+   "name": "φαληρίς",
+   "batch": "batch_42",
+   "claims": [
+    {
+     "claim_id": "dioscorides:3.142:c01",
+     "quote": "δύναμιν δὲ ἔχει ἡ πόα κοπτομένη καὶ χυλιζομένη διʼ ὕδατος ἢ οἴνου πρὸς τά τῆς κύστεως ἀλγήματα πινομένη ποιεῖν",
+     "translation": "the herb, pounded and juiced with water or wine, when drunk has the power to relieve bladder pains",
+     "part": "whole herb",
+     "preparation": "juice with water or wine",
+     "route": "internal",
+     "claim": "relieves bladder pain",
+     "relation": "relieves",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D001745",
+       "name": "Urinary Bladder Diseases",
+       "match": "broad",
+       "proposed": "Urinary Bladder Diseases",
+       "branches": [
+        "C"
+       ]
+      },
+      {
+       "ui": "D000700",
+       "name": "Analgesics",
+       "match": "broad",
+       "proposed": "Analgesics",
+       "branches": [
+        "D27"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    },
+    {
+     "claim_id": "dioscorides:3.142:c02",
+     "quote": "καὶ τοῦ σπέρματος δὲ μεθʼ ὕδατος κοχλιαρίου πλῆθος πινόμενον πρὸς τὰ αὐτὰ ποιεῖ",
+     "translation": "and a spoonful of the seed drunk with water does the same",
+     "part": "seed",
+     "preparation": "in water",
+     "route": "internal",
+     "claim": "relieves bladder pain",
+     "relation": "relieves",
+     "kind": "medical",
+     "mesh": [
+      {
+       "ui": "D001745",
+       "name": "Urinary Bladder Diseases",
+       "match": "broad",
+       "proposed": "Urinary Bladder Diseases",
+       "branches": [
+        "C"
+       ]
+      },
+      {
+       "ui": "D000700",
+       "name": "Analgesics",
+       "match": "broad",
+       "proposed": "Analgesics",
+       "branches": [
+        "D27"
+       ]
+      }
+     ],
+     "mesh_not_found": [],
+     "flags": []
+    }
+   ]
   }
  }
 }

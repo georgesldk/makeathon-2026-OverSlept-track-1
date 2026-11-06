@@ -363,13 +363,55 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Nardostachys jatamansi",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "νάρδου"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Valeriana dioscoridis",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "νάρδου"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -395,49 +437,7 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Nardostachys jatamansi",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "νάρδου"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Valeriana celtica",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "νάρδου"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Valeriana dioscoridis",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -656,13 +656,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    }
@@ -784,15 +784,15 @@
      "wikidata"
     ],
     "families": [
-     "lexicon_headword",
+     "lexicon_this_chapter",
      "wikidata_grc"
     ],
     "bridges": {
-     "lexicon_headword": 1,
+     "lexicon_this_chapter": 1,
      "wikidata_grc": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 2,
+    "strong_rows": 1,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -1188,7 +1188,7 @@
   "label": "1.21",
   "candidates": [
    {
-    "scientific_name": "Ulva lactuca",
+    "scientific_name": "Usnea barbata",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -1230,7 +1230,7 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Usnea barbata",
+    "scientific_name": "Ulva lactuca",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -1429,27 +1429,6 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Verbascum sinuatum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "φλόμον Ἰδαῖον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Calamintha incana",
     "level": "species",
     "kingdom_flag": "plant",
@@ -1525,6 +1504,23 @@
    },
    {
     "scientific_name": "Phlomis fruticosa",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "φλόμον Ἰδαῖον"
+    ]
+   },
+   {
+    "scientific_name": "Verbascum sinuatum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [],
@@ -1618,7 +1614,7 @@
   "label": "1.29",
   "candidates": [
    {
-    "scientific_name": "Inula helenium",
+    "scientific_name": "Calamintha incana",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -1639,7 +1635,7 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Calamintha incana",
+    "scientific_name": "Inula helenium",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -2313,13 +2309,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -2642,27 +2638,6 @@
   "label": "1.78",
   "candidates": [
    {
-    "scientific_name": "Ruscus hypoglossum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "δάφνη"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Laurus nobilis",
     "level": "species",
     "kingdom_flag": "plant",
@@ -2691,6 +2666,27 @@
    },
    {
     "scientific_name": "Avicennia officinalis",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "δάφνη"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_headword"
+    ],
+    "bridges": {
+     "lexicon_headword": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 1,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Ruscus hypoglossum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -3409,13 +3405,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -3492,13 +3488,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -4297,7 +4293,7 @@
   "label": "1.109",
   "candidates": [
    {
-    "scientific_name": "Lolium perenne",
+    "scientific_name": "Chamaerops humilis",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -4307,18 +4303,18 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_this_chapter"
+     "lexicon_headword"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_headword": 1
     },
-    "strong_rows": 1,
-    "medium_rows": 0,
+    "strong_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
    {
-    "scientific_name": "Chamaerops humilis",
+    "scientific_name": "Lolium perenne",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -4434,27 +4430,6 @@
   "label": "1.112",
   "candidates": [
    {
-    "scientific_name": "Ruscus aculeatus",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "μυρσίνη"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Myrtus communis",
     "level": "species",
     "kingdom_flag": "plant",
@@ -4475,6 +4450,27 @@
     },
     "strong_rows": 0,
     "medium_rows": 2,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Ruscus aculeatus",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "μυρσίνη"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_headword"
+    ],
+    "bridges": {
+     "lexicon_headword": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -4662,7 +4658,7 @@
   "label": "1.116",
   "candidates": [
    {
-    "scientific_name": "Euphorbia apios",
+    "scientific_name": "Pyrus communis",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -4683,7 +4679,7 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Pyrus communis",
+    "scientific_name": "Euphorbia apios",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -4693,13 +4689,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_this_chapter"
+     "lexicon_headword"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_headword": 1
     },
-    "strong_rows": 1,
-    "medium_rows": 0,
+    "strong_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -4768,6 +4764,27 @@
     "weak_book_names": []
    },
    {
+    "scientific_name": "Celtis australis",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "λωτὸς"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
     "scientific_name": "Medicago arborea",
     "level": "species",
     "kingdom_flag": "plant",
@@ -4789,7 +4806,7 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Celtis australis",
+    "scientific_name": "Nymphaea nelumbo",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -4799,13 +4816,34 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Nymphaea stellata",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "λωτὸς"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -4832,48 +4870,6 @@
    },
    {
     "scientific_name": "Melilotus messanensis",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "λωτὸς"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Nymphaea nelumbo",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "λωτὸς"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Nymphaea stellata",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -6662,27 +6658,6 @@
   "label": "2.94",
   "candidates": [
    {
-    "scientific_name": "Avena barbata",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "βρόμος"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Avena sativa",
     "level": "species",
     "kingdom_flag": "plant",
@@ -6694,15 +6669,36 @@
      "wikidata"
     ],
     "families": [
-     "lexicon_headword",
+     "lexicon_this_chapter",
      "wikidata_grc"
     ],
     "bridges": {
-     "lexicon_headword": 1,
+     "lexicon_this_chapter": 1,
      "wikidata_grc": 1
     },
+    "strong_rows": 1,
+    "medium_rows": 1,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Avena barbata",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "βρόμος"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_headword"
+    ],
+    "bridges": {
+     "lexicon_headword": 1
+    },
     "strong_rows": 0,
-    "medium_rows": 2,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -6988,6 +6984,7 @@
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
+     "λωτόν",
      "τῆλις νάρφος"
     ],
     "sources": [
@@ -6997,39 +6994,15 @@
      "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_synonym": 1,
-     "lexicon_this_chapter": 1
+     "lexicon_this_chapter": 2
     },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "λωτόν"
-    ]
-   },
-   {
-    "scientific_name": "Medicago arborea",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "λωτόν"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
+    "strong_rows": 2,
     "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
    {
-    "scientific_name": "Nymphaea lotus",
+    "scientific_name": "Lotus corniculatus",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -7067,7 +7040,7 @@
     ]
    },
    {
-    "scientific_name": "Lotus corniculatus",
+    "scientific_name": "Medicago arborea",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [],
@@ -7085,6 +7058,23 @@
    },
    {
     "scientific_name": "Melilotus messanensis",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "λωτόν"
+    ]
+   },
+   {
+    "scientific_name": "Nymphaea lotus",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [],
@@ -7262,28 +7252,24 @@
   "label": "2.103",
   "candidates": [
    {
-    "scientific_name": "Linum usitatissimum",
+    "scientific_name": "Gossypium herbaceum",
     "level": "species",
     "kingdom_flag": "plant",
-    "book_names": [
-     "λίνον ἄγριον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
+    "book_names": [],
+    "sources": [],
+    "families": [],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_synonym": 1
     },
-    "strong_rows": 1,
+    "strong_rows": 0,
     "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
+    "weak_rows": 1,
+    "weak_book_names": [
+     "λίνον ἄγριον"
+    ]
    },
    {
-    "scientific_name": "Gossypium herbaceum",
+    "scientific_name": "Linum usitatissimum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [],
@@ -7902,15 +7888,15 @@
      "wikidata"
     ],
     "families": [
-     "lexicon_headword",
+     "lexicon_this_chapter",
      "wikidata_grc"
     ],
     "bridges": {
-     "lexicon_headword": 1,
+     "lexicon_this_chapter": 1,
      "wikidata_grc": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 2,
+    "strong_rows": 1,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -7925,13 +7911,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -8428,48 +8414,6 @@
   "label": "2.125",
   "candidates": [
    {
-    "scientific_name": "Neslia paniculata",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "μελάμπυρον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Salvia horminum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ὅρμινον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Asparagus officinalis",
     "level": "species",
     "kingdom_flag": "plant",
@@ -8484,6 +8428,40 @@
     "weak_rows": 1,
     "weak_book_names": [
      "ἀσπάραγος"
+    ]
+   },
+   {
+    "scientific_name": "Neslia paniculata",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "μελάμπυρον"
+    ]
+   },
+   {
+    "scientific_name": "Salvia horminum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ὅρμινον"
     ]
    },
    {
@@ -8718,48 +8696,6 @@
   "label": "2.127",
   "candidates": [
    {
-    "scientific_name": "Anagallis arvensis",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἀναγαλλὶς ἔνυδρος"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Anagallis caerulea",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἀναγαλλὶς ἔνυδρος"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Sium angustifolium",
     "level": "species",
     "kingdom_flag": "plant",
@@ -8800,6 +8736,40 @@
     "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
+   },
+   {
+    "scientific_name": "Anagallis arvensis",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ἀναγαλλὶς ἔνυδρος"
+    ]
+   },
+   {
+    "scientific_name": "Anagallis caerulea",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ἀναγαλλὶς ἔνυδρος"
+    ]
    },
    {
     "scientific_name": "Cymbopogon schoenanthus",
@@ -8877,7 +8847,7 @@
   "label": "2.128",
   "candidates": [
    {
-    "scientific_name": "Mentha aquatica",
+    "scientific_name": "Nasturtium officinale",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -8887,18 +8857,18 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
    {
-    "scientific_name": "Nasturtium officinale",
+    "scientific_name": "Mentha aquatica",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -9305,27 +9275,6 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Lepidium latifolium",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "λεπίδιον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Elettaria cardamomum",
     "level": "species",
     "kingdom_flag": "plant",
@@ -9334,6 +9283,23 @@
     "families": [],
     "bridges": {
      "wikidata_el": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "λεπίδιον"
+    ]
+   },
+   {
+    "scientific_name": "Lepidium latifolium",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
     },
     "strong_rows": 0,
     "medium_rows": 0,
@@ -9409,53 +9375,11 @@
   "label": "2.139",
   "candidates": [
    {
-    "scientific_name": "Athamanta cretensis",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "δαῦκον ἄγριον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Tordylium apulum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
      "καυκαλίς"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Ulva lactuca",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "βρύον"
     ],
     "sources": [
      "lexicon"
@@ -9487,6 +9411,23 @@
     "weak_book_names": [
      "δαῦκον ἄγριον",
      "σεσελίς"
+    ]
+   },
+   {
+    "scientific_name": "Athamanta cretensis",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "δαῦκον ἄγριον"
     ]
    },
    {
@@ -9589,6 +9530,23 @@
     "weak_rows": 1,
     "weak_book_names": [
      "σεσελίς"
+    ]
+   },
+   {
+    "scientific_name": "Ulva lactuca",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "βρύον"
     ]
    },
    {
@@ -9841,28 +9799,7 @@
   "label": "2.146",
   "candidates": [
    {
-    "scientific_name": "Quercus ilex",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "σμῖλαξ"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Taxus baccata",
+    "scientific_name": "Phaseolus vulgaris",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -9904,7 +9841,7 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Phaseolus vulgaris",
+    "scientific_name": "Quercus ilex",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -9926,6 +9863,27 @@
    },
    {
     "scientific_name": "Smilax aspera",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "σμῖλαξ"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_headword"
+    ],
+    "bridges": {
+     "lexicon_headword": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 1,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Taxus baccata",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -9977,6 +9935,27 @@
   "label": "2.147",
   "candidates": [
    {
+    "scientific_name": "Trifolium fragiferum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "τρίφυλλον"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
     "scientific_name": "Trifolium",
     "level": "genus",
     "kingdom_flag": "plant",
@@ -10017,23 +9996,6 @@
    },
    {
     "scientific_name": "Psoralea bituminosa",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [],
-    "sources": [],
-    "families": [],
-    "bridges": {
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 0,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "τρίφυλλον"
-    ]
-   },
-   {
-    "scientific_name": "Trifolium fragiferum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [],
@@ -10169,15 +10131,15 @@
      "wikidata"
     ],
     "families": [
-     "lexicon_headword",
+     "lexicon_this_chapter",
      "wikidata_grc"
     ],
     "bridges": {
-     "lexicon_headword": 1,
+     "lexicon_this_chapter": 1,
      "wikidata_grc": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 2,
+    "strong_rows": 1,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    }
@@ -10712,15 +10674,15 @@
      "wikidata"
     ],
     "families": [
-     "lexicon_this_chapter",
+     "lexicon_headword",
      "wikidata_grc"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1,
+     "lexicon_headword": 1,
      "wikidata_grc": 1
     },
-    "strong_rows": 1,
-    "medium_rows": 1,
+    "strong_rows": 0,
+    "medium_rows": 2,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -10735,13 +10697,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_this_chapter"
+     "lexicon_headword"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_headword": 1
     },
-    "strong_rows": 1,
-    "medium_rows": 0,
+    "strong_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -10930,69 +10892,6 @@
   "label": "2.166",
   "candidates": [
    {
-    "scientific_name": "Arum dioscoridis",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἄρον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Arum italicum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἄρον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Carum copticum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἄμι ἄγριον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Dracunculus vulgaris",
     "level": "species",
     "kingdom_flag": "plant",
@@ -11012,6 +10911,57 @@
     "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
+   },
+   {
+    "scientific_name": "Arum dioscoridis",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ἄρον"
+    ]
+   },
+   {
+    "scientific_name": "Arum italicum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ἄρον"
+    ]
+   },
+   {
+    "scientific_name": "Carum copticum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ἄμι ἄγριον"
+    ]
    },
    {
     "scientific_name": "Colocasia antiquorum",
@@ -11322,13 +11272,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_this_chapter"
+     "lexicon_headword"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_headword": 1
     },
-    "strong_rows": 1,
-    "medium_rows": 0,
+    "strong_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -11343,13 +11293,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_this_chapter"
+     "lexicon_headword"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_headword": 1
     },
-    "strong_rows": 1,
-    "medium_rows": 0,
+    "strong_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    }
@@ -11371,15 +11321,15 @@
      "wikidata"
     ],
     "families": [
-     "lexicon_headword",
+     "lexicon_this_chapter",
      "wikidata_grc"
     ],
     "bridges": {
-     "lexicon_headword": 1,
+     "lexicon_this_chapter": 1,
      "wikidata_grc": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 2,
+    "strong_rows": 1,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -11440,13 +11390,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -11492,52 +11442,6 @@
   "label": "2.173",
   "candidates": [
    {
-    "scientific_name": "Asplenium trichomanes",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "τριχομανές",
-     "τριχομανὲς"
-    ],
-    "sources": [
-     "lexicon",
-     "wikidata"
-    ],
-    "families": [
-     "lexicon_this_chapter",
-     "wikidata_grc"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 2,
-     "wikidata_grc": 2
-    },
-    "strong_rows": 2,
-    "medium_rows": 2,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Aconitum napellus",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἀκόνιτον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Capparis spinosa",
     "level": "species",
     "kingdom_flag": "plant",
@@ -11559,7 +11463,50 @@
     "weak_book_names": []
    },
    {
+    "scientific_name": "Asplenium trichomanes",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "τριχομανές",
+     "τριχομανὲς"
+    ],
+    "sources": [
+     "wikidata"
+    ],
+    "families": [
+     "wikidata_grc"
+    ],
+    "bridges": {
+     "lexicon_synonym": 2,
+     "wikidata_grc": 2
+    },
+    "strong_rows": 0,
+    "medium_rows": 2,
+    "weak_rows": 2,
+    "weak_book_names": [
+     "τριχομανές",
+     "τριχομανὲς"
+    ]
+   },
+   {
     "scientific_name": "Aconitum anthora",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ἀκόνιτον"
+    ]
+   },
+   {
+    "scientific_name": "Aconitum napellus",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [],
@@ -11837,27 +11784,6 @@
   "label": "2.175",
   "candidates": [
    {
-    "scientific_name": "Smyrnium olus-atrum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἱπποσέλινον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Apium graveolens",
     "level": "species",
     "kingdom_flag": "plant",
@@ -11968,6 +11894,23 @@
     "weak_book_names": []
    },
    {
+    "scientific_name": "Smyrnium olus-atrum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ἱπποσέλινον"
+    ]
+   },
+   {
     "scientific_name": "Apium",
     "level": "genus",
     "kingdom_flag": "plant",
@@ -12046,7 +11989,7 @@
   "label": "2.176",
   "candidates": [
    {
-    "scientific_name": "Anemone blanda",
+    "scientific_name": "Anemone coronaria",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -12056,18 +11999,18 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
    {
-    "scientific_name": "Anemone coronaria",
+    "scientific_name": "Anemone blanda",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -12555,13 +12498,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -12747,25 +12690,24 @@
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
-     "χελιδόνιον"
+     "χελιδόνιον",
+     "ὀθόνναν"
     ],
     "sources": [
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1,
-     "wikidata_el": 1,
-     "lexicon_synonym": 1
+     "lexicon_this_chapter": 2,
+     "wikidata_el": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 2,
+    "strong_rows": 2,
+    "medium_rows": 0,
+    "weak_rows": 1,
     "weak_book_names": [
-     "χελιδόνιον",
-     "ὀθόνναν"
+     "χελιδόνιον"
     ]
    },
    {
@@ -12935,27 +12877,6 @@
   "label": "2.182",
   "candidates": [
    {
-    "scientific_name": "Glaucium corniculatum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "γλαυκίου"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Chelidonium majus",
     "level": "species",
     "kingdom_flag": "plant",
@@ -12977,6 +12898,23 @@
     "weak_rows": 1,
     "weak_book_names": [
      "ἥτις ὀθόννα"
+    ]
+   },
+   {
+    "scientific_name": "Glaucium corniculatum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "γλαυκίου"
     ]
    },
    {
@@ -13037,14 +12975,14 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1,
+     "lexicon_this_chapter": 1,
      "wikidata_la_same_word": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 1,
     "weak_book_names": [
      "ἰσάτις"
@@ -13142,27 +13080,6 @@
   "label": "2.186",
   "candidates": [
    {
-    "scientific_name": "Ulva lactuca",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "βρύον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Marchantia polymorpha",
     "level": "species",
     "kingdom_flag": "plant",
@@ -13228,6 +13145,23 @@
     "weak_rows": 1,
     "weak_book_names": [
      "ἀείζῳον ἄγριον"
+    ]
+   },
+   {
+    "scientific_name": "Ulva lactuca",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "βρύον"
     ]
    },
    {
@@ -13366,27 +13300,6 @@
   "label": "3.3",
   "candidates": [
    {
-    "scientific_name": "Aloe vera",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἀλόη Γαλ- λική"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Gentiana",
     "level": "genus",
     "kingdom_flag": "plant",
@@ -13436,6 +13349,23 @@
    },
    {
     "scientific_name": "Aloe perryi",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ἀλόη Γαλ- λική"
+    ]
+   },
+   {
+    "scientific_name": "Aloe vera",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [],
@@ -13763,13 +13693,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_this_chapter"
+     "lexicon_headword"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_headword": 1
     },
-    "strong_rows": 1,
-    "medium_rows": 0,
+    "strong_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -13885,24 +13815,22 @@
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
-     "χαμαιλέων"
+     "χαμαιλέων",
+     "ἰξίαν"
     ],
     "sources": [
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_synonym": 1
+     "lexicon_this_chapter": 2
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "ἰξίαν"
-    ]
+    "strong_rows": 2,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
    },
    {
     "scientific_name": "Cardopatium corymbosum",
@@ -14284,7 +14212,7 @@
   "label": "3.12",
   "candidates": [
    {
-    "scientific_name": "Notobasis syriaca",
+    "scientific_name": "Acacia albida",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -14305,7 +14233,7 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Acacia albida",
+    "scientific_name": "Cnicus acarna",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -14315,13 +14243,34 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Notobasis syriaca",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "ἄκανθα"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -14390,27 +14339,6 @@
    },
    {
     "scientific_name": "Carduus arvensis",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἄκανθα"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Cnicus acarna",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -15039,22 +14967,18 @@
     "scientific_name": "Ononis antiquorum",
     "level": "species",
     "kingdom_flag": "plant",
-    "book_names": [
-     "ὀνωνίδα"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
+    "book_names": [],
+    "sources": [],
+    "families": [],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_synonym": 1
     },
-    "strong_rows": 1,
+    "strong_rows": 0,
     "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ὀνωνίδα"
+    ]
    },
    {
     "scientific_name": "Ononis",
@@ -15109,13 +15033,34 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Tyrimnus leucographus",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "λευκάκανθα"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -15134,27 +15079,6 @@
     ],
     "bridges": {
      "wikidata_grc": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Tyrimnus leucographus",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "λευκάκανθα"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
     },
     "strong_rows": 0,
     "medium_rows": 1,
@@ -15661,13 +15585,34 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Pancratium maritimum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "παγκράτιον"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -15691,23 +15636,6 @@
     "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
-   },
-   {
-    "scientific_name": "Pancratium maritimum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [],
-    "sources": [],
-    "families": [],
-    "bridges": {
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 0,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "παγκράτιον"
-    ]
    },
    {
     "scientific_name": "Urginea maritima",
@@ -15824,18 +15752,22 @@
     "scientific_name": "Origanum heracleoticum",
     "level": "species",
     "kingdom_flag": "plant",
-    "book_names": [],
-    "sources": [],
-    "families": [],
-    "bridges": {
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 0,
-    "weak_rows": 1,
-    "weak_book_names": [
+    "book_names": [
      "κονίλην"
-    ]
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
    },
    {
     "scientific_name": "Origanum viride",
@@ -16021,48 +15953,6 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Colchicum autumnale",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἐφήμερον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Polygonatum multiflorum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἐφήμερον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Origanum dictamnus",
     "level": "species",
     "kingdom_flag": "plant",
@@ -16085,6 +15975,40 @@
     "medium_rows": 2,
     "weak_rows": 0,
     "weak_book_names": []
+   },
+   {
+    "scientific_name": "Colchicum autumnale",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ἐφήμερον"
+    ]
+   },
+   {
+    "scientific_name": "Polygonatum multiflorum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ἐφήμερον"
+    ]
    },
    {
     "scientific_name": "Becium",
@@ -16751,11 +16675,11 @@
   "label": "3.38",
   "candidates": [
    {
-    "scientific_name": "Teucrium polium",
+    "scientific_name": "Thymus sibthorpii",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
-     "πόλιον"
+     "ἔρπυλλος"
     ],
     "sources": [
      "lexicon"
@@ -16772,28 +16696,24 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Thymus sibthorpii",
+    "scientific_name": "Teucrium creticum",
     "level": "species",
     "kingdom_flag": "plant",
-    "book_names": [
-     "ἔρπυλλος"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
+    "book_names": [],
+    "sources": [],
+    "families": [],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_synonym": 1
     },
     "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "πόλιον"
+    ]
    },
    {
-    "scientific_name": "Teucrium creticum",
+    "scientific_name": "Teucrium polium",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [],
@@ -17340,28 +17260,24 @@
   "label": "3.47",
   "candidates": [
    {
-    "scientific_name": "Matthiola incana",
+    "scientific_name": "Galanthus nivalis",
     "level": "species",
     "kingdom_flag": "plant",
-    "book_names": [
-     "λευκόῖον ἄγριον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
+    "book_names": [],
+    "sources": [],
+    "families": [],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_synonym": 1
     },
-    "strong_rows": 1,
+    "strong_rows": 0,
     "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
+    "weak_rows": 1,
+    "weak_book_names": [
+     "λευκόῖον ἄγριον"
+    ]
    },
    {
-    "scientific_name": "Galanthus nivalis",
+    "scientific_name": "Matthiola incana",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [],
@@ -17417,6 +17333,48 @@
   "label": "3.51",
   "candidates": [
    {
+    "scientific_name": "Laserpitium garganicum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "πανάκειαν"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Opopanax hispidus",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "πανάκειαν"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
     "scientific_name": "Laserpitium",
     "level": "genus",
     "kingdom_flag": "plant",
@@ -17436,40 +17394,6 @@
     "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
-   },
-   {
-    "scientific_name": "Laserpitium garganicum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [],
-    "sources": [],
-    "families": [],
-    "bridges": {
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 0,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "πανάκειαν"
-    ]
-   },
-   {
-    "scientific_name": "Opopanax hispidus",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [],
-    "sources": [],
-    "families": [],
-    "bridges": {
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 0,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "πανάκειαν"
-    ]
    }
   ]
  },
@@ -17841,13 +17765,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -17928,13 +17852,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -17949,13 +17873,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -18220,27 +18144,6 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Petroselinum sativum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "πετροσέλινον ἄγριον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Apium graveolens",
     "level": "species",
     "kingdom_flag": "plant",
@@ -18265,6 +18168,23 @@
     "weak_book_names": [
      "σέλινον ἄγριον",
      "ἄπιουμ"
+    ]
+   },
+   {
+    "scientific_name": "Petroselinum sativum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "πετροσέλινον ἄγριον"
     ]
    },
    {
@@ -18448,22 +18368,18 @@
     "scientific_name": "Smyrnium perfoliatum",
     "level": "species",
     "kingdom_flag": "plant",
-    "book_names": [
-     "σμύρνιον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
+    "book_names": [],
+    "sources": [],
+    "families": [],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_synonym": 1
     },
-    "strong_rows": 1,
+    "strong_rows": 0,
     "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
+    "weak_rows": 1,
+    "weak_book_names": [
+     "σμύρνιον"
+    ]
    },
    {
     "scientific_name": "Smyrnium",
@@ -18823,27 +18739,6 @@
   "label": "3.73a",
   "candidates": [
    {
-    "scientific_name": "Scilla bifolia",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ὑάκινθος"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Delphinium ajacis",
     "level": "species",
     "kingdom_flag": "plant",
@@ -18879,6 +18774,23 @@
    },
    {
     "scientific_name": "Lilium martagon",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ὑάκινθος"
+    ]
+   },
+   {
+    "scientific_name": "Scilla bifolia",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [],
@@ -19101,7 +19013,7 @@
   "label": "3.74",
   "candidates": [
    {
-    "scientific_name": "Rosmarinus officinalis",
+    "scientific_name": "Ferulago galbanifera",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -19122,30 +19034,6 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Ferulago galbanifera",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "λιβανωτίς"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "λιβανωτίς"
-    ]
-   },
-   {
     "scientific_name": "Lactuca graeca",
     "level": "species",
     "kingdom_flag": "plant",
@@ -19156,21 +19044,39 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_synonym": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "λιβανωτίς"
-    ]
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
    },
    {
     "scientific_name": "Lecokia cretica",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "λιβανωτίς"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Rosmarinus officinalis",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -19235,27 +19141,6 @@
   "label": "3.75",
   "candidates": [
    {
-    "scientific_name": "Rosmarinus officinalis",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "λιβανωτίς"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Ferulago galbanifera",
     "level": "species",
     "kingdom_flag": "plant",
@@ -19299,6 +19184,27 @@
    },
    {
     "scientific_name": "Lecokia cretica",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "λιβανωτίς"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_headword"
+    ],
+    "bridges": {
+     "lexicon_headword": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 1,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Rosmarinus officinalis",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -19384,85 +19290,69 @@
     "scientific_name": "Lloydia graeca",
     "level": "species",
     "kingdom_flag": "plant",
-    "book_names": [
-     "φαλάγγιον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
+    "book_names": [],
+    "sources": [],
+    "families": [],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_synonym": 1
     },
-    "strong_rows": 1,
+    "strong_rows": 0,
     "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
+    "weak_rows": 1,
+    "weak_book_names": [
+     "φαλάγγιον"
+    ]
    },
    {
     "scientific_name": "Osyris alba",
     "level": "species",
     "kingdom_flag": "plant",
-    "book_names": [
-     "προφῆται Ὄσιρις"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
+    "book_names": [],
+    "sources": [],
+    "families": [],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_synonym": 1
     },
-    "strong_rows": 1,
+    "strong_rows": 0,
     "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
+    "weak_rows": 1,
+    "weak_book_names": [
+     "προφῆται Ὄσιρις"
+    ]
    },
    {
     "scientific_name": "Spiraea filipendula",
     "level": "species",
     "kingdom_flag": "plant",
-    "book_names": [
-     "οἰνάνθη"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
+    "book_names": [],
+    "sources": [],
+    "families": [],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_synonym": 1
     },
-    "strong_rows": 1,
+    "strong_rows": 0,
     "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
+    "weak_rows": 1,
+    "weak_book_names": [
+     "οἰνάνθη"
+    ]
    },
    {
     "scientific_name": "Vitis silvestris",
     "level": "species",
     "kingdom_flag": "plant",
-    "book_names": [
-     "οἰνάνθη"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
+    "book_names": [],
+    "sources": [],
+    "families": [],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_synonym": 1
     },
-    "strong_rows": 1,
+    "strong_rows": 0,
     "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
+    "weak_rows": 1,
+    "weak_book_names": [
+     "οἰνάνθη"
+    ]
    },
    {
     "scientific_name": "Oenanthe",
@@ -20367,28 +20257,6 @@
   "label": "3.93",
   "candidates": [
    {
-    "scientific_name": "Carthamus tinctorius",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "κνῆκον ἄγριον",
-     "κνῆκος ἀγρία"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 2
-    },
-    "strong_rows": 2,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Carthamus lanatus",
     "level": "species",
     "kingdom_flag": "plant",
@@ -20411,6 +20279,24 @@
    },
    {
     "scientific_name": "Carthamus leucocaulos",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 2
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 2,
+    "weak_book_names": [
+     "κνῆκον ἄγριον",
+     "κνῆκος ἀγρία"
+    ]
+   },
+   {
+    "scientific_name": "Carthamus tinctorius",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [],
@@ -20489,11 +20375,11 @@
   "label": "3.94",
   "candidates": [
    {
-    "scientific_name": "Calamintha clinopodium",
+    "scientific_name": "Polygonatum multiflorum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
-     "κλινοπόδιον"
+     "πολυγόνατον"
     ],
     "sources": [
      "lexicon"
@@ -20531,6 +20417,23 @@
     "weak_book_names": []
    },
    {
+    "scientific_name": "Calamintha clinopodium",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "κλινοπόδιον"
+    ]
+   },
+   {
     "scientific_name": "Dianthus inodorus",
     "level": "species",
     "kingdom_flag": "plant",
@@ -20545,23 +20448,6 @@
     "weak_rows": 1,
     "weak_book_names": [
      "Διὸς ἠλακάτη"
-    ]
-   },
-   {
-    "scientific_name": "Polygonatum multiflorum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [],
-    "sources": [],
-    "families": [],
-    "bridges": {
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 0,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "πολυγόνατον"
     ]
    },
    {
@@ -20689,11 +20575,53 @@
   "label": "3.96",
   "candidates": [
    {
-    "scientific_name": "Agrostemma githago",
+    "scientific_name": "Glaucium flavum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
-     "λυχνὶς ἀγρία"
+     "μήκων κερατῖτις"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Papaver somniferum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "μήκων κερατῖτις"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Silene venosa",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "μήκων κερατῖτις"
     ],
     "sources": [
      "lexicon"
@@ -20780,6 +20708,23 @@
     ]
    },
    {
+    "scientific_name": "Agrostemma githago",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "λυχνὶς ἀγρία"
+    ]
+   },
+   {
     "scientific_name": "Anemone blanda",
     "level": "species",
     "kingdom_flag": "plant",
@@ -20828,23 +20773,6 @@
     "weak_rows": 1,
     "weak_book_names": [
      "ἁνεμώνη"
-    ]
-   },
-   {
-    "scientific_name": "Glaucium flavum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [],
-    "sources": [],
-    "families": [],
-    "bridges": {
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 0,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "μήκων κερατῖτις"
     ]
    },
    {
@@ -20900,40 +20828,6 @@
    },
    {
     "scientific_name": "Papaver rhoeas",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [],
-    "sources": [],
-    "families": [],
-    "bridges": {
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 0,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "μήκων κερατῖτις"
-    ]
-   },
-   {
-    "scientific_name": "Papaver somniferum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [],
-    "sources": [],
-    "families": [],
-    "bridges": {
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 0,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "μήκων κερατῖτις"
-    ]
-   },
-   {
-    "scientific_name": "Silene venosa",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [],
@@ -21223,7 +21117,7 @@
   "label": "3.100",
   "candidates": [
    {
-    "scientific_name": "Agrostemma githago",
+    "scientific_name": "Lychnis coronaria",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -21244,7 +21138,7 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Lychnis coronaria",
+    "scientific_name": "Agrostemma githago",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -21383,13 +21277,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -21513,27 +21407,6 @@
   "label": "3.103",
   "candidates": [
    {
-    "scientific_name": "Marrubium vulgare",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "πράσιον ἕτερον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Selinum palustre",
     "level": "species",
     "kingdom_flag": "plant",
@@ -21556,6 +21429,23 @@
    },
    {
     "scientific_name": "Marrubium peregrinum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "πράσιον ἕτερον"
+    ]
+   },
+   {
+    "scientific_name": "Marrubium vulgare",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [],
@@ -21716,27 +21606,6 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Narcissus tazetta",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "λείριον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Marrubium peregrinum",
     "level": "species",
     "kingdom_flag": "plant",
@@ -21776,6 +21645,23 @@
    },
    {
     "scientific_name": "Narcissus serotinus",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "λείριον"
+    ]
+   },
+   {
+    "scientific_name": "Narcissus tazetta",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [],
@@ -22572,7 +22458,7 @@
   "label": "3.113",
   "candidates": [
    {
-    "scientific_name": "Artemisia scoparia",
+    "scientific_name": "Artemisia arborescens",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -22593,27 +22479,6 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Artemisia arborescens",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἀρτεμισία"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Artemisia campestris",
     "level": "species",
     "kingdom_flag": "plant",
@@ -22624,13 +22489,34 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Artemisia scoparia",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "ἀρτεμισία"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -23141,13 +23027,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -23527,69 +23413,6 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Muscari comosum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "βολβὸς ὁ ἐμετικός"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Narcissus tazetta",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "βολβὸς ὁ ἐμετικός"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Scilla hyacinthoides",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "βολβὸς ὁ ἐμετικός"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Lilium candidum",
     "level": "species",
     "kingdom_flag": "plant",
@@ -23624,6 +23447,40 @@
     ]
    },
    {
+    "scientific_name": "Muscari comosum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "βολβὸς ὁ ἐμετικός"
+    ]
+   },
+   {
+    "scientific_name": "Narcissus tazetta",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "βολβὸς ὁ ἐμετικός"
+    ]
+   },
+   {
     "scientific_name": "Nelumbium speciosum",
     "level": "species",
     "kingdom_flag": "plant",
@@ -23638,6 +23495,23 @@
     "weak_rows": 1,
     "weak_book_names": [
      "κρίνον ἄγριον"
+    ]
+   },
+   {
+    "scientific_name": "Scilla hyacinthoides",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "βολβὸς ὁ ἐμετικός"
     ]
    },
    {
@@ -23785,15 +23659,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword",
      "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_this_chapter": 1
+     "lexicon_this_chapter": 2
     },
-    "strong_rows": 1,
-    "medium_rows": 1,
+    "strong_rows": 2,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -23826,48 +23698,44 @@
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
+     "κυνὸς ὄρχιν",
      "ὄρχις"
     ],
     "sources": [
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_synonym": 1
+     "lexicon_this_chapter": 2
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "κυνὸς ὄρχιν"
-    ]
+    "strong_rows": 2,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
    },
    {
     "scientific_name": "Orchis papilionacea",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
+     "κυνὸς ὄρχιν",
      "ὄρχις"
     ],
     "sources": [
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_synonym": 1
+     "lexicon_this_chapter": 2
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "κυνὸς ὄρχιν"
-    ]
+    "strong_rows": 2,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
    },
    {
     "scientific_name": "Orchis",
@@ -24341,13 +24209,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -26236,13 +26104,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -26753,13 +26621,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    }
@@ -26770,11 +26638,11 @@
   "label": "4.4",
   "candidates": [
    {
-    "scientific_name": "Hippuris vulgaris",
+    "scientific_name": "Polygonatum multiflorum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
-     "πολύγονον"
+     "πολυγόνατον"
     ],
     "sources": [
      "lexicon"
@@ -26808,6 +26676,27 @@
     },
     "strong_rows": 1,
     "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Hippuris vulgaris",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "πολύγονον"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_headword"
+    ],
+    "bridges": {
+     "lexicon_headword": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -26852,23 +26741,6 @@
     "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
-   },
-   {
-    "scientific_name": "Polygonatum multiflorum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [],
-    "sources": [],
-    "families": [],
-    "bridges": {
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 0,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "πολυγόνατον"
-    ]
    },
    {
     "scientific_name": "Pedalium",
@@ -27109,7 +26981,7 @@
   "label": "4.7",
   "candidates": [
    {
-    "scientific_name": "Clematis vitalba",
+    "scientific_name": "Vinca herbacea",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -27130,7 +27002,7 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Convolvulus arvensis",
+    "scientific_name": "Clematis vitalba",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -27151,7 +27023,7 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Vinca herbacea",
+    "scientific_name": "Convolvulus arvensis",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -27315,6 +27187,27 @@
   "label": "4.9",
   "candidates": [
    {
+    "scientific_name": "Coris monspeliensis",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "σύμφυτον"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
     "scientific_name": "Inula helenium",
     "level": "species",
     "kingdom_flag": "plant",
@@ -27332,27 +27225,6 @@
     },
     "strong_rows": 1,
     "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Coris monspeliensis",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "σύμφυτον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -27453,7 +27325,7 @@
   "label": "4.10",
   "candidates": [
    {
-    "scientific_name": "Coris monspeliensis",
+    "scientific_name": "Symphytum bulbosum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -27463,21 +27335,18 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_synonym": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "σύμφυτον"
-    ]
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
    },
    {
-    "scientific_name": "Symphytum bulbosum",
+    "scientific_name": "Coris monspeliensis",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -27615,26 +27484,23 @@
   "label": "4.13",
   "candidates": [
    {
-    "scientific_name": "Lonicera etrusca",
+    "scientific_name": "Convolvulus arvensis",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
-     "περικλύμενον"
+     "κλύμενον"
     ],
     "sources": [
-     "lexicon",
-     "wikidata"
+     "lexicon"
     ],
     "families": [
-     "lexicon_this_chapter",
-     "wikidata_grc"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1,
-     "wikidata_grc": 1
+     "lexicon_this_chapter": 1
     },
     "strong_rows": 1,
-    "medium_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -27661,25 +27527,28 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Convolvulus arvensis",
+    "scientific_name": "Lonicera etrusca",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
-     "κλύμενον"
+     "περικλύμενον"
     ],
     "sources": [
-     "lexicon"
+     "wikidata"
     ],
     "families": [
-     "lexicon_headword"
+     "wikidata_grc"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_synonym": 1,
+     "wikidata_grc": 1
     },
     "strong_rows": 0,
     "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
+    "weak_rows": 1,
+    "weak_book_names": [
+     "περικλύμενον"
+    ]
    },
    {
     "scientific_name": "Scorpiurus vermiculata",
@@ -27836,31 +27705,6 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Convolvulus arvensis",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἑλξίνη"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_synonym": 2,
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 2,
-    "weak_book_names": [
-     "κλύμενον",
-     "τοῦτο κλύμενον"
-    ]
-   },
-   {
     "scientific_name": "Lonicera periclymenum",
     "level": "species",
     "kingdom_flag": "plant",
@@ -27903,6 +27747,25 @@
     "medium_rows": 1,
     "weak_rows": 1,
     "weak_book_names": [
+     "ἑλξίνη"
+    ]
+   },
+   {
+    "scientific_name": "Convolvulus arvensis",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 3
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 3,
+    "weak_book_names": [
+     "κλύμενον",
+     "τοῦτο κλύμενον",
      "ἑλξίνη"
     ]
    },
@@ -27983,6 +27846,27 @@
   "label": "4.15",
   "candidates": [
    {
+    "scientific_name": "Trapa natans",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "τρίβολος"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
     "scientific_name": "Echinophora spinosa",
     "level": "species",
     "kingdom_flag": "plant",
@@ -28005,27 +27889,6 @@
    },
    {
     "scientific_name": "Fagonia cretica",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "τρίβολος"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Trapa natans",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -28540,13 +28403,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -28716,6 +28579,27 @@
   "label": "4.23",
   "candidates": [
    {
+    "scientific_name": "Anchusa tinctoria",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "ἄγχουσα"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
     "scientific_name": "Echium parviflorum",
     "level": "species",
     "kingdom_flag": "plant",
@@ -28751,27 +28635,6 @@
     ],
     "bridges": {
      "wikidata_grc": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Anchusa tinctoria",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἄγχουσα"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
     },
     "strong_rows": 0,
     "medium_rows": 1,
@@ -29436,21 +29299,21 @@
      "βούφθαλμον"
     ],
     "sources": [
-     "lexicon",
      "wikidata"
     ],
     "families": [
-     "lexicon_this_chapter",
      "wikidata_grc"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1,
+     "lexicon_synonym": 1,
      "wikidata_grc": 1
     },
-    "strong_rows": 1,
+    "strong_rows": 0,
     "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
+    "weak_rows": 1,
+    "weak_book_names": [
+     "βούφθαλμον"
+    ]
    },
    {
     "scientific_name": "Sideritis",
@@ -29615,13 +29478,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_this_chapter"
+     "lexicon_headword"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_headword": 1
     },
-    "strong_rows": 1,
-    "medium_rows": 0,
+    "strong_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -30456,15 +30319,15 @@
      "wikidata"
     ],
     "families": [
-     "lexicon_headword",
+     "lexicon_this_chapter",
      "wikidata_grc"
     ],
     "bridges": {
-     "lexicon_headword": 1,
+     "lexicon_this_chapter": 1,
      "wikidata_grc": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 2,
+    "strong_rows": 1,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -30503,13 +30366,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -30559,7 +30422,7 @@
   "label": "4.50",
   "candidates": [
    {
-    "scientific_name": "Hypericum hircinum",
+    "scientific_name": "Pimpinella tragium",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -30569,18 +30432,18 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
    {
-    "scientific_name": "Pimpinella tragium",
+    "scientific_name": "Hypericum hircinum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -31029,6 +30892,27 @@
     "weak_book_names": []
    },
    {
+    "scientific_name": "Ranunculus asiaticus",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "χρυσάνθεμον"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
     "scientific_name": "Dianthus inodorus",
     "level": "species",
     "kingdom_flag": "plant",
@@ -31043,23 +30927,6 @@
     "weak_rows": 1,
     "weak_book_names": [
      "Διὸς πώγων"
-    ]
-   },
-   {
-    "scientific_name": "Ranunculus asiaticus",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [],
-    "sources": [],
-    "families": [],
-    "bridges": {
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 0,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "χρυσάνθεμον"
     ]
    },
    {
@@ -31402,6 +31269,27 @@
     "weak_book_names": []
    },
    {
+    "scientific_name": "Verbena officinalis",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "περιστέριον"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
     "scientific_name": "Alhagi maurorum",
     "level": "species",
     "kingdom_flag": "plant",
@@ -31416,27 +31304,6 @@
     ],
     "bridges": {
      "wikidata_grc": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Verbena officinalis",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "περιστέριον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
     },
     "strong_rows": 0,
     "medium_rows": 1,
@@ -31729,8 +31596,7 @@
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
-     "ἄπιος",
-     "ἰσχάς"
+     "ἄπιος"
     ],
     "sources": [
      "lexicon"
@@ -31739,33 +31605,15 @@
      "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_this_chapter": 2
-    },
-    "strong_rows": 2,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Euphorbia chamaesyce",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "χαμαισύκη"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
+     "lexicon_synonym": 1,
      "lexicon_this_chapter": 1
     },
     "strong_rows": 1,
     "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ἰσχάς"
+    ]
    },
    {
     "scientific_name": "Orobus niger",
@@ -31829,6 +31677,23 @@
     "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
+   },
+   {
+    "scientific_name": "Euphorbia chamaesyce",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "χαμαισύκη"
+    ]
    },
    {
     "scientific_name": "Astragalus",
@@ -32067,6 +31932,27 @@
   "label": "4.63",
   "candidates": [
    {
+    "scientific_name": "Papaver hybridum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "μήκων"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
     "scientific_name": "Glaucium flavum",
     "level": "species",
     "kingdom_flag": "plant",
@@ -32089,27 +31975,6 @@
    },
    {
     "scientific_name": "Papaver argemone",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "μήκων"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Papaver hybridum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -32234,11 +32099,12 @@
   "label": "4.64",
   "candidates": [
    {
-    "scientific_name": "Euphorbia chamaesyce",
+    "scientific_name": "Glaucium flavum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
-     "χαμαισύκη"
+     "μήκων",
+     "μήκων δοιάς"
     ],
     "sources": [
      "lexicon"
@@ -32247,36 +32113,100 @@
      "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_this_chapter": 2
     },
-    "strong_rows": 1,
+    "strong_rows": 2,
     "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
    {
-    "scientific_name": "Glaucium flavum",
+    "scientific_name": "Papaver hybridum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
-     "μήκων"
+     "μήκων",
+     "μήκων δοιάς"
     ],
     "sources": [
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_synonym": 1
+     "lexicon_this_chapter": 2
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 1,
-    "weak_book_names": [
+    "strong_rows": 2,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Papaver rhoeas",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "μήκων",
      "μήκων δοιάς"
-    ]
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 2
+    },
+    "strong_rows": 2,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Papaver somniferum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "μήκων",
+     "μήκων δοιάς"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 2
+    },
+    "strong_rows": 2,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Silene venosa",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "μήκων",
+     "μήκων δοιάς"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 2
+    },
+    "strong_rows": 2,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
    },
    {
     "scientific_name": "Papaver argemone",
@@ -32303,99 +32233,20 @@
     ]
    },
    {
-    "scientific_name": "Papaver hybridum",
+    "scientific_name": "Euphorbia chamaesyce",
     "level": "species",
     "kingdom_flag": "plant",
-    "book_names": [
-     "μήκων"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
+    "book_names": [],
+    "sources": [],
+    "families": [],
     "bridges": {
-     "lexicon_headword": 1,
      "lexicon_synonym": 1
     },
     "strong_rows": 0,
-    "medium_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 1,
     "weak_book_names": [
-     "μήκων δοιάς"
-    ]
-   },
-   {
-    "scientific_name": "Papaver rhoeas",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "μήκων"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "μήκων δοιάς"
-    ]
-   },
-   {
-    "scientific_name": "Papaver somniferum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "μήκων"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "μήκων δοιάς"
-    ]
-   },
-   {
-    "scientific_name": "Silene venosa",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "μήκων"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "μήκων δοιάς"
+     "χαμαισύκη"
     ]
    },
    {
@@ -32470,13 +32321,55 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Papaver somniferum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "μήκων"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Silene venosa",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "μήκων"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -32544,48 +32437,6 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Papaver somniferum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "μήκων"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Silene venosa",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "μήκων"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Thalassius",
     "level": "genus",
     "kingdom_flag": "unknown",
@@ -32608,6 +32459,48 @@
   "name": "μήκων",
   "label": "4.66",
   "candidates": [
+   {
+    "scientific_name": "Papaver somniferum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "μήκων"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Silene venosa",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "μήκων"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
    {
     "scientific_name": "Glaucium flavum",
     "level": "species",
@@ -32673,48 +32566,6 @@
    },
    {
     "scientific_name": "Papaver rhoeas",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "μήκων"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Papaver somniferum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "μήκων"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Silene venosa",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -32959,7 +32810,7 @@
   "label": "4.70",
   "candidates": [
    {
-    "scientific_name": "Datura stramonium",
+    "scientific_name": "Solanum nigrum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -32980,7 +32831,7 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Physalis alkekengi",
+    "scientific_name": "Datura stramonium",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -33001,7 +32852,7 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Solanum nigrum",
+    "scientific_name": "Physalis alkekengi",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -33071,7 +32922,7 @@
   "label": "4.72",
   "candidates": [
    {
-    "scientific_name": "Datura stramonium",
+    "scientific_name": "Withania somnifera",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -33090,6 +32941,30 @@
     "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
+   },
+   {
+    "scientific_name": "Datura stramonium",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "στρύχνον"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_headword"
+    ],
+    "bridges": {
+     "lexicon_headword": 1,
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 1,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "στρύχνον"
+    ]
    },
    {
     "scientific_name": "Physalis alkekengi",
@@ -33117,30 +32992,6 @@
    },
    {
     "scientific_name": "Solanum nigrum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "στρύχνον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "στρύχνον"
-    ]
-   },
-   {
-    "scientific_name": "Withania somnifera",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -33601,15 +33452,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword",
      "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_this_chapter": 1
+     "lexicon_this_chapter": 2
     },
-    "strong_rows": 1,
-    "medium_rows": 1,
+    "strong_rows": 2,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -33624,13 +33473,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_this_chapter"
+     "lexicon_headword"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_headword": 1
     },
-    "strong_rows": 1,
-    "medium_rows": 0,
+    "strong_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -34400,90 +34249,6 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Muscari comosum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "βολβὸν ἄγριον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Narcissus tazetta",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "βολβὸν ἄγριον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Polygonatum multiflorum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἐφήμερον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Scilla hyacinthoides",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "βολβὸν ἄγριον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Colchicum speciosum",
     "level": "species",
     "kingdom_flag": "plant",
@@ -34494,15 +34259,83 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
+   },
+   {
+    "scientific_name": "Muscari comosum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "βολβὸν ἄγριον"
+    ]
+   },
+   {
+    "scientific_name": "Narcissus tazetta",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "βολβὸν ἄγριον"
+    ]
+   },
+   {
+    "scientific_name": "Polygonatum multiflorum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ἐφήμερον"
+    ]
+   },
+   {
+    "scientific_name": "Scilla hyacinthoides",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "βολβὸν ἄγριον"
+    ]
    },
    {
     "scientific_name": "Colchicum",
@@ -34568,74 +34401,11 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Muscari comosum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "βολβὸν ἄγριον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Narcissus tazetta",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "βολβὸν ἄγριον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Polygonatum multiflorum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
      "ἐφήμερον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Scilla hyacinthoides",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "βολβὸν ἄγριον"
     ],
     "sources": [
      "lexicon"
@@ -34666,6 +34436,57 @@
     "weak_rows": 1,
     "weak_book_names": [
      "Κολχικόν"
+    ]
+   },
+   {
+    "scientific_name": "Muscari comosum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "βολβὸν ἄγριον"
+    ]
+   },
+   {
+    "scientific_name": "Narcissus tazetta",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "βολβὸν ἄγριον"
+    ]
+   },
+   {
+    "scientific_name": "Scilla hyacinthoides",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "βολβὸν ἄγριον"
     ]
    },
    {
@@ -34711,7 +34532,7 @@
   "label": "4.85",
   "candidates": [
    {
-    "scientific_name": "Convolvulus arvensis",
+    "scientific_name": "Parietaria officinalis",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -34719,16 +34540,19 @@
      "ἑλξίνην"
     ],
     "sources": [
-     "lexicon"
+     "lexicon",
+     "wikidata"
     ],
     "families": [
-     "lexicon_this_chapter"
+     "lexicon_this_chapter",
+     "wikidata_grc"
     ],
     "bridges": {
-     "lexicon_this_chapter": 2
+     "lexicon_this_chapter": 2,
+     "wikidata_grc": 1
     },
     "strong_rows": 2,
-    "medium_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -34778,27 +34602,24 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Parietaria officinalis",
+    "scientific_name": "Convolvulus arvensis",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
      "ἑλξίνη"
     ],
     "sources": [
-     "lexicon",
-     "wikidata"
+     "lexicon"
     ],
     "families": [
-     "lexicon_headword",
-     "wikidata_grc"
+     "lexicon_headword"
     ],
     "bridges": {
      "lexicon_headword": 1,
-     "wikidata_grc": 1,
      "lexicon_synonym": 1
     },
     "strong_rows": 0,
-    "medium_rows": 2,
+    "medium_rows": 1,
     "weak_rows": 1,
     "weak_book_names": [
      "ἑλξίνην"
@@ -36008,13 +35829,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -36060,7 +35881,7 @@
   "label": "4.101",
   "candidates": [
    {
-    "scientific_name": "Achillea millefolium",
+    "scientific_name": "Pistia stratiotes",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -36081,7 +35902,7 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Pistia stratiotes",
+    "scientific_name": "Achillea millefolium",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -36091,13 +35912,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_this_chapter"
+     "lexicon_headword"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_headword": 1
     },
-    "strong_rows": 1,
-    "medium_rows": 0,
+    "strong_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -36387,6 +36208,27 @@
     "weak_book_names": []
    },
    {
+    "scientific_name": "Potamogeton natans",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "ποταμογείτων"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
     "scientific_name": "Capsella bursapastoris",
     "level": "species",
     "kingdom_flag": "plant",
@@ -36435,23 +36277,6 @@
     "weak_rows": 1,
     "weak_book_names": [
      "πανάκεια"
-    ]
-   },
-   {
-    "scientific_name": "Potamogeton natans",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [],
-    "sources": [],
-    "families": [],
-    "bridges": {
-     "lexicon_synonym": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 0,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "ποταμογείτων"
     ]
    },
    {
@@ -36568,15 +36393,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword",
      "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_this_chapter": 1
+     "lexicon_this_chapter": 2
     },
-    "strong_rows": 1,
-    "medium_rows": 1,
+    "strong_rows": 2,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -36850,31 +36673,7 @@
   "label": "4.110",
   "candidates": [
    {
-    "scientific_name": "Nymphaea lotus",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "λωτὸς"
-    ],
-    "sources": [
-     "lexicon",
-     "wikidata"
-    ],
-    "families": [
-     "lexicon_this_chapter",
-     "wikidata_grc"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1,
-     "wikidata_grc": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Medicago arborea",
+    "scientific_name": "Melilotus messanensis",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -36891,6 +36690,51 @@
     },
     "strong_rows": 1,
     "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Trigonella graeca",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "λωτὸς"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Nymphaea lotus",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "λωτὸς"
+    ],
+    "sources": [
+     "lexicon",
+     "wikidata"
+    ],
+    "families": [
+     "lexicon_headword",
+     "wikidata_grc"
+    ],
+    "bridges": {
+     "lexicon_headword": 1,
+     "wikidata_grc": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 2,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -36961,7 +36805,7 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Melilotus messanensis",
+    "scientific_name": "Medicago arborea",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -37046,27 +36890,6 @@
    },
    {
     "scientific_name": "Trigonella gladiata",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "λωτὸς"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Trigonella graeca",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -37183,31 +37006,7 @@
   "label": "4.111",
   "candidates": [
    {
-    "scientific_name": "Nymphaea lotus",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "λωτὸς"
-    ],
-    "sources": [
-     "lexicon",
-     "wikidata"
-    ],
-    "families": [
-     "lexicon_this_chapter",
-     "wikidata_grc"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1,
-     "wikidata_grc": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Medicago arborea",
+    "scientific_name": "Trifolium fragiferum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -37220,36 +37019,39 @@
      "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_this_chapter": 1,
+     "lexicon_synonym": 1
     },
     "strong_rows": 1,
     "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
+    "weak_rows": 1,
+    "weak_book_names": [
+     "τρίφυλλον"
+    ]
    },
    {
-    "scientific_name": "Trifolium fragiferum",
+    "scientific_name": "Nymphaea lotus",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
      "λωτὸς"
     ],
     "sources": [
-     "lexicon"
+     "lexicon",
+     "wikidata"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_headword",
+     "wikidata_grc"
     ],
     "bridges": {
      "lexicon_headword": 1,
-     "lexicon_synonym": 1
+     "wikidata_grc": 1
     },
     "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "τρίφυλλον"
-    ]
+    "medium_rows": 2,
+    "weak_rows": 0,
+    "weak_book_names": []
    },
    {
     "scientific_name": "Celtis australis",
@@ -37274,6 +37076,27 @@
    },
    {
     "scientific_name": "Lotus corniculatus",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "λωτὸς"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_headword"
+    ],
+    "bridges": {
+     "lexicon_headword": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 1,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Medicago arborea",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -37626,27 +37449,6 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Nymphaea lotus",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "λωτὸν μέγαν"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Laburnum vulgare",
     "level": "species",
     "kingdom_flag": "plant",
@@ -37742,6 +37544,23 @@
    },
    {
     "scientific_name": "Melilotus messanensis",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "λωτὸν μέγαν"
+    ]
+   },
+   {
+    "scientific_name": "Nymphaea lotus",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [],
@@ -38751,27 +38570,25 @@
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
-     "ἴον"
+     "ἴον",
+     "ἴον ἄγριον"
     ],
     "sources": [
      "lexicon",
      "wikidata"
     ],
     "families": [
-     "lexicon_headword",
+     "lexicon_this_chapter",
      "wikidata_grc"
     ],
     "bridges": {
-     "lexicon_headword": 1,
-     "wikidata_grc": 1,
-     "lexicon_synonym": 1
+     "lexicon_this_chapter": 2,
+     "wikidata_grc": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 2,
-    "weak_rows": 1,
-    "weak_book_names": [
-     "ἴον ἄγριον"
-    ]
+    "strong_rows": 2,
+    "medium_rows": 1,
+    "weak_rows": 0,
+    "weak_book_names": []
    },
    {
     "scientific_name": "Matthiola incana",
@@ -39203,48 +39020,6 @@
   "label": "4.129",
   "candidates": [
    {
-    "scientific_name": "Agrostemma githago",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ταύτην λυχνίδα ἀγρίαν"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Antirrhinum orontium",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "τοῦτο ἀντίρρινον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Ruscus hypoglossum",
     "level": "species",
     "kingdom_flag": "plant",
@@ -39264,6 +39039,40 @@
     "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
+   },
+   {
+    "scientific_name": "Agrostemma githago",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "ταύτην λυχνίδα ἀγρίαν"
+    ]
+   },
+   {
+    "scientific_name": "Antirrhinum orontium",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "τοῦτο ἀντίρρινον"
+    ]
    },
    {
     "scientific_name": "Lychnis coronaria",
@@ -39517,15 +39326,15 @@
      "wikidata"
     ],
     "families": [
-     "lexicon_headword",
+     "lexicon_this_chapter",
      "wikidata_grc"
     ],
     "bridges": {
-     "lexicon_headword": 1,
+     "lexicon_this_chapter": 1,
      "wikidata_grc": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 2,
+    "strong_rows": 1,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -39730,21 +39539,21 @@
      "τριχομανές"
     ],
     "sources": [
-     "lexicon",
      "wikidata"
     ],
     "families": [
-     "lexicon_this_chapter",
      "wikidata_grc"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1,
+     "lexicon_synonym": 1,
      "wikidata_grc": 1
     },
-    "strong_rows": 1,
+    "strong_rows": 0,
     "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
+    "weak_rows": 1,
+    "weak_book_names": [
+     "τριχομανές"
+    ]
    },
    {
     "scientific_name": "Adiantum capillus-",
@@ -39757,13 +39566,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_this_chapter"
+     "lexicon_headword"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_headword": 1
     },
-    "strong_rows": 1,
-    "medium_rows": 0,
+    "strong_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -41275,27 +41084,6 @@
   "label": "4.148",
   "candidates": [
    {
-    "scientific_name": "Helleborus orientalis",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἐλλέβορος"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Veratrum album",
     "level": "species",
     "kingdom_flag": "plant",
@@ -41334,6 +41122,27 @@
     },
     "strong_rows": 1,
     "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Helleborus orientalis",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "ἐλλέβορος"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_headword"
+    ],
+    "bridges": {
+     "lexicon_headword": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -41384,45 +41193,37 @@
     "scientific_name": "Helleborus orientalis",
     "level": "species",
     "kingdom_flag": "plant",
-    "book_names": [
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 2
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 2,
+    "weak_book_names": [
      "Ἀντικυρικὸν ἐλλέβορον",
      "ἐλλέβορος λευκός"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 2
-    },
-    "strong_rows": 2,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
+    ]
    },
    {
     "scientific_name": "Veratrum album",
     "level": "species",
     "kingdom_flag": "plant",
-    "book_names": [
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 2
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 2,
+    "weak_book_names": [
      "Ἀντικυρικὸν ἐλλέβορον",
      "ἐλλέβορος λευκός"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 2
-    },
-    "strong_rows": 2,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
+    ]
    },
    {
     "scientific_name": "Sesamoides",
@@ -41661,27 +41462,6 @@
   "label": "4.153",
   "candidates": [
    {
-    "scientific_name": "Pteris aquilina",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "θηλυπτερίς"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_this_chapter"
-    ],
-    "bridges": {
-     "lexicon_this_chapter": 1
-    },
-    "strong_rows": 1,
-    "medium_rows": 0,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Thapsia garganica",
     "level": "species",
     "kingdom_flag": "plant",
@@ -41717,6 +41497,23 @@
     "weak_rows": 1,
     "weak_book_names": [
      "παγκράτιον"
+    ]
+   },
+   {
+    "scientific_name": "Pteris aquilina",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [],
+    "sources": [],
+    "families": [],
+    "bridges": {
+     "lexicon_synonym": 1
+    },
+    "strong_rows": 0,
+    "medium_rows": 0,
+    "weak_rows": 1,
+    "weak_book_names": [
+     "θηλυπτερίς"
     ]
    },
    {
@@ -41921,13 +41718,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_this_chapter"
+     "lexicon_headword"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_headword": 1
     },
-    "strong_rows": 1,
-    "medium_rows": 0,
+    "strong_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    }
@@ -44080,6 +43877,48 @@
   "label": "4.181",
   "candidates": [
    {
+    "scientific_name": "Vitis silvestris",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "ἄμπελος"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Vitis vinifera",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "ἄμπελος"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
     "scientific_name": "Bryonia cretica",
     "level": "species",
     "kingdom_flag": "plant",
@@ -44143,48 +43982,6 @@
     "weak_book_names": []
    },
    {
-    "scientific_name": "Vitis silvestris",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἄμπελος"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Vitis vinifera",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἄμπελος"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Vitis",
     "level": "genus",
     "kingdom_flag": "plant",
@@ -44222,13 +44019,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -44419,53 +44216,49 @@
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
-     "ἄμπελος"
+     "Χειρώνιον ἄμπελον",
+     "ἄμπελος",
+     "ἄμπελος μέλαινα"
     ],
     "sources": [
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_synonym": 2
+     "lexicon_this_chapter": 3
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 2,
-    "weak_book_names": [
-     "Χειρώνιον ἄμπελον",
-     "ἄμπελος μέλαινα"
-    ]
-   },
-   {
-    "scientific_name": "Fucus volubilis",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἄμπελος"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1,
-     "lexicon_synonym": 2
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 2,
-    "weak_book_names": [
-     "Χειρώνιον ἄμπελον",
-     "ἄμπελος μέλαινα"
-    ]
+    "strong_rows": 3,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
    },
    {
     "scientific_name": "Tamus communis",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "Χειρώνιον ἄμπελον",
+     "ἄμπελος",
+     "ἄμπελος μέλαινα"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 3
+    },
+    "strong_rows": 3,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Fucus volubilis",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -44628,13 +44421,13 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_this_chapter"
+     "lexicon_headword"
     ],
     "bridges": {
-     "lexicon_this_chapter": 1
+     "lexicon_headword": 1
     },
-    "strong_rows": 1,
-    "medium_rows": 0,
+    "strong_rows": 0,
+    "medium_rows": 1,
     "weak_rows": 0,
     "weak_book_names": []
    },
@@ -45177,6 +44970,27 @@
   "label": "4.190",
   "candidates": [
    {
+    "scientific_name": "Heliotropium villosum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "ἡλιοτρόπιον"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
     "scientific_name": "Croton tinctorius",
     "level": "species",
     "kingdom_flag": "plant",
@@ -45199,27 +45013,6 @@
    },
    {
     "scientific_name": "Heliotropium supinum",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἡλιοτρόπιον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
-    "scientific_name": "Heliotropium villosum",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [
@@ -45264,27 +45057,6 @@
   "label": "4.191",
   "candidates": [
    {
-    "scientific_name": "Croton tinctorius",
-    "level": "species",
-    "kingdom_flag": "plant",
-    "book_names": [
-     "ἡλιοτρόπιον"
-    ],
-    "sources": [
-     "lexicon"
-    ],
-    "families": [
-     "lexicon_headword"
-    ],
-    "bridges": {
-     "lexicon_headword": 1
-    },
-    "strong_rows": 0,
-    "medium_rows": 1,
-    "weak_rows": 0,
-    "weak_book_names": []
-   },
-   {
     "scientific_name": "Heliotropium supinum",
     "level": "species",
     "kingdom_flag": "plant",
@@ -45295,18 +45067,39 @@
      "lexicon"
     ],
     "families": [
-     "lexicon_headword"
+     "lexicon_this_chapter"
     ],
     "bridges": {
-     "lexicon_headword": 1
+     "lexicon_this_chapter": 1
     },
-    "strong_rows": 0,
-    "medium_rows": 1,
+    "strong_rows": 1,
+    "medium_rows": 0,
     "weak_rows": 0,
     "weak_book_names": []
    },
    {
     "scientific_name": "Heliotropium villosum",
+    "level": "species",
+    "kingdom_flag": "plant",
+    "book_names": [
+     "ἡλιοτρόπιον"
+    ],
+    "sources": [
+     "lexicon"
+    ],
+    "families": [
+     "lexicon_this_chapter"
+    ],
+    "bridges": {
+     "lexicon_this_chapter": 1
+    },
+    "strong_rows": 1,
+    "medium_rows": 0,
+    "weak_rows": 0,
+    "weak_book_names": []
+   },
+   {
+    "scientific_name": "Croton tinctorius",
     "level": "species",
     "kingdom_flag": "plant",
     "book_names": [

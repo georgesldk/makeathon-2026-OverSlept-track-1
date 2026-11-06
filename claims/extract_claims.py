@@ -120,8 +120,9 @@ def parse(text: str):
     return None
 
 
-def entries(book: str) -> list:
-    """[(key, display name, text)] in a fixed order."""
+def entries(book: str, every: bool = False) -> list:
+    """[(key, display name, text)] in a fixed order. every=True: all Dioscorides chapters with text,
+    used on import, so a chapter that later loses its plant keeps its claims (unlinked)."""
     if book == "culpeper":
         out = []
         for h in load_json(ROOT / "historical_texts/culpeper/herbs.json")["herbs"]:
@@ -133,7 +134,7 @@ def entries(book: str) -> list:
     keep = {v["label"] for v in elig.values() if v["shown"] or v["possible"]}
     return [(c["label"], c["headword"] or c["label"], c["text"])
             for c in load_json(ROOT / "historical_texts/dioscorides/chapters.json")["chapters"]
-            if c["label"] in keep and c.get("text")]
+            if (every or c["label"] in keep) and c.get("text")]
 
 
 def prompt(book: str, group: list) -> str:
@@ -211,6 +212,28 @@ def export_web(book: str) -> None:
           f"(largest {max(sizes):,} characters). Folder: claims/web/{book}/")
 
 
+def export_new(book: str) -> None:
+    """Only entries with no claims yet (e.g. a chapter that newly has a plant after a Stage 2 fix):
+    new batches after the existing ones; batches already pasted are left untouched."""
+    folder = WEB / book
+    manifest = load_json(folder / "batches.json")
+    done = set(load_json(ROOT / "claims" / book / "claims.json")["entries"]) | {k for e in manifest.values() for k in e.values()}
+    es = [e for e in entries(book) if e[0] not in done]
+    if not es:
+        print(f"{book}: every entry already has a batch; nothing to export.")
+        return
+    n = len(manifest)
+    for b in range(0, len(es), BATCH_SIZE):
+        n += 1
+        name = f"batch_{n:02d}"
+        group = [(f"e{i:02d}", e) for i, e in enumerate(es[b:b + BATCH_SIZE], 1)]
+        manifest[name] = {eid: e[0] for eid, e in group}
+        (folder / f"{name}.txt").write_text(prompt(book, group), encoding="utf-8")
+        (folder / f"{name}.answer.txt").write_text("", encoding="utf-8")
+        print(f"{name}: {len(group)} new entries ({', '.join(e[0] for _, e in group)})")
+    (folder / "batches.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
 def import_web(book: str, label: str) -> None:
     mesh = json.load(gzip.open(MESH, "rt", encoding="utf-8"))
     D, L = mesh["descriptors"], mesh["lookup"]
@@ -219,7 +242,7 @@ def import_web(book: str, label: str) -> None:
         for r in csv.DictReader(open(HISTORICAL, encoding="utf-8")):
             if r.get("mesh_ui") and r["mesh_ui"] in D:
                 hist[norm(r["old_term"])] = r
-    texts = {k: (n, t) for k, n, t in entries(book)}
+    texts = {k: (n, t) for k, n, t in entries(book, every=True)}
     folder = WEB / book
     manifest = load_json(folder / "batches.json")
     out, mixups, missing, bad_quotes, unresolved = {}, [], [], [], Counter()
@@ -310,8 +333,11 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--book", default="culpeper", choices=["culpeper", "dioscorides"])
     ap.add_argument("--export-web", action="store_true")
+    ap.add_argument("--export-new", action="store_true", help="batches only for entries with no claims yet")
     ap.add_argument("--import-web", metavar="MODEL")
     a = ap.parse_args()
+    if a.export_new:
+        return export_new(a.book)
     if a.export_web:
         export_web(a.book)
     elif a.import_web:

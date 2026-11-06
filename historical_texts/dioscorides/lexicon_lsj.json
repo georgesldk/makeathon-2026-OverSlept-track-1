@@ -483,7 +483,7 @@
           "1.7"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Valeriana celtica",
@@ -502,7 +502,7 @@
           "1.7"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Cymbopogon iwarancusa",
@@ -511,7 +511,7 @@
           "1.7"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Cymbopogon schoenanthus",
@@ -853,7 +853,7 @@
           "1.12"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -1011,7 +1011,7 @@
           "1.17"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -1059,7 +1059,6 @@
          "gloss": "sweet flag",
          "dsc": [
           "1.18",
-          "1.13",
           "5.92"
          ],
          "pseudo_dsc": [],
@@ -1069,7 +1068,6 @@
          "binomial": "Arundo donax",
          "gloss": null,
          "dsc": [
-          "1.13",
           "5.92"
          ],
          "pseudo_dsc": [],
@@ -1079,7 +1077,6 @@
          "binomial": "Ammophila arundinacea",
          "gloss": null,
          "dsc": [
-          "1.13",
           "5.92"
          ],
          "pseudo_dsc": [],
@@ -1297,11 +1294,10 @@
          "binomial": "Ulva lactuca",
          "gloss": null,
          "dsc": [
-          "4.98",
-          "4.415"
+          "4.98"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Usnea barbata",
@@ -1310,7 +1306,7 @@
           "1.21"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Marchantia polymorpha",
@@ -1775,7 +1771,7 @@
           "4.103"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Phlomis fruticosa",
@@ -1883,7 +1879,7 @@
           "1.29"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Inula helenium",
@@ -1894,7 +1890,7 @@
          "pseudo_dsc": [
           "4.9"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -3171,7 +3167,7 @@
           "1.74"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -3533,7 +3529,7 @@
           "4.147"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Avicennia officinalis",
@@ -4299,7 +4295,7 @@
           "1.93"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -4365,7 +4361,7 @@
           "1.94"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -5232,7 +5228,7 @@
           "4.43"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -5334,7 +5330,7 @@
           "4.144"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -5527,7 +5523,7 @@
          "pseudo_dsc": [
           "4.61"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       },
@@ -5648,7 +5644,7 @@
           "1.117"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Nymphaea nelumbo",
@@ -5657,7 +5653,7 @@
           "1.117"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Celtis australis",
@@ -5666,7 +5662,7 @@
           "1.117"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -8176,7 +8172,7 @@
           "2.94"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Avena barbata",
@@ -8185,7 +8181,7 @@
          "pseudo_dsc": [
           "4.137"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -8587,7 +8583,7 @@
           "2.102"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Trigonella foenum-graecum",
@@ -8596,7 +8592,7 @@
           "2.102"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Trigonella gladiata",
@@ -8633,7 +8629,7 @@
          "pseudo_dsc": [
           "4.112"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Nymphaea lotus",
@@ -8643,7 +8639,7 @@
           "1.117"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Nymphaea stellata",
@@ -8810,7 +8806,7 @@
           "2.102"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Trigonella foenum-graecum",
@@ -8819,7 +8815,7 @@
           "2.102"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Trigonella gladiata",
@@ -8856,7 +8852,7 @@
          "pseudo_dsc": [
           "4.112"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Nymphaea lotus",
@@ -8866,7 +8862,7 @@
           "1.117"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Nymphaea stellata",
@@ -9010,7 +9006,7 @@
           "4.56"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Gossypium herbaceum",
@@ -9677,7 +9673,7 @@
           "2.114"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Rumex conglomeratus",
@@ -9686,7 +9682,7 @@
           "2.114"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -10395,7 +10391,7 @@
           "3.129"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -10437,7 +10433,7 @@
           "4.116"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -10778,7 +10774,7 @@
           "2.178"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Anagallis caerulea",
@@ -10787,7 +10783,7 @@
           "2.178"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -10878,7 +10874,7 @@
           "2.128"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -11491,7 +11487,7 @@
           "2.174"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -11604,36 +11600,29 @@
          "binomial": "Athamanta cretensis",
          "gloss": "an umbelliferous plant growing in Crete",
          "dsc": [
-          "3.72",
-          "3.9"
+          "3.72"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Peucedanum cervaria",
          "gloss": "who applies the name to two other species",
-         "dsc": [
-          "3.9"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         },
         {
          "binomial": "Daucus carota",
          "gloss": "wild carrot",
-         "dsc": [
-          "3.9"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         },
         {
          "binomial": "Malabaila aurea",
          "gloss": null,
-         "dsc": [
-          "3.9"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -11695,11 +11684,10 @@
          "binomial": "Ulva lactuca",
          "gloss": null,
          "dsc": [
-          "4.98",
-          "4.415"
+          "4.98"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Usnea barbata",
@@ -12062,7 +12050,7 @@
           "4.79"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Taxus baccata",
@@ -12071,7 +12059,7 @@
           "4.79"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Phaseolus vulgaris",
@@ -12080,7 +12068,7 @@
           "2.146"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Smilax aspera",
@@ -12156,14 +12144,12 @@
           "2.147"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Psoralea bituminosa",
          "gloss": "treacle clover",
-         "dsc": [
-          "2.128"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -12361,7 +12347,7 @@
           "2.150"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -13402,7 +13388,7 @@
           "2.165"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Lonicera periclymenum",
@@ -13411,7 +13397,7 @@
           "2.165"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -13721,7 +13707,7 @@
          "pseudo_dsc": [
           "2.167"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Colocasia antiquorum",
@@ -13737,7 +13723,7 @@
           "2.167"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -13787,7 +13773,7 @@
           "3.62"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -13853,7 +13839,7 @@
          "pseudo_dsc": [
           "2.167"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Colocasia antiquorum",
@@ -13869,7 +13855,7 @@
           "2.167"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -14291,7 +14277,7 @@
          "pseudo_dsc": [
           "4.158"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Scilla hyacinthoides",
@@ -14302,7 +14288,7 @@
          "pseudo_dsc": [
           "4.158"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -14344,7 +14330,7 @@
           "2.171"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -14388,7 +14374,7 @@
          "pseudo_dsc": [
           "3.26"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -14683,7 +14669,7 @@
           "4.135"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -14848,7 +14834,7 @@
           "4.77"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -14882,7 +14868,7 @@
           "4.135"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -15250,7 +15236,7 @@
           "3.67"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -15324,7 +15310,7 @@
           "2.176"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Anemone fulgens",
@@ -15924,7 +15910,7 @@
           "2.179"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -16168,7 +16154,7 @@
           "2.180"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Ranunculus ficaria",
@@ -16201,7 +16187,7 @@
           "2.180"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -16455,7 +16441,7 @@
           "3.86"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -16563,7 +16549,7 @@
           "2.184"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -16789,11 +16775,10 @@
          "binomial": "Ulva lactuca",
          "gloss": null,
          "dsc": [
-          "4.98",
-          "4.415"
+          "4.98"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Usnea barbata",
@@ -17046,7 +17031,7 @@
           "3.22"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Aloe perryi",
@@ -17594,7 +17579,7 @@
           "3.7"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -17936,7 +17921,7 @@
           "3.9"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Cardopatium corymbosum",
@@ -17971,7 +17956,7 @@
           "3.8"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -18013,7 +17998,7 @@
           "3.8"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -18528,9 +18513,7 @@
          "gloss": null,
          "dsc": [
           "3.13",
-          "3.4",
-          "3.12",
-          "3.10"
+          "3.12"
          ],
          "pseudo_dsc": [],
          "cites_this_chapter": true
@@ -18539,39 +18522,31 @@
          "binomial": "Cnicus acarna",
          "gloss": null,
          "dsc": [
-          "3.4",
-          "3.12",
-          "3.10"
+          "3.12"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Acacia albida",
          "gloss": null,
          "dsc": [
-          "3.4",
-          "3.12",
-          "3.10"
+          "3.12"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Euphorbia antiquorum",
          "gloss": null,
-         "dsc": [
-          "3.10"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         },
         {
          "binomial": "Carduus arvensis",
          "gloss": null,
-         "dsc": [
-          "3.10"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         },
@@ -18735,9 +18710,7 @@
          "gloss": null,
          "dsc": [
           "3.13",
-          "3.4",
-          "3.12",
-          "3.10"
+          "3.12"
          ],
          "pseudo_dsc": [],
          "cites_this_chapter": true
@@ -18746,9 +18719,7 @@
          "binomial": "Cnicus acarna",
          "gloss": null,
          "dsc": [
-          "3.4",
-          "3.12",
-          "3.10"
+          "3.12"
          ],
          "pseudo_dsc": [],
          "cites_this_chapter": false
@@ -18757,9 +18728,7 @@
          "binomial": "Acacia albida",
          "gloss": null,
          "dsc": [
-          "3.4",
-          "3.12",
-          "3.10"
+          "3.12"
          ],
          "pseudo_dsc": [],
          "cites_this_chapter": false
@@ -18767,18 +18736,14 @@
         {
          "binomial": "Euphorbia antiquorum",
          "gloss": null,
-         "dsc": [
-          "3.10"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         },
         {
          "binomial": "Carduus arvensis",
          "gloss": null,
-         "dsc": [
-          "3.10"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         },
@@ -19287,7 +19252,7 @@
           "3.131"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -19321,7 +19286,7 @@
           "3.19"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Cnicus tuberosus",
@@ -19330,7 +19295,7 @@
           "3.19"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -20242,7 +20207,7 @@
           "3.26"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -20294,7 +20259,7 @@
          "pseudo_dsc": [
           "3.26"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -20418,7 +20383,7 @@
           "3.27"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -20453,7 +20418,7 @@
           "3.27"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -20736,7 +20701,7 @@
           "4.84"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Polygonatum multiflorum",
@@ -20745,7 +20710,7 @@
           "4.84"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -20908,7 +20873,7 @@
           "4.84"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Polygonatum multiflorum",
@@ -20917,7 +20882,7 @@
           "4.84"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -21733,7 +21698,7 @@
           "3.38"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -21775,7 +21740,7 @@
           "3.110"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Teucrium creticum",
@@ -21879,9 +21844,7 @@
         {
          "binomial": "Psoralea bituminosa",
          "gloss": "treacle clover",
-         "dsc": [
-          "2.128"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -22549,7 +22512,7 @@
           "3.123"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Galanthus nivalis",
@@ -22710,7 +22673,7 @@
          "pseudo_dsc": [
           "3.51"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Laserpitium garganicum",
@@ -22719,7 +22682,7 @@
          "pseudo_dsc": [
           "3.51"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -23324,12 +23287,11 @@
          "gloss": null,
          "dsc": [
           "3.59",
-          "3.710",
           "3.60",
           "3.61"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Lagoecia cuminoeides",
@@ -23404,12 +23366,11 @@
          "gloss": null,
          "dsc": [
           "3.59",
-          "3.710",
           "3.60",
           "3.61"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Lagoecia cuminoeides",
@@ -23419,7 +23380,7 @@
           "3.61"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Nigella arvensis",
@@ -23873,7 +23834,7 @@
           "3.66"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -24039,7 +24000,7 @@
           "3.68"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -24527,8 +24488,7 @@
          "binomial": "Athamanta cretensis",
          "gloss": "an umbelliferous plant growing in Crete",
          "dsc": [
-          "3.72",
-          "3.9"
+          "3.72"
          ],
          "pseudo_dsc": [],
          "cites_this_chapter": true
@@ -24536,27 +24496,21 @@
         {
          "binomial": "Peucedanum cervaria",
          "gloss": "who applies the name to two other species",
-         "dsc": [
-          "3.9"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         },
         {
          "binomial": "Daucus carota",
          "gloss": "wild carrot",
-         "dsc": [
-          "3.9"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         },
         {
          "binomial": "Malabaila aurea",
          "gloss": null,
-         "dsc": [
-          "3.9"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -24677,7 +24631,7 @@
           "4.62"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Delphinium ajacis",
@@ -24986,7 +24940,7 @@
           "3.74"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Ferulago galbanifera",
@@ -24995,7 +24949,7 @@
           "3.74"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Lactuca graeca",
@@ -25004,7 +24958,7 @@
           "3.74"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Rosmarinus officinalis",
@@ -25013,7 +24967,7 @@
          "pseudo_dsc": [
           "3.121"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       },
@@ -25044,7 +24998,7 @@
           "3.74"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Ferulago galbanifera",
@@ -25053,7 +25007,7 @@
           "3.74"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Lactuca graeca",
@@ -25062,7 +25016,7 @@
           "3.74"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Rosmarinus officinalis",
@@ -25071,7 +25025,7 @@
          "pseudo_dsc": [
           "3.121"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       },
@@ -25236,7 +25190,7 @@
          "pseudo_dsc": [
           "3.121"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       },
@@ -25341,7 +25295,7 @@
           "3.108"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -25424,7 +25378,7 @@
           "3.120"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Spiraea filipendula",
@@ -25433,7 +25387,7 @@
           "3.120"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -25480,7 +25434,7 @@
           "4.140"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -26524,7 +26478,7 @@
           "4.188"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Carthamus leucocaulos",
@@ -26585,7 +26539,7 @@
           "4.188"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Carthamus leucocaulos",
@@ -26726,7 +26680,7 @@
           "3.95"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -26754,7 +26708,7 @@
          "pseudo_dsc": [
           "4.4"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -27071,7 +27025,7 @@
           "4.130"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -27133,7 +27087,7 @@
          "pseudo_dsc": [
           "3.96"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Silene venosa",
@@ -27146,7 +27100,7 @@
          "pseudo_dsc": [
           "3.96"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Glaucium flavum",
@@ -27158,7 +27112,7 @@
          "pseudo_dsc": [
           "3.96"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Papaver rhoeas",
@@ -27539,7 +27493,7 @@
           "3.100"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Agrostemma githago",
@@ -27549,7 +27503,7 @@
           "4.130"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -27744,7 +27698,7 @@
           "3.102"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Lilium chalcedonicum",
@@ -28000,7 +27954,7 @@
           "3.105"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Marrubium peregrinum",
@@ -28557,14 +28511,12 @@
           "4.158"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Narcissus serotinus",
          "gloss": "autumn narcissus",
-         "dsc": [
-          "4.1"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -29204,9 +29156,7 @@
         {
          "binomial": "Psoralea bituminosa",
          "gloss": "treacle clover",
-         "dsc": [
-          "2.128"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -29964,7 +29914,7 @@
           "3.113"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Artemisia campestris",
@@ -29973,7 +29923,7 @@
           "3.113"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Artemisia scoparia",
@@ -30715,7 +30665,7 @@
           "3.119"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -31229,7 +31179,7 @@
          "pseudo_dsc": [
           "4.158"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Narcissus tazetta",
@@ -31242,7 +31192,7 @@
          "pseudo_dsc": [
           "4.158"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Scilla hyacinthoides",
@@ -31253,7 +31203,7 @@
          "pseudo_dsc": [
           "4.158"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -31529,7 +31479,7 @@
           "3.125"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -31614,7 +31564,7 @@
           "3.126"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Orchis longicruris",
@@ -31623,7 +31573,7 @@
           "3.126"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -31649,7 +31599,7 @@
           "3.126"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Orchis longicruris",
@@ -31658,7 +31608,7 @@
           "3.126"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -31820,9 +31770,7 @@
         {
          "binomial": "Psoralea bituminosa",
          "gloss": "treacle clover",
-         "dsc": [
-          "2.128"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -31981,9 +31929,7 @@
         {
          "binomial": "Psoralea bituminosa",
          "gloss": "treacle clover",
-         "dsc": [
-          "2.128"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -32273,7 +32219,7 @@
           "3.132"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Nymphaea alba",
@@ -35112,7 +35058,7 @@
          "pseudo_dsc": [
           "3.152"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -35809,7 +35755,7 @@
           "4.3"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -35867,7 +35813,7 @@
           "4.5"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -35975,7 +35921,7 @@
          "pseudo_dsc": [
           "4.4"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -36355,7 +36301,7 @@
           "4.7"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Clematis vitalba",
@@ -36364,7 +36310,7 @@
           "4.180"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Convolvulus arvensis",
@@ -36474,9 +36420,7 @@
         {
          "binomial": "Mentha longifolia",
          "gloss": null,
-         "dsc": [
-          "4.86"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -36593,7 +36537,7 @@
           "4.9"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -36815,7 +36759,7 @@
           "4.10"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Coris monspeliensis",
@@ -36866,7 +36810,7 @@
           "4.10"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Coris monspeliensis",
@@ -37049,7 +36993,7 @@
          "pseudo_dsc": [
           "4.13"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -37091,7 +37035,7 @@
           "4.14"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -37428,7 +37372,7 @@
          "pseudo_dsc": [
           "4.142"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -37470,7 +37414,7 @@
           "4.15"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Tribulus terrestris",
@@ -37767,7 +37711,6 @@
          "gloss": null,
          "dsc": [
           "3.59",
-          "3.710",
           "3.60",
           "3.61"
          ],
@@ -38111,7 +38054,7 @@
           "4.21"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -38358,7 +38301,7 @@
           "4.23"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -39607,7 +39550,7 @@
          "pseudo_dsc": [
           "4.58"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -39882,7 +39825,7 @@
           "4.38"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       },
@@ -41412,7 +41355,7 @@
           "4.48"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -41454,7 +41397,7 @@
           "4.49"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Pimpinella tragium",
@@ -41514,7 +41457,7 @@
           "4.50"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -41993,7 +41936,7 @@
          "pseudo_dsc": [
           "4.55"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -42434,7 +42377,7 @@
           "4.59"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -42996,7 +42939,7 @@
           "4.175"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -43067,7 +43010,7 @@
           "4.169"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -43331,7 +43274,7 @@
           "4.64"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Papaver argemone",
@@ -43416,7 +43359,7 @@
          "pseudo_dsc": [
           "3.96"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Silene venosa",
@@ -43429,7 +43372,7 @@
          "pseudo_dsc": [
           "3.96"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Glaucium flavum",
@@ -43441,7 +43384,7 @@
          "pseudo_dsc": [
           "3.96"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Papaver rhoeas",
@@ -43450,7 +43393,7 @@
           "4.64"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Papaver hybridum",
@@ -43460,7 +43403,7 @@
           "4.64"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Papaver argemone",
@@ -43493,7 +43436,7 @@
           "4.169"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -43523,7 +43466,7 @@
          "pseudo_dsc": [
           "3.96"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Silene venosa",
@@ -43536,7 +43479,7 @@
          "pseudo_dsc": [
           "3.96"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Glaucium flavum",
@@ -43548,7 +43491,7 @@
          "pseudo_dsc": [
           "3.96"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Papaver rhoeas",
@@ -43557,7 +43500,7 @@
           "4.64"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Papaver hybridum",
@@ -43567,7 +43510,7 @@
           "4.64"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Papaver argemone",
@@ -43685,7 +43628,7 @@
          "pseudo_dsc": [
           "3.96"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Silene venosa",
@@ -43698,7 +43641,7 @@
          "pseudo_dsc": [
           "3.96"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Glaucium flavum",
@@ -43710,7 +43653,7 @@
          "pseudo_dsc": [
           "3.96"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Papaver rhoeas",
@@ -43876,7 +43819,7 @@
          "pseudo_dsc": [
           "3.96"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Silene venosa",
@@ -43889,7 +43832,7 @@
          "pseudo_dsc": [
           "3.96"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Glaucium flavum",
@@ -44315,7 +44258,7 @@
           "4.70"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Datura stramonium",
@@ -44324,7 +44267,7 @@
           "4.73"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Withania somnifera",
@@ -44486,7 +44429,7 @@
           "4.73"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Withania somnifera",
@@ -44495,7 +44438,7 @@
           "4.72"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -44571,7 +44514,7 @@
           "4.73"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Withania somnifera",
@@ -44580,7 +44523,7 @@
           "4.72"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -45303,7 +45246,7 @@
           "4.76"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Aconitum napellus",
@@ -45312,7 +45255,7 @@
           "4.77"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -46731,7 +46674,7 @@
           "4.83"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -46762,7 +46705,7 @@
          "pseudo_dsc": [
           "4.158"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Narcissus tazetta",
@@ -46775,7 +46718,7 @@
          "pseudo_dsc": [
           "4.158"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Scilla hyacinthoides",
@@ -46786,7 +46729,7 @@
          "pseudo_dsc": [
           "4.158"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -46822,7 +46765,7 @@
           "4.84"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -46938,7 +46881,7 @@
          "pseudo_dsc": [
           "4.158"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Narcissus tazetta",
@@ -46951,7 +46894,7 @@
          "pseudo_dsc": [
           "4.158"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Scilla hyacinthoides",
@@ -46962,7 +46905,7 @@
          "pseudo_dsc": [
           "4.158"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -47019,7 +46962,7 @@
           "4.85"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Convolvulus arvensis",
@@ -47030,7 +46973,7 @@
          "pseudo_dsc": [
           "4.142"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -47208,7 +47151,7 @@
           "4.85"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Convolvulus arvensis",
@@ -47219,7 +47162,7 @@
          "pseudo_dsc": [
           "4.142"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -48961,8 +48904,7 @@
          "binomial": "Ulva lactuca",
          "gloss": null,
          "dsc": [
-          "4.98",
-          "4.415"
+          "4.98"
          ],
          "pseudo_dsc": [],
          "cites_this_chapter": true
@@ -49060,10 +49002,7 @@
         {
          "binomial": "Zostera marina",
          "gloss": null,
-         "dsc": [
-          "4.2",
-          "4.3"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -49109,7 +49048,7 @@
          "pseudo_dsc": [
           "4.106"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -49233,7 +49172,7 @@
           "4.102"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -49605,7 +49544,7 @@
          "pseudo_dsc": [
           "4.106"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -49839,7 +49778,7 @@
           "4.108"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -50263,7 +50202,7 @@
           "4.110"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Melilotus messanensis",
@@ -50272,7 +50211,7 @@
           "4.110"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Medicago arborea",
@@ -50284,7 +50223,7 @@
          "pseudo_dsc": [
           "4.112"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Nymphaea lotus",
@@ -50294,7 +50233,7 @@
           "1.117"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Nymphaea stellata",
@@ -50352,9 +50291,7 @@
         {
          "binomial": "Psoralea bituminosa",
          "gloss": "treacle clover",
-         "dsc": [
-          "2.128"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -50405,7 +50342,7 @@
           "4.111"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Lotus corniculatus",
@@ -50460,7 +50397,7 @@
          "pseudo_dsc": [
           "4.112"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Nymphaea lotus",
@@ -50470,7 +50407,7 @@
           "1.117"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Nymphaea stellata",
@@ -50528,9 +50465,7 @@
         {
          "binomial": "Psoralea bituminosa",
          "gloss": "treacle clover",
-         "dsc": [
-          "2.128"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -50626,9 +50561,7 @@
         {
          "binomial": "Psoralea bituminosa",
          "gloss": "treacle clover",
-         "dsc": [
-          "2.128"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -50810,7 +50743,7 @@
           "1.117"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Nymphaea stellata",
@@ -50868,9 +50801,7 @@
         {
          "binomial": "Psoralea bituminosa",
          "gloss": "treacle clover",
-         "dsc": [
-          "2.128"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -52000,14 +51931,12 @@
           "4.121"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Matthiola incana",
          "gloss": null,
-         "dsc": [
-          "4.6"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -52072,14 +52001,12 @@
           "4.121"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Matthiola incana",
          "gloss": null,
-         "dsc": [
-          "4.6"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -52472,9 +52399,7 @@
          "binomial": "Glechoma hederacea",
          "gloss": "ground-ivy",
          "dsc": [
-          "4.125",
-          "4.25",
-          "4.16"
+          "4.125"
          ],
          "pseudo_dsc": [],
          "cites_this_chapter": true
@@ -52841,7 +52766,7 @@
           "4.130"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -52893,7 +52818,7 @@
           "4.130"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -53287,7 +53212,7 @@
          "pseudo_dsc": [
           "4.133"
          ],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         }
        ]
       }
@@ -53612,7 +53537,7 @@
           "4.135"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -54012,7 +53937,7 @@
           "4.135"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -54131,7 +54056,7 @@
           "4.135"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -56083,7 +56008,7 @@
           "4.162"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -56321,7 +56246,7 @@
           "4.162"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Helleborus orientalis",
@@ -56330,7 +56255,7 @@
           "4.162"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -56357,7 +56282,7 @@
           "4.162"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         },
         {
          "binomial": "Helleborus orientalis",
@@ -56366,7 +56291,7 @@
           "4.162"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -56413,8 +56338,7 @@
          "binomial": "Ecballium elaterium",
          "gloss": "squirting cucumber",
          "dsc": [
-          "4.150",
-          "4.9"
+          "4.150"
          ],
          "pseudo_dsc": [],
          "cites_this_chapter": true
@@ -56650,9 +56574,7 @@
         {
          "binomial": "Psoralea bituminosa",
          "gloss": "treacle clover",
-         "dsc": [
-          "2.128"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -56950,7 +56872,7 @@
           "4.185"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -57161,7 +57083,7 @@
          "pseudo_dsc": [
           "4.158"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -57416,9 +57338,7 @@
         {
          "binomial": "Narcissus serotinus",
          "gloss": "autumn narcissus",
-         "dsc": [
-          "4.1"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }
@@ -60732,7 +60652,7 @@
           "4.181"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Vitis silvestris",
@@ -60741,7 +60661,7 @@
           "4.181"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Bryonia cretica",
@@ -60835,7 +60755,7 @@
           "4.183"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Tamus communis",
@@ -60998,7 +60918,7 @@
           "4.183"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Tamus communis",
@@ -61007,7 +60927,7 @@
           "4.183"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Fucus volubilis",
@@ -61059,7 +60979,7 @@
           "4.183"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Tamus communis",
@@ -61068,7 +60988,7 @@
           "4.183"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Fucus volubilis",
@@ -61198,7 +61118,7 @@
           "4.183"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Tamus communis",
@@ -61207,7 +61127,7 @@
           "4.183"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Fucus volubilis",
@@ -61347,7 +61267,7 @@
          "pseudo_dsc": [
           "4.186"
          ],
-         "cites_this_chapter": true
+         "cites_this_chapter": false
         }
        ]
       }
@@ -62151,7 +62071,7 @@
           "4.191"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Heliotropium supinum",
@@ -62210,7 +62130,7 @@
           "4.191"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Heliotropium supinum",
@@ -62219,7 +62139,7 @@
           "4.191"
          ],
          "pseudo_dsc": [],
-         "cites_this_chapter": false
+         "cites_this_chapter": true
         },
         {
          "binomial": "Croton tinctorius",
@@ -64470,9 +64390,7 @@
         {
          "binomial": "Matthiola incana",
          "gloss": null,
-         "dsc": [
-          "4.6"
-         ],
+         "dsc": [],
          "pseudo_dsc": [],
          "cites_this_chapter": false
         }

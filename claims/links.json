@@ -6,13 +6,13 @@
  "stats": {
   "culpeper": {
    "claims": 5202,
-   "linked_to_a_plant": 4515,
-   "linked_to_an_A_plant": 3301
+   "linked_to_a_plant": 4528,
+   "linked_to_an_A_plant": 3349
   },
   "dioscorides": {
-   "claims": 3815,
-   "linked_to_a_plant": 3815,
-   "linked_to_an_A_plant": 754
+   "claims": 3832,
+   "linked_to_a_plant": 3788,
+   "linked_to_an_A_plant": 804
   }
  },
  "shared_claims": [
@@ -295,6 +295,66 @@
      "claim": "treats chronic sciatica",
      "quote": "ἁρμόζουσα ... ἰσχιάδι χρονίᾳ",
      "translation": "suitable for chronic sciatica"
+    }
+   ]
+  },
+  {
+   "species": "Chelidonium majus L.",
+   "mesh_ui": "D007565",
+   "mesh": "Jaundice",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": true,
+   "claims": [
+    {
+     "claim_id": "culpeper:celandine:c06",
+     "book": "culpeper",
+     "entry": "Celandine",
+     "tier": "A",
+     "claim": "Treats jaundice",
+     "quote": "helps the yellow jaundice",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:2.180:c02",
+     "book": "dioscorides",
+     "entry": "χελιδόνιον",
+     "tier": "A",
+     "claim": "treats jaundice",
+     "quote": "ἡ δὲ ῥίζα πινομένη σὺν ἀνήσσῳ καὶ οἴνῳ λευκῷ ἰκτερικούς θεραπεύει",
+     "translation": "The root drunk with anise and white wine treats jaundice."
+    }
+   ]
+  },
+  {
+   "species": "Chelidonium majus L.",
+   "mesh_ui": "D014098",
+   "mesh": "Toothache",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": true,
+   "claims": [
+    {
+     "claim_id": "culpeper:celandine:c21",
+     "book": "culpeper",
+     "entry": "Celandine",
+     "tier": "A",
+     "claim": "Relieves toothache when gargled",
+     "quote": "The juice or decoction of the herb gargled between the teeth that ach, eases the pain",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:2.180:c04",
+     "book": "dioscorides",
+     "entry": "χελιδόνιον",
+     "tier": "A",
+     "claim": "relieves toothache",
+     "quote": "καὶ ὀδονταλγίας δὲ παύει διαμασωμένη",
+     "translation": "And chewed, it stops toothache."
     }
    ]
   },
@@ -851,6 +911,240 @@
    ]
   },
   {
+   "species": "Hedera helix L.",
+   "mesh_ui": "D002056",
+   "mesh": "Burns",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": true,
+   "claims": [
+    {
+     "claim_id": "culpeper:ivy:c19",
+     "book": "culpeper",
+     "entry": "Ivy",
+     "tier": "A",
+     "claim": "Heals burns and scalds",
+     "quote": "effectual to heal all burnings and scaldings",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:2.179:c02",
+     "book": "dioscorides",
+     "entry": "κισσὸς",
+     "tier": "A",
+     "claim": "treats burns",
+     "quote": "καὶ πρὸς πυρίκαυτα δὲ ἁρμόζει σὺν κηρωτῇ λειανθέντα",
+     "translation": "And ground fine with cerate, they are suitable for burns."
+    },
+    {
+     "claim_id": "dioscorides:2.179:c13",
+     "book": "dioscorides",
+     "entry": "κισσὸς",
+     "tier": "A",
+     "claim": "treats burns",
+     "quote": "καὶ κατακαύματα [θεραπεύει καταπλασθέντα, ὡς προείρηται, ἑχθά]",
+     "translation": "And they treat burns."
+    }
+   ]
+  },
+  {
+   "species": "Hedera helix L.",
+   "mesh_ui": "D004403",
+   "mesh": "Dysentery",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": true,
+   "claims": [
+    {
+     "claim_id": "culpeper:ivy:c03",
+     "book": "culpeper",
+     "entry": "Ivy",
+     "tier": "A",
+     "claim": "Treats dysentery",
+     "quote": "and bloody flux",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:2.179:c01",
+     "book": "dioscorides",
+     "entry": "κισσὸς",
+     "tier": "A",
+     "claim": "treats dysentery",
+     "quote": "ποιεῖ δὲ τὰ μὲν ἄνθη αὐτοῦ τοῖς τρισὶ δακτύλοις λημφθέντα καὶ ποθέντα σὺν οἴνῳ πρὸς δυσεντερίας",
+     "translation": "Its flowers taken in the pinch of three fingers and drunk with wine act against dysentery."
+    }
+   ]
+  },
+  {
+   "species": "Hedera helix L.",
+   "mesh_ui": "D006261",
+   "mesh": "Headache",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": true,
+   "claims": [
+    {
+     "claim_id": "culpeper:ivy:c16",
+     "book": "culpeper",
+     "entry": "Ivy",
+     "tier": "A",
+     "claim": "Relieves chronic headache",
+     "quote": "The same applied with some Rosewater, and oil of Roses, to the temples and forehead, eases the head-ache, though it be of long continuance.",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:2.179:c04",
+     "book": "dioscorides",
+     "entry": "κισσὸς",
+     "tier": "A",
+     "claim": "treats chronic headaches",
+     "quote": "ῥινεγχυτοῦται δὲ ὁ χυλὸς τῶν φύλλων καὶ τῶν κορύμβων σὺν ἰρίνῳ ἢ μέλιτι ἢ νίτρῳ πρὸς τὰ χρόνια τῆς κεφαλῆς ἀλγήματα",
+     "translation": "The juice of leaves and berry clusters is instilled into the nose with iris oil, honey, or soda for chronic headaches."
+    },
+    {
+     "claim_id": "dioscorides:2.179:c05",
+     "book": "dioscorides",
+     "entry": "κισσὸς",
+     "tier": "A",
+     "claim": "relieves chronic headaches when washed on the head",
+     "quote": "ἐπιβρέχεται σὺν ὄξει καὶ ῥοδίνῳ",
+     "translation": "And it is bathed on the head with vinegar and rose oil."
+    }
+   ]
+  },
+  {
+   "species": "Hedera helix L.",
+   "mesh_ui": "D008600",
+   "mesh": "Menstruation-Inducing Agents",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": true,
+   "claims": [
+    {
+     "claim_id": "culpeper:ivy:c14",
+     "book": "culpeper",
+     "entry": "Ivy",
+     "tier": "A",
+     "claim": "Stimulates menstrual flow",
+     "quote": "and women’s courses",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:2.179:c16",
+     "book": "dioscorides",
+     "entry": "κισσὸς",
+     "tier": "A",
+     "claim": "promotes menstruation",
+     "quote": "κινοῦσι δὲ καὶ καταμήνια ποθέντες ἥ ὑποθυμιαθέντες οἰ κόρυμβοι λεῖοι",
+     "translation": "The berries ground fine and drunk or used in fumigation stimulate menses."
+    },
+    {
+     "claim_id": "dioscorides:2.179:c18",
+     "book": "dioscorides",
+     "entry": "κισσὸς",
+     "tier": "A",
+     "claim": "promotes menstruation",
+     "quote": "καὶ ὁ μόσχος δὲ τῶν φύλλων μέλιτι δευθεὶς καὶ προστεθεὶς τῇ μήτρᾳ ἔμμηνα ... ἄγει",
+     "translation": "And a shoot of the leaves moistened with honey and applied to the womb induces menstruation."
+    }
+   ]
+  },
+  {
+   "species": "Hedera helix L.",
+   "mesh_ui": "D013158",
+   "mesh": "Splenic Diseases",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": true,
+   "claims": [
+    {
+     "claim_id": "culpeper:ivy:c15",
+     "book": "culpeper",
+     "entry": "Ivy",
+     "tier": "A",
+     "claim": "Relieves spleen disorders, aches, and side stitches",
+     "quote": "The fresh leaves of Ivy, boiled in vinegar, and applied warm to the sides of those that are troubled with the spleen, ache, or stitch in the sides, do give much ease",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:ivy:c24",
+     "book": "culpeper",
+     "entry": "Ivy",
+     "tier": "A",
+     "claim": "Relieves spleen disorders by drinking liquids from an ivy-wood cup",
+     "quote": "those that are troubled with the spleen, shall find much ease by continual drinking out of a cup made of Ivy",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:2.179:c03",
+     "book": "dioscorides",
+     "entry": "κισσὸς",
+     "tier": "A",
+     "claim": "treats spleen disorders",
+     "quote": "τὰ δὲ ἁπαλὰ τῶν φύλλων ἑψόμενα σὺν ὄξει ἢ ὠμὰ λειαινόμενα σπλῆνα ἰᾶται",
+     "translation": "The tender leaves boiled with vinegar or ground raw heal the spleen."
+    }
+   ]
+  },
+  {
+   "species": "Hedera helix L.",
+   "mesh_ui": "D014456",
+   "mesh": "Ulcer",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": true,
+   "claims": [
+    {
+     "claim_id": "culpeper:ivy:c17",
+     "book": "culpeper",
+     "entry": "Ivy",
+     "tier": "A",
+     "claim": "Cleanses and treats chronic, refractory ulcers",
+     "quote": "The fresh leaves boiled in wine, and old filthy ulcers hard to be cured washed therewith, do wonderfully help to cleanse them.",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:ivy:c20",
+     "book": "culpeper",
+     "entry": "Ivy",
+     "tier": "A",
+     "claim": "Heals exulcerations arising from burns or acrid humors",
+     "quote": "all kinds of exulcerations coming thereby, or by salt phlegm or humours in other parts of the body.",
+     "translation": null
+    },
+    {
+     "claim_id": "culpeper:ivy:c22",
+     "book": "culpeper",
+     "entry": "Ivy",
+     "tier": "A",
+     "claim": "Cures nasal ulcers and foul nasal odors",
+     "quote": "curing the ulcers and stench therein",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:2.179:c12",
+     "book": "dioscorides",
+     "entry": "κισσὸς",
+     "tier": "A",
+     "claim": "treats ulcers",
+     "quote": "καταπλάσσεται δὲ τὰ φύλλα πρὸς πᾶν ἕλκος ἑψηθέντα σὺν οἴνῳ",
+     "translation": "The leaves boiled with wine are applied as a poultice for every ulcer."
+    }
+   ]
+  },
+  {
    "species": "Inula helenium L.",
    "mesh_ui": "D003371",
    "mesh": "Cough",
@@ -1347,15 +1641,6 @@
      "translation": null
     },
     {
-     "claim_id": "dioscorides:3.103:c01",
-     "book": "dioscorides",
-     "entry": "βαλλντή",
-     "tier": "B",
-     "claim": "treats dog bites",
-     "quote": "ταύτης τὰ φύλλα καταπλασσόμενα μεθ᾿ ἁλῶς ποιεῖ πρὸς τὰ κυνόδηκτα",
-     "translation": "its leaves applied as a poultice with salt are effective against dog bites"
-    },
-    {
      "claim_id": "dioscorides:3.105:c08",
      "book": "dioscorides",
      "entry": "πράσιον",
@@ -1651,15 +1936,6 @@
      "claim": "Cleanses foul ulcers",
      "quote": "The leaves used with honey, purge foul ulcers",
      "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.103:c03",
-     "book": "dioscorides",
-     "entry": "βαλλντή",
-     "tier": "B",
-     "claim": "cleanses foul ulcers",
-     "quote": "ῥυπαρά τε ἕλκη σὺν μέλιτι ἀνακαθαίρει",
-     "translation": "and cleanses foul ulcers with honey"
     },
     {
      "claim_id": "dioscorides:3.105:c11",
@@ -3741,7 +4017,7 @@
      "claim_id": "dioscorides:3.75:c02",
      "book": "dioscorides",
      "entry": "λιβανωτίς",
-     "tier": "A",
+     "tier": "B",
      "claim": "treats jaundice",
      "quote": "ἰκτέρου ἰατικήν, ἐάν τις αὐτὴν ἑψήσας ἐν ὕδατι δῷ πρὸ τῶν γυμνασίων πιεῖν, εἶτα γυμνάζων λούῃ καὶ οἴνῳ ποτίζῃ",
      "translation": "curative of jaundice, if boiled in water and given to drink before exercises, then followed by exercising, bathing, and giving wine to drink"
@@ -4207,105 +4483,6 @@
      "claim": "prevents inflammation in wounds",
      "quote": "τραύματά τε ἀφλέγμαντα τηρεῖ",
      "translation": "and keeps wounds free from inflammation"
-    }
-   ]
-  },
-  {
-   "species": "Aconitum napellus L.",
-   "mesh_ui": "D008600",
-   "mesh": "Menstruation-Inducing Agents",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:black-hellebore:c11",
-     "book": "culpeper",
-     "entry": "Black Hellebore",
-     "tier": "B",
-     "claim": "Promotes menstruation",
-     "quote": "The root used as a pessary, provokes the terms exceedingly",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.173:c11",
-     "book": "dioscorides",
-     "entry": "κάππαρις",
-     "tier": "B",
-     "claim": "promotes menstruation",
-     "quote": "καὶ ἔμμηνα ἄγει",
-     "translation": "And promotes menstruation."
-    }
-   ]
-  },
-  {
-   "species": "Aconitum napellus L.",
-   "mesh_ui": "D012585",
-   "mesh": "Sciatica",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:black-hellebore:c09",
-     "book": "culpeper",
-     "entry": "Black Hellebore",
-     "tier": "B",
-     "claim": "Treats sciatica",
-     "quote": "sciatica",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.173:c07",
-     "book": "dioscorides",
-     "entry": "κάππαρις",
-     "tier": "B",
-     "claim": "relieves sciatica",
-     "quote": "ἰσχιάδι ... βοηθεῖ πινόμενος",
-     "translation": "Drunk, it helps sciatica."
-    }
-   ]
-  },
-  {
-   "species": "Aconitum napellus L.",
-   "mesh_ui": "D014456",
-   "mesh": "Ulcer",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:black-hellebore:c12",
-     "book": "culpeper",
-     "entry": "Black Hellebore",
-     "tier": "B",
-     "claim": "Debrides necrotic tissue from foul ulcers",
-     "quote": "also being beaten into powder, and strewed upon foul ulcers, it consumes the dead flesh",
-     "translation": null
-    },
-    {
-     "claim_id": "culpeper:black-hellebore:c13",
-     "book": "culpeper",
-     "entry": "Black Hellebore",
-     "tier": "B",
-     "claim": "Heals foul ulcers",
-     "quote": "and instantly heals them",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.173:c15",
-     "book": "dioscorides",
-     "entry": "κάππαρις",
-     "tier": "B",
-     "claim": "cleanses chronic, foul, and calloused ulcers",
-     "quote": "καὶ ἀνακαθαίρει πᾶν χρόνιον καὶ ῥυπαρὸν καὶ τετυλωμένον ἕλκος",
-     "translation": "And cleanses every chronic, foul, and calloused ulcer."
     }
    ]
   },
@@ -6060,7 +6237,7 @@
      "claim_id": "culpeper:smallage:c06",
      "book": "culpeper",
      "entry": "Smallage",
-     "tier": "B",
+     "tier": "A",
      "claim": "Promotes urination",
      "quote": "provokes urine",
      "translation": null
@@ -6108,7 +6285,7 @@
      "claim_id": "culpeper:smallage:c13",
      "book": "culpeper",
      "entry": "Smallage",
-     "tier": "B",
+     "tier": "A",
      "claim": "Expels flatulence",
      "quote": "break and expel wind",
      "translation": null
@@ -6138,7 +6315,7 @@
      "claim_id": "culpeper:smallage:c07",
      "book": "culpeper",
      "entry": "Smallage",
-     "tier": "B",
+     "tier": "A",
      "claim": "Promotes menstruation",
      "quote": "and women’s courses",
      "translation": null
@@ -6168,7 +6345,7 @@
      "claim_id": "culpeper:smallage:c11",
      "book": "culpeper",
      "entry": "Smallage",
-     "tier": "B",
+     "tier": "A",
      "claim": "Cleanses and heals foul external ulcers",
      "quote": "cleanses and heals all other foul ulcers",
      "translation": null
@@ -6741,7 +6918,7 @@
      "claim_id": "dioscorides:3.113:c03",
      "book": "dioscorides",
      "entry": "ἀρτεμισία",
-     "tier": "B",
+     "tier": "A",
      "claim": "promotes menstruation via sitz bath",
      "quote": "ἀποζεννύμεναι δὲ ἁρμόζουσιν εἰς ἐγκαθίσματα πρὸς ἀγωγήν ἐμμήνων",
      "translation": "Boiled down, they are suitable for sitz baths to promote menstruation."
@@ -6750,7 +6927,7 @@
      "claim_id": "dioscorides:3.113:c10",
      "book": "dioscorides",
      "entry": "ἀρτεμισία",
-     "tier": "B",
+     "tier": "A",
      "claim": "stimulates menstruation when plastered over the hypogastrium",
      "quote": "ἡ δὲ πόα καταπλασθεῖσα κατὰ τοῦ ἤτρου πολλὴ ἔμμηνα κινεῖ",
      "translation": "The herb, applied copiously as a plaster over the lower abdomen, stimulates menses."
@@ -6759,7 +6936,7 @@
      "claim_id": "dioscorides:3.113:c11",
      "book": "dioscorides",
      "entry": "ἀρτεμισία",
-     "tier": "B",
+     "tier": "A",
      "claim": "promotes expulsion of menses, afterbirth, and dead fetus when applied as a pessary",
      "quote": "ὁ δὲ ἐξ αὐτῆς χυλὸς συλλεανθεὶς σμύρνῃ καὶ προστεθεὶς ἄγει ἀπὸ μήτρας, ὅσα καὶ τὸ ἐγκάθισμα",
      "translation": "Its juice, ground with myrrh and applied as a pessary, expels from the womb everything that the sitz bath does."
@@ -6768,7 +6945,7 @@
      "claim_id": "dioscorides:3.113:c12",
      "book": "dioscorides",
      "entry": "ἀρτεμισία",
-     "tier": "B",
+     "tier": "A",
      "claim": "promotes uterine expulsions when drunk",
      "quote": "καὶ ποτίζεται δὲ ᾑ κόμη πρὸς ἀγωγὴν τῶν αὐτῶν πλῆθος δραχμῶν τριῶν",
      "translation": "Its leafy shoot is also drunk in the amount of three drachms for the expulsion of the same."
@@ -6828,7 +7005,7 @@
      "claim_id": "dioscorides:3.113:c08",
      "book": "dioscorides",
      "entry": "ἀρτεμισία",
-     "tier": "B",
+     "tier": "A",
      "claim": "crushes urinary stones",
      "quote": "καὶ θρύψιν λίθων",
      "translation": "and for breaking stones."
@@ -6858,7 +7035,7 @@
      "claim_id": "dioscorides:3.113:c09",
      "book": "dioscorides",
      "entry": "ἀρτεμισία",
-     "tier": "B",
+     "tier": "A",
      "claim": "relieves urinary retention",
      "quote": "καὶ ἐποχὴν οὔρων",
      "translation": "and [for] retention of urine."
@@ -6888,7 +7065,7 @@
      "claim_id": "dioscorides:3.113:c06",
      "book": "dioscorides",
      "entry": "ἀρτεμισία",
-     "tier": "B",
+     "tier": "A",
      "claim": "treats constriction and closure of the uterus",
      "quote": "καὶ μύσιν ... τῆς ὑστέρας",
      "translation": "and [for] closure of the womb."
@@ -6897,7 +7074,7 @@
      "claim_id": "dioscorides:3.113:c07",
      "book": "dioscorides",
      "entry": "ἀρτεμισία",
-     "tier": "B",
+     "tier": "A",
      "claim": "treats inflammation of the uterus",
      "quote": "καὶ φλεγμονὴν τῆς ὑστέρας",
      "translation": "and [for] inflammation of the womb."
@@ -7071,54 +7248,6 @@
   },
   {
    "species": "Arum italicum Mill.",
-   "mesh_ui": "D003318",
-   "mesh": "Corneal Opacity",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:cuckow-point:c16",
-     "book": "culpeper",
-     "entry": "Cuckow-Point",
-     "tier": "B",
-     "claim": "clears films, clouds, or opacities that impair vision",
-     "quote": "The water wherein the root has been boiled, dropped into the eyes, cleanses them from any film or skin, cloud or mists, which begin to hinder the sight",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.166:c22",
-     "book": "dioscorides",
-     "entry": "δρακόντιον",
-     "tier": "B",
-     "claim": "clears corneal nebulas / cloudy spots",
-     "quote": "ὁ δὲ χυλὸς τῆς ῥίζης ἁρμόζει πρὸς νεφέλια",
-     "translation": "the juice of the root is suited for cloudy spots on the eye"
-    },
-    {
-     "claim_id": "dioscorides:2.166:c23",
-     "book": "dioscorides",
-     "entry": "δρακόντιον",
-     "tier": "B",
-     "claim": "clears leukoma of the cornea",
-     "quote": "ὁ δὲ χυλὸς τῆς ῥίζης ἁρμόζει πρὸς ... λευκώματα",
-     "translation": "the juice of the root is suited for leukomas"
-    },
-    {
-     "claim_id": "dioscorides:2.166:c24",
-     "book": "dioscorides",
-     "entry": "δρακόντιον",
-     "tier": "B",
-     "claim": "clears mistiness of vision",
-     "quote": "ὁ δὲ χυλὸς τῆς ῥίζης ἁρμόζει πρὸς ... ἀχλῦς",
-     "translation": "the juice of the root is suited for dimness/mistiness of vision"
-    }
-   ]
-  },
-  {
-   "species": "Arum italicum Mill.",
    "mesh_ui": "D003371",
    "mesh": "Cough",
    "books": [
@@ -7137,15 +7266,6 @@
      "translation": null
     },
     {
-     "claim_id": "dioscorides:2.166:c09",
-     "book": "dioscorides",
-     "entry": "δρακόντιον",
-     "tier": "B",
-     "claim": "relieves coughs",
-     "quote": "ἡ δὲ ῥίζα ... βοηθεῖ ... βηξί",
-     "translation": "the root helps coughs"
-    },
-    {
      "claim_id": "dioscorides:2.167:c01",
      "book": "dioscorides",
      "entry": "ἄρον",
@@ -7153,126 +7273,6 @@
      "claim": "shares all medicinal virtues of Dracunculus (orthopnea, coughs, fistulas, eye spots, ulcers, chilblains, wounds)",
      "quote": "δύναμιν δὲ ἔχει τὸ σπέρμα καὶ τὰ φύλλα καὶ ἡ ῥίζα τὴν αὐτὴν τῷ δρακοντίῳ",
      "translation": "the seed and the leaves and the root have the same property as drakontion"
-    }
-   ]
-  },
-  {
-   "species": "Arum italicum Mill.",
-   "mesh_ui": "D004232",
-   "mesh": "Diuretics",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:cuckow-point:c08",
-     "book": "culpeper",
-     "entry": "Cuckow-Point",
-     "tier": "B",
-     "claim": "promotes urination",
-     "quote": "provokes urine",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.166:c12",
-     "book": "dioscorides",
-     "entry": "δρακόντιον",
-     "tier": "B",
-     "claim": "promotes urination",
-     "quote": "ἔστι δὲ οὐρητική",
-     "translation": "it is diuretic"
-    }
-   ]
-  },
-  {
-   "species": "Arum italicum Mill.",
-   "mesh_ui": "D004417",
-   "mesh": "Dyspnea",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:cuckow-point:c05",
-     "book": "culpeper",
-     "entry": "Cuckow-Point",
-     "tier": "B",
-     "claim": "relieves shortness of breath and pursiness",
-     "quote": "A dram of the powder of the dried root taken with twice so much sugar... or the green root, doth wonderfully help those that are pursy and short-winded",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.166:c06",
-     "book": "dioscorides",
-     "entry": "δρακόντιον",
-     "tier": "B",
-     "claim": "relieves orthopnea",
-     "quote": "ἡ δὲ ῥίζα θερμαντικὴ οὖσα βοηθεῖ ὀρθοπνοίαις",
-     "translation": "the root being warming helps orthopnea"
-    }
-   ]
-  },
-  {
-   "species": "Arum italicum Mill.",
-   "mesh_ui": "D004433",
-   "mesh": "Earache",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:cuckow-point:c20",
-     "book": "culpeper",
-     "entry": "Cuckow-Point",
-     "tier": "B",
-     "claim": "relieves earache",
-     "quote": "The juice of the berries boiled in oil of roses, or beaten into powder mixed with the oil, and dropped into the ears, eases pains in them.",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.166:c01",
-     "book": "dioscorides",
-     "entry": "δρακόντιον",
-     "tier": "B",
-     "claim": "relieves earache",
-     "quote": "δύναμιν δὲ ἔχει ὁ καρπὸς χυλισθεὶς καὶ ἐγχυματισθεὶς μετ᾿ ἐλαίου εἰς τὸ οὖς ὠταλγίαν παύειν",
-     "translation": "the fruit juiced and instilled with oil into the ear has the power to stop earache"
-    }
-   ]
-  },
-  {
-   "species": "Arum italicum Mill.",
-   "mesh_ui": "D005100",
-   "mesh": "Expectorants",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:cuckow-point:c07",
-     "book": "culpeper",
-     "entry": "Cuckow-Point",
-     "tier": "B",
-     "claim": "breaks down and clears phlegm from the stomach, chest, and lungs",
-     "quote": "it breaks, digests, and rids away phlegm from the stomach, chest, and lungs",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.166:c11",
-     "book": "dioscorides",
-     "entry": "δρακόντιον",
-     "tier": "B",
-     "claim": "acts as an expectorant for chest fluids",
-     "quote": "τὰ ἐν θώρακι ὑγρὰ εὐανάγωγα ποιεῖ",
-     "translation": "it makes the fluids in the chest easy to bring up"
     }
    ]
   },
@@ -7308,66 +7308,6 @@
   },
   {
    "species": "Arum italicum Mill.",
-   "mesh_ui": "D006547",
-   "mesh": "Hernia",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:cuckow-point:c13",
-     "book": "culpeper",
-     "entry": "Cuckow-Point",
-     "tier": "B",
-     "claim": "helps heal hernias or ruptures",
-     "quote": "an ounce or more taken a time for some days together, doth help the rupture",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.166:c07",
-     "book": "dioscorides",
-     "entry": "δρακόντιον",
-     "tier": "B",
-     "claim": "treats internal ruptures / hernias",
-     "quote": "ἡ δὲ ῥίζα ... βοηθεῖ ... ῥήγμασι",
-     "translation": "the root helps ruptures"
-    }
-   ]
-  },
-  {
-   "species": "Arum italicum Mill.",
-   "mesh_ui": "D009298",
-   "mesh": "Nasal Polyps",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:cuckow-point:c15",
-     "book": "culpeper",
-     "entry": "Cuckow-Point",
-     "tier": "B",
-     "claim": "treats foul nasal sores or nasal polyps",
-     "quote": "heals the stinking sores in the nose, called Polypus",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.166:c02",
-     "book": "dioscorides",
-     "entry": "δρακόντιον",
-     "tier": "B",
-     "claim": "destroys nasal polyps",
-     "quote": "εἰς δὲ τὰς ῥῖνας ἐντιθέμενος ἐν ἐρίῳ πώλυπας δαπανᾶν",
-     "translation": "inserted into the nostrils in wool it consumes polyps"
-    }
-   ]
-  },
-  {
-   "species": "Arum italicum Mill.",
    "mesh_ui": "D014456",
    "mesh": "Ulcer",
    "books": [
@@ -7384,15 +7324,6 @@
      "claim": "cleanses foul, suppurating ulcers anywhere on the body",
      "quote": "The leaves either green or dry, or the juice of them, doth cleanse all manner of rotten and filthy ulcers",
      "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.166:c14",
-     "book": "dioscorides",
-     "entry": "δρακόντιον",
-     "tier": "B",
-     "claim": "cleanses and heals malignant and phagedenic ulcers",
-     "quote": "ἕλκη κακοήθη καὶ φαγεδαινικὰ μετὰ βρυωνίας λευκῆς σὺν μέλιτι λεανθεῖσα ἀνακαθαίρει καὶ ἀπουλοῖ",
-     "translation": "ground with white bryony and honey, it cleanses and cicatrizes malignant and phagedenic ulcers"
     },
     {
      "claim_id": "dioscorides:2.167:c01",
@@ -8136,36 +8067,6 @@
   },
   {
    "species": "Chelidonium majus L.",
-   "mesh_ui": "D007565",
-   "mesh": "Jaundice",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:celandine:c06",
-     "book": "culpeper",
-     "entry": "Celandine",
-     "tier": "A",
-     "claim": "Treats jaundice",
-     "quote": "helps the yellow jaundice",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.180:c02",
-     "book": "dioscorides",
-     "entry": "χελιδόνιον",
-     "tier": "B",
-     "claim": "treats jaundice",
-     "quote": "ἡ δὲ ῥίζα πινομένη σὺν ἀνήσσῳ καὶ οἴνῳ λευκῷ ἰκτερικούς θεραπεύει",
-     "translation": "The root drunk with anise and white wine treats jaundice."
-    }
-   ]
-  },
-  {
-   "species": "Chelidonium majus L.",
    "mesh_ui": "D012532",
    "mesh": "Scabies",
    "books": [
@@ -8200,36 +8101,6 @@
      "claim": "removes scabies",
      "quote": "καὶ ψώρας [...] ἀφιστᾷ",
      "translation": "and removes scabies"
-    }
-   ]
-  },
-  {
-   "species": "Chelidonium majus L.",
-   "mesh_ui": "D014098",
-   "mesh": "Toothache",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:celandine:c21",
-     "book": "culpeper",
-     "entry": "Celandine",
-     "tier": "A",
-     "claim": "Relieves toothache when gargled",
-     "quote": "The juice or decoction of the herb gargled between the teeth that ach, eases the pain",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.180:c04",
-     "book": "dioscorides",
-     "entry": "χελιδόνιον",
-     "tier": "B",
-     "claim": "relieves toothache",
-     "quote": "καὶ ὀδονταλγίας δὲ παύει διαμασωμένη",
-     "translation": "And chewed, it stops toothache."
     }
    ]
   },
@@ -9833,36 +9704,6 @@
    ]
   },
   {
-   "species": "Filipendula vulgaris Moench",
-   "mesh_ui": "D004417",
-   "mesh": "Dyspnea",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:filipendula:c09",
-     "book": "culpeper",
-     "entry": "Filipendula",
-     "tier": "A",
-     "claim": "Relieves shortness of breath",
-     "quote": "shortness of breath",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:3.76:c04",
-     "book": "dioscorides",
-     "entry": "σφονδύλιον",
-     "tier": "B",
-     "claim": "treats orthopnea",
-     "quote": "ὀρθοπνοϊκούς [ἰᾶται]",
-     "translation": "and orthopneic patients"
-    }
-   ]
-  },
-  {
    "species": "Foeniculum vulgare Mill.",
    "mesh_ui": "D004232",
    "mesh": "Diuretics",
@@ -10578,114 +10419,6 @@
   },
   {
    "species": "Hedera helix L.",
-   "mesh_ui": "D002056",
-   "mesh": "Burns",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:ivy:c19",
-     "book": "culpeper",
-     "entry": "Ivy",
-     "tier": "A",
-     "claim": "Heals burns and scalds",
-     "quote": "effectual to heal all burnings and scaldings",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.179:c02",
-     "book": "dioscorides",
-     "entry": "κισσὸς",
-     "tier": "B",
-     "claim": "treats burns",
-     "quote": "καὶ πρὸς πυρίκαυτα δὲ ἁρμόζει σὺν κηρωτῇ λειανθέντα",
-     "translation": "And ground fine with cerate, they are suitable for burns."
-    },
-    {
-     "claim_id": "dioscorides:2.179:c13",
-     "book": "dioscorides",
-     "entry": "κισσὸς",
-     "tier": "B",
-     "claim": "treats burns",
-     "quote": "καὶ κατακαύματα [θεραπεύει καταπλασθέντα, ὡς προείρηται, ἑχθά]",
-     "translation": "And they treat burns."
-    }
-   ]
-  },
-  {
-   "species": "Hedera helix L.",
-   "mesh_ui": "D004403",
-   "mesh": "Dysentery",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:ivy:c03",
-     "book": "culpeper",
-     "entry": "Ivy",
-     "tier": "A",
-     "claim": "Treats dysentery",
-     "quote": "and bloody flux",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.179:c01",
-     "book": "dioscorides",
-     "entry": "κισσὸς",
-     "tier": "B",
-     "claim": "treats dysentery",
-     "quote": "ποιεῖ δὲ τὰ μὲν ἄνθη αὐτοῦ τοῖς τρισὶ δακτύλοις λημφθέντα καὶ ποθέντα σὺν οἴνῳ πρὸς δυσεντερίας",
-     "translation": "Its flowers taken in the pinch of three fingers and drunk with wine act against dysentery."
-    }
-   ]
-  },
-  {
-   "species": "Hedera helix L.",
-   "mesh_ui": "D006261",
-   "mesh": "Headache",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:ivy:c16",
-     "book": "culpeper",
-     "entry": "Ivy",
-     "tier": "A",
-     "claim": "Relieves chronic headache",
-     "quote": "The same applied with some Rosewater, and oil of Roses, to the temples and forehead, eases the head-ache, though it be of long continuance.",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.179:c04",
-     "book": "dioscorides",
-     "entry": "κισσὸς",
-     "tier": "B",
-     "claim": "treats chronic headaches",
-     "quote": "ῥινεγχυτοῦται δὲ ὁ χυλὸς τῶν φύλλων καὶ τῶν κορύμβων σὺν ἰρίνῳ ἢ μέλιτι ἢ νίτρῳ πρὸς τὰ χρόνια τῆς κεφαλῆς ἀλγήματα",
-     "translation": "The juice of leaves and berry clusters is instilled into the nose with iris oil, honey, or soda for chronic headaches."
-    },
-    {
-     "claim_id": "dioscorides:2.179:c05",
-     "book": "dioscorides",
-     "entry": "κισσὸς",
-     "tier": "B",
-     "claim": "relieves chronic headaches when washed on the head",
-     "quote": "ἐπιβρέχεται σὺν ὄξει καὶ ῥοδίνῳ",
-     "translation": "And it is bathed on the head with vinegar and rose oil."
-    }
-   ]
-  },
-  {
-   "species": "Hedera helix L.",
    "mesh_ui": "D007565",
    "mesh": "Jaundice",
    "books": [
@@ -10711,132 +10444,6 @@
      "claim": "treats jaundice",
      "quote": "καὶ ἴκτερον δὲ ἀποκαθαίρει ὁμοίως πινόμενα πρὸς ἓξ ἢ ἑπτὰ ἡμέρας",
      "translation": "and they purge jaundice when drunk in the same manner for six or seven days."
-    }
-   ]
-  },
-  {
-   "species": "Hedera helix L.",
-   "mesh_ui": "D008600",
-   "mesh": "Menstruation-Inducing Agents",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:ivy:c14",
-     "book": "culpeper",
-     "entry": "Ivy",
-     "tier": "A",
-     "claim": "Stimulates menstrual flow",
-     "quote": "and women’s courses",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.179:c16",
-     "book": "dioscorides",
-     "entry": "κισσὸς",
-     "tier": "B",
-     "claim": "promotes menstruation",
-     "quote": "κινοῦσι δὲ καὶ καταμήνια ποθέντες ἥ ὑποθυμιαθέντες οἰ κόρυμβοι λεῖοι",
-     "translation": "The berries ground fine and drunk or used in fumigation stimulate menses."
-    },
-    {
-     "claim_id": "dioscorides:2.179:c18",
-     "book": "dioscorides",
-     "entry": "κισσὸς",
-     "tier": "B",
-     "claim": "promotes menstruation",
-     "quote": "καὶ ὁ μόσχος δὲ τῶν φύλλων μέλιτι δευθεὶς καὶ προστεθεὶς τῇ μήτρᾳ ἔμμηνα ... ἄγει",
-     "translation": "And a shoot of the leaves moistened with honey and applied to the womb induces menstruation."
-    }
-   ]
-  },
-  {
-   "species": "Hedera helix L.",
-   "mesh_ui": "D013158",
-   "mesh": "Splenic Diseases",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:ivy:c15",
-     "book": "culpeper",
-     "entry": "Ivy",
-     "tier": "A",
-     "claim": "Relieves spleen disorders, aches, and side stitches",
-     "quote": "The fresh leaves of Ivy, boiled in vinegar, and applied warm to the sides of those that are troubled with the spleen, ache, or stitch in the sides, do give much ease",
-     "translation": null
-    },
-    {
-     "claim_id": "culpeper:ivy:c24",
-     "book": "culpeper",
-     "entry": "Ivy",
-     "tier": "A",
-     "claim": "Relieves spleen disorders by drinking liquids from an ivy-wood cup",
-     "quote": "those that are troubled with the spleen, shall find much ease by continual drinking out of a cup made of Ivy",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.179:c03",
-     "book": "dioscorides",
-     "entry": "κισσὸς",
-     "tier": "B",
-     "claim": "treats spleen disorders",
-     "quote": "τὰ δὲ ἁπαλὰ τῶν φύλλων ἑψόμενα σὺν ὄξει ἢ ὠμὰ λειαινόμενα σπλῆνα ἰᾶται",
-     "translation": "The tender leaves boiled with vinegar or ground raw heal the spleen."
-    }
-   ]
-  },
-  {
-   "species": "Hedera helix L.",
-   "mesh_ui": "D014456",
-   "mesh": "Ulcer",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:ivy:c17",
-     "book": "culpeper",
-     "entry": "Ivy",
-     "tier": "A",
-     "claim": "Cleanses and treats chronic, refractory ulcers",
-     "quote": "The fresh leaves boiled in wine, and old filthy ulcers hard to be cured washed therewith, do wonderfully help to cleanse them.",
-     "translation": null
-    },
-    {
-     "claim_id": "culpeper:ivy:c20",
-     "book": "culpeper",
-     "entry": "Ivy",
-     "tier": "A",
-     "claim": "Heals exulcerations arising from burns or acrid humors",
-     "quote": "all kinds of exulcerations coming thereby, or by salt phlegm or humours in other parts of the body.",
-     "translation": null
-    },
-    {
-     "claim_id": "culpeper:ivy:c22",
-     "book": "culpeper",
-     "entry": "Ivy",
-     "tier": "A",
-     "claim": "Cures nasal ulcers and foul nasal odors",
-     "quote": "curing the ulcers and stench therein",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.179:c12",
-     "book": "dioscorides",
-     "entry": "κισσὸς",
-     "tier": "B",
-     "claim": "treats ulcers",
-     "quote": "καταπλάσσεται δὲ τὰ φύλλα πρὸς πᾶν ἕλκος ἑψηθέντα σὺν οἴνῳ",
-     "translation": "The leaves boiled with wine are applied as a poultice for every ulcer."
     }
    ]
   },
@@ -14034,36 +13641,6 @@
   },
   {
    "species": "Lysimachia arvensis (L.) U.Manns & Anderb.",
-   "mesh_ui": "D004232",
-   "mesh": "Diuretics",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:pimpernel:c13",
-     "book": "culpeper",
-     "entry": "Pimpernel",
-     "tier": "A",
-     "claim": "Promotes urination",
-     "quote": "It provokes urine",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.127:c03",
-     "book": "dioscorides",
-     "entry": "σίον",
-     "tier": "B",
-     "claim": "promotes urination",
-     "quote": "οὖρά τε κινεῖ",
-     "translation": "and stimulates urine"
-    }
-   ]
-  },
-  {
-   "species": "Lysimachia arvensis (L.) U.Manns & Anderb.",
    "mesh_ui": "D005547",
    "mesh": "Foreign Bodies",
    "books": [
@@ -14223,75 +13800,6 @@
   },
   {
    "species": "Lysimachia arvensis (L.) U.Manns & Anderb.",
-   "mesh_ui": "D014545",
-   "mesh": "Urinary Calculi",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:pimpernel:c14",
-     "book": "culpeper",
-     "entry": "Pimpernel",
-     "tier": "A",
-     "claim": "Expels stones and gravel from kidneys and bladder",
-     "quote": "helps to expel the stone and gravel out of the kidneys and bladder",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.127:c01",
-     "book": "dioscorides",
-     "entry": "σίον",
-     "tier": "B",
-     "claim": "crushes urinary stones",
-     "quote": "λίθους θρύπτει",
-     "translation": "it crushes stones"
-    },
-    {
-     "claim_id": "dioscorides:2.127:c02",
-     "book": "dioscorides",
-     "entry": "σίον",
-     "tier": "B",
-     "claim": "expels urinary calculi",
-     "quote": "καὶ ἐκκρίνει",
-     "translation": "and expels [stones]"
-    }
-   ]
-  },
-  {
-   "species": "Lysimachia arvensis (L.) U.Manns & Anderb.",
-   "mesh_ui": "D014554",
-   "mesh": "Urination",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:pimpernel:c13",
-     "book": "culpeper",
-     "entry": "Pimpernel",
-     "tier": "A",
-     "claim": "Promotes urination",
-     "quote": "It provokes urine",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.127:c03",
-     "book": "dioscorides",
-     "entry": "σίον",
-     "tier": "B",
-     "claim": "promotes urination",
-     "quote": "οὖρά τε κινεῖ",
-     "translation": "and stimulates urine"
-    }
-   ]
-  },
-  {
-   "species": "Lysimachia arvensis (L.) U.Manns & Anderb.",
    "mesh_ui": "D014947",
    "mesh": "Wounds and Injuries",
    "books": [
@@ -14352,7 +13860,7 @@
      "claim_id": "dioscorides:4.3:c02",
      "book": "dioscorides",
      "entry": "Λυσιμάχειος",
-     "tier": "B",
+     "tier": "A",
      "claim": "treats dysentery",
      "quote": "ὁ χυλὸς τῶν φύλλων ... πρὸς ... δυσεντερίας, πόμα καὶ ἔγκλυσμα",
      "translation": "the juice of the leaves is suitable for dysentery as a drink and enema"
@@ -14382,7 +13890,7 @@
      "claim_id": "dioscorides:4.3:c04",
      "book": "dioscorides",
      "entry": "Λυσιμάχειος",
-     "tier": "B",
+     "tier": "A",
      "claim": "stops nosebleeds",
      "quote": "καὶ πρὸς τἀς ἐκ μυδτήρων αἱμορραγίας ἐμφρασσομένη ἡ πόα ἁρμόζει",
      "translation": "and plugged into the nostrils the herb is suitable for hemorrhages from the nose"
@@ -14430,7 +13938,7 @@
      "claim_id": "dioscorides:4.3:c06",
      "book": "dioscorides",
      "entry": "Λυσιμάχειος",
-     "tier": "B",
+     "tier": "A",
      "claim": "stops bleeding",
      "quote": "καὶ ἴσχαιμος",
      "translation": "and stanches blood"
@@ -14460,7 +13968,7 @@
      "claim_id": "dioscorides:4.3:c03",
      "book": "dioscorides",
      "entry": "Λυσιμάχειος",
-     "tier": "B",
+     "tier": "A",
      "claim": "stops abnormal uterine bleeding",
      "quote": "ῥοῦν τε γυωαικεῖον ἵστησιν ἐν προσθέτῳ",
      "translation": "and in a pessary it stops female discharge"
@@ -14490,7 +13998,7 @@
      "claim_id": "dioscorides:4.3:c05",
      "book": "dioscorides",
      "entry": "Λυσιμάχειος",
-     "tier": "B",
+     "tier": "A",
      "claim": "heals wounds",
      "quote": "ἐστι δὲ καὶ τραυματικὴ",
      "translation": "it is also healing to wounds"
@@ -14529,7 +14037,7 @@
      "claim_id": "dioscorides:4.3:c05",
      "book": "dioscorides",
      "entry": "Λυσιμάχειος",
-     "tier": "B",
+     "tier": "A",
      "claim": "heals wounds",
      "quote": "ἐστι δὲ καὶ τραυματικὴ",
      "translation": "it is also healing to wounds"
@@ -16692,6 +16200,15 @@
      "translation": null
     },
     {
+     "claim_id": "dioscorides:3.96:c02",
+     "book": "dioscorides",
+     "entry": "λεοντοπέταλον",
+     "tier": "B",
+     "claim": "quickly relieves pain",
+     "quote": "ταχέως ἀπόνους ποιοῦσα",
+     "translation": "quickly rendering them free of pain"
+    },
+    {
      "claim_id": "dioscorides:4.64:c06",
      "book": "dioscorides",
      "entry": "μήκων",
@@ -17571,6 +17088,66 @@
   },
   {
    "species": "Polygonatum multiflorum (L.) All.",
+   "mesh_ui": "D003967",
+   "mesh": "Diarrhea",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:solomons-seal:c06",
+     "book": "culpeper",
+     "entry": "Solomon’s Seal",
+     "tier": "A",
+     "claim": "stops all bodily fluxes and discharges",
+     "quote": "as also all fluxes in man or woman",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:4.4:c03",
+     "book": "dioscorides",
+     "entry": "πολύγονον",
+     "tier": "B",
+     "claim": "relieves diarrhea and bowel fluxes",
+     "quote": "καὶ τοῖς κατὰ κοιλίαν ῥεύμασι",
+     "translation": "and for fluxes of the belly"
+    }
+   ]
+  },
+  {
+   "species": "Polygonatum multiflorum (L.) All.",
+   "mesh_ui": "D006547",
+   "mesh": "Hernia",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:solomons-seal:c10",
+     "book": "culpeper",
+     "entry": "Solomon’s Seal",
+     "tier": "A",
+     "claim": "treats ruptures and hernias",
+     "quote": "It is no less effectual to help ruptures and burstings, the decoction in wine, or the powder in broth or drink, being inwardly taken, and outwardly applied to the place.",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.94:c03",
+     "book": "dioscorides",
+     "entry": "πολύκνημον",
+     "tier": "B",
+     "claim": "treats internal ruptures",
+     "quote": "πίνεται καὶ πρὸς ... ῥήγματα σὺν οἴνῳ",
+     "translation": "it is also drunk with wine for ruptures"
+    }
+   ]
+  },
+  {
+   "species": "Polygonatum multiflorum (L.) All.",
    "mesh_ui": "D008548",
    "mesh": "Melanosis",
    "books": [
@@ -17601,6 +17178,36 @@
   },
   {
    "species": "Polygonatum multiflorum (L.) All.",
+   "mesh_ui": "D014456",
+   "mesh": "Ulcer",
+   "books": [
+    "culpeper",
+    "dioscorides"
+   ],
+   "both_A": false,
+   "claims": [
+    {
+     "claim_id": "culpeper:solomons-seal:c03",
+     "book": "culpeper",
+     "entry": "Solomon’s Seal",
+     "tier": "A",
+     "claim": "dries up and curbs discharge from chronic sores",
+     "quote": "and to dry up and restrain the flux of humours to those that are old",
+     "translation": null
+    },
+    {
+     "claim_id": "dioscorides:4.4:c12",
+     "book": "dioscorides",
+     "entry": "πολύγονον",
+     "tier": "B",
+     "claim": "treats ulcers on the genitals",
+     "quote": "συνεψηθείς δὲ οἴνῳ καὶ μέλι προσλαβών ἄκρως ποιεῖ πρὸς τὰ ἐν αἰδοίοις ?ελκη",
+     "translation": "boiled together with wine and combined with honey, it is exceedingly effective for ulcers on the genitals"
+    }
+   ]
+  },
+  {
+   "species": "Polygonatum multiflorum (L.) All.",
    "mesh_ui": "D014947",
    "mesh": "Wounds and Injuries",
    "books": [
@@ -17617,6 +17224,33 @@
      "claim": "closes and heals fresh wounds, hurts, and sores",
      "quote": "The root of Solomon’s Seal is found by experience to be available in wounds, hurts, and outward sores, to heal and close up the lips of those that are green",
      "translation": null
+    },
+    {
+     "claim_id": "dioscorides:3.94:c01",
+     "book": "dioscorides",
+     "entry": "πολύκνημον",
+     "tier": "B",
+     "claim": "heals and binds wounds",
+     "quote": "ποιεῖ δὲ καταπλασσόμενον χλωρὸν ἢ ξηρὸν μεθ᾿ ὕδατος πρὸς τραύματα κολλῶν",
+     "translation": "applied as a poultice fresh or dry with water, it acts by gluing wounds"
+    },
+    {
+     "claim_id": "dioscorides:3.94:c03",
+     "book": "dioscorides",
+     "entry": "πολύκνημον",
+     "tier": "B",
+     "claim": "treats internal ruptures",
+     "quote": "πίνεται καὶ πρὸς ... ῥήγματα σὺν οἴνῳ",
+     "translation": "it is also drunk with wine for ruptures"
+    },
+    {
+     "claim_id": "dioscorides:4.4:c19",
+     "book": "dioscorides",
+     "entry": "πολύγονον",
+     "tier": "B",
+     "claim": "heals fresh wounds",
+     "quote": "καὶ τραύματα πρόσφατα",
+     "translation": "and fresh wounds"
     },
     {
      "claim_id": "dioscorides:4.6:c01",
@@ -21621,36 +21255,6 @@
   },
   {
    "species": "Trachyspermum ammi (L.) Sprague",
-   "mesh_ui": "D001046",
-   "mesh": "Aphrodisiacs",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:bishops-weed:c02",
-     "book": "culpeper",
-     "entry": "Bishop’s-Weed",
-     "tier": "B",
-     "claim": "stimulates sexual desire as an aphrodisiac",
-     "quote": "it provokes lust to purpose",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.166:c13",
-     "book": "dioscorides",
-     "entry": "δρακόντιον",
-     "tier": "B",
-     "claim": "acts as an aphrodisiac",
-     "quote": "ὁρμάς τε πρὸς συνουσίας ἐγείρει πινομένη μετ᾿ οἴνου",
-     "translation": "it arouses sexual desire when drunk with wine"
-    }
-   ]
-  },
-  {
-   "species": "Trachyspermum ammi (L.) Sprague",
    "mesh_ui": "D003085",
    "mesh": "Colic",
    "books": [
@@ -21711,66 +21315,6 @@
   },
   {
    "species": "Trachyspermum ammi (L.) Sprague",
-   "mesh_ui": "D004232",
-   "mesh": "Diuretics",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:bishops-weed:c05",
-     "book": "culpeper",
-     "entry": "Bishop’s-Weed",
-     "tier": "B",
-     "claim": "promotes urination as a diuretic",
-     "quote": "provokes urine",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.166:c12",
-     "book": "dioscorides",
-     "entry": "δρακόντιον",
-     "tier": "B",
-     "claim": "promotes urination",
-     "quote": "ἔστι δὲ οὐρητική",
-     "translation": "it is diuretic"
-    }
-   ]
-  },
-  {
-   "species": "Trachyspermum ammi (L.) Sprague",
-   "mesh_ui": "D007989",
-   "mesh": "Libido",
-   "books": [
-    "culpeper",
-    "dioscorides"
-   ],
-   "both_A": false,
-   "claims": [
-    {
-     "claim_id": "culpeper:bishops-weed:c02",
-     "book": "culpeper",
-     "entry": "Bishop’s-Weed",
-     "tier": "B",
-     "claim": "stimulates sexual desire as an aphrodisiac",
-     "quote": "it provokes lust to purpose",
-     "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.166:c13",
-     "book": "dioscorides",
-     "entry": "δρακόντιον",
-     "tier": "B",
-     "claim": "acts as an aphrodisiac",
-     "quote": "ὁρμάς τε πρὸς συνουσίας ἐγείρει πινομένη μετ᾿ οἴνου",
-     "translation": "it arouses sexual desire when drunk with wine"
-    }
-   ]
-  },
-  {
-   "species": "Trachyspermum ammi (L.) Sprague",
    "mesh_ui": "D008600",
    "mesh": "Menstruation-Inducing Agents",
    "books": [
@@ -21817,15 +21361,6 @@
      "claim": "treats venomous snake bites",
      "quote": "and is good against the biting of serpents",
      "translation": null
-    },
-    {
-     "claim_id": "dioscorides:2.166:c17",
-     "book": "dioscorides",
-     "entry": "δρακόντιον",
-     "tier": "B",
-     "claim": "repels vipers and protects against snake bites",
-     "quote": "εἰ διατρίψει τις τῇ ῥίζῃ τὰς χεῖρας, ἀπὸ ἐχίδνης ἄδηκτος μένει",
-     "translation": "if one rubs the hands with the root, he remains unbitten by vipers"
     },
     {
      "claim_id": "dioscorides:3.62:c04",
@@ -23193,7 +22728,7 @@
      "claim_id": "dioscorides:4.121:c06",
      "book": "dioscorides",
      "entry": "ἴον",
-     "tier": "B",
+     "tier": "A",
      "claim": "relieves epilepsy in children",
      "quote": "καὶ ἐπιληψίαις ταῖς ἐπὶ παίδων",
      "translation": "and childhood epilepsy."
@@ -23223,7 +22758,7 @@
      "claim_id": "dioscorides:4.121:c03",
      "book": "dioscorides",
      "entry": "ἴον",
-     "tier": "B",
+     "tier": "A",
      "claim": "relieves eye inflammation",
      "quote": "καὶ ὀφθαλμῶν φλεγμοναῖς",
      "translation": "and inflammations of the eyes,"
@@ -23292,7 +22827,7 @@
      "claim_id": "dioscorides:4.121:c05",
      "book": "dioscorides",
      "entry": "ἴον",
-     "tier": "B",
+     "tier": "A",
      "claim": "relieves quinsy",
      "quote": "φασὶ δὲ τὸ πορφυρίζον τοῦ ἄνθους μετὰ ὕδατος ποθὲν συναγχικοῖς βοηθεῖν",
      "translation": "They say that the purple part of the flower drunk with water helps those with quinsy"
@@ -23322,7 +22857,7 @@
      "claim_id": "dioscorides:4.121:c05",
      "book": "dioscorides",
      "entry": "ἴον",
-     "tier": "B",
+     "tier": "A",
      "claim": "relieves quinsy",
      "quote": "φασὶ δὲ τὸ πορφυρίζον τοῦ ἄνθους μετὰ ὕδατος ποθὲν συναγχικοῖς βοηθεῖν",
      "translation": "They say that the purple part of the flower drunk with water helps those with quinsy"
