@@ -5,6 +5,7 @@ import { Dropdown, SearchBox, type Suggestion } from './controls'
 import { TranslateButton } from './accessibility'
 const BOOK_NAME: Record<string, string> = { culpeper: 'Culpeper', dioscorides: 'Dioscorides', shennong: 'Shennong' }
 import MapOverview, { type Level } from './MapOverview'
+import { apiUrl } from './api'
 
 type Row = Record<string, any>
 type Entry = { entry: Row; book: Row; names: Row[]; candidates: Row[]; claims: Row[]; historical_text?: string; introduction?: string; opening?: string }
@@ -13,7 +14,7 @@ type Selection = { kind: Kind; id: string; label: string; data: Row }
 const kindLabels: Record<Kind, string> = { entry: 'Historical entry', candidate: 'Plant hypothesis', claim: 'Historical claim', mapping: 'Concept mapping', concept: 'Medical concept', unit: 'Claim–plant unit', assessment: 'Evidence assessment', study: 'Modern study' }
 const present = (v: unknown) => v === undefined || v === null || v === '' ? 'Not recorded' : Array.isArray(v) ? (v.length ? v.join(', ') : 'None recorded') : String(v)
 async function get<T>(path: string): Promise<T> {
-  const response = await fetch(`/api${path}`)
+  const response = await fetch(apiUrl(`/api${path}`))
   const data = await response.json().catch(() => ({}))
   if (!response.ok) throw new Error(data.error || 'Unable to load the knowledge map.')
   return data as T

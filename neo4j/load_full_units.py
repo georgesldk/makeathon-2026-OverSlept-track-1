@@ -15,6 +15,8 @@ def prepare(snapshot_file):
     snapshot, existing = base.prepare(snapshot_file)
     source_dataset = existing['dataset'][0]['id']
     files = [base.ROOT / 'stage3/units/culpeper.jsonl', base.ROOT / 'stage3/units/dioscorides.jsonl']
+    if any(c['book'] == 'shennong' for c in existing['claims']):
+        files.append(base.ROOT / 'stage3/units/shennong.jsonl')
     hashes = {str(p.relative_to(base.ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
     hashes['loader_sha256'] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
     dataset = base.key('full-unit-source-records-v1', snapshot, source_dataset, hashes)

@@ -7,7 +7,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-BOOKS = ("culpeper", "dioscorides")
+BOOKS = ("culpeper", "dioscorides", "shennong")
 
 
 def digest(value):
@@ -28,8 +28,9 @@ def read(path):
 
 
 def prepare(book, snapshot, root):
-    hist = read(root / f"historical_texts/{book}/{'herbs' if book == 'culpeper' else 'chapters'}.json")
-    original = hist['herbs' if book == 'culpeper' else 'chapters']
+    hist_key = {'culpeper': 'herbs', 'dioscorides': 'chapters', 'shennong': 'entries'}[book]
+    hist = read(root / f"historical_texts/{book}/{hist_key}.json")
+    original = hist[hist_key]
     source = {h["id"]: h for h in original if book == "culpeper" or h.get("chapter") != "preface"}
     resolved = read(root / f"matching/{book}/herb_candidates_resolved.json")["herbs"]
     decisions = read(root / f"matching/{book}/eligibility.json")["herbs"]
@@ -39,18 +40,25 @@ def prepare(book, snapshot, root):
     releases = {"wfo": taxfile.get("wfo_release"), "wcvp": taxfile.get("wcvp_version")}
     descfile = root / f"description_sources/check/{book}/description_check.json"
     desc = read(descfile).get("herbs", {}) if descfile.exists() else {}
+    if book == 'shennong':
+        if set(resolved) != set(decisions) or not set(resolved).issubset(source):
+            raise ValueError('shennong: inconsistent historical, resolved and eligibility IDs')
+        # The source also contains animal and mineral records, which have no botanical decisions.
+        for entry_key in set(source) - set(resolved):
+            resolved[entry_key] = {'candidates': []}
+            decisions[entry_key] = {'shown': [], 'possible': [], 'hidden': []}
     if set(source) != set(resolved) or set(source) != set(decisions):
         raise ValueError(f"{book}: entry IDs differ across historical, resolved and eligibility files")
     result = {k: [] for k in ("books", "entries", "names", "hypotheses", "decisions", "evidence", "sources", "taxonomy", "taxa", "comparisons", "candidate_descriptions", "description_scores")}
     # The edition metadata must not be overwritten when a different snapshot is loaded.
     book_id = key(snapshot, "book", book)
     result["books"].append({"id": book_id, "snapshot_id": snapshot, "book": book,
-                            "name": "Culpeper" if book == "culpeper" else "Dioscorides", "source": hist.get("source")})
+                            "name": {"culpeper": "Culpeper", "dioscorides": "Dioscorides", "shennong": "Shennong Bencao Jing"}[book], "source": hist.get("source")})
     link_by_entry = {}
     for entry_key, h in source.items():
         eid = key(snapshot, book, "entry", entry_key)
         rh = resolved[entry_key]
-        entry_name = h.get("name") if book == "culpeper" else h.get("headword")
+        entry_name = h.get("headword") if book == "dioscorides" else h.get("name")
         result["entries"].append({"id": eid, "snapshot_id": snapshot, "book_id": book_id, "book": book,
                                   "entry_key": entry_key, "name": entry_name, "label": h.get("label"),
                                   "raw_json": packed(h), "geography_json": packed(geography.get(entry_key))})
@@ -58,7 +66,9 @@ def prepare(book, snapshot, root):
                  + [{"name": name, "layer": "other", "quote": ev.get("quote"), "note": ev.get("note")}
                     for ev in h.get("name_evidence", []) for name in ev.get("names", [])] if book == "culpeper" else
                  [{"name": h.get("headword"), "layer": "headword", "quote": h.get("opening")}]
-                 + [{**n, "quote": None} for n in h.get("text_names", []) + h.get("rv_names", [])])
+                 + [{**n, "quote": None} for n in h.get("text_names", []) + h.get("rv_names", [])]) if book != 'shennong' else (
+                 [{"name": h.get("name"), "layer": "heading", "quote": None}] +
+                 [{"name": name, "layer": layer, "quote": None} for layer, values in (h.get('other_names_by_layer') or {}).items() for name in values])
         for i, name in enumerate(names):
             result["names"].append({"id": key(eid, "name", i), "snapshot_id": snapshot, "entry_id": eid, "name": name.get("name"),
                                     "layer": name.get("layer"), "quote": name.get("quote"), "raw_json": packed(name)})
@@ -160,7 +170,8 @@ def main():
     args = parser.parse_args()
     paths = []
     for book in BOOKS:
-        paths += [ROOT / f"historical_texts/{book}/{'herbs' if book == 'culpeper' else 'chapters'}.json"]
+        hist_key = {'culpeper': 'herbs', 'dioscorides': 'chapters', 'shennong': 'entries'}[book]
+        paths += [ROOT / f"historical_texts/{book}/{hist_key}.json"]
         paths += [ROOT / f"matching/{book}/{name}" for name in ("herb_candidates_resolved.json", "eligibility.json", "geography.json", "scientific_names_resolved.json", "evidence.jsonl")]
         p = ROOT / f"description_sources/check/{book}/description_check.json"
         if p.exists(): paths.append(p)

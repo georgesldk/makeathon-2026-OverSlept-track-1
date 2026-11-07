@@ -71,6 +71,7 @@ def main():
     p.add_argument('snapshot', type=Path)
     p.add_argument('--database', required=True)
     p.add_argument('--batch-size', type=int, default=100)
+    p.add_argument('--append-snapshot', action='store_true', help='Add a separate snapshot to an existing structured graph')
     args = p.parse_args()
     if args.batch_size < 1:
         p.error('batch size must be positive')
@@ -99,7 +100,9 @@ def main():
             count = s.run('MATCH (n) RETURN count(n) AS n').single()['n']
             if count:
                 marker = s.run('MATCH (b:StructuredBuild) RETURN b.id AS id, b.status AS status').data()
-                if len(marker) != 1 or marker[0]['id'] != build_id or marker[0]['status'] != 'loading':
+                resuming = any(m['id'] == build_id and m['status'] == 'loading' for m in marker)
+                appending = args.append_snapshot and marker and all(m['status'] == 'complete' for m in marker) and not any(m['id'] == build_id for m in marker)
+                if not resuming and not appending:
                     raise ValueError('Target database is not empty or belongs to a different/completed build')
             schema = (Path(__file__).parent / '01_schema.cypher').read_text()
             for statement in '\n'.join(line for line in schema.splitlines() if not line.lstrip().startswith('//')).split(';'):
@@ -134,7 +137,7 @@ def main():
             LABELS['full_units'] = 'FullUnitRecord'
             q = '''UNWIND $rows AS r MATCH (d:DatasetImport {id:r.dataset_id}), (c:HistoricalClaim {id:r.claim_id, dataset_id:r.shared_dataset_id}) MERGE (n:FullUnitRecord {id:r.id}) SET n += r MERGE (d)-[:INCLUDES_UNIT_RECORD]->(n) MERGE (n)-[:ABOUT_CLAIM]->(c) WITH n,r OPTIONAL MATCH (h:IdentificationHypothesis {id:r.hypothesis_id, snapshot_id:r.snapshot_id}) FOREACH (_ IN CASE WHEN h IS NULL THEN [] ELSE [1] END | MERGE (n)-[:USES_HYPOTHESIS]->(h)) WITH n,r OPTIONAL MATCH (u:ClaimPlantUnit {id:r.shared_unit_id, dataset_id:r.shared_dataset_id}) FOREACH (_ IN CASE WHEN u IS NULL THEN [] ELSE [1] END | MERGE (n)-[:CORRESPONDS_TO_SHARED_UNIT]->(u)) RETURN count(n) AS n'''
             load_rows(s, 'full_units', records, q, args.batch_size)
-            s.run('MATCH (b:StructuredBuild {id:$id}) SET b.status="complete"', id=build_id).consume()
+            s.run('MATCH (b:StructuredBuild {id:$id}) SET b.status="complete", b.completed_at=datetime()', id=build_id).consume()
     print('Structured graph loaded:', args.database, snapshot, flush=True)
 
 

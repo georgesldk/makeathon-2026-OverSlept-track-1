@@ -21,7 +21,7 @@ def promote(kind, row):
             other_accepted_names=source.get('other_accepted_names'))
     elif kind == 'evidence':
         detail = source.get('detail') or {}
-        put(source_lineage=source.get('family'), matched_text=source.get('matched_text'),
+        put(source_lineage=source.get('lineage') or source.get('family'), matched_text=source.get('matched_text'),
             match_type=source.get('match_type'), source_record_id=source.get('record'),
             candidate_full=source.get('candidate_full'), bridge=source.get('bridge'),
             layer=source.get('layer'), attributed_to=source.get('attributed_to'),

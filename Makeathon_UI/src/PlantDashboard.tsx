@@ -1,14 +1,15 @@
 import { TranslateButton } from "./accessibility"
 import { useEffect, useState } from 'react'
 import { friendly, studyLink, tierLabel } from './display'
+import { apiUrl } from './api'
 
 type Item = Record<string, any>
 type DashboardRecord = { entry: Item; book: Item; names: Item[]; candidates: Item[]; claims: Item[] }
 type StudyResult = { items: Item[]; has_more: boolean }
 const bookSources: Record<string, { name: string; url: string }> = {
   culpeper: { name: 'The Complete Herbal · Project Gutenberg', url: 'https://www.gutenberg.org/ebooks/49513' },
-  shennong: { name: 'Shennong Bencao Jing · Sun Xingyan edition', url: 'https://zh.wikisource.org/wiki/%E7%A5%9E%E8%BE%B2%E6%9C%AC%E8%8D%89%E7%B6%93_(%E5%AD%AB%E6%98%9F%E8%A1%8D)' },
   dioscorides: { name: 'De materia medica · Wellmann edition', url: 'https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1:1.preface.1-1.preface.5/' },
+  shennong: { name: 'Shennong Bencao Jing · 1799 reconstruction · Chinese Wikisource', url: 'https://zh.wikisource.org/wiki/神農本草經_(孫星衍)' },
 }
 
 function ClaimCard({ row, source, onClaim }: {row: Item; source?: { name: string; url: string }; onClaim: (id: string) => void}) {
@@ -40,7 +41,7 @@ export default function PlantDashboard({ record, switcher, onCandidate, onClaim,
   const [studyError, setStudyError] = useState('')
   useEffect(() => {
     let active = true; setStudies(null); setStudyError('')
-    fetch(`/api/entries/${record.entry.id}/studies`).then(async response => {
+    fetch(apiUrl(`/api/entries/${record.entry.id}/studies`)).then(async response => {
       if (!response.ok) throw new Error('Unable to load connected studies.')
       return response.json()
     }).then(result => { if (active) setStudies(result) }).catch(error => { if (active) setStudyError(error.message) })

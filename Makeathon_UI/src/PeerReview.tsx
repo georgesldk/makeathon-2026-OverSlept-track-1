@@ -5,6 +5,7 @@
  */
 import { useEffect, useMemo, useState } from "react"
 import { Dropdown, SearchBox, type Suggestion } from "./controls"
+import { apiUrl } from "./api"
 
 type Item = Record<string, any>
 export type Review = {
@@ -18,7 +19,7 @@ const VERDICT_LABEL: Record<Review["verdict"], string> = { confirm: "Confirms", 
 const BOOK: Record<string, string> = { culpeper: "Culpeper", dioscorides: "Dioscorides", shennong: "Shennong Bencao Jing" }
 
 export async function loadReviews(entryId?: string): Promise<{ reviews: Review[]; summary: Summary }> {
-  const r = await fetch(`/api/reviews${entryId ? `?entry_id=${entryId}` : ""}`)
+  const r = await fetch(apiUrl(`/api/reviews${entryId ? `?entry_id=${entryId}` : ""}`))
   if (!r.ok) throw new Error(r.status === 404 ? "Reviews are not available: restart server.py." : "Reviews could not be loaded.")
   return r.json()
 }
@@ -106,11 +107,11 @@ export default function PeerReview({ suggestions, openEntry, initialEntryId = ""
   useEffect(() => { refresh() }, [])
   const openForReview = async (id: string) => {
     setEntry(null); setStudies([]); setTarget(""); setStatus("")
-    const r = await fetch(`/api/entries/${id}`)
+    const r = await fetch(apiUrl(`/api/entries/${id}`))
     if (!r.ok) return setStatus("That entry could not be loaded.")
     const e = await r.json()
     setEntry(e); setSearch(e.entry.name || e.entry.label || "")
-    fetch(`/api/entries/${id}/studies`).then((x) => x.json()).then((x) => setStudies(x.items || [])).catch(() => setStudies([]))
+    fetch(apiUrl(`/api/entries/${id}/studies`)).then((x) => x.json()).then((x) => setStudies(x.items || [])).catch(() => setStudies([]))
   }
   useEffect(() => { if (initialEntryId) openForReview(initialEntryId) }, [initialEntryId])
 
@@ -127,7 +128,7 @@ export default function PeerReview({ suggestions, openEntry, initialEntryId = ""
     if (!entry || !target || !verdict || !comment.trim() || !reviewer.trim()) return setStatus("Choose what you are reviewing, a verdict, and write a comment and your name.")
     try { localStorage.setItem("rv-name", reviewer); localStorage.setItem("rv-role", expertise) } catch { /* private mode */ }
     const label = options.find((o: Item) => o.value === target)?.label || ""
-    const r = await fetch("/api/reviews", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({
+    const r = await fetch(apiUrl("/api/reviews"), { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({
       entry_id: entry.entry.id, entry_name: entry.entry.name || entry.entry.label, book: entry.entry.book,
       target_type: ttype, target_id: target, target_label: label, verdict, comment, reviewer, expertise }) })
     if (!r.ok) return setStatus(r.status === 404 || r.status === 501

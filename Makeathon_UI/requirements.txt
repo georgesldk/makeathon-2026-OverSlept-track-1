@@ -1,0 +1,2 @@
+# The local API uses the official Neo4j driver; the scientific pipeline has separate requirements.
+neo4j==5.28.8

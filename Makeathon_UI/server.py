@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Local read-only API for the existing EthnoTrace Neo4j graph."""
+"""EthnoTrace API: read-only Neo4j access and separate local review storage."""
 import hashlib
 import json
 import os
@@ -18,6 +18,7 @@ URI = os.environ.get('NEO4J_URI', 'neo4j://127.0.0.1:7687')
 DATABASE = os.environ.get('NEO4J_DATABASE', 'ethnotrace-clean')
 USER = os.environ.get('NEO4J_USER', 'neo4j')
 PASSWORD = os.environ.get('NEO4J_PASSWORD')
+CORS_ALLOWED_ORIGINS = frozenset(x.strip().rstrip('/') for x in os.environ.get('CORS_ALLOWED_ORIGINS', '').split(',') if x.strip())
 if not PASSWORD:
     raise SystemExit('Set NEO4J_PASSWORD in your environment before starting the API.')
 driver = GraphDatabase.driver(URI, auth=(USER, PASSWORD))
@@ -39,10 +40,16 @@ def context():
     rows = query('''MATCH (b:StructuredBuild {status:'complete'})
         MATCH (d:DatasetImport {snapshot_id:b.snapshot_id, kind:'claims_and_stage3_shared'})
         MATCH (f:DatasetImport {snapshot_id:b.snapshot_id, kind:'full_unit_source_records'})-[:USES_CLAIMS_FROM]->(d)
-        RETURN b.snapshot_id AS snapshot, d.id AS dataset, f.id AS full_dataset''')
+        RETURN b.snapshot_id AS snapshot, d.id AS dataset, f.id AS full_dataset,
+               b.completed_at IS NULL AS legacy, coalesce(toString(b.completed_at), '') AS completed_at''')
     requested = os.environ.get('ETHNOTRACE_SNAPSHOT')
     if requested:
         rows = [row for row in rows if row['snapshot'] == requested]
+    elif len(rows) > 1:
+        # Prefer the latest completed build; an explicit snapshot still takes precedence.
+        latest = max(row['completed_at'] for row in rows)
+        if latest:
+            rows = [row for row in rows if row['completed_at'] == latest]
     if len(rows) != 1:
         raise RuntimeError('Expected one completed snapshot and shared dataset; configure ETHNOTRACE_SNAPSHOT if necessary.')
     _context = rows[0]
@@ -231,7 +238,8 @@ def entry(ctx, eid):
     rows = query('''MATCH (e:HistoricalEntry {id:$id, snapshot_id:$snapshot})-[:IN_BOOK]->(b:Book)
       OPTIONAL MATCH (e)-[:HAS_SOURCE_VALUE {field:'raw'}]->(raw:SourceValue)
       OPTIONAL MATCH (raw)-[:HAS_VALUE {field:'sections'}]->(sections:SourceValue)
-      RETURN properties(e) AS entry, properties(b) AS book, raw.p_text AS historical_text,
+      OPTIONAL MATCH (raw)-[:HAS_VALUE {field:'classic'}]->(classic:SourceValue)
+      RETURN properties(e) AS entry, properties(b) AS book, coalesce(raw.p_text, classic.p_text) AS historical_text,
              raw.p_intro AS introduction, raw.p_opening AS opening, raw.p_page AS page,
              sections.p_description AS description, sections.p_place AS place,
              sections.p_time AS season, sections.p_government_and_virtues AS virtues''', id=eid, **ctx)
@@ -318,7 +326,7 @@ def claim(ctx, cid, params):
 # read-only). Each comment targets a plant identification, a claim, a study assessment or the whole entry,
 # with a verdict: confirm, disagree or note. Demo comments are seeded once per snapshot for 24 identified
 # entries, stored with demo=true and labelled as demo comments in the interface.
-REVIEWS_PATH = Path(__file__).resolve().parent / 'data' / 'reviews.json'
+REVIEWS_PATH = Path(os.environ.get('REVIEWS_PATH') or (Path(__file__).resolve().parent / 'data' / 'reviews.json'))
 VERDICTS = ('confirm', 'disagree', 'note')
 TARGETS = ('identification', 'claim', 'study', 'entry')
 _reviews_lock = threading.Lock()
@@ -448,6 +456,18 @@ def add_review(body):
 
 
 class Handler(BaseHTTPRequestHandler):
+    def do_OPTIONS(self):
+        origin = self.headers.get('Origin', '')
+        if origin not in CORS_ALLOWED_ORIGINS:
+            return self.send(403, {'error': 'Origin not allowed'})
+        self.send_response(204)
+        self.send_header('Access-Control-Allow-Origin', origin)
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+        self.send_header('Vary', 'Origin')
+        self.send_header('Content-Length', '0')
+        self.end_headers()
+
     def do_POST(self):
         parsed = urlparse(self.path)
         try:
@@ -500,6 +520,7 @@ class Handler(BaseHTTPRequestHandler):
             elif parts == ['api','facets']:
                 data = facets(ctx)
             elif parts == ['api','health']:
+                query('RETURN 1 AS connected')
                 data = {'status':'ok', 'snapshot':ctx['snapshot']}
             else:
                 return self.send(404, {'error':'Not found'})
@@ -520,12 +541,17 @@ class Handler(BaseHTTPRequestHandler):
         self.send_response(status)
         self.send_header('Content-Type','application/json; charset=utf-8')
         self.send_header('Cache-Control','no-store')
+        origin = self.headers.get('Origin', '')
+        if origin in CORS_ALLOWED_ORIGINS:
+            self.send_header('Access-Control-Allow-Origin', origin)
+        self.send_header('Vary', 'Origin')
         self.send_header('Content-Length',str(len(body)))
         self.end_headers()
         self.wfile.write(body)
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get('API_PORT','8787'))
-    print(f'EthnoTrace read-only API listening on http://127.0.0.1:{port}', flush=True)
-    ThreadingHTTPServer(('127.0.0.1',port), Handler).serve_forever()
+    port = int(os.environ.get('PORT') or os.environ.get('API_PORT', '8787'))
+    host = os.environ.get('API_HOST') or ('0.0.0.0' if os.environ.get('PORT') else '127.0.0.1')
+    print(f'EthnoTrace API listening on http://{host}:{port}', flush=True)
+    ThreadingHTTPServer((host,port), Handler).serve_forever()

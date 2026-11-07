@@ -1,8 +1,9 @@
 # Files that are not in git
 
-Some files are too big for GitHub, or are downloads and API caches, so
-git ignores them. George sends them separately (WeTransfer). This page
-says what they are, where they go, and what needs them.
+Some large downloads, source outputs and API caches are not included in Git.
+This guide describes the separately distributed archives, their expected paths
+and the pipeline stages that need them. Archive availability and contents
+depend on how the project is distributed.
 
 
 ## What you can do without them
@@ -26,22 +27,23 @@ needs the files below.
 
 ## How to install them
 
-1. Download overslept_missing_files.zip from the WeTransfer link.
-2. Put it next to the repo folder and unzip it from inside the repo:
+1. Obtain the relevant archives from the project maintainers. The numbered
+   archives are incremental; check which earlier archives they depend on.
+2. Inspect each archive before extracting it:
 
-       cd makeathon-2026-OverSlept-track-1
-       git pull
-       unzip -o ../overslept_missing_files_3.zip
+       unzip -l /path/to/overslept_missing_files_3.zip
 
-   The zip keeps the folder structure, so every file lands in the
-   right place. Nothing tracked by git is overwritten. -o replaces
-   files from an earlier zip without asking about each one (if you
-   unzipped an older version before, this updates it).
-3. Check: these should run and print a summary, not an error:
+   Extract into a separate temporary directory first. Compare its contents
+   with the repository and copy only the intended files into their matching
+   paths. Archives can overlap or contain newer versions; do not assume that
+   extraction with `-o` is safe for existing work.
+3. Check that the specific files needed by your task exist. For example:
 
-       python3 matching/resolve_scientific.py
-       python3 description_sources/check/description_check.py --book culpeper --import-web "Gemini 3.8 Flash, web chat, temp 0"
+       test -f stage3/units/shennong.jsonl && echo 'Shennong units present'
+       test -f reference_sources/bretschneider/GetItemMetadata_23159_t_t.json && echo 'Bretschneider OCR present'
 
+   Pipeline import and resolution commands may rewrite output files; consult
+   their help and back up existing outputs before running them.
 4. API keys are not in the zip. Copy .env.example to .env and add
    your own keys if you need them: BHL_API_KEY (free) for the BHL
    descriptions, GEMINI_API_KEY for the AI scripts' API route.
@@ -52,23 +54,23 @@ needs the files below.
 overslept_missing_files_3.zip (5 Nov, 22 MB) holds only what is new
 since the second zip: the claim prompts and replies (claims/web/), the
 NCBI and Wikidata caches (claims/cache/), the MeSH download and the
-Disease Ontology file. Unzip it the same way, on top of the earlier
-zip (unzip -o). Nothing in it replaces an earlier file.
+Disease Ontology file. Inspect it alongside the earlier archives before
+copying files into the repository.
 
 overslept_missing_files_4.zip (6 Nov, 166 MB) holds only what is new or changed
 since the third zip: Stage 3 (the abstracts in stage3/texts/, the search
 caches in stage3/cache/, every Stage 3 prompt and pasted reply in
 stage3/web/ and stage3/paper_test/web/, the full unit files), the
 claims batch for the 4 Dioscorides chapters that gained a plant after
-the Stage 2 fixes, and the paper's data file 7. Unzip it the same way,
-on top of the earlier zips (unzip -o).
+the Stage 2 fixes, and the paper's data file 7. Inspect it alongside the
+earlier archives before copying updates.
 
 overslept_missing_files_5.zip (6 Nov, small) holds only what changed since
 the fourth zip: the full Stage 3 unit files (stage3/units/culpeper.jsonl,
 dioscorides.jsonl), rebuilt after the second round of Stage 2 fixes, and
 the Shennong Bencao Jing pages from Chinese Wikisource
-(historical_texts/shennong/source/wikisource/, CC BY-SA; a paused third
-source). Unzip it the same way, on top of the earlier zips (unzip -o).
+(historical_texts/shennong/source/wikisource/, CC BY-SA). Inspect it
+alongside the earlier archives before copying updates.
 
 overslept_missing_files_6.zip (6 Nov) holds only what is new or changed since the
 fifth zip: the third book's downloads and replies (the Bretschneider scan in
@@ -76,8 +78,8 @@ reference_sources/bretschneider/, the Wikidata, WFO, WCVP, Global Names and IPNI
 outputs and caches for shennong, the paste folders historical_texts/shennong/web/,
 claims/web/shennong/ and stage3/web/shennong/), the Shennong Stage 3 abstracts and
 search caches (stage3/texts/, stage3/cache/), and the rebuilt unit files
-(stage3/units/culpeper.jsonl, dioscorides.jsonl, shennong.jsonl). Unzip it the
-same way, on top of the earlier zips (unzip -o).
+(stage3/units/culpeper.jsonl, dioscorides.jsonl, shennong.jsonl). Inspect it
+alongside the earlier archives before copying updates.
 
 
 ## What is in the zip, and where it goes
@@ -166,16 +168,10 @@ API caches, the raw replies (about 320 MB):
   (put it in reference_sources/doid/; a newer release may map differently)
 
 
-## For George: making the zip
+## Preparing an archive
 
-From inside the repo (the first line deletes the previous zip; without
-it, zip would add to the old file and keep files that no longer exist):
-
-    rm -f ../overslept_missing_files.zip
-    git ls-files --others --ignored --exclude-standard \
-      | grep -v -e '^\.env$' -e '__pycache__' -e '\.DS_Store' \
-      | zip -@ ../overslept_missing_files.zip
-
-This zips exactly the files git ignores, except .env (your keys)
-and Python's cache files. About 1 GB before compression; JSON
-compresses well, so the zip should be well under WeTransfer's 2 GB.
+Use an explicit, reviewed list of redistributable files and check their
+licences before sharing. Do not archive every Git-ignored file: ignored files
+can include credentials, private reviews, local databases and caches that
+must not be distributed. Inspect the resulting archive before providing it
+to another person.

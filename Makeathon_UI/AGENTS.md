@@ -4,17 +4,19 @@ React + Vite + Tailwind CSS project running inside Figma Make.
 
 ## Development Server
 
-A Vite development server is **already running** on `$PORT` (default 8443). You don't need to start it manually.
+A Vite development server may already be running on `$PORT` (default 8443). Check before starting another one; see `README.md` for local setup.
 
 - Preview URL: The user can access the running app through the preview panel
 - Hot reload: Changes to source files are reflected immediately
 
 ## Project Structure
 
-This is the canonical project structure. Start with task-relevant files below. Only follow imports or inspect other files when required, when a documented path is missing, or when the repository contradicts this guide.
+Start with the task-relevant files below and follow their imports as needed.
 
-- `src/main.tsx` - React entrypoint; imports `src/index.css` and mounts `src/App.tsx` into the `#root` element
-- `src/App.tsx` - Primary application component and the usual starting point for UI work
+- `src/main.tsx` - React entrypoint; imports `src/index.css` and mounts `src/LiveApp.tsx` into the `#root` element
+- `src/LiveApp.tsx` - Data-connected application and the usual starting point for UI work
+- `src/App.tsx` - Original Figma prototype, retained as a reference
+- `server.py` - API for the application, with read-only Neo4j queries and separate local review storage
 - `src/index.css` - Global CSS entrypoint and Tailwind CSS v4 import
 - `index.html` - Vite HTML shell containing the `#root` element and loading `src/main.tsx`
 - `package.json` - Project dependencies and the Vite build, development, preview, and formatting scripts

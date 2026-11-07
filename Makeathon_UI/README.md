@@ -6,7 +6,7 @@ This application uses the existing Figma visual language and the `ethnotrace-cle
 
 Start Neo4j and make sure the `ethnotrace-clean` database is online. From the repository root, use two terminals.
 
-Terminal 1 — read-only API. The existing repository Neo4j Python environment contains the driver:
+Terminal 1 — local API. The existing repository Neo4j Python environment contains the driver:
 
 ```sh
 cd Makeathon_UI
@@ -17,7 +17,7 @@ read -s 'NEO4J_PASSWORD?Neo4j password: '; export NEO4J_PASSWORD; echo
 ../neo4j/.venv/bin/python -B server.py
 ```
 
-The `read` line is for macOS zsh; in bash use `read -s -p 'Neo4j password: ' NEO4J_PASSWORD; export NEO4J_PASSWORD; echo`. If the Python environment is missing, create it and install the official `neo4j` driver as documented in `../neo4j/README.md`. Never commit passwords. The API binds to localhost on port 8787, accepts only fixed read queries, uses query parameters, and uses a Neo4j read session. A database account restricted to read-only access is recommended.
+The `read` line is for macOS zsh; in bash use `read -s -p 'Neo4j password: ' NEO4J_PASSWORD; export NEO4J_PASSWORD; echo`. If the Python environment is missing, create it and install the official `neo4j` driver as documented in `../neo4j/README.md`. Never commit passwords. The API binds to localhost on port 8787 and reads Neo4j through parameterized queries. Its expert-review feature separately writes local comments to `data/reviews.json` and can seed explicitly labelled demonstration comments. A Neo4j account restricted to read-only access is recommended.
 
 Terminal 2 — frontend:
 
@@ -29,11 +29,22 @@ npm run dev
 
 Open http://127.0.0.1:8443. Vite proxies `/api` to the local API. If the API or database is unavailable the UI reports an error; it does not display mock evidence. The original Figma prototype remains in `src/App.tsx`, and the data-connected entry point is `src/LiveApp.tsx`.
 
+For Vercel frontend and Render API setup, including a remote Neo4j connection, CORS and review storage, see [DEPLOYMENT.md](../DEPLOYMENT.md).
+
+## Folder guide
+
+- [src](src/README.md): React views, components and styles.
+- [public](public/README.md): static assets, including Atlas data.
+- [data](data/README.md): local image metadata and review comments.
+- [tests](tests/README.md): browser and API integration checks.
+- `server.py`: local API between the frontend and Neo4j.
+- `collect_candidate_images.py`, `collect_wikidata_images.py` and `export_atlas_ranges.py`: optional data-preparation utilities.
+
 ## Explore
 
 Search a historical name, Greek headword, scientific candidate or recorded original name. Catalogue filters operate at entry level and can match different candidates or claims within the same entry. Select an entry, then use **Identification** for A/B candidates, evidence and taxonomy. Enable Tier X explicitly to see hidden candidates. **Claims & Research** brings extracted interpretations and historical quotations together with MeSH mappings, shared research assessments and inferred cross-book groupings. Select a claim to view its related research. Hover, focus or tap the information icons to explain categories and scientific terms. In **Relationships**, select a candidate or claim and use **Expand related evidence in graph**; use the graph controls to pan, zoom and fit. Graph expansion is limited to keep the view usable; full result lists are in the tabs.
 
-The API requires exactly one completed structured snapshot, one shared claims/studies dataset, and its matching full-unit dataset. If multiple snapshots exist, set `ETHNOTRACE_SNAPSHOT` to the desired snapshot ID; the API refuses ambiguous datasets instead of mixing them. Candidate evidence and study assessments are paginated. Entry details are limited to 200 candidates and 200 claims; the current graph's largest entries have 149 and 55 respectively. Unlinked entry evidence is available in the Identification tab and is not assigned to candidates.
+The API requires one completed structured snapshot, one shared claims/studies dataset, and its matching full-unit dataset. If multiple snapshots exist, it selects the latest dated completed build; set `ETHNOTRACE_SNAPSHOT` to select a particular snapshot. The API refuses ambiguous datasets instead of mixing them. Candidate evidence and study assessments are paginated. Entry details are limited to 200 candidates and 200 claims; unlinked entry evidence is available in the Identification tab and is not assigned to candidates.
 
 ## Candidate photographs
 

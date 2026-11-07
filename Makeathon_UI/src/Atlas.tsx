@@ -6,6 +6,7 @@
  * /atlas/plant_ranges.json (export_atlas_ranges.py). Entries come from the read-only API.
  */
 import { useEffect, useMemo, useRef, useState } from "react"
+import { apiUrl } from "./api"
 import { sizedImage } from "./display"
 import { geoGraticule10, geoOrthographic, geoPath, geoCentroid, geoDistance, type GeoPermissibleObjects } from "d3-geo"
 import { feature } from "topojson-client"
@@ -28,7 +29,7 @@ const NO_FAMILY = "Family not recorded"
 const GOLDEN = Math.PI * (3 - Math.sqrt(5))   // sunflower spiral: each bubble turns by the golden angle
 
 async function getJson<T>(url: string): Promise<T> {
-  const r = await fetch(url)
+  const r = await fetch(apiUrl(url))
   if (!r.ok) throw new Error(`Could not load ${url}`)
   return r.json()
 }

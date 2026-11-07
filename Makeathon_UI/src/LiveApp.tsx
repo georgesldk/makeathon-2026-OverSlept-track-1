@@ -19,6 +19,7 @@ import Atlas from "./Atlas"
 import PeerReview, { EntryReviews } from "./PeerReview"
 import { DisplayMenu, TranslateButton } from "./accessibility"
 import { romanize } from "./romanize"
+import { apiUrl } from "./api"
 
 // Slow, eased scrolling for every in-app move (the browser's own "smooth" is fast and not adjustable).
 // Respects the system's reduced-motion setting.
@@ -94,7 +95,7 @@ type Entry = {
   image?: Item | null
   preferred_scientific_name?: string | null
 }
-const BOOK_NAMES: Record<string, string> = { culpeper: "Culpeper", dioscorides: "Dioscorides", shennong: "Shennong" }
+const BOOK_NAMES: Record<string, string> = { culpeper: "Culpeper", dioscorides: "Dioscorides", shennong: "Shennong Bencao Jing" }
 const bookName = (book: string) => BOOK_NAMES[book] || book
 const BOOK_LANG: Record<string, string> = { dioscorides: "grc", shennong: "zh-Hant" }
 
@@ -144,10 +145,10 @@ const tierClass = (tier?: string) =>
 async function api<T>(path: string): Promise<T> {
   let response: Response
   try {
-    response = await fetch(`/api${path}`)
+    response = await fetch(apiUrl(`/api${path}`))
   } catch {
     throw new Error(
-      "The local research API is not reachable. Check that it is running.",
+      "The research API is not reachable. Check that it is running.",
     )
   }
   const body = await response.json().catch(() => ({}))
@@ -226,9 +227,10 @@ const SOURCE_BOOKS = [
     ],
     facts: [
       "The original text is lost. What survives was pieced together from quotations in later works.",
+      "Translations and extracted claims are AI-assisted and require expert review.",
       "The upper grade includes ginseng, jujube and the lingzhi mushroom; the lower grade includes rhubarb root and peach and apricot kernels.",
     ],
-    edition: "Sun Xingyan and Sun Fengyi's reconstruction (1799), Chinese Wikisource.",
+    edition: "Sun Xingyan and Sun Fengyi's reconstruction (1799), Chinese Wikisource (CC BY-SA 4.0).",
   },
 ]
 // About page licence list (from DATA_SOURCES.md, checked 3-4 Nov 2026)
@@ -1435,7 +1437,7 @@ export default function LiveApp() {
                     { value: "", label: "All entries" },
                     { value: "culpeper", label: "Culpeper", hint: "The Complete Herbal, 1653" },
                     { value: "dioscorides", label: "Dioscorides", hint: "De materia medica, 1st century" },
-                    { value: "shennong", label: "Shennong Bencao Jing", hint: "Han China, 1st–2nd century" },
+                    { value: "shennong", label: "Shennong Bencao Jing", hint: "Classical Chinese · 1799 reconstruction" },
                   ]}
                 />
               </div>
@@ -1978,6 +1980,7 @@ export default function LiveApp() {
                           <span className="claim-card-quote">
                             <span className="claim-card-label">Historical quotation</span>
                             <span>{c.quote ? `“${c.quote}”` : "No quotation recorded"}</span>
+                            {c.translation && <span>AI-assisted translation: {c.translation}</span>}
                           </span>
                           <span className="claim-card-concepts">
                             <span className="claim-card-label">MeSH mappings</span>
@@ -2081,9 +2084,7 @@ export default function LiveApp() {
                         <summary>Modern studies{claimDetails.studies.length ? ` (${claimDetails.studies.length}${claimDetails.has_more ? "+" : ""})` : ""}</summary>
                         {claimDetails.studies.length === 0 && (
                           <div className="empty">
-                            No modern studies have been assessed for this claim
-                            yet. So far, studies were searched only for uses
-                            shared across the historical texts.
+                            No modern studies have been assessed for this claim yet.
                           </div>
                         )}
                         <div className="study-list">
@@ -2364,7 +2365,7 @@ export default function LiveApp() {
             <h1>Following historical knowledge, carefully</h1>
             <p>
               Old herbals record which plants people used against which
-              complaints. EthnoTrace asks a narrow question of two of them: for
+              complaints. EthnoTrace asks a narrow question across three sources: for
               each remedy, which modern plant is the author most likely talking
               about, and what has modern research found about that plant and
               that use?
@@ -2424,7 +2425,7 @@ export default function LiveApp() {
                 <div>
                   <h3>Finding the modern evidence</h3>
                   <p>
-                    For uses recorded in both books, studies are gathered from
+                    For selected historical uses, studies are gathered from
                     PubMed, Europe PMC, ClinicalTrials.gov and the European
                     Medicines Agency's herbal monographs. A language model reads
                     each study and answers fixed questions, quoting the study for

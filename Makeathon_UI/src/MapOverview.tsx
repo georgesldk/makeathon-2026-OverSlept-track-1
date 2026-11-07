@@ -9,6 +9,7 @@
  * Data: /api/overview (aggregate counts) and /api/entries (the entries of a family or use).
  */
 import { useEffect, useMemo, useState } from "react"
+import { apiUrl } from "./api"
 import { Background, Controls, Position, ReactFlow, type Edge, type Node } from "@xyflow/react"
 import FamilyIcon from "./FamilyIcon"
 
@@ -36,7 +37,7 @@ export default function MapOverview({ book, path, setPath, onEntry }: {
   const levelValue = level.kind === "all" ? "" : level.value
 
   useEffect(() => {
-    fetch("/api/overview").then(async (r) => {
+    fetch(apiUrl("/api/overview")).then(async (r) => {
       if (r.ok) return r.json()
       const why = r.status === 404 ? "the API does not know this address yet; restart server.py" : ((await r.json().catch(() => null))?.error || `HTTP ${r.status}`)
       throw new Error(`The overview could not be loaded: ${why}.`)
@@ -49,7 +50,7 @@ export default function MapOverview({ book, path, setPath, onEntry }: {
     if (level.kind !== "family" && level.kind !== "use") return
     let active = true
     const param = level.kind === "family" ? `family=${encodeURIComponent(levelValue)}` : `concept=${encodeURIComponent(levelValue)}`
-    fetch(`/api/entries?identified=1&book=${book}&${param}&limit=50`).then((r) => r.json())
+    fetch(apiUrl(`/api/entries?identified=1&book=${book}&${param}&limit=50`)).then((r) => r.json())
       .then((x) => { if (active) setEntries(x.items || []) }).catch(() => { if (active) setEntries([]) })
     return () => { active = false }
   }, [level.kind, levelValue, book])

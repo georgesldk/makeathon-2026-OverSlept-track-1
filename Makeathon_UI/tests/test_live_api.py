@@ -48,7 +48,8 @@ class LiveAPITests(unittest.TestCase):
         self.assertIn('μῆον', e['historical_text'])
 
     def test_multiple_different_candidates_remain_separate(self):
-        e = self.get('/entries/' + self.cypher('MATCH (e:HistoricalEntry {book:"dioscorides",label:"1.117"}) RETURN e.id AS id')[0]['id'])
+        snapshot = self.get('/health')['snapshot']
+        e = self.get('/entries/' + self.cypher('MATCH (e:HistoricalEntry {book:"dioscorides",label:"1.117",snapshot_id:$snapshot}) RETURN e.id AS id', snapshot=snapshot)[0]['id'])
         names = {x['hypothesis'].get('accepted_name') for x in e['candidates'] if x['decision'] and x['decision']['tier'] in ('A', 'B')}
         self.assertGreaterEqual(len(names), 2)
 
@@ -78,7 +79,8 @@ class LiveAPITests(unittest.TestCase):
         self.assertEqual(e['claims'], [])
 
     def test_lsj_provenance(self):
-        entry_id = self.cypher('MATCH (e:HistoricalEntry {book:"dioscorides", label:"1.1"}) RETURN e.id AS id')[0]['id']
+        snapshot = self.get('/health')['snapshot']
+        entry_id = self.cypher('MATCH (e:HistoricalEntry {book:"dioscorides", label:"1.1", snapshot_id:$snapshot}) RETURN e.id AS id', snapshot=snapshot)[0]['id']
         e = self.get('/entries/' + entry_id)
         h = next(x['hypothesis'] for x in e['candidates'] if x['hypothesis'].get('accepted_name') == 'Iris × florentina L.')
         rows = self.get('/candidates/' + h['id'])['evidence']

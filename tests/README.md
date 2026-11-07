@@ -6,7 +6,7 @@ Run from the repository root with Python 3.10 or newer:
 python3.10 -B tests/run_tests.py
 ```
 
-No packages, downloads, API keys or network calls are required for the default implementation. The tests create synthetic inputs and outputs in temporary directories. They do not run pipeline scripts against the real datasets or overwrite scientific outputs. The suite covers evidence joins and independence, eligibility decisions and missing data, taxonomic synonym handling, WFO/WCVP disagreements, and LSJ citation handling. It does not validate historical plant identifications or modern medical claims.
+No API keys or network calls are required for the default implementation. Most pipeline contract tests use temporary synthetic inputs. The Shennong graph test also reads the available repository source outputs; it does not overwrite them. The suite covers evidence joins and independence, eligibility decisions and missing data, taxonomic synonym handling, WFO/WCVP disagreements, LSJ citations and graph provenance. It does not validate historical plant identifications or modern medical claims.
 
 ## Known defects and strict mode
 
@@ -18,7 +18,7 @@ To treat all known defects as ordinary failures, run:
 python3.10 -B tests/run_tests.py --strict
 ```
 
-Strict mode exited nonzero until the defects were fixed. Since 2026-11-06 (Stage 2 fixes, round 2) the known-defect tests pass and are ordinary tests again; `test_neo4j_model` still needs `neo4j/prepare.py`, which is not in the repository yet. Both modes exit nonzero for new failures or errors.
+Since the Stage 2 fixes, the previously identified known-defect tests are ordinary tests again. The graph tests use the included `neo4j/prepare.py`. Both modes exit nonzero for new failures or errors.
 
 ## Testing another implementation
 

@@ -26,6 +26,14 @@ def jsonl(path):
                 yield json.loads(line)
 
 
+def review_status(a):
+    review = a.get('review') or {}
+    status = review.get('status')
+    if status == 'facts corrected by a person' and any('Claude only' in str(c) for c in review.get('corrections', [])):
+        return 'AI only; not checked by a person'
+    return status
+
+
 def prepare(snapshot_file):
     botanical = defaultdict(list)
     for obj in jsonl(snapshot_file):
@@ -33,15 +41,20 @@ def prepare(snapshot_file):
     if len(botanical['snapshot']) != 1 or botanical['snapshot'][0].get('schema_version') != '2':
         raise ValueError('Expected one version 2 botanical snapshot; prepare a new one first')
     snapshot = botanical['snapshot'][0]['id']
+    books = {x['book'] for x in botanical['books']}
+    has_shennong = 'shennong' in books
     files = [ROOT / 'claims/culpeper/claims.json', ROOT / 'claims/dioscorides/claims.json', ROOT / 'claims/links.json',
              ROOT / 'stage3/units/shared.jsonl', ROOT / 'stage3/studies/shared/studies.jsonl',
              ROOT / 'stage3/assessments/shared/assessments.jsonl', Path(__file__).resolve()]
+    if has_shennong:
+        files += [ROOT / 'claims/shennong/claims.json', ROOT / 'stage3/units/shennong_set.jsonl',
+                  ROOT / 'stage3/studies/shennong/studies.jsonl', ROOT / 'stage3/assessments/shennong/assessments.jsonl']
     hashes = {str(f.relative_to(ROOT)): hashlib.sha256(f.read_bytes()).hexdigest() for f in files}
     run_id = key('claim-study-import-v1', snapshot, hashes)
     rows = defaultdict(list)
     rows['dataset'].append({'id': run_id, 'snapshot_id': snapshot, 'kind': 'claims_and_stage3_shared',
                             'input_hashes_json': packed(hashes), 'note': 'Imported source assertions; not verified efficacy'})
-    entries = {(x['book'], x['label'] if x['book'] == 'dioscorides' else x['entry_key']): x['id']
+    entries = {(x['book'], x['label'] if x['book'] in ('dioscorides', 'shennong') else x['entry_key']): x['id']
                for x in botanical['entries']}
     hypotheses = defaultdict(list)
     for h in botanical['hypotheses']:
@@ -50,7 +63,7 @@ def prepare(snapshot_file):
             hypotheses[(h['entry_id'], original['wfo_id'])].append(h['id'])
     claims = {}
     concepts = {}
-    for book in ('culpeper', 'dioscorides'):
+    for book in ('culpeper', 'dioscorides') + (('shennong',) if has_shennong else ()):
         data = json.loads((ROOT / f'claims/{book}/claims.json').read_text(encoding='utf-8'))
         mesh_version = data.get('mesh')
         if not mesh_version:
@@ -135,13 +148,58 @@ def prepare(snapshot_file):
         rows['assessments'].append({'id': gid, 'dataset_id': run_id, 'snapshot_id': snapshot, 'source_assessment_id': aid,
             'unit_id': unit['id'], 'study_id': studies[a['study_id']], 'relevance': a.get('relevance'),
             'evidence_type': a.get('evidence_type'), 'finding': a.get('finding'), 'applicability': a.get('applicability'),
-            'badge': a.get('badge'), 'review_status': (a.get('review') or {}).get('status'), 'raw_json': packed(a)})
+            'badge': a.get('badge'), 'review_status': review_status(a), 'raw_json': packed(a)})
         for i, excerpt in enumerate(a.get('excerpts') or []):
             if not isinstance(excerpt, dict):
                 raise ValueError(f'invalid excerpt in assessment: {aid}')
             rows['excerpts'].append({'id': key(gid, 'excerpt', i), 'dataset_id': run_id, 'snapshot_id': snapshot,
                                      'assessment_id': gid, 'field': excerpt.get('field'), 'text': excerpt.get('text'),
                                      'raw_json': packed(excerpt)})
+    if has_shennong:
+        sh_units = {}
+        for u in jsonl(ROOT / 'stage3/units/shennong_set.jsonl'):
+            source_id = u.get('unit_id')
+            claim = claims.get(u.get('claim_id'))
+            if not source_id or source_id in sh_units or not claim or claim['book'] != 'shennong' or str(u.get('entry')) != claim['entry_key']:
+                raise ValueError(f'invalid Shennong unit or claim: {source_id}')
+            wfo = (u.get('taxon') or {}).get('wfo_id')
+            hits = hypotheses.get((claim['entry_id'], wfo), []) if wfo else []
+            uid = key(run_id, 'unit', source_id)
+            sh_units[source_id] = uid
+            rows['units'].append({'id': uid, 'dataset_id': run_id, 'snapshot_id': snapshot, 'source_unit_id': source_id,
+                'claim_id': claim['id'], 'hypothesis_id': hits[0] if len(hits) == 1 else None,
+                'hypothesis_link_status': 'unique' if len(hits) == 1 else 'ambiguous' if hits else 'unmatched',
+                'taxon_name': (u.get('taxon') or {}).get('accepted_name'), 'wfo_id': wfo,
+                'tier': (u.get('identification') or {}).get('tier'), 'raw_json': packed(u)})
+        sh_studies = {}
+        for s in jsonl(ROOT / 'stage3/studies/shennong/studies.jsonl'):
+            sid = s.get('study_id')
+            if not sid or sid in sh_studies:
+                raise ValueError(f'missing/duplicate Shennong study ID: {sid}')
+            sh_studies[sid] = key(run_id, 'study', 'shennong', sid)
+            rows['studies'].append({'id': sh_studies[sid], 'dataset_id': run_id, 'source_study_id': sid,
+                'source': s.get('source'), 'title': s.get('title'), 'journal': s.get('journal'),
+                'publication_date': s.get('publication_date'), 'raw_json': packed(s)})
+        sh_seen = set()
+        for a in jsonl(ROOT / 'stage3/assessments/shennong/assessments.jsonl'):
+            aid = a.get('assessment_id')
+            if not aid or aid in sh_seen or a.get('unit_id') not in sh_units or a.get('study_id') not in sh_studies:
+                raise ValueError(f'invalid Shennong assessment or endpoint: {aid}')
+            sh_seen.add(aid)
+            unit = next(x for x in rows['units'] if x['id'] == sh_units[a['unit_id']])
+            if claims.get(a.get('claim_id'), {}).get('id') != unit['claim_id']:
+                raise ValueError(f'assessment claim does not match its unit: {aid}')
+            gid = key(run_id, 'assessment', aid)
+            status = review_status(a)
+            rows['assessments'].append({'id': gid, 'dataset_id': run_id, 'snapshot_id': snapshot, 'source_assessment_id': aid,
+                'unit_id': unit['id'], 'study_id': sh_studies[a['study_id']], 'relevance': a.get('relevance'),
+                'evidence_type': a.get('evidence_type'), 'finding': a.get('finding'), 'applicability': a.get('applicability'),
+                'badge': a.get('badge'), 'review_status': status, 'raw_json': packed(a)})
+            for i, excerpt in enumerate(a.get('excerpts') or []):
+                if not isinstance(excerpt, dict):
+                    raise ValueError(f'invalid excerpt in assessment: {aid}')
+                rows['excerpts'].append({'id': key(gid, 'excerpt', i), 'dataset_id': run_id, 'snapshot_id': snapshot,
+                    'assessment_id': gid, 'field': excerpt.get('field'), 'text': excerpt.get('text'), 'raw_json': packed(excerpt)})
     return snapshot, rows
 
 

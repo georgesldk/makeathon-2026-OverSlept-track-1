@@ -1,5 +1,7 @@
 # EthnoTrace Neo4j initialization
 
+For the current structured three-book graph and snapshot-aware import process, start with [STRUCTURED.md](STRUCTURED.md). The sections below also document the original graph importer; references to two-book inputs or older limitations may predate the Shennong extension. Filter queries by `snapshot_id` when multiple snapshots coexist.
+
 This is an initial implementation for Neo4j 5.x. It represents existing pipeline outputs, including hidden candidates, without asserting that an accepted scientific name is the historically correct plant. The schema supports botanical data, existing historical claims, MeSH mappings, and the saved shared Stage 3 assessments. Imported outputs remain research hypotheses and assessments, not independently verified medical findings. See [MODEL.md](MODEL.md).
 
 ## Graph structure
