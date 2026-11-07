@@ -261,10 +261,13 @@ function lineageNode(text: unknown): React.ReactNode {
     return <a href={`https://www.checklistbank.org/dataset/${cb[1]}`} target="_blank" rel="noreferrer" title="A separately published checklist in ChecklistBank; the number is its dataset ID">ChecklistBank checklist #{cb[1]} ↗</a>
   return t
 }
-function authorityLink(authority: unknown, id: unknown): string | undefined {
+function authorityLink(authority: unknown, id: unknown, name?: unknown): string | undefined {
   const a = String(authority || "").toLowerCase(), v = String(id || "")
   if (/^wfo-\d+$/i.test(v)) return `https://www.worldfloraonline.org/taxon/${v}`
   if (a.includes("wcvp") && /^\d+-\d$/.test(v)) return `https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:${v}`
+  // WCVP's own record number has no public page: search Kew's Plants of the World Online by the name instead
+  const bare = String(name || "").split(/\s+/).filter((w, i, all) => i < 2 || (["subsp.", "var.", "f."].includes(all[i - 1]) || ["subsp.", "var.", "f."].includes(w))).join(" ")
+  if (a.includes("wcvp") && bare) return `https://powo.science.kew.org/results?q=${encodeURIComponent(bare)}`
   return undefined
 }
 
@@ -507,8 +510,8 @@ function TaxonomicResolutionCard({ resolution }: { resolution: Item }) {
         <FactTile label="Resolution rule" content={resolution.rule} />
         <div className="classification-fact">
           <dt>Authority ID<InfoTip label="Authority ID" text={termHelp["Authority ID"]} /></dt>
-          <dd>{authorityLink(resolution.authority, resolution.source_id)
-            ? <a href={authorityLink(resolution.authority, resolution.source_id)} target="_blank" rel="noreferrer">{value(resolution.source_id)} ↗</a>
+          <dd>{authorityLink(resolution.authority, resolution.source_id, resolution.accepted_name)
+            ? <a href={authorityLink(resolution.authority, resolution.source_id, resolution.accepted_name)} target="_blank" rel="noreferrer">{value(resolution.source_id)} ↗</a>
             : value(resolution.source_id)}</dd>
         </div>
         <FactTile label="Authority release" content={resolution.release} />
@@ -657,6 +660,7 @@ function Graph({
           label: bookName(record.entry.book),
           kind: "Historical source",
           text: record.book.source,
+          url: SOURCE_BOOKS.find((b) => b.id === record.entry.book)?.read,
         },
         className: "flow-historical",
       },
@@ -782,6 +786,7 @@ function Graph({
                   label: r.accepted_name || r.source_id,
                   kind: "Authority taxon record",
                   text: `${r.authority} · ${r.source_id} · ${r.release}`,
+                  url: authorityLink(r.authority, r.source_id, r.accepted_name),
                 },
                 className: "flow-candidate",
               })
@@ -801,6 +806,7 @@ function Graph({
               label: `${e.source} · ${e.grade}`,
               kind: "Evidence record",
               text: `${value(e.original_candidate)} · ${value(e.source_record_id)} · ${value(e.lexicon_citations)}`,
+              url: sourceUrl(e.source_record_id),
             },
             className: "flow-claim",
           })
@@ -829,7 +835,7 @@ function Graph({
             {
               id: `mesh:${c.node_id}`,
               position: { x: x + 250, y: y + i * 110 },
-              data: { label: c.name, kind: "MeSH concept", text: c.id },
+              data: { label: c.name, kind: "MeSH concept", text: c.id, url: /^D\d+$/.test(String(c.id)) ? `https://id.nlm.nih.gov/mesh/${c.id}` : undefined },
               className: "flow-candidate",
             },
           )
@@ -880,6 +886,7 @@ function Graph({
                 label: s.title,
                 kind: "Study",
                 text: value(s.source_study_id),
+                url: studyLink(s, v.source_url),
               },
               className: "flow-candidate",
             },
@@ -926,13 +933,10 @@ function Graph({
   }
   return (
     <div>
-      <p>
+      <p className="section-explanation graph-explanation">
         Dashed links are proposed historical identifications. Select a node to
-        inspect it; use the controls to zoom or fit the view.
-      </p>
-      <p className="eyebrow">
-        Showing up to 8 candidates and 8 claims. Explore the complete lists in
-        their tabs.
+        inspect it; use the controls to zoom or fit the view. Showing up to 8
+        candidates and 8 claims; the complete lists are in the sections above.
       </p>
       <div className="live-graph">
         <ReactFlow
@@ -956,8 +960,10 @@ function Graph({
       {info && (
         <div className="drawer-note">
           <strong>{value(info.kind)}</strong>
-          <p>{value(info.label)}</p>
+          <p>{info.url ? <a className="drawer-title-link" href={info.url} target="_blank" rel="noreferrer">{value(info.label)} ↗</a> : value(info.label)}</p>
           <p>{value(info.text)}</p>
+          <div className="drawer-actions">
+          {info.url && <a className="source-link" href={info.url} target="_blank" rel="noreferrer">Open the source ↗</a>}
           {(info.kind === "Proposed identification" ||
             info.kind === "Extracted historical claim") && (
             <button
@@ -982,6 +988,7 @@ function Graph({
               Inspect claim and studies →
             </button>
           )}
+          </div>
         </div>
       )}
     </div>
@@ -1017,6 +1024,8 @@ export default function LiveApp() {
   const [showHidden, setShowHidden] = useState(false)
   const [graphUnmapped, setGraphUnmapped] = useState(false)
   const [openGroup, setOpenGroup] = useState<string | null>(null)
+  const [mapEntry, setMapEntry] = useState<string>("")
+  const openMap = (id: string) => { setMapEntry(id); setSection("map"); slowScrollTo(0) }
   const [graphHidden, setGraphHidden] = useState(false)
   const [facets, setFacets] = useState<{ families: { name: string; count: number }[]; concepts: { name: string; count: number }[]; books: Record<string, Item> } | null>(null)
   useEffect(() => {
@@ -1217,7 +1226,7 @@ export default function LiveApp() {
           </button>
           <button
             className={section === "map" ? "active" : ""}
-            onClick={() => navigate("map")}
+            onClick={() => { setMapEntry(""); navigate("map") }}
           >
             Knowledge Map
           </button>
@@ -1235,7 +1244,7 @@ export default function LiveApp() {
           </button>
         </nav>
       </header>
-      {section === "map" && <KnowledgeMap openEntry={openEntry} />}
+      {section === "map" && <KnowledgeMap key={mapEntry || "map"} openEntry={openEntry} initialEntryId={mapEntry} />}
       {section === "atlas" && <Atlas openEntry={openEntry} />}
       {section === "explore" && (
         <main>
@@ -2084,6 +2093,7 @@ export default function LiveApp() {
                         <span>Include claims without a medical concept (MeSH)</span>
                       </label>
                     </div>
+                    <button className="primary-link map-open" onClick={() => openMap(record.entry.id)}>Open in the Knowledge Map →</button>
                     <Graph
                       key={`${graphUnmapped ? "all-claims" : "mesh-claims"}-${graphHidden ? "all" : "ab"}`}
                       record={graphUnmapped ? record : { ...record, claims: meshClaims }}

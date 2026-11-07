@@ -1037,3 +1037,11 @@ details details[open] > summary { position: static; }
 .switch-list input[type="checkbox"]:checked::after { transform: translateX(14px); }
 .switch-list input[type="checkbox"]:focus-visible { outline: 2px solid var(--forest); outline-offset: 2px; }
 .map-accessible-list > summary { color: var(--forest); font: 600 13px 'DM Sans', sans-serif; }
+/* Relationships drawer and graph text */
+.graph-explanation { margin: 0 0 14px; }
+.drawer-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 14px; }
+.drawer-actions .secondary-button { margin: 0; padding: 8px 14px; border-radius: 999px; font: 600 12px 'DM Sans', sans-serif; }
+.drawer-actions .secondary-button:hover:not(:disabled) { background: var(--forest); color: var(--paper); }
+.drawer-title-link { color: var(--ink); text-decoration: none; border-bottom: 1px solid #9eb09b; }
+.drawer-title-link:hover { color: var(--forest); }
+.map-open { display: inline-block; margin: 0 0 18px; }

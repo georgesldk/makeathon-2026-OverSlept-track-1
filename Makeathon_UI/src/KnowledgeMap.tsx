@@ -16,14 +16,14 @@ async function get<T>(path: string): Promise<T> {
   return data as T
 }
 
-export default function KnowledgeMap({ openEntry }: { openEntry: (id: string, target?: { tab: 'identification' | 'studies'; id: string; includeHidden?: boolean }) => void }) {
+export default function KnowledgeMap({ openEntry, initialEntryId = '' }: { openEntry: (id: string, target?: { tab: 'identification' | 'studies'; id: string; includeHidden?: boolean }) => void; initialEntryId?: string }) {
   const [search, setSearch] = useState('Carrots')
   const [term, setTerm] = useState('Carrots')
   const [book, setBook] = useState('')
   const [results, setResults] = useState<Row[]>([])
   const [moreResults, setMoreResults] = useState(false)
   const [entry, setEntry] = useState<Entry | null>(null)
-  const [entryId, setEntryId] = useState('')
+  const [entryId, setEntryId] = useState(initialEntryId)
   const [selection, setSelection] = useState<Selection | null>(null)
   const [focusClaim, setFocusClaim] = useState('')
   const [focusCandidate, setFocusCandidate] = useState('')
