@@ -4,6 +4,7 @@ import {
   ReactFlow,
   Background,
   Controls,
+  Position,
   useEdgesState,
   useNodesState,
   type Node,
@@ -13,34 +14,51 @@ import "@xyflow/react/dist/style.css"
 import KnowledgeMap from "./KnowledgeMap"
 import PlantDashboard from "./PlantDashboard"
 import { claimRef, friendly, studyLink, tierLabel } from "./display"
-import { Dropdown, ExpandableText, FilterPicker, Pager } from "./controls"
+import { Dropdown, ExpandableText, FilterPicker, Pager, SearchBox, buildSuggestions } from "./controls"
 import Atlas from "./Atlas"
+import PeerReview, { EntryReviews } from "./PeerReview"
+import { DisplayMenu, TranslateButton } from "./accessibility"
 
 // Slow, eased scrolling for every in-app move (the browser's own "smooth" is fast and not adjustable).
 // Respects the system's reduced-motion setting.
 const SCROLL_MS = 900
 let scrollFrame = 0
-function slowScrollTo(targetY: number, duration = SCROLL_MS) {
+function slowScrollTo(targetY: number | (() => number), duration = SCROLL_MS) {
   cancelAnimationFrame(scrollFrame)
+  // the target may move while we travel (content above it still loading), so it is re-read every frame
+  const target = () => Math.max(0, typeof targetY === "function" ? targetY() : targetY)
   const startY = window.scrollY
-  const distance = Math.max(0, targetY) - startY
-  if (Math.abs(distance) < 2) return
+  if (Math.abs(target() - startY) < 2) return
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    window.scrollTo(0, startY + distance)
+    window.scrollTo(0, target())
     return
   }
   const ease = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
   const start = performance.now()
   const step = (now: number) => {
     const t = Math.min(1, (now - start) / duration)
-    window.scrollTo(0, startY + distance * ease(t))
+    window.scrollTo(0, startY + (target() - startY) * ease(t))
     if (t < 1) scrollFrame = requestAnimationFrame(step)
   }
   scrollFrame = requestAnimationFrame(step)
 }
 function slowScrollToElement(id: string, offset = window.innerWidth <= 760 ? 130 : 104) {
   const el = document.getElementById(id)
-  if (el) slowScrollTo(el.getBoundingClientRect().top + window.scrollY - offset)
+  if (el) slowScrollTo(() => el.getBoundingClientRect().top + window.scrollY - offset)
+}
+/** Keep a section at the same place on screen for a moment while content above it finishes loading. */
+function holdAnchor(id: string | (() => Element | null | undefined), top: number, ms = 1500) {
+  cancelAnimationFrame(scrollFrame)
+  const until = performance.now() + ms
+  const step = (now: number) => {
+    const el = typeof id === "string" ? document.getElementById(id) : id()
+    if (el) {
+      const drift = el.getBoundingClientRect().top - top
+      if (Math.abs(drift) > 1) window.scrollBy(0, drift)
+    }
+    if (now < until) scrollFrame = requestAnimationFrame(step)
+  }
+  scrollFrame = requestAnimationFrame(step)
 }
 // Stop the animation if the user scrolls by hand.
 if (typeof window !== "undefined") {
@@ -51,11 +69,11 @@ if (typeof window !== "undefined") {
 
 
 type Item = Record<string, any>
-type Tab = "overview" | "history" | "identification" | "uses" | "studies" | "relationships"
+type Tab = "overview" | "history" | "identification" | "uses" | "studies" | "relationships" | "review"
 // The record page is one long page: every section is shown, one under the other, and the side menu scrolls to it.
 const SECTION_ID: Record<Tab, string> = {
   overview: "sec-overview", history: "sec-history", identification: "sec-identification",
-  uses: "sec-uses", studies: "research-detail", relationships: "sec-relationships",
+  uses: "sec-uses", studies: "research-detail", relationships: "sec-relationships", review: "sec-review",
 }
 const afterRender = (fn: () => void) => requestAnimationFrame(() => requestAnimationFrame(fn))
 type Entry = {
@@ -171,6 +189,9 @@ const SOURCE_BOOKS = [
     edition: "The Complete Herbal, Project Gutenberg eBook #49513.",
   },
 ]
+// About page licence list (from DATA_SOURCES.md, checked 3-4 Nov 2026)
+const LICENCES = [["The historical texts", [["Culpeper, The Complete Herbal", "Project Gutenberg eBook #49513", "No copyright restriction (Project Gutenberg)"], ["Dioscorides, De materia medica", "Wellmann's Greek edition (1906–1914), First1KGreek TEI, via Perseus", "CC BY-SA 4.0"], ["Shennong Bencao Jing", "Sun Xingyan's edition (1799), Chinese Wikisource", "Text public domain; transcription CC BY-SA 4.0"], ["Bretschneider, Botanicon Sinicum III (1895)", "Biodiversity Heritage Library, item 23159", "Public domain"], ["Liddell–Scott–Jones Greek lexicon", "Perseus Digital Library", "CC BY-SA"]]], ["Plant names and identification", [["World Flora Online (Plant List 2026-06)", "", "CC0"], ["WCVP, World Checklist of Vascular Plants", "Royal Botanic Gardens, Kew", "CC BY 3.0"], ["IPNI, International Plant Names Index", "via the hackathon API", "CC BY 3.0"], ["GBIF", "", "CC BY 4.0 (some common names CC BY-NC)"], ["ChecklistBank and Catalogue of Life", "", "Per checklist; Catalogue of Life CC BY 4.0"], ["Wikidata", "", "CC0"], ["NCBI Taxonomy", "", "Public domain"], ["iNaturalist", "", "Not stated"], ["Dr. Duke's Phytochemical and Ethnobotanical Databases", "USDA", "CC0"], ["Global Names Verifier", "", "Each record keeps its database's licence"]]], ["Plant descriptions and ranges", [["Biodiversity Heritage Library", "scanned floras", "Mostly public domain; BHL data CC0"], ["Wikipedia (English)", "", "CC BY-SA 4.0"], ["WGSRPD region outlines (Atlas)", "TDWG, Brummitt 2001", "Not stated in the TDWG repository"]]], ["Medicine and modern research", [["MeSH, Medical Subject Headings", "Courtesy of the U.S. National Library of Medicine", "Public domain"], ["Disease Ontology", "", "CC0"], ["PubMed and NCBI E-utilities", "", "NCBI usage guidelines"], ["Europe PMC", "EMBL-EBI", "Each article keeps its own licence (open access only)"], ["ClinicalTrials.gov", "NLM", "Public domain"], ["EMA herbal monographs", "European Medicines Agency", "Reproduced with the source acknowledged"], ["Lardos et al. 2024", "research data, used for testing only", "Paper CC BY 4.0; data not redistributed"]]], ["Photographs", [["Candidate photos from GBIF (mostly iNaturalist)", "creator and licence shown with each photo", "CC0, CC BY or CC BY-SA only"], ["Candidate photos from Wikimedia Commons", "via Wikidata; creator and licence shown with each photo", "CC0, public domain, CC BY or CC BY-SA only"]]]]
+
 const EXCERPT_LABELS: Record<string, string> = {
   relevance: "Why it is relevant", evidence_type: "Type of evidence", species: "Plant studied", condition: "Condition",
   therapeutic_action: "Effect studied", plant_part: "Plant part", preparation: "Preparation", route: "How it was given",
@@ -188,6 +209,7 @@ const tabHelp: Record<string, string> = {
     "Candidate modern identifications, eligibility rules, and supporting evidence.",
   uses: "Extracted historical claims, medical concept mappings, and connected research.",
   relationships: "A focused graph of the entry and its recorded relationships.",
+  review: "Comments from domain experts confirming, disputing or annotating this entry.",
 }
 const termHelp: Record<string, string> = {
   Family:
@@ -647,15 +669,27 @@ function Graph({
     return () => cancelAnimationFrame(frame)
   }, [nodeCount])
   const [info, setInfo] = useState<Item | null>(null)
+  // drawn like the Knowledge Map: rounded boxes with their kind, name and detail; curved lines left to right
+  const shownNodes = useMemo(() => nodes.map((n) => ({
+    ...n, className: `${n.className || ""} map-node rel-node`, sourcePosition: Position.Right, targetPosition: Position.Left,
+    data: { ...n.data, raw: n.data, label: <><span className="map-node-type">{String(n.data.kind || "")}</span><strong>{String(n.data.label || "Not recorded")}</strong>{n.data.text ? <small>{String(n.data.text)}</small> : null}</> },
+  })), [nodes])
+  const shownEdges = useMemo(() => edges.map((e) => ({
+    ...e, type: "default",
+    style: { ...(e.style || {}), stroke: (e.style as Item | undefined)?.strokeDasharray ? "var(--map-edge-dashed)" : "var(--map-edge)", strokeWidth: 1.6, opacity: 0.85 },
+    labelStyle: { fill: "var(--map-label)", fontSize: 10 }, labelBgStyle: { fill: "var(--map-label-bg)", fillOpacity: 0.94 },
+  })), [edges])
   const [graphLoading, setGraphLoading] = useState(false)
   const [graphError, setGraphError] = useState("")
   const candidates = visible.slice(0, 8)
   const claims = record.claims.slice(0, 8)   // the caller decides whether claims without MeSH are included
   useEffect(() => {
+    // the book and the entry sit level with the middle of the column of identifications and claims
+    const middle = Math.max(0, (candidates.length * 92 + 40 + claims.length * 84) / 2 - 40)
     const ns: Node[] = [
       {
         id: "book",
-        position: { x: 0, y: 0 },
+        position: { x: 0, y: middle },
         data: {
           label: bookName(record.entry.book),
           kind: "Historical source",
@@ -666,7 +700,7 @@ function Graph({
       },
       {
         id: "entry",
-        position: { x: 250, y: 0 },
+        position: { x: 250, y: middle },
         data: {
           label: record.entry.name || record.entry.label,
           kind: "Historical entry",
@@ -676,7 +710,7 @@ function Graph({
       },
     ]
     const es: Edge[] = [
-      { id: "book-entry", source: "entry", target: "book", label: "in book" },
+      { id: "book-entry", source: "book", target: "entry", label: "contains" },
     ]
     candidates.forEach((row, i) => {
       const h = row.hypothesis,
@@ -722,12 +756,8 @@ function Graph({
       const c = row.claim
       ns.push({
         id: `c:${c.id}`,
-        position: {
-          x: (i % 4) * 255,
-          y:
-            Math.max(210, candidates.length * 92 + 80) +
-            Math.floor(i / 4) * 110,
-        },
+        // one column under the identifications, so every line runs left to right
+        position: { x: 540, y: candidates.length * 92 + 40 + i * 84 },
         data: {
           label: c.claim_text || "Historical claim",
           kind: "Extracted historical claim",
@@ -940,8 +970,8 @@ function Graph({
       </p>
       <div className="live-graph">
         <ReactFlow
-          nodes={nodes}
-          edges={edges}
+          nodes={shownNodes}
+          edges={shownEdges}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           onInit={(instance) => { flowRef.current = instance }}
@@ -950,10 +980,10 @@ function Graph({
           minZoom={0.15}
           maxZoom={1.6}
           onNodeClick={(_, node) =>
-            setInfo({ ...node.data, position: node.position })
+            setInfo({ ...((node.data as Item).raw || node.data), position: node.position })
           }
         >
-          <Background color="#d8d5c9" gap={22} />
+          <Background color="var(--map-edge-faint)" gap={22} />
           <Controls showInteractive={false} />
         </ReactFlow>
       </div>
@@ -997,13 +1027,14 @@ function Graph({
 
 export default function LiveApp() {
   const [section, setSection] =
-    useState<"explore" | "record" | "map" | "atlas" | "sources" | "about">("explore")
+    useState<"explore" | "record" | "map" | "atlas" | "review" | "sources" | "about">("explore")
   const [tab, setTab] = useState<Tab>("overview")
   const [book, setBook] = useState("")
   const [tierFilter, setTierFilter] = useState("")
   const [familyFilter, setFamilyFilter] = useState("")
   const [conceptFilter, setConceptFilter] = useState("")
   const [researchOnly, setResearchOnly] = useState(false)
+  const [relevantOnly, setRelevantOnly] = useState(false)
   const [filterTerms, setFilterTerms] = useState({ family: "", concept: "" })
   const [search, setSearch] = useState("")
   const [searchTerm, setSearchTerm] = useState("")
@@ -1025,12 +1056,17 @@ export default function LiveApp() {
   const [graphUnmapped, setGraphUnmapped] = useState(false)
   const [openGroup, setOpenGroup] = useState<string | null>(null)
   const [mapEntry, setMapEntry] = useState<string>("")
+  const [reviewEntry, setReviewEntry] = useState<string>("")
+  const openReview = (id: string) => { setReviewEntry(id); setSection("review"); slowScrollTo(0) }
   const openMap = (id: string) => { setMapEntry(id); setSection("map"); slowScrollTo(0) }
   const [graphHidden, setGraphHidden] = useState(false)
   const [facets, setFacets] = useState<{ families: { name: string; count: number }[]; concepts: { name: string; count: number }[]; books: Record<string, Item> } | null>(null)
+  const [nameIndex, setNameIndex] = useState<{ id: string; name?: string; book: string; chapter?: string; sci?: string }[]>([])
   useEffect(() => {
     api<typeof facets>("/facets").then(setFacets).catch(() => setFacets(null))
+    api<{ items: typeof nameIndex }>("/names").then((x) => setNameIndex(x.items)).catch(() => setNameIndex([]))
   }, [])
+  const suggestions = useMemo(() => buildSuggestions(nameIndex, facets, bookName), [nameIndex, facets])
   const [loading, setLoading] = useState(false)
   const [detailLoading, setDetailLoading] = useState(false)
   const [error, setError] = useState("")
@@ -1059,6 +1095,8 @@ export default function LiveApp() {
     api<{ items: Item[]; has_more: boolean; total?: number }>(
       `/entries?identified=1&q=${encodeURIComponent(searchTerm)}&book=${book}&tier=${tierFilter}&family=${encodeURIComponent(filterTerms.family)}&concept=${encodeURIComponent(filterTerms.concept)}&research=${
         researchOnly ? "1" : "0"
+      }&relevant=${
+        relevantOnly ? "1" : "0"
       }&offset=${offset}&grouped=1`,
     )
       .then((x) => {
@@ -1073,7 +1111,7 @@ export default function LiveApp() {
     return () => {
       active = false
     }
-  }, [searchTerm, book, tierFilter, filterTerms, researchOnly, offset])
+  }, [searchTerm, book, tierFilter, filterTerms, researchOnly, relevantOnly, offset])
   useEffect(() => {
     if (!selectedCandidate) return
     let active = true
@@ -1115,7 +1153,7 @@ export default function LiveApp() {
   // Scroll spy: the side menu highlights the section currently at the top of the screen.
   useEffect(() => {
     if (!record) return
-    const order: Tab[] = ["overview", "history", "identification", "uses", "relationships"]
+    const order: Tab[] = ["overview", "history", "identification", "uses", "relationships", "review"]
     const onScroll = () => {
       let current: Tab = "overview"
       for (const t of order) {
@@ -1146,8 +1184,65 @@ export default function LiveApp() {
   const currentClaim = record?.claims.find((x) => x.claim.id === selectedClaim)
   // Keep all historical claims accessible, with mapped claims first.
   const meshClaims = record?.claims.filter((x) => x.concepts?.length) || []
-  const allClaims = [...(record?.claims || [])].sort((a, b) => Number(Boolean(b.concepts?.length)) - Number(Boolean(a.concepts?.length)))
-  const openEntry = async (id: string, target?: { tab: "identification" | "studies"; id: string; includeHidden?: boolean }) => {
+  // George's call (2026-11-07): only claims mapped to a MeSH medical concept are listed; the rest are counted.
+  const hiddenClaims = (record?.claims.length || 0) - meshClaims.length
+  const [siblings, setSiblings] = useState<Item[]>([])
+  useEffect(() => {
+    setSiblings([])
+    const name = record?.preferred_scientific_name
+    if (!name) return
+    let active = true
+    api<{ items: Item[] }>(`/entries?identified=1&q=${encodeURIComponent(name)}&limit=50`)
+      .then((x) => { if (active) setSiblings(x.items.filter((i) => i.preferred_scientific_name === name)) })
+      .catch(() => {})
+    return () => { active = false }
+  }, [record?.entry.id, record?.preferred_scientific_name])
+  const sourceSwitch = record && siblings.length > 1 ? (
+    <span className="source-switch" role="group" aria-label="Same plant in other sources">
+      {siblings.map((m) => {
+        const twins = siblings.filter((x) => x.book === m.book).length > 1
+        const current = m.id === record.entry.id
+        return (
+          <button key={m.id} type="button" className={current ? "active" : ""} aria-pressed={current}
+            title={`${bookName(m.book)}${m.chapter ? ` · ${m.chapter}` : ""} · ${m.name || ""}`}
+            onClick={(e) => {
+              if (current) return
+              // anchor on the switch that was clicked (its heading), not the section's top: a shorter section in the
+              // other source would otherwise leave the reader in the next section
+              const all = Array.from(document.querySelectorAll(".source-switch"))
+              const index = all.indexOf(e.currentTarget.closest(".source-switch") as Element)
+              openEntry(m.id, undefined, tab === "studies" ? "uses" : tab, index)
+            }}>
+            {bookName(m.book)}{twins ? ` · ${m.chapter || m.name}` : ""}
+          </button>
+        )
+      })}
+    </span>
+  ) : null
+  const [switching, setSwitching] = useState(false)
+  const openEntry = async (id: string, target?: { tab: "identification" | "studies"; id: string; includeHidden?: boolean }, keep?: Tab, switchIndex = -1) => {
+    if (keep && record) {
+      // Switching to the same plant in another source: swap the content in place and keep the reader where they
+      // are, instead of clearing the page and scrolling again.
+      const clicked = switchIndex >= 0 ? () => document.querySelectorAll(".source-switch")[switchIndex] : null
+      const anchorId = SECTION_ID[keep]
+      const before = (clicked?.() || document.getElementById(anchorId))?.getBoundingClientRect().top ?? 0
+      setSwitching(true)
+      try {
+        const next = await api<Entry>(`/entries/${id}`)
+        setSelectedCandidate(null)
+        setSelectedClaim(null)
+        setCandidateDetails(null)
+        setClaimDetails(null)
+        setRecord(next)
+        holdAnchor(clicked ? () => clicked() || document.getElementById(anchorId) : anchorId, before)
+      } catch (e) {
+        setError((e as Error).message)
+      } finally {
+        setSwitching(false)
+      }
+      return
+    }
     setSection("record")
     setTab(target?.tab || "overview")
     setRecord(null)
@@ -1159,6 +1254,7 @@ export default function LiveApp() {
     try {
       setRecord(await api<Entry>(`/entries/${id}`))
       if (target) afterRender(() => slowScrollToElement(SECTION_ID[target.tab]))
+      else if (keep) afterRender(() => slowScrollToElement(SECTION_ID[keep]))   // switching source: stay in the same section
       else slowScrollTo(0)
     } catch (e) {
       setError((e as Error).message)
@@ -1231,6 +1327,12 @@ export default function LiveApp() {
             Knowledge Map
           </button>
           <button
+            className={section === "review" ? "active" : ""}
+            onClick={() => { setReviewEntry(""); navigate("review") }}
+          >
+            Expert review
+          </button>
+          <button
             className={section === "sources" ? "active" : ""}
             onClick={() => navigate("sources")}
           >
@@ -1243,8 +1345,10 @@ export default function LiveApp() {
             About
           </button>
         </nav>
+        <DisplayMenu />
       </header>
-      {section === "map" && <KnowledgeMap key={mapEntry || "map"} openEntry={openEntry} initialEntryId={mapEntry} />}
+      {section === "map" && <KnowledgeMap key={mapEntry || "map"} openEntry={openEntry} initialEntryId={mapEntry} suggestions={suggestions} />}
+      {section === "review" && <PeerReview key={reviewEntry || "review"} suggestions={suggestions} openEntry={openEntry} initialEntryId={reviewEntry} />}
       {section === "atlas" && <Atlas openEntry={openEntry} />}
       {section === "explore" && (
         <main>
@@ -1269,6 +1373,7 @@ export default function LiveApp() {
                     setFamilyFilter("")
                     setConceptFilter("")
                     setResearchOnly(false)
+                    setRelevantOnly(false)
                     setOffset(0)
                   }}
                 >
@@ -1355,7 +1460,18 @@ export default function LiveApp() {
                     setOffset(0)
                   }}
                 />
-                <span>Only entries with modern research assessed</span>
+                <span>Only plants with modern studies</span>
+              </label>
+              <label className="check-row switch-row">
+                <input
+                  type="checkbox"
+                  checked={relevantOnly}
+                  onChange={(e) => {
+                    setRelevantOnly(e.target.checked)
+                    setOffset(0)
+                  }}
+                />
+                <span>Only plants with a study relevant to a claim</span>
               </label>
               <p>
                 Filters match the historical entry and may refer to different
@@ -1365,15 +1481,18 @@ export default function LiveApp() {
             </aside>
             <section className="catalog" id="catalog-top">
               <div className="catalog-tools">
-                <label className="search">
-                  <span aria-hidden="true">⌕</span>
-                  <input
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    placeholder="Search historical or scientific names"
-                    aria-label="Search historical or scientific names"
-                  />
-                </label>
+                <SearchBox
+                  value={search}
+                  onChange={setSearch}
+                  suggestions={suggestions}
+                  label="Search plants, medical uses or plant families"
+                  placeholder="Search a plant, a use (e.g. cough) or a family"
+                  onPick={(x) => {
+                    if (x.kind === "plant" && x.id) { setSearch(""); openEntry(x.id) }
+                    else if (x.kind === "use") { setSearch(""); setConceptFilter(x.value); setOffset(0) }
+                    else if (x.kind === "family") { setSearch(""); setFamilyFilter(x.value); setOffset(0) }
+                  }}
+                />
                 <div className="view-toggle">
                   <button
                     aria-label="Grid view"
@@ -1538,6 +1657,7 @@ export default function LiveApp() {
                   ["identification", "Identification"],
                   ["uses", "Claims & Research"],
                   ["relationships", "Relationships"],
+                  ["review", "Expert review"],
                 ] as [Tab, string][]).map(([id, label]) => (
                   <button
                     className={
@@ -1553,12 +1673,12 @@ export default function LiveApp() {
                   </button>
                 ))}
               </nav>
-              <div className="record-content">
-                <div id="sec-overview" className="record-section"><PlantDashboard record={record} onCandidate={(id, includeHidden) => { setShowHidden(includeHidden); openCandidate(id) }} onClaim={openClaim} onHistory={() => goTo("history")} onResearch={() => goTo("uses")} /></div>
+              <div className={`record-content${switching ? " switching" : ""}`}>
+                <div id="sec-overview" className="record-section"><PlantDashboard switcher={sourceSwitch} record={record} onCandidate={(id, includeHidden) => { setShowHidden(includeHidden); openCandidate(id) }} onClaim={openClaim} onHistory={() => goTo("history")} onResearch={() => goTo("uses")} /></div>
                 {(
                   <section id="sec-history" className="record-section">
                     <p className="eyebrow">Original historical source</p>
-                    <h2>Historical record</h2>
+                    <h2 className="with-switch"><span>Historical record</span>{sourceSwitch}</h2>
                     <p className="section-meta">
                       <span>{bookName(record.entry.book)}</span>
                       {record.entry.label && <span>Chapter {record.entry.label}</span>}
@@ -1577,6 +1697,7 @@ export default function LiveApp() {
                         </p>
                       </blockquote>
                     )}
+                    <TranslateButton key={record.entry.id} text={record.historical_text} />
                     {record.introduction && (
                       <blockquote className="archival-quote">
                         <p>{record.introduction}</p>
@@ -1626,6 +1747,7 @@ export default function LiveApp() {
                                 <span>{value(n.layer)}</span>
                               </div>
                               {n.quote && <p>“{n.quote}”</p>}
+                              <TranslateButton text={n.quote} compact />
                             </li>
                           ))}
                         </ul>
@@ -1636,7 +1758,7 @@ export default function LiveApp() {
                 {(
                   <section id="sec-identification" className="record-section">
                     <p className="eyebrow">Botanical identification</p>
-                    <h2>Candidate identifications</h2>
+                    <h2 className="with-switch"><span>Candidate identifications</span>{sourceSwitch}</h2>
                     <p>
                       These are hypotheses. An accepted taxonomic name does not
                       establish the identity of the historical plant.
@@ -1770,7 +1892,7 @@ export default function LiveApp() {
                                             <article className="comparison-feature" key={j}>
                                               <div className="comparison-feature-heading"><h4>{s.feature}</h4><span className="comparison-feature-result">{value(s.label)}</span></div>
                                               <div className="comparison-feature-content"><span className="comparison-label">Recorded comparison</span><p>{value(s.reason)}</p></div>
-                                              {s.historical_quote && <div className="comparison-feature-quote"><span className="comparison-label">Historical quotation</span><blockquote>“{s.historical_quote}”</blockquote></div>}
+                                              {s.historical_quote && <div className="comparison-feature-quote"><span className="comparison-label">Historical quotation</span><blockquote>“{s.historical_quote}”</blockquote><TranslateButton text={s.historical_quote} compact /></div>}
                                               {d.quotes_not_in_text?.includes(s.detail_id) && <p className="comparison-quote-warning">Quotation flagged as not found in source text</p>}
                                             </article>
                                           ))}
@@ -1791,18 +1913,21 @@ export default function LiveApp() {
                 {(
                   <section id="sec-uses" className="record-section">
                     <p className="eyebrow">Historical medicinal knowledge</p>
-                    <h2>Recorded claims</h2>
+                    <h2 className="with-switch"><span>Recorded claims</span>{sourceSwitch}</h2>
                     <p>
                       These are extracted interpretations of historical
                       statements, not evidence of medical effectiveness.
                     </p>
-                    {allClaims.length === 0 && (
+                    {meshClaims.length === 0 && (
                       <div className="empty">
-                        No historical claims were recorded for this entry.
+                        No claim from this entry is mapped to a medical concept.
                       </div>
                     )}
+                    {hiddenClaims > 0 && (
+                      <p className="claims-hidden-note">{hiddenClaims} more claim{hiddenClaims === 1 ? "" : "s"} without a mapped medical concept {hiddenClaims === 1 ? "is" : "are"} not shown.</p>
+                    )}
                     <div className="claims-list">
-                      {allClaims.map(({ claim: c, concepts }) => (
+                      {meshClaims.map(({ claim: c, concepts }) => (
                         <button className="claim-card" key={c.id} onClick={() => openClaim(c.id)}>
                           <span className="claim-card-top">
                             <span className="claim-card-id">Claim {Number(String(c.source_claim_id).split(":").pop()?.replace(/^c/, "")) || ""}</span>
@@ -1829,12 +1954,15 @@ export default function LiveApp() {
                 {(
                   <section id="research-detail" className="research-section record-section">
                     <p className="eyebrow">Modern research</p>
-                    <h2>
-                      Studies and assessments{" "}
-                      <InfoTip
-                        label="Studies and assessments"
-                        text="Studies are connected to specific claim–plant combinations. Assessments describe relevance and limitations; they are not proof that a remedy works."
-                      />
+                    <h2 className="with-switch">
+                      <span>
+                        Studies and assessments{" "}
+                        <InfoTip
+                          label="Studies and assessments"
+                          text="Studies are connected to specific claim–plant combinations. Assessments describe relevance and limitations; they are not proof that a remedy works."
+                        />
+                      </span>
+                      {sourceSwitch}
                     </h2>
                     <p className="section-explanation">
                       Pick a historical claim to see the plants it was checked
@@ -1847,7 +1975,7 @@ export default function LiveApp() {
                         value={selectedClaim || ""}
                         placeholder="Select a claim"
                         onChange={(v) => v && openClaim(v)}
-                        options={allClaims.map(({ claim: c, concepts }) => ({
+                        options={meshClaims.map(({ claim: c, concepts }) => ({
                           value: c.id,
                           label: c.claim_text,
                           hint: concepts.map((x: Item) => x.name).join(", "),
@@ -1859,6 +1987,7 @@ export default function LiveApp() {
                         <summary>The historical claim</summary>
                         <blockquote className="archival-quote">
                           <p>“{currentClaim.claim.quote}”</p>
+                          <TranslateButton key={currentClaim.claim.id} text={currentClaim.claim.quote} stored={currentClaim.claim.translation} />
                           <cite>
                             {claimRef(currentClaim.claim.source_claim_id, record.entry.name)}{" "}
                             <button className="cite-link" onClick={() => goTo("history")}>Read it in the historical record ↑</button>
@@ -2071,7 +2200,7 @@ export default function LiveApp() {
                 {(
                   <section id="sec-relationships" className="record-section">
                     <p className="eyebrow">Knowledge graph</p>
-                    <h2>Explore relationships</h2>
+                    <h2 className="with-switch"><span>Explore relationships</span>{sourceSwitch}</h2>
                     <div className="switch-group">
                       <label className="check-row switch-row">
                         <input
@@ -2100,6 +2229,15 @@ export default function LiveApp() {
                     />
                   </section>
                 )}
+                <section id="sec-review" className="record-section">
+                  <p className="eyebrow">Domain experts</p>
+                  <h2 className="with-switch"><span>Expert review</span>{sourceSwitch}</h2>
+                  <p className="section-explanation">
+                    Domain experts' confirmations, disagreements and notes on this entry's identifications, claims
+                    and studies, with an agreement score for each item.
+                  </p>
+                  <EntryReviews entryId={record.entry.id} onAdd={() => openReview(record.entry.id)} />
+                </section>
               </div>
               </div>
             </>
@@ -2141,6 +2279,7 @@ export default function LiveApp() {
                       setFamilyFilter("")
                       setConceptFilter("")
                       setResearchOnly(false)
+                      setRelevantOnly(false)
                       navigate("explore")
                     }}
                   >
@@ -2286,6 +2425,30 @@ export default function LiveApp() {
               <li>The automated steps make mistakes. Uncertain quotations and disagreements between the model and the rules are flagged so a person can check them.</li>
               <li>Nothing here is medical advice.</li>
             </ul>
+          </section>
+
+          <section className="about-block about-licences">
+            <h2>Sources and licences</h2>
+            <p>
+              Everything on this site comes from published sources. Each one is
+              credited here with its licence; individual records also link back to
+              the source they came from. Because the Greek and Chinese texts and
+              the Greek lexicon are CC BY-SA, material built from them is shared
+              under CC BY-SA too. Licences were checked on 3–4 November 2026.
+            </p>
+            {(LICENCES as [string, [string, string, string][]][]).map(([group, items]) => (
+              <details className="licence-group" key={group}>
+                <summary>{group} <span>{items.length}</span></summary>
+                <dl>
+                  {items.map(([name, detail, licence]) => (
+                    <div key={name}>
+                      <dt>{name}{detail && <small>{detail}</small>}</dt>
+                      <dd>{licence}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </details>
+            ))}
           </section>
 
           <section className="about-block about-team">

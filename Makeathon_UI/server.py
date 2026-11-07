@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """Local read-only API for the existing EthnoTrace Neo4j graph."""
+import hashlib
 import json
 import os
 import re
+import threading
+import uuid
+from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -63,6 +67,7 @@ def entries(ctx, params):
     family = params.get('family', [''])[0].strip().lower()[:100]
     concept = params.get('concept', [''])[0].strip().lower()[:100]
     research = params.get('research', [''])[0] == '1'
+    relevant = params.get('relevant', [''])[0] == '1'
     identified = params.get('identified', [''])[0] == '1'
     offset = number(params, 'offset', 0, 100000)
     limit = max(1, number(params, 'limit', 24, 50))
@@ -83,6 +88,7 @@ def entries(ctx, params):
       AND ($family='' OR EXISTS { MATCH (e)-[:HAS_HYPOTHESIS]->(h:IdentificationHypothesis {snapshot_id:$snapshot}) WHERE toLower(coalesce(h.family,'')) CONTAINS $family })
       AND ($concept='' OR EXISTS { MATCH (e)-[:HAS_CLAIM]->(:HistoricalClaim {dataset_id:$dataset})-[:HAS_MAPPING]->(:ConceptMapping {dataset_id:$dataset})-[:MAPS_TO]->(m:MedicalConcept) WHERE toLower(coalesce(m.name,'')) CONTAINS $concept })
       AND (NOT $research OR EXISTS { MATCH (e)-[:HAS_CLAIM]->(:HistoricalClaim {dataset_id:$dataset})<-[:ABOUT_CLAIM]-(:ClaimPlantUnit {dataset_id:$dataset})<-[:ASSESSES_UNIT]-(:EvidenceAssessment {dataset_id:$dataset}) })
+      AND (NOT $relevant OR EXISTS { MATCH (e)-[:HAS_CLAIM]->(:HistoricalClaim {dataset_id:$dataset})<-[:ABOUT_CLAIM]-(:ClaimPlantUnit {dataset_id:$dataset})<-[:ASSESSES_UNIT]-(a:EvidenceAssessment {dataset_id:$dataset}) WHERE a.relevance IN ['direct', 'related'] })
       WITH e ORDER BY e.book, coalesce(e.name,''), e.entry_key SKIP $offset LIMIT $take
       OPTIONAL MATCH (e)-[:HAS_DECISION]->(d:EligibilityDecision {snapshot_id:$snapshot})
       OPTIONAL MATCH (d)-[:HAS_SOURCE_VALUE {field:'raw'}]->(decision_raw:SourceValue)
@@ -96,7 +102,7 @@ def entries(ctx, params):
       RETURN e.id AS id, e.name AS name, e.book AS book, e.label AS chapter, e.entry_key AS entry_key, tiers, scientific_names,
         head(scientific_names) AS preferred_scientific_name
       ORDER BY e.book, coalesce(e.name,''), e.entry_key''',
-      snapshot=ctx['snapshot'], dataset=ctx['dataset'], entry_id=entry_id, book=book, term=term, tier=tier, family=family, concept=concept, research=research, identified=identified, offset=offset, take=limit+1)
+      snapshot=ctx['snapshot'], dataset=ctx['dataset'], entry_id=entry_id, book=book, term=term, tier=tier, family=family, concept=concept, research=research, relevant=relevant, identified=identified, offset=offset, take=limit+1)
     image_path = Path(__file__).resolve().parent / 'data' / 'candidate_images.json'
     try:
         images = json.loads(image_path.read_text(encoding='utf-8')).get('images', {})
@@ -150,6 +156,48 @@ def facets(ctx):
         _facets_cache[key] = {'families': families, 'concepts': concepts,
                               'books': {b['book']: {k: b[k] for k in ('entries', 'identified', 'claims')} for b in books}}
     return _facets_cache[key]
+
+
+_names_cache = {}
+
+
+def names(ctx):
+    """Every identified entry's name, book, chapter and proposed scientific name, for search suggestions."""
+    if ctx['snapshot'] not in _names_cache:
+        rows = entries(ctx, {'identified': ['1'], 'grouped': ['1']})['items']
+        out = []
+        for g in rows:
+            for m in (g.get('members') or [g]):
+                out.append({'id': m['id'], 'name': m.get('name'), 'book': m['book'], 'chapter': m.get('chapter'),
+                            'sci': g.get('preferred_scientific_name')})
+        _names_cache[ctx['snapshot']] = {'items': out}
+    return _names_cache[ctx['snapshot']]
+
+
+_overview_cache = {}
+
+
+def overview(ctx):
+    """The whole graph at the level of books, plant families and medical uses (Knowledge Map overview).
+    Counts are distinct historical entries with an A or B candidate in that family. Cached per snapshot."""
+    key = (ctx['snapshot'], ctx['dataset'])
+    if key not in _overview_cache:
+        book_family = query('''MATCH (e:HistoricalEntry {snapshot_id:$snapshot})-[:HAS_HYPOTHESIS]->(h:IdentificationHypothesis {snapshot_id:$snapshot})
+          MATCH (h)-[:HAS_DECISION]->(d:EligibilityDecision {snapshot_id:$snapshot})
+          WHERE d.tier IN ['A','B'] AND trim(coalesce(h.family,'')) <> ''
+          RETURN e.book AS book, h.family AS family, count(DISTINCT e) AS n''', **ctx)
+        family_use = query('''MATCH (e:HistoricalEntry {snapshot_id:$snapshot})-[:HAS_HYPOTHESIS]->(h:IdentificationHypothesis {snapshot_id:$snapshot})
+          MATCH (h)-[:HAS_DECISION]->(d:EligibilityDecision {snapshot_id:$snapshot})
+          WHERE d.tier IN ['A','B'] AND trim(coalesce(h.family,'')) <> ''
+          WITH DISTINCT e, h.family AS family
+          MATCH (e)-[:HAS_CLAIM]->(:HistoricalClaim {dataset_id:$dataset})-[:HAS_MAPPING]->(:ConceptMapping {dataset_id:$dataset})-[:MAPS_TO]->(m:MedicalConcept)
+          WHERE trim(coalesce(m.name,'')) <> ''
+          RETURN family, m.name AS use, count(DISTINCT e) AS n''', **ctx)
+        use_research = query('''MATCH (c:HistoricalClaim {dataset_id:$dataset})-[:HAS_MAPPING]->(:ConceptMapping {dataset_id:$dataset})-[:MAPS_TO]->(m:MedicalConcept)
+          WHERE EXISTS { MATCH (c)<-[:ABOUT_CLAIM]-(:ClaimPlantUnit {dataset_id:$dataset})<-[:ASSESSES_UNIT]-(:EvidenceAssessment {dataset_id:$dataset}) }
+          RETURN m.name AS use, count(DISTINCT c) AS n''', **ctx)
+        _overview_cache[key] = {'book_family': book_family, 'family_use': family_use, 'use_research': use_research}
+    return _overview_cache[key]
 
 
 def entry(ctx, eid):
@@ -238,7 +286,157 @@ def claim(ctx, cid, params):
     return {'studies': studies[:20], 'has_more':len(studies)>20, 'related':related, 'units':units}
 
 
+# ---------------------------------------------------------------------------------------------------
+# Expert review (2026-11-07). Comments are kept in a local JSON file, never in Neo4j (the graph stays
+# read-only). Each comment targets a plant identification, a claim, a study assessment or the whole entry,
+# with a verdict: confirm, disagree or note. Demo comments are seeded once per snapshot for 24 identified
+# entries, stored with demo=true and labelled as demo comments in the interface.
+REVIEWS_PATH = Path(__file__).resolve().parent / 'data' / 'reviews.json'
+VERDICTS = ('confirm', 'disagree', 'note')
+TARGETS = ('identification', 'claim', 'study', 'entry')
+_reviews_lock = threading.Lock()
+DEMO_REVIEWERS = [('Demo reviewer A', 'ethnobotanist'), ('Demo reviewer B', 'historian of medicine'),
+                  ('Demo reviewer C', 'pharmacognosist'), ('Demo reviewer D', 'classical philologist')]
+
+
+def _load_reviews():
+    if REVIEWS_PATH.exists():
+        return json.loads(REVIEWS_PATH.read_text(encoding='utf-8'))
+    return {'schema_version': 1, 'note': 'Expert review comments; demo=true marks generated demo comments.',
+            'demo_seeded_for': None, 'reviews': []}
+
+
+def _save_reviews(store):
+    REVIEWS_PATH.parent.mkdir(exist_ok=True)
+    tmp = REVIEWS_PATH.with_suffix('.tmp')
+    tmp.write_text(json.dumps(store, ensure_ascii=False, indent=1), encoding='utf-8')
+    tmp.replace(REVIEWS_PATH)
+
+
+def _seed_demo(ctx, store):
+    """24 identified entries get a few demo comments on their real identifications, claims and studies."""
+    if store.get('demo_seeded_for') == ctx['snapshot']:
+        return
+    store['reviews'] = [r for r in store['reviews'] if not r.get('demo')]
+    rows = entries(ctx, {'identified': ['1'], 'tier': ['A'], 'limit': ['50']})['items']
+    picked, seen = [], set()
+    for r in rows:
+        if r.get('name') and r['name'] not in seen:
+            picked.append(r); seen.add(r['name'])
+        if len(picked) == 24:
+            break
+    now = datetime.now(timezone.utc).isoformat(timespec='seconds')
+    for n, row in enumerate(picked):
+        e = entry(ctx, row['id'])
+        if not e:
+            continue
+        h = int(hashlib.sha256(row['id'].encode()).hexdigest(), 16)
+        who = lambda k: DEMO_REVIEWERS[(h + k) % len(DEMO_REVIEWERS)]
+        def add(k, ttype, tid, label, verdict, text):
+            name, role = who(k)
+            store['reviews'].append({'id': f'demo-{uuid.uuid5(uuid.NAMESPACE_URL, row["id"] + str(k)).hex[:12]}',
+                'entry_id': row['id'], 'entry_name': row.get('name') or row.get('chapter'), 'book': row.get('book'),
+                'target_type': ttype, 'target_id': tid, 'target_label': label, 'verdict': verdict, 'comment': text,
+                'reviewer': name, 'expertise': role, 'created_at': now, 'demo': True})
+        cands = [c for c in e['candidates'] if (c.get('decision') or {}).get('tier') in ('A', 'B')]
+        if cands:
+            top = cands[0]['hypothesis']
+            nm = top.get('accepted_name') or 'this candidate'
+            add(0, 'identification', top['id'], nm, 'confirm',
+                f'{nm} matches the usual reading of this entry in the reference works I checked.')
+            add(1, 'identification', top['id'], nm, 'disagree' if h % 5 == 0 else 'confirm',
+                'The description in the text fits a related species at least as well; I would keep this as possible.'
+                if h % 5 == 0 else 'Agree; the habitat given in the text is consistent with this plant.')
+        mapped = [c for c in e['claims'] if c.get('concepts')]
+        for k, c in enumerate(mapped[:2]):
+            cl = c['claim']; concept = c['concepts'][0].get('name')
+            verdict = ('confirm', 'note', 'disagree')[(h >> k) % 3]
+            text = {'confirm': f'The quotation supports this reading, and "{concept}" is a fair mapping.',
+                    'note': f'"{concept}" is broader than the historical complaint; worth keeping in mind.',
+                    'disagree': f'I read the quoted passage differently; "{concept}" does not capture what the author describes.'}[verdict]
+            add(2 + k, 'claim', cl['id'], cl.get('claim_text') or 'claim', verdict, text)
+        st = entry_studies(ctx, row['id'])['items'][:1]
+        for s_ in st:
+            a, study = s_['assessment'], s_['study']
+            add(5, 'study', a['id'], study.get('title') or 'study', 'note' if h % 2 else 'confirm',
+                'The study used a modern extract, not the preparation in the text, so the match is indirect.'
+                if h % 2 else 'The assessment reflects the study fairly; relevance is correctly marked.')
+    store['demo_seeded_for'] = ctx['snapshot']
+    _save_reviews(store)
+
+
+def _summary(items):
+    by = {}
+    for r in items:
+        key = (r['target_type'], r['target_id'])
+        g = by.setdefault(key, {'target_type': r['target_type'], 'target_id': r['target_id'], 'target_label': r.get('target_label'),
+                                'entry_id': r['entry_id'], 'entry_name': r.get('entry_name'), 'book': r.get('book'),
+                                'confirm': 0, 'disagree': 0, 'note': 0, 'demo_only': True})
+        g[r['verdict']] += 1
+        g['demo_only'] = g['demo_only'] and bool(r.get('demo'))
+    for g in by.values():
+        votes = g['confirm'] + g['disagree']
+        g['agreement'] = round(100 * g['confirm'] / votes) if votes else None
+    total = {v: sum(1 for r in items if r['verdict'] == v) for v in VERDICTS}
+    votes = total['confirm'] + total['disagree']
+    return {'targets': sorted(by.values(), key=lambda g: (-(g['confirm'] + g['disagree'] + g['note']), g.get('entry_name') or '')),
+            'totals': {**total, 'reviews': len(items), 'reviewers': len({r['reviewer'] for r in items}),
+                       'entries': len({r['entry_id'] for r in items}),
+                       'agreement': round(100 * total['confirm'] / votes) if votes else None}}
+
+
+def reviews(ctx, params):
+    entry_id = params.get('entry_id', [''])[0]
+    if entry_id:
+        identifier(entry_id)
+    with _reviews_lock:
+        store = _load_reviews()
+        _seed_demo(ctx, store)
+    items = [r for r in store['reviews'] if not entry_id or r['entry_id'] == entry_id]
+    items.sort(key=lambda r: r['created_at'], reverse=True)
+    return {'reviews': items, 'summary': _summary(items)}
+
+
+def add_review(body):
+    def text(key, limit, required=True):
+        v = str(body.get(key) or '').strip()
+        if required and not v:
+            raise ValueError(f'{key} is required')
+        if len(v) > limit:
+            raise ValueError(f'{key} is too long')
+        return v
+    verdict, ttype = text('verdict', 10), text('target_type', 20)
+    if verdict not in VERDICTS or ttype not in TARGETS:
+        raise ValueError('Invalid verdict or target')
+    rec = {'id': uuid.uuid4().hex[:12], 'entry_id': identifier(text('entry_id', 200)), 'entry_name': text('entry_name', 200, False),
+           'book': text('book', 30, False), 'target_type': ttype, 'target_id': text('target_id', 300),
+           'target_label': text('target_label', 300, False), 'verdict': verdict, 'comment': text('comment', 2000),
+           'reviewer': text('reviewer', 80), 'expertise': text('expertise', 80, False),
+           'created_at': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'demo': False}
+    with _reviews_lock:
+        store = _load_reviews()
+        store['reviews'].append(rec)
+        _save_reviews(store)
+    return rec
+
+
 class Handler(BaseHTTPRequestHandler):
+    def do_POST(self):
+        parsed = urlparse(self.path)
+        try:
+            if parsed.path.rstrip('/') != '/api/reviews':
+                return self.send(404, {'error': 'Not found'})
+            size = int(self.headers.get('Content-Length') or 0)
+            if size <= 0 or size > 20000:
+                raise ValueError('Invalid request size')
+            body = json.loads(self.rfile.read(size).decode('utf-8'))
+            return self.send(201, add_review(body))
+        except (ValueError, json.JSONDecodeError) as exc:
+            return self.send(400, {'error': str(exc)})
+        except Exception as exc:
+            print(f'API error: {type(exc).__name__}: {exc}', flush=True)
+            return self.send(500, {'error': 'The review could not be saved.'})
+
     def do_GET(self):
         parsed = urlparse(self.path)
         try:
@@ -257,6 +455,12 @@ class Handler(BaseHTTPRequestHandler):
                 data = candidate(ctx, identifier(parts[2]), params)
             elif len(parts) == 3 and parts[:2] == ['api','claims']:
                 data = claim(ctx, identifier(parts[2]), params)
+            elif parts == ['api','reviews']:
+                data = reviews(ctx, params)
+            elif parts == ['api','overview']:
+                data = overview(ctx)
+            elif parts == ['api','names']:
+                data = names(ctx)
             elif parts == ['api','facets']:
                 data = facets(ctx)
             elif parts == ['api','health']:

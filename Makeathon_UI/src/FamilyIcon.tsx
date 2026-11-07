@@ -25,7 +25,7 @@ export function familyIconKey(family?: string | null): string {
 
 export default function FamilyIcon({ family, className }: { family?: string | null; className?: string }) {
   return <svg viewBox="0 0 32 32" width="32" height="32" className={className} data-family-icon={familyIconKey(family)} aria-hidden="true" focusable="false">
-    <circle cx="16" cy="16" r="15.5" fill="#e2ecdf" />
-    <g fill="none" stroke="#173f2b" strokeWidth="1.35" strokeLinecap="round" strokeLinejoin="round">{symbols[familyIconKey(family)]}</g>
+    <circle cx="16" cy="16" r="15.5" style={{ fill: "var(--icon-bg)" }} />
+    <g fill="none" style={{ stroke: "var(--icon-fg)" }} strokeWidth="1.35" strokeLinecap="round" strokeLinejoin="round">{symbols[familyIconKey(family)]}</g>
   </svg>
 }

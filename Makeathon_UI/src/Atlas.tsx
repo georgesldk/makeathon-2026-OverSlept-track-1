@@ -173,13 +173,13 @@ export default function Atlas({ openEntry }: { openEntry: (id: string) => void }
           <svg ref={svgRef} viewBox={`0 0 ${SIZE} ${SIZE}`} className="atlas-globe" onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerLeave={onUp} role="img" aria-label="Globe with the historical books and the native ranges of their plants">
             <defs>
               <radialGradient id="atlas-sea" cx="40%" cy="35%" r="70%">
-                <stop offset="0%" stopColor="#fbfaf5" />
-                <stop offset="100%" stopColor="#e9e6da" />
+                <stop offset="0%" style={{ stopColor: "var(--atlas-sea-top)" }} />
+                <stop offset="100%" style={{ stopColor: "var(--atlas-sea-bottom)" }} />
               </radialGradient>
               {bubbles.map(({ p }) => <clipPath id={`clip-${p.id}`} key={p.id}><circle r="16" /></clipPath>)}
             </defs>
-            <path d={path({ type: "Sphere" }) || ""} fill="url(#atlas-sea)" stroke="#bfc8bb" />
-            <path d={path(geoGraticule10()) || ""} fill="none" stroke="#d8d5c9" strokeWidth="0.6" />
+            <path d={path({ type: "Sphere" }) || ""} fill="url(#atlas-sea)" style={{ stroke: "var(--atlas-edge)" }} />
+            <path d={path(geoGraticule10()) || ""} fill="none" style={{ stroke: "var(--atlas-grid-line)" }} strokeWidth="0.6" />
             {regions.map((r) => (
               <path key={r.properties.LEVEL2_NAM} d={path(r.geometry) || ""}
                 className={`atlas-region${highlighted.has(r.properties.LEVEL2_NAM) ? " native" : ""}`}>
@@ -189,7 +189,7 @@ export default function Atlas({ openEntry }: { openEntry: (id: string) => void }
             {markerVisible && bubbles.map(({ p, x, y }, i) => (
               <g key={p.id} className={`atlas-bubble${selected?.id === p.id ? " selected" : ""}`} transform={`translate(${x},${y})`}
                 style={{ animationDelay: `${Math.min(i, 60) * 12}ms` }}
-                onClick={() => pick(p)} onMouseEnter={() => setHover(p)} onMouseLeave={() => setHover(null)}
+                onClick={() => (selected?.id === p.id ? setSelected(null) : pick(p))} onMouseEnter={() => setHover(p)} onMouseLeave={() => setHover(null)}
                 role="button" aria-label={p.preferred_scientific_name}>
                 <circle r="18" className="atlas-bubble-ring" />
                 {p.image?.image_url && !failedImages.has(p.image.image_url)
@@ -202,7 +202,11 @@ export default function Atlas({ openEntry }: { openEntry: (id: string) => void }
                 onClick={() => { setFamily(f.name); setQuery("") }} onMouseEnter={() => setHover({ family: f.name, count: f.count })} onMouseLeave={() => setHover(null)}
                 role="button" aria-label={`${f.name}, ${f.count} plants`}>
                 <circle r={f.r} className="atlas-family-dot" />
-                <text y="5" textAnchor="middle" className="atlas-family-count">{f.count}</text>
+                <g transform={`translate(${-f.r * 0.8},${-f.r * 0.8}) scale(${(f.r * 1.6) / 32})`}><FamilyIcon family={f.name} /></g>
+                <g transform={`translate(${f.r * 0.72},${-f.r * 0.72})`} className="atlas-family-badge">
+                  <circle r="10" />
+                  <text y="4" textAnchor="middle">{f.count}</text>
+                </g>
                 <text y={f.r + 13} textAnchor="middle" className="atlas-family-label">{f.name === NO_FAMILY ? "Other" : f.name}</text>
               </g>
             ))}

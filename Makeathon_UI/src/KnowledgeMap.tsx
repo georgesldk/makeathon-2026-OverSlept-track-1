@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Background, Controls, MiniMap, ReactFlow, type Edge, type Node } from '@xyflow/react'
+import { Background, Controls, MiniMap, Position, ReactFlow, type Edge, type Node } from '@xyflow/react'
 import { claimRef, tierLabel } from './display'
-import { Dropdown } from './controls'
+import { Dropdown, SearchBox, type Suggestion } from './controls'
+import { TranslateButton } from './accessibility'
+import MapOverview, { type Level } from './MapOverview'
 
 type Row = Record<string, any>
 type Entry = { entry: Row; book: Row; names: Row[]; candidates: Row[]; claims: Row[]; historical_text?: string; introduction?: string; opening?: string }
@@ -16,9 +18,12 @@ async function get<T>(path: string): Promise<T> {
   return data as T
 }
 
-export default function KnowledgeMap({ openEntry, initialEntryId = '' }: { openEntry: (id: string, target?: { tab: 'identification' | 'studies'; id: string; includeHidden?: boolean }) => void; initialEntryId?: string }) {
-  const [search, setSearch] = useState('Carrots')
-  const [term, setTerm] = useState('Carrots')
+export default function KnowledgeMap({ openEntry, initialEntryId = '', suggestions = [] }: { openEntry: (id: string, target?: { tab: 'identification' | 'studies'; id: string; includeHidden?: boolean }) => void; initialEntryId?: string; suggestions?: Suggestion[] }) {
+  const [concept, setConcept] = useState('')
+  const [path, setPath] = useState<Level[]>([])   // overview level, kept while an entry is open
+  const [family, setFamily] = useState('')
+  const [search, setSearch] = useState('')
+  const [term, setTerm] = useState('')
   const [book, setBook] = useState('')
   const [results, setResults] = useState<Row[]>([])
   const [moreResults, setMoreResults] = useState(false)
@@ -38,11 +43,11 @@ export default function KnowledgeMap({ openEntry, initialEntryId = '' }: { openE
   useEffect(() => { const timer = setTimeout(() => setTerm(search), 300); return () => clearTimeout(timer) }, [search])
   useEffect(() => {
     let active = true
-    get<{items: Row[]; has_more: boolean}>(`/entries?identified=1&q=${encodeURIComponent(term)}&book=${book}&limit=20`)
-      .then(result => { if (!active) return; setResults(result.items); setMoreResults(result.has_more); setError(''); if (!entryId && term === 'Carrots') { const example = result.items.find(x => x.name === 'Carrots' && x.book === 'culpeper'); if (example) setEntryId(example.id) } })
+    get<{items: Row[]; has_more: boolean}>(`/entries?identified=1&q=${encodeURIComponent(term)}&book=${book}&concept=${encodeURIComponent(concept)}&family=${encodeURIComponent(family)}&limit=20`)
+      .then(result => { if (!active) return; setResults(result.items); setMoreResults(result.has_more); setError(''); })
       .catch(e => { if (active) { setResults([]); setError(e.message) } })
     return () => { active = false }
-  }, [term, book, entryId])
+  }, [term, book, entryId, concept, family])
   useEffect(() => {
     if (!entryId) return
     let active = true
@@ -81,24 +86,25 @@ export default function KnowledgeMap({ openEntry, initialEntryId = '' }: { openE
     const nodes: Node[] = []; const edges: Edge[] = []; const seen = new Set<string>()
     const add = (kind: Kind, id: string, label: string, data: Row, x: number, y: number, subtitle?: string) => {
       const key = `${kind}:${id}`; if (seen.has(key)) return key; seen.add(key)
-      nodes.push({ id: key, position: { x, y }, className: `map-node map-node-${kind}`, data: { selection: { kind, id, label, data }, label: <><span className="map-node-type">{kindLabels[kind]}</span><strong>{label || 'Not recorded'}</strong>{subtitle && <small>{subtitle}</small>}</> } }); return key
+      nodes.push({ id: key, position: { x, y }, className: `map-node map-node-${kind}`, sourcePosition: Position.Right, targetPosition: Position.Left, data: { selection: { kind, id, label, data }, label: <><span className="map-node-type">{kindLabels[kind]}</span><strong>{label || 'Not recorded'}</strong>{subtitle && <small>{subtitle}</small>}</> } }); return key
     }
-    const link = (source: string, target: string, label: string, dashed = false) => edges.push({ id: `${source}-${target}-${label}`, source, target, label, type: 'smoothstep', animated: false, style: { stroke: dashed ? '#ab815a' : '#82958a', strokeWidth: 1.5, strokeDasharray: dashed ? '5 5' : undefined }, labelStyle: { fill: '#596b60', fontSize: 10 }, labelBgStyle: { fill: '#f5f3eb', fillOpacity: .94 } })
+    const link = (source: string, target: string, label: string, dashed = false) => edges.push({ id: `${source}-${target}-${label}`, source, target, label, type: 'default', animated: false, style: { stroke: dashed ? 'var(--map-edge-dashed)' : 'var(--map-edge)', strokeWidth: 1.6, opacity: .85, strokeDasharray: dashed ? '5 5' : undefined }, labelStyle: { fill: 'var(--map-label)', fontSize: 10 }, labelBgStyle: { fill: 'var(--map-label-bg)', fillOpacity: .94 } })
     const root = add('entry', entry.entry.id, entry.entry.name || entry.entry.label, entry.entry, 0, 170, `${entry.entry.book === 'culpeper' ? 'Culpeper' : 'Dioscorides'} · ${entry.entry.label || ''}`)
     let cs = candidates.slice(0, 8)
     const focusedCandidate = candidates.find(x => x.hypothesis.id === focusCandidate)
     if (focusedCandidate && !cs.includes(focusedCandidate)) cs = [...cs.slice(0, 7), focusedCandidate]
-    if (visible.candidates) cs.forEach((x, i) => { const h = x.hypothesis; const id = add('candidate', h.id, h.accepted_name || 'Unresolved candidate', x, 300, i * 125, `${tierLabel(x.decision?.tier)} · ${present(h.rank)}`); link(root, id, 'proposed', true) })
+    if (visible.candidates) cs.forEach((x, i) => { const h = x.hypothesis; const id = add('candidate', h.id, h.accepted_name || 'Unresolved candidate', x, 300, i * 96, `${tierLabel(x.decision?.tier)} · ${present(h.rank)}`); link(root, id, 'proposed', true) })
     let claims = entry.claims.slice(0, 8)
     const focused = entry.claims.find(x => x.claim.id === focusClaim)
     if (focused && !claims.includes(focused)) claims = [...claims.slice(0, 7), focused]
-    const claimStart = visible.candidates ? Math.max(cs.length * 125 + 60, 250) : 0
+    const claimStart = visible.candidates ? Math.max(cs.length * 96 + 50, 250) : 0
+    let claimY = claimStart
     if (visible.claims) claims.forEach((item, i) => {
-      const c = item.claim; const y = claimStart + i * 130
+      const c = item.claim; const y = claimY; claimY += Math.max(1, visible.concepts ? Math.min(4, item.concepts.length) : 1) * 92 + 16
       const id = add('claim', c.id, c.claim_text || 'Historical claim', c, 300, y, c.source_claim_id?.split(':').pop()); link(root, id, 'records')
       if (visible.concepts) item.concepts.slice(0, 4).forEach((m: Row, j: number) => {
-        const mapping = add('mapping', m.mapping_id, `${present(m.match)} mapping`, m, 650, y + j * 100, present(m.proposed))
-        const concept = add('concept', m.node_id, m.name, m, 970, y + j * 100, `MeSH · ${present(m.id)}`)
+        const mapping = add('mapping', m.mapping_id, `${present(m.match)} mapping`, m, 620, y + j * 92, present(m.proposed))
+        const concept = add('concept', m.node_id, m.name, m, 940, y + j * 92, `MeSH · ${present(m.id)}`)
         link(id, mapping, 'has mapping'); link(mapping, concept, 'maps to')
       })
     })
@@ -106,10 +112,10 @@ export default function KnowledgeMap({ openEntry, initialEntryId = '' }: { openE
       const ckey = `claim:${focused.claim.id}`; let studyIndex = 0
       claimData.studies.slice(0, 6).forEach((row: Row) => {
         if (!row.unit?.id || !row.assessment?.id || !row.study?.id) return
-        const y = claimStart + studyIndex++ * 135
-        const unit = add('unit', row.unit.id, row.candidate || row.unit.taxon_name || 'Claim–plant unit', row.unit, 650, y, 'Recorded claim–plant combination')
-        const assessment = add('assessment', row.assessment.id, row.assessment.relevance || row.assessment.verdict || 'Evidence assessment', { ...row.assessment, excerpts: row.excerpts }, 970, y, 'Assessment of this study')
-        const study = add('study', row.study.id, row.study.title || 'Untitled study', { ...row.study, source_url: row.source_url }, 1290, y, 'Modern research')
+        const y = claimStart + studyIndex++ * 110
+        const unit = add('unit', row.unit.id, row.candidate || row.unit.taxon_name || 'Claim–plant unit', row.unit, 1260, y, 'Recorded claim–plant combination')
+        const assessment = add('assessment', row.assessment.id, row.assessment.relevance || row.assessment.verdict || 'Evidence assessment', { ...row.assessment, excerpts: row.excerpts }, 1580, y, 'Assessment of this study')
+        const study = add('study', row.study.id, row.study.title || 'Untitled study', { ...row.study, source_url: row.source_url }, 1900, y, 'Modern research')
         link(unit, ckey, 'about claim'); link(assessment, unit, 'assesses unit'); link(assessment, study, 'assesses study')
       })
     }
@@ -122,22 +128,22 @@ export default function KnowledgeMap({ openEntry, initialEntryId = '' }: { openE
     <div className="knowledge-layout">
       <aside className="knowledge-sidebar" aria-label="Map controls">
         <div className="map-sidebar-heading"><span>01 / START HERE</span><h2>Choose a record</h2><p>Search by historical or scientific name, then select an entry.</p></div>
-        <label className="map-field">Search the collection<input value={search} onChange={e => setSearch(e.target.value)} placeholder="Try Carrots or μῆον" /></label>
-        <div className="map-field">Historical source<Dropdown label="Historical source" value={book} onChange={setBook} options={[{ value: '', label: 'All entries' }, { value: 'culpeper', label: 'Culpeper', hint: 'The Complete Herbal, 1653' }, { value: 'dioscorides', label: 'Dioscorides', hint: 'De materia medica, 1st century' }]} /></div>
-        <div className="map-results" aria-label="Matching historical entries">{results.map(r => <button key={r.id} className={entryId === r.id ? 'active' : ''} onClick={() => setEntryId(r.id)}><strong>{r.name || r.chapter}</strong><small>{r.book === 'culpeper' ? 'Culpeper' : 'Dioscorides'} · {r.chapter || 'Historical entry'}</small></button>)}{moreResults && <p>Showing the first 20 matches. Refine your search to see more.</p>}{!results.length && !error && <p>No matching entries. Try another name.</p>}</div>
+        <div className="map-field">Search the collection<SearchBox value={search} onChange={v => { setSearch(v); if (!v && entryId) { setEntryId(''); setEntry(null); setSelection(null) } }} suggestions={suggestions} label="Search plants, medical uses or plant families" placeholder="A plant, a use or a family" onPick={x => { if (x.kind === 'plant' && x.id) { setSearch(x.value); setEntryId(x.id) } else if (x.kind === 'use') { setSearch(''); setConcept(x.value) } else { setSearch(''); setFamily(x.value) } }} />{(concept || family) && <div className="map-active-filters">{concept && <button type="button" onClick={() => setConcept('')}>Use: {concept} ×</button>}{family && <button type="button" onClick={() => setFamily('')}>Family: {family} ×</button>}</div>}</div>
+        <div className="map-results" aria-label="Matching historical entries">{results.map(r => <button key={r.id} className={entryId === r.id ? 'active' : ''} onClick={() => { if (entryId === r.id) { setEntryId(''); setEntry(null); setSelection(null); setSearch('') } else { setSearch(r.name || r.chapter || ''); setEntryId(r.id) } }}><strong>{r.name || r.chapter}</strong><small>{r.book === 'culpeper' ? 'Culpeper' : 'Dioscorides'} · {r.chapter || 'Historical entry'}</small></button>)}{moreResults && <p>Showing the first 20 matches. Refine your search to see more.</p>}{!results.length && !error && <p>No matching entries. Try another name.</p>}</div><div className="map-field">Historical source<Dropdown label="Historical source" value={book} onChange={setBook} options={[{ value: '', label: 'All entries' }, { value: 'culpeper', label: 'Culpeper', hint: 'The Complete Herbal, 1653' }, { value: 'dioscorides', label: 'Dioscorides', hint: 'De materia medica, 1st century' }]} /></div>
+        
         <div className="map-sidebar-heading map-layer-heading"><span>02 / SHAPE THE MAP</span><h2>Visible layers</h2><p>Choose what to display around the selected entry.</p></div>
         <div className="map-layer-list switch-list">{([['candidates','Plant hypotheses'],['claims','Historical claims'],['concepts','Medical concepts'],['studies','Research connections'],['hidden','Include excluded candidates']] as [keyof typeof visible, string][]).map(([key,label]) => <label key={key}><input type="checkbox" checked={visible[key]} onChange={() => toggle(key)}/><span className={`map-legend-dot map-dot-${key}`}/>{label}</label>)}</div>
         {entry && <><div className="map-field">Focus a candidate<Dropdown label="Focus a candidate" value={focusCandidate} placeholder="Choose a candidate" onChange={v => v && selectCandidate(v)} options={candidates.map(x => ({ value: x.hypothesis.id, label: x.hypothesis.accepted_name || 'Unresolved', hint: tierLabel(x.decision?.tier) }))} /></div><div className="map-field">Explore research for a claim<Dropdown label="Explore research for a claim" value={focusClaim} placeholder="Choose a claim" onChange={v => v && selectClaim(v)} options={entry.claims.map(x => ({ value: x.claim.id, label: x.claim.claim_text }))} /></div></>}
       </aside>
       <section className="knowledge-workspace" aria-label="Interactive knowledge map">
-        <div className="map-workspace-head"><div><span className="map-overline">THE EVIDENCE LANDSCAPE</span><h2>{entry ? entry.entry.name || entry.entry.label : 'Your map begins here'}</h2><p>{entry ? `${entry.entry.book === 'culpeper' ? 'Culpeper' : 'Dioscorides'} · ${entry.entry.label || 'Historical entry'}` : 'Select an entry to explore its connections.'}</p></div><div className="map-workspace-count"><strong>{graph.nodes.length}</strong><span>visible nodes</span></div></div>
+        <div className="map-workspace-head"><div><span className="map-overline">THE EVIDENCE LANDSCAPE</span><h2>{entry ? entry.entry.name || entry.entry.label : 'The whole knowledge graph'}</h2><p>{entry ? `${entry.entry.book === 'culpeper' ? 'Culpeper' : 'Dioscorides'} · ${entry.entry.label || 'Historical entry'}` : 'Books, plant families and medical uses. Pick an entry for its own map.'}</p>{entry && <button type="button" className="cite-link map-back" onClick={() => { setEntryId(''); setEntry(null); setSelection(null) }}>‹ Back to the graph overview</button>}</div>{entry && <div className="map-workspace-count"><strong>{graph.nodes.length}</strong><span>visible nodes</span></div>}</div>
         {error && <p className="map-message" role="alert">{error}</p>}{loading && <p className="map-message">Loading the historical record…</p>}
-        {entry && <><div className="knowledge-canvas"><ReactFlow key={entry.entry.id} nodes={graph.nodes} edges={graph.edges} fitView minZoom={0.08} maxZoom={1.8} nodesDraggable={false} nodesConnectable={false} onNodeClick={(_, node) => { const s = node.data.selection as Selection; setSelection(s); if (s.kind === 'claim') setFocusClaim(s.id); if (s.kind === 'candidate') setFocusCandidate(s.id) }}><Background color="#d5ddd2" gap={24} size={1}/><Controls showInteractive={false}/><MiniMap pannable zoomable nodeColor={n => n.className?.includes('claim') ? '#b8905b' : n.className?.includes('study') ? '#8c83a7' : '#6e967a'} maskColor="rgba(232,237,227,.7)"/></ReactFlow><div className="map-canvas-hint">DRAG TO EXPLORE · SCROLL TO ZOOM · SELECT A NODE</div></div><div className="map-caption">Showing up to 8 candidates and 8 claims, with up to 4 mappings per claim; use the selectors to focus any other record. Select a claim to load up to 6 study connections. For complete lists, open the full record.</div></>}
-        {!entry && !loading && <div className="map-placeholder"><span>✳</span><p>Choose a historical entry to reveal its connections.</p></div>}
+        {entry && <><div className="knowledge-canvas"><ReactFlow key={entry.entry.id} nodes={graph.nodes} edges={graph.edges} fitView minZoom={0.08} maxZoom={1.8} nodesDraggable={false} nodesConnectable={false} onNodeClick={(_, node) => { const s = node.data.selection as Selection; setSelection(s); if (s.kind === 'claim') setFocusClaim(s.id); if (s.kind === 'candidate') setFocusCandidate(s.id) }}><Background color="var(--map-grid)" gap={24} size={1}/><Controls showInteractive={false}/><MiniMap pannable zoomable nodeColor={n => n.className?.includes('claim') ? '#b8905b' : n.className?.includes('study') ? '#8c83a7' : '#6e967a'}/></ReactFlow><div className="map-canvas-hint">DRAG TO EXPLORE · SCROLL TO ZOOM · SELECT A NODE</div></div><div className="map-caption">Showing up to 8 candidates and 8 claims, with up to 4 mappings per claim; use the selectors to focus any other record. Select a claim to load up to 6 study connections. For complete lists, open the full record.</div></>}
+        {!entry && !loading && <MapOverview book={book} path={path} setPath={setPath} onEntry={id => setEntryId(id)} />}
         <div className="map-inspector" aria-live="polite"><div className="map-inspector-heading"><div><span className="map-overline">03 / INSPECT THE EVIDENCE</span><h3>{selection ? kindLabels[selection.kind] : 'Select a node'}</h3></div><span>↗</span></div>
-          {selection ? <><h4>{selection.label}</h4>{selection.kind === 'entry' && <><p>{entry?.historical_text || entry?.introduction || entry?.opening || 'No historical passage recorded.'}</p><button className="map-link" onClick={() => openEntry(selection.id)}>Open full historical record →</button></>}
-          {selection.kind === 'candidate' && <><p>{tierLabel(selection.data.decision?.tier)} · {present(selection.data.hypothesis?.rank)}. This is a proposed historical identification.</p>{candidateData && <><span className="map-detail-label">Supporting evidence · showing {Math.min(4, candidateData.evidence.length)} of {candidateData.evidence.length} returned</span>{candidateData.evidence.slice(0, 4).map((v: Row, i: number) => <div className="map-evidence" key={v.id || i}><strong>{present(v.source)} · {present(v.grade)}</strong><p>{present(v.source_record_id)}{v.lexicon_citations?.length ? ` · ${present(v.lexicon_citations)}` : ''}</p>{v.quote && <p>“{v.quote}”</p>}</div>)}{!candidateData.evidence.length && <p>No linked evidence records returned.</p>}<button className="map-link" onClick={() => openEntry(entry!.entry.id, {tab: 'identification', id: selection.id, includeHidden: selection.data.decision?.tier === 'X'})}>Open full record for all evidence →</button></>}</>}
-          {selection.kind === 'claim' && <><span className="map-detail-label">Original quotation</span><blockquote>“{present(selection.data.quote)}”</blockquote><p>Source: {claimRef(selection.data.source_claim_id, entry?.entry?.name)}</p>{detailLoading && <p>Loading connected research…</p>}{claimData && <p>{claimData.studies.length} study connections returned on the first page{claimData.has_more ? ' · more in the full record' : ''}.</p>}<button className="map-link" onClick={() => openEntry(entry!.entry.id, {tab: 'studies', id: selection.id})}>Open claim in full record →</button></>}
+          {selection ? <><h4>{selection.label}</h4>{selection.kind === 'entry' && <><p>{entry?.historical_text || entry?.introduction || entry?.opening || 'No historical passage recorded.'}</p><TranslateButton key={selection.id} text={entry?.historical_text || entry?.introduction || entry?.opening} compact /><button className="map-link" onClick={() => openEntry(selection.id)}>Open full historical record →</button></>}
+          {selection.kind === 'candidate' && <><p>{tierLabel(selection.data.decision?.tier)} · {present(selection.data.hypothesis?.rank)}. This is a proposed historical identification.</p>{candidateData && <><span className="map-detail-label">Supporting evidence · showing {Math.min(4, candidateData.evidence.length)} of {candidateData.evidence.length} returned</span>{candidateData.evidence.slice(0, 4).map((v: Row, i: number) => <div className="map-evidence" key={v.id || i}><strong>{present(v.source)} · {present(v.grade)}</strong><p>{present(v.source_record_id)}{v.lexicon_citations?.length ? ` · ${present(v.lexicon_citations)}` : ''}</p>{v.quote && <p>“{v.quote}”</p>}<TranslateButton text={v.quote} compact /></div>)}{!candidateData.evidence.length && <p>No linked evidence records returned.</p>}<button className="map-link" onClick={() => openEntry(entry!.entry.id, {tab: 'identification', id: selection.id, includeHidden: selection.data.decision?.tier === 'X'})}>Open full record for all evidence →</button></>}</>}
+          {selection.kind === 'claim' && <><span className="map-detail-label">Original quotation</span><blockquote>“{present(selection.data.quote)}”</blockquote><TranslateButton key={selection.id} text={selection.data.quote} stored={selection.data.translation} compact /><p>Source: {claimRef(selection.data.source_claim_id, entry?.entry?.name)}</p>{detailLoading && <p>Loading connected research…</p>}{claimData && <p>{claimData.studies.length} study connections returned on the first page{claimData.has_more ? ' · more in the full record' : ''}.</p>}<button className="map-link" onClick={() => openEntry(entry!.entry.id, {tab: 'studies', id: selection.id})}>Open claim in full record →</button></>}
           {selection.kind === 'mapping' && <><p>Mapping: {present(selection.data.match)} · Proposed term: {present(selection.data.proposed)} · Via: {present(selection.data.via)}</p><p>This mapping describes recorded terminology; it does not establish treatment effectiveness.</p></>}
           {selection.kind === 'concept' && <p>MeSH ID: {present(selection.data.id)}</p>}
           {selection.kind === 'unit' && <p>This node represents the recorded claim–plant combination assessed in the connected research.</p>}
