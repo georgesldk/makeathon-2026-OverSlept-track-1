@@ -7,6 +7,7 @@ type DashboardRecord = { entry: Item; book: Item; names: Item[]; candidates: Ite
 type StudyResult = { items: Item[]; has_more: boolean }
 const bookSources: Record<string, { name: string; url: string }> = {
   culpeper: { name: 'The Complete Herbal · Project Gutenberg', url: 'https://www.gutenberg.org/ebooks/49513' },
+  shennong: { name: 'Shennong Bencao Jing · Sun Xingyan edition', url: 'https://zh.wikisource.org/wiki/%E7%A5%9E%E8%BE%B2%E6%9C%AC%E8%8D%89%E7%B6%93_(%E5%AD%AB%E6%98%9F%E8%A1%8D)' },
   dioscorides: { name: 'De materia medica · Wellmann edition', url: 'https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1:1.preface.1-1.preface.5/' },
 }
 

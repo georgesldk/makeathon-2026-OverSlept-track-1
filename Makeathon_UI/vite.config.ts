@@ -33,6 +33,11 @@ export default defineConfig(({ mode }) => {
         "@": path.resolve(__dirname, "./src"),
       },
     },
+    // Pre-bundle the pinyin libraries (loaded only for Chinese names) at startup; otherwise Vite discovers
+    // them on the first Chinese page, re-optimizes and reloads the page.
+    optimizeDeps: {
+      include: ["pinyin-pro", "opencc-js/t2cn"],
+    },
     server: {
       proxy: { "/api": "http://127.0.0.1:8787" },
       host: process.env.FIGMA_DEV_SERVER_HOST || "127.0.0.1",

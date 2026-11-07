@@ -13,11 +13,12 @@ import {
 import "@xyflow/react/dist/style.css"
 import KnowledgeMap from "./KnowledgeMap"
 import PlantDashboard from "./PlantDashboard"
-import { claimRef, friendly, studyLink, tierLabel } from "./display"
+import { claimRef, friendly, sizedImage, studyLink, tierLabel } from "./display"
 import { Dropdown, ExpandableText, FilterPicker, Pager, SearchBox, buildSuggestions } from "./controls"
 import Atlas from "./Atlas"
 import PeerReview, { EntryReviews } from "./PeerReview"
 import { DisplayMenu, TranslateButton } from "./accessibility"
+import { romanize } from "./romanize"
 
 // Slow, eased scrolling for every in-app move (the browser's own "smooth" is fast and not adjustable).
 // Respects the system's reduced-motion setting.
@@ -93,8 +94,27 @@ type Entry = {
   image?: Item | null
   preferred_scientific_name?: string | null
 }
-const bookName = (book: string) =>
-  book === "culpeper" ? "Culpeper" : "Dioscorides"
+const BOOK_NAMES: Record<string, string> = { culpeper: "Culpeper", dioscorides: "Dioscorides", shennong: "Shennong" }
+const bookName = (book: string) => BOOK_NAMES[book] || book
+const BOOK_LANG: Record<string, string> = { dioscorides: "grc", shennong: "zh-Hant" }
+
+/** A Greek or Chinese name in Latin script, in small type under the name. */
+function RomanizedName({ name }: { name?: string | null }) {
+  const [reading, setReading] = useState<Awaited<ReturnType<typeof romanize>>>(null)
+  useEffect(() => {
+    let active = true
+    setReading(null)
+    romanize(name).then((r) => { if (active) setReading(r) }).catch(() => {})
+    return () => { active = false }
+  }, [name])
+  if (!reading) return null
+  return (
+    <p className="record-romanized" lang="en">
+      <span>{reading.text}</span>
+      <small>{reading.kind === "greek" ? "Latin transliteration" : "Pinyin (approximate)"}</small>
+    </p>
+  )
+}
 // Links for recorded source IDs (gbif:, clb:<dataset>:<id>, ncbi:, wikidata:, inat:)
 const sourceUrl = (id: unknown): string | undefined => {
   if (typeof id !== "string") return undefined
@@ -140,9 +160,11 @@ async function api<T>(path: string): Promise<T> {
 // Encyclopaedia Britannica (Pedanius Dioscorides), checked 7 Nov 2026.
 const SOURCE_TIMELINE = [
   { year: "c. AD 77", text: "Dioscorides completes De materia medica" },
+  { year: "1st–2nd c. AD", text: "The Shennong Bencao Jing is compiled in Eastern Han China" },
   { year: "c. 512", text: "The illustrated Vienna Dioscorides is made in Constantinople" },
   { year: "1649", text: "Culpeper translates the physicians' Latin pharmacopoeia into English" },
   { year: "1652–53", text: "Culpeper's English Physitian, later The Complete Herbal" },
+  { year: "1799", text: "Sun Xingyan and Sun Fengyi reconstruct the lost Shennong Bencao Jing" },
   { year: "1906–14", text: "Max Wellmann's critical edition of the Greek text" },
 ]
 const SOURCE_BOOKS = [
@@ -187,6 +209,26 @@ const SOURCE_BOOKS = [
       "He drew heavily on John Parkinson's Theatrum Botanicum of 1640.",
     ],
     edition: "The Complete Herbal, Project Gutenberg eBook #49513.",
+  },
+  {
+    id: "shennong",
+    era: "Chinese · 1st–2nd century AD",
+    title: "The Shennong Bencao Jing",
+    subtitle: "神農本草經 · “The Divine Farmer's Materia Medica”",
+    read: "https://zh.wikisource.org/wiki/%E7%A5%9E%E8%BE%B2%E6%9C%AC%E8%8D%89%E7%B6%93_(%E5%AD%AB%E6%98%9F%E8%A1%8D)",
+    author: [
+      "No author is known. The book is attributed to Shennong, the legendary “Divine Farmer” said to have tasted hundreds of plants to learn which heal and which harm.",
+      "Scholars think it gathers older oral traditions and was written down under the Eastern Han dynasty, in the 1st–2nd century AD.",
+    ],
+    book: [
+      "Its 365 entries are sorted into three grades: 120 upper drugs that are harmless and nourish life, 120 middle drugs that treat illness but may be toxic, and 125 lower drugs with strong, often poisonous effects.",
+      "Besides plants, it describes minerals and animal products. Only entries proposed as plants are identified here.",
+    ],
+    facts: [
+      "The original text is lost. What survives was pieced together from quotations in later works.",
+      "The upper grade includes ginseng, jujube and the lingzhi mushroom; the lower grade includes rhubarb root and peach and apricot kernels.",
+    ],
+    edition: "Sun Xingyan and Sun Fengyi's reconstruction (1799), Chinese Wikisource.",
   },
 ]
 // About page licence list (from DATA_SOURCES.md, checked 3-4 Nov 2026)
@@ -310,7 +352,7 @@ function FeaturedEntries({ book, openEntry }: { book: string; openEntry: (id: st
       <div className="featured-grid">
         {items.map((i) => (
           <button key={i.id} className="featured-card" onClick={() => openEntry(i.id)}>
-            <img src={i.image.image_url} alt="" loading="lazy" />
+            <img src={sizedImage(i.image.image_url, 640)} alt="" loading="lazy" />
             <span className="featured-copy">
               <em>{i.preferred_scientific_name}</em>
               <span>{i.name || i.chapter}{i.chapter && i.name ? ` · ${i.chapter}` : ""}</span>
@@ -1393,6 +1435,7 @@ export default function LiveApp() {
                     { value: "", label: "All entries" },
                     { value: "culpeper", label: "Culpeper", hint: "The Complete Herbal, 1653" },
                     { value: "dioscorides", label: "Dioscorides", hint: "De materia medica, 1st century" },
+                    { value: "shennong", label: "Shennong Bencao Jing", hint: "Han China, 1st–2nd century" },
                   ]}
                 />
               </div>
@@ -1543,7 +1586,7 @@ export default function LiveApp() {
                     >
                       <div className="live-plate" aria-hidden="true">
                         <span className="live-plate-placeholder">✳</span>
-                        {p.image?.image_url && !brokenImages.has(p.image.image_url) && <img src={p.image.image_url} loading="lazy" alt="" onError={() => setBrokenImages(previous => new Set(previous).add(p.image.image_url))} />}
+                        {p.image?.image_url && !brokenImages.has(p.image.image_url) && <img src={sizedImage(p.image.image_url, 640)} loading="lazy" decoding="async" alt="" onError={() => setBrokenImages(previous => new Set(previous).add(p.image.image_url))} />}
                       </div>
                       <div className="plant-card-copy">
                         {p.members ? (
@@ -1618,7 +1661,7 @@ export default function LiveApp() {
                   <div className="record-plate-placeholder" aria-hidden="true">✳</div>
                   {record.image?.image_url && !brokenImages.has(record.image.image_url) ? (
                     <>
-                      <img src={record.image.image_url} alt={`Photograph of proposed candidate ${record.preferred_scientific_name || ""}`} onError={() => setBrokenImages(previous => new Set(previous).add(record.image!.image_url))} />
+                      <img src={sizedImage(record.image.image_url, 1024)} alt={`Photograph of proposed candidate ${record.preferred_scientific_name || ""}`} onError={() => setBrokenImages(previous => new Set(previous).add(record.image!.image_url))} />
                       <div className="record-image-credit">
                         <strong>Proposed candidate</strong>
                         <em>{record.preferred_scientific_name}</em>
@@ -1632,10 +1675,11 @@ export default function LiveApp() {
                   <p className="eyebrow">
                     {bookName(record.entry.book)} ·{" "}
                     {record.entry.label
-                      ? `Chapter ${record.entry.label}`
+                      ? `${record.entry.book === "shennong" ? "Entry" : "Chapter"} ${record.entry.label}`
                       : `Page ${value(record.page)}`}
                   </p>
-                  <h1>{record.entry.name || record.entry.label}</h1>
+                  <h1 lang={BOOK_LANG[record.entry.book]}>{record.entry.name || record.entry.label}</h1>
+                  <RomanizedName name={record.entry.name} />
                   {record.preferred_scientific_name && <p className="record-scientific-name"><em>{record.preferred_scientific_name}</em><small>Proposed scientific identification</small></p>}
                   {(record.description || record.introduction || record.opening || record.historical_text) ? (
                     <>
@@ -1643,6 +1687,7 @@ export default function LiveApp() {
                         className="record-description"
                         text={record.description || record.introduction || record.opening || record.historical_text || ""}
                       />
+                      <TranslateButton key={`d-${record.entry.id}`} text={record.description || record.introduction || record.opening || record.historical_text} compact />
                       <button className="record-read-source" onClick={() => goTo("history")}>Read the complete historical record →</button>
                     </>
                   ) : <p>No historical description was recorded for this entry.</p>}
@@ -1687,11 +1732,7 @@ export default function LiveApp() {
                     {record.historical_text && (
                       <blockquote className="archival-quote">
                         <p
-                          lang={
-                            record.entry.book === "dioscorides"
-                              ? "grc"
-                              : undefined
-                          }
+                          lang={BOOK_LANG[record.entry.book]}
                         >
                           {record.historical_text}
                         </p>
@@ -2042,7 +2083,7 @@ export default function LiveApp() {
                           <div className="empty">
                             No modern studies have been assessed for this claim
                             yet. So far, studies were searched only for uses
-                            recorded in both Culpeper and Dioscorides.
+                            shared across the historical texts.
                           </div>
                         )}
                         <div className="study-list">
@@ -2250,9 +2291,10 @@ export default function LiveApp() {
             <p className="eyebrow">The collection</p>
             <h1>Historical Sources</h1>
             <p>
-              Two herbals written sixteen centuries apart, one in Greek for the
-              Roman world and one in English for the London poor. Both are read
-              here entry by entry and traced to modern plants and research.
+              Three herbals from three worlds: one in Greek for the Roman world,
+              one in Chinese from Han China, and one in English for the London
+              poor. Each is read here entry by entry and traced to modern plants
+              and research.
             </p>
           </div>
           <ol className="source-timeline" aria-label="Timeline">
@@ -2313,19 +2355,6 @@ export default function LiveApp() {
               <p className="source-edition"><span>Edition used here</span>{b.edition}</p>
             </article>
           ))}
-          <aside className="source-coming">
-            <p className="eyebrow">Coming next</p>
-            <h3>The Shennong Bencao Jing</h3>
-            <p>
-              The classic Chinese materia medica, compiled under the Han dynasty
-              (1st–2nd century AD) and attributed to Shennong, the legendary
-              "Divine Farmer" said to have tasted hundreds of plants to learn
-              which heal and which harm. Its 365 drugs are sorted into three
-              grades, from those that nourish life to those that attack disease.
-              The original is lost; the text used here is Sun Xingyan's 1799
-              reconstruction from later quotations.
-            </p>
-          </aside>
         </main>
       )}
       {section === "about" && (
@@ -2457,7 +2486,7 @@ export default function LiveApp() {
               EthnoTrace was built by team OverSlept, George Souladakis and
               Marselo Senka, for Track 1 of EthnoHack 2026. All the data
               sources are public; each record on the site links back to where it
-              came from. See the Historical Sources page for the two books and
+              came from. See the Historical Sources page for the three books and
               the editions used.
             </p>
             <button className="primary-link" onClick={() => navigate("sources")}>The historical sources →</button>

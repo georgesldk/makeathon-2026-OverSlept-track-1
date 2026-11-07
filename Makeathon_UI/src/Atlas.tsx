@@ -6,6 +6,7 @@
  * /atlas/plant_ranges.json (export_atlas_ranges.py). Entries come from the read-only API.
  */
 import { useEffect, useMemo, useRef, useState } from "react"
+import { sizedImage } from "./display"
 import { geoGraticule10, geoOrthographic, geoPath, geoCentroid, geoDistance, type GeoPermissibleObjects } from "d3-geo"
 import { feature } from "topojson-client"
 import type { Topology, GeometryCollection } from "topojson-specification"
@@ -17,6 +18,8 @@ type Region = { type: "Feature"; properties: { LEVEL2_NAM: string }; geometry: G
 const BOOKS = [
   { id: "culpeper", name: "Culpeper", place: "London", year: "1652–53", coords: [-0.13, 51.51] as [number, number] },
   { id: "dioscorides", name: "Dioscorides", place: "Anazarbus, Cilicia", year: "c. AD 77", coords: [35.9, 37.26] as [number, number] },
+  // No author or place is known; the marker sits at Luoyang, the Eastern Han capital, for orientation only.
+  { id: "shennong", name: "Shennong", place: "Eastern Han China · author unknown (marker at Luoyang)", year: "1st–2nd c. AD", coords: [112.45, 34.62] as [number, number] },
 ]
 const SIZE = 640
 const MAX_BUBBLES = 60      // plants shown around the book once a family is open
@@ -193,7 +196,7 @@ export default function Atlas({ openEntry }: { openEntry: (id: string) => void }
                 role="button" aria-label={p.preferred_scientific_name}>
                 <circle r="18" className="atlas-bubble-ring" />
                 {p.image?.image_url && !failedImages.has(p.image.image_url)
-                  ? <image href={p.image.image_url} x="-16" y="-16" width="32" height="32" preserveAspectRatio="xMidYMid slice" clipPath={`url(#clip-${p.id})`} onError={() => setFailedImages(previous => new Set(previous).add(p.image.image_url))} />
+                  ? <image href={sizedImage(p.image.image_url, 200)} x="-16" y="-16" width="32" height="32" preserveAspectRatio="xMidYMid slice" clipPath={`url(#clip-${p.id})`} onError={() => setFailedImages(previous => new Set(previous).add(p.image.image_url))} />
                   : <g transform="translate(-16,-16)"><FamilyIcon family={famOf(p)} /></g>}
               </g>
             ))}
@@ -268,7 +271,7 @@ export default function Atlas({ openEntry }: { openEntry: (id: string) => void }
               {error && <p role="alert">{error}</p>}
               {selected && (
                 <div className="atlas-plant">
-                  <div className="atlas-plant-photo">{selected.image?.image_url && !failedImages.has(selected.image.image_url) ? <img src={selected.image.image_url} alt="" onError={() => setFailedImages(previous => new Set(previous).add(selected.image.image_url))} /> : <FamilyIcon family={famOf(selected)} />}</div>
+                  <div className="atlas-plant-photo">{selected.image?.image_url && !failedImages.has(selected.image.image_url) ? <img src={sizedImage(selected.image.image_url, 640)} alt="" onError={() => setFailedImages(previous => new Set(previous).add(selected.image.image_url))} /> : <FamilyIcon family={famOf(selected)} />}</div>
                   {selected.image?.image_url && !failedImages.has(selected.image.image_url) && <p className="atlas-image-credit">Photo of proposed candidate · {selected.image.creator} · <a href={selected.image.license_url} target="_blank" rel="noreferrer">Licence</a> · <a href={selected.image.image_source_url || selected.image.occurrence_url} target="_blank" rel="noreferrer">Source</a></p>}
                   <em>{selected.preferred_scientific_name}</em>
                   <span>{selected.name}{selected.chapter ? ` · ${selected.chapter}` : ""}</span>

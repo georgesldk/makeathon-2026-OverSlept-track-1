@@ -85,9 +85,15 @@ export function VoiceButton({ onText }: { onText: (text: string) => void }) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     r.onresult = (e: any) => onText(Array.from(e.results).map((x: any) => x[0].transcript).join("").trim())
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    r.onerror = (e: any) => setError(e.error === "not-allowed" || e.error === "service-not-allowed" ? "Microphone access was blocked." : e.error === "no-speech" ? "No speech heard; try again." : "Voice search failed.")
+    r.onerror = (e: any) => setError(
+      e.error === "not-allowed" || e.error === "service-not-allowed"
+        ? "This browser blocks the microphone here. Allow it in the browser's site settings, or open the site in Chrome or Safari (the Claude app's browser pane has no microphone)."
+        : e.error === "network" ? "This browser can't reach a speech recognition service. Try Chrome or Safari."
+        : e.error === "audio-capture" ? "No microphone was found."
+        : e.error === "no-speech" ? "No speech heard; try again." : `Voice search failed (${e.error}).`)
     r.onend = () => setListening(false)
-    setError(""); setListening(true); rec.current = r; r.start()
+    setError(""); setListening(true); rec.current = r
+    try { r.start() } catch { setListening(false); setError("Voice search could not start.") }
   }
   return (
     <>
@@ -95,7 +101,7 @@ export function VoiceButton({ onText }: { onText: (text: string) => void }) {
         aria-label={listening ? "Stop voice search" : "Search by voice"} title={error || (listening ? "Listening… click to stop" : "Search by voice")}>
         <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0M12 17v4m-3 0h6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" /></svg>
       </button>
-      {(listening || error) && <span className="voice-status" role="status">{listening ? "Listening…" : error}</span>}
+      {(listening || error) && <span className={`voice-status${error ? " error" : ""}`} role="status" onClick={() => setError("")}>{listening ? "Listening…" : error}</span>}
     </>
   )
 }
@@ -107,7 +113,7 @@ export function textLanguage(text?: string | null): "el" | "zh" | null {
   if (!text) return null
   const greek = (text.match(/[Ͱ-Ͽἀ-῿]/g) || []).length
   const han = (text.match(/[㐀-鿿豈-﫿]/g) || []).length
-  if (han >= 2 && han >= greek) return "zh"
+  if (han >= 1 && han >= greek) return "zh"
   if (greek >= 3) return "el"
   return null
 }
@@ -115,12 +121,17 @@ export function textLanguage(text?: string | null): "el" | "zh" | null {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const translators: Record<string, Promise<any>> = {}
 
+/** Rejects with `code` if the promise does not settle in time (some browsers expose the API but never answer). */
+function within<T>(promise: Promise<T>, ms: number, code: string): Promise<T> {
+  return Promise.race([promise, new Promise<T>((_, reject) => setTimeout(() => reject(new Error(code)), ms))])
+}
+
 async function browserTranslate(text: string, lang: "el" | "zh", onProgress: (p: number) => void) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const T = (self as any).Translator
   if (!T) throw new Error("no-api")
   if (!translators[lang]) {
-    const availability = await T.availability({ sourceLanguage: lang, targetLanguage: "en" })
+    const availability = await within(T.availability({ sourceLanguage: lang, targetLanguage: "en" }), 8000, "no-answer")
     if (availability === "unavailable") throw new Error("no-pair")
     translators[lang] = T.create({
       sourceLanguage: lang, targetLanguage: "en",
@@ -131,7 +142,7 @@ async function browserTranslate(text: string, lang: "el" | "zh", onProgress: (p:
   const t = await translators[lang]
   const parts = text.split(/(\n+)/)
   const out = []
-  for (const p of parts) out.push(p.trim() ? await t.translate(p) : p)
+  for (const p of parts) out.push(p.trim() ? await within(t.translate(p), 30000, "no-answer") : p)
   return out.join("")
 }
 
@@ -156,7 +167,9 @@ export function TranslateButton({ text, stored, compact }: { text?: string | nul
       const code = e instanceof Error ? e.message : ""
       setState({ open: true, busy: false, error: code === "no-api"
         ? "This browser has no built-in translator. It needs Chrome 138 or later on a computer."
-        : code === "no-pair" ? `The browser's translator does not offer ${source} to English.` : "The translation failed. Try again." })
+        : code === "no-pair" ? `The browser's translator does not offer ${source} to English.`
+        : code === "no-answer" ? "The browser's translator did not respond. It works in Chrome 138 or later; the Claude app's browser pane and Safari don't support it."
+        : "The translation failed. Try again." })
     }
   }
   return (

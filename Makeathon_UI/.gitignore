@@ -23,3 +23,6 @@ logs/
 # expert review comments (written by server.py at runtime)
 data/reviews.json
 data/reviews.tmp
+
+# local API settings (no password stored)
+.env.local.sh

@@ -6,6 +6,7 @@ import os
 import re
 import threading
 import uuid
+from collections import OrderedDict
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -27,7 +28,14 @@ def query(cypher, **parameters):
         return [row.data() for row in session.run(cypher, **parameters)]
 
 
+_context = None
+
+
 def context():
+    # the graph is read-only, so the snapshot found at the first request stays valid until restart
+    global _context
+    if _context:
+        return _context
     rows = query('''MATCH (b:StructuredBuild {status:'complete'})
         MATCH (d:DatasetImport {snapshot_id:b.snapshot_id, kind:'claims_and_stage3_shared'})
         MATCH (f:DatasetImport {snapshot_id:b.snapshot_id, kind:'full_unit_source_records'})-[:USES_CLAIMS_FROM]->(d)
@@ -37,7 +45,30 @@ def context():
         rows = [row for row in rows if row['snapshot'] == requested]
     if len(rows) != 1:
         raise RuntimeError('Expected one completed snapshot and shared dataset; configure ETHNOTRACE_SNAPSHOT if necessary.')
-    return rows[0]
+    _context = rows[0]
+    return _context
+
+
+IMAGE_PATH = Path(__file__).resolve().parent / 'data' / 'candidate_images.json'
+_images = {'mtime': None, 'data': {}}
+
+
+def candidate_images():
+    """data/candidate_images.json, re-read only when the file changes, not on every request."""
+    try:
+        mtime = IMAGE_PATH.stat().st_mtime
+        if mtime != _images['mtime']:
+            _images['data'] = json.loads(IMAGE_PATH.read_text(encoding='utf-8')).get('images', {})
+            _images['mtime'] = mtime
+    except (OSError, ValueError):
+        pass
+    return _images['data']
+
+
+# Read-only GET responses are cached (the graph does not change while the API runs); reviews are not.
+_responses = OrderedDict()
+_responses_lock = threading.Lock()
+RESPONSE_CACHE_SIZE = 600
 
 
 def number(params, name, default, maximum):
@@ -59,7 +90,7 @@ def entries(ctx, params):
     if entry_id:
         identifier(entry_id)
     book = params.get('book', [''])[0]
-    if book not in ('', 'culpeper', 'dioscorides'):
+    if book not in ('', 'culpeper', 'dioscorides', 'shennong'):
         raise ValueError('Invalid book')
     tier = params.get('tier', [''])[0]
     if tier not in ('', 'A', 'B', 'X'):
@@ -103,11 +134,7 @@ def entries(ctx, params):
         head(scientific_names) AS preferred_scientific_name
       ORDER BY e.book, coalesce(e.name,''), e.entry_key''',
       snapshot=ctx['snapshot'], dataset=ctx['dataset'], entry_id=entry_id, book=book, term=term, tier=tier, family=family, concept=concept, research=research, relevant=relevant, identified=identified, offset=offset, take=limit+1)
-    image_path = Path(__file__).resolve().parent / 'data' / 'candidate_images.json'
-    try:
-        images = json.loads(image_path.read_text(encoding='utf-8')).get('images', {})
-    except (OSError, ValueError):
-        images = {}
+    images = candidate_images()
     if grouped:
         groups = {}
         for row in rows:
@@ -443,6 +470,15 @@ class Handler(BaseHTTPRequestHandler):
             ctx = context()
             parts = parsed.path.strip('/').split('/')
             params = parse_qs(parsed.query)
+            cacheable = parts[:2] != ['api', 'reviews'] and parts != ['api', 'health']
+            key = (self.path, _images['mtime'])
+            if cacheable:
+                with _responses_lock:
+                    hit = _responses.get(key)
+                    if hit is not None:
+                        _responses.move_to_end(key)
+                if hit is not None:
+                    return self.send(200, hit)
             if parts == ['api','entries']:
                 data = entries(ctx, params)
             elif len(parts) == 4 and parts[:2] == ['api','entries'] and parts[3] == 'studies':
@@ -467,6 +503,11 @@ class Handler(BaseHTTPRequestHandler):
                 data = {'status':'ok', 'snapshot':ctx['snapshot']}
             else:
                 return self.send(404, {'error':'Not found'})
+            if data is not None and cacheable:
+                with _responses_lock:
+                    _responses[(self.path, _images['mtime'])] = data
+                    while len(_responses) > RESPONSE_CACHE_SIZE:
+                        _responses.popitem(last=False)
             return self.send(200 if data is not None else 404, data if data is not None else {'error':'Not found'})
         except ValueError as exc:
             return self.send(400, {'error':str(exc)})

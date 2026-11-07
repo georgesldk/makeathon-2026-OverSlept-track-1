@@ -42,3 +42,22 @@ export function claimRef(id: unknown, entryName?: string): string {
     : entryName || middle.replace(/-/g, ' ').replace(/^./, c => c.toUpperCase())
   return `${bookTitles[book] || book} · ${place} · ${number}`
 }
+
+/**
+ * A smaller copy of a candidate photo for display, so pages don't download multi-megabyte originals.
+ * iNaturalist serves fixed sizes (medium up to 500 px, large up to 1024 px); Wikimedia Commons scales on request
+ * (Special:FilePath never upscales). Other hosts are returned unchanged.
+ */
+export function sizedImage(url: string, width: number): string {
+  try {
+    const u = new URL(url)
+    if (u.hostname === "inaturalist-open-data.s3.amazonaws.com" || u.hostname === "static.inaturalist.org") {
+      return url.replace(/\/original\.(jpe?g|png)/i, `/${width > 300 ? "large" : "medium"}.$1`)
+    }
+    if (u.hostname === "upload.wikimedia.org" && u.pathname.startsWith("/wikipedia/commons/") && !u.pathname.includes("/thumb/")) {
+      const file = u.pathname.split("/").pop()
+      if (file) return `https://commons.wikimedia.org/wiki/Special:FilePath/${file}?width=${width}`
+    }
+  } catch { /* not a URL */ }
+  return url
+}

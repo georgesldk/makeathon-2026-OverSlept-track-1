@@ -844,7 +844,7 @@ details[data-animating] > summary { position: static; }
 
 /* Sources page */
 .sources-page .section-head > p:last-child { max-width: 680px; }
-.source-timeline { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin: 10px 0 56px; padding: 0; list-style: none; border-top: 2px solid var(--t-line-173f2b); }
+.source-timeline { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 0; margin: 10px 0 56px; padding: 0; list-style: none; border-top: 2px solid var(--t-line-173f2b); }
 .source-timeline li { position: relative; padding: 18px 16px 0 0; }
 .source-timeline li::before { content: ""; position: absolute; top: -7px; left: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--t-bg-f6f3ea); border: 2px solid var(--t-line-173f2b); }
 .source-timeline b { display: block; margin-bottom: 6px; font: 600 18px 'Source Serif 4', serif; color: var(--t-fg-173f2b); }
@@ -1284,3 +1284,20 @@ details details[open] > summary { position: static; }
 :root[data-vision="contrast"] a { text-decoration: underline; }
 :root[data-vision="contrast"] :focus-visible { outline-width: 3px !important; }
 :root[data-vision="contrast"] .check-row.switch-row input, :root[data-vision="contrast"] .check-row.switch-row input::after { outline: 1.5px solid var(--t-line-17241c); outline-offset: 0; }
+
+/* Voice search errors stay visible until clicked */
+.voice-status.error { width: min(320px, 90vw); white-space: normal; color: var(--t-fg-8b3a2f); border: 1px solid var(--t-line-d8d5c9); padding: 6px 8px; box-shadow: 0 6px 18px var(--t-shadow-1b32231f); cursor: pointer; line-height: 1.4; }
+.voice-status.error:before { content: "⚠ "; }
+
+/* Greek and Chinese names in Latin script under the plant title */
+.record-romanized { margin: -6px 0 14px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.record-romanized span { font: italic 17px 'Source Serif 4', serif; color: var(--t-fg-4d6855); }
+.record-romanized small { font: 10px 'DM Sans', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--t-fg-69766b); }
+
+/* Seven timeline steps need room: below 1200px the timeline runs vertically */
+@media (max-width: 1200px) {
+  .source-timeline { grid-template-columns: 1fr; gap: 6px; border-top: 0; border-left: 2px solid var(--t-line-173f2b); padding-left: 20px; }
+  .source-timeline li { display: grid; grid-template-columns: 150px 1fr; align-items: baseline; padding: 10px 0; }
+  .source-timeline li::before { top: 14px; left: -28px; }
+}
+@media (max-width: 600px) { .source-timeline li { grid-template-columns: 1fr; } }
