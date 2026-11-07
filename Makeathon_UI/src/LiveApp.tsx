@@ -1,4 +1,5 @@
-import { useEffect, useId, useMemo, useState } from "react"
+import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from "react"
+import { smoothResize } from "./details-animation"
 import {
   ReactFlow,
   Background,
@@ -11,10 +12,52 @@ import {
 import "@xyflow/react/dist/style.css"
 import KnowledgeMap from "./KnowledgeMap"
 import PlantDashboard from "./PlantDashboard"
-import { friendly, tierLabel } from "./display"
+import { claimRef, friendly, studyLink, tierLabel } from "./display"
+import { Dropdown, ExpandableText, FilterPicker, Pager } from "./controls"
+import Atlas from "./Atlas"
+
+// Slow, eased scrolling for every in-app move (the browser's own "smooth" is fast and not adjustable).
+// Respects the system's reduced-motion setting.
+const SCROLL_MS = 900
+let scrollFrame = 0
+function slowScrollTo(targetY: number, duration = SCROLL_MS) {
+  cancelAnimationFrame(scrollFrame)
+  const startY = window.scrollY
+  const distance = Math.max(0, targetY) - startY
+  if (Math.abs(distance) < 2) return
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    window.scrollTo(0, startY + distance)
+    return
+  }
+  const ease = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
+  const start = performance.now()
+  const step = (now: number) => {
+    const t = Math.min(1, (now - start) / duration)
+    window.scrollTo(0, startY + distance * ease(t))
+    if (t < 1) scrollFrame = requestAnimationFrame(step)
+  }
+  scrollFrame = requestAnimationFrame(step)
+}
+function slowScrollToElement(id: string, offset = window.innerWidth <= 760 ? 130 : 104) {
+  const el = document.getElementById(id)
+  if (el) slowScrollTo(el.getBoundingClientRect().top + window.scrollY - offset)
+}
+// Stop the animation if the user scrolls by hand.
+if (typeof window !== "undefined") {
+  for (const ev of ["wheel", "touchstart", "keydown"]) {
+    window.addEventListener(ev, () => cancelAnimationFrame(scrollFrame), { passive: true })
+  }
+}
+
 
 type Item = Record<string, any>
 type Tab = "overview" | "history" | "identification" | "uses" | "studies" | "relationships"
+// The record page is one long page: every section is shown, one under the other, and the side menu scrolls to it.
+const SECTION_ID: Record<Tab, string> = {
+  overview: "sec-overview", history: "sec-history", identification: "sec-identification",
+  uses: "sec-uses", studies: "research-detail", relationships: "sec-relationships",
+}
+const afterRender = (fn: () => void) => requestAnimationFrame(() => requestAnimationFrame(fn))
 type Entry = {
   entry: Item
   book: Item
@@ -34,10 +77,17 @@ type Entry = {
 }
 const bookName = (book: string) =>
   book === "culpeper" ? "Culpeper" : "Dioscorides"
-const sourceUrl = (id: unknown) =>
-  typeof id === "string" && /^gbif:[0-9]+$/.test(id)
-    ? `https://www.gbif.org/species/${id.slice(5)}`
-    : undefined
+// Links for recorded source IDs (gbif:, clb:<dataset>:<id>, ncbi:, wikidata:, inat:)
+const sourceUrl = (id: unknown): string | undefined => {
+  if (typeof id !== "string") return undefined
+  let m
+  if ((m = /^gbif:(\d+)$/.exec(id))) return `https://www.gbif.org/species/${m[1]}`
+  if ((m = /^clb:(\d+):([A-Za-z0-9_.-]+)$/.exec(id))) return `https://www.checklistbank.org/dataset/${m[1]}/taxon/${encodeURIComponent(m[2])}`
+  if ((m = /^ncbi:(\d+)$/.exec(id))) return `https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=${m[1]}`
+  if ((m = /^wikidata:(Q\d+)$/.exec(id))) return `https://www.wikidata.org/wiki/${m[1]}`
+  if ((m = /^inat:(\d+)$/.exec(id))) return `https://www.inaturalist.org/taxa/${m[1]}`
+  return undefined
+}
 const safeHttps = (url: unknown) =>
   typeof url === "string" && url.startsWith("https://") ? url : undefined
 const value = (v: unknown) =>
@@ -67,10 +117,69 @@ async function api<T>(path: string): Promise<T> {
     throw new Error(body.error || `Request failed (${response.status})`)
   return body as T
 }
+
+// Historical Sources page (2026-11-07). Facts: Wikipedia (Nicholas Culpeper; Vienna Dioscurides) and
+// Encyclopaedia Britannica (Pedanius Dioscorides), checked 7 Nov 2026.
+const SOURCE_TIMELINE = [
+  { year: "c. AD 77", text: "Dioscorides completes De materia medica" },
+  { year: "c. 512", text: "The illustrated Vienna Dioscorides is made in Constantinople" },
+  { year: "1649", text: "Culpeper translates the physicians' Latin pharmacopoeia into English" },
+  { year: "1652–53", text: "Culpeper's English Physitian, later The Complete Herbal" },
+  { year: "1906–14", text: "Max Wellmann's critical edition of the Greek text" },
+]
+const SOURCE_BOOKS = [
+  {
+    id: "dioscorides",
+    era: "Greek · 1st century AD",
+    title: "Dioscorides, De materia medica",
+    subtitle: "Περὶ ὕλης ἰατρικῆς · “On medical material”",
+    read: "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1:1.preface.1-1.preface.5/",
+    author: [
+      "Pedanius Dioscorides (c. AD 40–90) was a Greek physician from Anazarbus in Cilicia, in today's southern Turkey.",
+      "He served as a surgeon with the armies of Emperor Nero, and the marches let him study plants and minerals across the Roman world himself rather than copy them from older books.",
+    ],
+    book: [
+      "Written around AD 77 in five books, it describes nearly 600 plants and about 1,000 simple drugs: what each looks like, where it grows, how to prepare it, and what it treats.",
+      "It was the leading pharmacological text for about sixteen centuries, copied, translated and annotated from Byzantium to the Islamic world and Renaissance Europe.",
+    ],
+    facts: [
+      "The Vienna Dioscorides, made around 512 for the Byzantine princess Anicia Juliana, has 491 vellum leaves and more than 400 pictures. UNESCO added it to the Memory of the World register in 1997.",
+      "Dioscorides grouped remedies by their effects on the body rather than alphabetically, unusual for his time.",
+      "Many modern plant names, such as Anemone and Glycyrrhiza (liquorice), come from the Greek names he used.",
+    ],
+    edition: "Max Wellmann's Greek edition (1906–1914), read through the Scaife Viewer (Perseus).",
+  },
+  {
+    id: "culpeper",
+    era: "English · 1652–1653",
+    title: "Culpeper, The Complete Herbal",
+    subtitle: "First published as The English Physitian",
+    read: "https://www.gutenberg.org/ebooks/49513",
+    author: [
+      "Nicholas Culpeper (1616–1654) studied at Cambridge and trained as an apothecary, then set up a practice in Spitalfields, outside the City of London's control, where he treated the poor for little or nothing, sometimes forty patients a morning.",
+      "He fought for Parliament in the Civil War and was shot in the chest at the First Battle of Newbury in 1643. He never fully recovered, and died of tuberculosis at 37.",
+    ],
+    book: [
+      "Sold cheaply and written in plain English so that ordinary people could treat themselves, the herbal gives for each plant its description, where and when it grows, and its “government and virtues”.",
+      "Culpeper paired every herb with a ruling planet and combined astrology with the old theory of the four humours.",
+    ],
+    facts: [
+      "In 1649 he translated the College of Physicians' Latin pharmacopoeia into English without permission, which made the physicians furious.",
+      "The herbal has stayed in print continuously since the 17th century.",
+      "He drew heavily on John Parkinson's Theatrum Botanicum of 1640.",
+    ],
+    edition: "The Complete Herbal, Project Gutenberg eBook #49513.",
+  },
+]
+const EXCERPT_LABELS: Record<string, string> = {
+  relevance: "Why it is relevant", evidence_type: "Type of evidence", species: "Plant studied", condition: "Condition",
+  therapeutic_action: "Effect studied", plant_part: "Plant part", preparation: "Preparation", route: "How it was given",
+  outcome: "Result", safety: "Safety", harm: "Harm reported",
+}
 const tierHelp: Record<string, string> = {
-  A: "This candidate passed the recorded eligibility rules. It is still a hypothesis, not a proven historical identification.",
-  B: "The candidate is considered possible, but the recorded evidence has limitations or unresolved questions.",
-  X: "The candidate is hidden by the eligibility rules. It remains available for inspection and is not deleted.",
+  A: "Passed every rule: a real plant at species level with a settled name, named by at least two independent sources (or a scholar's reading of this passage confirmed by a second source), and it grew where the author lived. The best-supported reading, but still not proof.",
+  B: "Plausible, but one check is missing or uncertain: for example only one source names it, the plant lists disagree on its name, or it may not have grown where the author lived.",
+  X: "Excluded by the rules, for example the evidence is weak, it is only a genus, or it grows far from the author's world. Kept so it can be inspected; not shown by default.",
 }
 const tabHelp: Record<string, string> = {
   overview: "A summary of this historical entry and ways to explore it.",
@@ -88,6 +197,8 @@ const termHelp: Record<string, string> = {
     "The taxonomic source used by the pipeline when selecting this candidate's accepted name.",
   Rules:
     "The identifiers of the eligibility rules applied by the pipeline to this candidate.",
+  "Why it was excluded":
+    "The rules that excluded this candidate. Only excluded candidates have reasons; for the others see the criteria above.",
   Reasons:
     "Recorded reasons why the candidate was hidden or could not be classified.",
   Caveats:
@@ -104,6 +215,10 @@ const termHelp: Record<string, string> = {
     "How the historical source describes preparing the remedy, when recorded.",
   Route:
     "How the remedy was administered, when recorded in the extracted claim.",
+  "Problems noted while reading the text":
+    "Warnings the extraction step recorded for this claim, for example an uncertain quotation.",
+  "Medical terms with no MeSH match":
+    "Terms from the historical text that could not be matched to a MeSH heading, often old medical words.",
   "Extraction flags":
     "Warnings recorded when the historical claim was extracted; they are not an independent review.",
   "Unmapped terms":
@@ -138,11 +253,62 @@ const termHelp: Record<string, string> = {
   "Evidence link": "Whether the pipeline linked this evidence record to one candidate, or left it unmatched or ambiguous.",
 }
 
+// Turn recorded identifiers into readable, clickable labels.
+function lineageNode(text: unknown): React.ReactNode {
+  const t = String(text ?? "")
+  const cb = /^ChecklistBank project (\d+)$/.exec(t)
+  if (cb)
+    return <a href={`https://www.checklistbank.org/dataset/${cb[1]}`} target="_blank" rel="noreferrer" title="A separately published checklist in ChecklistBank; the number is its dataset ID">ChecklistBank checklist #{cb[1]} ↗</a>
+  return t
+}
+function authorityLink(authority: unknown, id: unknown): string | undefined {
+  const a = String(authority || "").toLowerCase(), v = String(id || "")
+  if (/^wfo-\d+$/i.test(v)) return `https://www.worldfloraonline.org/taxon/${v}`
+  if (a.includes("wcvp") && /^\d+-\d$/.test(v)) return `https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:${v}`
+  return undefined
+}
+
+/** A few entries of one book that have a photo, to start browsing from (sources page). */
+function FeaturedEntries({ book, openEntry }: { book: string; openEntry: (id: string) => void }) {
+  const [items, setItems] = useState<Item[]>([])
+  useEffect(() => {
+    let active = true
+    api<{ items: Item[] }>(`/entries?identified=1&book=${book}&tier=A&limit=50`)
+      .then((x) => { if (active) setItems(x.items.filter((i) => i.image?.image_url).slice(0, 4)) })
+      .catch(() => {})
+    return () => { active = false }
+  }, [book])
+  if (!items.length) return null
+  return (
+    <div className="featured">
+      <p className="eyebrow">Start with these</p>
+      <div className="featured-grid">
+        {items.map((i) => (
+          <button key={i.id} className="featured-card" onClick={() => openEntry(i.id)}>
+            <img src={i.image.image_url} alt="" loading="lazy" />
+            <span className="featured-copy">
+              <em>{i.preferred_scientific_name}</em>
+              <span>{i.name || i.chapter}{i.chapter && i.name ? ` · ${i.chapter}` : ""}</span>
+            </span>
+          </button>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function InfoTip({ label, text }: { label: string; text: string }) {
   const id = useId()
   const [open, setOpen] = useState(false)
+  const [alignRight, setAlignRight] = useState(false)
+  const anchor = useRef<HTMLSpanElement>(null)
+  useEffect(() => {
+    // keep the popover on screen: open leftwards when the icon is near the right edge
+    if (open && anchor.current) setAlignRight(anchor.current.getBoundingClientRect().left + 290 > window.innerWidth - 16)
+  }, [open])
   return (
     <span
+      ref={anchor}
       className="info-tip"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
@@ -167,7 +333,7 @@ function InfoTip({ label, text }: { label: string; text: string }) {
         i
       </button>
       {open && (
-        <span className="info-popover" role="tooltip" id={id}>
+        <span className={`info-popover${alignRight ? " info-popover-right" : ""}`} role="tooltip" id={id}>
           {text}
         </span>
       )}
@@ -237,7 +403,7 @@ function FactTile({ label, content }: { label: string; content: unknown }) {
   return (
     <div className="classification-fact">
       <dt>{label}{termHelp[label] && <InfoTip label={label} text={termHelp[label]} />}</dt>
-      <dd>{Array.isArray(content) && content.length > 0 ? <ul className="classification-notes">{content.map((item, index) => <li key={index}>{String(item)}</li>)}</ul> : value(content)}</dd>
+      <dd>{Array.isArray(content) && content.length > 0 ? <ul className="classification-notes">{content.map((item, index) => <li key={index}>{lineageNode(item)}</li>)}</ul> : typeof content === "string" && /^ChecklistBank project \d+$/.test(content) ? lineageNode(content) : value(content)}</dd>
     </div>
   )
 }
@@ -260,7 +426,7 @@ function ClassificationSummary({ hypothesis, decision }: { hypothesis: Item; dec
         <div className="classification-label">Why this identification was classified this way <InfoTip label="Identification criteria" text="These are the recorded pipeline criteria; they are not independent verification of historical identity." /></div>
         {rules?.length ? <ul className="classification-notes classification-rule-explanations">{rules.map((rule: string, i: number) => <li key={`${rule}-${i}`}>{ruleHelp[rule] || "A classification criterion was recorded; consult the source data for details."}</li>)}</ul> : <p className="classification-empty">{rules ? "None recorded" : "Not recorded"}</p>}
         <dl className="classification-facts classification-facts-two">
-          <FactTile label="Reasons" content={decision?.reasons} />
+          {Array.isArray(decision?.reasons) && decision.reasons.length > 0 && <FactTile label="Why it was excluded" content={decision.reasons} />}
           <FactTile label="Caveats" content={decision?.caveats} />
         </dl>
       </div>
@@ -271,7 +437,7 @@ function ClassificationSummary({ hypothesis, decision }: { hypothesis: Item; dec
           <FactTile label="Passage-specific" content={decision?.passage_specific} />
         </dl>
         <div className="lineages-heading">Counted strong lineages <InfoTip label="Counted strong lineages" text={termHelp["Counted strong lineages"]} /></div>
-        {lineages?.length ? <details className="lineage-list"><summary>{lineages.length} {lineages.length === 1 ? "lineage" : "lineages"} counted by the pipeline</summary><ul>{lineages.map((lineage: string, i: number) => <li key={`${lineage}-${i}`}>{lineage}</li>)}</ul></details> : <p className="classification-empty">{lineages ? "None recorded" : "Not recorded"}</p>}
+        {lineages?.length ? <details className="lineage-list"><summary>{lineages.length} {lineages.length === 1 ? "lineage" : "lineages"} counted by the pipeline</summary><p className="lineage-help">Each independent source is counted once; sources that copy one another count as one. ChecklistBank checklists are separate published lists, numbered by their dataset ID.</p><ul>{lineages.map((lineage: string, i: number) => <li key={`${lineage}-${i}`}>{lineageNode(lineage)}</li>)}</ul></details> : <p className="classification-empty">{lineages ? "None recorded" : "Not recorded"}</p>}
       </div>
     </section>
   )
@@ -310,11 +476,19 @@ function ClaimSummary({ claim, concepts }: { claim: Item; concepts: Item[] }) {
         ) : <p className="classification-empty">No mapping recorded</p>}
       </div>
       <div className="classification-block">
-        <p className="classification-kicker">Extraction notes</p>
-        <dl className="classification-facts classification-facts-two">
-          <FactTile label="Extraction flags" content={claim.flags} />
-          <FactTile label="Unmapped terms" content={claim.mesh_not_found} />
-        </dl>
+        <p className="classification-kicker">How reliable is this reading? <InfoTip label="Reading the text" text="An AI model read the historical text and turned this passage into a claim. These notes record anything that went wrong while doing so. They are not an independent review." /></p>
+        {(() => {
+          const list = (v: unknown) => (Array.isArray(v) ? v : v ? [v] : []) as unknown[]
+          const flags = list(claim.flags), unmapped = list(claim.mesh_not_found)
+          if (!flags.length && !unmapped.length)
+            return <p className="classification-empty">Nothing went wrong while reading this passage, and every medical term found a match in MeSH.</p>
+          return (
+            <dl className="classification-facts classification-facts-two">
+              {flags.length > 0 && <FactTile label="Problems noted while reading the text" content={flags} />}
+              {unmapped.length > 0 && <FactTile label="Medical terms with no MeSH match" content={unmapped} />}
+            </dl>
+          )
+        })()}
       </div>
     </section>
   )
@@ -331,7 +505,12 @@ function TaxonomicResolutionCard({ resolution }: { resolution: Item }) {
         <FactTile label="Original name" content={resolution.original_name} />
         <FactTile label="Accepted name" content={resolution.accepted_name} />
         <FactTile label="Resolution rule" content={resolution.rule} />
-        <FactTile label="Authority ID" content={resolution.source_id} />
+        <div className="classification-fact">
+          <dt>Authority ID<InfoTip label="Authority ID" text={termHelp["Authority ID"]} /></dt>
+          <dd>{authorityLink(resolution.authority, resolution.source_id)
+            ? <a href={authorityLink(resolution.authority, resolution.source_id)} target="_blank" rel="noreferrer">{value(resolution.source_id)} ↗</a>
+            : value(resolution.source_id)}</dd>
+        </div>
         <FactTile label="Authority release" content={resolution.release} />
       </dl>
       {(resolution.wfo_reason || resolution.wcvp_reason || resolution.global_names_reason) && (
@@ -361,7 +540,9 @@ function EvidenceCard({ evidence, showLinkStatus = false }: { evidence: Item; sh
         {e.candidate_full && e.candidate_full !== e.original_candidate && <FactTile label="Source name with authorship" content={e.candidate_full} />}
         <FactTile label="Match type" content={e.match_type} />
         <FactTile label="Source lineage" content={e.source_lineage} />
-        <FactTile label="Source record" content={e.source_record_id} />
+        {sourceUrl(e.source_record_id)
+          ? <div className="classification-fact"><dt>Source record{termHelp["Source record"] && <InfoTip label="Source record" text={termHelp["Source record"]} />}</dt><dd><a href={sourceUrl(e.source_record_id)} target="_blank" rel="noreferrer">{String(e.source_record_id)} ↗</a></dd></div>
+          : <FactTile label="Source record" content={e.source_record_id} />}
         {showLinkStatus && <FactTile label="Evidence link" content={e.hypothesis_link_status} />}
         {e.lexicon && <FactTile label="Lexicon entry" content={e.lexicon_entry} />}
         {e.lexicon && <FactTile label="Recorded citations" content={e.lexicon_citations} />}
@@ -395,6 +576,11 @@ function EntryEvidence({ id }: { id: string }) {
     [offset, setOffset] = useState(0)
   const [data, setData] = useState<Item | null>(null),
     [error, setError] = useState("")
+  // when the records arrive, grow the open box smoothly instead of jumping
+  const box = useRef<HTMLDetailsElement>(null), before = useRef(0)
+  useLayoutEffect(() => {
+    if (box.current && data) smoothResize(box.current, before.current)
+  }, [data])
   useEffect(() => {
     if (!opened) return
     let active = true
@@ -402,7 +588,9 @@ function EntryEvidence({ id }: { id: string }) {
     setData(null)
     api<Item>(`/entries/${id}/evidence?offset=${offset}`)
       .then((x) => {
-        if (active) setData(x)
+        if (!active) return
+        before.current = box.current?.offsetHeight || 0
+        setData(x)
       })
       .catch((e) => {
         if (active) setError(e.message)
@@ -413,35 +601,21 @@ function EntryEvidence({ id }: { id: string }) {
   }, [id, offset, opened])
   return (
     <details
-      className="live-section"
+      ref={box}
+      className="detail-group"
       onToggle={(e) => setOpened(e.currentTarget.open)}
     >
       <summary>All entry evidence, including unlinked records</summary>
-      <p>
-        Unmatched or ambiguous records remain on the historical entry; they are
-        not automatically assigned to a candidate.
+      <p className="section-explanation">
+        Records that could not be matched to one candidate stay on the historical
+        entry; they are not assigned to a candidate automatically.
       </p>
       {error && <p role="alert">{error}</p>}
       {opened && !data && !error && <p>Loading evidence…</p>}
       {data && (
         <>
           <div className="source-detail-list">{data.items.map((v: Item) => <EvidenceCard key={v.id} evidence={v} showLinkStatus />)}</div>
-          <div className="pagination">
-            <button
-              className="secondary-button"
-              disabled={offset === 0}
-              onClick={() => setOffset(Math.max(0, offset - 20))}
-            >
-              Previous
-            </button>
-            <button
-              className="secondary-button"
-              disabled={!data.has_more}
-              onClick={() => setOffset(offset + 20)}
-            >
-              Next
-            </button>
-          </div>
+          <Pager page={offset / 20} hasMore={data.has_more} onPage={(n) => setOffset(n * 20)} label="Entry evidence pages" />
         </>
       )}
     </details>
@@ -460,12 +634,20 @@ function Graph({
   openClaim: (id: string) => void
 }) {
   const [nodes, setNodes, onNodesChange] = useNodesState<Node>([])
+  // the nodes arrive after the first render, so centre the view again once they are in
+  const flowRef = useRef<{ fitView: (o?: { padding?: number; duration?: number }) => unknown } | null>(null)
+  const nodeCount = nodes.length
   const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([])
+  useEffect(() => {
+    if (!nodeCount) return
+    const frame = requestAnimationFrame(() => flowRef.current?.fitView({ padding: 0.15, duration: 400 }))
+    return () => cancelAnimationFrame(frame)
+  }, [nodeCount])
   const [info, setInfo] = useState<Item | null>(null)
   const [graphLoading, setGraphLoading] = useState(false)
   const [graphError, setGraphError] = useState("")
   const candidates = visible.slice(0, 8)
-  const claims = record.claims.slice(0, 8)
+  const claims = record.claims.slice(0, 8)   // the caller decides whether claims without MeSH are included
   useEffect(() => {
     const ns: Node[] = [
       {
@@ -758,7 +940,9 @@ function Graph({
           edges={edges}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
+          onInit={(instance) => { flowRef.current = instance }}
           fitView
+          fitViewOptions={{ padding: 0.15 }}
           minZoom={0.15}
           maxZoom={1.6}
           onNodeClick={(_, node) =>
@@ -806,7 +990,7 @@ function Graph({
 
 export default function LiveApp() {
   const [section, setSection] =
-    useState<"explore" | "record" | "map" | "sources" | "about">("explore")
+    useState<"explore" | "record" | "map" | "atlas" | "sources" | "about">("explore")
   const [tab, setTab] = useState<Tab>("overview")
   const [book, setBook] = useState("")
   const [tierFilter, setTierFilter] = useState("")
@@ -817,7 +1001,7 @@ export default function LiveApp() {
   const [search, setSearch] = useState("")
   const [searchTerm, setSearchTerm] = useState("")
   const [offset, setOffset] = useState(0)
-  const [list, setList] = useState<{ items: Item[]; has_more: boolean }>({
+  const [list, setList] = useState<{ items: Item[]; has_more: boolean; total?: number }>({
     items: [],
     has_more: false,
   })
@@ -831,6 +1015,13 @@ export default function LiveApp() {
   const [evidenceOffset, setEvidenceOffset] = useState(0)
   const [studyOffset, setStudyOffset] = useState(0)
   const [showHidden, setShowHidden] = useState(false)
+  const [graphUnmapped, setGraphUnmapped] = useState(false)
+  const [openGroup, setOpenGroup] = useState<string | null>(null)
+  const [graphHidden, setGraphHidden] = useState(false)
+  const [facets, setFacets] = useState<{ families: { name: string; count: number }[]; concepts: { name: string; count: number }[]; books: Record<string, Item> } | null>(null)
+  useEffect(() => {
+    api<typeof facets>("/facets").then(setFacets).catch(() => setFacets(null))
+  }, [])
   const [loading, setLoading] = useState(false)
   const [detailLoading, setDetailLoading] = useState(false)
   const [error, setError] = useState("")
@@ -856,10 +1047,10 @@ export default function LiveApp() {
     let active = true
     setLoading(true)
     setError("")
-    api<{ items: Item[]; has_more: boolean }>(
+    api<{ items: Item[]; has_more: boolean; total?: number }>(
       `/entries?identified=1&q=${encodeURIComponent(searchTerm)}&book=${book}&tier=${tierFilter}&family=${encodeURIComponent(filterTerms.family)}&concept=${encodeURIComponent(filterTerms.concept)}&research=${
         researchOnly ? "1" : "0"
-      }&offset=${offset}`,
+      }&offset=${offset}&grouped=1`,
     )
       .then((x) => {
         if (active) setList(x)
@@ -912,16 +1103,26 @@ export default function LiveApp() {
       active = false
     }
   }, [selectedClaim, studyOffset])
+  // Scroll spy: the side menu highlights the section currently at the top of the screen.
   useEffect(() => {
-    if (selectedClaim && tab === "studies") {
-      const frame = requestAnimationFrame(() =>
-        document
-          .getElementById("research-detail")
-          ?.scrollIntoView({ behavior: "smooth", block: "start" }),
-      )
-      return () => cancelAnimationFrame(frame)
+    if (!record) return
+    const order: Tab[] = ["overview", "history", "identification", "uses", "relationships"]
+    const onScroll = () => {
+      let current: Tab = "overview"
+      for (const t of order) {
+        const el = document.getElementById(SECTION_ID[t])
+        if (el && el.getBoundingClientRect().top <= 140) current = t
+      }
+      setTab(current)
     }
-  }, [selectedClaim, tab])
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [record])
+  const goTo = (t: Tab) => {
+    setTab(t === "studies" ? "uses" : t)
+    afterRender(() => slowScrollToElement(SECTION_ID[t]))
+  }
   const visible = useMemo(
     () =>
       record?.candidates.filter(
@@ -934,6 +1135,9 @@ export default function LiveApp() {
     (x) => x.hypothesis.id === selectedCandidate,
   )
   const currentClaim = record?.claims.find((x) => x.claim.id === selectedClaim)
+  // Only claims mapped to a MeSH medical concept are shown; the rest are counted, not listed.
+  const meshClaims = record?.claims.filter((x) => x.concepts?.length) || []
+  const hiddenClaims = (record?.claims.length || 0) - meshClaims.length
   const openEntry = async (id: string, target?: { tab: "identification" | "studies"; id: string; includeHidden?: boolean }) => {
     setSection("record")
     setTab(target?.tab || "overview")
@@ -945,7 +1149,8 @@ export default function LiveApp() {
     setShowHidden(Boolean(target?.includeHidden))
     try {
       setRecord(await api<Entry>(`/entries/${id}`))
-      window.scrollTo({ top: 0 })
+      if (target) afterRender(() => slowScrollToElement(SECTION_ID[target.tab]))
+      else slowScrollTo(0)
     } catch (e) {
       setError((e as Error).message)
     } finally {
@@ -953,21 +1158,22 @@ export default function LiveApp() {
     }
   }
   const openCandidate = (id: string) => {
+    if (tab === "identification") afterRender(() => slowScrollToElement("candidate-detail", 170))
     setSelectedCandidate(id)
     setCandidateDetails(null)
     setEvidenceOffset(0)
-    setTab("identification")
+    if (tab !== "identification") goTo("identification")
   }
   const openClaim = (id: string) => {
     setSelectedClaim(id)
     setClaimDetails(null)
     setStudyOffset(0)
-    setTab("studies")
+    goTo("studies")
   }
   const navigate = (s: typeof section) => {
     setSection(s)
     setMobileNav(false)
-    window.scrollTo({ top: 0 })
+    slowScrollTo(0)
   }
   return (
     <div className="app-shell">
@@ -1004,6 +1210,12 @@ export default function LiveApp() {
             Explore
           </button>
           <button
+            className={section === "atlas" ? "active" : ""}
+            onClick={() => navigate("atlas")}
+          >
+            Atlas
+          </button>
+          <button
             className={section === "map" ? "active" : ""}
             onClick={() => navigate("map")}
           >
@@ -1024,6 +1236,7 @@ export default function LiveApp() {
         </nav>
       </header>
       {section === "map" && <KnowledgeMap openEntry={openEntry} />}
+      {section === "atlas" && <Atlas openEntry={openEntry} />}
       {section === "explore" && (
         <main>
           <section className="catalog-intro">
@@ -1033,35 +1246,7 @@ export default function LiveApp() {
               Browse historical records and investigate their proposed
               connections to modern taxonomy and scientific research.
             </p>
-            <div className="browse-modes">
-              <button
-                className={!book ? "active" : ""}
-                onClick={() => {
-                  setBook("")
-                  setOffset(0)
-                }}
-              >
-                All entries
-              </button>
-              <button
-                className={book === "culpeper" ? "active" : ""}
-                onClick={() => {
-                  setBook("culpeper")
-                  setOffset(0)
-                }}
-              >
-                Culpeper
-              </button>
-              <button
-                className={book === "dioscorides" ? "active" : ""}
-                onClick={() => {
-                  setBook("dioscorides")
-                  setOffset(0)
-                }}
-              >
-                Dioscorides
-              </button>
-            </div>
+
           </section>
           <div className="catalog-layout">
             <aside className="filters">
@@ -1081,72 +1266,78 @@ export default function LiveApp() {
                   Clear all
                 </button>
               </div>
-              <label className="filter-group">
-                <span>Historical source</span>
-                <select
-                  value={book}
-                  onChange={(e) => {
-                    setBook(e.target.value)
-                    setOffset(0)
-                  }}
-                >
-                  <option value="">Both books</option>
-                  <option value="culpeper">Culpeper</option>
-                  <option value="dioscorides">Dioscorides</option>
-                </select>
-              </label>
               <div className="filter-group">
-                <label htmlFor="tier-filter">Identification status</label>
-                <InfoTip
-                  label="Identification status filter"
-                  text="The catalogue shows entries with an eligible or possible scientific name. Neither status proves historical identity."
-                />
-                <select
-                  id="tier-filter"
-                  value={tierFilter}
-                  onChange={(e) => {
-                    setTierFilter(e.target.value)
+                <span className="filter-label">Historical source</span>
+                <Dropdown
+                  label="Historical source"
+                  value={book}
+                  onChange={(v) => {
+                    setBook(v)
                     setOffset(0)
                   }}
-                >
-                  <option value="">Eligible and possible</option>
-                  <option value="A">Meets identification criteria</option>
-                  <option value="B">Possible identification</option>
-                </select>
+                  options={[
+                    { value: "", label: "All entries" },
+                    { value: "culpeper", label: "Culpeper", hint: "The Complete Herbal, 1653" },
+                    { value: "dioscorides", label: "Dioscorides", hint: "De materia medica, 1st century" },
+                  ]}
+                />
               </div>
               <div className="filter-group">
-                <label htmlFor="concept-filter">Medicinal concept (MeSH)</label>
+                <span className="filter-label">Identification status
                 <InfoTip
-                  label="Medicinal concept filter"
-                  text="Find entries with a claim mapped to a MeSH medical concept. A mapping is a recorded interpretation, not proof of effectiveness."
+                  label="Identification status"
+                  text="How sure we are which modern plant the old name means. Identified: the plant passed every rule. It is a real plant at species level with a settled name, at least two independent sources agree on it (or a scholar's reading of this very passage is confirmed by a second source), and it grew where the author lived. Where the book describes the plant, the description also had to fit. Possible: the plant is plausible, but one of these checks is missing, for example only one source names it. Neither is proof of what the author meant."
+                /></span>
+                <Dropdown
+                  id="tier-filter"
+                  label="Identification status"
+                  value={tierFilter}
+                  onChange={(v) => {
+                    setTierFilter(v)
+                    setOffset(0)
+                  }}
+                  options={[
+                    { value: "", label: "Identified or possible", hint: "Every entry with at least one proposed plant" },
+                    { value: "A", label: "Identified", hint: "Passed every rule: two independent sources agree, and it grew where the author lived" },
+                    { value: "B", label: "Possible only", hint: "Plausible, but one check is missing, e.g. only one source names it" },
+                  ]}
                 />
-                <input
+              </div>
+              <div className="filter-group">
+                <span className="filter-label"><label htmlFor="concept-filter">Medical use (MeSH)</label>
+                <InfoTip
+                  label="Medical use filter"
+                  text="Find entries with a historical claim mapped to this MeSH medical concept. The boxes are the most common ones; the numbers are how many entries have them. A mapping is a reading of the old text, not proof that the remedy works."
+                /></span>
+                <FilterPicker
                   id="concept-filter"
                   value={conceptFilter}
-                  onChange={(e) => {
-                    setConceptFilter(e.target.value)
+                  items={facets?.concepts || []}
+                  onChange={(v) => {
+                    setConceptFilter(v)
                     setOffset(0)
                   }}
-                  placeholder="e.g. Menstruation"
+                  placeholder="Search medical uses"
                 />
               </div>
               <div className="filter-group">
-                <label htmlFor="family-filter">Scientific family</label>
+                <span className="filter-label"><label htmlFor="family-filter">Plant family</label>
                 <InfoTip
-                  label="Scientific family filter"
-                  text="Find entries with at least one candidate assigned to the specified botanical family."
-                />
-                <input
+                  label="Plant family filter"
+                  text="Find entries with at least one proposed plant in this botanical family. The boxes are the most common families; the numbers are how many entries have them."
+                /></span>
+                <FilterPicker
                   id="family-filter"
                   value={familyFilter}
-                  onChange={(e) => {
-                    setFamilyFilter(e.target.value)
+                  items={facets?.families || []}
+                  onChange={(v) => {
+                    setFamilyFilter(v)
                     setOffset(0)
                   }}
-                  placeholder="e.g. Apiaceae"
+                  placeholder="Search families"
                 />
               </div>
-              <label className="check-row">
+              <label className="check-row switch-row">
                 <input
                   type="checkbox"
                   checked={researchOnly}
@@ -1154,8 +1345,8 @@ export default function LiveApp() {
                     setResearchOnly(e.target.checked)
                     setOffset(0)
                   }}
-                />{" "}
-                Modern research assessed
+                />
+                <span>Only entries with modern research assessed</span>
               </label>
               <p>
                 Filters match the historical entry and may refer to different
@@ -1163,7 +1354,7 @@ export default function LiveApp() {
                 scientific names, or recorded synonyms.
               </p>
             </aside>
-            <section className="catalog">
+            <section className="catalog" id="catalog-top">
               <div className="catalog-tools">
                 <label className="search">
                   <span aria-hidden="true">⌕</span>
@@ -1218,21 +1409,48 @@ export default function LiveApp() {
                   list.items.map((p) => (
                     <article className="plant-card-shell" key={p.id}>
                     <button
-                      className="plant-card live-card"
-                      onClick={() => openEntry(p.id)}
+                      className={`plant-card live-card${p.members ? " grouped" : ""}`}
+                      aria-expanded={p.members ? openGroup === p.id : undefined}
+                      onClick={() => p.members ? setOpenGroup(openGroup === p.id ? null : p.id) : openEntry(p.id)}
                     >
                       <div className="live-plate" aria-hidden="true">
                         <span className="live-plate-placeholder">✳</span>
                         {p.image?.image_url && !brokenImages.has(p.image.image_url) && <img src={p.image.image_url} loading="lazy" alt="" onError={() => setBrokenImages(previous => new Set(previous).add(p.image.image_url))} />}
                       </div>
                       <div className="plant-card-copy">
-                        <span className="record-source">
-                          {bookName(p.book)} {p.chapter && `· ${p.chapter}`}
-                        </span>
-                        <h3>{p.name || p.chapter}</h3>
-                        <em>{p.preferred_scientific_name || "Scientific name not recorded"}</em>
+                        {p.members ? (
+                          <>
+                            <span className="record-source">
+                              {p.members.length} records · {[...new Set(p.members.map((m: Item) => bookName(m.book)))].join(" & ")}
+                            </span>
+                            <h3 className="card-sci">{p.preferred_scientific_name}</h3>
+                            <span className="card-common">{p.members.map((m: Item) => m.name || m.chapter).filter((v: string, i: number, a: string[]) => a.indexOf(v) === i).join(" · ")}</span>
+                            <span className="group-toggle">{openGroup === p.id ? "Hide records ↑" : "Show the records ↓"}</span>
+                          </>
+                        ) : (
+                          <>
+                            <span className="record-source">
+                              {bookName(p.book)} {p.chapter && `· ${p.chapter}`}
+                            </span>
+                            <h3 className={p.preferred_scientific_name ? "card-sci" : ""}>{p.preferred_scientific_name || p.name || p.chapter}</h3>
+                            {p.preferred_scientific_name && <span className="card-common">{p.name || p.chapter}</span>}
+                          </>
+                        )}
                       </div>
                     </button>
+                    {p.members && openGroup === p.id && (
+                      <ul className="group-members">
+                        {p.members.map((m: Item) => (
+                          <li key={m.id}>
+                            <button onClick={() => openEntry(m.id)}>
+                              <span className="record-source">{bookName(m.book)}{m.chapter ? ` · ${m.chapter}` : ""}</span>
+                              <strong>{m.name || m.chapter}</strong>
+                              <span aria-hidden="true">→</span>
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                     {p.image && !brokenImages.has(p.image.image_url) && (
                       <p className="plant-image-credit">
                         Proposed candidate photo · {p.image.creator} ·{" "}
@@ -1243,22 +1461,7 @@ export default function LiveApp() {
                     </article>
                   ))}
               </div>
-              <div className="pagination">
-                <button
-                  className="secondary-button"
-                  disabled={offset === 0 || loading}
-                  onClick={() => setOffset(Math.max(0, offset - 24))}
-                >
-                  Previous
-                </button>
-                <button
-                  className="secondary-button"
-                  disabled={!list.has_more || loading}
-                  onClick={() => setOffset(offset + 24)}
-                >
-                  Next
-                </button>
-              </div>
+              <Pager page={offset / 24} total={list.total !== undefined ? Math.ceil(list.total / 24) : undefined} hasMore={list.has_more} onPage={(n) => { setOffset(n * 24); slowScrollToElement("catalog-top") }} label="Result pages" />
             </section>
           </div>
         </main>
@@ -1308,13 +1511,18 @@ export default function LiveApp() {
                   {record.preferred_scientific_name && <p className="record-scientific-name"><em>{record.preferred_scientific_name}</em><small>Proposed scientific identification</small></p>}
                   {(record.description || record.introduction || record.opening || record.historical_text) ? (
                     <>
-                      <p className="record-description">{(record.description || record.introduction || record.opening || record.historical_text || "").slice(0, 280)}{(record.description || record.introduction || record.opening || record.historical_text || "").length > 280 ? "…" : ""}</p>
-                      <button className="record-read-source" onClick={() => setTab("history")}>Read the complete historical record →</button>
+                      <ExpandableText
+                        className="record-description"
+                        text={record.description || record.introduction || record.opening || record.historical_text || ""}
+                      />
+                      <button className="record-read-source" onClick={() => goTo("history")}>Read the complete historical record →</button>
                     </>
                   ) : <p>No historical description was recorded for this entry.</p>}
                 </div>
               </div>
+              <div className="record-layout">
               <nav className="record-tabs" aria-label="Record sections">
+                <button className="record-tabs-back" onClick={() => navigate("explore")}>‹ Back to collection</button>
                 {([
                   ["overview", "Overview"],
                   ["history", "Historical Record"],
@@ -1329,7 +1537,7 @@ export default function LiveApp() {
                         : ""
                     }
                     key={id}
-                    onClick={() => setTab(id)}
+                    onClick={() => goTo(id)}
                     title={tabHelp[id]}
                   >
                     {label}
@@ -1337,15 +1545,15 @@ export default function LiveApp() {
                 ))}
               </nav>
               <div className="record-content">
-                {tab === "overview" && <PlantDashboard record={record} onCandidate={(id, includeHidden) => { setShowHidden(includeHidden); openCandidate(id) }} onClaim={openClaim} onHistory={() => setTab("history")} onResearch={() => setTab("uses")} />}
-                {tab === "history" && (
-                  <section>
+                <div id="sec-overview" className="record-section"><PlantDashboard record={record} onCandidate={(id, includeHidden) => { setShowHidden(includeHidden); openCandidate(id) }} onClaim={openClaim} onHistory={() => goTo("history")} onResearch={() => goTo("uses")} /></div>
+                {(
+                  <section id="sec-history" className="record-section">
                     <p className="eyebrow">Original historical source</p>
                     <h2>Historical record</h2>
-                    <p>
-                      {bookName(record.entry.book)}{" "}
-                      {record.entry.label && `· Chapter ${record.entry.label}`}{" "}
-                      {record.page && `· Page ${record.page}`}
+                    <p className="section-meta">
+                      <span>{bookName(record.entry.book)}</span>
+                      {record.entry.label && <span>Chapter {record.entry.label}</span>}
+                      {record.page && <span>Page {record.page}</span>}
                     </p>
                     {record.historical_text && (
                       <blockquote className="archival-quote">
@@ -1370,7 +1578,7 @@ export default function LiveApp() {
                         ["Description", record.description, "The historical author's description of the subject."],
                         ["Place", record.place, "Where the historical author says the subject grows or is found."],
                         ["Time", record.season, "The historical author's observations about seasons or timing."],
-                        ["Government and virtues", record.virtues, "The author's historical account of the subject's attributed properties and uses."],
+                        ["Uses and properties", record.virtues, "The author's historical account of the subject's attributed properties and uses."],
                       ] as [string, string | undefined, string][]).map(
                         ([label, text, explanation]) =>
                           text && (
@@ -1416,8 +1624,8 @@ export default function LiveApp() {
                     </section>
                   </section>
                 )}
-                {tab === "identification" && (
-                  <section>
+                {(
+                  <section id="sec-identification" className="record-section">
                     <p className="eyebrow">Botanical identification</p>
                     <h2>Candidate identifications</h2>
                     <p>
@@ -1438,13 +1646,13 @@ export default function LiveApp() {
                         </div>
                       ))}
                     </div>
-                    <label className="check-row">
+                    <label className="check-row switch-row">
                       <input
                         type="checkbox"
                         checked={showHidden}
                         onChange={(e) => setShowHidden(e.target.checked)}
-                      />{" "}
-                      Show candidates excluded by the current criteria
+                      />
+                      <span>Show candidates excluded by the current criteria</span>
                     </label>
                     {visible.length === 0 && (
                       <div className="empty">
@@ -1469,7 +1677,7 @@ export default function LiveApp() {
                           </button>
                         ))}
                       </div>
-                      <div className="candidate-detail">
+                      <div className="candidate-detail" id="candidate-detail">
                         {!currentCandidate ? (
                           <p>
                             Select a candidate to inspect its rules and
@@ -1482,14 +1690,16 @@ export default function LiveApp() {
                                 "Unresolved candidate"}
                             </h3>
                             <Status tier={currentCandidate.decision?.tier} />
-                            <h3 className="detail-group-title">
-                              Classification &amp; geography{" "}
-                              <InfoTip
-                                label="Classification and geography"
-                                text="The recorded eligibility decision, its rules, source lineages, and geographical caveats for this candidate."
-                              />
-                            </h3>
-                            <ClassificationSummary hypothesis={currentCandidate.hypothesis} decision={currentCandidate.decision} />
+                            <details className="detail-group" open>
+                              <summary>
+                                Classification &amp; geography{" "}
+                                <InfoTip
+                                  label="Classification and geography"
+                                  text="The recorded eligibility decision, its rules, source lineages, and geographical caveats for this candidate."
+                                />
+                              </summary>
+                              <ClassificationSummary hypothesis={currentCandidate.hypothesis} decision={currentCandidate.decision} />
+                            </details>
                             {detailLoading && <p>Loading evidence…</p>}
                             {detailError && <p role="alert">{detailError}</p>}
                             {candidateDetails && (
@@ -1518,28 +1728,7 @@ export default function LiveApp() {
                                     </p>
                                   )}
                                   <div className="source-detail-list">{candidateDetails.evidence.map((e: Item) => <EvidenceCard key={e.id} evidence={e} />)}</div>
-                                  <div className="pagination">
-                                    <button
-                                      className="secondary-button"
-                                      disabled={evidenceOffset === 0}
-                                      onClick={() =>
-                                        setEvidenceOffset(
-                                          Math.max(0, evidenceOffset - 20),
-                                        )
-                                      }
-                                    >
-                                      Previous evidence
-                                    </button>
-                                    <button
-                                      className="secondary-button"
-                                      disabled={!candidateDetails.has_more}
-                                      onClick={() =>
-                                        setEvidenceOffset(evidenceOffset + 20)
-                                      }
-                                    >
-                                      More evidence
-                                    </button>
-                                  </div>
+                                  <Pager page={evidenceOffset / 20} hasMore={candidateDetails.has_more} onPage={(n) => setEvidenceOffset(n * 20)} label="Evidence pages" />
                                 </details>
                                 <details className="detail-group">
                                   <summary>
@@ -1553,9 +1742,9 @@ export default function LiveApp() {
                                   </p>
                                   {candidateDetails.descriptions.length ===
                                     0 && (
-                                    <p>
-                                      Not assessed or no uniquely linked
-                                      comparison.
+                                    <p className="section-explanation">
+                                      No description comparison is linked to
+                                      this candidate.
                                     </p>
                                   )}
                                   {candidateDetails.descriptions.map(
@@ -1590,24 +1779,27 @@ export default function LiveApp() {
                     <EntryEvidence id={record.entry.id} />
                   </section>
                 )}
-                {(tab === "uses" || tab === "studies") && (
-                  <section>
+                {(
+                  <section id="sec-uses" className="record-section">
                     <p className="eyebrow">Historical medicinal knowledge</p>
                     <h2>Recorded claims</h2>
                     <p>
                       These are extracted interpretations of historical
                       statements, not evidence of medical effectiveness.
                     </p>
-                    {record.claims.length === 0 && (
+                    {meshClaims.length === 0 && (
                       <div className="empty">
-                        No extracted claims were recorded for this entry.
+                        No claim from this entry is mapped to a medical concept.
                       </div>
                     )}
+                    {hiddenClaims > 0 && (
+                      <p className="claims-hidden-note">{hiddenClaims} more claim{hiddenClaims === 1 ? "" : "s"} without a mapped medical concept {hiddenClaims === 1 ? "is" : "are"} not shown.</p>
+                    )}
                     <div className="claims-list">
-                      {record.claims.map(({ claim: c, concepts }) => (
+                      {meshClaims.map(({ claim: c, concepts }) => (
                         <button className="claim-card" key={c.id} onClick={() => openClaim(c.id)}>
                           <span className="claim-card-top">
-                            <span className="claim-card-id">Claim {c.source_claim_id.split(":").pop()}</span>
+                            <span className="claim-card-id">Claim {Number(String(c.source_claim_id).split(":").pop()?.replace(/^c/, "")) || ""}</span>
                             <span className="claim-card-action">Inspect claim <span aria-hidden="true">→</span></span>
                           </span>
                           <strong className="claim-card-title">{c.claim_text}</strong>
@@ -1628,8 +1820,8 @@ export default function LiveApp() {
                     </div>
                   </section>
                 )}
-                {(tab === "uses" || tab === "studies") && (
-                  <section id="research-detail" className="research-section">
+                {(
+                  <section id="research-detail" className="research-section record-section">
                     <p className="eyebrow">Modern research</p>
                     <h2>
                       Studies and assessments{" "}
@@ -1638,72 +1830,84 @@ export default function LiveApp() {
                         text="Studies are connected to specific claim–plant combinations. Assessments describe relevance and limitations; they are not proof that a remedy works."
                       />
                     </h2>
-                    <p>
-                      Select a historical claim to inspect the recorded studies
-                      for its claim–plant units.
+                    <p className="section-explanation">
+                      Pick a historical claim to see the plants it was checked
+                      for and the modern studies assessed for it.
                     </p>
-                    <label className="filter-group">
-                      <span>Historical claim</span>
-                      <select
+                    <div className="filter-group claim-picker">
+                      <span className="filter-label">Historical claim</span>
+                      <Dropdown
+                        label="Historical claim"
                         value={selectedClaim || ""}
-                        onChange={(e) => {
-                          if (e.target.value) openClaim(e.target.value)
-                        }}
-                      >
-                        <option value="">Select a claim</option>
-                        {record.claims.map(({ claim: c }) => (
-                          <option key={c.id} value={c.id}>
-                            {c.claim_text}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
+                        placeholder="Select a claim"
+                        onChange={(v) => v && openClaim(v)}
+                        options={meshClaims.map(({ claim: c, concepts }) => ({
+                          value: c.id,
+                          label: c.claim_text,
+                          hint: concepts.map((x: Item) => x.name).join(", "),
+                        }))}
+                      />
+                    </div>
                     {currentClaim && (
-                      <>
+                      <details className="detail-group" open>
+                        <summary>The historical claim</summary>
                         <blockquote className="archival-quote">
                           <p>“{currentClaim.claim.quote}”</p>
                           <cite>
-                            Historical quotation ·{" "}
-                            {currentClaim.claim.source_claim_id}
+                            {claimRef(currentClaim.claim.source_claim_id, record.entry.name)}{" "}
+                            <button className="cite-link" onClick={() => goTo("history")}>Read it in the historical record ↑</button>
                           </cite>
                         </blockquote>
                         <ClaimSummary claim={currentClaim.claim} concepts={currentClaim.concepts} />
-                      </>
+                      </details>
                     )}
                     {detailLoading && <p>Loading studies…</p>}
                     {detailError && <p role="alert">{detailError}</p>}
                     {claimDetails && (
                       <>
                         <Notice>
-                          Studies and model-assisted assessments are not proof
-                          of effectiveness. Review applicability, limitations
-                          and the original publication.
-                        </Notice>
-                        <h3>Claim–plant combinations</h3>
-                        {claimDetails.units.length === 0 && (
-                          <p>No claim–plant unit was recorded.</p>
-                        )}
-                        {claimDetails.units.map((u: Item) => (
-                          <p key={u.id}>
-                            <strong>{value(u.candidate)}</strong> ·{" "}
-                            {tierText(u.tier)} ·{" "}
-                            {u.assessments
-                              ? `${u.assessments} linked assessment${
-                                  u.assessments === 1 ? "" : "s"
-                                }`
-                              : u.shared_unit_id
-                                ? "Not assessed in the shared study set"
-                                : "No uniquely linked assessment in the shared study set"}
-                            {u.source_id_count > 1 &&
-                              " · Source ID shared by multiple records"}
-                            {u.link_status !== "unique" &&
-                              " · Candidate link unresolved"}
+                          <strong>Read with care</strong>
+                          <p>
+                            A linked study is not proof that the remedy works.
+                            The assessments were made with an AI model; check how
+                            closely each study matches the claim, its limitations,
+                            and the original publication.
                           </p>
-                        ))}
+                        </Notice>
+                        <details className="detail-group" open>
+                        <summary>Which plants this claim was checked for</summary>
+                        <p className="unit-intro">
+                          The historical plant may correspond to more than one
+                          modern species. Each is listed with how confident the
+                          identification is, and whether modern studies were
+                          assessed for it.
+                        </p>
+                        {claimDetails.units.length === 0 && (
+                          <p>No modern plant is linked to this claim.</p>
+                        )}
+                        <ul className="unit-list">
+                          {claimDetails.units.map((u: Item) => (
+                            <li key={u.id}>
+                              <em className="unit-plant">{value(u.candidate)}</em>
+                              <span className={`unit-tier unit-tier-${u.tier}`}>{tierText(u.tier)}</span>
+                              <span className="unit-status">
+                                {u.assessments
+                                  ? `${u.assessments} study assessment${u.assessments === 1 ? "" : "s"}`
+                                  : "No studies assessed yet"}
+                                {u.link_status !== "unique" &&
+                                  " · the link to this plant is uncertain"}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                        </details>
+                        <details className="detail-group" open>
+                        <summary>Modern studies{claimDetails.studies.length ? ` (${claimDetails.studies.length}${claimDetails.has_more ? "+" : ""})` : ""}</summary>
                         {claimDetails.studies.length === 0 && (
                           <div className="empty">
-                            Not assessed: no linked assessment was recorded for
-                            this claim in the shared study set.
+                            No modern studies have been assessed for this claim
+                            yet. So far, studies were searched only for uses
+                            recorded in both Culpeper and Dioscorides.
                           </div>
                         )}
                         <div className="study-list">
@@ -1714,7 +1918,11 @@ export default function LiveApp() {
                                   {value(x.study.source)} ·{" "}
                                   {value(x.study.publication_date)}
                                 </p>
-                                <h3>{x.study.title}</h3>
+                                <h3>
+                                  {studyLink(x.study, x.source_url)
+                                    ? <a className="study-title-link" href={studyLink(x.study, x.source_url)} target="_blank" rel="noreferrer">{x.study.title} <span aria-hidden="true">↗</span></a>
+                                    : x.study.title}
+                                </h3>
                                 <p className="study-candidate">
                                   Candidate: {value(x.candidate)}
                                 </p>
@@ -1801,50 +2009,38 @@ export default function LiveApp() {
                                       Open source record ↗
                                     </a>
                                   )}
-                                <details>
-                                  <summary>
-                                    Supporting excerpts and provenance
-                                  </summary>
-                                  {x.excerpts
-                                    .filter((a: Item) => a.text)
-                                    .map((a: Item, i: number) => (
-                                      <p key={i}>
-                                        <strong>{a.field}:</strong> “{a.text}”
-                                      </p>
-                                    ))}
-                                  <p>
-                                    Source text: {value(x.study.text_locator)} ·
-                                    Prompt: {value(x.assessment.prompt_version)}{" "}
-                                    · Response:{" "}
-                                    {value(x.assessment.raw_response_file)}
+                                <details className="excerpts">
+                                  <summary>What the study says, word for word</summary>
+                                  <p className="section-explanation">
+                                    Each answer the model gave is backed by an exact quotation
+                                    from the study, checked against the text.
                                   </p>
+                                  <dl className="excerpt-list">
+                                    {x.excerpts
+                                      .filter((a: Item) => a.text)
+                                      .map((a: Item, i: number) => (
+                                        <div key={i}>
+                                          <dt>{EXCERPT_LABELS[a.field] || friendly(a.field)}</dt>
+                                          <dd>“{a.text}”</dd>
+                                        </div>
+                                      ))}
+                                  </dl>
+                                  <ul className="provenance">
+                                    <li><span>Study text</span>{value(x.study.text_locator)}</li>
+                                    <li><span>Prompt version</span>{value(x.assessment.prompt_version)}</li>
+                                    <li><span>Model reply</span>{value(x.assessment.raw_response_file)}</li>
+                                  </ul>
                                 </details>
                               </div>
                             </article>
                           ))}
                         </div>
-                        <div className="pagination">
-                          <button
-                            className="secondary-button"
-                            disabled={studyOffset === 0}
-                            onClick={() =>
-                              setStudyOffset(Math.max(0, studyOffset - 20))
-                            }
-                          >
-                            Previous studies
-                          </button>
-                          <button
-                            className="secondary-button"
-                            disabled={!claimDetails.has_more}
-                            onClick={() => setStudyOffset(studyOffset + 20)}
-                          >
-                            More studies
-                          </button>
-                        </div>
+                        <Pager page={studyOffset / 20} hasMore={claimDetails.has_more} onPage={(n) => setStudyOffset(n * 20)} label="Study pages" />
+                        </details>
                         {claimDetails.related.length > 0 && (
-                          <>
-                            <h3>Related cross-book groupings</h3>
-                            <p>
+                          <details className="detail-group">
+                            <summary>The same plant and use in the other book</summary>
+                            <p className="section-explanation">
                               These are inferred groupings based on the recorded
                               species and medical concept; they do not establish
                               that remedies are equivalent.
@@ -1860,70 +2056,130 @@ export default function LiveApp() {
                                 {r.recorded_concept}) →
                               </button>
                             ))}
-                          </>
+                          </details>
                         )}
                       </>
                     )}
                   </section>
                 )}
-                {tab === "relationships" && (
-                  <section>
+                {(
+                  <section id="sec-relationships" className="record-section">
                     <p className="eyebrow">Knowledge graph</p>
                     <h2>Explore relationships</h2>
-                    <label className="check-row">
-                      <input
-                        type="checkbox"
-                        checked={showHidden}
-                        onChange={(e) => setShowHidden(e.target.checked)}
-                      />{" "}
-                      Include candidates excluded by the current criteria
-                    </label>
+                    <div className="switch-group">
+                      <label className="check-row switch-row">
+                        <input
+                          type="checkbox"
+                          checked={graphHidden}
+                          onChange={(e) => setGraphHidden(e.target.checked)}
+                        />
+                        <span>Include candidates excluded by the current criteria</span>
+                      </label>
+                      <label className="check-row switch-row">
+                        <input
+                          type="checkbox"
+                          checked={graphUnmapped}
+                          onChange={(e) => setGraphUnmapped(e.target.checked)}
+                        />
+                        <span>Include claims without a medical concept (MeSH)</span>
+                      </label>
+                    </div>
                     <Graph
-                      record={record}
-                      visible={visible}
+                      key={`${graphUnmapped ? "all-claims" : "mesh-claims"}-${graphHidden ? "all" : "ab"}`}
+                      record={graphUnmapped ? record : { ...record, claims: meshClaims }}
+                      visible={graphHidden ? record.candidates : record.candidates.filter((x) => x.decision?.tier === "A" || x.decision?.tier === "B")}
                       openCandidate={openCandidate}
                       openClaim={openClaim}
                     />
                   </section>
                 )}
               </div>
+              </div>
             </>
           )}
         </main>
       )}
       {section === "sources" && (
-        <main className="standard-page">
+        <main className="standard-page sources-page">
           <div className="section-head">
             <p className="eyebrow">The collection</p>
             <h1>Historical Sources</h1>
-            <p>Explore the two historical works and their recorded entries.</p>
+            <p>
+              Two herbals written sixteen centuries apart, one in Greek for the
+              Roman world and one in English for the London poor. Both are read
+              here entry by entry and traced to modern plants and research.
+            </p>
           </div>
-          <div className="source-library">
-            {(["culpeper", "dioscorides"] as const).map((b) => (
-              <button
-                key={b}
-                onClick={() => {
-                  setBook(b)
-                  setOffset(0)
-                  setSearch("")
-                  setTierFilter("")
-                  setFamilyFilter("")
-                  setConceptFilter("")
-                  setResearchOnly(false)
-                  navigate("explore")
-                }}
-              >
-                <span>Historical source</span>
-                <h3>{bookName(b)}</h3>
-                <p>
-                  {b === "culpeper"
-                    ? "The Complete Herbal"
-                    : "De materia medica"}
-                </p>
-                <b>Browse entries →</b>
-              </button>
+          <ol className="source-timeline" aria-label="Timeline">
+            {SOURCE_TIMELINE.map((t) => (
+              <li key={t.year}><b>{t.year}</b><span>{t.text}</span></li>
             ))}
-          </div>
+          </ol>
+          {SOURCE_BOOKS.map((b) => (
+            <article className="source-feature" key={b.id}>
+              <header className="source-feature-head">
+                <div>
+                  <p className="eyebrow">{b.era}</p>
+                  <h2>{b.title}</h2>
+                  <p className="source-feature-sub">{b.subtitle}</p>
+                </div>
+                <div className="source-feature-actions">
+                  <button
+                    className="primary-link"
+                    onClick={() => {
+                      setBook(b.id)
+                      setOffset(0)
+                      setSearch("")
+                      setTierFilter("")
+                      setFamilyFilter("")
+                      setConceptFilter("")
+                      setResearchOnly(false)
+                      navigate("explore")
+                    }}
+                  >
+                    Browse its entries →
+                  </button>
+                  <a className="cite-link" href={b.read} target="_blank" rel="noreferrer">Read the original text ↗</a>
+                </div>
+              </header>
+              {facets?.books?.[b.id] && (
+                <dl className="source-stats">
+                  <div><dt>Entries</dt><dd>{Number(facets.books[b.id].entries ?? 0).toLocaleString()}</dd></div>
+                  <div><dt>With a proposed plant</dt><dd>{Number(facets.books[b.id].identified ?? 0).toLocaleString()}</dd></div>
+                  <div><dt>Medicinal claims read</dt><dd>{Number(facets.books[b.id].claims ?? 0).toLocaleString()}</dd></div>
+                </dl>
+              )}
+              <div className="source-feature-body">
+                <section>
+                  <h3>The author</h3>
+                  {b.author.map((t, k) => <p key={k}>{t}</p>)}
+                </section>
+                <section>
+                  <h3>The book</h3>
+                  {b.book.map((t, k) => <p key={k}>{t}</p>)}
+                </section>
+              </div>
+              <div className="source-facts">
+                <p className="eyebrow">Did you know?</p>
+                <ul>{b.facts.map((t, k) => <li key={k}>{t}</li>)}</ul>
+              </div>
+              <FeaturedEntries book={b.id} openEntry={openEntry} />
+              <p className="source-edition"><span>Edition used here</span>{b.edition}</p>
+            </article>
+          ))}
+          <aside className="source-coming">
+            <p className="eyebrow">Coming next</p>
+            <h3>The Shennong Bencao Jing</h3>
+            <p>
+              The classic Chinese materia medica, compiled under the Han dynasty
+              (1st–2nd century AD) and attributed to Shennong, the legendary
+              "Divine Farmer" said to have tasted hundreds of plants to learn
+              which heal and which harm. Its 365 drugs are sorted into three
+              grades, from those that nourish life to those that attack disease.
+              The original is lost; the text used here is Sun Xingyan's 1799
+              reconstruction from later quotations.
+            </p>
+          </aside>
         </main>
       )}
       {section === "about" && (
@@ -1931,25 +2187,111 @@ export default function LiveApp() {
           <div className="section-head">
             <p className="eyebrow">About EthnoTrace</p>
             <h1>Following historical knowledge, carefully</h1>
+            <p>
+              Old herbals record which plants people used against which
+              complaints. EthnoTrace asks a narrow question of two of them: for
+              each remedy, which modern plant is the author most likely talking
+              about, and what has modern research found about that plant and
+              that use?
+            </p>
           </div>
-          <div className="about-grid">
-            <div>
-              <h3>Historical interpretation</h3>
+
+          <section className="about-block">
+            <h2>Why it is harder than it looks</h2>
+            <div className="about-columns">
               <p>
-                EthnoTrace connects extracted historical statements to candidate
-                botanical identifications. Names, taxonomic resolutions and
-                source evidence are preserved for review.
+                A name in an old book is not a species. "Agrimony" in 1653 or
+                εὐπατόριον in the first century may point to one plant, several,
+                or one we no longer grow. The same word can name different plants
+                in different places, and translators have guessed wrong for
+                centuries.
+              </p>
+              <p>
+                So every identification here is a proposal with its evidence
+                attached, graded by fixed rules, and every modern study is read
+                against the exact claim, not just the plant. Where the evidence is
+                thin, the site says so instead of filling the gap.
               </p>
             </div>
-            <div>
-              <h3>Research with context</h3>
-              <p>
-                Modern publications and model-assisted assessments are presented
-                with their limitations. A positive finding does not establish
-                clinical efficacy or prove a historical identification.
-              </p>
+          </section>
+
+          <section className="about-block">
+            <h2>How an entry is built</h2>
+            <ol className="about-steps">
+              <li>
+                <span className="about-step-n">1</span>
+                <div>
+                  <h3>Reading the claims</h3>
+                  <p>
+                    Each entry's text is split into individual medicinal claims,
+                    such as "eases a cough". Every claim keeps its exact quotation
+                    from the book, checked against the text, and is mapped to the
+                    medical vocabulary used by PubMed (MeSH).
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span className="about-step-n">2</span>
+                <div>
+                  <h3>Identifying the plant</h3>
+                  <p>
+                    The plant names in the entry are looked up in name databases
+                    (GBIF, Wikidata, iNaturalist, ChecklistBank, NCBI Taxonomy,
+                    Dr. Duke's) and, for the Greek, in the Liddell–Scott–Jones
+                    lexicon. Candidates are checked against the World Flora Online
+                    and Kew's plant list, against where they grow, and, where the
+                    book describes the plant, against that description.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span className="about-step-n">3</span>
+                <div>
+                  <h3>Finding the modern evidence</h3>
+                  <p>
+                    For uses recorded in both books, studies are gathered from
+                    PubMed, Europe PMC, ClinicalTrials.gov and the European
+                    Medicines Agency's herbal monographs. A language model reads
+                    each study and answers fixed questions, quoting the study for
+                    every answer. The verdict is then computed by written rules
+                    from those answers; the model's own opinion is kept only for
+                    comparison.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <section className="about-block about-grades">
+            <h2>What the labels mean</h2>
+            <div className="about-grade-grid">
+              <div><span className="tier-pill tier-pill-A">Meets identification criteria</span><p>{tierHelp.A}</p></div>
+              <div><span className="tier-pill tier-pill-B">Possible identification</span><p>{tierHelp.B}</p></div>
+              <div><span className="tier-pill tier-pill-X">Excluded by current criteria</span><p>{tierHelp.X}</p></div>
             </div>
-          </div>
+          </section>
+
+          <section className="about-block">
+            <h2>What this site does not claim</h2>
+            <ul className="about-limits">
+              <li>It does not say any remedy works. A linked study is evidence to read, not a recommendation.</li>
+              <li>It does not prove what an ancient author meant. Even the best-supported identification is a reasoned guess.</li>
+              <li>The automated steps make mistakes. Uncertain quotations and disagreements between the model and the rules are flagged so a person can check them.</li>
+              <li>Nothing here is medical advice.</li>
+            </ul>
+          </section>
+
+          <section className="about-block about-team">
+            <h2>Who made it</h2>
+            <p>
+              EthnoTrace was built by team OverSlept, George Souladakis and
+              Marselo Senka, for Track 1 of EthnoHack 2026. All the data
+              sources are public; each record on the site links back to where it
+              came from. See the Historical Sources page for the two books and
+              the editions used.
+            </p>
+            <button className="primary-link" onClick={() => navigate("sources")}>The historical sources →</button>
+          </section>
         </main>
       )}
       <footer>

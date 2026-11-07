@@ -66,6 +66,12 @@ def entries(ctx, params):
     identified = params.get('identified', [''])[0] == '1'
     offset = number(params, 'offset', 0, 100000)
     limit = max(1, number(params, 'limit', 24, 50))
+    # grouped=1: entries whose preferred scientific name is the same (e.g. agrimony in Culpeper and in
+    # Dioscorides) come back as one item with `members`; pagination counts groups, not entries.
+    grouped = params.get('grouped', [''])[0] == '1'
+    page_offset, page_limit = offset, limit
+    if grouped:
+        offset, limit = 0, 100000
     rows = query('''MATCH (e:HistoricalEntry {snapshot_id:$snapshot})
       WHERE ($entry_id = '' OR e.id = $entry_id) AND ($book = '' OR e.book=$book) AND ($term = '' OR
         toLower(coalesce(e.name,'')) CONTAINS $term OR toLower(coalesce(e.label,'')) CONTAINS $term OR
@@ -96,10 +102,54 @@ def entries(ctx, params):
         images = json.loads(image_path.read_text(encoding='utf-8')).get('images', {})
     except (OSError, ValueError):
         images = {}
+    if grouped:
+        groups = {}
+        for row in rows:
+            key = row.get('preferred_scientific_name') or row['id']
+            groups.setdefault(key, []).append(row)
+        ordered = list(groups.values())            # in the usual order: by each group's first entry
+        page = ordered[page_offset:page_offset + page_limit]
+        items = []
+        for members in page:
+            item = dict(members[0])
+            item['members'] = [{k: m.get(k) for k in ('id', 'name', 'book', 'chapter')} for m in members] if len(members) > 1 else None
+            items.append(item)
+        for row in items:
+            image = images.get(row.get('preferred_scientific_name'), {})
+            row['image'] = image if image.get('status') == 'available' else None
+        return {'items': items, 'has_more': len(ordered) > page_offset + page_limit, 'offset': page_offset, 'limit': page_limit,
+                'total': len(ordered)}
     for row in rows[:limit]:
         image = images.get(row.get('preferred_scientific_name'), {})
         row['image'] = image if image.get('status') == 'available' else None
     return {'items': rows[:limit], 'has_more': len(rows) > limit, 'offset': offset, 'limit': limit}
+
+
+_facets_cache = {}
+
+
+def facets(ctx):
+    """The families and MeSH concepts most often found among identified entries, for the Explore filters,
+    plus per-book counts for the sources page. Cached per snapshot (the database is read-only)."""
+    key = (ctx['snapshot'], ctx['dataset'])
+    if key not in _facets_cache:
+        families = query('''MATCH (e:HistoricalEntry {snapshot_id:$snapshot})-[:HAS_HYPOTHESIS]->(h:IdentificationHypothesis {snapshot_id:$snapshot})
+          MATCH (h)-[:HAS_DECISION]->(d:EligibilityDecision {snapshot_id:$snapshot})
+          WHERE d.tier IN ['A','B'] AND trim(coalesce(h.family,'')) <> ''
+          RETURN h.family AS name, count(DISTINCT e) AS count ORDER BY count DESC, name LIMIT 300''', **ctx)
+        concepts = query('''MATCH (e:HistoricalEntry {snapshot_id:$snapshot})-[:HAS_CLAIM]->(:HistoricalClaim {dataset_id:$dataset})
+          -[:HAS_MAPPING]->(:ConceptMapping {dataset_id:$dataset})-[:MAPS_TO]->(m:MedicalConcept)
+          WHERE trim(coalesce(m.name,'')) <> ''
+          RETURN m.name AS name, count(DISTINCT e) AS count ORDER BY count DESC, name LIMIT 500''', **ctx)
+        books = query('''MATCH (e:HistoricalEntry {snapshot_id:$snapshot})
+          OPTIONAL MATCH (e)-[:HAS_DECISION]->(d:EligibilityDecision {snapshot_id:$snapshot}) WHERE d.tier IN ['A','B']
+          WITH e, count(d) > 0 AS identified
+          OPTIONAL MATCH (e)-[:HAS_CLAIM]->(c:HistoricalClaim {dataset_id:$dataset})
+          RETURN e.book AS book, count(DISTINCT e) AS entries, count(DISTINCT CASE WHEN identified THEN e END) AS identified,
+                 count(DISTINCT c) AS claims''', **ctx)
+        _facets_cache[key] = {'families': families, 'concepts': concepts,
+                              'books': {b['book']: {k: b[k] for k in ('entries', 'identified', 'claims')} for b in books}}
+    return _facets_cache[key]
 
 
 def entry(ctx, eid):
@@ -207,6 +257,8 @@ class Handler(BaseHTTPRequestHandler):
                 data = candidate(ctx, identifier(parts[2]), params)
             elif len(parts) == 3 and parts[:2] == ['api','claims']:
                 data = claim(ctx, identifier(parts[2]), params)
+            elif parts == ['api','facets']:
+                data = facets(ctx)
             elif parts == ['api','health']:
                 data = {'status':'ok', 'snapshot':ctx['snapshot']}
             else:

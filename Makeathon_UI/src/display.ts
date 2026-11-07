@@ -28,3 +28,17 @@ export function studyLink(study: Record<string, any>, sourceUrl?: string): strin
   if (/^nct:NCT\d+$/i.test(recordedId)) return `https://clinicaltrials.gov/study/${recordedId.slice(4)}`
   return typeof sourceUrl === 'string' && sourceUrl.startsWith('https://') ? sourceUrl : undefined
 }
+
+const bookTitles: Record<string, string> = {
+  culpeper: 'Culpeper, The Complete Herbal', dioscorides: 'Dioscorides, De materia medica', shennong: 'Shennong Bencao Jing',
+}
+/** "culpeper:agrimony:c06" -> "Culpeper, The Complete Herbal · Agrimony · claim 6" */
+export function claimRef(id: unknown, entryName?: string): string {
+  const parts = String(id || '').split(':')
+  if (parts.length < 3) return String(id || 'Historical record')
+  const book = parts[0], claim = parts[parts.length - 1], middle = parts.slice(1, -1).join(':')
+  const number = /^c\d+$/.test(claim) ? `claim ${Number(claim.slice(1))}` : claim
+  const place = /^\d+(\.\d+)*$/.test(middle) ? `chapter ${middle}${entryName ? ` (${entryName})` : ''}`
+    : entryName || middle.replace(/-/g, ' ').replace(/^./, c => c.toUpperCase())
+  return `${bookTitles[book] || book} · ${place} · ${number}`
+}

@@ -10,9 +10,13 @@
     "format": "oxfmt"
   },
   "dependencies": {
+    "@types/d3-geo": "^3.1.0",
+    "@types/topojson-client": "^3.1.5",
     "@xyflow/react": "^12.12.1",
+    "d3-geo": "^3.1.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "topojson-client": "^3.1.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.0",

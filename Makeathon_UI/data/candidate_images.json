@@ -63,8 +63,19 @@
       "retrieved_at": "2026-11-06T21:47:54.727238+00:00"
     },
     "Anacamptis papilionacea (L.) R.M.Bateman, Pridgeon & M.W.Chase": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 2808646
+      "status": "available",
+      "scientific_name": "Anacamptis papilionacea (L.) R.M.Bateman, Pridgeon & M.W.Chase",
+      "source": "wikidata",
+      "wikidata_id": "Q6632387",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q6632387",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Anacamptis_papilionacea_%28Torregrande%29.jpg/960px-Anacamptis_papilionacea_%28Torregrande%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Anacamptis_papilionacea_(Torregrande).jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q6632387",
+      "creator": "Hans Hillewaert",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T02:12:40.437875+00:00"
     },
     "Brassica juncea (L.) Czern.": {
       "status": "available",
@@ -212,8 +223,19 @@
       "retrieved_at": "2026-11-06T21:48:00.237700+00:00"
     },
     "Raphanus sativus L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 7678610
+      "status": "available",
+      "scientific_name": "Raphanus sativus L.",
+      "source": "wikidata",
+      "wikidata_id": "Q7224565",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q7224565",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Radish_3371103037_4ab07db0bf_o.jpg/960px-Radish_3371103037_4ab07db0bf_o.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Radish_3371103037_4ab07db0bf_o.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q7224565",
+      "creator": "Self, en:User:Jengod",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Radish_3371103037_4ab07db0bf_o.jpg",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T02:12:40.437891+00:00"
     },
     "Polypodium vulgare L.": {
       "status": "available",
@@ -286,9 +308,19 @@
       "retrieved_at": "2026-11-06T21:49:08.481247+00:00"
     },
     "Achillea ageratifolia (Sm.) Benth. & Hook.f.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Achillea ageratifolia (Sm.) Benth. & Hook.fil."
+      "status": "available",
+      "scientific_name": "Achillea ageratifolia (Sm.) Benth. & Hook.f.",
+      "source": "wikidata",
+      "wikidata_id": "Q4673721",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q4673721",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Achillea_ageratifolia_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Achillea_ageratifolia_2.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q4673721",
+      "creator": "Ghislain118 http://www.fleurs-des-montagnes.net",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T02:12:40.437850+00:00"
     },
     "Achillea ageratum L.": {
       "status": "available",
@@ -548,9 +580,19 @@
       "retrieved_at": "2026-11-06T21:49:18.619339+00:00"
     },
     "Alchemilla arvensis (L.) Scop.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Alchemilla arvensis (L.) Scop."
+      "status": "available",
+      "scientific_name": "Alchemilla arvensis (L.) Scop.",
+      "source": "wikidata",
+      "wikidata_id": "Q19692236",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q19692236",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Aphanes_arvensis.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Aphanes_arvensis.jpeg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q19692236",
+      "creator": "Kristian Peters -- Fabelfroh 06:59, 16 June 2007 (UTC)",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T02:12:40.437908+00:00"
     },
     "Alchemilla australis (Rydb.) Bomble": {
       "status": "unmatched",
@@ -610,8 +652,19 @@
       "retrieved_at": "2026-11-06T21:49:20.671306+00:00"
     },
     "Allium calamarophilon Phitos & Tzanoud.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 2856996
+      "status": "available",
+      "scientific_name": "Allium calamarophilon Phitos & Tzanoud.",
+      "source": "wikidata",
+      "wikidata_id": "Q583246",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q583246",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Allium_calamarophilon_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Allium_calamarophilon_01.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q583246",
+      "creator": "MIPSG/SSC/IUCN",
+      "license": "CC BY-SA 2.5",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T02:12:40.437810+00:00"
     },
     "Allium ampeloprasum L.": {
       "status": "available",
@@ -810,9 +863,19 @@
       "retrieved_at": "2026-11-06T21:49:28.219310+00:00"
     },
     "Anaphalis margaritacea (L.) A.Gray": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Anaphalis margaritacea (L.) A.Gray, 1873"
+      "status": "available",
+      "scientific_name": "Anaphalis margaritacea (L.) A.Gray",
+      "source": "wikidata",
+      "wikidata_id": "Q2365610",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q2365610",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Anapahlis_margaritacea.jpg/960px-Anapahlis_margaritacea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Anapahlis_margaritacea.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q2365610",
+      "creator": "Pendragon39",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Anapahlis_margaritacea.jpg",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T02:12:40.437835+00:00"
     },
     "Anchusa arvensis (L.) M.Bieb.": {
       "status": "unmatched",
@@ -983,9 +1046,19 @@
       "retrieved_at": "2026-11-06T21:49:34.293815+00:00"
     },
     "Anthriscus cerefolium Hoffm.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Anthriscus cerefolium (L.) Hoffm."
+      "status": "available",
+      "scientific_name": "Anthriscus cerefolium Hoffm.",
+      "source": "wikidata",
+      "wikidata_id": "Q218462",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q218462",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Zamatos_turbolya_-_2015.04.17.JPG/960px-Zamatos_turbolya_-_2015.04.17.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Zamatos_turbolya_-_2015.04.17.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q218462",
+      "creator": "Derzsi Elekes Andor",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T02:12:40.437774+00:00"
     },
     "Antennaria dioica (L.) Gaertn.": {
       "status": "available",
@@ -1142,8 +1215,19 @@
       "retrieved_at": "2026-11-06T21:49:40.119013+00:00"
     },
     "Aremonia agrimonoides (L.) DC.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 2988624
+      "status": "available",
+      "scientific_name": "Aremonia agrimonoides (L.) DC.",
+      "source": "wikidata",
+      "wikidata_id": "Q4788798",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q4788798",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Aremonia_agrimonoides.jpg/960px-Aremonia_agrimonoides.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Aremonia_agrimonoides.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q4788798",
+      "creator": "Franz Xaver",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T02:12:40.437862+00:00"
     },
     "Argentina anserina (L.) Rydb.": {
       "status": "available",
