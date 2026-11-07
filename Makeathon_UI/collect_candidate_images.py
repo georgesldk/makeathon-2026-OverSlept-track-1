@@ -73,8 +73,11 @@ def find_image(name):
 
 def names():
     result = set()
-    for book in ('culpeper', 'dioscorides'):
-        with (ROOT / 'matching' / book / 'eligibility.json').open(encoding='utf-8') as f:
+    for book in ('culpeper', 'dioscorides', 'shennong'):
+        path = ROOT / 'matching' / book / 'eligibility.json'
+        if not path.exists():
+            continue
+        with path.open(encoding='utf-8') as f:
             entries = json.load(f)['herbs']
         for entry in entries.values():
             for section in ('shown', 'possible'):
