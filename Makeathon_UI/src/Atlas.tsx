@@ -9,6 +9,7 @@ import { useEffect, useMemo, useRef, useState } from "react"
 import { geoGraticule10, geoOrthographic, geoPath, geoCentroid, geoDistance, type GeoPermissibleObjects } from "d3-geo"
 import { feature } from "topojson-client"
 import type { Topology, GeometryCollection } from "topojson-specification"
+import FamilyIcon from "./FamilyIcon"
 
 type Item = Record<string, any>
 type Region = { type: "Feature"; properties: { LEVEL2_NAM: string }; geometry: GeoPermissibleObjects }
@@ -29,16 +30,6 @@ async function getJson<T>(url: string): Promise<T> {
   return r.json()
 }
 
-/** Placeholder icon for plants without a photo (Marselo: replace with generated icons, see ATLAS_ICONS.md). */
-function LeafIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z" fill="#e2ecdf" stroke="#31583b" strokeWidth="1.4" />
-      <path d="M5 19 15 9" stroke="#31583b" strokeWidth="1.2" />
-    </svg>
-  )
-}
-
 export default function Atlas({ openEntry }: { openEntry: (id: string) => void }) {
   const [regions, setRegions] = useState<Region[]>([])
   const [ranges, setRanges] = useState<Record<string, string[]>>({})
@@ -53,6 +44,7 @@ export default function Atlas({ openEntry }: { openEntry: (id: string) => void }
   const [error, setError] = useState("")
   const [selected, setSelected] = useState<Item | null>(null)
   const [hover, setHover] = useState<Item | null>(null)
+  const [failedImages, setFailedImages] = useState<Set<string>>(() => new Set())
   const [query, setQuery] = useState("")
   const drag = useRef<{ x: number; y: number; r: [number, number] } | null>(null)
   const anim = useRef(0)
@@ -171,9 +163,9 @@ export default function Atlas({ openEntry }: { openEntry: (id: string) => void }
         <p className="eyebrow">Atlas</p>
         <h1>Where the plants grow</h1>
         <p>
-          Each book sits where it was written. Open one to see its plants, then pick a plant to light up
-          where it grows wild today. Plants native near the author's home are the easiest to believe; a
-          plant from another continent is a warning sign. Drag the globe to turn it.
+          Explore locations associated with each historical author and the modern native range of each
+          proposed plant identification. Modern distributions provide context; they do not establish
+          where a plant grew historically or prove an identification. Drag the globe to turn it.
         </p>
       </div>
       <div className="atlas-layout">
@@ -200,9 +192,9 @@ export default function Atlas({ openEntry }: { openEntry: (id: string) => void }
                 onClick={() => pick(p)} onMouseEnter={() => setHover(p)} onMouseLeave={() => setHover(null)}
                 role="button" aria-label={p.preferred_scientific_name}>
                 <circle r="18" className="atlas-bubble-ring" />
-                {p.image?.image_url
-                  ? <image href={p.image.image_url} x="-16" y="-16" width="32" height="32" preserveAspectRatio="xMidYMid slice" clipPath={`url(#clip-${p.id})`} />
-                  : <g transform="translate(-11,-11) scale(0.92)"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z" fill="#e2ecdf" stroke="#31583b" strokeWidth="1.4" /><path d="M5 19 15 9" stroke="#31583b" strokeWidth="1.2" /></g>}
+                {p.image?.image_url && !failedImages.has(p.image.image_url)
+                  ? <image href={p.image.image_url} x="-16" y="-16" width="32" height="32" preserveAspectRatio="xMidYMid slice" clipPath={`url(#clip-${p.id})`} onError={() => setFailedImages(previous => new Set(previous).add(p.image.image_url))} />
+                  : <g transform="translate(-16,-16)"><FamilyIcon family={famOf(p)} /></g>}
               </g>
             ))}
             {markerVisible && familyBubbles.map((f, i) => (
@@ -245,8 +237,9 @@ export default function Atlas({ openEntry }: { openEntry: (id: string) => void }
             <button type="button" aria-label="Reset view" onClick={() => setZoom(1)}>⟲</button>
           </div>
           <div className="atlas-legend">
-            <span><i className="dot book" /> Where the book was written</span>
+            <span><i className="dot book" /> Location associated with the author</span>
             <span><i className="dot native" /> Native range of the selected plant</span>
+            <span>Family icons are illustrations, not species photographs.</span>
           </div>
         </div>
 
@@ -271,7 +264,8 @@ export default function Atlas({ openEntry }: { openEntry: (id: string) => void }
               {error && <p role="alert">{error}</p>}
               {selected && (
                 <div className="atlas-plant">
-                  <div className="atlas-plant-photo">{selected.image?.image_url ? <img src={selected.image.image_url} alt="" /> : <LeafIcon />}</div>
+                  <div className="atlas-plant-photo">{selected.image?.image_url && !failedImages.has(selected.image.image_url) ? <img src={selected.image.image_url} alt="" onError={() => setFailedImages(previous => new Set(previous).add(selected.image.image_url))} /> : <FamilyIcon family={famOf(selected)} />}</div>
+                  {selected.image?.image_url && !failedImages.has(selected.image.image_url) && <p className="atlas-image-credit">Photo of proposed candidate · {selected.image.creator} · <a href={selected.image.license_url} target="_blank" rel="noreferrer">Licence</a> · <a href={selected.image.image_source_url || selected.image.occurrence_url} target="_blank" rel="noreferrer">Source</a></p>}
                   <em>{selected.preferred_scientific_name}</em>
                   <span>{selected.name}{selected.chapter ? ` · ${selected.chapter}` : ""}</span>
                   <p className="atlas-range">

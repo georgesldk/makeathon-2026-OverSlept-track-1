@@ -1144,9 +1144,9 @@ export default function LiveApp() {
     (x) => x.hypothesis.id === selectedCandidate,
   )
   const currentClaim = record?.claims.find((x) => x.claim.id === selectedClaim)
-  // Only claims mapped to a MeSH medical concept are shown; the rest are counted, not listed.
+  // Keep all historical claims accessible, with mapped claims first.
   const meshClaims = record?.claims.filter((x) => x.concepts?.length) || []
-  const hiddenClaims = (record?.claims.length || 0) - meshClaims.length
+  const allClaims = [...(record?.claims || [])].sort((a, b) => Number(Boolean(b.concepts?.length)) - Number(Boolean(a.concepts?.length)))
   const openEntry = async (id: string, target?: { tab: "identification" | "studies"; id: string; includeHidden?: boolean }) => {
     setSection("record")
     setTab(target?.tab || "overview")
@@ -1430,7 +1430,7 @@ export default function LiveApp() {
                         {p.members ? (
                           <>
                             <span className="record-source">
-                              {p.members.length} records · {[...new Set(p.members.map((m: Item) => bookName(m.book)))].join(" & ")}
+                              {p.members.length} records · shared proposed name · {[...new Set(p.members.map((m: Item) => bookName(m.book)))].join(" & ")}
                             </span>
                             <h3 className="card-sci">{p.preferred_scientific_name}</h3>
                             <span className="card-common">{p.members.map((m: Item) => m.name || m.chapter).filter((v: string, i: number, a: string[]) => a.indexOf(v) === i).join(" · ")}</span>
@@ -1796,16 +1796,13 @@ export default function LiveApp() {
                       These are extracted interpretations of historical
                       statements, not evidence of medical effectiveness.
                     </p>
-                    {meshClaims.length === 0 && (
+                    {allClaims.length === 0 && (
                       <div className="empty">
-                        No claim from this entry is mapped to a medical concept.
+                        No historical claims were recorded for this entry.
                       </div>
                     )}
-                    {hiddenClaims > 0 && (
-                      <p className="claims-hidden-note">{hiddenClaims} more claim{hiddenClaims === 1 ? "" : "s"} without a mapped medical concept {hiddenClaims === 1 ? "is" : "are"} not shown.</p>
-                    )}
                     <div className="claims-list">
-                      {meshClaims.map(({ claim: c, concepts }) => (
+                      {allClaims.map(({ claim: c, concepts }) => (
                         <button className="claim-card" key={c.id} onClick={() => openClaim(c.id)}>
                           <span className="claim-card-top">
                             <span className="claim-card-id">Claim {Number(String(c.source_claim_id).split(":").pop()?.replace(/^c/, "")) || ""}</span>
@@ -1850,7 +1847,7 @@ export default function LiveApp() {
                         value={selectedClaim || ""}
                         placeholder="Select a claim"
                         onChange={(v) => v && openClaim(v)}
-                        options={meshClaims.map(({ claim: c, concepts }) => ({
+                        options={allClaims.map(({ claim: c, concepts }) => ({
                           value: c.id,
                           label: c.claim_text,
                           hint: concepts.map((x: Item) => x.name).join(", "),
@@ -2048,7 +2045,7 @@ export default function LiveApp() {
                         </details>
                         {claimDetails.related.length > 0 && (
                           <details className="detail-group">
-                            <summary>The same plant and use in the other book</summary>
+                            <summary>Related records in the other book</summary>
                             <p className="section-explanation">
                               These are inferred groupings based on the recorded
                               species and medical concept; they do not establish
