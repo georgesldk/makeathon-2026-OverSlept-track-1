@@ -398,8 +398,19 @@
       "gbif_name": "Achillea seidlii J.Presl & C.Presl"
     },
     "Achillea ptarmica L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 3120333
+      "status": "available",
+      "scientific_name": "Achillea ptarmica L.",
+      "source": "wikidata",
+      "wikidata_id": "Q1335122",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q1335122",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Achillea_ptarmica_Prague_2011_2.jpg/960px-Achillea_ptarmica_Prague_2011_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Achillea_ptarmica_Prague_2011_2.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q1335122",
+      "creator": "Karelj",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.358629+00:00"
     },
     "Aconitum anthora L.": {
       "status": "available",
@@ -878,9 +889,19 @@
       "retrieved_at": "2026-11-07T02:12:40.437835+00:00"
     },
     "Anchusa arvensis (L.) M.Bieb.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Anchusa arvensis (L.) M.Bieb."
+      "status": "available",
+      "scientific_name": "Anchusa arvensis (L.) M.Bieb.",
+      "source": "wikidata",
+      "wikidata_id": "Q21035",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q21035",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Anchusa_arvensis3.jpg/960px-Anchusa_arvensis3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Anchusa_arvensis3.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q21035",
+      "creator": "A. Roche",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.358693+00:00"
     },
     "Anagyris foetida L.": {
       "status": "available",
@@ -986,8 +1007,19 @@
       "retrieved_at": "2026-11-06T21:49:32.415874+00:00"
     },
     "Anemone nemorosa L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 3033263
+      "status": "available",
+      "scientific_name": "Anemone nemorosa L.",
+      "source": "wikidata",
+      "wikidata_id": "Q161056",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q161056",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Anemone_nemorosa_001.JPG/960px-Anemone_nemorosa_001.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Anemone_nemorosa_001.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q161056",
+      "creator": "Lilly M",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.358714+00:00"
     },
     "Anethum graveolens L.": {
       "status": "available",
@@ -1403,12 +1435,34 @@
       "gbif_name": "Artemisia genipi subsp. genipi"
     },
     "Artemisia fragrans Willd.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 8372298
+      "status": "available",
+      "scientific_name": "Artemisia fragrans Willd.",
+      "source": "wikidata",
+      "wikidata_id": "Q15475258",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q15475258",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Artemisia_fragrans_%28GBIF_3031858979%29.jpg/960px-Artemisia_fragrans_%28GBIF_3031858979%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Artemisia_fragrans_(GBIF_3031858979).jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q15475258",
+      "creator": "Вячеслав Юсупов",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359042+00:00"
     },
     "Artemisia maritima L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 3121650
+      "status": "available",
+      "scientific_name": "Artemisia maritima L.",
+      "source": "wikidata",
+      "wikidata_id": "Q27978",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q27978",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Artemisia-maritima.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Artemisia-maritima.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q27978",
+      "creator": "Sten Porse",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359059+00:00"
     },
     "Artemisia monosperma Delile": {
       "status": "available",
@@ -1720,13 +1774,34 @@
       "retrieved_at": "2026-11-06T21:49:58.521793+00:00"
     },
     "Athamanta cretensis L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 7607769
+      "status": "available",
+      "scientific_name": "Athamanta cretensis L.",
+      "source": "wikidata",
+      "wikidata_id": "Q2650767",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q2650767",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Athamanta_cretensis_002.JPG/960px-Athamanta_cretensis_002.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Athamanta_cretensis_002.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q2650767",
+      "creator": "H. Zell",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359080+00:00"
     },
     "Atropa bella-donna L.": {
-      "status": "unmatched",
-      "gbif_match_type": "FUZZY",
-      "gbif_name": "Atropa belladonna L."
+      "status": "available",
+      "scientific_name": "Atropa bella-donna L.",
+      "source": "wikidata",
+      "wikidata_id": "Q156091",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q156091",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Atropa_belladonna_003.JPG/960px-Atropa_belladonna_003.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Atropa_belladonna_003.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q156091",
+      "creator": "H. Zell",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359097+00:00"
     },
     "Avena barbata Pott ex Link": {
       "status": "available",
@@ -1799,13 +1874,34 @@
       "retrieved_at": "2026-11-06T21:50:01.385164+00:00"
     },
     "Barbarea vulgaris W.T.Aiton": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Barbarea vulgaris (L.) W.T.Aiton"
+      "status": "available",
+      "scientific_name": "Barbarea vulgaris W.T.Aiton",
+      "source": "wikidata",
+      "wikidata_id": "Q157285",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q157285",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%28MHNT%29_Barbarea_vulgaris_-_Habit.jpg/960px-%28MHNT%29_Barbarea_vulgaris_-_Habit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:(MHNT)_Barbarea_vulgaris_-_Habit.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q157285",
+      "creator": "Didier Descouens",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359120+00:00"
     },
     "Balanites aegyptiaca (L.) Delile": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 5421115
+      "status": "available",
+      "scientific_name": "Balanites aegyptiaca (L.) Delile",
+      "source": "wikidata",
+      "wikidata_id": "Q606704",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q606704",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Balanites_aegyptiaca_0730.jpg/960px-Balanites_aegyptiaca_0730.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Balanites_aegyptiaca_0730.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q606704",
+      "creator": "Marco Schmidt",
+      "license": "CC BY-SA 2.5",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359131+00:00"
     },
     "Barbarea verna (Mill.) Asch.": {
       "status": "available",
@@ -1822,9 +1918,19 @@
       "retrieved_at": "2026-11-06T21:50:06.182407+00:00"
     },
     "Berberis aquifolium Pursh": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Berberis aquifolium Pursh"
+      "status": "available",
+      "scientific_name": "Berberis aquifolium Pursh",
+      "source": "wikidata",
+      "wikidata_id": "Q126902242",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q126902242",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Mahonia_aquifolium.jpg/960px-Mahonia_aquifolium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Mahonia_aquifolium.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q126902242",
+      "creator": "The original uploader was Meggar at English Wikipedia.",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359145+00:00"
     },
     "Bellis perennis L.": {
       "status": "available",
@@ -1912,8 +2018,19 @@
       "gbif_name": "Beta vulgaris subsp. adanensis (Pamuk.) Ford-Lloyd & J.T.Williams"
     },
     "Beta trigyna Waldst. & Kit.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 5383926
+      "status": "available",
+      "scientific_name": "Beta trigyna Waldst. & Kit.",
+      "source": "wikidata",
+      "wikidata_id": "Q15588128",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q15588128",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Beta_trigyna.jpg/960px-Beta_trigyna.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Beta_trigyna.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q15588128",
+      "creator": "drawing: J. Schütz",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Beta_trigyna.jpg",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359159+00:00"
     },
     "Betula intermedia var. × intermedia ": {
       "status": "unmatched",
@@ -2089,8 +2206,19 @@
       "retrieved_at": "2026-11-06T21:50:17.858220+00:00"
     },
     "Bunium bulbocastanum L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 3034501
+      "status": "available",
+      "scientific_name": "Bunium bulbocastanum L.",
+      "source": "wikidata",
+      "wikidata_id": "Q252331",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q252331",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Carum_bulbocastanum_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v11.jpg/960px-Carum_bulbocastanum_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Carum_bulbocastanum_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v11.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q252331",
+      "creator": "Jan Kops",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Carum_bulbocastanum_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v11.jpg",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359171+00:00"
     },
     "Bupleurum fruticosum L.": {
       "status": "available",
@@ -2233,14 +2361,34 @@
       "retrieved_at": "2026-11-06T21:50:22.555231+00:00"
     },
     "Capsella bursa-pastoris Medik.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Capsella bursa-pastoris (L.) Medik."
+      "status": "available",
+      "scientific_name": "Capsella bursa-pastoris Medik.",
+      "source": "wikidata",
+      "wikidata_id": "Q27264",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q27264",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Capsella_bursa-pastoris.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Capsella_bursa-pastoris.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q27264",
+      "creator": "Eike Wulfmeyer",
+      "license": "CC BY-SA 2.5",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359181+00:00"
     },
     "Cardamine heptaphylla (Vill.) O.E.Schulz": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Cardamine heptaphylla (L.) O.E.Schulz"
+      "status": "available",
+      "scientific_name": "Cardamine heptaphylla (Vill.) O.E.Schulz",
+      "source": "wikidata",
+      "wikidata_id": "Q1411489",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q1411489",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Fieder-Zahnwurz%2C_Cardamine_heptaphylla.jpg/960px-Fieder-Zahnwurz%2C_Cardamine_heptaphylla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Fieder-Zahnwurz,_Cardamine_heptaphylla.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q1411489",
+      "creator": "Burkhard Mücke",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359191+00:00"
     },
     "Cannabis sativa L.": {
       "status": "available",
@@ -2257,13 +2405,34 @@
       "retrieved_at": "2026-11-06T21:50:23.268459+00:00"
     },
     "Cardopatium corymbosum Pers.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Cardopatium corymbosum (L.) Pers."
+      "status": "available",
+      "scientific_name": "Cardopatium corymbosum Pers.",
+      "source": "wikidata",
+      "wikidata_id": "Q1035776",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q1035776",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Cardopatium_corymbosum_-_Black_chamoeleon_05.jpg/960px-Cardopatium_corymbosum_-_Black_chamoeleon_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Cardopatium_corymbosum_-_Black_chamoeleon_05.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q1035776",
+      "creator": "Zeynel Cebeci",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359200+00:00"
     },
     "Capparis spinosa L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 6370689
+      "status": "available",
+      "scientific_name": "Capparis spinosa L.",
+      "source": "wikidata",
+      "wikidata_id": "Q156251",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q156251",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Capparis_spinosa_Ichkeul_National_Parc.jpg/960px-Capparis_spinosa_Ichkeul_National_Parc.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Capparis_spinosa_Ichkeul_National_Parc.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q156251",
+      "creator": "IssamBarhoumi",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359216+00:00"
     },
     "Carduus personata (L.) Jacq.": {
       "status": "available",
@@ -2453,8 +2622,19 @@
       "retrieved_at": "2026-11-06T21:50:30.909681+00:00"
     },
     "Centaurea salonitana Vis.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 3128910
+      "status": "available",
+      "scientific_name": "Centaurea salonitana Vis.",
+      "source": "wikidata",
+      "wikidata_id": "Q2311785",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q2311785",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Centaurea_salonitana_in_Greece.jpg/960px-Centaurea_salonitana_in_Greece.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Centaurea_salonitana_in_Greece.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q2311785",
+      "creator": "Hermann Hammer (User:Haneburger)",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359225+00:00"
     },
     "Centaurea spinosa L.": {
       "status": "available",
@@ -2513,9 +2693,19 @@
       "retrieved_at": "2026-11-06T21:50:32.867572+00:00"
     },
     "Cerastium fontanum subsp. vulgare (Hartm.) Greuter & Burdet": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Cerastium fontanum subsp. vulgare (Hartm.) Greuter & Burdet"
+      "status": "available",
+      "scientific_name": "Cerastium fontanum subsp. vulgare (Hartm.) Greuter & Burdet",
+      "source": "wikidata",
+      "wikidata_id": "Q19796613",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q19796613",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Cerastium_fontanum_subsp._vulgare%2C_gewone_hoornbloem.jpg/960px-Cerastium_fontanum_subsp._vulgare%2C_gewone_hoornbloem.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Cerastium_fontanum_subsp._vulgare,_gewone_hoornbloem.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q19796613",
+      "creator": "Rasbak",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359243+00:00"
     },
     "Cephaloziella massalongoi (Spruce) Müll.Frib.": {
       "status": "no_eligible_image",
@@ -2624,9 +2814,19 @@
       "retrieved_at": "2026-11-06T21:50:37.748392+00:00"
     },
     "Chorispora tenella DC.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Chorispora tenella (Pall.) DC."
+      "status": "available",
+      "scientific_name": "Chorispora tenella DC.",
+      "source": "wikidata",
+      "wikidata_id": "Q3338529",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q3338529",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Chorispora_tenella_4239.JPG/960px-Chorispora_tenella_4239.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Chorispora_tenella_4239.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q3338529",
+      "creator": "Walter Siegmund (talk)",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359254+00:00"
     },
     "Chondrilla ramosissima Sm.": {
       "status": "available",
@@ -2685,9 +2885,19 @@
       "retrieved_at": "2026-11-06T21:50:40.033693+00:00"
     },
     "Cinnamomum tamala (Buch.-Ham.) T.Nees & C.H.Eberm.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Cinnamomum tamala (Buch.-Ham.) T.Nees & Eberm."
+      "status": "available",
+      "scientific_name": "Cinnamomum tamala (Buch.-Ham.) T.Nees & C.H.Eberm.",
+      "source": "wikidata",
+      "wikidata_id": "Q1661611",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q1661611",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Indian_bay_leaf_-_tejpatta_-_indisches_Lorbeerblatt.jpg/960px-Indian_bay_leaf_-_tejpatta_-_indisches_Lorbeerblatt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Indian_bay_leaf_-_tejpatta_-_indisches_Lorbeerblatt.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q1661611",
+      "creator": "Sonja Pauen",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Indian_bay_leaf_-_tejpatta_-_indisches_Lorbeerblatt.jpg",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:35:08.359272+00:00"
     },
     "Cichorium intybus L.": {
       "status": "available",
@@ -2732,9 +2942,19 @@
       "retrieved_at": "2026-11-06T21:50:41.703789+00:00"
     },
     "Cirsium helenioides (L.) Hill": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Cirsium × helenioides (L.) Hill"
+      "status": "available",
+      "scientific_name": "Cirsium helenioides (L.) Hill",
+      "source": "wikidata",
+      "wikidata_id": "Q15546864",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q15546864",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Huopaohdake_Cirsium_helenioides_VI08_C_H5524.jpg/960px-Huopaohdake_Cirsium_helenioides_VI08_C_H5524.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Huopaohdake_Cirsium_helenioides_VI08_C_H5524.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q15546864",
+      "creator": "Anneli Salo",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.647223+00:00"
     },
     "Circaea alpina L.": {
       "status": "available",
@@ -2854,9 +3074,19 @@
       "retrieved_at": "2026-11-06T21:50:46.096575+00:00"
     },
     "Clinopodium nepeta": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Clinopodium nepeta (L.) Kuntze"
+      "status": "available",
+      "scientific_name": "Clinopodium nepeta",
+      "source": "wikidata",
+      "wikidata_id": "Q15350096",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q15350096",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Calamintha_nepeta_Sturm54.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Calamintha_nepeta_Sturm54.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q15350096",
+      "creator": "Johann Georg Sturm (Painter: Jacob Sturm)",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Calamintha_nepeta_Sturm54.jpg",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.647836+00:00"
     },
     "Clinopodium brevifolium (Wahlenb.) Bräuchler & Hjertson": {
       "status": "available",
@@ -2873,8 +3103,19 @@
       "retrieved_at": "2026-11-06T21:50:47.128595+00:00"
     },
     "Clinopodium menthifolium (Host) Merino": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 11007246
+      "status": "available",
+      "scientific_name": "Clinopodium menthifolium (Host) Merino",
+      "source": "wikidata",
+      "wikidata_id": "Q198339",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q198339",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Calamintha_sylvatica.JPG/960px-Calamintha_sylvatica.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Calamintha_sylvatica.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q198339",
+      "creator": "Xemenendura",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.647871+00:00"
     },
     "Clinopodium nepeta (L.) Kuntze": {
       "status": "available",
@@ -2919,8 +3160,19 @@
       "retrieved_at": "2026-11-06T21:50:48.662762+00:00"
     },
     "Cochlearia anglica L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 5373288
+      "status": "available",
+      "scientific_name": "Cochlearia anglica L.",
+      "source": "wikidata",
+      "wikidata_id": "Q159831",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q159831",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Cochlearia_anglica_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Cochlearia_anglica_01.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q159831",
+      "creator": "Photographer: John Crellin",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.647908+00:00"
     },
     "Cochlearia officinalis L.": {
       "status": "available",
@@ -2951,8 +3203,19 @@
       "retrieved_at": "2026-11-06T21:50:50.457712+00:00"
     },
     "Colchicum autumnale L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 2739622
+      "status": "available",
+      "scientific_name": "Colchicum autumnale L.",
+      "source": "wikidata",
+      "wikidata_id": "Q152553",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q152553",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Colchicum_autumnale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Colchicum_autumnale.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q152553",
+      "creator": "Stemonitis",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Colchicum_autumnale.jpg",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.647948+00:00"
     },
     "Colchicum parnassicum Sart., Orph. & Heldr.": {
       "status": "available",
@@ -3049,9 +3312,19 @@
       "retrieved_at": "2026-11-06T21:50:54.086874+00:00"
     },
     "Convolvulus soldanella L.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Convolvulus soldanella L."
+      "status": "available",
+      "scientific_name": "Convolvulus soldanella L.",
+      "source": "wikidata",
+      "wikidata_id": "Q21872755",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q21872755",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Beach_morning-glory_%28Convolvulus_soldanella%29_%284237298647%29.jpg/960px-Beach_morning-glory_%28Convolvulus_soldanella%29_%284237298647%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Beach_morning-glory_(Convolvulus_soldanella)_(4237298647).jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q21872755",
+      "creator": "Gerry Thomasen from Nanaimo, Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.647980+00:00"
     },
     "Convolvulus arvensis L.": {
       "status": "available",
@@ -3166,8 +3439,19 @@
       "retrieved_at": "2026-11-06T21:50:58.505286+00:00"
     },
     "Cota tinctoria (L.) J.Gay": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 5390618
+      "status": "available",
+      "scientific_name": "Cota tinctoria (L.) J.Gay",
+      "source": "wikidata",
+      "wikidata_id": "Q15551906",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q15551906",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/20170728Cota_tinctoria4.jpg/960px-20170728Cota_tinctoria4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:20170728Cota_tinctoria4.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q15551906",
+      "creator": "AnRo0002",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.648011+00:00"
     },
     "Crambe cordifolia Steven": {
       "status": "available",
@@ -3390,9 +3674,19 @@
       "retrieved_at": "2026-11-06T21:51:09.352305+00:00"
     },
     "Cuscuta epithymum L.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Cuscuta epithymum (L.) L."
+      "status": "available",
+      "scientific_name": "Cuscuta epithymum L.",
+      "source": "wikidata",
+      "wikidata_id": "Q1479326",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q1479326",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Cuscuta_epithymum1.jpg/960px-Cuscuta_epithymum1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Cuscuta_epithymum1.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q1479326",
+      "creator": "Retama",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.648034+00:00"
     },
     "Cupressus sempervirens L.": {
       "status": "available",
@@ -3507,8 +3801,19 @@
       "retrieved_at": "2026-11-06T21:51:13.224447+00:00"
     },
     "Cynara scolymus L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 3112361
+      "status": "available",
+      "scientific_name": "Cynara scolymus L.",
+      "source": "wikidata",
+      "wikidata_id": "Q134609",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q134609",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Cynara_cardunculus_var._scolymus_in_Jardin_des_Plante_de_Paris.jpg/960px-Cynara_cardunculus_var._scolymus_in_Jardin_des_Plante_de_Paris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Cynara_cardunculus_var._scolymus_in_Jardin_des_Plante_de_Paris.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q134609",
+      "creator": "Jebulon",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.648049+00:00"
     },
     "Cynodon dactylon (L.) Pers.": {
       "status": "available",
@@ -3614,9 +3919,19 @@
       "retrieved_at": "2026-11-06T21:51:17.190847+00:00"
     },
     "Delphinium staphisagria L.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Delphinium staphisagria L."
+      "status": "available",
+      "scientific_name": "Delphinium staphisagria L.",
+      "source": "wikidata",
+      "wikidata_id": "Q163934",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q163934",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Delphinium_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-052.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Delphinium_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-052.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q163934",
+      "creator": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Delphinium_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-052.jpg",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.648077+00:00"
     },
     "Daucus guttatus Sm.": {
       "status": "available",
@@ -3969,9 +4284,19 @@
       "retrieved_at": "2026-11-06T21:51:32.094403+00:00"
     },
     "Epilobium angustifolium L.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Epilobium angustifolium L."
+      "status": "available",
+      "scientific_name": "Epilobium angustifolium L.",
+      "source": "wikidata",
+      "wikidata_id": "Q12217056",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q12217056",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Epilobium_angustifolium_2-eheep_%285097302279%29.jpg/960px-Epilobium_angustifolium_2-eheep_%285097302279%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Epilobium_angustifolium_2-eheep_(5097302279).jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q12217056",
+      "creator": "Superior National Forest",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.648123+00:00"
     },
     "Eleusine indica (L.) Gaertn.": {
       "status": "available",
@@ -3988,9 +4313,19 @@
       "retrieved_at": "2026-11-06T21:51:32.763617+00:00"
     },
     "Epilobium parviflorum (Schreb.) Schreb.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Epilobium parviflorum Schreb."
+      "status": "available",
+      "scientific_name": "Epilobium parviflorum (Schreb.) Schreb.",
+      "source": "wikidata",
+      "wikidata_id": "Q159094",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q159094",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Onagraceae_-_Epilobium_parviflorum-2.JPG/960px-Onagraceae_-_Epilobium_parviflorum-2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Onagraceae_-_Epilobium_parviflorum-2.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q159094",
+      "creator": "Hectonichus",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.648149+00:00"
     },
     "Empetrum nigrum L.": {
       "status": "available",
@@ -4171,9 +4506,19 @@
       "retrieved_at": "2026-11-06T21:51:40.322187+00:00"
     },
     "Eruca vesicaria subsp. sativa (Mill.) Hegi": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Eruca vesicaria subsp. sativa (Mill.) Hegi, 1918"
+      "status": "available",
+      "scientific_name": "Eruca vesicaria subsp. sativa (Mill.) Hegi",
+      "source": "wikidata",
+      "wikidata_id": "Q156884",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q156884",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Eruca_sativa_1_IP0206101.jpg/960px-Eruca_sativa_1_IP0206101.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Eruca_sativa_1_IP0206101.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q156884",
+      "creator": "Leo Michels",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Eruca_sativa_1_IP0206101.jpg",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.648175+00:00"
     },
     "Erodium malacoides (L.) L'Hér.": {
       "status": "available",
@@ -4499,8 +4844,19 @@
       "retrieved_at": "2026-11-06T21:51:53.260323+00:00"
     },
     "Euphrasia stricta J.P.Wolff ex J.F.Lehm.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 3171980
+      "status": "available",
+      "scientific_name": "Euphrasia stricta J.P.Wolff ex J.F.Lehm.",
+      "source": "wikidata",
+      "wikidata_id": "Q164251",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q164251",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Euphrasia_stricta_190807.jpg/960px-Euphrasia_stricta_190807.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Euphrasia_stricta_190807.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q164251",
+      "creator": "Bernd Haynold",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.648206+00:00"
     },
     "Euphrasia vigursii Davey": {
       "status": "available",
@@ -4681,9 +5037,19 @@
       "retrieved_at": "2026-11-06T21:51:59.639692+00:00"
     },
     "Fomitopsis officinalis": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Fomitopsis officinalis (Vill.) Bondartsev & Singer"
+      "status": "available",
+      "scientific_name": "Fomitopsis officinalis",
+      "source": "wikidata",
+      "wikidata_id": "Q81797459",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q81797459",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Fomitopsis_officinalis_32014.JPG/960px-Fomitopsis_officinalis_32014.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Fomitopsis_officinalis_32014.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q81797459",
+      "creator": "Walter Siegmund (talk)",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.648239+00:00"
     },
     "Filipendula vulgaris Moench": {
       "status": "available",
@@ -4761,9 +5127,19 @@
       "retrieved_at": "2026-11-06T21:52:02.755350+00:00"
     },
     "Fucus vesiculosus": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Fucus vesiculosus L."
+      "status": "available",
+      "scientific_name": "Fucus vesiculosus",
+      "source": "wikidata",
+      "wikidata_id": "Q754755",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q754755",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Fucus_vesiculosus_Wales.jpg/960px-Fucus_vesiculosus_Wales.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Fucus_vesiculosus_Wales.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q754755",
+      "creator": "User Stemonitis on en.wikipedia",
+      "license": "CC BY-SA 2.5",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.648270+00:00"
     },
     "Fumaria densiflora DC.": {
       "status": "available",
@@ -5023,9 +5399,19 @@
       "retrieved_at": "2026-11-06T21:52:16.995004+00:00"
     },
     "Glaucium corniculatum (L.) Curtis": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Glaucium corniculatum (L.) Curtis"
+      "status": "available",
+      "scientific_name": "Glaucium corniculatum (L.) Curtis",
+      "source": "wikidata",
+      "wikidata_id": "Q159368",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q159368",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Glaucium_corniculatum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Glaucium_corniculatum.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q159368",
+      "creator": "User User:Alberto Salguero on es.wikipedia",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.648328+00:00"
     },
     "Geum urbanum L.": {
       "status": "available",
@@ -5154,9 +5540,19 @@
       "retrieved_at": "2026-11-06T21:52:21.571291+00:00"
     },
     "Helichrysum orientale (L.) Vaill.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Helichrysum orientale (L.) Vaill., 1754"
+      "status": "available",
+      "scientific_name": "Helichrysum orientale (L.) Vaill.",
+      "source": "wikidata",
+      "wikidata_id": "Q2030489",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q2030489",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Helichrysum_orientale_5_%28Corse%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Helichrysum_orientale_5_(Corse).JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q2030489",
+      "creator": "Ghislain118 http://www.fleurs-des-montagnes.net",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.648356+00:00"
     },
     "Helianthus tuberosus L.": {
       "status": "available",
@@ -5243,9 +5639,19 @@
       "retrieved_at": "2026-11-06T21:52:25.021726+00:00"
     },
     "Helminthotheca echioides (L.) Holub": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Helminthotheca echioides (L) Holub"
+      "status": "available",
+      "scientific_name": "Helminthotheca echioides (L.) Holub",
+      "source": "wikidata",
+      "wikidata_id": "Q1764432",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q1764432",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Helminthotheca_echioides_sl65.jpg/960px-Helminthotheca_echioides_sl65.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Helminthotheca_echioides_sl65.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q1764432",
+      "creator": "Stefan.lefnaer",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.648373+00:00"
     },
     "Helleborus viridis L.": {
       "status": "available",
@@ -5332,9 +5738,19 @@
       "retrieved_at": "2026-11-06T21:52:27.904827+00:00"
     },
     "Hexaplex trunculus": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Hexaplex trunculus (Linnaeus, 1758)"
+      "status": "available",
+      "scientific_name": "Hexaplex trunculus",
+      "source": "wikidata",
+      "wikidata_id": "Q2306412",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q2306412",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Hexaplex-trunculus-Purpurschnecke.jpg/960px-Hexaplex-trunculus-Purpurschnecke.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Hexaplex-trunculus-Purpurschnecke.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q2306412",
+      "creator": "Holger Krisp",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.648388+00:00"
     },
     "Hesperis matronalis L.": {
       "status": "available",
@@ -5622,9 +6038,19 @@
       "retrieved_at": "2026-11-06T21:52:37.617279+00:00"
     },
     "Inula britannica L.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Inula britannica L."
+      "status": "available",
+      "scientific_name": "Inula britannica L.",
+      "source": "wikidata",
+      "wikidata_id": "Q1633853",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q1633853",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Inula_britannica.jpeg/960px-Inula_britannica.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Inula_britannica.jpeg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q1633853",
+      "creator": "Kristian Peters -- Fabelfroh 06:18, 20 August 2007 (UTC)",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:43:01.648403+00:00"
     },
     "Hypericum tetrapterum Fr.": {
       "status": "available",
@@ -5800,9 +6226,19 @@
       "retrieved_at": "2026-11-06T21:52:43.440448+00:00"
     },
     "Juniperus excelsa M.Bieb.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Juniperus excelsa M.-Bieb."
+      "status": "available",
+      "scientific_name": "Juniperus excelsa M.Bieb.",
+      "source": "wikidata",
+      "wikidata_id": "Q773892",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q773892",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Juniperus_excelsa_-_Boylu_Ardic_-_Greek_Juniper_07.JPG/960px-Juniperus_excelsa_-_Boylu_Ardic_-_Greek_Juniper_07.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Juniperus_excelsa_-_Boylu_Ardic_-_Greek_Juniper_07.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q773892",
+      "creator": "Zeynel Cebeci",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.715951+00:00"
     },
     "Juncus usitatus L.A.S.Johnson": {
       "status": "available",
@@ -5833,9 +6269,19 @@
       "retrieved_at": "2026-11-06T21:52:44.668471+00:00"
     },
     "Juniperus macrocarpa Sm.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Juniperus macrocarpa Sibth. & Sm."
+      "status": "available",
+      "scientific_name": "Juniperus macrocarpa Sm.",
+      "source": "wikidata",
+      "wikidata_id": "Q138307",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q138307",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Juniperus_macrocarpa_Paros3.jpg/960px-Juniperus_macrocarpa_Paros3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Juniperus_macrocarpa_Paros3.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q138307",
+      "creator": "pandemia on Flickr",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716047+00:00"
     },
     "Juniperus foetidissima Willd.": {
       "status": "available",
@@ -6394,8 +6840,19 @@
       "retrieved_at": "2026-11-06T21:53:07.399513+00:00"
     },
     "Limonium vulgare Mill.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 3082322
+      "status": "available",
+      "scientific_name": "Limonium vulgare Mill.",
+      "source": "wikidata",
+      "wikidata_id": "Q27952",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q27952",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Gewoehnlicher_Strandflieder_%28Limonium_vulgare%29.jpg/960px-Gewoehnlicher_Strandflieder_%28Limonium_vulgare%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Gewoehnlicher_Strandflieder_(Limonium_vulgare).jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q27952",
+      "creator": "peterichman",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716426+00:00"
     },
     "Linaria vulgaris Mill.": {
       "status": "available",
@@ -6618,9 +7075,19 @@
       "retrieved_at": "2026-11-06T21:53:14.972691+00:00"
     },
     "Lythrum borysthenicum (Schrank) Litv.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Lythrum borysthenicum (M.Bieb. ex Schrank) Litv."
+      "status": "available",
+      "scientific_name": "Lythrum borysthenicum (Schrank) Litv.",
+      "source": "wikidata",
+      "wikidata_id": "Q17583579",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q17583579",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Lythrum_borysthenicum_kz02.jpg/960px-Lythrum_borysthenicum_kz02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Lythrum_borysthenicum_kz02.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q17583579",
+      "creator": "Krzysztof Ziarnek, Kenraiz",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716484+00:00"
     },
     "Lysimachia nummularia L.": {
       "status": "available",
@@ -6698,8 +7165,19 @@
       "retrieved_at": "2026-11-06T21:53:18.101931+00:00"
     },
     "Mandragora officinarum L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 5341748
+      "status": "available",
+      "scientific_name": "Mandragora officinarum L.",
+      "source": "wikidata",
+      "wikidata_id": "Q545550",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q545550",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Mandragora_officinarum_001.JPG/960px-Mandragora_officinarum_001.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Mandragora_officinarum_001.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q545550",
+      "creator": "H. Zell",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716540+00:00"
     },
     "Marrubium incanum Desr.": {
       "status": "available",
@@ -6846,9 +7324,19 @@
       "retrieved_at": "2026-11-06T21:53:23.724300+00:00"
     },
     "Mentha longifolia (L.) Huds.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Mentha longifolia (L.) Huds."
+      "status": "available",
+      "scientific_name": "Mentha longifolia (L.) Huds.",
+      "source": "wikidata",
+      "wikidata_id": "Q161924",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q161924",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Mentha_longifolia_2005.08.02_09.53.56.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Mentha_longifolia_2005.08.02_09.53.56.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q161924",
+      "creator": "Michael Becker",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716567+00:00"
     },
     "Mentha arvensis L.": {
       "status": "available",
@@ -7052,9 +7540,19 @@
       "retrieved_at": "2026-11-06T21:53:31.822221+00:00"
     },
     "Mutarda arvensis (L.) D.A.German": {
-      "status": "unmatched",
-      "gbif_match_type": "NONE",
-      "gbif_name": null
+      "status": "available",
+      "scientific_name": "Mutarda arvensis (L.) D.A.German",
+      "source": "wikidata",
+      "wikidata_id": "Q124728023",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q124728023",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Herik_17-10-2005_13.59.40.JPG/960px-Herik_17-10-2005_13.59.40.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Herik_17-10-2005_13.59.40.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q124728023",
+      "creator": "No machine-readable author provided. TeunSpaans assumed (based on copyright claims).",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716588+00:00"
     },
     "Mutarda nigra Bernh.": {
       "status": "unmatched",
@@ -7160,9 +7658,19 @@
       "retrieved_at": "2026-11-06T21:53:35.455760+00:00"
     },
     "Nasturtium microphyllum (Boenn.) Rchb.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Nasturtium microphyllum (Boenn. ex Rchb.) Rchb."
+      "status": "available",
+      "scientific_name": "Nasturtium microphyllum (Boenn.) Rchb.",
+      "source": "wikidata",
+      "wikidata_id": "Q164692",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q164692",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Slanke_waterkers_bloeiwijze_%28Rorippa_microphylla_inflorescens%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Slanke_waterkers_bloeiwijze_(Rorippa_microphylla_inflorescens).jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q164692",
+      "creator": "Rasbak",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716610+00:00"
     },
     "Narcissus tazetta L.": {
       "status": "available",
@@ -7305,9 +7813,19 @@
       "retrieved_at": "2026-11-06T21:53:40.062971+00:00"
     },
     "Nuphar lutea (L.) Sm.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Nuphar lutea (L.) Sibth. & Sm."
+      "status": "available",
+      "scientific_name": "Nuphar lutea (L.) Sm.",
+      "source": "wikidata",
+      "wikidata_id": "Q146406",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q146406",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Nuphar_lutea.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Nuphar_lutea.jpeg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q146406",
+      "creator": "Kristian Peters -- Fabelfroh 15:38, 1 October 2006 (UTC)",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716650+00:00"
     },
     "Nigella sativa L.": {
       "status": "available",
@@ -7389,8 +7907,19 @@
       "retrieved_at": "2026-11-06T21:53:44.102744+00:00"
     },
     "Oenanthe aquatica (L.) Poir.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 5371888
+      "status": "available",
+      "scientific_name": "Oenanthe aquatica (L.) Poir.",
+      "source": "wikidata",
+      "wikidata_id": "Q1549096",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q1549096",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/OenantheAquatica.jpg/960px-OenantheAquatica.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:OenantheAquatica.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q1549096",
+      "creator": "Christian Fischer",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716674+00:00"
     },
     "Oenanthe silaifolia M.Bieb.": {
       "status": "available",
@@ -7491,8 +8020,19 @@
       "retrieved_at": "2026-11-06T21:53:48.648293+00:00"
     },
     "Ophioglossum vulgatum L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 2650133
+      "status": "available",
+      "scientific_name": "Ophioglossum vulgatum L.",
+      "source": "wikidata",
+      "wikidata_id": "Q847497",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q847497",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Ophioglossum_vulgatum_Saarland_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Ophioglossum_vulgatum_Saarland_01.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q847497",
+      "creator": "Orchi",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716692+00:00"
     },
     "Orchis anthropophora (L.) All.": {
       "status": "available",
@@ -7523,8 +8063,19 @@
       "retrieved_at": "2026-11-06T21:53:50.543317+00:00"
     },
     "Orchis militaris L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 2809968
+      "status": "available",
+      "scientific_name": "Orchis militaris L.",
+      "source": "wikidata",
+      "wikidata_id": "Q162755",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q162755",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Hall_k%C3%A4pp_-_Orchis_militaris.jpg/960px-Hall_k%C3%A4pp_-_Orchis_militaris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Hall_k%C3%A4pp_-_Orchis_militaris.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q162755",
+      "creator": "Kristian Pikner",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716718+00:00"
     },
     "Orchis × loreziana Brügger": {
       "status": "available",
@@ -7630,9 +8181,19 @@
       "retrieved_at": "2026-11-06T21:53:56.205334+00:00"
     },
     "Otanthus maritimus (L.) Hoffmanns. & Link": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Otanthus maritimus (L.) Hoffmanns. & Link"
+      "status": "available",
+      "scientific_name": "Otanthus maritimus (L.) Hoffmanns. & Link",
+      "source": "wikidata",
+      "wikidata_id": "Q10260538",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q10260538",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Otanthus_maritimus_2.JPG/960px-Otanthus_maritimus_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Otanthus_maritimus_2.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q10260538",
+      "creator": "User:Haplochromis",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716748+00:00"
     },
     "Oryza sativa L.": {
       "status": "available",
@@ -7733,9 +8294,19 @@
       "retrieved_at": "2026-11-06T21:54:01.491295+00:00"
     },
     "Paeonia mascula subsp. mascula ": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Paeonia mascula subsp. mascula"
+      "status": "available",
+      "scientific_name": "Paeonia mascula subsp. mascula ",
+      "source": "wikidata",
+      "wikidata_id": "Q21384025",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q21384025",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Paeonia_mascula_01.jpg/960px-Paeonia_mascula_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Paeonia_mascula_01.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q21384025",
+      "creator": "Michael Wolf",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716764+00:00"
     },
     "Oxalis stricta L.": {
       "status": "available",
@@ -7995,9 +8566,19 @@
       "retrieved_at": "2026-11-06T21:54:18.559379+00:00"
     },
     "Patellifolia procumbens (C.Sm. ex Hornem.) A.J.Scott, Ford-Lloyd & J.T.Williams": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Patellifolia procumbens (Chr.P.Sm. ex Hornem.) A.J.Scott, Ford-Lloyd & J.T.Williams"
+      "status": "available",
+      "scientific_name": "Patellifolia procumbens (C.Sm. ex Hornem.) A.J.Scott, Ford-Lloyd & J.T.Williams",
+      "source": "wikidata",
+      "wikidata_id": "Q17245262",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q17245262",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Patellifolia_procumbens_Tenerife_1.jpg/960px-Patellifolia_procumbens_Tenerife_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Patellifolia_procumbens_Tenerife_1.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q17245262",
+      "creator": "Gabriele Kothe-Heinrich",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716807+00:00"
     },
     "Paspalum distichum L.": {
       "status": "available",
@@ -8028,14 +8609,34 @@
       "retrieved_at": "2026-11-06T21:54:19.675575+00:00"
     },
     "Persicaria bistorta (L.) Samp.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Persicaria bistorta (L.) Samp."
+      "status": "available",
+      "scientific_name": "Persicaria bistorta (L.) Samp.",
+      "source": "wikidata",
+      "wikidata_id": "Q14927381",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q14927381",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/PersicariaBistortaSuperba.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:PersicariaBistortaSuperba.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q14927381",
+      "creator": "en:User:Ramin Nakisa",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716837+00:00"
     },
     "Persicaria hydropiper (L.) Delarbre": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Persicaria hydropiper (L.) Delarbre"
+      "status": "available",
+      "scientific_name": "Persicaria hydropiper (L.) Delarbre",
+      "source": "wikidata",
+      "wikidata_id": "Q160113",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q160113",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Polygonum_hydropiper1.jpg/960px-Polygonum_hydropiper1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Polygonum_hydropiper1.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q160113",
+      "creator": "No machine-readable author provided. Aroche assumed (based on copyright claims).",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716855+00:00"
     },
     "Pentaglottis sempervirens (L.) Tausch ex L.H.Bailey": {
       "status": "available",
@@ -8066,9 +8667,19 @@
       "retrieved_at": "2026-11-06T21:54:20.583128+00:00"
     },
     "Petasites pyrenaicus (Loefl.) G.López": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Petasites pyrenaicus (L.) G.López"
+      "status": "available",
+      "scientific_name": "Petasites pyrenaicus (Loefl.) G.López",
+      "source": "wikidata",
+      "wikidata_id": "Q15587666",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q15587666",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Petasites_fragrans_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Petasites_fragrans_2.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q15587666",
+      "creator": "Ghislain118 (AD) http://www.fleurs-des-montagnes.net",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716872+00:00"
     },
     "Petasites hybridus (L.) G.Gaertn., B.Mey. & Scherb.": {
       "status": "available",
@@ -8118,19 +8729,49 @@
       "retrieved_at": "2026-11-06T21:54:22.467801+00:00"
     },
     "Peucedanum cervaria (L.) Lapeyr.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Peucedanum cervaria (L.) Lapeyr."
+      "status": "available",
+      "scientific_name": "Peucedanum cervaria (L.) Lapeyr.",
+      "source": "wikidata",
+      "wikidata_id": "Q1620531",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q1620531",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Apiaceae_-_Peucedanum_cervaria-3.JPG/960px-Apiaceae_-_Peucedanum_cervaria-3.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Apiaceae_-_Peucedanum_cervaria-3.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q1620531",
+      "creator": "Hectonichus",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716899+00:00"
     },
     "Peucedanum ostruthium (L.) W.D.J.Koch": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Peucedanum ostruthium (L.) W.D.J.Koch"
+      "status": "available",
+      "scientific_name": "Peucedanum ostruthium (L.) W.D.J.Koch",
+      "source": "wikidata",
+      "wikidata_id": "Q202532",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q202532",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Peucedanum_ostruthium_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-236.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Peucedanum_ostruthium_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-236.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q202532",
+      "creator": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Peucedanum_ostruthium_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-236.jpg",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716921+00:00"
     },
     "Peucedanum palustre (L.) Moench": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Peucedanum palustre (L.) Moench"
+      "status": "available",
+      "scientific_name": "Peucedanum palustre (L.) Moench",
+      "source": "wikidata",
+      "wikidata_id": "Q962714",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q962714",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Peucedanum_palustre_bluete.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Peucedanum_palustre_bluete.jpeg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q962714",
+      "creator": "Kristian Peters -- Fabelfroh 13:44, 15 December 2005 (UTC)",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716937+00:00"
     },
     "Peucedanum officinale L.": {
       "status": "available",
@@ -8161,8 +8802,19 @@
       "retrieved_at": "2026-11-06T21:54:24.338512+00:00"
     },
     "Phaseolus vulgaris L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 5350452
+      "status": "available",
+      "scientific_name": "Phaseolus vulgaris L.",
+      "source": "wikidata",
+      "wikidata_id": "Q42339",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q42339",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Snijboon_peulen_Phaseolus_vulgaris.jpg/960px-Snijboon_peulen_Phaseolus_vulgaris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Snijboon_peulen_Phaseolus_vulgaris.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q42339",
+      "creator": "Rasbak",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716972+00:00"
     },
     "Phlomis fruticosa L.": {
       "status": "available",
@@ -8254,14 +8906,34 @@
       "retrieved_at": "2026-11-06T21:54:29.111472+00:00"
     },
     "Pilosella officinarum F.W.Schultz & Sch.Bip.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Pilosella officinarum F.W.Schultz & Sch.Bip., 1862"
+      "status": "available",
+      "scientific_name": "Pilosella officinarum F.W.Schultz & Sch.Bip.",
+      "source": "wikidata",
+      "wikidata_id": "Q15593797",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q15593797",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Mouse-Ear_Hawkweed_%28Pilosella_officinarum%29_-_geograph.org.uk_-_1369110.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Mouse-Ear_Hawkweed_(Pilosella_officinarum)_-_geograph.org.uk_-_1369110.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q15593797",
+      "creator": "Anne Burgess",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.716987+00:00"
     },
     "Pimpinella major Huds.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Pimpinella major (L.) Huds."
+      "status": "available",
+      "scientific_name": "Pimpinella major Huds.",
+      "source": "wikidata",
+      "wikidata_id": "Q1548163",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q1548163",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Apiaceae_-_Pimpinella_major-1.JPG/960px-Apiaceae_-_Pimpinella_major-1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Apiaceae_-_Pimpinella_major-1.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q1548163",
+      "creator": "Hectonichus",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.717002+00:00"
     },
     "Picris rhagadioloides (L.) Desf.": {
       "status": "available",
@@ -8460,9 +9132,19 @@
       "retrieved_at": "2026-11-06T21:54:37.062008+00:00"
     },
     "Plantago indica L.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Plantago indica L."
+      "status": "available",
+      "scientific_name": "Plantago indica L.",
+      "source": "wikidata",
+      "wikidata_id": "Q25399593",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q25399593",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Plantago_arenaria_%28habitus%29.jpg/960px-Plantago_arenaria_%28habitus%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Plantago_arenaria_(habitus).jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q25399593",
+      "creator": "Le.Loup.Gris",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:50:08.717017+00:00"
     },
     "Plantago coronopus L.": {
       "status": "available",
@@ -8783,14 +9465,34 @@
       "retrieved_at": "2026-11-06T21:54:48.118967+00:00"
     },
     "Potentilla rivalis Nutt.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Potentilla rivalis Nutt."
+      "status": "available",
+      "scientific_name": "Potentilla rivalis Nutt.",
+      "source": "wikidata",
+      "wikidata_id": "Q7234861",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q7234861",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Potentilla_rivalis_BB-1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Potentilla_rivalis_BB-1913.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q7234861",
+      "creator": "Britton, N.L., and A. Brown.",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Potentilla_rivalis_BB-1913.jpg",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431175+00:00"
     },
     "Prangos ferulacea Lindl.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Prangos ferulacea (L.) Lindl."
+      "status": "available",
+      "scientific_name": "Prangos ferulacea Lindl.",
+      "source": "wikidata",
+      "wikidata_id": "Q15590366",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q15590366",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Prangos_ferulacea.jpg/960px-Prangos_ferulacea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Prangos_ferulacea.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q15590366",
+      "creator": "איתן פרמן",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431537+00:00"
     },
     "Potentilla reptans L.": {
       "status": "available",
@@ -8891,9 +9593,19 @@
       "retrieved_at": "2026-11-06T21:54:53.557803+00:00"
     },
     "Prunus persica (L.) Batsch": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Prunus persica (L.) Batsch"
+      "status": "available",
+      "scientific_name": "Prunus persica (L.) Batsch",
+      "source": "wikidata",
+      "wikidata_id": "Q13189",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q13189",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Autumn_Red_peaches.jpg/960px-Autumn_Red_peaches.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Autumn_Red_peaches.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q13189",
+      "creator": "Jack Dykinga, USDA",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Autumn_Red_peaches.jpg",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431581+00:00"
     },
     "Prunus domestica L.": {
       "status": "available",
@@ -9209,9 +9921,19 @@
       "retrieved_at": "2026-11-06T21:55:10.881215+00:00"
     },
     "Ranunculus ficaria L.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Ranunculus ficaria L."
+      "status": "available",
+      "scientific_name": "Ranunculus ficaria L.",
+      "source": "wikidata",
+      "wikidata_id": "Q19796483",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q19796483",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Ranunculus_ficaria-1.JPG/960px-Ranunculus_ficaria-1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Ranunculus_ficaria-1.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q19796483",
+      "creator": "Karduelis",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Ranunculus_ficaria-1.JPG",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431597+00:00"
     },
     "Ranunculus repens L.": {
       "status": "available",
@@ -9560,9 +10282,19 @@
       "retrieved_at": "2026-11-06T21:55:26.445939+00:00"
     },
     "Rubus affinis Weihe & Nees": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Rubus affinis Weihe"
+      "status": "available",
+      "scientific_name": "Rubus affinis Weihe & Nees",
+      "source": "wikidata",
+      "wikidata_id": "Q124621668",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q124621668",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Rubus_affinis_1DS-II_1-C4196.jpg/960px-Rubus_affinis_1DS-II_1-C4196.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Rubus_affinis_1DS-II_1-C4196.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q124621668",
+      "creator": "SAplants",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431618+00:00"
     },
     "Rubia tinctorum L.": {
       "status": "available",
@@ -9710,9 +10442,19 @@
       "retrieved_at": "2026-11-06T21:55:33.599887+00:00"
     },
     "Rumex hydrolapathum Huds.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Rumex hydrolapathum (Scop.) Huds."
+      "status": "available",
+      "scientific_name": "Rumex hydrolapathum Huds.",
+      "source": "wikidata",
+      "wikidata_id": "Q158188",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q158188",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Rumex_hydrolapathum2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Rumex_hydrolapathum2.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q158188",
+      "creator": "No machine-readable author provided. Zirpe~commonswiki assumed (based on copyright claims).",
+      "license": "CC BY-SA 2.5",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431648+00:00"
     },
     "Rumex crispus L.": {
       "status": "available",
@@ -10042,9 +10784,19 @@
       "retrieved_at": "2026-11-06T21:55:47.161594+00:00"
     },
     "Sanguisorba minor Scop.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Sanguisorba minor Scop."
+      "status": "available",
+      "scientific_name": "Sanguisorba minor Scop.",
+      "source": "wikidata",
+      "wikidata_id": "Q163799",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q163799",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/20130530Sanguisorba_minor4.jpg/960px-20130530Sanguisorba_minor4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:20130530Sanguisorba_minor4.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q163799",
+      "creator": "AnRo0002",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431674+00:00"
     },
     "Sambucus nigra L.": {
       "status": "available",
@@ -10327,8 +11079,19 @@
       "retrieved_at": "2026-11-06T21:56:05.466257+00:00"
     },
     "Senecio sarracenicus L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 7903764
+      "status": "available",
+      "scientific_name": "Senecio sarracenicus L.",
+      "source": "wikidata",
+      "wikidata_id": "Q743916",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q743916",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Senecio_fluviatalis_R0018196.JPG/960px-Senecio_fluviatalis_R0018196.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Senecio_fluviatalis_R0018196.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q743916",
+      "creator": "Me",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Senecio_fluviatalis_R0018196.JPG",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431698+00:00"
     },
     "Senecio quadridentatus Labill.": {
       "status": "available",
@@ -10429,9 +11192,19 @@
       "retrieved_at": "2026-11-06T21:56:08.395876+00:00"
     },
     "Sinapis alba subsp. alba L.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Sinapis alba subsp. alba"
+      "status": "available",
+      "scientific_name": "Sinapis alba subsp. alba L.",
+      "source": "wikidata",
+      "wikidata_id": "Q48856319",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q48856319",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Sinapis_alba_3.JPG/960px-Sinapis_alba_3.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Sinapis_alba_3.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q48856319",
+      "creator": "Ariel Palmon",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431720+00:00"
     },
     "Silene vulgaris (Moench) Garcke": {
       "status": "available",
@@ -10672,9 +11445,19 @@
       "retrieved_at": "2026-11-06T21:56:16.913833+00:00"
     },
     "Sonchus asper": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Sonchus asper (L.) Hill"
+      "status": "available",
+      "scientific_name": "Sonchus asper",
+      "source": "wikidata",
+      "wikidata_id": "Q1065570",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q1065570",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/%28MHNT%29_Sonchus_asper_-_Plant_habit.jpg/960px-%28MHNT%29_Sonchus_asper_-_Plant_habit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:(MHNT)_Sonchus_asper_-_Plant_habit.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q1065570",
+      "creator": "Didier Descouens",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431790+00:00"
     },
     "Solidago virgaurea L.": {
       "status": "available",
@@ -10780,9 +11563,19 @@
       "gbif_name": "Squilla maritima (L.) Steinh."
     },
     "Stellaria aquatica Scop.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Stellaria aquatica (L.) Scop."
+      "status": "available",
+      "scientific_name": "Stellaria aquatica Scop.",
+      "source": "wikidata",
+      "wikidata_id": "Q157859",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q157859",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Myosoton_aquaticum1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Myosoton_aquaticum1.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q157859",
+      "creator": "Kurt Stüber [1]",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431832+00:00"
     },
     "Spergula arvensis L.": {
       "status": "available",
@@ -10939,8 +11732,19 @@
       "retrieved_at": "2026-11-06T21:56:26.469332+00:00"
     },
     "Symphytum tuberosum L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 2926065
+      "status": "available",
+      "scientific_name": "Symphytum tuberosum L.",
+      "source": "wikidata",
+      "wikidata_id": "Q159613",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q159613",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Symphytum_tuberosum_Eglinton.JPG/960px-Symphytum_tuberosum_Eglinton.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Symphytum_tuberosum_Eglinton.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q159613",
+      "creator": "Rosser1954 Roger Griffith",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Symphytum_tuberosum_Eglinton.JPG",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431847+00:00"
     },
     "Symphytum officinale L.": {
       "status": "available",
@@ -11059,8 +11863,19 @@
       "retrieved_at": "2026-11-06T21:56:30.834058+00:00"
     },
     "Tanacetum balsamita L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 3118254
+      "status": "available",
+      "scientific_name": "Tanacetum balsamita L.",
+      "source": "wikidata",
+      "wikidata_id": "Q1451844",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q1451844",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Balsamita_major.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Balsamita_major.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q1451844",
+      "creator": "Stanislav Doronenko",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431875+00:00"
     },
     "Tanacetum parthenium (L.) Sch.Bip.": {
       "status": "available",
@@ -11320,9 +12135,19 @@
       "retrieved_at": "2026-11-06T21:56:40.210889+00:00"
     },
     "Thymus alpestris Tausch ex A.Kern.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Thymus alpestris (Čelak.) Tausch ex A.Kern."
+      "status": "available",
+      "scientific_name": "Thymus alpestris Tausch ex A.Kern.",
+      "source": "wikidata",
+      "wikidata_id": "Q11765791",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q11765791",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Thymus_alpestris_f._aurea_in_Botanical_garden%2C_Minsk_01.JPG/960px-Thymus_alpestris_f._aurea_in_Botanical_garden%2C_Minsk_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Thymus_alpestris_f._aurea_in_Botanical_garden,_Minsk_01.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q11765791",
+      "creator": "Хомелка",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431889+00:00"
     },
     "Thymbra capitata (L.) Cav.": {
       "status": "available",
@@ -11465,8 +12290,19 @@
       "retrieved_at": "2026-11-06T21:56:45.410444+00:00"
     },
     "Thymus zygis L.": {
-      "status": "no_eligible_image",
-      "gbif_taxon_id": 7793938
+      "status": "available",
+      "scientific_name": "Thymus zygis L.",
+      "source": "wikidata",
+      "wikidata_id": "Q851544",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q851544",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Thymus_zygis_1.JPG/960px-Thymus_zygis_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Thymus_zygis_1.JPG",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q851544",
+      "creator": "Ximenex",
+      "license": "CC BY-SA 2.1 es",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.1/es/deed.en",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431914+00:00"
     },
     "Tilia platyphyllos Scop.": {
       "status": "available",
@@ -11656,9 +12492,19 @@
       "retrieved_at": "2026-11-06T21:56:53.032733+00:00"
     },
     "Tripleurospermum inodorum (L.) Sch.Bip.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Tripleurospermum inodorum (L.) Sch.-Bip"
+      "status": "available",
+      "scientific_name": "Tripleurospermum inodorum (L.) Sch.Bip.",
+      "source": "wikidata",
+      "wikidata_id": "Q19848986",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q19848986",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Tripleurospermum_inodorum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-178.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Tripleurospermum_inodorum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-178.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q19848986",
+      "creator": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Tripleurospermum_inodorum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-178.jpg",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431935+00:00"
     },
     "Tripolium pannonicum subsp. tripolium (L.) Greuter": {
       "status": "unmatched",
@@ -11736,9 +12582,19 @@
       "retrieved_at": "2026-11-06T21:56:57.614950+00:00"
     },
     "Tyrimnus leucographus Cass.": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Tyrimnus leucographus (L.) Cass."
+      "status": "available",
+      "scientific_name": "Tyrimnus leucographus Cass.",
+      "source": "wikidata",
+      "wikidata_id": "Q1400875",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q1400875",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Tyrimnus_leucographus.jpg/960px-Tyrimnus_leucographus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Tyrimnus_leucographus.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q1400875",
+      "creator": "Dinkum",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431947+00:00"
     },
     "Tussilago farfara L.": {
       "status": "available",
@@ -11783,9 +12639,19 @@
       "retrieved_at": "2026-11-06T21:57:00.148845+00:00"
     },
     "Ulva lactuca": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Ulva lactuca L."
+      "status": "available",
+      "scientific_name": "Ulva lactuca",
+      "source": "wikidata",
+      "wikidata_id": "Q852879",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q852879",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Sea_lettuce_in_Brofjorden_1_-_cropped.jpg/960px-Sea_lettuce_in_Brofjorden_1_-_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Sea_lettuce_in_Brofjorden_1_-_cropped.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q852879",
+      "creator": "W.carter",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431973+00:00"
     },
     "Typha domingensis Pers.": {
       "status": "available",
@@ -11830,9 +12696,19 @@
       "retrieved_at": "2026-11-06T21:57:02.059620+00:00"
     },
     "Usnea barbata": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Usnea barbata (L.) Weber ex F.H.Wigg"
+      "status": "available",
+      "scientific_name": "Usnea barbata",
+      "source": "wikidata",
+      "wikidata_id": "Q3552691",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q3552691",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Reserva_nacional_Magallanes%2C_Punta_Arenas%2C_2019_%2808%29.jpg/960px-Reserva_nacional_Magallanes%2C_Punta_Arenas%2C_2019_%2808%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Reserva_nacional_Magallanes,_Punta_Arenas,_2019_(08).jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q3552691",
+      "creator": "Draceane",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:57:13.431987+00:00"
     },
     "Urtica pilulifera L.": {
       "status": "available",
@@ -12237,9 +13113,19 @@
       "retrieved_at": "2026-11-06T21:57:17.686218+00:00"
     },
     "Viola bicolor Pursh": {
-      "status": "unmatched",
-      "gbif_match_type": "EXACT",
-      "gbif_name": "Viola bicolor Pursh"
+      "status": "available",
+      "scientific_name": "Viola bicolor Pursh",
+      "source": "wikidata",
+      "wikidata_id": "Q14420159",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q14420159",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Viola_bicolor_jamestown1.jpg/960px-Viola_bicolor_jamestown1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "image_source_url": "https://commons.wikimedia.org/wiki/File:Viola_bicolor_jamestown1.jpg",
+      "occurrence_url": "https://www.wikidata.org/wiki/Q14420159",
+      "creator": "Djlayton4",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "publisher": "Wikimedia Commons",
+      "retrieved_at": "2026-11-07T11:58:11.961494+00:00"
     },
     "Vincetoxicum nigrum (L.) Moench": {
       "status": "available",
