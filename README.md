@@ -4,11 +4,26 @@ EthnoTrace connects historical medicinal texts with proposed botanical identific
 
 **Explore the prototype:** [ethnotrace.vercel.app](https://ethnotrace.vercel.app) · [API health and selected snapshot](https://ethnotrace-api.onrender.com/api/health)
 
+![EthnoTrace Explore page, showing the catalogue search and filters](docs/images/ethnotrace-explore.png)
+
+## Try EthnoTrace in 60 seconds
+
+1. [Open the catalogue](https://ethnotrace.vercel.app), search **Carrots**, and open Culpeper's entry.
+2. In **Identification**, inspect the proposed modern plant and the evidence behind it.
+3. In **Claims & Research**, follow the historical claim about menstrual flow to a related research record and its assessment.
+4. Open **Relationships** or the **Knowledge Map** to explore connections. See the [worked evidence trail](#a-real-evidence-trail-culpepers-carrots) below for the source records.
+
+The application currently navigates by in-page state; there is no verified direct link to an individual entry. Search for Carrots after opening the catalogue.
+
 ## Contents
 
-- [Project and demo](#what-ethnotrace-does)
+- [Try the demo](#try-ethnotrace-in-60-seconds)
+- [Project overview](#what-ethnotrace-does)
+- [Reproducibility](#reproducibility-at-a-glance)
+- [Real evidence trail](#a-real-evidence-trail-culpepers-carrots)
 - [Limitations & availability](#limitations--availability)
 - [Results and Neo4j graph](#current-graph-verified-snapshot-counts)
+- [Evaluation and validation status](#evaluation-and-validation-status)
 - [Pipeline and implementation](#pipeline-from-historical-texts-to-the-interface)
 - [Setup and repository guide](#start-here)
 - [Historical works and editions](#books-and-editions)
@@ -29,6 +44,16 @@ The expert-review feature is an explicitly labelled **interface demonstration**.
 **Neo4j hosting:** The graph is hosted for two weeks starting **7 November 2026**, until **21 November 2026**. If access is needed afterwards, contact the project team to request a database dump. The dump is **over 1.2 GB**.
 
 **Reproducibility and coverage:** Some inputs, API caches and model replies are distributed separately; see [MISSING_FILES.md](MISSING_FILES.md). Historical extraction, candidate identification and claim–study assessments can contain errors. The Stage 3 pilot review is provisional; see [open issues](#open-issues).
+
+## Reproducibility at a glance
+
+| Question | Current answer |
+| --- | --- |
+| **Can I try the website?** | Use the [hosted demo](https://ethnotrace.vercel.app) while its services are available. To run the full application locally, you need a compatible, populated Neo4j graph; see the [UI setup](Makeathon_UI/README.md). |
+| **Can I recreate the graph from Git alone?** | Not completely. Core code and many processed outputs are tracked, but some original downloads, source outputs, model replies, caches and full unit files are distributed separately. See [MISSING_FILES.md](MISSING_FILES.md) and [structured import requirements](neo4j/STRUCTURED.md). |
+| **Can I reproduce the results?** | Saved tracked outputs can be inspected, and some deterministic downstream stages can be rerun when their inputs are present. Other stages need the separately distributed files, external services or model access; repeated AI calls need not produce identical answers. Check [MISSING_FILES.md](MISSING_FILES.md) for stage-specific requirements and overwrite risks. |
+| **Can I run software tests?** | With Python 3.10 or newer, run `python3.10 -B tests/run_tests.py` from the repository root. A successful run exits with status 0 and ends in `OK`; see [tests/README.md](tests/README.md). Passing tests do not establish scientific correctness. |
+| **Can I obtain the graph?** | The team can provide a dump larger than 1.2 GB on request. Contact the project team; no public dump download is currently listed. Import requires a compatible Neo4j environment and adequate storage. |
 
 ## Current graph: verified snapshot counts
 
@@ -86,25 +111,37 @@ The diagram is an overview, not a complete schema or a statement of relationship
 
 ### Recount the graph
 
-The website's [`/api/facets`](https://ethnotrace-api.onrender.com/api/facets) gives the per-book counts above, and [`/api/health`](https://ethnotrace-api.onrender.com/api/health) identifies the active snapshot. In Neo4j Browser, set `$snapshot` to the desired completed snapshot and run this read-only query to inspect its records by source:
+The public [`/api/facets`](https://ethnotrace-api.onrender.com/api/facets) endpoint provides the per-book counts above. For the snapshot-scoped Neo4j query and instructions on choosing the correct dataset, see [Recount the graph](neo4j/STRUCTURED.md#recount-the-graph). Counts across snapshots or overlapping source records should not be summed indiscriminately.
 
-```cypher
-:param snapshot => 'cbb213486fd7894eb8a0c7e900136ded38e931854119c297690d1af7fd6e9cdc';
+## A real evidence trail: Culpeper's Carrots
 
-MATCH (d:DatasetImport {snapshot_id: $snapshot, kind: 'claims_and_stage3_shared'})
-MATCH (:DatasetImport {snapshot_id: $snapshot, kind: 'full_unit_source_records'})-[:USES_CLAIMS_FROM]->(d)
-MATCH (e:HistoricalEntry {snapshot_id: $snapshot})
-OPTIONAL MATCH (e)-[:HAS_DECISION]->(decision:EligibilityDecision {snapshot_id: $snapshot})
-WHERE decision.tier IN ['A', 'B']
-WITH d, e, count(decision) > 0 AS has_candidate
-OPTIONAL MATCH (e)-[:HAS_CLAIM]->(claim:HistoricalClaim {dataset_id: d.id})
-RETURN e.book AS book, count(DISTINCT e) AS historical_entries,
-       count(DISTINCT CASE WHEN has_candidate THEN e END) AS entries_with_A_or_B,
-       count(DISTINCT claim) AS linked_claims
-ORDER BY book;
-```
+This example follows actual saved records. It illustrates traceability and the distinction between a historical use and a related study—not validation of a remedy.
 
-If more than one matching dataset import exists, select the intended dataset explicitly rather than combining versions. Additional read-only examples and graph integrity checks are in [neo4j/STRUCTURED.md](neo4j/STRUCTURED.md) and [neo4j/verify_graph.py](neo4j/verify_graph.py). The graph contains more record types than these three counts; their totals are not asserted here without a snapshot-scoped query.
+1. **Historical entry and candidate.** In the processed Culpeper entry “Carrots,” the pipeline lists *Daucus carota* L. as an A-tier candidate. Its [eligibility record](matching/culpeper/eligibility.json#L54725) records the rules, evidence lineages, geography and description-comparison result. An A decision is a pipeline classification, not independent proof of identity.
+2. **Historical quotation and claim.** The [claim record](claims/culpeper/claims.json#L26664) `culpeper:carrots:c05` preserves the words “women’s courses” and the extracted interpretation “Promotes menstrual flow.” It proposes MeSH mappings for menstruation and menstruation-inducing agents; those mappings are interpretations of historical language.
+3. **Selected modern research.** The saved [study record](stage3/studies/shared/studies.jsonl#L4101) links to [PMID 38202401](https://pubmed.ncbi.nlm.nih.gov/38202401/), a phytochemical and pharmacological review of wild carrot.
+4. **Assessment and caveat.** The [claim–study assessment](stage3/assessments/shared/assessments.jsonl#L163) records that source as **not relevant** to this particular claim, with no finding, and marks the assessment **unreviewed**. It should not be presented as evidence that the historical use works.
+
+[Open the live catalogue](https://ethnotrace.vercel.app) and search **Carrots**. The corresponding [entry API record](https://ethnotrace-api.onrender.com/api/entries/ea78aac5ec97168a8980a4ce2907a7c88635546c185c4ed0e2ced145af6e8dfa) is tied to the selected snapshot and may change after a rebuild.
+
+## Evaluation and validation status
+
+Three different kinds of checking should not be confused:
+
+- **Software tests** exercise implementation behavior, such as eligibility rules, API responses, graph consistency, type checking and browser flows. They are not botanical or medical validation. See [offline tests](tests/README.md) and [UI checks](Makeathon_UI/README.md#tests-and-checks).
+- **Automated data checks** compare quotations or excerpts with available source text, reconcile names against taxonomic sources, and apply documented rules. A successful match or rule execution cannot establish that an interpretation is correct.
+- **Independent scientific validation** requires qualified people to review historical identities, translations, claims and research assessments against their sources. That work remains incomplete.
+
+We ran an exploratory test of the **botanical description-comparison step** against expert scores from Lardos et al. (2024). The sample contained **15 deliberately stratified candidates**—five from each expert category of strong, moderate and weak—with 89 feature details judged by the experts. This is a small selected sample, not a representative accuracy test of the full pipeline.
+
+| Reported run | Historical input | Agreement on final description-fit category | Agreement on feature scores | Cohen's kappa for feature scores |
+| --- | --- | ---: | ---: | ---: |
+| `flash38_en` | The paper's English historical details | 11/15 (73%) | 62/89 (70%) | 0.46 |
+| `flash38_gr` | Wellmann's Greek chapters | 10/15 (67%) | 51/89 (57%) | 0.28 |
+
+These numbers describe agreement with expert **description-fit scores for supplied candidates**. They do **not** measure how often EthnoTrace selects the correct historical species, validate all extracted claims, or establish medical effectiveness. The English and Greek runs assess different inputs; the Greek task additionally requires locating features in the historical text. See the [full results, sampling method and limitations](description_sources/paper_test/RESULTS.md) for the other models and disagreements.
+
+The [Stage 3 pilot review](stage3/review/README.md) is provisional: its review procedure was not recorded, so its scores must not be presented as validated accuracy. Independent domain-expert review and a larger, documented evaluation remain future work. Software tests check implementation behavior; they do not independently validate historical or medical findings.
 
 ## Pipeline: from historical texts to the interface
 
@@ -126,55 +163,14 @@ flowchart TD
 
 The exact inputs and coverage vary by book and stage. Later steps use the saved outputs of earlier steps; the diagram does not imply that every historical entry was assessed at every stage.
 
-### 1. Historical sources and extraction
+### Pipeline guides
 
-- **Culpeper:** [extract_herbs.py](historical_texts/culpeper/extract_herbs.py) processes Project Gutenberg eBook #49513, a transcription of an 1850 edition, into entries and recorded names; [validate_herbs.py](historical_texts/culpeper/validate_herbs.py) checks extraction.
-- **Dioscorides:** [extract_wellmann.py](historical_texts/dioscorides/extract_wellmann.py) processes the First1KGreek encoding of Wellmann's 1906–1914 Greek edition into chapters; the extraction and [historical dictionary lookups](historical_texts/dioscorides/README.md) have separate checks and limitations.
-- **Shennong:** [extract_sun.py](historical_texts/shennong/extract_sun.py) processes Sun Xingyan and Sun Fengyi's 1799 reconstruction, distinguishing its textual layers. This is a later reconstruction, not an untouched original; names and translations require expert interpretation.
-
-The extracted records preserve historical text and source context. Extraction and validation checks do not guarantee that every headword or association is correct. See [historical_texts](historical_texts/README.md) and [DATA_SOURCES.md](DATA_SOURCES.md).
-
-### 2. Discover and aggregate botanical candidates
-
-Historical names are searched in common-name and historical reference sources, including GBIF, Wikidata, ChecklistBank, iNaturalist, Dr. Duke's and Greek and Latin dictionaries. Matches produce candidate names and evidence with source provenance. Matching and aggregation distinguish stronger exact or passage-specific evidence from weaker matches; see [matching rules](matching/MATCHING_RULES.md).
-
-Related records may share an upstream lineage. The eligibility rules group certain sources to reduce double counting, but source independence and historical associations remain subject to review. Taxonomic authorities are used to check names, not counted as independent proof of historical identity.
-
-### 3. Reconcile scientific names and geography
-
-[resolve_scientific.py](matching/resolve_scientific.py) reconciles candidate names using available authority outputs, including World Flora Online, WCVP, Global Names and IPNI. Resolutions preserve source information and disagreements. Authority-qualified identifiers allow supported links between records; matching name strings alone do not establish shared taxon identity.
-
-[geography.py](matching/geography.py) records whether available distribution information is compatible with the historical context. Modern distributions are context, not proof of historical presence or absence. See [eligibility and geography rules](matching/ELIGIBILITY_RULES.md).
-
-### 4. Compare descriptions and classify candidates
-
-Where historical and modern descriptions are available, [description_check.py](description_sources/check/description_check.py) prepares and imports AI-assisted comparisons of features such as leaves, flowers and habitat. Supporting quotations and scores are retained. Coverage varies, and the current Shennong pipeline has no botanical-description comparison; missing information should not be mistaken for a poor fit.
-
-[eligibility.py](matching/eligibility.py) applies documented rules to evidence, taxonomy, geography and available description comparisons:
-
-- **A:** meets the stronger pipeline criteria.
-- **B:** remains a possible identification with recorded caveats.
-- **X:** does not meet the current requirements for display as an A/B candidate; it is retained in the data.
-
-These categories describe the pipeline's decisions, not independently verified scientific conclusions. See [ELIGIBILITY_RULES.md](matching/ELIGIBILITY_RULES.md).
-
-### 5. Extract historical claims and map terminology
-
-The [claims pipeline](claims/CLAIMS_METHOD.md) uses AI-assisted extraction to structure statements from the texts, with historical quotations and translations where recorded. It proposes modern medical concepts such as MeSH and applies checks to source quotations and terminology. Mappings can be approximate or absent; a MeSH mapping does not prove that an ancient and a modern medical concept are identical.
-
-The [claim links](claims/links.json) connect selected claims across books using recorded plant and concept criteria. They are inferred groupings, not statements that the historical remedies or preparations are equivalent.
-
-### 6. Retrieve and assess selected modern research
-
-The [Stage 3 pipeline](stage3/README.md) builds selected claim–plant units, retrieves research from sources including PubMed, Europe PMC, ClinicalTrials.gov and EMA herbal monographs, and uses AI-assisted extraction plus predefined rules to record how a source relates to a claim. Assessments can include study type, applicability, findings, limitations and excerpts where present.
-
-Research coverage is selected and incomplete. A registry entry, laboratory result, traditional-use monograph or related-condition study does not by itself establish clinical efficacy. The pilot review is provisional and requires human review; see [Stage 3 rules and limits](stage3/EVIDENCE_RULES.md) and [review status](stage3/review/README.md).
-
-### 7. Import and explore
-
-The [Neo4j importers](neo4j/STRUCTURED.md) create versioned graph records from pipeline outputs. `StructuredBuild` and `DatasetImport` records identify the selected snapshot and datasets, reducing the risk of mixing versions. The read-only Python API in [Makeathon_UI/server.py](Makeathon_UI/server.py) serves the React and TypeScript frontend.
-
-The website provides a searchable catalogue, entry pages, historical passages, identification evidence, claims and research, a knowledge map and an atlas. Candidate images, when available, illustrate a proposed modern plant and include source and licence information; they do not prove the historical identification. See [the application guide](Makeathon_UI/README.md).
+1. **[Historical texts](historical_texts/README.md):** Extract entries, passages and historical names from each processed edition. The [books and editions](#books-and-editions) section distinguishes original periods from later editions.
+2. **[Candidate discovery and matching](matching/README.md):** Search common-name databases and historical references, preserve source evidence and account for related source lineages. Reconcile names against WFO, WCVP and other authorities, and consider geographic context.
+3. **[Description comparison](description_sources/README.md) and [eligibility rules](matching/ELIGIBILITY_RULES.md):** Compare available botanical features and classify candidates as **A** (stronger criteria met), **B** (possible with caveats) or **X** (not shown as A/B, retained in the data). The current Shennong pipeline has no botanical-description comparison. These are pipeline decisions, not expert-confirmed identities.
+4. **[Historical claims](claims/README.md):** Extract interpretations with source quotations and propose medical-concept mappings. Cross-book groupings are inferred connections, not proof of equivalent remedies.
+5. **[Modern research assessments](stage3/README.md):** Retrieve selected sources and apply AI-assisted extraction and predefined rules to compare them with selected claim–plant units. Coverage is incomplete and assessments require review.
+6. **[Neo4j graph](neo4j/STRUCTURED.md) and [web application](Makeathon_UI/README.md):** Import snapshot-scoped records and expose them through the read-only API, catalogue, atlas and knowledge map.
 
 ## Start here
 
@@ -203,8 +199,6 @@ The website provides a searchable catalogue, entry pages, historical passages, i
 | [tests](tests/README.md) | Offline pipeline and graph contract tests. |
 | [reports](reports/README.md) | Space for local investigation reports. |
 
-The main flow is **historical texts → candidate evidence → taxonomic reconciliation and eligibility → claims and selected research → Neo4j → website**. Description comparisons and individual source availability vary by book; the Shennong classic has no botanical description comparison in the current pipeline. An accepted taxonomic name does not prove a historical identification.
-
 ## Use of generative AI
 
 Generative AI assisted the project. **OpenAI Codex and Anthropic Claude** were used during development, including work on code, documentation and reviews. **Google Gemini** was used in parts of the research pipeline, including extraction, translation and comparison tasks. AI-assisted reviews and outputs are not a substitute for independent domain-expert validation.
@@ -229,8 +223,7 @@ The books share the broader workflow, with book-specific sources and limitations
 - **Shennong: 2 "direct" Stage 3 results need a person.** Grape juice for strength (an athletes' trial, result
   inconclusive) and red peony root for abdominal pain (a pancreatitis trial: a related condition, not the
   same). Left as the model answered.
-- **Stage 3 pilot review is provisional.** It was done in haste and must be redone by a person
-  before any Stage 3 result is reported. See `stage3/review/README.md`.
+- **Stage 3 pilot review is provisional.** Stage 3 assessments remain provisional and require independent human review before their scientific conclusions can be validated. See [the review record](stage3/review/README.md).
 - **Stage 3 batch size and repeat runs.** Later sets use 32 pairs per prompt; this was not tested against
   the pilot's 8. Each prompt version was run once; repeated runs (ablation) were not done for time.
   See `stage3/EVIDENCE_RULES.md`.

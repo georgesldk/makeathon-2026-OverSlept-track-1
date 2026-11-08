@@ -44,7 +44,7 @@ See [`package.json`](package.json), [`requirements.txt`](requirements.txt) and [
 | **Historical sources & about** | Read about the books, source material, methodology and project limitations. |
 | **Expert review demo** | See explicitly labelled placeholder examples and preview a comment locally. Previewed comments are not submitted or saved and disappear when leaving the page or refreshing. They are not real expert reviews. |
 
-The interface displays pipeline outputs and their provenance; it does not independently verify them. A historical entry may have multiple candidate identifications, and an accepted scientific name does not prove which plant an author meant. The [main README](../README.md) explains the sources, scientific pipeline, current graph counts and open issues.
+This guide covers the application's architecture, setup, API and tests. For the historical sources, scientific pipeline, evaluation and limitations, see the [main project README](../README.md).
 
 ## How the pieces fit together
 
@@ -60,7 +60,7 @@ flowchart LR
     UI --> Demo[Review demo<br/>temporary browser preview]
 ```
 
-The frontend is hosted on Vercel, the API on Render, and the deployed graph on Neo4j Aura. The atlas also uses static region and range files, while image metadata is stored separately from Neo4j. These components display the existing research outputs; they do not run the scientific pipeline or validate its findings.
+The atlas uses static region and range files, while image metadata is stored separately from Neo4j. These components display existing research outputs; they do not run the scientific pipeline.
 
 ## Start locally
 

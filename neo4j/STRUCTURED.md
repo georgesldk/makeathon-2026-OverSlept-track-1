@@ -30,6 +30,28 @@ RETURN s.title, a.finding, a.applicability, a.species_match, a.condition_match,
 MATCH (d:SourceDocument) RETURN d.path, d.status, d.sha256 ORDER BY d.path;
 ```
 
+## Recount the graph
+
+The following read-only Neo4j Browser query reproduces the per-book counts in the main README for a selected snapshot and shared dataset. Replace the snapshot parameter when examining a different build. If multiple matching imports exist, select the intended dataset explicitly rather than combining versions.
+
+```cypher
+:param snapshot => 'cbb213486fd7894eb8a0c7e900136ded38e931854119c297690d1af7fd6e9cdc';
+
+MATCH (d:DatasetImport {snapshot_id: $snapshot, kind: 'claims_and_stage3_shared'})
+MATCH (:DatasetImport {snapshot_id: $snapshot, kind: 'full_unit_source_records'})-[:USES_CLAIMS_FROM]->(d)
+MATCH (e:HistoricalEntry {snapshot_id: $snapshot})
+OPTIONAL MATCH (e)-[:HAS_DECISION]->(decision:EligibilityDecision {snapshot_id: $snapshot})
+WHERE decision.tier IN ['A', 'B']
+WITH d, e, count(decision) > 0 AS has_candidate
+OPTIONAL MATCH (e)-[:HAS_CLAIM]->(claim:HistoricalClaim {dataset_id: d.id})
+RETURN e.book AS book, count(DISTINCT e) AS historical_entries,
+       count(DISTINCT CASE WHEN has_candidate THEN e END) AS entries_with_A_or_B,
+       count(DISTINCT claim) AS linked_claims
+ORDER BY book;
+```
+
+The result counts distinct historical entries, entries with at least one A/B decision, and linked historical claims. It does not count verified identifications or clinically validated treatments.
+
 ## Rebuild
 
 Prepare a fresh version 2 snapshot with `prepare.py`; this refuses to overwrite its output. Create a new, empty Neo4j database. With `NEO4J_URI`, `NEO4J_USER`, `NEO4J_PASSWORD` set, run:
