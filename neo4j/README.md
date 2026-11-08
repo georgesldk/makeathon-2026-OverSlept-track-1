@@ -1,4 +1,28 @@
-# EthnoTrace Neo4j initialization
+# EthnoTrace · Neo4j graph and importers
+
+EthnoTrace uses Neo4j to connect historical entries and names with proposed botanical identifications, source evidence, claims, medical concepts and selected research. The graph preserves provenance and uncertainty; a graph relationship or an accepted taxonomic name does not independently validate a historical identification or medical claim.
+
+## Start with the current structured graph
+
+The current three-book application uses the **structured** graph described in [STRUCTURED.md](STRUCTURED.md). It exposes domain properties for queries and represents preserved source values as `SourceValue` trees rather than relying on serialized `raw_json` properties. Raw API caches, complete model conversations and publisher texts can remain external files. See [MODEL.md](MODEL.md) and [MISSING_FILES.md](../MISSING_FILES.md) for scope and provenance.
+
+```mermaid
+flowchart LR
+    Outputs[Pipeline outputs] --> Prepare[Prepare versioned snapshot]
+    Prepare --> Import[Structured import and source archive]
+    Import --> Graph[(Neo4j graph)]
+    Graph --> API[Read-only Python API]
+    API --> UI[Research interface]
+```
+
+- **Explore the current graph:** [STRUCTURED.md](STRUCTURED.md) explains its source-value model and provides query examples. The [main README](../README.md#current-graph-verified-snapshot-counts) provides dated snapshot counts and a per-book query.
+- **Understand entities and provenance:** [MODEL.md](MODEL.md) describes hypotheses, evidence, decisions, sources and identity boundaries.
+- **Rebuild or append a snapshot:** Follow the prerequisites and commands in [STRUCTURED.md](STRUCTURED.md). Imports write to Neo4j; choose the destination deliberately, check the input files and back up data before a rebuild.
+- **Check integrity:** [verify_graph.py](verify_graph.py) contains read-only checks. It does not independently establish scientific correctness.
+
+`StructuredBuild` and `DatasetImport` records distinguish builds and datasets. When more than one version exists, scope queries to the intended snapshot and dataset. Unmatched evidence and hidden candidates are retained; cross-book and taxonomic relationships must not be interpreted more strongly than their recorded provenance allows.
+
+## Legacy importer documentation
 
 For the current structured three-book graph and snapshot-aware import process, start with [STRUCTURED.md](STRUCTURED.md). The sections below also document the original graph importer; references to two-book inputs or older limitations may predate the Shennong extension. Filter queries by `snapshot_id` when multiple snapshots coexist.
 

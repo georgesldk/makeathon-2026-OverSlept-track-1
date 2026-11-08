@@ -10,7 +10,7 @@ No API keys or network calls are required for the default implementation. Most p
 
 ## Known defects and strict mode
 
-The audit found existing defects. Their tests are labelled `expected failure` so the regular run makes the known failures visible while detecting additional regressions. An expected failure is **not a passing scientific requirement**. If a defect is fixed, its test becomes an `unexpected success`: remove the `@known_defect` decorator once the fix has been reviewed.
+The contract suite includes a `known_defect` helper for marking documented defects as expected failures. At the time of this documentation update, no tests in `tests/` are decorated with it: the previously identified Stage 2 regression tests run as ordinary requirements. An expected failure, if introduced later, would not be a passing scientific requirement; an unexpected success would need review.
 
 To treat all known defects as ordinary failures, run:
 
@@ -18,7 +18,7 @@ To treat all known defects as ordinary failures, run:
 python3.10 -B tests/run_tests.py --strict
 ```
 
-Since the Stage 2 fixes, the previously identified known-defect tests are ordinary tests again. The graph tests use the included `neo4j/prepare.py`. Both modes exit nonzero for new failures or errors.
+Strict mode makes any tests decorated with `known_defect` run as ordinary requirements. The graph tests use the included `neo4j/prepare.py`. Both modes exit nonzero for ordinary failures or errors; the suite does not establish scientific correctness of the source data.
 
 ## Testing another implementation
 
