@@ -253,7 +253,7 @@ const tabHelp: Record<string, string> = {
     "Candidate modern identifications, eligibility rules, and supporting evidence.",
   uses: "Extracted historical claims, medical concept mappings, and connected research.",
   relationships: "A focused graph of the entry and its recorded relationships.",
-  review: "Comments from domain experts confirming, disputing or annotating this entry.",
+  review: "Generated examples illustrating a possible expert review feature; these are not real reviews.",
 }
 const termHelp: Record<string, string> = {
   Family:
@@ -1374,7 +1374,7 @@ export default function LiveApp() {
             className={section === "review" ? "active" : ""}
             onClick={() => { setReviewEntry(""); navigate("review") }}
           >
-            Expert review
+            Expert review demo
           </button>
           <button
             className={section === "sources" ? "active" : ""}
@@ -1704,7 +1704,7 @@ export default function LiveApp() {
                   ["identification", "Identification"],
                   ["uses", "Claims & Research"],
                   ["relationships", "Relationships"],
-                  ["review", "Expert review"],
+                  ["review", "Expert review demo"],
                 ] as [Tab, string][]).map(([id, label]) => (
                   <button
                     className={
@@ -2272,11 +2272,10 @@ export default function LiveApp() {
                   </section>
                 )}
                 <section id="sec-review" className="record-section">
-                  <p className="eyebrow">Domain experts</p>
-                  <h2 className="with-switch"><span>Expert review</span>{sourceSwitch}</h2>
+                  <p className="eyebrow">Demonstration only</p>
+                  <h2 className="with-switch"><span>Expert review demo</span>{sourceSwitch}</h2>
                   <p className="section-explanation">
-                    Domain experts' confirmations, disagreements and notes on this entry's identifications, claims
-                    and studies, with an agreement score for each item.
+                    Generated examples show how a review could appear. They are not real expert opinions or evidence of validation.
                   </p>
                   <EntryReviews entryId={record.entry.id} onAdd={() => openReview(record.entry.id)} />
                 </section>

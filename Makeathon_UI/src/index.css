@@ -1180,6 +1180,7 @@ details details[open] > summary { position: static; }
 .rv-totals dt { color: var(--t-fg-657365); text-transform: uppercase; letter-spacing: .12em; font: 600 10px 'DM Sans', sans-serif; }
 .rv-totals dd { margin: 6px 0 0; color: var(--t-fg-173f2b); font: 600 30px 'Source Serif 4', serif; }
 .rv-layout { display: grid; grid-template-columns: 380px minmax(0, 1fr); gap: 40px; align-items: start; }
+.rv-layout-demo { grid-template-columns: minmax(0, 1fr); }
 .rv-form { position: sticky; top: 110px; display: grid; gap: 12px; padding: 24px; border: 1px solid var(--t-line-d8d5c9); background: var(--t-bg-fbfaf5); }
 .rv-form h2, .rv-list h2 { margin: 0 0 6px; font: 600 24px 'Source Serif 4', serif; }
 .rv-form .filter-label { margin: 8px 0 0; }

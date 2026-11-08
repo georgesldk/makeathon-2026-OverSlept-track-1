@@ -3,7 +3,6 @@ import importlib.util
 import json
 import os
 from pathlib import Path
-import tempfile
 import threading
 import unittest
 from http.client import HTTPConnection
@@ -18,10 +17,8 @@ spec.loader.exec_module(server)
 class DeploymentTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.tmp = tempfile.TemporaryDirectory()
-        cls.old_path, cls.old_origins = server.REVIEWS_PATH, server.CORS_ALLOWED_ORIGINS
+        cls.old_origins = server.CORS_ALLOWED_ORIGINS
         cls.old_context, cls.old_query = server.context, server.query
-        server.REVIEWS_PATH = Path(cls.tmp.name) / 'reviews.json'
         server.CORS_ALLOWED_ORIGINS = frozenset({'https://frontend.example'})
         server.context = lambda: {'snapshot': 'test-snapshot'}
         server.query = lambda *args, **kwargs: [{'connected': 1}]
@@ -34,10 +31,9 @@ class DeploymentTests(unittest.TestCase):
         cls.http.shutdown()
         cls.http.server_close()
         cls.thread.join()
-        server.REVIEWS_PATH, server.CORS_ALLOWED_ORIGINS = cls.old_path, cls.old_origins
+        server.CORS_ALLOWED_ORIGINS = cls.old_origins
         server.context, server.query = cls.old_context, cls.old_query
         server.driver.close()
-        cls.tmp.cleanup()
 
     def request(self, method, path, origin, body=None):
         connection = HTTPConnection('127.0.0.1', self.http.server_port, timeout=5)
@@ -59,7 +55,7 @@ class DeploymentTests(unittest.TestCase):
         self.assertEqual(status, 403)
         self.assertNotIn('Access-Control-Allow-Origin', headers)
 
-    def test_health_and_review_use_configured_storage(self):
+    def test_health_and_review_submissions_are_disabled(self):
         status, headers, body = self.request('GET', '/api/health', 'https://frontend.example')
         self.assertEqual(status, 200)
         self.assertEqual(headers['Access-Control-Allow-Origin'], 'https://frontend.example')
@@ -67,8 +63,22 @@ class DeploymentTests(unittest.TestCase):
         payload = {'entry_id': 'a' * 64, 'target_type': 'entry', 'target_id': 'a' * 64,
                    'verdict': 'note', 'comment': 'Test only', 'reviewer': 'Test reviewer'}
         status, _, _ = self.request('POST', '/api/reviews', 'https://frontend.example', json.dumps(payload))
-        self.assertEqual(status, 201)
-        self.assertEqual(json.loads(server.REVIEWS_PATH.read_text())['reviews'][0]['comment'], 'Test only')
+        self.assertEqual(status, 405)
+
+    def test_demo_reviews_are_generated_without_submissions(self):
+        old_entries, old_entry, old_studies, old_store = server.entries, server.entry, server.entry_studies, server._demo_store
+        try:
+            server._demo_store = None
+            server.entries = lambda *args: {'items': [{'id': 'a' * 64, 'name': 'Example', 'book': 'culpeper'}]}
+            server.entry = lambda *args: {'candidates': [{'decision': {'tier': 'A'}, 'hypothesis': {'id': 'h', 'accepted_name': 'Example plant'}}], 'claims': []}
+            server.entry_studies = lambda *args: {'items': []}
+            status, _, body = self.request('GET', '/api/reviews', 'https://frontend.example')
+            self.assertEqual(status, 200)
+            result = json.loads(body)
+            self.assertTrue(result['reviews'])
+            self.assertTrue(all(row['demo'] for row in result['reviews']))
+        finally:
+            server.entries, server.entry, server.entry_studies, server._demo_store = old_entries, old_entry, old_studies, old_store
 
     def test_health_reports_database_failure(self):
         old_query = server.query

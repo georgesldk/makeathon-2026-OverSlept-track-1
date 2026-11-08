@@ -6,7 +6,7 @@ This setup uses the existing `Makeathon_UI/` application: Vercel serves the Vite
 
 - A Neo4j database reachable from Render, already populated with a compatible, completed structured snapshot and its datasets. `127.0.0.1` on Render refers to the Render container, not your laptop. Use a network-accessible Neo4j service, encrypted transport where supported, and a read-only Neo4j account.
 - A Git repository containing the UI files, including `Makeathon_UI/data/candidate_images.json` and `Makeathon_UI/public/atlas/`. Raw pipeline caches and credentials are not needed by the API and should not be committed.
-- A decision about the review feature before public launch. Review submissions currently have no authentication or reviewer verification, and the API can seed labelled demo comments. They must not be represented as genuine expert validation. The review file is local to the backend; see persistence below.
+- The review feature is a demonstration: examples are generated and clearly labelled, and submissions are disabled. They are not expert validation.
 
 ## 1. Render backend
 
@@ -28,11 +28,10 @@ Set these in Render's environment settings, not in Git:
 | `NEO4J_DATABASE` | Name of the populated database on that service; it may differ from the local name. |
 | `CORS_ALLOWED_ORIGINS` | Comma-separated exact frontend origins, for example `https://your-project.vercel.app`. Include no paths or wildcard; add custom domains or specific preview origins separately. |
 | `ETHNOTRACE_SNAPSHOT` | Optional: snapshot ID to select explicitly when more than one completed build exists. |
-| `REVIEWS_PATH` | Optional: writable file path, such as `/var/data/reviews.json` on a mounted persistent disk. |
 
 Render supplies `PORT`; the API binds to `0.0.0.0` when it is present. Locally it still defaults to `127.0.0.1:8787`; `API_HOST` and `API_PORT` can override the local defaults. The health endpoint checks both snapshot selection and a live Neo4j query.
 
-**Review persistence:** Render's default filesystem is ephemeral, so reviews written there can be lost on restart or redeploy. For persistence, configure an appropriate persistent disk and set `REVIEWS_PATH` on that disk, or replace the local-file store with a proper persistent service. The current file store is designed for one API process and does not coordinate multiple instances. Keep existing review data separate; it is not imported from the local machine automatically.
+**Review examples:** The API generates demo reviews in memory for the current snapshot. It does not accept or persist submissions.
 
 ## 2. Vercel frontend
 
@@ -55,8 +54,8 @@ After both services are running:
 1. Request `https://your-render-service.onrender.com/api/health`; it should return `status: ok` and the intended snapshot ID.
 2. Open the Vercel site and check that the catalogue loads entries for each book, historical passages and claims, candidate evidence, studies and the knowledge map. Check an Atlas entry and its image attribution when an image is available.
 3. In browser developer tools, check that API requests reach the configured Render origin without CORS errors. Verify configured preview and custom domains individually.
-4. Only test review submission in an explicitly designated test environment; confirm persistence and access controls before relying on it. This setup does not add expert identity verification.
+4. Check that review examples are labelled as demonstrations and that the API rejects review submissions.
 
-`test_deployment.py` checks CORS, isolated review storage and database-health failure handling using a temporary local HTTP server and mocked database calls. Existing local integration tests use read-only database queries. Hosted verification must be performed after deployment; these files alone cannot verify remote credentials, networking, database contents or service availability.
+`test_deployment.py` checks CORS, demo-only reviews and database-health failure handling using a temporary local HTTP server and mocked database calls. Existing local integration tests use read-only database queries. Hosted verification must be performed after deployment; these files alone cannot verify remote credentials, networking, database contents or service availability.
 
 Platform references: [Render web services](https://render.com/docs/web-services), [Render persistent disks](https://render.com/docs/disks), [Vite environment variables](https://vite.dev/guide/env-and-mode), and [Vercel project configuration](https://vercel.com/docs/project-configuration/vercel-json).

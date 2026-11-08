@@ -322,30 +322,12 @@ def claim(ctx, cid, params):
 
 
 # ---------------------------------------------------------------------------------------------------
-# Expert review (2026-11-07). Comments are kept in a local JSON file, never in Neo4j (the graph stays
-# read-only). Each comment targets a plant identification, a claim, a study assessment or the whole entry,
-# with a verdict: confirm, disagree or note. Demo comments are seeded once per snapshot for 24 identified
-# entries, stored with demo=true and labelled as demo comments in the interface.
-REVIEWS_PATH = Path(os.environ.get('REVIEWS_PATH') or (Path(__file__).resolve().parent / 'data' / 'reviews.json'))
+# Illustrative reviews are generated in memory for the current snapshot. Submissions are disabled.
 VERDICTS = ('confirm', 'disagree', 'note')
 TARGETS = ('identification', 'claim', 'study', 'entry')
 _reviews_lock = threading.Lock()
 DEMO_REVIEWERS = [('Demo reviewer A', 'ethnobotanist'), ('Demo reviewer B', 'historian of medicine'),
                   ('Demo reviewer C', 'pharmacognosist'), ('Demo reviewer D', 'classical philologist')]
-
-
-def _load_reviews():
-    if REVIEWS_PATH.exists():
-        return json.loads(REVIEWS_PATH.read_text(encoding='utf-8'))
-    return {'schema_version': 1, 'note': 'Expert review comments; demo=true marks generated demo comments.',
-            'demo_seeded_for': None, 'reviews': []}
-
-
-def _save_reviews(store):
-    REVIEWS_PATH.parent.mkdir(exist_ok=True)
-    tmp = REVIEWS_PATH.with_suffix('.tmp')
-    tmp.write_text(json.dumps(store, ensure_ascii=False, indent=1), encoding='utf-8')
-    tmp.replace(REVIEWS_PATH)
 
 
 def _seed_demo(ctx, store):
@@ -397,8 +379,9 @@ def _seed_demo(ctx, store):
                 'The study used a modern extract, not the preparation in the text, so the match is indirect.'
                 if h % 2 else 'The assessment reflects the study fairly; relevance is correctly marked.')
     store['demo_seeded_for'] = ctx['snapshot']
-    _save_reviews(store)
 
+
+_demo_store = None
 
 def _summary(items):
     by = {}
@@ -424,35 +407,16 @@ def reviews(ctx, params):
     entry_id = params.get('entry_id', [''])[0]
     if entry_id:
         identifier(entry_id)
+    global _demo_store
     with _reviews_lock:
-        store = _load_reviews()
-        _seed_demo(ctx, store)
-    items = [r for r in store['reviews'] if not entry_id or r['entry_id'] == entry_id]
+        if _demo_store is None or _demo_store.get('demo_seeded_for') != ctx['snapshot']:
+            store = {'reviews': [], 'demo_seeded_for': None}
+            _seed_demo(ctx, store)
+            _demo_store = store
+        items = [r for r in _demo_store['reviews'] if not entry_id or r['entry_id'] == entry_id]
     items.sort(key=lambda r: r['created_at'], reverse=True)
     return {'reviews': items, 'summary': _summary(items)}
 
-
-def add_review(body):
-    def text(key, limit, required=True):
-        v = str(body.get(key) or '').strip()
-        if required and not v:
-            raise ValueError(f'{key} is required')
-        if len(v) > limit:
-            raise ValueError(f'{key} is too long')
-        return v
-    verdict, ttype = text('verdict', 10), text('target_type', 20)
-    if verdict not in VERDICTS or ttype not in TARGETS:
-        raise ValueError('Invalid verdict or target')
-    rec = {'id': uuid.uuid4().hex[:12], 'entry_id': identifier(text('entry_id', 200)), 'entry_name': text('entry_name', 200, False),
-           'book': text('book', 30, False), 'target_type': ttype, 'target_id': text('target_id', 300),
-           'target_label': text('target_label', 300, False), 'verdict': verdict, 'comment': text('comment', 2000),
-           'reviewer': text('reviewer', 80), 'expertise': text('expertise', 80, False),
-           'created_at': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'demo': False}
-    with _reviews_lock:
-        store = _load_reviews()
-        store['reviews'].append(rec)
-        _save_reviews(store)
-    return rec
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -469,20 +433,9 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
 
     def do_POST(self):
-        parsed = urlparse(self.path)
-        try:
-            if parsed.path.rstrip('/') != '/api/reviews':
-                return self.send(404, {'error': 'Not found'})
-            size = int(self.headers.get('Content-Length') or 0)
-            if size <= 0 or size > 20000:
-                raise ValueError('Invalid request size')
-            body = json.loads(self.rfile.read(size).decode('utf-8'))
-            return self.send(201, add_review(body))
-        except (ValueError, json.JSONDecodeError) as exc:
-            return self.send(400, {'error': str(exc)})
-        except Exception as exc:
-            print(f'API error: {type(exc).__name__}: {exc}', flush=True)
-            return self.send(500, {'error': 'The review could not be saved.'})
+        if urlparse(self.path).path.rstrip('/') == '/api/reviews':
+            return self.send(405, {'error': 'Reviews are a demonstration and submissions are disabled.'})
+        return self.send(404, {'error': 'Not found'})
 
     def do_GET(self):
         parsed = urlparse(self.path)

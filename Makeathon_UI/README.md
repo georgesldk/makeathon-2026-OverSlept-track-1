@@ -17,7 +17,7 @@ read -s 'NEO4J_PASSWORD?Neo4j password: '; export NEO4J_PASSWORD; echo
 ../neo4j/.venv/bin/python -B server.py
 ```
 
-The `read` line is for macOS zsh; in bash use `read -s -p 'Neo4j password: ' NEO4J_PASSWORD; export NEO4J_PASSWORD; echo`. If the Python environment is missing, create it and install the official `neo4j` driver as documented in `../neo4j/README.md`. Never commit passwords. The API binds to localhost on port 8787 and reads Neo4j through parameterized queries. Its expert-review feature separately writes local comments to `data/reviews.json` and can seed explicitly labelled demonstration comments. A Neo4j account restricted to read-only access is recommended.
+The `read` line is for macOS zsh; in bash use `read -s -p 'Neo4j password: ' NEO4J_PASSWORD; export NEO4J_PASSWORD; echo`. If the Python environment is missing, create it and install the official `neo4j` driver as documented in `../neo4j/README.md`. Never commit passwords. The API binds to localhost on port 8787 and reads Neo4j through parameterized queries. Its expert-review feature displays generated, explicitly labelled examples and does not accept submissions. A Neo4j account restricted to read-only access is recommended.
 
 Terminal 2 — frontend:
 
@@ -29,13 +29,13 @@ npm run dev
 
 Open http://127.0.0.1:8443. Vite proxies `/api` to the local API. If the API or database is unavailable the UI reports an error; it does not display mock evidence. The original Figma prototype remains in `src/App.tsx`, and the data-connected entry point is `src/LiveApp.tsx`.
 
-For Vercel frontend and Render API setup, including a remote Neo4j connection, CORS and review storage, see [DEPLOYMENT.md](../DEPLOYMENT.md).
+For Vercel frontend and Render API setup, including a remote Neo4j connection and CORS, see [DEPLOYMENT.md](../DEPLOYMENT.md).
 
 ## Folder guide
 
 - [src](src/README.md): React views, components and styles.
 - [public](public/README.md): static assets, including Atlas data.
-- [data](data/README.md): local image metadata and review comments.
+- [data](data/README.md): local image metadata.
 - [tests](tests/README.md): browser and API integration checks.
 - `server.py`: local API between the frontend and Neo4j.
 - `collect_candidate_images.py`, `collect_wikidata_images.py` and `export_atlas_ranges.py`: optional data-preparation utilities.

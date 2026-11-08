@@ -2,6 +2,10 @@
 
 EthnoTrace connects historical medicinal texts with proposed botanical identifications, historical claims and selected modern research. It preserves source evidence and uncertainty so the connections can be inspected. Plant identifications are hypotheses; historical claims and AI-assisted assessments are not proof of medical effectiveness.
 
+> **Expert review needed:** We are not domain experts in botany, historical medicine, or clinical research and are not in a position to independently validate these results. EthnoTrace is a research prototype designed to make sources and proposed connections traceable for qualified experts to examine. Its outputs should not be used as medical advice or treated as validated findings.
+
+> **Neo4j hosting:** The graph is hosted for two weeks starting **7 November 2026**, until **21 November 2026**. If access is needed afterwards, contact the project team to request a database dump. The dump is **over 1.2 GB**.
+
 ## Start here
 
 - [Run the website and local API](Makeathon_UI/README.md) — setup, database connection and frontend.
@@ -30,6 +34,10 @@ EthnoTrace connects historical medicinal texts with proposed botanical identific
 | [reports](reports/README.md) | Space for local investigation reports. |
 
 The main flow is **historical texts → candidate evidence → taxonomic reconciliation and eligibility → claims and selected research → Neo4j → website**. Description comparisons and individual source availability vary by book; the Shennong classic has no botanical description comparison in the current pipeline. An accepted taxonomic name does not prove a historical identification.
+
+## Licence
+
+The project's original software is available under the [MIT License](LICENSE). This does not change the rights or terms of third-party material, including historical texts and transcriptions, datasets and derived data, photographs, icons, or software dependencies. Their respective licences and attribution requirements continue to apply; see [DATA_SOURCES.md](DATA_SOURCES.md) and any notices provided with the material. Check the applicable source terms before redistributing data or assets.
 
 ## Books
 - Culpeper, *The Complete Herbal* (1653) · Dioscorides, *De materia medica* (1st c., Wellmann's Greek) ·
