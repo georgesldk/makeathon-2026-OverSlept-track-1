@@ -35,6 +35,10 @@ EthnoTrace connects historical medicinal texts with proposed botanical identific
 
 The main flow is **historical texts → candidate evidence → taxonomic reconciliation and eligibility → claims and selected research → Neo4j → website**. Description comparisons and individual source availability vary by book; the Shennong classic has no botanical description comparison in the current pipeline. An accepted taxonomic name does not prove a historical identification.
 
+## Use of generative AI
+
+Generative AI assisted the project. **OpenAI Codex and Anthropic Claude** were used during development, including work on code, documentation and reviews. **Google Gemini** was used in parts of the research pipeline, including extraction, translation and comparison tasks. AI-assisted reviews and outputs are not a substitute for independent domain-expert validation.
+
 ## Licence
 
 The project's original software is available under the [MIT License](LICENSE). This does not change the rights or terms of third-party material, including historical texts and transcriptions, datasets and derived data, photographs, icons, or software dependencies. Their respective licences and attribution requirements continue to apply; see [DATA_SOURCES.md](DATA_SOURCES.md) and any notices provided with the material. Check the applicable source terms before redistributing data or assets.
