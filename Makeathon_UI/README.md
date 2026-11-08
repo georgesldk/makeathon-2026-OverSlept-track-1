@@ -1,12 +1,78 @@
-# EthnoTrace local application
+# EthnoTrace · Web application
 
-This application uses the existing Figma visual language and the `ethnotrace-clean` Neo4j graph. It is a local research interface; historical identifications and model-assisted assessments remain hypotheses, not medical advice or proof of efficacy.
+**An interactive interface for exploring historical plant knowledge, proposed botanical identifications, and selected modern research.**
+
+[Explore the live prototype](https://ethnotrace.vercel.app) · [Main project README](../README.md) · [Deployment guide](../DEPLOYMENT.md) · [Graph model](../neo4j/STRUCTURED.md)
+
+> **Research prototype:** Plant identifications are hypotheses, historical claims are not proof of effectiveness, and model-assisted assessments require expert review. Nothing in the interface is medical advice.
+
+## Technology at a glance
+
+| Layer | Technologies | Role |
+| --- | --- | --- |
+| **Frontend** | TypeScript, React 19, HTML and CSS | Pages, search, filters and interactive research views. |
+| **Build and styling** | Vite, Tailwind CSS 4, custom CSS | Development server, production build and visual styling. |
+| **Visualizations** | React Flow (`@xyflow/react`), D3 Geo, TopoJSON | Interactive knowledge maps and a geographic atlas. |
+| **Language support** | `pinyin-pro`, `opencc-js` | Romanization and Chinese text handling. |
+| **Backend** | Python, standard-library HTTP server, official Neo4j Python driver | Read-only API between the browser and graph. |
+| **Database** | Neo4j | Versioned historical records, botanical evidence, claims and research. |
+| **Testing** | Python `unittest`, TypeScript, Playwright | API, type, build and browser checks. |
+| **Hosting** | Vercel, Render, Neo4j Aura | Hosted frontend, API and graph, respectively. |
+
+See [`package.json`](package.json), [`requirements.txt`](requirements.txt) and [`vite.config.ts`](vite.config.ts) for exact dependencies and settings. The scientific pipeline has its own inputs and requirements outside this folder.
+
+## Contents
+
+- [What the application provides](#what-the-application-provides)
+- [How the pieces fit together](#how-the-pieces-fit-together)
+- [Start locally](#start-locally)
+- [API and data boundaries](#api-and-data-boundaries)
+- [Candidate photographs and atlas data](#candidate-photographs-and-atlas-data)
+- [Tests and checks](#tests-and-checks)
+- [Folder guide](#folder-guide)
+
+## What the application provides
+
+| View | What users can explore |
+| --- | --- |
+| **Explore** | Search and filter historical entries by name, source and other available criteria. Entries with an A/B candidate are available in the catalogue; grouped results can combine entries sharing a preferred scientific name. |
+| **Historical record** | Read the source context, passages and recorded historical names for an entry. |
+| **Identification** | Inspect proposed plant candidates, A/B decisions, evidence, taxonomic resolutions, geography and description comparisons where recorded. Excluded X candidates can be shown explicitly. |
+| **Claims & research** | Read extracted historical claims and quotations, proposed MeSH mappings, selected research and recorded assessments. Source links and excerpts are shown where available. |
+| **Relationships & knowledge map** | Follow graph connections, select records, and pan, zoom or expand related evidence. Graph expansion is limited for usability; use the detail views for fuller lists. |
+| **Atlas** | Explore the locations associated with historical books and recorded modern native ranges for proposed candidates. Modern ranges are context, not proof of a historical identification. |
+| **Historical sources & about** | Read about the books, source material, methodology and project limitations. |
+| **Expert review demo** | See explicitly labelled placeholder examples and preview a comment locally. Previewed comments are not submitted or saved and disappear when leaving the page or refreshing. They are not real expert reviews. |
+
+The interface displays pipeline outputs and their provenance; it does not independently verify them. A historical entry may have multiple candidate identifications, and an accepted scientific name does not prove which plant an author meant. The [main README](../README.md) explains the sources, scientific pipeline, current graph counts and open issues.
+
+## How the pieces fit together
+
+```mermaid
+flowchart LR
+    User[Visitor] --> UI[React + TypeScript<br/>Vite frontend]
+    UI -->|read requests| API[Python API<br/>server.py]
+    API -->|read-only queries| Graph[(Neo4j<br/>structured snapshot)]
+    API --> Images[Candidate image metadata<br/>data/candidate_images.json]
+    UI --> Atlas[Static atlas data<br/>public/atlas/]
+    UI --> Map[Interactive knowledge map<br/>React Flow]
+    UI --> Globe[Interactive globe<br/>D3 Geo + TopoJSON]
+    UI --> Demo[Review demo<br/>temporary browser preview]
+```
+
+The frontend is hosted on Vercel, the API on Render, and the deployed graph on Neo4j Aura. The atlas also uses static region and range files, while image metadata is stored separately from Neo4j. These components display the existing research outputs; they do not run the scientific pipeline or validate its findings.
 
 ## Start locally
 
-Start Neo4j and make sure the `ethnotrace-clean` database is online. From the repository root, use two terminals.
+### Prerequisites
 
-Terminal 1 — local API. The existing repository Neo4j Python environment contains the driver:
+- Node.js as specified in [`package.json`](package.json): **20.19 or newer within Node 20**, or **22.12 or newer**.
+- Python and the Neo4j driver in [`requirements.txt`](requirements.txt).
+- A reachable Neo4j database containing a compatible, completed structured build and its matching datasets. For local development, the commands below use `ethnotrace-clean`. See [graph setup](../neo4j/STRUCTURED.md) and [missing inputs](../MISSING_FILES.md).
+
+Start Neo4j, then open two terminals from the repository root.
+
+### 1. Start the Python API
 
 ```sh
 cd Makeathon_UI
@@ -17,9 +83,11 @@ read -s 'NEO4J_PASSWORD?Neo4j password: '; export NEO4J_PASSWORD; echo
 ../neo4j/.venv/bin/python -B server.py
 ```
 
-The `read` line is for macOS zsh; in bash use `read -s -p 'Neo4j password: ' NEO4J_PASSWORD; export NEO4J_PASSWORD; echo`. If the Python environment is missing, create it and install the official `neo4j` driver as documented in `../neo4j/README.md`. Never commit passwords. The API binds to localhost on port 8787 and reads Neo4j through parameterized queries. The review demo shows labelled examples and lets visitors preview a comment in memory; previews are never submitted or saved and disappear on refresh. A Neo4j account restricted to read-only access is recommended.
+The password prompt above uses macOS `zsh`. In `bash`, use `read -s -p 'Neo4j password: ' NEO4J_PASSWORD; export NEO4J_PASSWORD; echo`. Never commit credentials. If `neo4j/.venv` does not exist, create the Python environment and install the driver as described in [neo4j/README.md](../neo4j/README.md), or install the UI requirements into an appropriate environment. A Neo4j account restricted to read-only access is recommended.
 
-Terminal 2 — frontend:
+The API defaults to `127.0.0.1:8787`. Check it at [http://127.0.0.1:8787/api/health](http://127.0.0.1:8787/api/health); the endpoint checks the database connection and reports the selected snapshot.
+
+### 2. Start the frontend
 
 ```sh
 cd Makeathon_UI
@@ -27,47 +95,79 @@ npm install
 npm run dev
 ```
 
-Open http://127.0.0.1:8443. Vite proxies `/api` to the local API. If the API or database is unavailable the UI reports an error; it does not display mock evidence. The original Figma prototype remains in `src/App.tsx`, and the data-connected entry point is `src/LiveApp.tsx`.
+Open [http://127.0.0.1:8443](http://127.0.0.1:8443). By default, Vite proxies `/api` requests to the local API. If the API or database is unavailable, the application reports an error instead of replacing scientific records with mock data.
 
-For Vercel frontend and Render API setup, including a remote Neo4j connection and CORS, see [DEPLOYMENT.md](../DEPLOYMENT.md).
+For production, configure the public `VITE_API_BASE_URL` at build time and the allowed frontend origins on the API. **Do not put Neo4j credentials in frontend variables.** See [DEPLOYMENT.md](../DEPLOYMENT.md) for the complete Vercel and Render configuration.
 
-## Folder guide
+## API and data boundaries
 
-- [src](src/README.md): React views, components and styles.
-- [public](public/README.md): static assets, including Atlas data.
-- [data](data/README.md): local image metadata.
-- [tests](tests/README.md): browser and API integration checks.
-- `server.py`: local API between the frontend and Neo4j.
-- `collect_candidate_images.py`, `collect_wikidata_images.py` and `export_atlas_ranges.py`: optional data-preparation utilities.
+The API uses parameterized, read-only Neo4j queries. It requires a completed structured snapshot, a shared claims/studies dataset and its matching full-unit dataset. If multiple completed builds exist, the API selects the latest dated build unless `ETHNOTRACE_SNAPSHOT` is set; ambiguous selection fails instead of silently mixing versions.
 
-## Explore
+Some useful read-only endpoints:
 
-Search a historical name, Greek headword, scientific candidate or recorded original name. Catalogue filters operate at entry level and can match different candidates or claims within the same entry. Select an entry, then use **Identification** for A/B candidates, evidence and taxonomy. Enable Tier X explicitly to see hidden candidates. **Claims & Research** brings extracted interpretations and historical quotations together with MeSH mappings, shared research assessments and inferred cross-book groupings. Select a claim to view its related research. Hover, focus or tap the information icons to explain categories and scientific terms. In **Relationships**, select a candidate or claim and use **Expand related evidence in graph**; use the graph controls to pan, zoom and fit. Graph expansion is limited to keep the view usable; full result lists are in the tabs.
+| Endpoint | Purpose |
+| --- | --- |
+| `/api/health` | Database health and selected snapshot. |
+| `/api/entries` | Search, filter and paginate historical entries; `grouped=1` requests grouped results. |
+| `/api/entries/<id>` | Historical entry, names, candidate identifications and claims. |
+| `/api/entries/<id>/evidence` | Paginated evidence records. |
+| `/api/entries/<id>/studies` | Selected linked research and assessments. |
+| `/api/candidates/<id>`, `/api/claims/<id>` | Candidate or claim details. |
+| `/api/facets`, `/api/overview`, `/api/names` | Filter values, knowledge-map overview and search names. |
+| `/api/reviews` | Generated demonstration examples; review submission through the API is disabled. |
 
-The API requires one completed structured snapshot, one shared claims/studies dataset, and its matching full-unit dataset. If multiple snapshots exist, it selects the latest dated completed build; set `ETHNOTRACE_SNAPSHOT` to select a particular snapshot. The API refuses ambiguous datasets instead of mixing them. Candidate evidence and study assessments are paginated. Entry details are limited to 200 candidates and 200 claims; unlinked entry evidence is available in the Identification tab and is not assigned to candidates.
+Catalogue filters operate at the **entry level**: different candidates or claims within one entry can satisfy different filters. Candidate evidence and study assessments are paginated; entry details are limited to 200 candidates and 200 claims. Unlinked entry evidence is retained without assigning it to a candidate.
 
-## Candidate photographs
+## Candidate photographs and atlas data
 
-The catalogue can display a photo of its preferred modern candidate, alongside creator, licence and source links. Image metadata is stored locally in `data/candidate_images.json`, outside Neo4j and independently of the historical evidence. A photograph illustrates a candidate and does not establish the historical identification.
+Candidate photographs are illustrations of a proposed modern plant, not proof of historical identity. When available, the interface displays creator, licence and source links. Metadata is stored in [`data/candidate_images.json`](data/candidate_images.json), separate from Neo4j; the interface uses a fallback when an image is unavailable.
 
-To check 20 example names or resume the full A/B lookup, respectively:
+The GBIF collector requires an exact accepted scientific-name match, a matching occurrence taxon key, HTTPS media, an individual creator and an accepted licence. It inspects a limited sample of occurrences, so a missing image does not prove no suitable image exists. A separate Wikidata/Wikimedia collector is also provided. Review images and their licences before reuse.
+
+From `Makeathon_UI/`, check 20 names or resume the full A/B lookup:
 
 ```sh
 python3 collect_candidate_images.py --limit 20
 python3 collect_candidate_images.py --limit 0
 ```
 
-The collector requests GBIF only, requires an exact accepted scientific-name match and the same GBIF occurrence taxon key, and only records HTTPS images with an individual creator and a CC0, CC BY or CC BY-SA licence. It checks up to 40 occurrences per taxon, so a missing image means none met these checks in that sample. It records unmatched and unavailable cases, retries errors on the next run, and saves progress in batches. The user interface falls back to its placeholder when no usable image is recorded or an image fails to load. Media records and identifications can still be incorrect; review them and their licences before reuse.
+The atlas uses [`public/atlas/`](public/atlas/) region outlines and range data. [`export_atlas_ranges.py`](export_atlas_ranges.py) prepares the range file from available geography outputs. Source and licence context is documented in [DATA_SOURCES.md](../DATA_SOURCES.md).
 
-## Verify
+## Tests and checks
 
-With the API and Neo4j running and `NEO4J_PASSWORD` set:
+From `Makeathon_UI/`:
 
 ```sh
-ETHNOTRACE_TEST_LIVE=1 ../neo4j/.venv/bin/python -B -m unittest discover -s tests -v
+# Production build and TypeScript checks
 npm run build
 npx tsc --noEmit
+
+# Local API tests; no live graph required for deployment tests
+../neo4j/.venv/bin/python -B -m unittest discover -s tests -p 'test_deployment.py' -v
+
+# Optional: API integration tests against a running graph
+ETHNOTRACE_TEST_LIVE=1 ../neo4j/.venv/bin/python -B -m unittest discover -s tests -v
+
+# Browser checks against the running local frontend and API
 npx playwright test tests/ui.spec.ts
 ```
 
-The browser checks require the local frontend and API to be running. On a new machine, install the browser with `npx playwright install chromium` first. The live integration checks use Carrots, Dioscorides chapters 1.1, 1.3 and 1.117, Bifoil, MeSH mapping, linked research and LSJ provenance. They use read-only queries and do not alter the database.
+On a new machine, install the browser with `npx playwright install chromium` first. The live integration checks include Carrots, Dioscorides chapters 1.1, 1.3 and 1.117, Bifoil, MeSH mappings, linked research and LSJ provenance. They use read-only database queries. Passing software checks does not independently validate botanical or medical conclusions.
+
+## Folder guide
+
+| Path | Contents |
+| --- | --- |
+| [`src/`](src/README.md) | React components, views, styles and frontend helpers. |
+| [`src/LiveApp.tsx`](src/LiveApp.tsx) | Data-connected application. |
+| [`src/App.tsx`](src/App.tsx) | Original Figma prototype, kept as a reference. |
+| [`src/Atlas.tsx`](src/Atlas.tsx) | Interactive atlas. |
+| [`src/PeerReview.tsx`](src/PeerReview.tsx) | Demonstration-only review interface. |
+| [`server.py`](server.py) | Read-only Neo4j-backed API. |
+| [`public/`](public/README.md) | Static assets, including atlas files. |
+| [`data/`](data/README.md) | Local data used by the UI, including image metadata. |
+| [`tests/`](tests/README.md) | API, integration and browser tests. |
+| [`collect_candidate_images.py`](collect_candidate_images.py), [`collect_wikidata_images.py`](collect_wikidata_images.py) | Optional candidate-image collection utilities. |
+| [`export_atlas_ranges.py`](export_atlas_ranges.py) | Optional atlas range-data preparation. |
+
+For scientific methods, source licences and reproducibility beyond the application, start with the [main project README](../README.md).
