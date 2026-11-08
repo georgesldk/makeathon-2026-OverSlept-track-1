@@ -353,7 +353,7 @@ def _seed_demo(ctx, store):
             name, role = who(k)
             store['reviews'].append({'id': f'demo-{uuid.uuid5(uuid.NAMESPACE_URL, row["id"] + str(k)).hex[:12]}',
                 'entry_id': row['id'], 'entry_name': row.get('name') or row.get('chapter'), 'book': row.get('book'),
-                'target_type': ttype, 'target_id': tid, 'target_label': label, 'verdict': verdict, 'comment': text,
+                'target_type': ttype, 'target_id': tid, 'target_label': label, 'verdict': verdict, 'comment': '[placeholder text]',
                 'reviewer': name, 'expertise': role, 'created_at': now, 'demo': True})
         cands = [c for c in e['candidates'] if (c.get('decision') or {}).get('tier') in ('A', 'B')]
         if cands:

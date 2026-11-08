@@ -17,7 +17,7 @@ read -s 'NEO4J_PASSWORD?Neo4j password: '; export NEO4J_PASSWORD; echo
 ../neo4j/.venv/bin/python -B server.py
 ```
 
-The `read` line is for macOS zsh; in bash use `read -s -p 'Neo4j password: ' NEO4J_PASSWORD; export NEO4J_PASSWORD; echo`. If the Python environment is missing, create it and install the official `neo4j` driver as documented in `../neo4j/README.md`. Never commit passwords. The API binds to localhost on port 8787 and reads Neo4j through parameterized queries. Its expert-review feature displays generated, explicitly labelled examples and does not accept submissions. A Neo4j account restricted to read-only access is recommended.
+The `read` line is for macOS zsh; in bash use `read -s -p 'Neo4j password: ' NEO4J_PASSWORD; export NEO4J_PASSWORD; echo`. If the Python environment is missing, create it and install the official `neo4j` driver as documented in `../neo4j/README.md`. Never commit passwords. The API binds to localhost on port 8787 and reads Neo4j through parameterized queries. The review demo shows labelled examples and lets visitors preview a comment in memory; previews are never submitted or saved and disappear on refresh. A Neo4j account restricted to read-only access is recommended.
 
 Terminal 2 — frontend:
 
