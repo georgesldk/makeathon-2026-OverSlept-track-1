@@ -61,6 +61,29 @@ The structured graph contains domain records and the relationships needed to tra
 
 Not every entry has every type of record. Unmatched or ambiguous evidence and hidden candidates are retained rather than arbitrarily assigned. The graph preserves structured source values, while raw API caches, complete conversations and publisher texts may remain in external files. See [the structured graph documentation](neo4j/STRUCTURED.md) for details and [the graph model](neo4j/MODEL.md) for relationships.
 
+### How the knowledge graph connects evidence
+
+This simplified diagram shows possible connections. A historical entry can have multiple candidates and claims, and not every claim has a linked study. A connection or assessment is not proof of a plant's historical identity or a remedy's effectiveness.
+
+```mermaid
+flowchart LR
+    Book[Historical book] --> Entry[Historical entry<br/>and source passage]
+    Entry --> Name[Historical name]
+    Entry --> Hypothesis[Proposed plant<br/>identification]
+    Entry --> Claim[Historical claim<br/>and quotation]
+    Evidence[Source evidence] -. may relate to .-> Hypothesis
+    Hypothesis --> Decision[A / B / X decision]
+    Hypothesis --> Resolution[Taxonomic resolution]
+    Resolution --> Taxon[Authority-qualified taxon]
+    Claim --> Mapping[Proposed concept mapping]
+    Mapping --> Concept[Medical concept]
+    Claim --> Unit[Claim–plant unit]
+    Unit --> Assessment[Research assessment]
+    Assessment --> Study[Selected study]
+```
+
+The diagram is an overview, not a complete schema or a statement of relationship direction. Consult [STRUCTURED.md](neo4j/STRUCTURED.md) and [MODEL.md](neo4j/MODEL.md) for implementation details and provenance.
+
 ### Recount the graph
 
 The website's [`/api/facets`](https://ethnotrace-api.onrender.com/api/facets) gives the per-book counts above, and [`/api/health`](https://ethnotrace-api.onrender.com/api/health) identifies the active snapshot. In Neo4j Browser, set `$snapshot` to the desired completed snapshot and run this read-only query to inspect its records by source:
@@ -85,16 +108,20 @@ If more than one matching dataset import exists, select the intended dataset exp
 
 ## Pipeline: from historical texts to the interface
 
-```text
-Historical sources and passages
-  → historical entries and names
-  → candidate discovery and source evidence
-  → taxonomic reconciliation and geography
-  → botanical description comparison, where available
-  → rule-based A/B/X eligibility decisions
-  → historical claims, quotations and medical-concept mappings
-  → selected modern research and claim–study assessments
-  → snapshot-scoped Neo4j graph → API and website
+```mermaid
+flowchart TD
+    A[Historical sources and passages] --> B[Historical entries and names]
+    B --> C[Candidate discovery and source evidence]
+    C --> D[Taxonomic reconciliation and geography]
+    D --> E[Botanical description comparison<br/>where available]
+    E --> F[Rule-based A / B / X decisions]
+    B --> G[Historical claims, quotations<br/>and concept mappings]
+    F --> H[Selected modern research<br/>and claim–study assessments]
+    G --> H
+    F --> I[Snapshot-scoped Neo4j graph]
+    G --> I
+    H --> I
+    I --> J[API and website]
 ```
 
 The exact inputs and coverage vary by book and stage. Later steps use the saved outputs of earlier steps; the diagram does not imply that every historical entry was assessed at every stage.
